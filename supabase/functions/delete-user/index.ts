@@ -72,19 +72,15 @@ serve(async (req) => {
     // Deletes all linked identities (email, Google, etc.)
     const { error: deleteAuthError } = await supabaseClient.auth.admin.deleteUser(user.id)
 
-    if (deleteAuthError) {
-      if (deleteAuthError.message === 'User not found') {
-        console.warn('User already removed from auth.users:', user.id)
-      } else {
-        console.error('Error deleting from auth.users:', deleteAuthError)
-        return new Response(
-          JSON.stringify({ error: deleteAuthError.message }),
-          { 
-            status: 500, 
-            headers: { ...corsHeaders, 'Content-Type': 'application/json' } 
-          }
-        )
-      }
+    if (deleteAuthError && deleteAuthError.message !== 'User not found') {
+      console.error('Error deleting from auth.users:', deleteAuthError)
+      return new Response(
+        JSON.stringify({ error: deleteAuthError.message }),
+        { 
+          status: 500, 
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' } 
+        }
+      )
     }
 
     return new Response(
