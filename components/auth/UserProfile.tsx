@@ -45,9 +45,9 @@ export function UserProfile() {
   const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const input = e.target.value
     // Allow letters (including accents), spaces, hyphens, apostrophes
-    const filtered = input.replace(/[^A-Za-zÀ-ÿ' -]/g, '')
+    const filtered = input.replace(/[^A-Za-zÀ-ÿ'\s-]/g, '')
     setNameValue(filtered)
-    setNameValid(/^[A-Za-zÀ-ÿ' -]*$/.test(filtered))
+    setNameValid(/^[A-Za-zÀ-ÿ'\s-]*$/.test(filtered))
   }
 
   const handleUpdatePassword = async () => {
@@ -131,7 +131,7 @@ export function UserProfile() {
             <input
               type="text"
               inputMode="text"
-              pattern="[A-Za-zÀ-ÿ' -]*"
+              pattern="^[A-Za-zÀ-ÿ'\\s-]*$"
               value={nameValue}
               onChange={handleNameChange}
               className="w-full p-3 bg-gray-50 rounded-md text-gray-900 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
