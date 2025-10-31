@@ -98,7 +98,7 @@ export function SelectContent({ children, onSelect, currentValue }: SelectConten
   )
 }
 
-interface SelectItemProps extends React.HTMLAttributes<HTMLDivElement> {
+interface SelectItemProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onSelect'> {
   children: React.ReactNode
   value: string
   onSelect?: (value: string) => void
