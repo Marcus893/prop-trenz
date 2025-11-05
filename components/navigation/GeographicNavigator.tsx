@@ -1,14 +1,15 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Input } from '@/components/ui/input'
 import { LocationCard } from '@/components/ui/LocationCard'
-import { Search, MapPin, Filter, ChevronRight } from 'lucide-react'
+import { Search, MapPin, Filter, ChevronRight, Loader2, RefreshCw, AlertCircle } from 'lucide-react'
 import { db } from '@/lib/supabase'
 import { useTranslation } from 'next-i18next'
+import { useTracking } from '@/lib/useTracking'
 
 interface Location {
   id: string
@@ -30,20 +31,33 @@ export function GeographicNavigator({
   className 
 }: GeographicNavigatorProps) {
   const { t } = useTranslation('common')
+  const { track } = useTracking()
   const [allLocations, setAllLocations] = useState<Location[]>([]) // All locations for filtering
   const [locations, setLocations] = useState<Location[]>([]) // Current view locations
   const [filteredLocations, setFilteredLocations] = useState<Location[]>([])
   const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedType, setSelectedType] = useState<string>('all')
   // Removed redundant state dropdown; state can be filtered via search or type
   const [breadcrumb, setBreadcrumb] = useState<Location[]>([])
   const [currentLevel, setCurrentLevel] = useState<'national' | 'state' | 'municipality'>('national')
   const [mounted, setMounted] = useState(false)
+  const isMountedRef = useRef(true)
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null)
 
   // Ensure component is mounted before rendering translations
   useEffect(() => {
     setMounted(true)
+    isMountedRef.current = true
+    
+    return () => {
+      isMountedRef.current = false
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current)
+        timeoutRef.current = null
+      }
+    }
   }, [])
 
   // Fallback function for translations
@@ -58,7 +72,18 @@ export function GeographicNavigator({
   }
 
   useEffect(() => {
-    loadInitialData()
+    // Only load data if component is mounted
+    if (isMountedRef.current) {
+      loadInitialData()
+    }
+    
+    return () => {
+      // Cleanup: clear timeout if component unmounts
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current)
+        timeoutRef.current = null
+      }
+    }
   }, [])
 
   useEffect(() => {
@@ -66,11 +91,42 @@ export function GeographicNavigator({
   }, [locations, allLocations, searchTerm, selectedType, currentLevel])
 
   const loadInitialData = async () => {
+    // Don't proceed if component is unmounted
+    if (!isMountedRef.current) return
+    
     setLoading(true)
+    setError(null)
+    
+    let timeoutId: NodeJS.Timeout | null = null
+    
     try {
-      const result = await db.getLocations()
+      // Add timeout to prevent hanging (increased to 15 seconds for slower connections)
+      const timeoutPromise = new Promise<never>((_, reject) => {
+        timeoutId = setTimeout(() => reject(new Error('Request timeout')), 15000)
+        timeoutRef.current = timeoutId
+      })
+      
+      const resultPromise = db.getLocations()
+      const result = await Promise.race([resultPromise, timeoutPromise]) as Awaited<ReturnType<typeof db.getLocations>>
+      
+      // Clear timeout if request succeeded
+      if (timeoutId) {
+        clearTimeout(timeoutId)
+        timeoutRef.current = null
+      }
+      
+      // Check if component is still mounted before updating state
+      if (!isMountedRef.current) return
+      
       if (result.error) throw result.error
-      if (!result.data) return
+      if (!result.data || result.data.length === 0) {
+        if (!isMountedRef.current) return
+        setError(translate('no_locations_found') || 'No locations found')
+        setAllLocations([])
+        setLocations([])
+        return
+      }
+      
       // Remove test locations and enforce uniqueness by name+type
       const unique = new Map<string, Location>()
       for (const loc of result.data) {
@@ -79,14 +135,34 @@ export function GeographicNavigator({
         if (!unique.has(key)) unique.set(key, loc)
       }
       const allUniqueLocations = Array.from(unique.values())
+      
+      // Only update state if component is still mounted
+      if (!isMountedRef.current) return
+      
       setAllLocations(allUniqueLocations) // Store all locations
       setLocations(allUniqueLocations) // Set current view
       setBreadcrumb([])
       setCurrentLevel('national')
+      setError(null)
     } catch (error) {
+      // Clear timeout on error
+      if (timeoutId) {
+        clearTimeout(timeoutId)
+        timeoutRef.current = null
+      }
+      
+      // Only update state if component is still mounted
+      if (!isMountedRef.current) return
+      
       console.error('Error loading locations:', error)
+      setError(error instanceof Error ? error.message : 'Failed to load locations')
+      setAllLocations([])
+      setLocations([])
     } finally {
-      setLoading(false)
+      // Only update loading state if component is still mounted
+      if (isMountedRef.current) {
+        setLoading(false)
+      }
     }
   }
 
@@ -155,6 +231,13 @@ export function GeographicNavigator({
     // Search in allLocations first, then fallback to locations (for backward compatibility)
     const location = allLocations.find(loc => loc.id === locationId) || locations.find(loc => loc.id === locationId)
     if (!location) return
+
+    // Track location selection
+    track('location_selected', {
+      location_id: locationId,
+      location_name: location.name,
+      location_type: location.type,
+    })
 
     // Always call onLocationSelect first to update the chart
     onLocationSelect(locationId)
@@ -306,7 +389,10 @@ export function GeographicNavigator({
 
         {/* Search and Filters */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-          <Select value={selectedType} onValueChange={setSelectedType}>
+          <Select value={selectedType} onValueChange={(value) => {
+            setSelectedType(value)
+            track('filter_applied', { filter_type: 'location_type', value })
+          }}>
             <SelectTrigger>
               <SelectValue placeholder={getSelectedTypeLabel()} />
             </SelectTrigger>
@@ -326,6 +412,14 @@ export function GeographicNavigator({
               placeholder={t('navigation.search_locations')}
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' && searchTerm.trim().length > 0) {
+                  track('search_performed', { 
+                    search_term: searchTerm.trim(),
+                    result_count: filteredLocations.length 
+                  })
+                }
+              }}
               className="pl-10"
             />
           </div>
@@ -337,27 +431,49 @@ export function GeographicNavigator({
       {/* Locations Grid (scrollable) */}
       <div className="relative">
         <div className="h-[60vh] overflow-y-auto pr-2">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-3">
-            {filteredLocations.map((location) => (
-              <LocationCard
-                key={location.id}
-                location={{ ...location, name: getDisplayName(location) }}
-                onClick={handleLocationClick}
-                className={`${
-                  selectedLocationId === location.id ? 'ring-2 ring-blue-500' : ''
-                }`}
-              />
-            ))}
-          </div>
+          {loading ? (
+            <div className="flex items-center justify-center h-full">
+              <div className="text-center">
+                <Loader2 className="h-8 w-8 animate-spin text-blue-600 mx-auto mb-4" />
+                <p className="text-gray-600">{t('navigation.loading')}</p>
+              </div>
+            </div>
+          ) : error ? (
+            <div className="flex items-center justify-center h-full">
+              <div className="text-center max-w-md">
+                <AlertCircle className="h-12 w-12 text-red-500 mx-auto mb-4" />
+                <p className="text-gray-700 mb-4 font-medium">{error}</p>
+                <Button
+                  onClick={loadInitialData}
+                  variant="secondary"
+                  className="flex items-center gap-2"
+                >
+                  <RefreshCw className="h-4 w-4" />
+                  {t('common.retry') || 'Retry'}
+                </Button>
+              </div>
+            </div>
+          ) : filteredLocations.length > 0 ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-3">
+              {filteredLocations.map((location) => (
+                <LocationCard
+                  key={location.id}
+                  location={{ ...location, name: getDisplayName(location) }}
+                  onClick={handleLocationClick}
+                  className={`${
+                    selectedLocationId === location.id ? 'ring-2 ring-blue-500' : ''
+                  }`}
+                />
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-8 text-gray-500">
+              <MapPin className="h-12 w-12 mx-auto mb-4 text-gray-300" />
+              <p>{t('navigation.no_locations_found')}</p>
+            </div>
+          )}
         </div>
       </div>
-
-      {filteredLocations.length === 0 && (
-        <div className="text-center py-8 text-gray-500">
-          <MapPin className="h-12 w-12 mx-auto mb-4 text-gray-300" />
-          <p>{t('navigation.no_locations_found')}</p>
-        </div>
-      )}
     </Card>
   )
 }

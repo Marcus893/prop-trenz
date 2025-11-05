@@ -3,6 +3,7 @@ import { Layout } from '@/components/Layout'
 import { GeographicNavigator } from '@/components/navigation/GeographicNavigator'
 import { PriceChart } from '@/components/charts/PriceChart'
 import { Card } from '@/components/ui/card'
+import { LogoSVG } from '@/components/ui/Logo'
 import { useTranslation } from 'next-i18next'
 import { TrendingUp, MapPin, BarChart3 } from 'lucide-react'
 import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ReferenceLine } from 'recharts'
@@ -49,7 +50,9 @@ export default function HomePage({ nationalSnapshot, nationalTrend = [], topMove
       <div className="space-y-6">
         {/* Hero Section */}
         <Card className="p-8 text-center bg-gradient-to-r from-blue-600 to-blue-700 text-white">
-          <h1 className="text-4xl font-bold mb-4">PropTrenz</h1>
+          <div className="flex justify-center mb-6">
+            <LogoSVG showText={true} size="lg" className="text-white" style={{ height: '80px', width: 'auto' }} />
+          </div>
           <p className="text-xl mb-6">
             {t('home.hero_description')}
           </p>
@@ -149,6 +152,9 @@ export default function HomePage({ nationalSnapshot, nationalTrend = [], topMove
 }
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  // Ensure locale is always a valid string, defaulting to 'en'
+  const validLocale = (locale && typeof locale === 'string') ? locale : 'en'
+  
   // Read precomputed insights from DB; fall back safely if not present
   let nationalSnapshot = { latest: 0, yoy: 0, qoq: 0 }
   let nationalTrend: Array<{ year: number; quarter: number; index_value: number }> = []
@@ -166,7 +172,7 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
 
   return {
     props: {
-      ...(await serverSideTranslations((locale as string) || 'en', ['common'])),
+      ...(await serverSideTranslations(validLocale, ['common'])),
       nationalSnapshot,
       nationalTrend,
       topMoversStates,

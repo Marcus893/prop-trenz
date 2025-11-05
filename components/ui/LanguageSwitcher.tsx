@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Globe, Check } from 'lucide-react'
 import { useTranslation } from 'next-i18next'
+import { useTracking } from '@/lib/useTracking'
 
 interface LanguageSwitcherProps {
   className?: string
@@ -14,6 +15,7 @@ interface LanguageSwitcherProps {
 export function LanguageSwitcher({ className }: LanguageSwitcherProps) {
   const { t } = useTranslation('common')
   const router = useRouter()
+  const { track } = useTracking()
   const [isOpen, setIsOpen] = useState(false)
 
   const languages = [
@@ -26,6 +28,7 @@ export function LanguageSwitcher({ className }: LanguageSwitcherProps) {
 
   const handleLanguageChange = (languageCode: string) => {
     if (router.locale !== languageCode) {
+      track('language_changed', { from: router.locale || 'en', to: languageCode })
       const { pathname, asPath, query } = router
       router.push({ pathname, query }, asPath, { locale: languageCode, scroll: false })
     }

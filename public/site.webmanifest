@@ -1,0 +1,17 @@
+{
+  "name": "PropTrenz",
+  "short_name": "PropTrenz",
+  "description": "Explore Mexican Real Estate Price Trends with Interactive Charts and Geographic Navigation",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563EB",
+  "icons": [
+    {
+      "src": "/logo-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
+

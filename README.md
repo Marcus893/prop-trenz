@@ -4,7 +4,7 @@
 
 1. **Node.js** (v18 or higher)
 2. **Supabase Account** - Create at [supabase.com](https://supabase.com)
-3. **Mapbox Account** - Create at [mapbox.com](https://mapbox.com) (optional for Phase 1)
+3. **PostHog Account** (Optional) - Create at [posthog.com](https://posthog.com) for user analytics
 
 ## Setup Steps
 
@@ -25,8 +25,9 @@ NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key
 
-# Mapbox Configuration (optional for Phase 1)
-NEXT_PUBLIC_MAPBOX_TOKEN=your_mapbox_token
+# PostHog Analytics (Optional - for user behavior tracking)
+NEXT_PUBLIC_POSTHOG_KEY=your_posthog_project_api_key
+NEXT_PUBLIC_POSTHOG_HOST=https://app.posthog.com
 
 # Next.js Configuration
 NEXTAUTH_URL=http://localhost:3000

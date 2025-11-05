@@ -8,6 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { useAuth } from '@/lib/auth'
 import { useTranslation } from 'next-i18next'
 import { useRouter } from 'next/router'
+import { useTracking } from '@/lib/useTracking'
 import { Eye, EyeOff, Mail, Lock, User, X } from 'lucide-react'
 
 interface AuthFormProps {
@@ -21,6 +22,7 @@ export function AuthForm({ mode, onModeChange, onClose, className }: AuthFormPro
   const { t, i18n } = useTranslation('common')
   const router = useRouter()
   const { signIn, signUp, loading, resetPassword, signInWithGoogle } = useAuth()
+  const { track } = useTracking()
   const [mounted, setMounted] = useState(false)
   
   // Ensure component is mounted before rendering translations
@@ -79,7 +81,9 @@ export function AuthForm({ mode, onModeChange, onClose, className }: AuthFormPro
         const { error } = await signIn(formData.email, formData.password)
         if (error) {
           setError(error.message)
+          track('user_signed_in', { success: false, error: error.message })
         } else {
+          track('user_signed_in', { success: true, method: 'email' })
           // Close modal on successful sign in
           if (onClose) onClose()
         }
@@ -87,7 +91,9 @@ export function AuthForm({ mode, onModeChange, onClose, className }: AuthFormPro
         const { error } = await signUp(formData.email, formData.password, formData.name, formData.language)
         if (error) {
           setError(error.message)
+          track('user_signed_up', { success: false, error: error.message })
         } else {
+          track('user_signed_up', { success: true, method: 'email', language: formData.language })
           setSuccess('Check your email for verification link')
           if (router.locale !== formData.language) {
             router.replace({ pathname: router.pathname, query: router.query }, router.asPath, {
@@ -164,7 +170,14 @@ export function AuthForm({ mode, onModeChange, onClose, className }: AuthFormPro
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-4">
-        <Button type="button" variant="secondary" onClick={() => signInWithGoogle()} className="w-full flex items-center justify-center gap-2">
+        <Button type="button" variant="secondary" onClick={async () => {
+          const { error } = await signInWithGoogle()
+          if (!error) {
+            track('user_signed_in', { success: true, method: 'google' })
+          } else {
+            track('user_signed_in', { success: false, method: 'google', error: error.message })
+          }
+        }} className="w-full flex items-center justify-center gap-2">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" className="h-4 w-4"><path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12 s5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C33.64,6.053,29.084,4,24,4C12.954,4,4,12.954,4,24 s8.954,20,20,20s20-8.954,20-20C44,22.659,43.862,21.35,43.611,20.083z"/><path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,16.108,18.961,13,24,13c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657 C33.64,6.053,29.084,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/><path fill="#4CAF50" d="M24,44c5.176,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36 c-5.202,0-9.623-3.317-11.277-7.943l-6.563,5.048C9.48,39.556,16.227,44,24,44z"/><path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.147-4.11,5.571c0.001-0.001,0.002-0.001,0.003-0.002 l6.19,5.238C36.95,40.188,44,35,44,24C44,22.659,43.862,21.35,43.611,20.083z"/></svg>
           {translate('continue_with_google') || 'Continue with Google'}
         </Button>

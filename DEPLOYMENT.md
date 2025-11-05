@@ -46,7 +46,8 @@ git push -u origin main
    - Add these variables:
      - `NEXT_PUBLIC_SUPABASE_URL` = your Supabase project URL
      - `NEXT_PUBLIC_SUPABASE_ANON_KEY` = your Supabase anon key
-     - `NEXT_PUBLIC_MAPBOX_TOKEN` = your Mapbox token (optional)
+     - `NEXT_PUBLIC_POSTHOG_KEY` = your PostHog project API key (optional)
+     - `NEXT_PUBLIC_POSTHOG_HOST` = https://app.posthog.com (optional, or your self-hosted URL)
 
 8. **Deploy**:
    - Click "Deploy site"
@@ -102,7 +103,8 @@ Make sure these are set in Netlify:
 
 - `NEXT_PUBLIC_SUPABASE_URL`
 - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
-- `NEXT_PUBLIC_MAPBOX_TOKEN` (optional)
+- `NEXT_PUBLIC_POSTHOG_KEY` (optional - for analytics)
+- `NEXT_PUBLIC_POSTHOG_HOST` (optional - defaults to https://app.posthog.com)
 
 **Note**: Never commit `.env.local` or `.env` files with actual keys to GitHub!
 
