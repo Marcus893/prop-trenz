@@ -1,0 +1,1546 @@
+{
+  "Apodaca-Rinconada Colonial": [
+    25.8024095,
+    -100.19745817510122
+  ],
+  "Apodaca-Valle De Las Palmas 4To Sector": [
+    25.79027225,
+    -100.2675191193053
+  ],
+  "Apodaca-Fresnos Norte": [
+    25.7698276,
+    -100.2471441
+  ],
+  "Apodaca-Magnolias 2 Sec": [
+    25.8065403,
+    -100.26142098894118
+  ],
+  "Apodaca-Centro De Apodaca": [
+    25.781700999999998,
+    -100.18874894989818
+  ],
+  "Apodaca-Santa Cecilia 1Er Sector": [
+    25.7742778,
+    -100.2352987
+  ],
+  "Apodaca-Fuentes De Santa Lucia": [
+    25.72064825,
+    -100.15817903223733
+  ],
+  "Apodaca-Almeria": [
+    25.76366695,
+    -100.13282753641937
+  ],
+  "Apodaca-Mision De Fundadores": [
+    25.795239950000003,
+    -100.24647744922737
+  ],
+  "Apodaca-Villa Magna (Las Cruces)": [
+    25.7979772,
+    -100.1141973
+  ],
+  "Guadalupe-Jardines De La Pastora": [
+    25.667916400000003,
+    -100.2516819686388
+  ],
+  "Guadalupe-Linda Vista": [
+    25.69374355,
+    -100.25587114900634
+  ],
+  "Guadalupe-Valles De La Silla": [
+    25.662260099999997,
+    -100.21110763839106
+  ],
+  "Guadalupe-Bosques De La Pastora": [
+    25.658461000000003,
+    -100.2542414020776
+  ],
+  "Guadalupe-Libertad": [
+    25.6880444,
+    -100.2529622
+  ],
+  "Guadalupe-Contry La Silla": [
+    25.634517199999998,
+    -100.2648641692134
+  ],
+  "Guadalupe-Rincon De La Sierra": [
+    25.63755515,
+    -100.20023963637666
+  ],
+  "Guadalupe-Cerradas De Linda Vista": [
+    25.69713015,
+    -100.24293922125935
+  ],
+  "Guadalupe-Jardines De Andalucia": [
+    25.650998350000002,
+    -100.18285720945099
+  ],
+  "Guadalupe-Guadalupe Victoria": [
+    25.6655563,
+    -100.2154881
+  ],
+  "Guadalupe-Nueva Linda Vista": [
+    25.7061172,
+    -100.2273278230284
+  ],
+  "Guadalupe-Dos Rios": [
+    25.680965299999997,
+    -100.17863546306279
+  ],
+  "Guadalupe-Azteca": [
+    25.685321799999997,
+    -100.23999786680864
+  ],
+  "Guadalupe-Centro De Guadalupe": [
+    25.6783674,
+    -100.2456683
+  ],
+  "Guadalupe-Pedregal De Lnda Vista": [
+    25.71359825,
+    -100.20633717599074
+  ],
+  "Guadalupe-Sierra Morena": [
+    25.644083950000002,
+    -100.17721791177661
+  ],
+  "Guadalupe-Privada San Carlos": [
+    25.657243100000002,
+    -100.156671
+  ],
+  "San Nicolás de los Garza-Anahuac": [
+    25.7363428,
+    -100.30916925897884
+  ],
+  "San Nicolás de los Garza-Cuauhtemoc 2 Sector": [
+    25.7558021,
+    -100.289648
+  ],
+  "San Nicolás de los Garza-Cuauhtemoc 3 Sector": [
+    25.7558021,
+    -100.289648
+  ],
+  "San Nicolás de los Garza-Potrero Anahuac": [
+    25.73753775,
+    -100.29592817700447
+  ],
+  "San Nicolás de los Garza-Industrias Del Vidrio 2 Sec": [
+    25.7057457,
+    -100.25705143476154
+  ],
+  "San Nicolás de los Garza-Jardines De Anahuac 3 Sec": [
+    25.7558021,
+    -100.289648
+  ],
+  "San Nicolás de los Garza-Jardines De Anahuac 2 Sec": [
+    25.7558021,
+    -100.289648
+  ],
+  "San Nicolás de los Garza-Residencial Nova": [
+    25.7393451,
+    -100.29319091083971
+  ],
+  "San Nicolás de los Garza-Lomas Del Roble": [
+    25.7416822,
+    -100.32002373062572
+  ],
+  "San Nicolás de los Garza-Riberas De San Nicolas": [
+    25.751304249999997,
+    -100.27785332732299
+  ],
+  "San Nicolás de los Garza-Centro De San Nicolas De Los Garza": [
+    25.7558317,
+    -100.28963308037703
+  ],
+  "San Nicolás de los Garza-Roble San Nicolas": [
+    25.76126755,
+    -100.28356858363234
+  ],
+  "San Nicolás de los Garza-Garza Cantu (Predio Aldape)": [
+    25.7159179,
+    -100.29737039714361
+  ],
+  "San Nicolás de los Garza-Alcatraces Residencial": [
+    25.7256061,
+    -100.22737145478067
+  ],
+  "San Nicolás de los Garza-Anahuac Sendero": [
+    25.7667029,
+    -100.27628456766641
+  ],
+  "San Nicolás de los Garza-Nuevo Periferico": [
+    25.751207,
+    -100.30132777210477
+  ],
+  "San Nicolás de los Garza-Hda Los Morales 1 Sector": [
+    25.7558021,
+    -100.289648
+  ],
+  "San Nicolás de los Garza-Villas De Anahuac": [
+    25.750493300000002,
+    -100.31206016701512
+  ],
+  "San Nicolás de los Garza-Roble Norte": [
+    25.7450179,
+    -100.30749162621856
+  ],
+  "San Nicolás de los Garza-Villa Universidad": [
+    25.74862705,
+    -100.30488299903286
+  ],
+  "San Nicolás de los Garza-Jardines De Casa Blanca": [
+    25.7351271,
+    -100.23933654847777
+  ],
+  "San Nicolás de los Garza-Miguel Aleman": [
+    25.7196008,
+    -100.22468191382796
+  ],
+  "San Nicolás de los Garza-Chapultepec": [
+    25.7425432,
+    -100.29765961758778
+  ],
+  "San Nicolás de los Garza-Valle De Santo Domingo": [
+    25.756535200000002,
+    -100.26232752291713
+  ],
+  "Monterrey-Obrera": [
+    25.6778181,
+    -100.29375107613895
+  ],
+  "Monterrey-Las Colinas Residencial": [
+    25.6947811,
+    -100.38358916417586
+  ],
+  "Monterrey-Torres De San Jeronimo": [
+    25.674066449999998,
+    -100.36445598258962
+  ],
+  "Monterrey-Centro De Monterrey": [
+    25.664613199999998,
+    -100.30982465483865
+  ],
+  "Monterrey-Florida  ( Rdcial Florida )": [
+    25.6579235,
+    -100.2907083
+  ],
+  "Monterrey-Del Paseo Residencial": [
+    25.593914827620114,
+    -100.26652208207847
+  ],
+  "Monterrey-Independencia": [
+    25.65383268571907,
+    -100.3124888085162
+  ],
+  "Monterrey-Valle De Los Cedros": [
+    25.726680100000003,
+    -100.37622022916636
+  ],
+  "Monterrey-Valle De Infonavit 1Er Sector": [
+    25.7313042,
+    -100.38163514118321
+  ],
+  "Monterrey-Fomerrey 116 (San Bernabe 8)": [
+    25.750146049999998,
+    -100.3427310926431
+  ],
+  "Monterrey-Mitras Centro": [
+    25.6953205,
+    -100.34331406791102
+  ],
+  "Monterrey-Renacimiento": [
+    25.617353,
+    -100.31835513843521
+  ],
+  "Monterrey-Mirasol": [
+    25.761218149999998,
+    -100.39547415468658
+  ],
+  "Monterrey-Mision Lincoln": [
+    25.743121549999998,
+    -100.37237432016339
+  ],
+  "Monterrey-Cumbres Mediterraneo": [
+    25.729488500000002,
+    -100.4020984463849
+  ],
+  "Monterrey-Vista Hermosa": [
+    25.6925849,
+    -100.35782409972492
+  ],
+  "Monterrey-Bosques De Las Cumbres": [
+    25.72797625,
+    -100.39865904162986
+  ],
+  "Monterrey-Bernardo Reyes": [
+    25.714926900000002,
+    -100.33902508268494
+  ],
+  "Monterrey-Maria Luisa": [
+    25.6536085,
+    -100.2839358
+  ],
+  "Monterrey-Cumbres 4To Sector": [
+    25.71887325,
+    -100.38583455505409
+  ],
+  "Monterrey-Ciudad Satelite": [
+    25.6027737,
+    -100.27006539107153
+  ],
+  "Monterrey-Cumbres 3Er Sector": [
+    25.715449749999998,
+    -100.38023147708319
+  ],
+  "Monterrey-Villa Del Rio": [
+    25.6393752,
+    -100.27131003375332
+  ],
+  "Monterrey-Cumbres 5To Sector": [
+    25.72178655,
+    -100.39266935493019
+  ],
+  "Monterrey-Colonial Cumbres": [
+    25.735005,
+    -100.39598383207043
+  ],
+  "Monterrey-Residencial Cumbres 6To Sector": [
+    25.72448895,
+    -100.39682110612478
+  ],
+  "Monterrey-Cumbres De Santa Clara": [
+    25.738260099999998,
+    -100.3965284673861
+  ],
+  "Monterrey-Valle Verde 1Er Sector": [
+    25.7201338,
+    -100.36770881740486
+  ],
+  "Monterrey-Cumbres Elite 6To Sector": [
+    25.72448895,
+    -100.39682110612478
+  ],
+  "Monterrey-Real Cumbres": [
+    25.7538571,
+    -100.4033407582188
+  ],
+  "Monterrey-Cumbres Oro": [
+    25.73815515,
+    -100.39278809512231
+  ],
+  "Monterrey-Cumbres De San Agustin": [
+    25.76708530058558,
+    -100.41547293802716
+  ],
+  "Monterrey-Cumbres Las Palmas": [
+    25.7338585,
+    -100.39859483207069
+  ],
+  "Monterrey-Paseo De Cumbres 2 Y 3 Sector": [
+    25.736821,
+    -100.38816636163935
+  ],
+  "Monterrey-Puerta De Hierro": [
+    25.7519034,
+    -100.41737748394108
+  ],
+  "Monterrey-El Pinito": [
+    25.58066725,
+    -100.28189048640108
+  ],
+  "Monterrey-Cumbres Elite 4To Sector": [
+    25.71887325,
+    -100.38583455505409
+  ],
+  "Monterrey-Valle De Las Cumbres 1Er Sector": [
+    25.736821,
+    -100.38816636163935
+  ],
+  "Monterrey-Hacienda Mitras 2Do Sector": [
+    25.7356892,
+    -100.38634639746573
+  ],
+  "Monterrey-Pedregal Cumbres": [
+    25.7329491,
+    -100.39321264832023
+  ],
+  "Monterrey-Portal De Cumbres": [
+    25.7413333,
+    -100.38918971115113
+  ],
+  "Monterrey-Balcones De Las Mitras": [
+    25.7460533,
+    -100.37290001761721
+  ],
+  "Monterrey-Cerradas De Cumbres": [
+    25.750514799999998,
+    -100.41043584917445
+  ],
+  "Monterrey-Topo Chico": [
+    25.7357136,
+    -100.3299506469898
+  ],
+  "Monterrey-Valle Verde 2Do Sector": [
+    25.73670315,
+    -100.37338669182131
+  ],
+  "Monterrey-Cumbres Quinta Real": [
+    25.7421027,
+    -100.3863327880996
+  ],
+  "Monterrey-Estrella": [
+    25.7051665,
+    -100.32826359339046
+  ],
+  "Monterrey-Priv El Uro": [
+    25.56433655,
+    -100.22429345
+  ],
+  "Monterrey-La Estanzuela 14": [
+    25.5809104,
+    -100.23803166740348
+  ],
+  "Monterrey-La Estanzuela 6": [
+    25.58968615,
+    -100.2528988
+  ],
+  "Monterrey-La Herradura": [
+    25.563451200000003,
+    -100.22815120786225
+  ],
+  "Monterrey-Las Estancias": [
+    25.5640817,
+    -100.25462006496402
+  ],
+  "Monterrey-Contry Sur": [
+    25.59811705,
+    -100.24935816068643
+  ],
+  "Monterrey-Granja Postal": [
+    25.58451145,
+    -100.24709497035332
+  ],
+  "Monterrey-Bosques De La Estanzuela": [
+    25.59097565,
+    -100.24224793269732
+  ],
+  "Monterrey-San Angel Sur ( Los Remates )": [
+    25.58932785,
+    -100.25999755478662
+  ],
+  "Monterrey-Sierra Alta": [
+    25.573224,
+    -100.27704506944679
+  ],
+  "Monterrey-Privada Valle Alto": [
+    25.57052795,
+    -100.27349139891557
+  ],
+  "Monterrey-Paseo Del Vergel 1Er Sector": [
+    25.585857,
+    -100.24199432066486
+  ],
+  "Monterrey-Sierra Alta 6 Sector": [
+    25.573224,
+    -100.27704506944679
+  ],
+  "Monterrey-Milagros De Valle Alto": [
+    25.58725005,
+    -100.27328574779506
+  ],
+  "Monterrey-Bosques Del Vergel": [
+    25.56780035,
+    -100.2338527646393
+  ],
+  "Monterrey-Residencial De La Sierra": [
+    25.58248785,
+    -100.24781558859023
+  ],
+  "Monterrey-Las Diligencias": [
+    25.78300029841076,
+    -100.40457241912335
+  ],
+  "Monterrey-Priv Sienna": [
+    25.6531206,
+    -100.3126108
+  ],
+  "Monterrey-Sierra Alta 5 Sector": [
+    25.573224,
+    -100.27704506944679
+  ],
+  "Monterrey-Bosque Encinos": [
+    25.57523225,
+    -100.27884645
+  ],
+  "Monterrey-Antigua Estanzuela": [
+    25.5809104,
+    -100.23803166740348
+  ],
+  "Monterrey-Sierra Alta 1Er Sector Rincon De La Sierra Y De La Virgen": [
+    25.63383685,
+    -100.27487603162237
+  ],
+  "Monterrey-Lagos Del Vergel": [
+    25.6757009,
+    -100.3456106
+  ],
+  "Monterrey-Bosques De Vistancia": [
+    25.7263663,
+    -100.31231064717292
+  ],
+  "Monterrey-Bosques De Valle Alto": [
+    25.5773935,
+    -100.27770277895556
+  ],
+  "Monterrey-El Vergel": [
+    25.569815900000002,
+    -100.23449450513543
+  ],
+  "Monterrey-Sierra Alta 2Do Sector": [
+    25.70683875,
+    -100.37378714386054
+  ],
+  "Monterrey-Valle Alto (Banco De Las Flores)": [
+    25.58578425,
+    -100.25805757610038
+  ],
+  "Monterrey-La Joya Residencial Sector Calandria": [
+    25.558228034734633,
+    -100.22570800741516
+  ],
+  "Monterrey-Los Cristales": [
+    25.5390976,
+    -100.2081928
+  ],
+  "Monterrey-Lomas Del Vergel": [
+    25.59525105,
+    -100.24711336113762
+  ],
+  "Monterrey-Nueva Estanzuela": [
+    25.5809104,
+    -100.23803166740348
+  ],
+  "Monterrey-El Encino": [
+    25.562446194266766,
+    -100.2347710844513
+  ],
+  "Monterrey-Los Cristales ( La Presita )": [
+    25.5390976,
+    -100.2081928
+  ],
+  "Monterrey-La Joya Residencial Sector Loreto": [
+    25.5582539,
+    -100.22600099237745
+  ],
+  "Monterrey-Lomas Del Hipico": [
+    25.58027475,
+    -100.26116047396525
+  ],
+  "Monterrey-La Joya Residencial Sector Magnolia": [
+    25.5582539,
+    -100.22600099237745
+  ],
+  "Monterrey-Flor De Piedra": [
+    25.5847718,
+    -100.27657270276458
+  ],
+  "Monterrey-Palmares": [
+    25.56902065,
+    -100.24467064933754
+  ],
+  "Monterrey-Pedregal La Silla": [
+    25.603453299999998,
+    -100.25549306812954
+  ],
+  "Monterrey-Portal Del Huajuco": [
+    25.572800899999997,
+    -100.22557730352608
+  ],
+  "Monterrey-Laderas Sector Garanday": [
+    25.54998965,
+    -100.21195987839408
+  ],
+  "Monterrey-La Toscana Rdcial": [
+    25.562976550000002,
+    -100.24539177248249
+  ],
+  "Monterrey-Cortijo Del Rio": [
+    25.609015499999998,
+    -100.26291820807617
+  ],
+  "Monterrey-Priv El Uro (Los Suarez)": [
+    25.56433655,
+    -100.22429345
+  ],
+  "Monterrey-Canterias": [
+    25.573351549999998,
+    -100.23493652723441
+  ],
+  "Monterrey-Valle De Bosquencinos": [
+    25.591579799999998,
+    -100.27000066394312
+  ],
+  "Monterrey-La Estanzuela 19": [
+    25.5809104,
+    -100.23803166740348
+  ],
+  "Monterrey-Vistancia": [
+    25.5772378,
+    -100.23447128679805
+  ],
+  "Monterrey-Las Jaras": [
+    25.5312542,
+    -100.20643057084095
+  ],
+  "Monterrey-Las Torres": [
+    25.6170939,
+    -100.28465723358411
+  ],
+  "Monterrey-Lagos Del Bosque": [
+    25.60117115,
+    -100.26223650329155
+  ],
+  "Monterrey-Residencial Galerias": [
+    25.67938025,
+    -100.35366262371666
+  ],
+  "Monterrey-Santa Maria": [
+    25.6731227,
+    -100.37422607431375
+  ],
+  "Monterrey-Miravalle": [
+    25.6723388,
+    -100.36818888244679
+  ],
+  "Monterrey-Rincon De Santa Maria": [
+    25.670685,
+    -100.37456600115907
+  ],
+  "Monterrey-Chepevera": [
+    25.6828347,
+    -100.3431755786528
+  ],
+  "Monterrey-Del Norte": [
+    25.86435195,
+    -100.24110923275074
+  ],
+  "Monterrey-Mirador": [
+    25.6267433,
+    -100.3214733
+  ],
+  "Monterrey-San Jeronimo": [
+    25.674066449999998,
+    -100.36445598258962
+  ],
+  "Monterrey-Obispado": [
+    25.6757009,
+    -100.3456106
+  ],
+  "Monterrey-Acero": [
+    25.6831049,
+    -100.28488066479085
+  ],
+  "Monterrey-Rincon Del Valle": [
+    25.6716421,
+    -100.3654373507146
+  ],
+  "Monterrey-Roma": [
+    25.654748,
+    -100.297677
+  ],
+  "Monterrey-Cumbres Elite, 3Er Sector": [
+    25.715449749999998,
+    -100.38023147708319
+  ],
+  "Monterrey-Residencial Dinastia": [
+    25.700534400000002,
+    -100.37493723569399
+  ],
+  "Monterrey-Las Lajas": [
+    25.697547200000002,
+    -100.37563927837157
+  ],
+  "Monterrey-Fco I Madero": [
+    25.68614065,
+    -100.2808701139397
+  ],
+  "Monterrey-Industrial": [
+    25.6946827,
+    -100.55530775106685
+  ],
+  "Monterrey-Emiliano Zapata": [
+    25.749273600000002,
+    -100.34693390832487
+  ],
+  "Monterrey-Bella Vista": [
+    25.7000937,
+    -100.3219522541306
+  ],
+  "Monterrey-Burocratas Del Estado": [
+    25.7104336,
+    -100.36540607558686
+  ],
+  "Monterrey-Colinas De San Jeronimo": [
+    25.689346049999997,
+    -100.3698159353479
+  ],
+  "Monterrey-Mitras Norte": [
+    25.71180245,
+    -100.35059156396389
+  ],
+  "Monterrey-Rincon De San Jeronimo": [
+    25.691178649999998,
+    -100.37908050362537
+  ],
+  "Monterrey-Colinas Del Valle": [
+    25.67763115,
+    -100.39429429766237
+  ],
+  "Monterrey-Residencial Lincoln": [
+    25.7104966,
+    -100.35726842462503
+  ],
+  "Monterrey-Los Fresnos": [
+    25.6913173,
+    -100.26401171355496
+  ],
+  "Monterrey-Cumbres 1Er Sector": [
+    25.3588719,
+    -100.30684640680191
+  ],
+  "Monterrey-Leones": [
+    25.696427149999998,
+    -100.35156665434182
+  ],
+  "Monterrey-Villas De Linda Vista": [
+    25.6913671,
+    -100.26572125692229
+  ],
+  "Monterrey-Prados De San Jeronimo": [
+    25.68869375,
+    -100.37807215640004
+  ],
+  "Monterrey-San Jemo": [
+    25.678695349999998,
+    -100.36889026126246
+  ],
+  "Monterrey-Del Carmen": [
+    25.6711742,
+    -100.35752228948459
+  ],
+  "Monterrey-Mitras Sur": [
+    25.68452275,
+    -100.34848162021058
+  ],
+  "Monterrey-Hacienda San Jeronimo": [
+    25.693189349999997,
+    -100.37983006112823
+  ],
+  "Monterrey-Nuevo Repueblo": [
+    25.6605167,
+    -100.3025451
+  ],
+  "Monterrey-Cumbres Elite 7 Sector": [
+    25.731411700000002,
+    -100.41002509878487
+  ],
+  "Monterrey-Deportivo Obispado": [
+    25.6757009,
+    -100.3456106
+  ],
+  "Monterrey-Balcones Del Carmen": [
+    25.6674983,
+    -100.35739244415251
+  ],
+  "Monterrey-Cumbres Elite 5To Sector": [
+    25.72178655,
+    -100.39266935493019
+  ],
+  "Monterrey-Gonzalitos": [
+    25.6862208,
+    -100.3426577
+  ],
+  "Monterrey-Cumbres 2Do Sector": [
+    25.70683875,
+    -100.37378714386054
+  ],
+  "Monterrey-Privada Pinos": [
+    25.69111585,
+    -100.29311992361859
+  ],
+  "Monterrey-Paseo De Cumbres 1 Sector": [
+    25.7028636,
+    -100.3679501
+  ],
+  "Monterrey-Cumbres Oro Sector Le Fontaine": [
+    25.74317935,
+    -100.39555515468547
+  ],
+  "Monterrey-Hacienda Santa Clara": [
+    25.7445267,
+    -100.39190122308256
+  ],
+  "Monterrey-Cumbres Elite, Sector Villas": [
+    25.731411700000002,
+    -100.41002509878487
+  ],
+  "Monterrey-Privadas De Cumbres (Privada Recinto)": [
+    25.74636065,
+    -100.40220102673861
+  ],
+  "Monterrey-Cumbres Elite Premier Privada Alpes": [
+    25.748138897094965,
+    -100.40155394700103
+  ],
+  "Monterrey-Santa Fe": [
+    25.698015849999997,
+    -100.26501078178296
+  ],
+  "Monterrey-Cumbres Elite 2Do Sector": [
+    25.70683875,
+    -100.37378714386054
+  ],
+  "Monterrey-San Pio X": [
+    25.661762495586892,
+    -100.3301969244538
+  ],
+  "Monterrey-Los Cedros": [
+    25.71983555,
+    -100.37178482155358
+  ],
+  "Monterrey-Martinez": [
+    25.68802445,
+    -100.29075757818019
+  ],
+  "Monterrey-U De Colonos Cooperativa Cuauhtemoc": [
+    25.79064964756262,
+    -100.37829285146398
+  ],
+  "Monterrey-Rdcial Centrika Sector Palmas": [
+    25.739430118845934,
+    -100.39419654479596
+  ],
+  "Monterrey-Hidalgo": [
+    25.6644136,
+    -100.3319731195937
+  ],
+  "San Pedro Garza García-Las Privanzas": [
+    25.6391104,
+    -100.32204273630437
+  ],
+  "San Pedro Garza García-Valle Del Campestre": [
+    25.6651753,
+    -100.4018251
+  ],
+  "San Pedro Garza García-Valle De Aragon": [
+    25.6651753,
+    -100.4018251
+  ],
+  "San Pedro Garza García-Parque Corporativo Santa Engracia": [
+    25.64411705,
+    -100.35359559335214
+  ],
+  "San Pedro Garza García-Rdcial Haciendas De La Sierra": [
+    25.644614699999998,
+    -100.3176658253763
+  ],
+  "San Pedro Garza García-Montebello": [
+    25.64459505,
+    -100.35844878473124
+  ],
+  "San Pedro Garza García-Plaza Fiesta San Agustin": [
+    25.6507033,
+    -100.33829964576296
+  ],
+  "San Pedro Garza García-Las Calzadas Rdcial": [
+    25.6651753,
+    -100.4018251
+  ],
+  "San Pedro Garza García-San Pedro": [
+    25.6651753,
+    -100.4018251
+  ],
+  "San Pedro Garza García-Jardines Del Campestre": [
+    25.6500178,
+    -100.34395068185702
+  ],
+  "San Pedro Garza García-Del Valle Sector Oriente": [
+    25.6535251,
+    -100.3482657
+  ],
+  "San Pedro Garza García-Valle Oriente": [
+    25.6535251,
+    -100.3482657
+  ],
+  "San Pedro Garza García-Rdcial La Jolla": [
+    25.6651753,
+    -100.4018251
+  ],
+  "San Pedro Garza García-Villa San Agustin": [
+    25.6546864,
+    -100.33496219304993
+  ],
+  "San Pedro Garza García-Villas De Santa Engracia": [
+    25.661641984298722,
+    -100.35307872586671
+  ],
+  "San Pedro Garza García-San Agustin Campestre": [
+    25.65117393600767,
+    -100.34383621969901
+  ],
+  "San Pedro Garza García-Del Valle": [
+    25.64504935,
+    -100.38162981404179
+  ],
+  "San Pedro Garza García-Bosques Del Valle": [
+    25.64413555,
+    -100.37446036770456
+  ],
+  "San Pedro Garza García-Valle De Vasconcelos": [
+    25.662772599999997,
+    -100.41552617688504
+  ],
+  "San Pedro Garza García-Garza Ayala": [
+    25.661525349999998,
+    -100.41436810500068
+  ],
+  "San Pedro Garza García-Mirador Del Campestre": [
+    25.655489000000003,
+    -100.3363402936418
+  ],
+  "San Pedro Garza García-Valle De Santa Engracia": [
+    25.661641984298722,
+    -100.35307872586671
+  ],
+  "San Pedro Garza García-Tampiquito": [
+    25.652768299999998,
+    -100.38158195520089
+  ],
+  "San Pedro Garza García-Villa Chipinque": [
+    25.63185912062402,
+    -100.36453976552905
+  ],
+  "San Pedro Garza García-Rdcial Carrizalejo": [
+    25.6651753,
+    -100.4018251
+  ],
+  "San Pedro Garza García-Rdcial Chipinque": [
+    25.6651753,
+    -100.4018251
+  ],
+  "San Pedro Garza García-San Agustin 1Ro,2Do, Sector": [
+    25.63707085,
+    -100.33350013611462
+  ],
+  "San Pedro Garza García-Los Pinos": [
+    25.67165995,
+    -100.39505961015061
+  ],
+  "San Pedro Garza García-Centro De San Pedro Garza Garcia": [
+    25.6582286,
+    -100.3968498
+  ],
+  "San Pedro Garza García-Rdcial San Carlos": [
+    25.6651753,
+    -100.4018251
+  ],
+  "San Pedro Garza García-Prados De La Sierra": [
+    25.65415515,
+    -100.40541702337927
+  ],
+  "San Pedro Garza García-Balcones Del Campestre": [
+    25.6651753,
+    -100.4018251
+  ],
+  "San Pedro Garza García-Rdcial Santa Barbara": [
+    25.6651753,
+    -100.4018251
+  ],
+  "San Pedro Garza García-Sendas Galicia": [
+    25.6549696,
+    -100.40916566654948
+  ],
+  "San Pedro Garza García-Mirasierra": [
+    25.65233595,
+    -100.38985511671815
+  ],
+  "San Pedro Garza García-Cortijo Del Valle": [
+    25.64677785,
+    -100.36253005155133
+  ],
+  "San Pedro Garza García-Los Arcangeles Torre 1": [
+    25.6634376,
+    -100.3787233893018
+  ],
+  "San Pedro Garza García-Lomas Del Valle": [
+    25.64504935,
+    -100.38162981404179
+  ],
+  "San Pedro Garza García-Lomas Del Campestre": [
+    25.64110115,
+    -100.33116393822127
+  ],
+  "San Pedro Garza García-Vista Real": [
+    25.65179285,
+    -100.32522467011434
+  ],
+  "San Pedro Garza García-Colinas De San Angel Sector Bosques": [
+    25.6240211,
+    -100.37277201222703
+  ],
+  "San Pedro Garza García-Hacienda San Agustin": [
+    25.642003303694143,
+    -100.33450182484766
+  ],
+  "San Pedro Garza García-Veredalta": [
+    25.637663449999998,
+    -100.34931334751467
+  ],
+  "San Pedro Garza García-Rdcial Sierra Del Valle": [
+    25.65651925802711,
+    -100.34439517900039
+  ],
+  "San Pedro Garza García-Jeronimo Siller": [
+    25.64355245,
+    -100.3701185567954
+  ],
+  "San Pedro Garza García-San Patricio": [
+    25.667941831060205,
+    -100.38978547781761
+  ],
+  "San Pedro Garza García-Palo Blanco": [
+    25.654980799999997,
+    -100.39778729873575
+  ],
+  "San Pedro Garza García-Real De San Agustin": [
+    25.64390365,
+    -100.33499298583936
+  ],
+  "San Pedro Garza García-Fatima": [
+    25.64864125,
+    -100.37125772318744
+  ],
+  "San Pedro Garza García-Colonial De La Sierra": [
+    25.63743165,
+    -100.3848911
+  ],
+  "San Pedro Garza García-Jardines De San Agustin": [
+    25.63040315,
+    -100.33248873105097
+  ],
+  "San Pedro Garza García-Rdcial Valle Del Seminario": [
+    25.6738297,
+    -100.40052661467188
+  ],
+  "San Pedro Garza García-Lomas De San Angel": [
+    25.62462345,
+    -100.3611300570931
+  ],
+  "San Pedro Garza García-Fuentes Del Valle": [
+    25.665426,
+    -100.36574674576818
+  ],
+  "San Pedro Garza García-Valle De Chipinque": [
+    25.6418635,
+    -100.36624490027086
+  ],
+  "San Pedro Garza García-San Agustin": [
+    25.642003303694143,
+    -100.33450182484766
+  ],
+  "San Pedro Garza García-Colinas De La Sierra Madre": [
+    25.6476358,
+    -100.36625380655323
+  ],
+  "San Pedro Garza García-Jardines Coloniales": [
+    25.65076405,
+    -100.39892527678427
+  ],
+  "San Pedro Garza García-Pedregal Del Valle": [
+    25.64059275,
+    -100.38830365825655
+  ],
+  "San Pedro Garza García-Rdcial San Mateo": [
+    25.6651753,
+    -100.4018251
+  ],
+  "San Pedro Garza García-La Cima 1Er,2Do,3Er Sector": [
+    25.640867450000002,
+    -100.35065208486051
+  ],
+  "San Pedro Garza García-Villas De Terrasol": [
+    25.6651753,
+    -100.4018251
+  ],
+  "San Pedro Garza García-Los Colorines": [
+    25.6295397,
+    -100.34271952546493
+  ],
+  "San Pedro Garza García-Bosques De San Angel Sector Palmillas": [
+    25.6251224,
+    -100.3663176
+  ],
+  "San Pedro Garza García-Lomas Del Rosario": [
+    25.63782175,
+    -100.39528602623
+  ],
+  "San Pedro Garza García-Lomas De Tampiquito": [
+    25.64458605,
+    -100.38644988406142
+  ],
+  "San Nicolás de los Garza-Arboledas De San Jorge": [
+    25.7558021,
+    -100.289648
+  ],
+  "San Nicolás de los Garza-Hacienda Los Angeles": [
+    25.73058963481086,
+    -100.20847001981578
+  ],
+  "San Nicolás de los Garza-Palmas Diamante": [
+    25.7393529,
+    -100.22650903452576
+  ],
+  "San Nicolás de los Garza-Bosques De Linda Vista 1Er Sector": [
+    25.716789050000003,
+    -100.21414417574961
+  ],
+  "Apodaca-Rinconada Colonial 10Mo Sector": [
+    25.8024095,
+    -100.19745817510122
+  ],
+  "Apodaca-Montalto Residencial": [
+    25.79257705,
+    -100.18251106617551
+  ],
+  "Apodaca-Los Arrecifes": [
+    25.739785050000002,
+    -100.21552589167209
+  ],
+  "Apodaca-Hacienda Santa Fe": [
+    25.7360106,
+    -100.21023365965306
+  ],
+  "Apodaca-Paraje Santa Rosa Sector Sur": [
+    25.80658205,
+    -100.21486544480268
+  ],
+  "Apodaca-Ara Crystal Lagoons": [
+    25.76941255,
+    -100.20826024854875
+  ],
+  "Apodaca-Pedregal Del Valle": [
+    25.79709835,
+    -100.20425237250765
+  ],
+  "Apodaca-Monetta Residencial 1Er Sector": [
+    25.782199,
+    -100.21896502986849
+  ],
+  "Apodaca-Moderno Apodaca 1Er Sector": [
+    25.826884399999997,
+    -100.24581744720311
+  ],
+  "Apodaca-Arbado Sector Monarca": [
+    25.77450485,
+    -100.23891670432721
+  ],
+  "Apodaca-Cerradas De Santa Rosa 3Er Sector": [
+    25.75417375,
+    -100.22939834771839
+  ],
+  "Apodaca-Estancias Valle De Plata": [
+    25.7830279,
+    -100.20895921259311
+  ],
+  "Apodaca-Privalia Concordia 4To Sector": [
+    25.776740599999997,
+    -100.2138123781721
+  ],
+  "Apodaca-Cerradas Del Parque": [
+    25.753853,
+    -100.2328814456303
+  ],
+  "Apodaca-Cerradas De Rinconada": [
+    25.80307365,
+    -100.20398479676955
+  ],
+  "Apodaca-Altabrisa": [
+    25.773799750000002,
+    -100.20583418468136
+  ],
+  "Apodaca-Acanto Residencial Sector Encino": [
+    25.713667049999998,
+    -100.16230336450631
+  ],
+  "Apodaca-Radica": [
+    25.775397599999998,
+    -100.22255538128275
+  ],
+  "Apodaca-Villas Coloniales Sector Region De Asturias": [
+    25.86836820126501,
+    -100.26979924926711
+  ],
+  "Apodaca-Valle De Las Flores": [
+    25.70620445,
+    -100.15288086974604
+  ],
+  "Apodaca-Valle De Salduero": [
+    25.811752,
+    -100.21908517725868
+  ],
+  "Apodaca-Valle Azul": [
+    25.797042400000002,
+    -100.151954367635
+  ],
+  "Apodaca-Los Olivos Residencial": [
+    25.79257705,
+    -100.18251106617551
+  ],
+  "Apodaca-Privadas Del Parque": [
+    25.781700999999998,
+    -100.18874894989818
+  ],
+  "Apodaca-Treboles": [
+    25.764530649999998,
+    -100.14202339351121
+  ],
+  "Guadalupe-Valles Contry 2Do Sector": [
+    25.6575705,
+    -100.25701249012438
+  ],
+  "Guadalupe-Adolfo Prieto 4To Sector": [
+    25.7011255,
+    -100.25423191359377
+  ],
+  "Guadalupe-Bosques Del Contry": [
+    25.659703999999998,
+    -100.24626352350168
+  ],
+  "Guadalupe-Contry Sol": [
+    25.65345185,
+    -100.26337982688449
+  ],
+  "Guadalupe-Los Cristales 1Er Sector": [
+    25.7300951,
+    -100.2021248551477
+  ],
+  "Guadalupe-Valle Del Contry": [
+    25.6536677,
+    -100.26662640589366
+  ],
+  "Guadalupe-Contry Los Nogales": [
+    25.2447188,
+    -100.1164207
+  ],
+  "Guadalupe-La Victoria": [
+    25.70600965,
+    -100.22035303340868
+  ],
+  "Guadalupe-Riberas De Dos Rios": [
+    25.680965299999997,
+    -100.17863546306279
+  ],
+  "Guadalupe-Peninsula": [
+    25.679206706161136,
+    -100.17888221417104
+  ],
+  "Guadalupe-Los Faisanes": [
+    25.690358500000002,
+    -100.18158627942317
+  ],
+  "Guadalupe-Mision Santa Fe": [
+    25.649608299999997,
+    -100.17705312137292
+  ],
+  "Cuauhtémoc-Tabacalera": [
+    19.431086049999998,
+    -99.1590165348506
+  ],
+  "Cuauhtémoc-Valle Gomez": [
+    19.4586286,
+    -99.125247
+  ],
+  "Cuauhtémoc-Peralvillo": [
+    19.4618166,
+    -99.1341901
+  ],
+  "Cuauhtémoc-San Simon Tolnahuac": [
+    19.4600188,
+    -99.1435613
+  ],
+  "Cuauhtémoc-Atlampa": [
+    19.4567845,
+    -99.1568752
+  ],
+  "Cuauhtémoc-Santa Maria La Ribera": [
+    19.4489743,
+    -99.1571438
+  ],
+  "Cuauhtémoc-Nonoalco Tlatelolco": [
+    19.4513222,
+    -99.1370518
+  ],
+  "Cuauhtémoc-Morelos": [
+    19.4468471,
+    -99.12984
+  ],
+  "Cuauhtémoc-Guerrero": [
+    19.4449101,
+    -99.1451728
+  ],
+  "Cuauhtémoc-Buenavista": [
+    19.4460281,
+    -99.1517519
+  ],
+  "Cuauhtémoc-San Rafael": [
+    19.441587650000002,
+    -99.16643075026434
+  ],
+  "Cuauhtémoc-Centro": [
+    19.434382149999998,
+    -99.13306506450397
+  ],
+  "Cuauhtémoc-Transito": [
+    19.4177785,
+    -99.1314778
+  ],
+  "Cuauhtémoc-Obrera": [
+    19.4132002,
+    -99.1440487
+  ],
+  "Cuauhtémoc-Esperanza": [
+    19.43675635,
+    -99.13721907413517
+  ],
+  "Cuauhtémoc-Ampl. Asturias": [
+    19.4071473,
+    -99.1310771
+  ],
+  "Cuauhtémoc-Asturias": [
+    19.4046574,
+    -99.1302775
+  ],
+  "Cuauhtémoc-Algarin": [
+    19.405455,
+    -99.1400863
+  ],
+  "Cuauhtémoc-Buenos Aires": [
+    19.4053637,
+    -99.1498637
+  ],
+  "Cuauhtémoc-Doctores": [
+    19.4214424,
+    -99.14322
+  ],
+  "Cuauhtémoc-Juarez": [
+    19.4256886,
+    -99.1545867
+  ],
+  "Cuauhtémoc-Cuauhtemoc": [
+    19.4326296,
+    -99.1331785
+  ],
+  "Cuauhtémoc-Condesa": [
+    19.4148639,
+    -99.176429
+  ],
+  "Cuauhtémoc-Roma Norte": [
+    19.4195773,
+    -99.1610933
+  ],
+  "Cuauhtémoc-Hipodromo": [
+    19.4042011,
+    -99.1694463
+  ],
+  "Cuauhtémoc-Hipodromo Condesa": [
+    19.4092659,
+    -99.1795821
+  ],
+  "Cuauhtémoc-Roma Sur": [
+    19.4058335,
+    -99.1633037
+  ],
+  "Miguel Hidalgo-Bosque De Chapultepec I Seccion": [
+    19.4183747,
+    -99.19710779681623
+  ],
+  "Miguel Hidalgo-San Lorenzo Tlatenango": [
+    19.4683517,
+    -99.2063131
+  ],
+  "Miguel Hidalgo-Argentina Poniente": [
+    19.452311918574704,
+    -99.20322112904597
+  ],
+  "Miguel Hidalgo-San Joaquin": [
+    19.4449744,
+    -99.1917953
+  ],
+  "Miguel Hidalgo-Periodista": [
+    19.4482601,
+    -99.2187752
+  ],
+  "Miguel Hidalgo-Torre Blanca": [
+    19.4578151,
+    -99.1947459
+  ],
+  "Miguel Hidalgo-Tacuba": [
+    19.458901,
+    -99.1871316
+  ],
+  "Miguel Hidalgo-Popotla": [
+    19.4528599,
+    -99.1754624
+  ],
+  "Miguel Hidalgo-Anahuac I Seccion": [
+    19.438163353115648,
+    -99.17100293587521
+  ],
+  "Miguel Hidalgo-Anahuac Ii Seccion": [
+    19.4441525,
+    -99.1730359
+  ],
+  "Miguel Hidalgo-Tlaxpana": [
+    19.4405954,
+    -99.1692436
+  ],
+  "Miguel Hidalgo-Veronica Anzures": [
+    19.4362644,
+    -99.1744021
+  ],
+  "Miguel Hidalgo-Mariano Escobedo": [
+    19.4453949,
+    -99.1816725
+  ],
+  "Miguel Hidalgo-Los Manzanos": [
+    19.4470778,
+    -99.1844176
+  ],
+  "Miguel Hidalgo-Modelo Pensil": [
+    19.4457958,
+    -99.1902152
+  ],
+  "Miguel Hidalgo-Cuauhtemoc Pensil": [
+    19.4449693,
+    -99.1938372
+  ],
+  "Miguel Hidalgo-Pensil Norte": [
+    19.4512607,
+    -99.1972551
+  ],
+  "Miguel Hidalgo-Francisco I Madero": [
+    19.4472479,
+    -99.2034254
+  ],
+  "Miguel Hidalgo-Irrigacion": [
+    19.4425356,
+    -99.2102915
+  ],
+  "Miguel Hidalgo-Polanco I Seccion": [
+    19.428009250000002,
+    -99.19695970904195
+  ],
+  "Miguel Hidalgo-Polanco Ii Seccion": [
+    19.4296305,
+    -99.1954505
+  ],
+  "Miguel Hidalgo-Granada": [
+    19.4402557,
+    -99.1926322
+  ],
+  "Miguel Hidalgo-Polanco Iii Seccion": [
+    19.43353,
+    -99.190915
+  ],
+  "Miguel Hidalgo-Polanco Iv Seccion": [
+    19.4318907,
+    -99.1949507
+  ],
+  "Miguel Hidalgo-Polanco V Seccion": [
+    19.428009250000002,
+    -99.19695970904195
+  ],
+  "Miguel Hidalgo-Anzures": [
+    19.422990050000003,
+    -99.17960574974663
+  ],
+  "Miguel Hidalgo-Ampliacion Granada": [
+    19.442902,
+    -99.2014215
+  ],
+  "Miguel Hidalgo-Bosque De Chapultepec Ii Seccion": [
+    19.420463249999997,
+    -99.18208657199676
+  ],
+  "Miguel Hidalgo-San Miguel Chapultepec Ii Seccion": [
+    19.411038,
+    -99.1857782
+  ],
+  "Miguel Hidalgo-San Miguel Chapultepec I Seccion": [
+    19.409559,
+    -99.18626824344452
+  ],
+  "Miguel Hidalgo-Escandon I Seccion": [
+    19.401054700000003,
+    -99.18439342532133
+  ],
+  "Miguel Hidalgo-Escandon Ii Seccion": [
+    19.402152,
+    -99.1824244
+  ],
+  "Miguel Hidalgo-Tacubaya": [
+    19.402049,
+    -99.1874725
+  ],
+  "Miguel Hidalgo-Lomas De Chapultepec Iv Seccion": [
+    19.420463249999997,
+    -99.18208657199676
+  ],
+  "Miguel Hidalgo-Lomas De Chapultepec V Seccion": [
+    19.4156998,
+    -99.2136879
+  ],
+  "Miguel Hidalgo-Lomas De Chapultepec Iii Seccion": [
+    19.420463249999997,
+    -99.18208657199676
+  ],
+  "Miguel Hidalgo-Reforma Social": [
+    19.4312023,
+    -99.2178522
+  ],
+  "Miguel Hidalgo-Lomas De Chapultepec Ii Seccion": [
+    19.420463249999997,
+    -99.18208657199676
+  ],
+  "Miguel Hidalgo-Lomas De Chapultepec Vi Seccion": [
+    19.4156998,
+    -99.2136879
+  ],
+  "Miguel Hidalgo-Lomas De Chapultepec Viii Seccion": [
+    19.420463249999997,
+    -99.18208657199676
+  ],
+  "Miguel Hidalgo-Lomas De Chapultepec I Seccion": [
+    19.4095699,
+    -99.2293073
+  ],
+  "Miguel Hidalgo-Bosque De Las Lomas": [
+    19.3975105,
+    -99.2506571
+  ],
+  "Miguel Hidalgo-Lomas De Reforma": [
+    19.4030527,
+    -99.2337652
+  ],
+  "Miguel Hidalgo-Lomas Altas": [
+    19.3988079,
+    -99.2298103
+  ],
+  "Miguel Hidalgo-Lomas De Bezares": [
+    19.3913552,
+    -99.2436293
+  ],
+  "Miguel Hidalgo-Real De Las Lomas": [
+    19.4071156,
+    -99.1906167
+  ]
+}

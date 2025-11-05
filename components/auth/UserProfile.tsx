@@ -3,18 +3,22 @@
 import React, { useState, useEffect } from 'react'
 import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { useAuth } from '@/lib/auth'
 import { supabase } from '@/lib/supabase'
 import { useTranslation } from 'next-i18next'
 import { User, Trash2, AlertTriangle } from 'lucide-react'
+import { useRouter } from 'next/router'
 
 export function UserProfile() {
   const { t } = useTranslation('common')
-  const { user, deleteAccount, updateProfile } = useAuth()
+  const { user, profile, deleteAccount, updateProfile } = useAuth()
+  const router = useRouter()
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false)
   const [deleting, setDeleting] = useState(false)
   const [mounted, setMounted] = useState(false)
   const [nameValue, setNameValue] = useState('')
+  const [languageValue, setLanguageValue] = useState('en')
   const [saving, setSaving] = useState(false)
   const [saveSuccess, setSaveSuccess] = useState(false)
   const [nameValid, setNameValid] = useState(true)
@@ -24,13 +28,25 @@ export function UserProfile() {
 
   useEffect(() => {
     setMounted(true)
-    setNameValue(user?.user_metadata?.name || '')
-  }, [user])
+  }, [])
+
+  useEffect(() => {
+    if (profile) {
+      setNameValue(profile.name || '')
+      setLanguageValue(profile.language || 'en')
+    } else if (user) {
+      setNameValue(user.user_metadata?.name || '')
+      setLanguageValue((user.user_metadata?.language as string) || 'en')
+    } else {
+      setNameValue('')
+      setLanguageValue('en')
+    }
+  }, [profile, user])
 
   const handleSaveProfile = async () => {
     setSaving(true)
     try {
-      const { error } = await updateProfile({ name: nameValue })
+      const { error } = await updateProfile({ name: nameValue, language: languageValue })
       if (error) {
         alert('Failed to save profile')
       } else {
@@ -45,10 +61,18 @@ export function UserProfile() {
   const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const input = e.target.value
     // Allow letters (including accents), spaces, hyphens, apostrophes
-    const filtered = input.replace(/[^A-Za-zÀ-ÿ' -]/g, '')
+    const filtered = input.replace(/[^A-Za-zÀ-ÖØ-öø-ÿ' -]/g, '')
     setNameValue(filtered)
-    setNameValid(/^[A-Za-zÀ-ÿ' -]*$/.test(filtered))
+    setNameValid(filtered === input)
   }
+
+  const languageOptions = [
+    { value: 'en', label: 'English' },
+    { value: 'es', label: 'Español' },
+    { value: 'zh', label: '中文' },
+  ]
+
+  const getLanguageLabel = (value: string) => languageOptions.find(option => option.value === value)?.label || t('auth.language')
 
   const handleUpdatePassword = async () => {
     setPasswordMsg(null)
@@ -84,6 +108,7 @@ export function UserProfile() {
         alert(`Failed to delete account: ${error.message}`)
       } else {
         alert(t('auth.account_deleted'))
+        router.replace('/')
       }
     } catch (err) {
       alert('An unexpected error occurred')
@@ -131,7 +156,6 @@ export function UserProfile() {
             <input
               type="text"
               inputMode="text"
-              pattern="^[A-Za-zÀ-ÿ'\s-]*$"
               value={nameValue}
               onChange={handleNameChange}
               className="w-full p-3 bg-gray-50 rounded-md text-gray-900 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -139,6 +163,23 @@ export function UserProfile() {
             {!nameValid && (
               <p className="mt-1 text-sm text-red-600">{mounted ? t('auth.name_letters_only', 'Name must contain letters only') : 'Name must contain letters only'}</p>
             )}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                {mounted ? t('auth.language') : 'Language'}
+              </label>
+              <Select value={languageValue} onValueChange={setLanguageValue}>
+                <SelectTrigger className="w-full">
+                  <SelectValue placeholder={getLanguageLabel(languageValue)} />
+                </SelectTrigger>
+                <SelectContent>
+                  {languageOptions.map(option => (
+                    <SelectItem key={option.value} value={option.value}>
+                      {option.label}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
             <div className="mt-3 flex justify-end">
               <Button onClick={handleSaveProfile} disabled={saving || !nameValid} className="inline-flex items-center justify-center">
                 {saving && <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>}

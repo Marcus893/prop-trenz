@@ -153,5 +153,25 @@
     "error_message": "Error Message",
     "filename": "Filename",
     "no_uploads_yet": "No uploads yet"
+  },
+  "map": {
+    "title": "Neighborhood Price Map",
+    "subtitle": "Explore property average prices per square meter across neighborhoods",
+    "city": "City",
+    "loading_neighborhood_data": "Loading neighborhood data...",
+    "error_loading_data": "Error loading data",
+    "data_files_required": "Make sure the data files exist at:",
+    "average_price": "Average Price",
+    "neighborhoods": "neighborhoods",
+    "on_map": "on map",
+    "neighborhoods_label": "Neighborhoods:",
+    "search_neighborhoods": "Search neighborhoods...",
+    "no_neighborhoods_found": "No neighborhoods found matching",
+    "price_per_m2": "Price per m²",
+    "loading_neighborhoods": "Loading neighborhoods...",
+    "expand": "Expand",
+    "collapse": "Collapse",
+    "close": "Close",
+    "avg": "Avg"
   }
 }

@@ -152,5 +152,25 @@
     "upload_date": "Fecha de Subida",
     "status": "Estado",
     "error_message": "Mensaje de Error"
+  },
+  "map": {
+    "title": "Mapa de Precios por Colonia",
+    "subtitle": "Explora los precios promedio de propiedades por metro cuadrado en las colonias",
+    "city": "Ciudad",
+    "loading_neighborhood_data": "Cargando datos de colonias...",
+    "error_loading_data": "Error al cargar datos",
+    "data_files_required": "Asegúrate de que los archivos de datos existan en:",
+    "average_price": "Precio Promedio",
+    "neighborhoods": "colonias",
+    "on_map": "en el mapa",
+    "neighborhoods_label": "Colonias:",
+    "search_neighborhoods": "Buscar colonias...",
+    "no_neighborhoods_found": "No se encontraron colonias que coincidan con",
+    "price_per_m2": "Precio por m²",
+    "loading_neighborhoods": "Cargando colonias...",
+    "expand": "Expandir",
+    "collapse": "Contraer",
+    "close": "Cerrar",
+    "avg": "Prom"
   }
 }

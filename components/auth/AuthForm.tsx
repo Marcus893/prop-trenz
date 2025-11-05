@@ -7,6 +7,7 @@ import { Input } from '@/components/ui/input'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { useAuth } from '@/lib/auth'
 import { useTranslation } from 'next-i18next'
+import { useRouter } from 'next/router'
 import { Eye, EyeOff, Mail, Lock, User, X } from 'lucide-react'
 
 interface AuthFormProps {
@@ -17,7 +18,8 @@ interface AuthFormProps {
 }
 
 export function AuthForm({ mode, onModeChange, onClose, className }: AuthFormProps) {
-  const { t } = useTranslation('common')
+  const { t, i18n } = useTranslation('common')
+  const router = useRouter()
   const { signIn, signUp, loading, resetPassword, signInWithGoogle } = useAuth()
   const [mounted, setMounted] = useState(false)
   
@@ -41,7 +43,8 @@ export function AuthForm({ mode, onModeChange, onClose, className }: AuthFormPro
     email: '',
     password: '',
     confirmPassword: '',
-    name: ''
+    name: '',
+    language: i18n.language?.toLowerCase() || 'en'
   })
   const [showPassword, setShowPassword] = useState(false)
   const [showConfirmPassword, setShowConfirmPassword] = useState(false)
@@ -81,11 +84,20 @@ export function AuthForm({ mode, onModeChange, onClose, className }: AuthFormPro
           if (onClose) onClose()
         }
       } else {
-        const { error } = await signUp(formData.email, formData.password, formData.name)
+        const { error } = await signUp(formData.email, formData.password, formData.name, formData.language)
         if (error) {
           setError(error.message)
         } else {
           setSuccess('Check your email for verification link')
+          if (router.locale !== formData.language) {
+            router.replace({ pathname: router.pathname, query: router.query }, router.asPath, {
+              locale: formData.language,
+              scroll: false,
+            }).catch(() => null)
+          }
+          if (i18n.language !== formData.language) {
+            void i18n.changeLanguage(formData.language)
+          }
         }
       }
     } catch (err) {
@@ -115,6 +127,21 @@ export function AuthForm({ mode, onModeChange, onClose, className }: AuthFormPro
       [e.target.name]: e.target.value
     }))
   }
+
+  const handleLanguageChange = (value: string) => {
+    setFormData(prev => ({
+      ...prev,
+      language: value
+    }))
+  }
+
+  const languageOptions = [
+    { code: 'en', label: 'English' },
+    { code: 'es', label: 'Español' },
+    { code: 'zh', label: '中文' },
+  ]
+
+  const getLanguageLabel = (code: string) => languageOptions.find(l => l.code === code)?.label || translate('language')
 
   return (
     <Card className={`p-6 max-w-md mx-auto relative ${className}`}>
@@ -182,6 +209,26 @@ export function AuthForm({ mode, onModeChange, onClose, className }: AuthFormPro
             />
           </div>
         </div>
+
+        {mode === 'signup' && (
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              {translate('language')}
+            </label>
+            <Select value={formData.language} onValueChange={handleLanguageChange}>
+              <SelectTrigger className="w-full">
+                <SelectValue placeholder={getLanguageLabel(formData.language)} />
+              </SelectTrigger>
+              <SelectContent>
+                {languageOptions.map(option => (
+                  <SelectItem key={option.code} value={option.code}>
+                    {option.label}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+        )}
 
         <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">

@@ -151,5 +151,25 @@
     "upload_date": "上传日期",
     "status": "状态",
     "error_message": "错误信息"
+  },
+  "map": {
+    "title": "社区价格地图",
+    "subtitle": "探索各社区每平方米的平均房产价格",
+    "city": "城市",
+    "loading_neighborhood_data": "正在加载社区数据...",
+    "error_loading_data": "加载数据时出错",
+    "data_files_required": "请确保数据文件存在于：",
+    "average_price": "平均价格",
+    "neighborhoods": "个社区",
+    "on_map": "个在地图上",
+    "neighborhoods_label": "社区：",
+    "search_neighborhoods": "搜索社区...",
+    "no_neighborhoods_found": "未找到匹配的社区",
+    "price_per_m2": "每平方米价格",
+    "loading_neighborhoods": "正在加载社区...",
+    "expand": "展开",
+    "collapse": "折叠",
+    "close": "关闭",
+    "avg": "平均"
   }
 }

@@ -1,7 +1,8 @@
 'use client'
 
-import { useState, ReactNode } from 'react'
+import { useState, useEffect, useRef, ReactNode } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { Button } from '@/components/ui/button'
 import { LanguageSwitcher } from '@/components/ui/LanguageSwitcher'
 import { AuthForm } from '@/components/auth/AuthForm'
@@ -26,9 +27,50 @@ interface LayoutProps {
 export function Layout({ children, title, subtitle }: LayoutProps) {
   const { t } = useTranslation('common')
   const { user, signOut } = useAuth()
+  const router = useRouter()
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [authMode, setAuthMode] = useState<'signin' | 'signup'>('signin')
   const [showAuth, setShowAuth] = useState(false)
+  const sidebarRef = useRef<HTMLDivElement>(null)
+  
+  // Update sidebar height to match document height
+  useEffect(() => {
+    const updateSidebarHeight = () => {
+      if (sidebarRef.current && window.innerWidth >= 1024) {
+        requestAnimationFrame(() => {
+          if (sidebarRef.current) {
+            const documentHeight = Math.max(
+              document.body.scrollHeight,
+              document.body.offsetHeight,
+              document.documentElement.clientHeight,
+              document.documentElement.scrollHeight,
+              document.documentElement.offsetHeight
+            )
+            sidebarRef.current.style.height = `${documentHeight}px`
+          }
+        })
+      }
+    }
+    
+    // Initial update
+    updateSidebarHeight()
+    
+    // Update on resize
+    window.addEventListener('resize', updateSidebarHeight)
+    
+    // Update on scroll (for dynamic content)
+    window.addEventListener('scroll', updateSidebarHeight)
+    
+    // Update on content changes
+    const observer = new MutationObserver(updateSidebarHeight)
+    observer.observe(document.body, { childList: true, subtree: true, attributes: true })
+    
+    return () => {
+      window.removeEventListener('resize', updateSidebarHeight)
+      window.removeEventListener('scroll', updateSidebarHeight)
+      observer.disconnect()
+    }
+  }, [children])
 
   // List of authorized admin emails
   const ADMIN_EMAILS = [
@@ -54,6 +96,14 @@ export function Layout({ children, title, subtitle }: LayoutProps) {
 
   const handleSignOut = async () => {
     await signOut()
+    const defaultLocale = router.defaultLocale || 'en'
+    const currentLocale = router.locale || defaultLocale
+    router
+      .replace('/?ts=' + Date.now(), '/?ts=' + Date.now(), {
+        locale: currentLocale,
+        scroll: false,
+      })
+      .catch(() => null)
     setSidebarOpen(false)
   }
 
@@ -120,9 +170,9 @@ export function Layout({ children, title, subtitle }: LayoutProps) {
       )}
 
       {/* Desktop sidebar */}
-      <div className="hidden lg:flex lg:flex-shrink-0 lg:flex-col">
-        <div className="flex flex-col w-64">
-          <div className="flex flex-col border-r border-gray-200 bg-white h-screen sticky top-0">
+      <div className="hidden lg:flex lg:flex-shrink-0 lg:flex-col lg:self-stretch">
+        <div className="flex flex-col w-64 flex-1">
+          <div ref={sidebarRef} className="flex flex-col border-r border-gray-200 bg-white sticky top-0" style={{ minHeight: '100vh' }}>
             <div className="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
               <div className="flex items-center flex-shrink-0 px-4">
                 <h1 className="text-xl font-bold text-blue-600">PropTrenz</h1>
