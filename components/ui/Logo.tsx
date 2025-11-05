@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-interface LogoProps {
+interface LogoProps extends React.SVGProps<SVGSVGElement> {
   className?: string
   showText?: boolean
   size?: 'sm' | 'md' | 'lg'
@@ -40,7 +40,7 @@ export function Logo({ className = '', showText = true, size = 'md' }: LogoProps
 }
 
 // Alternative: Pure SVG component (no image loading)
-export function LogoSVG({ className = '', showText = true, size = 'md' }: LogoProps) {
+export function LogoSVG({ className = '', showText = true, size = 'md', style, ...svgProps }: LogoProps) {
   // Size classes for icon-only logo
   const iconSizeClasses = {
     sm: 'h-6 w-6',
@@ -80,6 +80,8 @@ export function LogoSVG({ className = '', showText = true, size = 'md' }: LogoPr
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className={`${sizeClasses[size]} ${className}`}
+        style={style}
+        {...svgProps}
       >
         <g>
           {/* Second house (behind) */}
@@ -131,7 +133,8 @@ export function LogoSVG({ className = '', showText = true, size = 'md' }: LogoPr
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={`${sizeClasses[size]} ${className}`}
-      style={{ width: 'auto' }}
+      style={{ width: 'auto', ...style }}
+      {...svgProps}
     >
       <g>
         {/* Second house (behind, smaller) */}
