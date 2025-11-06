@@ -51,9 +51,9 @@ export default function ProfilePage() {
   )
 }
 
-export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
-  // Ensure locale is always a valid string, defaulting to 'en'
-  const validLocale = (locale && typeof locale === 'string') ? locale : 'en'
+export const getServerSideProps: GetServerSideProps = async ({ locale, defaultLocale }) => {
+  // CRITICAL FIX: When locale is undefined (default locale route), use defaultLocale
+  const validLocale = locale || defaultLocale || 'en'
   
   return {
     props: {

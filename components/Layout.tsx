@@ -82,19 +82,19 @@ export function Layout({ children, title, subtitle }: LayoutProps) {
   ]
 
   const navigation = [
-    { name: t('common.home'), href: '/', icon: Home },
-    { name: t('common.charts'), href: '/charts', icon: BarChart3 },
-    { name: t('common.map'), href: '/map', icon: Map },
+    { name: t('common.home', 'Home'), href: '/', icon: Home },
+    { name: t('common.charts', 'Charts'), href: '/charts', icon: BarChart3 },
+    { name: t('common.map', 'Map'), href: '/map', icon: Map },
   ]
 
   // Add profile link for signed-in users
   if (user) {
-    navigation.push({ name: t('common.profile'), href: '/profile', icon: User })
+    navigation.push({ name: t('common.profile', 'Profile'), href: '/profile', icon: User })
   }
 
   // Only show admin link for authorized users
   if (user && ADMIN_EMAILS.includes(user.email?.toLowerCase() || '')) {
-    navigation.push({ name: t('common.admin'), href: '/admin', icon: Settings })
+    navigation.push({ name: t('common.admin', 'Admin'), href: '/admin', icon: Settings })
   }
 
   const handleSignOut = async () => {
@@ -174,13 +174,13 @@ export function Layout({ children, title, subtitle }: LayoutProps) {
                       onClick={handleSignOut}
                       className="text-sm font-medium text-gray-500 hover:text-gray-700"
                     >
-                      {t('common.sign_out')}
+                      {t('common.sign_out', 'Sign Out')}
                     </button>
                   </div>
                 </div>
               ) : (
                 <Button onClick={() => setShowAuth(true)} className="w-full">
-                  {t('common.sign_in')}
+                  {t('common.sign_in', 'Sign In')}
                 </Button>
               )}
             </div>
@@ -228,13 +228,13 @@ export function Layout({ children, title, subtitle }: LayoutProps) {
                       onClick={handleSignOut}
                       className="text-xs font-medium text-gray-500 hover:text-gray-700"
                     >
-                      {t('common.sign_out')}
+                      {t('common.sign_out', 'Sign Out')}
                     </button>
                   </div>
                 </div>
               ) : (
                 <Button onClick={() => setShowAuth(true)} className="w-full">
-                  {t('common.sign_in')}
+                  {t('common.sign_in', 'Sign In')}
                 </Button>
               )}
             </div>

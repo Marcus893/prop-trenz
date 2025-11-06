@@ -10,6 +10,7 @@ import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, CartesianGrid, Tool
 import { GetStaticProps } from 'next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { db, Location } from '@/lib/supabase'
+import { getValidLocale } from '@/utils/i18n'
 
 type TopMover = { id: string; name: string; growthYoY: number; state?: string }
 
@@ -54,20 +55,20 @@ export default function HomePage({ nationalSnapshot, nationalTrend = [], topMove
             <LogoSVG showText={true} size="lg" className="text-white" style={{ height: '80px', width: 'auto' }} />
           </div>
           <p className="text-xl mb-6">
-            {t('home.hero_description')}
+            {t('home.hero_description', 'Explore Mexican Real Estate Price Trends with Interactive Charts and Geographic Navigation')}
           </p>
           <div className="flex justify-center gap-4">
             <div className="flex items-center gap-2">
               <TrendingUp className="h-5 w-5" />
-              <span>{t('home.years_of_data')}</span>
+              <span>{t('home.years_of_data', '20+ Years of Data')}</span>
             </div>
             <div className="flex items-center gap-2">
               <MapPin className="h-5 w-5" />
-              <span>{t('home.states_and_cities')}</span>
+              <span>{t('home.states_and_cities', '32 States & 100+ Cities')}</span>
             </div>
             <div className="flex items-center gap-2">
               <BarChart3 className="h-5 w-5" />
-              <span>{t('home.interactive_charts')}</span>
+              <span>{t('home.interactive_charts', 'Interactive Charts')}</span>
             </div>
           </div>
         </Card>
@@ -124,25 +125,25 @@ export default function HomePage({ nationalSnapshot, nationalTrend = [], topMove
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <Card className="p-6 text-center">
             <TrendingUp className="h-12 w-12 mx-auto mb-4 text-blue-600" />
-            <h3 className="text-lg font-semibold mb-2">{t('home.historical_data_title')}</h3>
+            <h3 className="text-lg font-semibold mb-2">{t('home.historical_data_title', 'Historical Data')}</h3>
             <p className="text-gray-600">
-              {t('home.historical_data_description')}
+              {t('home.historical_data_description', 'Access 20+ years of quarterly real estate price data from SHF')}
             </p>
           </Card>
 
           <Card className="p-6 text-center">
             <MapPin className="h-12 w-12 mx-auto mb-4 text-green-600" />
-            <h3 className="text-lg font-semibold mb-2">{t('home.geographic_coverage_title')}</h3>
+            <h3 className="text-lg font-semibold mb-2">{t('home.geographic_coverage_title', 'Geographic Coverage')}</h3>
             <p className="text-gray-600">
-              {t('home.geographic_coverage_description')}
+              {t('home.geographic_coverage_description', 'Explore data for all 32 Mexican states and 100+ municipalities')}
             </p>
           </Card>
 
           <Card className="p-6 text-center">
             <BarChart3 className="h-12 w-12 mx-auto mb-4 text-purple-600" />
-            <h3 className="text-lg font-semibold mb-2">{t('home.interactive_charts_title')}</h3>
+            <h3 className="text-lg font-semibold mb-2">{t('home.interactive_charts_title', 'Interactive Charts')}</h3>
             <p className="text-gray-600">
-              {t('home.interactive_charts_description')}
+              {t('home.interactive_charts_description', 'Visualize trends with interactive line charts and growth analysis')}
             </p>
           </Card>
         </div>
@@ -151,9 +152,11 @@ export default function HomePage({ nationalSnapshot, nationalTrend = [], topMove
   )
 }
 
-export const getStaticProps: GetStaticProps = async ({ locale }) => {
-  // Ensure locale is always a valid string, defaulting to 'en'
-  const validLocale = (locale && typeof locale === 'string') ? locale : 'en'
+export const getStaticProps: GetStaticProps = async ({ locale, defaultLocale }) => {
+  // CRITICAL FIX: When locale is undefined (default locale route), Next.js doesn't pass it
+  // but defaultLocale is available. We must use defaultLocale if locale is undefined
+  // For the default locale route (/), locale can be undefined, so we need to explicitly use 'en'
+  const validLocale = locale || defaultLocale || 'en'
   
   // Read precomputed insights from DB; fall back safely if not present
   let nationalSnapshot = { latest: 0, yoy: 0, qoq: 0 }
@@ -170,9 +173,13 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
     }
   } catch (e) {}
 
+  // Always load translations - this is critical for the default locale
+  // Pass the i18n config to ensure proper locale resolution
+  const translations = await serverSideTranslations(validLocale, ['common'])
+  
   return {
     props: {
-      ...(await serverSideTranslations(validLocale, ['common'])),
+      ...translations,
       nationalSnapshot,
       nationalTrend,
       topMoversStates,
