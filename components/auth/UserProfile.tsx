@@ -24,7 +24,7 @@ export function UserProfile() {
   const [nameValid, setNameValid] = useState(true)
   const [newPassword, setNewPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
-  const [passwordMsg, setPasswordMsg] = useState<{ type: 'success' | 'error'; text: string } | null>(null)
+  const [passwordMsg, setPasswordMsg] = useState<{ type: 'success' | 'error' | 'info'; text: string } | null>(null)
   const [updatingPassword, setUpdatingPassword] = useState(false)
 
   useEffect(() => {
@@ -82,106 +82,91 @@ export function UserProfile() {
   const getLanguageLabel = (value: string) => languageOptions.find(option => option.value === value)?.label || t('auth.language')
 
   const handleUpdatePassword = async () => {
-    setPasswordMsg(null)
-    
-    // Validate before setting updating state
-    if (newPassword.length < 6) {
-      setPasswordMsg({ type: 'error', text: t('auth.password_length') as string })
-      return
-    }
-    const hasLetter = /[A-Za-z]/.test(newPassword)
-    const hasNumber = /\d/.test(newPassword)
-    if (!hasLetter || !hasNumber) {
-      setPasswordMsg({ type: 'error', text: (t('auth.password_requirements') as string) || 'Password must contain at least one letter and one number' })
-      return
-    }
-    if (newPassword !== confirmPassword) {
-      setPasswordMsg({ type: 'error', text: (t('auth.passwords_do_not_match') as string) || 'Passwords do not match' })
-      return
-    }
-    
-    setUpdatingPassword(true)
-    
-    let timeoutId: NodeJS.Timeout | null = null
-    let successTimeoutId: NodeJS.Timeout | null = null
-    let updateCompleted = false
-    
-    try {
-      // Race condition: if updateUser doesn't resolve in 5 seconds, assume success
-      // (since the HTTP request completes quickly based on Network tab)
-      successTimeoutId = setTimeout(() => {
-        if (!updateCompleted) {
-          updateCompleted = true
-          
-          // Clear the error timeout
-          if (timeoutId) {
-            clearTimeout(timeoutId)
-            timeoutId = null
-          }
-          
-          // Show success
-          setUpdatingPassword(false)
-          setPasswordMsg({ type: 'success', text: (t('auth.password_updated') as string) || 'Password updated successfully' })
-          setNewPassword('')
-          setConfirmPassword('')
-        }
-      }, 5000) // 5 seconds - if updateUser hasn't resolved, assume success
-      
-      // Set a longer timeout for true errors
-      timeoutId = setTimeout(() => {
-        if (!updateCompleted) {
-          setUpdatingPassword(false)
-          setPasswordMsg({ type: 'error', text: (t('auth.update_timeout') as string) || 'Update timed out. Please try again.' })
-        }
-      }, 60000) // 60 seconds for true timeout
-      
-      // Perform the update and wait for it to complete
-      const { data, error } = await supabase.auth.updateUser({ password: newPassword })
-      
-      // Mark as completed BEFORE checking result
-      updateCompleted = true
-      
-      // Clear both timeouts since we got a response
-      if (timeoutId) {
-        clearTimeout(timeoutId)
-        timeoutId = null
-      }
-      if (successTimeoutId) {
-        clearTimeout(successTimeoutId)
-        successTimeoutId = null
-      }
-      
-      // Now check the actual response - if data exists and no error, it's a SUCCESS
-      setUpdatingPassword(false)
-      if (error) {
-        setPasswordMsg({ type: 'error', text: error.message || (t('auth.update_error') as string || 'An error occurred while updating password') })
-      } else if (data) {
-        // SUCCESS - password was updated (data exists, no error)
-        setPasswordMsg({ type: 'success', text: (t('auth.password_updated') as string) || 'Password updated successfully' })
-        setNewPassword('')
-        setConfirmPassword('')
-      } else {
-        // Edge case: no data and no error (shouldn't happen, but handle it)
-        setPasswordMsg({ type: 'error', text: (t('auth.update_error') as string || 'An error occurred while updating password') })
-      }
-    } catch (err: any) {
-      // Mark as completed
-      updateCompleted = true
-      
-      // Clear both timeouts on error
-      if (timeoutId) {
-        clearTimeout(timeoutId)
-        timeoutId = null
-      }
-      if (successTimeoutId) {
-        clearTimeout(successTimeoutId)
-        successTimeoutId = null
-      }
-      
-      setUpdatingPassword(false)
-      setPasswordMsg({ type: 'error', text: err?.message || (t('auth.update_error') as string) || 'An error occurred while updating password' })
-    }
-  }
+     setPasswordMsg(null)
+     
+     // Validate before setting updating state
+     if (newPassword.length < 6) {
+       setPasswordMsg({ type: 'error', text: t('auth.password_length') as string })
+       return
+     }
+     const hasLetter = /[A-Za-z]/.test(newPassword)
+     const hasNumber = /\d/.test(newPassword)
+     if (!hasLetter || !hasNumber) {
+       setPasswordMsg({ type: 'error', text: (t('auth.password_requirements') as string) || 'Password must contain at least one letter and one number' })
+       return
+     }
+     if (newPassword !== confirmPassword) {
+       setPasswordMsg({ type: 'error', text: (t('auth.passwords_do_not_match') as string) || 'Passwords do not match' })
+       return
+     }
+     
+     setUpdatingPassword(true)
+     
+     let timeoutId: NodeJS.Timeout | null = null
+     let infoTimeoutId: NodeJS.Timeout | null = null
+     let timedOut = false
+     
+     try {
+       infoTimeoutId = setTimeout(() => {
+         setPasswordMsg({ type: 'info', text: (t('auth.update_in_progress') as string) || 'Still working on updating your password...' })
+       }, 5000)
+
+       timeoutId = setTimeout(() => {
+         timedOut = true
+         setUpdatingPassword(false)
+         setPasswordMsg({ type: 'error', text: (t('auth.update_timeout') as string) || 'Update timed out. Please try again.' })
+       }, 60000)
+
+       const { data, error } = await supabase.auth.updateUser({ password: newPassword })
+       
+       if (infoTimeoutId) {
+         clearTimeout(infoTimeoutId)
+         infoTimeoutId = null
+       }
+
+       if (timeoutId) {
+         clearTimeout(timeoutId)
+         timeoutId = null
+       }
+
+       if (timedOut) {
+         return
+       }
+
+       setUpdatingPassword(false)
+
+       if (error) {
+         setPasswordMsg({ type: 'error', text: error.message || (t('auth.update_error') as string || 'An error occurred while updating password') })
+         return
+       }
+
+       if (!data) {
+         setPasswordMsg({ type: 'error', text: (t('auth.update_error') as string || 'An error occurred while updating password') })
+         return
+       }
+
+       setPasswordMsg({ type: 'success', text: (t('auth.password_updated') as string) || 'Password updated successfully' })
+       setNewPassword('')
+       setConfirmPassword('')
+     } catch (err: any) {
+       if (infoTimeoutId) {
+         clearTimeout(infoTimeoutId)
+         infoTimeoutId = null
+       }
+
+       if (timeoutId) {
+         clearTimeout(timeoutId)
+         timeoutId = null
+       }
+
+       if (timedOut) {
+         return
+       }
+
+       setUpdatingPassword(false)
+       setPasswordMsg({ type: 'error', text: err?.message || (t('auth.update_error') as string) || 'An error occurred while updating password' })
+     }
+   }
 
   const handleDeleteAccount = async () => {
     setDeleting(true)
@@ -308,7 +293,17 @@ export function UserProfile() {
                 className="w-full p-3 bg-gray-50 rounded-md text-gray-900 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
               {passwordMsg && (
-                <div className={`text-sm ${passwordMsg.type === 'error' ? 'text-red-600' : 'text-green-600'}`}>{passwordMsg.text}</div>
+                <div
+                  className={`text-sm ${
+                    passwordMsg.type === 'error'
+                      ? 'text-red-600'
+                      : passwordMsg.type === 'success'
+                        ? 'text-green-600'
+                        : 'text-gray-600'
+                  }`}
+                >
+                  {passwordMsg.text}
+                </div>
               )}
               <div className="flex justify-end">
                 <Button onClick={handleUpdatePassword} disabled={updatingPassword}>

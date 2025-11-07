@@ -29,6 +29,11 @@ SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key
 NEXT_PUBLIC_POSTHOG_KEY=your_posthog_project_api_key
 NEXT_PUBLIC_POSTHOG_HOST=https://app.posthog.com
 
+# Contact Widget Email Notifications (Optional)
+RESEND_API_KEY=your_resend_api_key
+CONTACT_FORM_RECIPIENT_EMAIL=you@proptrenz.com
+CONTACT_FORM_FROM_EMAIL="PropTrenz <support@send.proptrenz.com>"
+
 # Next.js Configuration
 NEXTAUTH_URL=http://localhost:3000
 NEXTAUTH_SECRET=your_random_secret_string

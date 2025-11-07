@@ -133,8 +133,39 @@
     "password_length": "Password must be at least 6 characters",
     "passwords_do_not_match": "Passwords do not match",
     "updating": "Updating...",
+    "update_in_progress": "Still working on updating your password...",
     "update_timeout": "Update timed out. Please try again.",
     "update_error": "An error occurred while updating password"
+  },
+  "contact": {
+    "header": "Send a message",
+    "title": "How can we help?",
+    "subtitle": "We usually respond within a few hours.",
+    "success_message": "Thanks! Your message has been sent.",
+    "generic_error": "Something went wrong. Please try again later.",
+    "fields": {
+      "name": "Name",
+      "email": "Email address",
+      "subject": "Subject",
+      "message": "Message"
+    },
+    "placeholders": {
+      "name": "Your name",
+      "email": "you@example.com",
+      "subject": "Quick question about PropTrenz",
+      "message": "Share any details or links that can help us respond."
+    },
+    "actions": {
+      "submit": "Send message",
+      "sending": "Sending...",
+      "close": "Close contact form"
+    },
+    "form_errors": {
+      "name": "Please provide your name.",
+      "email": "Please provide a valid email address.",
+      "email_invalid": "Email address is invalid.",
+      "message": "Please include a short message."
+    }
   },
   "profile": {
     "title": "Profile",

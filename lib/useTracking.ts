@@ -20,6 +20,11 @@ export type TrackingEvent =
   | 'admin_data_uploaded'
   | 'search_performed'
   | 'filter_applied'
+  | 'contact_widget_opened'
+  | 'contact_widget_closed'
+  | 'contact_widget_submitted'
+  | 'contact_widget_success'
+  | 'contact_widget_failure'
 
 export interface TrackingProperties {
   [key: string]: string | number | boolean | undefined | null

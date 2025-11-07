@@ -2,6 +2,7 @@ import { AppProps } from 'next/app'
 import { appWithTranslation } from 'next-i18next'
 import { AuthProvider } from '@/lib/auth'
 import { PostHogProviderWrapper } from '@/lib/posthog'
+import { ContactWidget } from '@/components/support/ContactWidget'
 import '@/styles/globals.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -9,6 +10,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <AuthProvider>
       <PostHogProviderWrapper>
         <Component {...pageProps} />
+        <ContactWidget />
       </PostHogProviderWrapper>
     </AuthProvider>
   )

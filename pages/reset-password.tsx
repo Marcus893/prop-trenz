@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef, useCallback } from 'react'
 import { Layout } from '@/components/Layout'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -10,10 +10,10 @@ import { useTranslation } from 'next-i18next'
 export default function ResetPasswordPage() {
   const { t } = useTranslation('common')
   // Helper to get translation with fallback
-  const tr = (key: string, fallback: string): string => {
+  const tr = useCallback((key: string, fallback: string): string => {
     const value = t(key as any) as string
     return value === key ? fallback : value
-  }
+  }, [t])
   const [password, setPassword] = useState('')
   const [confirm, setConfirm] = useState('')
   const [status, setStatus] = useState<'idle' | 'updating' | 'success' | 'error'>('idle')
@@ -21,25 +21,70 @@ export default function ResetPasswordPage() {
   const [allowed, setAllowed] = useState(false)
   const [checked, setChecked] = useState(false)
 
+  const infoTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+  const errorTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+  const redirectTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+  const updateInProgressRef = useRef(false)
+  const timedOutRef = useRef(false)
+
+  const clearTimers = useCallback(() => {
+    if (infoTimeoutRef.current) {
+      clearTimeout(infoTimeoutRef.current)
+      infoTimeoutRef.current = null
+    }
+    if (errorTimeoutRef.current) {
+      clearTimeout(errorTimeoutRef.current)
+      errorTimeoutRef.current = null
+    }
+  }, [])
+
+  useEffect(() => {
+    return () => {
+      clearTimers()
+      if (redirectTimeoutRef.current) {
+        clearTimeout(redirectTimeoutRef.current)
+        redirectTimeoutRef.current = null
+      }
+      updateInProgressRef.current = false
+      timedOutRef.current = false
+    }
+  }, [clearTimers])
+
   useEffect(() => {
     const hash = typeof window !== 'undefined' ? window.location.hash : ''
     if (hash && /type=recovery/.test(hash)) {
       setAllowed(true)
       setChecked(true)
-      return
     }
-    const { data } = supabase.auth.onAuthStateChange((event) => {
+
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((event) => {
       if (event === 'PASSWORD_RECOVERY') {
         setAllowed(true)
       }
+
+      if (event === 'USER_UPDATED' && updateInProgressRef.current) {
+        timedOutRef.current = false
+        updateInProgressRef.current = false
+        clearTimers()
+        setStatus('success')
+        setMessage(tr('auth.password_updated', 'Password updated successfully'))
+        redirectTimeoutRef.current = setTimeout(() => {
+          window.location.href = '/'
+        }, 2000)
+      }
+
       setChecked(true)
     })
+
     const to = setTimeout(() => setChecked(true), 300)
+
     return () => {
-      data.subscription.unsubscribe()
+      subscription.unsubscribe()
       clearTimeout(to)
     }
-  }, [])
+  }, [clearTimers, tr])
 
   const handleUpdate = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -66,99 +111,86 @@ export default function ResetPasswordPage() {
     
     setStatus('updating')
     setMessage('')
-    
-    let timeoutId: NodeJS.Timeout | null = null
-    let successTimeoutId: NodeJS.Timeout | null = null
-    let updateCompleted = false
+
+    updateInProgressRef.current = true
+    timedOutRef.current = false
+
+    clearTimers()
+    if (redirectTimeoutRef.current) {
+      clearTimeout(redirectTimeoutRef.current)
+      redirectTimeoutRef.current = null
+    }
     
     try {
       console.log('[Password Reset] Starting update...')
       const startTime = Date.now()
-      
-      // Race condition: if updateUser doesn't resolve in 5 seconds, assume success
-      // (since the HTTP request completes quickly ~350ms based on Network tab)
-      successTimeoutId = setTimeout(() => {
-        if (!updateCompleted) {
-          console.log('[Password Reset] Update took >5s, assuming success based on HTTP completion')
-          updateCompleted = true
-          
-          // Clear the error timeout
-          if (timeoutId) {
-            clearTimeout(timeoutId)
-            timeoutId = null
-          }
-          
-          // Show success
-          setStatus('success')
-          setMessage(tr('auth.password_updated', 'Password updated successfully'))
-          
-          // Redirect to home page after 2 seconds
-          setTimeout(() => {
-            window.location.href = '/'
-          }, 2000)
+
+      infoTimeoutRef.current = setTimeout(() => {
+        if (!updateInProgressRef.current || timedOutRef.current) {
+          return
         }
-      }, 5000) // 5 seconds - if updateUser hasn't resolved, assume success
-      
-      // Set a longer timeout for true errors
-      timeoutId = setTimeout(() => {
-        if (!updateCompleted) {
-          console.log('[Password Reset] True timeout - no response after 60s')
-          setStatus('error')
-          setMessage(tr('auth.update_timeout', 'Update timed out. Please try again.'))
+        console.log('[Password Reset] Update taking longer than expected...')
+        setMessage(tr('auth.update_in_progress', 'Still working on updating your password...'))
+      }, 5000)
+
+      errorTimeoutRef.current = setTimeout(() => {
+        if (!updateInProgressRef.current) {
+          return
         }
-      }, 60000) // 60 seconds for true timeout
-      
-      // Perform the update and wait for it to complete
+        console.log('[Password Reset] True timeout - no response after 60s')
+        timedOutRef.current = true
+        updateInProgressRef.current = false
+        setStatus('error')
+        setMessage(tr('auth.update_timeout', 'Update timed out. Please try again.'))
+      }, 60000)
+
       const { data, error } = await supabase.auth.updateUser({ password })
       const elapsed = Date.now() - startTime
       console.log(`[Password Reset] Got response after ${elapsed}ms:`, { hasData: !!data, hasError: !!error, error })
-      
-      // Mark as completed BEFORE checking result
-      updateCompleted = true
-      
-      // Clear both timeouts since we got a response
-      if (timeoutId) {
-        clearTimeout(timeoutId)
-        timeoutId = null
+
+      if (!updateInProgressRef.current) {
+        return
       }
-      if (successTimeoutId) {
-        clearTimeout(successTimeoutId)
-        successTimeoutId = null
+
+      clearTimers()
+      updateInProgressRef.current = false
+
+      if (timedOutRef.current) {
+        return
       }
-      
-      // Now check the actual response - if data exists and no error, it's a SUCCESS
+
       if (error) {
         setStatus('error')
         setMessage(error.message || tr('auth.update_error', 'An error occurred while updating password'))
-      } else if (data) {
-        // SUCCESS - password was updated (data exists, no error)
-        setStatus('success')
-        setMessage(tr('auth.password_updated', 'Password updated successfully'))
-        
-        // Redirect to home page after 2 seconds
-        setTimeout(() => {
-          window.location.href = '/'
-        }, 2000)
-      } else {
-        // Edge case: no data and no error (shouldn't happen, but handle it)
+        return
+      }
+
+      if (!data) {
         setStatus('error')
         setMessage(tr('auth.update_error', 'An error occurred while updating password'))
+        return
       }
+
+      setStatus('success')
+      setMessage(tr('auth.password_updated', 'Password updated successfully'))
+
+      redirectTimeoutRef.current = setTimeout(() => {
+        window.location.href = '/'
+      }, 2000)
     } catch (e: any) {
-      // Mark as completed
-      updateCompleted = true
-      
-      // Clear both timeouts on error
-      if (timeoutId) {
-        clearTimeout(timeoutId)
-        timeoutId = null
-      }
-      if (successTimeoutId) {
-        clearTimeout(successTimeoutId)
-        successTimeoutId = null
-      }
-      
       console.log('[Password Reset] Exception caught:', e)
+
+      if (!updateInProgressRef.current) {
+        return
+      }
+
+      clearTimers()
+      updateInProgressRef.current = false
+
+      if (timedOutRef.current) {
+        return
+      }
+
       setStatus('error')
       setMessage(e?.message || tr('auth.update_error', 'An error occurred while updating password'))
     }
@@ -182,7 +214,17 @@ export default function ResetPasswordPage() {
             <Input type="password" value={confirm} onChange={(e) => setConfirm(e.target.value)} required />
           </div>
           {message && (
-            <div className={`text-sm ${status==='error' ? 'text-red-600' : 'text-green-600'}`}>{message}</div>
+            <div
+              className={`text-sm ${
+                status === 'error'
+                  ? 'text-red-600'
+                  : status === 'success'
+                    ? 'text-green-600'
+                    : 'text-gray-600'
+              }`}
+            >
+              {message}
+            </div>
           )}
           <Button type="submit" disabled={status==='updating'} className="w-full">
             {status==='updating' 

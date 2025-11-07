@@ -71,6 +71,72 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     })
   }
 
+  const syncAuthMetadata = async (metadata: { name?: string; language?: string }) => {
+    if (!user) return
+
+    const payload: Record<string, string> = {}
+    if (typeof metadata.name === 'string') {
+      payload.name = metadata.name
+    }
+    if (typeof metadata.language === 'string') {
+      const normalizedLanguage = metadata.language.toLowerCase()
+      payload.language = ['en', 'es', 'zh'].includes(normalizedLanguage) ? normalizedLanguage : 'en'
+    }
+
+    if (Object.keys(payload).length === 0) {
+      return
+    }
+
+    let updateCompleted = false
+    let timeoutId: NodeJS.Timeout | null = null
+
+    try {
+      const timeoutPromise = new Promise<'timeout'>((resolve) => {
+        timeoutId = setTimeout(() => {
+          if (!updateCompleted) {
+            updateCompleted = true
+            resolve('timeout')
+          }
+        }, 5000)
+      })
+
+      const updatePromise = supabase.auth
+        .updateUser({ data: payload })
+        .then(({ error }) => {
+          updateCompleted = true
+          if (timeoutId) {
+            clearTimeout(timeoutId)
+            timeoutId = null
+          }
+          if (error) {
+            console.warn('[Auth] Failed to sync auth metadata:', error)
+          }
+          return 'updated' as const
+        })
+        .catch((err) => {
+          updateCompleted = true
+          if (timeoutId) {
+            clearTimeout(timeoutId)
+            timeoutId = null
+          }
+          console.warn('[Auth] Exception syncing auth metadata:', err)
+          return 'error' as const
+        })
+
+      const result = await Promise.race([updatePromise, timeoutPromise])
+
+      if (result === 'timeout') {
+        console.warn('[Auth] Auth metadata sync timed out; continuing with profile data only')
+      }
+    } catch (error) {
+      console.warn('[Auth] Unexpected error syncing auth metadata:', error)
+    } finally {
+      if (!updateCompleted && timeoutId) {
+        clearTimeout(timeoutId)
+      }
+    }
+  }
+
   const fetchUserProfile = async (userId: string) => {
     try {
       const { data, error } = await supabase
@@ -163,11 +229,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         const languageFromProfile = profileData?.language?.toLowerCase()
         const nameFromProfile = profileData?.name || user.user_metadata?.name || user.user_metadata?.full_name || ''
         
-        // Use metadata language if available (from signup), otherwise profile, otherwise default
-        const languageToSave = languageFromMetadata || languageFromProfile || 'en'
-        
-        // Normalize language code to ensure it's valid
-        const validLanguage = ['en', 'es', 'zh'].includes(languageToSave) ? languageToSave : 'en'
+        // Prefer persisted profile language, then fallback to metadata, then default
+        const languageToSaveSource = languageFromProfile || languageFromMetadata || 'en'
+ 
+         // Normalize language code to ensure it's valid
+        const validLanguage = ['en', 'es', 'zh'].includes(languageToSaveSource) ? languageToSaveSource : 'en'
 
         try {
           await supabase
@@ -394,7 +460,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       if (timedOut) {
         console.log('[Auth] Setting profile state directly (timed out)')
         setProfile(updatedProfile)
+        mergeProfileIntoUser(updatedProfile)
         setLanguagePreference(updatedProfile.language)
+        await syncAuthMetadata(updatedProfile)
         console.log('[Auth] Profile update success (timed out path)')
         return { error: null }
       }
@@ -403,6 +471,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       console.log('[Auth] Fetching updated profile from database')
       await fetchUserProfile(user.id)
       setLanguagePreference(updatedProfile.language)
+      await syncAuthMetadata(updatedProfile)
 
       console.log('[Auth] Profile update success')
       return { error: null }

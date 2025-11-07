@@ -133,8 +133,39 @@
     "password_length": "密码长度至少为6位",
     "passwords_do_not_match": "密码不匹配",
     "updating": "更新中...",
+    "update_in_progress": "正在继续更新您的密码...",
     "update_timeout": "更新超时，请重试。",
     "update_error": "更新密码时发生错误"
+  },
+  "contact": {
+    "header": "发送消息",
+    "title": "我们能帮上什么忙？",
+    "subtitle": "通常会在数小时内回复。",
+    "success_message": "谢谢！我们已收到你的消息。",
+    "generic_error": "发生错误，请稍后再试。",
+    "fields": {
+      "name": "姓名",
+      "email": "邮箱",
+      "subject": "主题",
+      "message": "留言"
+    },
+    "placeholders": {
+      "name": "你的名字",
+      "email": "you@example.com",
+      "subject": "关于 PropTrenz 的问题",
+      "message": "请分享能帮助我们回复的细节或链接。"
+    },
+    "actions": {
+      "submit": "发送消息",
+      "sending": "正在发送...",
+      "close": "关闭联系表单"
+    },
+    "form_errors": {
+      "name": "请填写姓名。",
+      "email": "请填写有效邮箱。",
+      "email_invalid": "邮箱地址格式不正确。",
+      "message": "请填写留言内容。"
+    }
   },
   "profile": {
     "title": "个人资料",
