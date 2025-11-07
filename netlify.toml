@@ -8,3 +8,23 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
+# Redirect www to non-www (optional - choose your preference)
+[[redirects]]
+  from = "https://www.proptrenz.com/*"
+  to = "https://proptrenz.com/:splat"
+  status = 301
+  force = true
+
+# Force HTTPS redirect
+[[redirects]]
+  from = "http://proptrenz.com/*"
+  to = "https://proptrenz.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.proptrenz.com/*"
+  to = "https://proptrenz.com/:splat"
+  status = 301
+  force = true
+

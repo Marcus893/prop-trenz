@@ -130,7 +130,11 @@
     "continue_with_google": "使用 Google 登录",
     "invalid_or_expired_link": "重置链接无效或已过期。",
     "password_requirements": "密码至少包含一位字母和一位数字",
-    "password_length": "密码长度至少为6位"
+    "password_length": "密码长度至少为6位",
+    "passwords_do_not_match": "密码不匹配",
+    "updating": "更新中...",
+    "update_timeout": "更新超时，请重试。",
+    "update_error": "更新密码时发生错误"
   },
   "profile": {
     "title": "个人资料",

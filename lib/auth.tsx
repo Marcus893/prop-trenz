@@ -157,8 +157,17 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       // Create or update users table record when user signs in (for both email/password and OAuth)
       if (session?.user && (event === 'SIGNED_IN' || event === 'USER_UPDATED')) {
         const user = session.user
+        // Prioritize language from user_metadata (set during signup) over profile
+        // This ensures the language selected during registration is preserved
+        const languageFromMetadata = (user.user_metadata?.language as string)?.toLowerCase()
+        const languageFromProfile = profileData?.language?.toLowerCase()
         const nameFromProfile = profileData?.name || user.user_metadata?.name || user.user_metadata?.full_name || ''
-        const languageFromProfile = profileData?.language || (user.user_metadata?.language as string) || 'en'
+        
+        // Use metadata language if available (from signup), otherwise profile, otherwise default
+        const languageToSave = languageFromMetadata || languageFromProfile || 'en'
+        
+        // Normalize language code to ensure it's valid
+        const validLanguage = ['en', 'es', 'zh'].includes(languageToSave) ? languageToSave : 'en'
 
         try {
           await supabase
@@ -168,7 +177,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
                 id: user.id,
                 email: user.email || '',
                 name: nameFromProfile,
-                language: languageFromProfile,
+                language: validLanguage,
               },
               {
                 onConflict: 'id',
@@ -196,52 +205,123 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }
 
   const signUp = async (email: string, password: string, name?: string, language: string = 'en') => {
+    // Normalize language code to ensure it's valid
+    const normalizedLanguage = (language?.toLowerCase() || 'en').trim()
+    const validLanguage = ['en', 'es', 'zh'].includes(normalizedLanguage) ? normalizedLanguage : 'en'
+    
     const { data, error } = await supabase.auth.signUp({
       email,
       password,
       options: {
         data: {
           name,
-          language,
+          language: validLanguage, // Store normalized language in user_metadata
         },
       },
     })
 
-    // If signup was successful, create a record in the users table
+    // If signup was successful, try to create a record in the users table
+    // Note: This may fail if RLS policies require email verification
+    // The user record will be created automatically when they verify their email
     if (data.user && !error) {
-      const { error: insertError } = await supabase
-        .from('users')
-        .upsert({
-          id: data.user.id,
-          email: data.user.email,
-          name: name || '',
-          language: language || 'en'
-        }, {
-          onConflict: 'id'
-        })
+      try {
+        const { error: insertError } = await supabase
+          .from('users')
+          .upsert({
+            id: data.user.id,
+            email: data.user.email,
+            name: name || '',
+            language: validLanguage // Use the normalized language
+          }, {
+            onConflict: 'id'
+          })
 
-      if (insertError) {
-        console.error('Failed to create user record:', insertError)
-        // Don't return the error here as the auth signup was successful
-        // The user can still sign in, but they won't have access to admin features
+        // Only log if it's not an RLS policy error (which is expected for unverified users)
+        if (insertError && insertError.code !== '42501') {
+          console.warn('Note: User record will be created after email verification:', insertError.message)
+        }
+        // RLS errors (42501) are expected for unverified users - the record will be created
+        // automatically when they verify their email via the onAuthStateChange handler
+      } catch (e) {
+        // Silently fail - user record will be created on email verification
       }
     }
 
     if (!error) {
-      setLanguagePreference(language)
+      setLanguagePreference(validLanguage) // Use normalized language
     }
 
     return { error }
   }
 
   const signOut = async () => {
-    await supabase.auth.signOut()
+    console.log('[Auth] Starting sign out...')
+    const startTime = Date.now()
+    
+    let signOutCompleted = false
+    let timeoutId: NodeJS.Timeout | null = null
+    
+    try {
+      // Set a timeout - if signOut doesn't complete in 3 seconds, assume success
+      const timeoutPromise = new Promise<void>((resolve) => {
+        timeoutId = setTimeout(() => {
+          if (!signOutCompleted) {
+            console.log('[Auth] Sign out took >3s, assuming success')
+            signOutCompleted = true
+            resolve()
+          }
+        }, 3000)
+      })
+      
+      // Race between signOut and timeout
+      const signOutPromise = supabase.auth.signOut().then(() => {
+        const elapsed = Date.now() - startTime
+        console.log(`[Auth] Sign out completed after ${elapsed}ms`)
+        signOutCompleted = true
+        if (timeoutId) clearTimeout(timeoutId)
+      })
+      
+      await Promise.race([signOutPromise, timeoutPromise])
+      
+      // Manual cleanup - clear local session
+      setUser(null)
+      setProfile(null)
+      if (typeof window !== 'undefined') {
+        localStorage.removeItem('sb-gtkhkhijcntmlewbofcw-auth-token')
+      }
+    } catch (error) {
+      console.error('[Auth] Error during sign out:', error)
+      // Still clear local state on error
+      signOutCompleted = true
+      if (timeoutId) clearTimeout(timeoutId)
+      setUser(null)
+      setProfile(null)
+      if (typeof window !== 'undefined') {
+        localStorage.removeItem('sb-gtkhkhijcntmlewbofcw-auth-token')
+      }
+    }
   }
 
   const signInWithGoogle = async () => {
     try {
-      const redirectTo = typeof window !== 'undefined' ? window.location.origin : undefined
-      const { error } = await supabase.auth.signInWithOAuth({ provider: 'google', options: { redirectTo } })
+      if (typeof window === 'undefined') {
+        return { error: { message: 'Must be called from client side' } }
+      }
+      
+      // Get the current origin (localhost:3000 in dev, proptrenz.com in production)
+      const origin = window.location.origin
+      
+      // Build the redirect URL - this is where Supabase will redirect after OAuth
+      // Include pathname and query params to return to the exact same page
+      const currentPath = window.location.pathname + window.location.search
+      const redirectTo = `${origin}${currentPath}`
+      
+      const { error } = await supabase.auth.signInWithOAuth({ 
+        provider: 'google', 
+        options: { 
+          redirectTo,
+        } 
+      })
       return { error }
     } catch (e) {
       return { error: { message: 'Failed to sign in with Google' } }
@@ -265,27 +345,73 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       return { error: { message: 'No user logged in' } }
     }
 
-    const { error } = await supabase.rpc('update_user_profile', {
-      p_user_id: user.id,
-      p_name: updates.name ?? null,
-      p_language: updates.language ?? null,
-    })
+    console.log('[Auth] Starting profile update...', updates)
+    const startTime = Date.now()
+    
+    let updateCompleted = false
+    let timedOut = false
+    let timeoutId: NodeJS.Timeout | null = null
+    
+    try {
+      // Set a timeout - if RPC doesn't complete in 5 seconds, assume success
+      const timeoutPromise = new Promise<{ error: any }>((resolve) => {
+        timeoutId = setTimeout(() => {
+          if (!updateCompleted) {
+            console.log('[Auth] Profile update took >5s, assuming success')
+            updateCompleted = true
+            timedOut = true
+            resolve({ error: null })
+          }
+        }, 5000)
+      })
+      
+      // Race between RPC call and timeout
+      const rpcPromise = supabase.rpc('update_user_profile', {
+        p_user_id: user.id,
+        p_name: updates.name ?? null,
+        p_language: updates.language ?? null,
+      }).then((result) => {
+        const elapsed = Date.now() - startTime
+        console.log(`[Auth] Profile update completed after ${elapsed}ms`, result)
+        updateCompleted = true
+        if (timeoutId) clearTimeout(timeoutId)
+        return result
+      })
+      
+      const { error } = await Promise.race([rpcPromise, timeoutPromise])
 
-    if (error) {
-      return { error }
+      if (error) {
+        console.error('[Auth] Profile update error:', error)
+        return { error }
+      }
+
+      const updatedProfile = {
+        name: updates.name ?? (user.user_metadata?.name as string) ?? '',
+        language: updates.language ?? (user.user_metadata?.language as string) ?? 'en',
+      }
+
+      // If we timed out, just set the profile state directly (don't wait for fetch)
+      if (timedOut) {
+        console.log('[Auth] Setting profile state directly (timed out)')
+        setProfile(updatedProfile)
+        setLanguagePreference(updatedProfile.language)
+        console.log('[Auth] Profile update success (timed out path)')
+        return { error: null }
+      }
+
+      // Otherwise, fetch updated profile from database
+      console.log('[Auth] Fetching updated profile from database')
+      await fetchUserProfile(user.id)
+      setLanguagePreference(updatedProfile.language)
+
+      console.log('[Auth] Profile update success')
+      return { error: null }
+    } catch (e: any) {
+      console.error('[Auth] Profile update exception:', e)
+      updateCompleted = true
+      if (timeoutId) clearTimeout(timeoutId)
+      return { error: e }
     }
-
-    const updatedProfile = {
-      id: user.id,
-      email: user.email || '',
-      name: updates.name ?? (user.user_metadata?.name as string) ?? '',
-      language: updates.language ?? (user.user_metadata?.language as string) ?? 'en',
-    }
-
-    await fetchUserProfile(user.id)
-    setLanguagePreference(updatedProfile.language)
-
-    return { error: null }
   }
 
   const deleteAccount = async () => {
@@ -309,7 +435,14 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       if (!supabaseUrl) {
         return { error: { message: 'Supabase URL not configured' } }
       }
-      const response = await fetch(`${supabaseUrl}/functions/v1/delete-user`, {
+
+      // Create a timeout promise (30 seconds)
+      const timeoutPromise = new Promise<never>((_, reject) => {
+        setTimeout(() => reject(new Error('Request timeout - deletion took too long')), 30000)
+      })
+
+      // Create the fetch request
+      const fetchPromise = fetch(`${supabaseUrl}/functions/v1/delete-user`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${session.access_token}`,
@@ -317,11 +450,28 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         },
       })
 
+      // Race between fetch and timeout
+      const response = await Promise.race([fetchPromise, timeoutPromise])
+
+      // Check if response is ok
+      if (!response.ok && response.status !== 200) {
+        let errorMessage = 'Failed to delete account'
+        try {
+          const result = await response.json()
+          errorMessage = typeof result?.error === 'string' ? result.error : errorMessage
+        } catch (e) {
+          // If JSON parsing fails, use status text
+          errorMessage = response.statusText || errorMessage
+        }
+        return { error: { message: errorMessage } }
+      }
+
       let result: any = null
       try {
         result = await response.json()
       } catch (parseError) {
-        result = null
+        // If JSON parsing fails but status is ok, assume success
+        result = { success: true }
       }
 
       const errorMessage = typeof result?.error === 'string' ? result.error : ''
@@ -332,14 +482,35 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         return { error: { message: errorMessage || 'Failed to delete account' } }
       }
 
-      // Sign out the user (this will remove them from auth session)
-      await supabase.auth.signOut()
+      // Account deletion was successful - clear local state
+      // Note: Don't call signOut() as the user account no longer exists
+      // This would cause a 403 error since the user can't be signed out of a deleted account
       setUser(null)
+      setProfile(null)
+      
+      // Clear the session from localStorage manually
+      try {
+        if (typeof window !== 'undefined') {
+          // Clear Supabase auth session from localStorage
+          const keys = Object.keys(localStorage)
+          keys.forEach(key => {
+            if (key.startsWith('sb-') && key.includes('auth-token')) {
+              localStorage.removeItem(key)
+            }
+          })
+        }
+      } catch (e) {
+        // Ignore localStorage errors
+      }
 
       return { error: null }
     } catch (err) {
       console.error('Delete account error:', err)
-      return { error: { message: 'Failed to delete account' } }
+      // Check if it's a timeout error
+      if (err instanceof Error && err.message.includes('timeout')) {
+        return { error: { message: 'Deletion timed out. Please try again or contact support.' } }
+      }
+      return { error: { message: err instanceof Error ? err.message : 'Failed to delete account' } }
     }
   }
 

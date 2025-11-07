@@ -130,7 +130,11 @@
     "continue_with_google": "Continue with Google",
     "invalid_or_expired_link": "This reset link is invalid or expired.",
     "password_requirements": "Password must contain at least one letter and one number",
-    "password_length": "Password must be at least 6 characters"
+    "password_length": "Password must be at least 6 characters",
+    "passwords_do_not_match": "Passwords do not match",
+    "updating": "Updating...",
+    "update_timeout": "Update timed out. Please try again.",
+    "update_error": "An error occurred while updating password"
   },
   "profile": {
     "title": "Profile",

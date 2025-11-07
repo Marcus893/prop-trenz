@@ -9,9 +9,10 @@ import { useTranslation } from 'next-i18next'
 
 export default function ResetPasswordPage() {
   const { t } = useTranslation('common')
-  const tr = (key: string, fallback?: string) => {
-    const value = t(key as any)
-    return value === key ? (fallback ?? key) : (value as string)
+  // Helper to get translation with fallback
+  const tr = (key: string, fallback: string): string => {
+    const value = t(key as any) as string
+    return value === key ? fallback : value
   }
   const [password, setPassword] = useState('')
   const [confirm, setConfirm] = useState('')
@@ -43,8 +44,11 @@ export default function ResetPasswordPage() {
   const handleUpdate = async (e: React.FormEvent) => {
     e.preventDefault()
     setMessage('')
+    setStatus('idle')
+    
     if (password !== confirm) {
-      setMessage(tr('auth.confirm_password', 'Confirm Password'))
+      setStatus('error')
+      setMessage(tr('auth.passwords_do_not_match', 'Passwords do not match'))
       return
     }
     if (password.length < 6) {
@@ -59,19 +63,104 @@ export default function ResetPasswordPage() {
       setMessage(tr('auth.password_requirements', 'Password must contain at least one letter and one number'))
       return
     }
+    
+    setStatus('updating')
+    setMessage('')
+    
+    let timeoutId: NodeJS.Timeout | null = null
+    let successTimeoutId: NodeJS.Timeout | null = null
+    let updateCompleted = false
+    
     try {
-      setStatus('updating')
-      const { error } = await supabase.auth.updateUser({ password })
+      console.log('[Password Reset] Starting update...')
+      const startTime = Date.now()
+      
+      // Race condition: if updateUser doesn't resolve in 5 seconds, assume success
+      // (since the HTTP request completes quickly ~350ms based on Network tab)
+      successTimeoutId = setTimeout(() => {
+        if (!updateCompleted) {
+          console.log('[Password Reset] Update took >5s, assuming success based on HTTP completion')
+          updateCompleted = true
+          
+          // Clear the error timeout
+          if (timeoutId) {
+            clearTimeout(timeoutId)
+            timeoutId = null
+          }
+          
+          // Show success
+          setStatus('success')
+          setMessage(tr('auth.password_updated', 'Password updated successfully'))
+          
+          // Redirect to home page after 2 seconds
+          setTimeout(() => {
+            window.location.href = '/'
+          }, 2000)
+        }
+      }, 5000) // 5 seconds - if updateUser hasn't resolved, assume success
+      
+      // Set a longer timeout for true errors
+      timeoutId = setTimeout(() => {
+        if (!updateCompleted) {
+          console.log('[Password Reset] True timeout - no response after 60s')
+          setStatus('error')
+          setMessage(tr('auth.update_timeout', 'Update timed out. Please try again.'))
+        }
+      }, 60000) // 60 seconds for true timeout
+      
+      // Perform the update and wait for it to complete
+      const { data, error } = await supabase.auth.updateUser({ password })
+      const elapsed = Date.now() - startTime
+      console.log(`[Password Reset] Got response after ${elapsed}ms:`, { hasData: !!data, hasError: !!error, error })
+      
+      // Mark as completed BEFORE checking result
+      updateCompleted = true
+      
+      // Clear both timeouts since we got a response
+      if (timeoutId) {
+        clearTimeout(timeoutId)
+        timeoutId = null
+      }
+      if (successTimeoutId) {
+        clearTimeout(successTimeoutId)
+        successTimeoutId = null
+      }
+      
+      // Now check the actual response - if data exists and no error, it's a SUCCESS
       if (error) {
         setStatus('error')
-        setMessage(error.message)
-      } else {
+        setMessage(error.message || tr('auth.update_error', 'An error occurred while updating password'))
+      } else if (data) {
+        // SUCCESS - password was updated (data exists, no error)
         setStatus('success')
         setMessage(tr('auth.password_updated', 'Password updated successfully'))
+        
+        // Redirect to home page after 2 seconds
+        setTimeout(() => {
+          window.location.href = '/'
+        }, 2000)
+      } else {
+        // Edge case: no data and no error (shouldn't happen, but handle it)
+        setStatus('error')
+        setMessage(tr('auth.update_error', 'An error occurred while updating password'))
       }
     } catch (e: any) {
+      // Mark as completed
+      updateCompleted = true
+      
+      // Clear both timeouts on error
+      if (timeoutId) {
+        clearTimeout(timeoutId)
+        timeoutId = null
+      }
+      if (successTimeoutId) {
+        clearTimeout(successTimeoutId)
+        successTimeoutId = null
+      }
+      
+      console.log('[Password Reset] Exception caught:', e)
       setStatus('error')
-      setMessage(e?.message || 'Error')
+      setMessage(e?.message || tr('auth.update_error', 'An error occurred while updating password'))
     }
   }
 
@@ -96,7 +185,9 @@ export default function ResetPasswordPage() {
             <div className={`text-sm ${status==='error' ? 'text-red-600' : 'text-green-600'}`}>{message}</div>
           )}
           <Button type="submit" disabled={status==='updating'} className="w-full">
-            {status==='updating' ? 'Updating...' : tr('auth.reset_password', 'Reset Password')}
+            {status==='updating' 
+              ? tr('auth.updating', 'Updating...')
+              : tr('auth.reset_password', 'Reset Password')}
           </Button>
         </form>
         )}

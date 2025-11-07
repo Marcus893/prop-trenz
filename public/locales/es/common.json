@@ -131,7 +131,11 @@
     "continue_with_google": "Continuar con Google",
     "invalid_or_expired_link": "Este enlace de restablecimiento no es válido o ha expirado.",
     "password_requirements": "La contraseña debe contener al menos una letra y un número",
-    "password_length": "La contraseña debe tener al menos 6 caracteres"
+    "password_length": "La contraseña debe tener al menos 6 caracteres",
+    "passwords_do_not_match": "Las contraseñas no coinciden",
+    "updating": "Actualizando...",
+    "update_timeout": "La actualización tardó demasiado. Por favor, inténtalo de nuevo.",
+    "update_error": "Ocurrió un error al actualizar la contraseña"
   },
   "profile": {
     "title": "Perfil",

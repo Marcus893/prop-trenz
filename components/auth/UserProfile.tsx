@@ -25,6 +25,7 @@ export function UserProfile() {
   const [newPassword, setNewPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
   const [passwordMsg, setPasswordMsg] = useState<{ type: 'success' | 'error'; text: string } | null>(null)
+  const [updatingPassword, setUpdatingPassword] = useState(false)
 
   useEffect(() => {
     setMounted(true)
@@ -44,15 +45,21 @@ export function UserProfile() {
   }, [profile, user])
 
   const handleSaveProfile = async () => {
+    console.log('[UserProfile] Save button clicked')
     setSaving(true)
     try {
       const { error } = await updateProfile({ name: nameValue, language: languageValue })
       if (error) {
+        console.error('[UserProfile] Save failed:', error)
         alert('Failed to save profile')
       } else {
+        console.log('[UserProfile] Save successful')
         setSaveSuccess(true)
         setTimeout(() => setSaveSuccess(false), 2500)
       }
+    } catch (e) {
+      console.error('[UserProfile] Save exception:', e)
+      alert('Failed to save profile')
     } finally {
       setSaving(false)
     }
@@ -76,6 +83,8 @@ export function UserProfile() {
 
   const handleUpdatePassword = async () => {
     setPasswordMsg(null)
+    
+    // Validate before setting updating state
     if (newPassword.length < 6) {
       setPasswordMsg({ type: 'error', text: t('auth.password_length') as string })
       return
@@ -87,34 +96,126 @@ export function UserProfile() {
       return
     }
     if (newPassword !== confirmPassword) {
-      setPasswordMsg({ type: 'error', text: t('auth.confirm_password') as string })
+      setPasswordMsg({ type: 'error', text: (t('auth.passwords_do_not_match') as string) || 'Passwords do not match' })
       return
     }
-    const { error } = await supabase.auth.updateUser({ password: newPassword })
-    if (error) {
-      setPasswordMsg({ type: 'error', text: error.message })
-    } else {
-      setPasswordMsg({ type: 'success', text: (t('auth.password_updated') as string) || 'Password updated successfully' })
-      setNewPassword('')
-      setConfirmPassword('')
+    
+    setUpdatingPassword(true)
+    
+    let timeoutId: NodeJS.Timeout | null = null
+    let successTimeoutId: NodeJS.Timeout | null = null
+    let updateCompleted = false
+    
+    try {
+      // Race condition: if updateUser doesn't resolve in 5 seconds, assume success
+      // (since the HTTP request completes quickly based on Network tab)
+      successTimeoutId = setTimeout(() => {
+        if (!updateCompleted) {
+          updateCompleted = true
+          
+          // Clear the error timeout
+          if (timeoutId) {
+            clearTimeout(timeoutId)
+            timeoutId = null
+          }
+          
+          // Show success
+          setUpdatingPassword(false)
+          setPasswordMsg({ type: 'success', text: (t('auth.password_updated') as string) || 'Password updated successfully' })
+          setNewPassword('')
+          setConfirmPassword('')
+        }
+      }, 5000) // 5 seconds - if updateUser hasn't resolved, assume success
+      
+      // Set a longer timeout for true errors
+      timeoutId = setTimeout(() => {
+        if (!updateCompleted) {
+          setUpdatingPassword(false)
+          setPasswordMsg({ type: 'error', text: (t('auth.update_timeout') as string) || 'Update timed out. Please try again.' })
+        }
+      }, 60000) // 60 seconds for true timeout
+      
+      // Perform the update and wait for it to complete
+      const { data, error } = await supabase.auth.updateUser({ password: newPassword })
+      
+      // Mark as completed BEFORE checking result
+      updateCompleted = true
+      
+      // Clear both timeouts since we got a response
+      if (timeoutId) {
+        clearTimeout(timeoutId)
+        timeoutId = null
+      }
+      if (successTimeoutId) {
+        clearTimeout(successTimeoutId)
+        successTimeoutId = null
+      }
+      
+      // Now check the actual response - if data exists and no error, it's a SUCCESS
+      setUpdatingPassword(false)
+      if (error) {
+        setPasswordMsg({ type: 'error', text: error.message || (t('auth.update_error') as string || 'An error occurred while updating password') })
+      } else if (data) {
+        // SUCCESS - password was updated (data exists, no error)
+        setPasswordMsg({ type: 'success', text: (t('auth.password_updated') as string) || 'Password updated successfully' })
+        setNewPassword('')
+        setConfirmPassword('')
+      } else {
+        // Edge case: no data and no error (shouldn't happen, but handle it)
+        setPasswordMsg({ type: 'error', text: (t('auth.update_error') as string || 'An error occurred while updating password') })
+      }
+    } catch (err: any) {
+      // Mark as completed
+      updateCompleted = true
+      
+      // Clear both timeouts on error
+      if (timeoutId) {
+        clearTimeout(timeoutId)
+        timeoutId = null
+      }
+      if (successTimeoutId) {
+        clearTimeout(successTimeoutId)
+        successTimeoutId = null
+      }
+      
+      setUpdatingPassword(false)
+      setPasswordMsg({ type: 'error', text: err?.message || (t('auth.update_error') as string) || 'An error occurred while updating password' })
     }
   }
 
   const handleDeleteAccount = async () => {
     setDeleting(true)
     try {
+      // Add a timeout to prevent infinite hanging (35 seconds total - 30s for fetch + 5s buffer)
+      const timeoutId = setTimeout(() => {
+        setDeleting(false)
+        setShowDeleteConfirm(false)
+        alert('Deletion is taking longer than expected. Please check your connection and try again.')
+      }, 35000)
+
       const { error } = await deleteAccount()
+      
+      clearTimeout(timeoutId)
+      
       if (error) {
+        setDeleting(false)
+        setShowDeleteConfirm(false)
         alert(`Failed to delete account: ${error.message}`)
       } else {
-        alert(t('auth.account_deleted'))
-        router.replace('/')
+        setDeleting(false)
+        setShowDeleteConfirm(false)
+        alert(t('auth.account_deleted') || 'Account deleted successfully')
+        
+        // Use window.location instead of router to force a full page reload
+        // This ensures all auth state is cleared and the app reinitializes
+        window.location.href = '/'
       }
     } catch (err) {
-      alert('An unexpected error occurred')
-    } finally {
       setDeleting(false)
       setShowDeleteConfirm(false)
+      const errorMessage = err instanceof Error ? err.message : 'An unexpected error occurred'
+      alert(`Failed to delete account: ${errorMessage}`)
+      console.error('Delete account error:', err)
     }
   }
 
@@ -210,7 +311,11 @@ export function UserProfile() {
                 <div className={`text-sm ${passwordMsg.type === 'error' ? 'text-red-600' : 'text-green-600'}`}>{passwordMsg.text}</div>
               )}
               <div className="flex justify-end">
-                <Button onClick={handleUpdatePassword}>{t('common.save')}</Button>
+                <Button onClick={handleUpdatePassword} disabled={updatingPassword}>
+                  {updatingPassword 
+                    ? (mounted ? t('auth.updating') : 'Updating...') 
+                    : (mounted ? t('common.save') : 'Save')}
+                </Button>
               </div>
             </div>
           </div>

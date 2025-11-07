@@ -99,27 +99,22 @@ export function Layout({ children, title, subtitle }: LayoutProps) {
 
   const handleSignOut = async () => {
     try {
+      console.log('[Layout] Sign out button clicked')
       track('user_signed_out')
-      await signOut()
-      const defaultLocale = router.defaultLocale || 'en'
-      const currentLocale = router.locale || defaultLocale
       
       // Close sidebar first
       setSidebarOpen(false)
       
-      // Redirect to home page
-      await router.push({
-        pathname: '/',
-        query: { ts: Date.now() },
-      }, '/', {
-        locale: currentLocale,
-        scroll: false,
-      })
+      await signOut()
+      
+      console.log('[Layout] Sign out completed, redirecting to home...')
+      
+      // Use window.location for full page reload to ensure clean state
+      window.location.href = '/'
     } catch (error) {
-      console.error('Error signing out:', error)
-      // Still try to redirect even if sign out had an error
-      setSidebarOpen(false)
-      router.push('/').catch(() => null)
+      console.error('[Layout] Error signing out:', error)
+      // Even on error, try to redirect with full page reload
+      window.location.href = '/'
     }
   }
 
