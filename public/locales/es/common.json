@@ -71,6 +71,7 @@
     "home": "Inicio",
     "charts": "Gráficos",
     "map": "Mapa",
+    "closing_cost_calculator": "Costos de Cierre",
     "admin": "Administrador",
     "profile": "Perfil",
     "sign_in": "Iniciar Sesión",
@@ -124,7 +125,6 @@
     "password_reset_email_sent": "Correo de restablecimiento enviado",
     "password_reset_email_sent_generic": "Si existe una cuenta para este correo, se envió un enlace de restablecimiento",
     "enter_email_to_reset": "Ingresa tu correo para recibir el enlace de restablecimiento",
-    "name": "Nombre",
     "name_letters_only": "El nombre solo debe contener letras",
     "reset_password": "Restablecer Contraseña",
     "password_updated": "Contraseña actualizada correctamente",
@@ -166,6 +166,90 @@
       "email": "Por favor ingresa un correo electrónico válido.",
       "email_invalid": "El correo electrónico no es válido.",
       "message": "Por favor escribe un mensaje breve."
+    }
+  },
+  "calculators": {
+    "closing_cost": {
+      "page_title": "Calculadora de Costos de Cierre",
+      "page_subtitle": "Conoce tus costos adicionales antes de tomar la decisión final de compra.",
+      "transaction_price_label": "Precio de la transacción",
+      "transaction_price_helper": "Ingresa el precio acordado para calcular las tarifas basadas en porcentaje.",
+      "transaction_price_disclaimer": "Ingresa el precio de la propiedad en MXN. Las estimaciones en USD aparecen entre paréntesis usando el tipo de cambio de abajo.",
+      "exchange_rate_label": "Tipo de cambio MXN a USD",
+      "exchange_rate_helper": "Se usa para mostrar valores de referencia en USD. Ajústalo al tipo de cambio actual.",
+      "exchange_rate_fetching": "Obteniendo tipo de cambio...",
+      "exchange_rate_refresh": "Actualizar tipo de cambio",
+      "exchange_rate_last_updated": "Última actualización {{value}}",
+      "exchange_rate_fetch_error": "No pudimos obtener el tipo de cambio más reciente. Intenta de nuevo o ingrésalo manualmente.",
+      "optional_label": "Opcional",
+      "include_item": "Incluir en el cálculo",
+      "percentage_label": "Porcentaje",
+      "amount_label": "Monto",
+      "fideicomiso_prompt_title": "¿Eres un ciudadano no mexicano comprando en una zona restringida (costa/frontera)?",
+      "fideicomiso_prompt_helper": "Si la respuesta es sí, el fideicomiso bancario y el permiso de Relaciones Exteriores son obligatorios y se añadirán al cálculo.",
+      "fideicomiso_prompt_checkbox": "Sí",
+      "estimated_cost": "Costo estimado",
+      "summary_title": "Resumen de costos de cierre",
+      "mandatory_total": "Tarifas obligatorias",
+      "optional_total": "Tarifas opcionales",
+      "total_closing_cost": "Total de costos de cierre",
+      "total_percentage_of_price": "Porcentaje del precio de compra",
+      "usd_reference": "Referencia en USD: {{value}}",
+      "usd_reference_unavailable": "Referencia en USD no disponible (actualiza el tipo de cambio)",
+      "usd_reference_inline": "({{value}} USD)",
+      "disclaimer": "Los costos reales de cierre varían según el municipio, la moneda y los proveedores de servicio. Consulta a un asesor local antes de comprometerte con una transacción.",
+      "items": {
+        "isai": {
+          "label": "Impuesto sobre Adquisición de Inmuebles (ISAI)",
+          "helper": "Típico: 2% - 4.5% del valor de la propiedad",
+          "note": "Un impuesto estatal de traslado. El porcentaje varía según el estado y el municipio."
+        },
+        "notaryFees": {
+          "label": "Honorarios de Notario",
+          "helper": "Típico: 0.5% - 2% del valor de la propiedad",
+          "note": "Cubre al notario designado por el gobierno que certifica la transacción."
+        },
+        "registrationFees": {
+          "label": "Derechos de Registro de la Propiedad",
+          "helper": "Típico: 0.5% - 1% del valor de la propiedad",
+          "note": "Registro oficial en el Registro Público de la Propiedad."
+        },
+        "fideicomisoSetup": {
+          "label": "Constitución de Fideicomiso Bancario",
+          "helper": "Cuota fija típica: $1,500 - $2,000 USD",
+          "note": "Requerido como trámite único para compradores extranjeros en zonas restringidas."
+        },
+        "foreignAffairsPermit": {
+          "label": "Permiso de la Secretaría de Relaciones Exteriores",
+          "helper": "Cuota fija típica: ~$7,500 MXN",
+          "note": "Permiso necesario para compradores extranjeros emitido por la SRE."
+        },
+        "legalFees": {
+          "label": "Servicios Legales / Abogado",
+          "helper": "Típico: $1,500 - $3,000+ USD",
+          "note": "Debida diligencia, revisión de contratos y supervisión de la transacción."
+        },
+        "iva": {
+          "label": "IVA (Impuesto al Valor Agregado)",
+          "helper": "Típico: 16% aplicado a servicios profesionales",
+          "note": "Frecuentemente se aplica a los honorarios notariales y legales."
+        },
+        "appraisalFees": {
+          "label": "Avalúo",
+          "helper": "Cuota fija típica: $300 - $600 USD",
+          "note": "Valuación de la propiedad para efectos fiscales y de diligencia."
+        },
+        "titleInsurance": {
+          "label": "Seguro de Título",
+          "helper": "Típico: 0.5% - 1% del valor de la propiedad (opcional)",
+          "note": "Protección contra disputas sobre la titularidad. Opcional según el nivel de riesgo."
+        },
+        "escrowFees": {
+          "label": "Honorarios de Fideicomiso/Escrow",
+          "helper": "Cuota fija típica: ~$500 USD",
+          "note": "Tercero neutral que resguarda los fondos durante la transacción."
+        }
+      }
     }
   },
   "profile": {

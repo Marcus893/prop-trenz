@@ -71,6 +71,7 @@
     "home": "Home",
     "charts": "Charts",
     "map": "Map",
+    "closing_cost_calculator": "Closing Cost",
     "admin": "Admin",
     "profile": "Profile",
     "sign_in": "Sign In",
@@ -123,7 +124,6 @@
     "password_reset_email_sent": "Password reset email sent",
     "password_reset_email_sent_generic": "If an account exists for this email, a reset link has been sent",
     "enter_email_to_reset": "Please enter your email to receive a reset link",
-    "name": "Name",
     "name_letters_only": "Name must contain letters only",
     "reset_password": "Reset Password",
     "password_updated": "Password updated successfully",
@@ -165,6 +165,90 @@
       "email": "Please provide a valid email address.",
       "email_invalid": "Email address is invalid.",
       "message": "Please include a short message."
+    }
+  },
+  "calculators": {
+    "closing_cost": {
+      "page_title": "Buyer Closing Cost Calculator",
+      "page_subtitle": "Know your additional costs before you make the final decision to buy!",
+      "transaction_price_label": "Transaction Price",
+      "transaction_price_helper": "Enter the agreed purchase price to calculate percentage-based fees.",
+      "transaction_price_disclaimer": "Enter the property price in MXN. USD estimates appear in parentheses using the exchange rate below.",
+      "exchange_rate_label": "MXN to USD exchange rate",
+      "exchange_rate_helper": "Used to show USD reference values. Adjust to match the current market rate.",
+      "exchange_rate_fetching": "Fetching latest rate...",
+      "exchange_rate_refresh": "Refresh rate",
+      "exchange_rate_last_updated": "Last updated {{value}}",
+      "exchange_rate_fetch_error": "We could not fetch the latest rate. Please try again or enter it manually.",
+      "optional_label": "Optional",
+      "include_item": "Include in calculation",
+      "percentage_label": "Percentage",
+      "amount_label": "Amount",
+      "fideicomiso_prompt_title": "Are you a non-Mexican citizen purchasing in a restricted zone (coastal/border)?",
+      "fideicomiso_prompt_helper": "If yes, bank trust (fideicomiso) setup and a foreign affairs permit are required and will be added to the calculation.",
+      "fideicomiso_prompt_checkbox": "Yes",
+      "estimated_cost": "Estimated cost",
+      "summary_title": "Closing Cost Summary",
+      "mandatory_total": "Mandatory fees",
+      "optional_total": "Optional fees",
+      "total_closing_cost": "Total closing costs",
+      "total_percentage_of_price": "Percent of purchase price",
+      "usd_reference": "USD reference: {{value}}",
+      "usd_reference_unavailable": "USD reference unavailable (update exchange rate)",
+      "usd_reference_inline": "({{value}} USD)",
+      "disclaimer": "Actual closing costs vary by municipality, currency, and service providers. Consult your local advisor before committing to a transaction.",
+      "items": {
+        "isai": {
+          "label": "Property Acquisition Tax (ISAI)",
+          "helper": "Typical: 2% - 4.5% of property value",
+          "note": "A state-level transfer tax. The percentage varies by state and municipality."
+        },
+        "notaryFees": {
+          "label": "Notary Fees",
+          "helper": "Typical: 0.5% - 2% of property value",
+          "note": "Covers the government-appointed notary who certifies the transaction."
+        },
+        "registrationFees": {
+          "label": "Property Registration Fees",
+          "helper": "Typical: 0.5% - 1% of property value",
+          "note": "Official registration in the Public Registry."
+        },
+        "fideicomisoSetup": {
+          "label": "Fideicomiso (Bank Trust) Setup",
+          "helper": "Typical fixed fee: $1500 - $2,000 USD",
+          "note": "Required one-time setup for foreign buyers in restricted zones."
+        },
+        "foreignAffairsPermit": {
+          "label": "Foreign Affairs Ministry Permit",
+          "helper": "Typical fixed fee: ~$7,500 MXN",
+          "note": "Permit from the Secretaría de Relaciones Exteriores for foreign buyers."
+        },
+        "legalFees": {
+          "label": "Legal / Attorney Services",
+          "helper": "Typical: $1,500 - $3,000+ USD",
+          "note": "Due diligence, contract review, and transaction oversight."
+        },
+        "iva": {
+          "label": "IVA (Value Added Tax)",
+          "helper": "Typical: 16% applied to professional services",
+          "note": "Often applied to notary and legal service fees."
+        },
+        "appraisalFees": {
+          "label": "Appraisal Fees",
+          "helper": "Typical fixed fee: $300 - $600 USD",
+          "note": "Assessment of the property value for tax and due diligence."
+        },
+        "titleInsurance": {
+          "label": "Title Insurance",
+          "helper": "Typical: 0.5% - 1% of property value (optional)",
+          "note": "Protection against title disputes. Optional depending on risk tolerance."
+        },
+        "escrowFees": {
+          "label": "Escrow Fees",
+          "helper": "Typical fixed fee: ~$500 USD",
+          "note": "Neutral third party to hold funds during the transaction."
+        }
+      }
     }
   },
   "profile": {

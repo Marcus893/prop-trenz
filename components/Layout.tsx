@@ -10,14 +10,15 @@ import { useAuth } from '@/lib/auth'
 import { useTranslation } from 'next-i18next'
 import { useTracking } from '@/lib/useTracking'
 import { LogoSVG } from '@/components/ui/Logo'
-import { 
-  Home, 
-  BarChart3, 
-  Map, 
-  Settings, 
-  User, 
+import {
+  Home,
+  BarChart3,
+  Map,
+  Settings,
+  User,
   Menu,
-  X
+  X,
+  Calculator
 } from 'lucide-react'
 
 interface LayoutProps {
@@ -42,6 +43,7 @@ export function Layout({ children, title, subtitle }: LayoutProps) {
       if (sidebarRef.current && window.innerWidth >= 1024) {
         requestAnimationFrame(() => {
           if (sidebarRef.current) {
+            sidebarRef.current.style.height = 'auto'
             const documentHeight = Math.max(
               document.body.scrollHeight,
               document.body.offsetHeight,
@@ -85,6 +87,7 @@ export function Layout({ children, title, subtitle }: LayoutProps) {
     { name: t('common.home', 'Home'), href: '/', icon: Home },
     { name: t('common.charts', 'Charts'), href: '/charts', icon: BarChart3 },
     { name: t('common.map', 'Map'), href: '/map', icon: Map },
+    { name: t('common.closing_cost_calculator', 'Closing Cost'), href: '/calculators/closing-cost', icon: Calculator },
   ]
 
   // Add profile link for signed-in users

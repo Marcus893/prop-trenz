@@ -71,6 +71,7 @@
     "home": "首页",
     "charts": "图表",
     "map": "地图",
+    "closing_cost_calculator": "过户成本",
     "admin": "管理",
     "profile": "个人资料",
     "sign_in": "登录",
@@ -123,7 +124,6 @@
     "password_reset_email_sent": "重置密码邮件已发送",
     "password_reset_email_sent_generic": "如果该邮箱存在账户，我们已发送重置链接",
     "enter_email_to_reset": "请输入邮箱以接收重置链接",
-    "name": "姓名",
     "name_letters_only": "姓名只能包含字母",
     "reset_password": "重置密码",
     "password_updated": "密码已成功更新",
@@ -165,6 +165,90 @@
       "email": "请填写有效邮箱。",
       "email_invalid": "邮箱地址格式不正确。",
       "message": "请填写留言内容。"
+    }
+  },
+  "calculators": {
+    "closing_cost": {
+      "page_title": "买方过户成本计算器",
+      "page_subtitle": "在做出最终购房决定前，先了解所有额外成本。",
+      "transaction_price_label": "交易价格",
+      "transaction_price_helper": "输入商定的购买价格，以便计算按百分比收取的费用。",
+      "transaction_price_disclaimer": "请输入以墨西哥比索（MXN）计价的房价。美元估算会根据下方汇率在括号中显示。",
+      "exchange_rate_label": "MXN 转 USD 汇率",
+      "exchange_rate_helper": "用于显示美元参考值。请根据当前市场汇率进行调整。",
+      "exchange_rate_fetching": "正在获取最新汇率...",
+      "exchange_rate_refresh": "刷新汇率",
+      "exchange_rate_last_updated": "最近更新 {{value}}",
+      "exchange_rate_fetch_error": "无法获取最新汇率，请重试或手动输入。",
+      "optional_label": "可选",
+      "include_item": "加入计算",
+      "percentage_label": "百分比",
+      "amount_label": "金额",
+      "fideicomiso_prompt_title": "您是非墨西哥籍且在受限区域（海岸/边境）购买房产吗？",
+      "fideicomiso_prompt_helper": "如果是，需要办理银行信托（Fideicomiso）和外交部许可，这些费用会加入到计算中。",
+      "fideicomiso_prompt_checkbox": "是",
+      "estimated_cost": "预计费用",
+      "summary_title": "过户成本汇总",
+      "mandatory_total": "必选费用",
+      "optional_total": "可选费用",
+      "total_closing_cost": "过户成本总计",
+      "total_percentage_of_price": "占购房价的比例",
+      "usd_reference": "美元参考值：{{value}}",
+      "usd_reference_unavailable": "美元参考不可用（请更新汇率）",
+      "usd_reference_inline": "（{{value}} 美元）",
+      "disclaimer": "实际过户成本会因市政、货币和服务提供方而不同。在做出交易决定前，请咨询当地顾问。",
+      "items": {
+        "isai": {
+          "label": "房产取得税 (ISAI)",
+          "helper": "典型值：房价的 2% - 4.5%",
+          "note": "州级转让税，税率因州和市而异。"
+        },
+        "notaryFees": {
+          "label": "公证费用",
+          "helper": "典型值：房价的 0.5% - 2%",
+          "note": "涵盖负责认证交易的政府指定公证人。"
+        },
+        "registrationFees": {
+          "label": "房产登记费用",
+          "helper": "典型值：房价的 0.5% - 1%",
+          "note": "在公共登记处完成正式登记。"
+        },
+        "fideicomisoSetup": {
+          "label": "银行信托 (Fideicomiso) 建立费用",
+          "helper": "典型固定费用：1,500 - 2,000 美元",
+          "note": "外国买家在限制区域购房时所需的一次性费用。"
+        },
+        "foreignAffairsPermit": {
+          "label": "外交部许可费用",
+          "helper": "典型固定费用：约 7,500 比索",
+          "note": "外国买家需向外交部申请的购买许可。"
+        },
+        "legalFees": {
+          "label": "法律 / 律师服务费",
+          "helper": "典型值：1,500 - 3,000+ 美元",
+          "note": "包括尽职调查、合同审阅和交易监督。"
+        },
+        "iva": {
+          "label": "增值税 (IVA)",
+          "helper": "典型值：对专业服务征收 16%",
+          "note": "通常适用于公证和法律服务费用。"
+        },
+        "appraisalFees": {
+          "label": "评估费用",
+          "helper": "典型固定费用：300 - 600 美元",
+          "note": "用于税务和尽职调查的房产估值。"
+        },
+        "titleInsurance": {
+          "label": "产权保险",
+          "helper": "典型值：房价的 0.5% - 1%（可选）",
+          "note": "用于防范产权纠纷，可根据风险选择。"
+        },
+        "escrowFees": {
+          "label": "第三方托管费用",
+          "helper": "典型固定费用：约 500 美元",
+          "note": "交易过程中用于保管资金的中立第三方费用。"
+        }
+      }
     }
   },
   "profile": {
