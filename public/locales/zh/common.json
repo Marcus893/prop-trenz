@@ -71,7 +71,10 @@
     "home": "首页",
     "charts": "图表",
     "map": "地图",
+    "calculators": "计算工具",
     "closing_cost_calculator": "过户成本",
+    "ownership_cost_calculator": "持有成本",
+    "seller_cost_calculator": "出售成本",
     "admin": "管理",
     "profile": "个人资料",
     "sign_in": "登录",
@@ -249,7 +252,114 @@
           "note": "交易过程中用于保管资金的中立第三方费用。"
         }
       }
+    },
+    "ownership_cost": {
+      "page_title": "房产持有成本计算器",
+      "page_subtitle": "估算税费、维护与专业服务等年度持有成本。",
+      "property_value_label": "房产（地籍）价值",
+      "property_value_helper": "用于估算年度房产税（Predial）。请输入以 MXN 计价的地籍价值。",
+      "rental_income_label": "年度租金收入",
+      "rental_income_helper": "用于估算物业管理费用。如果不出租请输入 0。",
+      "fideicomiso_prompt_title": "您是否为在受限区域（海岸/边境）拥有房产的外国业主？",
+      "fideicomiso_prompt_helper": "如果是，将包含年度银行信托费用。",
+      "fideicomiso_prompt_checkbox": "是的，包含信托费用",
+      "optional_label": "可选",
+      "include_item": "加入计算",
+      "percentage_label_value": "占房产价值的百分比",
+      "percentage_label_rental": "占租金收入的百分比",
+      "amount_label": "年度费用",
+      "amount_label_monthly": "月度费用",
+      "estimated_cost": "预计年度成本",
+      "summary_title": "持有成本汇总",
+      "mandatory_total": "必选成本",
+      "optional_total": "可选成本",
+      "total_annual_cost": "年度持有成本总计",
+      "monthly_average": "折合月均成本",
+      "disclaimer": "实际成本因市政、房产类型与服务水准而异。请咨询当地专业人士以获取精确预算。",
+      "items": {
+        "propertyTaxes": {
+          "label": "房产税（Predial）",
+          "helper": "年度典型税率：房产价值的 0.1% - 0.15%",
+          "note": "按政府评估的地籍价值每年缴纳，提前缴纳通常可享折扣。"
+        },
+        "hoaFees": {
+          "label": "业主协会（HOA）费用",
+          "helper": "月度典型费用：MXN 2,000 – 6,000",
+          "note": "公寓或封闭社区必须缴纳，用于公共设施、安全与维护。"
+        },
+        "fideicomisoAnnual": {
+          "label": "银行信托年度费用",
+          "helper": "典型费用：每年 MXN 10,000 – 20,000 ($500 - $900 USD)",
+          "note": "限制区域内的外国业主须向托管银行支付。"
+        },
+        "insurance": {
+          "label": "保险费用",
+          "helper": "年度典型保费：MXN 8,000 – 20,000（视覆盖范围而定）",
+          "note": "建议用于自然灾害（飓风、地震）及盗窃保障。"
+        },
+        "propertyManagement": {
+          "label": "物业管理费",
+          "helper": "典型：年度租金收入的 8% - 15%",
+          "note": "若将房产出租并使用第三方管理服务。"
+        }
+      }
+    },
+    "seller_cost": {
+      "page_title": "房产出售成本计算器",
+      "page_subtitle": "估算在墨西哥出售房产时的资本利得税和主要费用。",
+      "sale_price_label": "预期成交价",
+      "sale_price_helper": "请输入成交价（MXN）。所有金额均以墨西哥比索显示。",
+      "residency_title": "居留身份",
+      "residency_helper": "居民（拥有 RFC）与非居民的资本利得税处理不同。",
+      "residency_resident": "居民（拥有 RFC 与 CURP）",
+      "residency_nonresident": "非居民",
+      "cost_basis_title": "成本基础与可扣除金额",
+      "cost_basis_helper": "包含原始购房价、带发票的资本性改良以及允许抵扣的出售费用。",
+      "purchase_price_label": "原始购房价",
+      "improvements_label": "资本性改良（发票）",
+      "deductible_costs_label": "可抵扣的结算费用",
+      "primary_residence_exemption_label": "自住房免税额（MXN）",
+      "primary_residence_helper": "若符合 SAT 要求（主要自住房、拥有 RFC 与 CURP、近三年未申请），可套用最高约 700,000 UDI 的免税额。",
+      "capital_gains_title": "资本利得税 (ISR)",
+      "capital_gains_helper": "有效税率通常介于可课税收益的 10% - 35%，取决于凭证与个人税务状况。",
+      "capital_gains_rate_label": "预计税率 (%)",
+      "capital_gains_resident_hint": "居民在扣除豁免与可抵扣项后，适用 10%-35% 的累进 ISR 税率。",
+      "capital_gains_nonresident_hint": "非居民需按净收益的35%统一税率缴纳所得税。",
+      "taxable_gain_label": "应税收益",
+      "capital_gains_rate_applied": "适用税率",
+      "capital_gains_due": "预计应缴 ISR",
+      "agent_commission_title": "房地产经纪佣金",
+      "agent_commission_helper": "通常为成交价的 5% - 8%，另加 16% 增值税。",
+      "include_item": "加入计算",
+      "agent_rate_label": "佣金比例 (%)",
+      "agent_commission_estimate": "预计佣金",
+      "agent_commission_breakdown": "已包含佣金的增值税",
+      "fideicomiso_title": "银行信托（Fideicomiso）取消费用",
+      "fideicomiso_helper": "外国业主出售时，银行收取取消信托并移交产权的行政费用。",
+      "fideicomiso_amount_label": "费用估算",
+      "fideicomiso_estimate_label": "预计费用",
+      "attorney_title": "法律/过户顾问",
+      "attorney_helper": "卖家常会聘请独立律师或顾问审阅合同并协助谈判条款。",
+      "attorney_amount_label": "费用估算",
+      "attorney_estimate_label": "预计费用",
+      "professional_fee_breakdown": "含专业服务的增值税",
+      "summary_title": "出售成本汇总",
+      "other_costs_label": "其他预计费用",
+      "total_costs": "预计总成本",
+      "percent_of_sale": "占成交价的比例",
+      "disclaimer": "最终税额由公证人和 SAT 确认。请保留所有发票，并咨询专业人士获取精确计算。"
     }
+  },
+  "calculators_page": {
+    "title": "房地产计算工具",
+    "subtitle": "快速估算在墨西哥买房、持有与出售涉及的各项费用。",
+    "closing_cost_title": "买方过户成本",
+    "closing_cost_description": "准备购房？先估算 ISAI 转让税、公证费、登记费等过户成本。",
+    "ownership_cost_title": "持有成本",
+    "ownership_cost_description": "已经持有房产？预估年度开销：房产税、业委会费用、保险、维修与物业管理等。",
+    "seller_cost_title": "出售成本",
+    "seller_cost_description": "计划出售？计算资本利得税、经纪佣金 + 增值税、法律费用以及信托取消成本。",
+    "learn_more": "打开计算工具"
   },
   "profile": {
     "title": "个人资料",

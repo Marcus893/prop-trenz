@@ -71,7 +71,10 @@
     "home": "Home",
     "charts": "Charts",
     "map": "Map",
+    "calculators": "Calculators",
     "closing_cost_calculator": "Closing Cost",
+    "ownership_cost_calculator": "Ownership Cost",
+    "seller_cost_calculator": "Seller Cost",
     "admin": "Admin",
     "profile": "Profile",
     "sign_in": "Sign In",
@@ -249,7 +252,114 @@
           "note": "Neutral third party to hold funds during the transaction."
         }
       }
+    },
+    "ownership_cost": {
+      "page_title": "Ownership Cost Calculator",
+      "page_subtitle": "Estimate annual holding costs across taxes, maintenance, and professional services.",
+      "property_value_label": "Property value (cadastral)",
+      "property_value_helper": "Used to estimate annual predial taxes. Enter the assessed value in MXN.",
+      "rental_income_label": "Annual rental income",
+      "rental_income_helper": "Used for property management fee estimates. Enter zero if the property is not rented.",
+      "fideicomiso_prompt_title": "Are you a foreign owner with property in a restricted zone (coastal/border)?",
+      "fideicomiso_prompt_helper": "If yes, the annual fideicomiso fee is required and included below.",
+      "fideicomiso_prompt_checkbox": "Yes, include fideicomiso fee",
+      "optional_label": "Optional",
+      "include_item": "Include in calculation",
+      "percentage_label_value": "Percentage of property value",
+      "percentage_label_rental": "Percentage of rental income",
+      "amount_label": "Annual amount",
+      "amount_label_monthly": "Monthly amount",
+      "estimated_cost": "Estimated annual cost",
+      "summary_title": "Ownership Cost Summary",
+      "mandatory_total": "Mandatory costs",
+      "optional_total": "Optional costs",
+      "total_annual_cost": "Total annual ownership cost",
+      "monthly_average": "Monthly average",
+      "disclaimer": "Actual costs vary by municipality, property type, and service level. Consult local professionals for precise budgeting.",
+      "items": {
+        "propertyTaxes": {
+          "label": "Property Taxes (Predial)",
+          "helper": "Typical annual rate: 0.1% - 0.15% of cadastral value",
+          "note": "Paid annually based on government-assessed value. Discounts often available for early payment."
+        },
+        "hoaFees": {
+          "label": "Homeowners Association (HOA) Fees",
+          "helper": "Typical monthly fee: MXN 2,000 – 6,000",
+          "note": "Mandatory for condos/gated communities; covers shared amenities, security, and maintenance."
+        },
+        "fideicomisoAnnual": {
+          "label": "Fideicomiso (Bank Trust) Fee",
+          "helper": "Typical annual fee: MXN 10,000 – 20,000 ($500 - $900 USD)",
+          "note": "Required for foreign owners in restricted zones (coasts/borders). Paid to the trustee bank."
+        },
+        "insurance": {
+          "label": "Insurance",
+          "helper": "Typical annual premium: MXN 8,000 – 20,000 (coverage dependent)",
+          "note": "Recommended for natural disaster coverage (hurricanes, earthquakes) and theft."
+        },
+        "propertyManagement": {
+          "label": "Property Management Fees",
+          "helper": "Typical: 8% - 15% of annual rental income",
+          "note": "Applied if renting the property out and using a third-party management service."
+        }
+      }
+    },
+    "seller_cost": {
+      "page_title": "Seller Cost Calculator",
+      "page_subtitle": "Estimate capital gains tax and transaction fees when you sell property in Mexico.",
+      "sale_price_label": "Expected sale price",
+      "sale_price_helper": "Enter the agreed sale price. All calculations are in MXN.",
+      "residency_title": "Residency status",
+      "residency_helper": "Capital gains treatment differs for residents (with RFC) and non-residents.",
+      "residency_resident": "Resident (RFC + CURP)",
+      "residency_nonresident": "Non-resident",
+      "cost_basis_title": "Cost basis & deductible amounts",
+      "cost_basis_helper": "Include original purchase price, capital improvements with facturas, and allowable selling expenses.",
+      "purchase_price_label": "Original purchase price",
+      "improvements_label": "Capital improvements (facturas)",
+      "deductible_costs_label": "Allowable closing deductions",
+      "primary_residence_exemption_label": "Primary residence exemption (MXN)",
+      "primary_residence_helper": "Apply exemption (up to ~700,000 UDIs) if you qualify—must be primary residence, RFC, CURP, and no exemption claimed in the past 3 years.",
+      "capital_gains_title": "Capital gains tax (ISR)",
+      "capital_gains_helper": "Typical effective rates range from 10% to 35% of the taxable gain depending on documentation and personal tax situation.",
+      "capital_gains_rate_label": "Estimated tax rate (%)",
+      "capital_gains_resident_hint": "Residents apply progressive ISR rates (10%-35%) after exemptions and deductions.",
+      "capital_gains_nonresident_hint": "A 35% flat rate tax on net gain applies to Non-residents.",
+      "taxable_gain_label": "Taxable gain",
+      "capital_gains_rate_applied": "Rate applied",
+      "capital_gains_due": "Estimated ISR due",
+      "agent_commission_title": "Real estate agent commission",
+      "agent_commission_helper": "Typical commission is 5% - 8% of the sale price plus 16% VAT.",
+      "include_item": "Include in calculation",
+      "agent_rate_label": "Commission rate (%)",
+      "agent_commission_estimate": "Estimated commission",
+      "agent_commission_breakdown": "Includes IVA on commission",
+      "fideicomiso_title": "Fideicomiso (bank trust) cancellation",
+      "fideicomiso_helper": "Banks charge an administrative fee to cancel the trust and release title when a foreign owner sells.",
+      "fideicomiso_amount_label": "Estimated fee",
+      "fideicomiso_estimate_label": "Estimated cost",
+      "attorney_title": "Legal or closing advisor",
+      "attorney_helper": "Sellers may retain an independent lawyer or advisor to review contracts and negotiate clauses.",
+      "attorney_amount_label": "Estimated fee",
+      "attorney_estimate_label": "Estimated cost",
+      "professional_fee_breakdown": "Includes IVA on professional fees",
+      "summary_title": "Seller cost summary",
+      "other_costs_label": "Estimated other costs",
+      "total_costs": "Estimated total costs",
+      "percent_of_sale": "Percent of sale price",
+      "disclaimer": "Actual taxes are determined by your Notary Public and SAT. Keep facturas and consult professionals for precise calculations."
     }
+  },
+  "calculators_page": {
+    "title": "Real Estate Calculators",
+    "subtitle": "Quickly estimate the costs involved in buying, owning, and selling property in Mexico.",
+    "closing_cost_title": "Buyer Closing Cost",
+    "closing_cost_description": "Buying? Estimate ISAI transfer tax, notary fees, registration, and other closing costs before you wire funds.",
+    "ownership_cost_title": "Ownership Cost",
+    "ownership_cost_description": "Already own? Project annual holding costs: predial, HOA dues, insurance, maintenance, and management fees.",
+    "seller_cost_title": "Seller Cost",
+    "seller_cost_description": "Selling? Model capital gains ISR, agent commission + IVA, legal fees, and fideicomiso cancellation costs.",
+    "learn_more": "Open calculator"
   },
   "profile": {
     "title": "Profile",

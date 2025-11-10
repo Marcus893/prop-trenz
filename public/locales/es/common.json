@@ -71,7 +71,10 @@
     "home": "Inicio",
     "charts": "Gráficos",
     "map": "Mapa",
+    "calculators": "Calculadoras",
     "closing_cost_calculator": "Costos de Cierre",
+    "ownership_cost_calculator": "Costos de Propiedad",
+    "seller_cost_calculator": "Costos de Venta",
     "admin": "Administrador",
     "profile": "Perfil",
     "sign_in": "Iniciar Sesión",
@@ -250,7 +253,114 @@
           "note": "Tercero neutral que resguarda los fondos durante la transacción."
         }
       }
+    },
+    "ownership_cost": {
+      "page_title": "Calculadora de Costos de Propiedad",
+      "page_subtitle": "Estima los costos anuales de mantenimiento, impuestos y servicios profesionales.",
+      "property_value_label": "Valor catastral de la propiedad",
+      "property_value_helper": "Se usa para estimar el predial anual. Ingresa el valor catastral en MXN.",
+      "rental_income_label": "Ingreso anual por renta",
+      "rental_income_helper": "Se usa para estimar la comisión de administración. Ingresa 0 si la propiedad no se renta.",
+      "fideicomiso_prompt_title": "¿Eres propietario extranjero con inmuebles en una zona restringida (costa/frontera)?",
+      "fideicomiso_prompt_helper": "Si la respuesta es sí, se incluye la cuota anual del fideicomiso.",
+      "fideicomiso_prompt_checkbox": "Sí, incluir cuota de fideicomiso",
+      "optional_label": "Opcional",
+      "include_item": "Incluir en el cálculo",
+      "percentage_label_value": "Porcentaje del valor de la propiedad",
+      "percentage_label_rental": "Porcentaje del ingreso por renta",
+      "amount_label": "Monto anual",
+      "amount_label_monthly": "Monto mensual",
+      "estimated_cost": "Costo anual estimado",
+      "summary_title": "Resumen de costos de propiedad",
+      "mandatory_total": "Costos obligatorios",
+      "optional_total": "Costos opcionales",
+      "total_annual_cost": "Costo anual total de propiedad",
+      "monthly_average": "Promedio mensual",
+      "disclaimer": "Los costos reales varían según el municipio, el tipo de propiedad y el nivel de servicio. Consulta a profesionales locales para presupuestos precisos.",
+      "items": {
+        "propertyTaxes": {
+          "label": "Impuesto Predial",
+          "helper": "Tasa anual típica: 0.1% - 0.15% del valor catastral",
+          "note": "Se paga de forma anual con base en el valor catastral. Suele haber descuentos por pago anticipado."
+        },
+        "hoaFees": {
+          "label": "Cuotas de Asociación de Condóminos (HOA)",
+          "helper": "Cuota mensual típica: MXN 2,000 – 6,000",
+          "note": "Obligatorias para condominios o fraccionamientos cerrados; cubren amenidades, seguridad y mantenimiento."
+        },
+        "fideicomisoAnnual": {
+          "label": "Cuota Anual de Fideicomiso Bancario",
+          "helper": "Cuota anual típica: MXN 10,000 – 20,000 ($500 - $900 USD)",
+          "note": "Requerida para propietarios extranjeros en zonas restringidas. Se paga al banco fiduciario."
+        },
+        "insurance": {
+          "label": "Seguro",
+          "helper": "Prima anual típica: MXN 8,000 – 20,000 (según cobertura)",
+          "note": "Recomendado para cobertura contra huracanes, terremotos y robo."
+        },
+        "propertyManagement": {
+          "label": "Comisión de Administración",
+          "helper": "Típico: 8% - 15% del ingreso anual por renta",
+          "note": "Se aplica si se renta la propiedad mediante un servicio de administración externo."
+        }
+      }
+    },
+    "seller_cost": {
+      "page_title": "Calculadora de Costos de Venta",
+      "page_subtitle": "Estima el ISR por plusvalía y los honorarios principales al vender una propiedad en México.",
+      "sale_price_label": "Precio esperado de venta",
+      "sale_price_helper": "Ingresa el precio acordado. Todos los cálculos se muestran en MXN.",
+      "residency_title": "Estatus de residencia",
+      "residency_helper": "El tratamiento del ISR cambia entre residentes con RFC y no residentes.",
+      "residency_resident": "Residente (RFC + CURP)",
+      "residency_nonresident": "No residente",
+      "cost_basis_title": "Base de costo y montos deducibles",
+      "cost_basis_helper": "Incluye el precio original de compra, mejoras con facturas y gastos deducibles de la venta.",
+      "purchase_price_label": "Precio original de compra",
+      "improvements_label": "Mejoras de capital (con facturas)",
+      "deductible_costs_label": "Deducciones permitidas de cierre",
+      "primary_residence_exemption_label": "Exención por residencia habitual (MXN)",
+      "primary_residence_helper": "Aplica la exención (hasta ~700,000 UDIs) sólo si cumples con SAT: residencia principal, RFC, CURP y sin exención en los últimos 3 años.",
+      "capital_gains_title": "Impuesto sobre la Ganancia (ISR)",
+      "capital_gains_helper": "Las tasas efectivas suelen variar del 10% al 35% de la ganancia gravable según documentación y situación fiscal.",
+      "capital_gains_rate_label": "Tasa estimada (%)",
+      "capital_gains_resident_hint": "Los residentes aplican las tasas progresivas de ISR (10%-35%) después de exenciones y deducciones.",
+      "capital_gains_nonresident_hint": "A los no residentes se les aplica un impuesto de tasa fija del 35% sobre la ganancia neta.",
+      "taxable_gain_label": "Ganancia gravable",
+      "capital_gains_rate_applied": "Tasa aplicada",
+      "capital_gains_due": "ISR estimado",
+      "agent_commission_title": "Comisión del agente inmobiliario",
+      "agent_commission_helper": "La comisión típica es del 5% - 8% del precio de venta más IVA (16%).",
+      "include_item": "Incluir en el cálculo",
+      "agent_rate_label": "Tasa de comisión (%)",
+      "agent_commission_estimate": "Comisión estimada",
+      "agent_commission_breakdown": "Incluye IVA sobre la comisión",
+      "fideicomiso_title": "Cancelación de fideicomiso bancario",
+      "fideicomiso_helper": "El banco cobra una cuota administrativa para cancelar el fideicomiso y liberar el título.",
+      "fideicomiso_amount_label": "Cuota estimada",
+      "fideicomiso_estimate_label": "Costo estimado",
+      "attorney_title": "Asesor legal o de cierre",
+      "attorney_helper": "Los vendedores suelen contratar a un abogado o asesor independiente para revisar el contrato y negociar cláusulas.",
+      "attorney_amount_label": "Honorarios estimados",
+      "attorney_estimate_label": "Costo estimado",
+      "professional_fee_breakdown": "Incluye IVA en los honorarios profesionales",
+      "summary_title": "Resumen de costos de venta",
+      "other_costs_label": "Otros costos estimados",
+      "total_costs": "Costos totales estimados",
+      "percent_of_sale": "Porcentaje del precio de venta",
+      "disclaimer": "Los impuestos reales los determina el Notario Público y el SAT. Conserva tus facturas y consulta profesionales para cálculos exactos."
     }
+  },
+  "calculators_page": {
+    "title": "Calculadoras Inmobiliarias",
+    "subtitle": "Calcula rápidamente los costos de comprar, mantener y vender propiedades en México.",
+    "closing_cost_title": "Costos de Cierre para Compradores",
+    "closing_cost_description": "¿Vas a comprar? Estima impuestos de ISAI, honorarios notariales, registro y otros costos de cierre antes de transferir fondos.",
+    "ownership_cost_title": "Costos de Propiedad",
+    "ownership_cost_description": "¿Ya eres propietario? Proyecta gastos anuales: predial, cuotas HOA, seguros, mantenimiento y administración.",
+    "seller_cost_title": "Costos de Venta",
+    "seller_cost_description": "¿Vendes? Modela ISR por plusvalía, comisión del agente + IVA, honorarios legales y cancelación de fideicomiso.",
+    "learn_more": "Abrir calculadora"
   },
   "profile": {
     "title": "Perfil",

@@ -87,7 +87,7 @@ export function Layout({ children, title, subtitle }: LayoutProps) {
     { name: t('common.home', 'Home'), href: '/', icon: Home },
     { name: t('common.charts', 'Charts'), href: '/charts', icon: BarChart3 },
     { name: t('common.map', 'Map'), href: '/map', icon: Map },
-    { name: t('common.closing_cost_calculator', 'Closing Cost'), href: '/calculators/closing-cost', icon: Calculator },
+    { name: t('common.calculators', 'Calculators'), href: '/calculators', icon: Calculator },
   ]
 
   // Add profile link for signed-in users
