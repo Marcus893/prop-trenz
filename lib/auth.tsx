@@ -87,53 +87,26 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       return
     }
 
-    let updateCompleted = false
-    let timeoutId: NodeJS.Timeout | null = null
-
+    // Use a very short timeout and don't block - this is just for convenience
+    // The database is the source of truth, not auth metadata
     try {
       const timeoutPromise = new Promise<'timeout'>((resolve) => {
-        timeoutId = setTimeout(() => {
-          if (!updateCompleted) {
-            updateCompleted = true
-            resolve('timeout')
-          }
-        }, 5000)
+        setTimeout(() => resolve('timeout'), 3000) // 3 second timeout
       })
 
-      const updatePromise = supabase.auth
-        .updateUser({ data: payload })
-        .then(({ error }) => {
-          updateCompleted = true
-          if (timeoutId) {
-            clearTimeout(timeoutId)
-            timeoutId = null
-          }
-          if (error) {
-            console.warn('[Auth] Failed to sync auth metadata:', error)
-          }
-          return 'updated' as const
-        })
-        .catch((err) => {
-          updateCompleted = true
-          if (timeoutId) {
-            clearTimeout(timeoutId)
-            timeoutId = null
-          }
-          console.warn('[Auth] Exception syncing auth metadata:', err)
-          return 'error' as const
-        })
+      const updatePromise = supabase.auth.updateUser({ data: payload })
+        .then(() => 'updated' as const)
+        .catch(() => 'error' as const)
 
       const result = await Promise.race([updatePromise, timeoutPromise])
 
       if (result === 'timeout') {
-        console.warn('[Auth] Auth metadata sync timed out; continuing with profile data only')
+        // Silently fail - this is non-critical
+        console.log('[Auth] Auth metadata sync timed out (non-critical)')
       }
     } catch (error) {
-      console.warn('[Auth] Unexpected error syncing auth metadata:', error)
-    } finally {
-      if (!updateCompleted && timeoutId) {
-        clearTimeout(timeoutId)
-      }
+      // Silently fail - this is non-critical
+      console.log('[Auth] Auth metadata sync failed (non-critical):', error)
     }
   }
 
@@ -414,71 +387,48 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     console.log('[Auth] Starting profile update...', updates)
     const startTime = Date.now()
     
-    let updateCompleted = false
-    let timedOut = false
-    let timeoutId: NodeJS.Timeout | null = null
-    
     try {
-      // Set a timeout - if RPC doesn't complete in 5 seconds, assume success
-      const timeoutPromise = new Promise<{ error: any }>((resolve) => {
-        timeoutId = setTimeout(() => {
-          if (!updateCompleted) {
-            console.log('[Auth] Profile update took >5s, assuming success')
-            updateCompleted = true
-            timedOut = true
-            resolve({ error: null })
-          }
-        }, 5000)
-      })
-      
-      // Race between RPC call and timeout
-      const rpcPromise = supabase.rpc('update_user_profile', {
+      // Call RPC to update database - wait for it to complete
+      const { error: rpcError } = await supabase.rpc('update_user_profile', {
         p_user_id: user.id,
         p_name: updates.name ?? null,
         p_language: updates.language ?? null,
-      }).then((result) => {
-        const elapsed = Date.now() - startTime
-        console.log(`[Auth] Profile update completed after ${elapsed}ms`, result)
-        updateCompleted = true
-        if (timeoutId) clearTimeout(timeoutId)
-        return result
       })
+
+      const elapsed = Date.now() - startTime
+      console.log(`[Auth] Profile update RPC completed after ${elapsed}ms`)
+
+      if (rpcError) {
+        console.error('[Auth] Profile update RPC error:', rpcError)
+        return { error: rpcError }
+      }
+
+      // Fetch updated profile from database to confirm it was saved
+      console.log('[Auth] Fetching updated profile from database to confirm')
+      const profileData = await fetchUserProfile(user.id)
       
-      const { error } = await Promise.race([rpcPromise, timeoutPromise])
-
-      if (error) {
-        console.error('[Auth] Profile update error:', error)
-        return { error }
-      }
-
       const updatedProfile = {
-        name: updates.name ?? (user.user_metadata?.name as string) ?? '',
-        language: updates.language ?? (user.user_metadata?.language as string) ?? 'en',
+        name: updates.name ?? profileData?.name ?? (user.user_metadata?.name as string) ?? '',
+        language: updates.language ?? profileData?.language ?? (user.user_metadata?.language as string) ?? 'en',
       }
 
-      // If we timed out, just set the profile state directly (don't wait for fetch)
-      if (timedOut) {
-        console.log('[Auth] Setting profile state directly (timed out)')
-        setProfile(updatedProfile)
-        mergeProfileIntoUser(updatedProfile)
-        setLanguagePreference(updatedProfile.language)
-        await syncAuthMetadata(updatedProfile)
-        console.log('[Auth] Profile update success (timed out path)')
-        return { error: null }
-      }
-
-      // Otherwise, fetch updated profile from database
-      console.log('[Auth] Fetching updated profile from database')
-      await fetchUserProfile(user.id)
+      // Update local state
+      setProfile(updatedProfile)
+      mergeProfileIntoUser(updatedProfile)
       setLanguagePreference(updatedProfile.language)
-      await syncAuthMetadata(updatedProfile)
+      
+      // Sync to auth metadata in background (non-blocking) - but don't let it interfere
+      // Use a small delay to ensure the RPC has fully completed
+      setTimeout(() => {
+        syncAuthMetadata(updatedProfile).catch(err => {
+          console.warn('[Auth] Background syncAuthMetadata failed (non-critical):', err)
+        })
+      }, 100)
 
       console.log('[Auth] Profile update success')
       return { error: null }
     } catch (e: any) {
       console.error('[Auth] Profile update exception:', e)
-      updateCompleted = true
-      if (timeoutId) clearTimeout(timeoutId)
       return { error: e }
     }
   }

@@ -32,6 +32,45 @@ export default function GuidePage({ guide, canonicalUrl, isFallbackLocale, relat
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://proptrenz.com'
   const ogImage = guide.mainImageUrl || `${baseUrl}/api/og?title=${encodeURIComponent(guide.metaTitle || guide.title)}`
 
+  // Structured data for Organization
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'PropTrenz',
+    url: baseUrl,
+    logo: `${baseUrl}/logo-icon.svg`,
+    description: 'Mexican real estate market intelligence and analytics platform',
+    sameAs: [
+      // Add social media profiles when available
+    ]
+  }
+
+  // Structured data for BreadcrumbList
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: baseUrl
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Guides',
+        item: `${baseUrl}/guides`
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: guide.title,
+        item: canonicalUrl
+      }
+    ]
+  }
+
   // Structured data for Article schema
   const articleSchema: any = {
     '@context': 'https://schema.org',
@@ -48,12 +87,19 @@ export default function GuidePage({ guide, canonicalUrl, isFallbackLocale, relat
     publisher: {
       '@type': 'Organization',
       name: 'PropTrenz',
-      url: baseUrl
+      url: baseUrl,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${baseUrl}/logo-icon.svg`
+      }
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': canonicalUrl
-    }
+    },
+    articleSection: guide.tags?.[0] || 'Real Estate',
+    keywords: guide.tags.join(', '),
+    inLanguage: guide.locale
   }
 
   if (guide.mainImageUrl) {
@@ -88,6 +134,12 @@ export default function GuidePage({ guide, canonicalUrl, isFallbackLocale, relat
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta name="keywords" content={guide.tags.join(', ')} />
         
+        {/* Hreflang tags for multilingual SEO */}
+        <link rel="alternate" hrefLang="en" href={`${baseUrl}/en/guides/${guide.slug.replace(/-en$|-es$|-zh$/, '')}`} />
+        <link rel="alternate" hrefLang="es" href={`${baseUrl}/es/guides/${guide.slug.replace(/-en$|-es$|-zh$/, '')}`} />
+        <link rel="alternate" hrefLang="zh" href={`${baseUrl}/zh/guides/${guide.slug.replace(/-en$|-es$|-zh$/, '')}`} />
+        <link rel="alternate" hrefLang="x-default" href={`${baseUrl}/guides/${guide.slug.replace(/-en$|-es$|-zh$/, '')}`} />
+        
         {/* Open Graph */}
         <meta property="og:type" content="article" />
         <meta property="og:title" content={guide.metaTitle || guide.title} />
@@ -110,6 +162,14 @@ export default function GuidePage({ guide, canonicalUrl, isFallbackLocale, relat
         {/* Structured Data */}
         <script
           type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+        <script
+          type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
         />
         {faqSchema && (
@@ -121,6 +181,27 @@ export default function GuidePage({ guide, canonicalUrl, isFallbackLocale, relat
       </Head>
       <article itemScope itemType="https://schema.org/Article" className="space-y-8">
         <header>
+          {/* Breadcrumb Navigation */}
+          <nav aria-label="Breadcrumb" className="mb-4">
+            <ol className="flex items-center space-x-2 text-sm text-gray-500">
+              <li>
+                <Link href="/" className="hover:text-blue-600 transition-colors">
+                  {t('common.home', 'Home')}
+                </Link>
+              </li>
+              <li className="text-gray-400">/</li>
+              <li>
+                <Link href="/guides" className="hover:text-blue-600 transition-colors">
+                  {t('common.guides', 'Guides')}
+                </Link>
+              </li>
+              <li className="text-gray-400">/</li>
+              <li className="text-gray-900 font-medium truncate max-w-md" title={guide.title}>
+                {guide.title}
+              </li>
+            </ol>
+          </nav>
+
           {isFallbackLocale && (
             <div className="mb-4 rounded-lg border border-yellow-200 bg-yellow-50 p-4 text-sm text-yellow-800">
               {t('guides.fallback_message', `This guide is currently only available in ${guide.locale === 'en' ? 'English' : guide.locale === 'es' ? 'Spanish' : 'Chinese'}. We're working on translating it to your selected language.`)}

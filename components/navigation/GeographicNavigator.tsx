@@ -90,7 +90,7 @@ export function GeographicNavigator({
     filterLocations()
   }, [locations, allLocations, searchTerm, selectedType, currentLevel])
 
-  const loadInitialData = async () => {
+  const loadInitialData = async (retryCount = 0) => {
     // Don't proceed if component is unmounted
     if (!isMountedRef.current) return
     
@@ -98,32 +98,77 @@ export function GeographicNavigator({
     setError(null)
     
     let timeoutId: NodeJS.Timeout | null = null
+    let hasCompleted = false
     
     try {
-      // Add timeout to prevent hanging (increased to 15 seconds for slower connections)
+      // Start the query
+      const queryPromise = db.getLocations()
+      
+      // Set up timeout that will reject if query takes too long
+      let timeoutReject: ((error: Error) => void) | null = null
       const timeoutPromise = new Promise<never>((_, reject) => {
-        timeoutId = setTimeout(() => reject(new Error('Request timeout')), 15000)
+        timeoutReject = reject
+        timeoutId = setTimeout(() => {
+          if (!hasCompleted) {
+            hasCompleted = true
+            reject(new Error('Request timeout'))
+          }
+        }, 30000)
         timeoutRef.current = timeoutId
       })
       
-      const resultPromise = db.getLocations()
-      const result = await Promise.race([resultPromise, timeoutPromise]) as Awaited<ReturnType<typeof db.getLocations>>
+      // Wait for query, but also race against timeout
+      const result = await Promise.race([
+        queryPromise.then((res) => {
+          hasCompleted = true
+          // Clear timeout since query completed
+          if (timeoutId) {
+            clearTimeout(timeoutId)
+            timeoutRef.current = null
+            timeoutId = null
+          }
+          return res
+        }).catch((err) => {
+          hasCompleted = true
+          // Clear timeout on error
+          if (timeoutId) {
+            clearTimeout(timeoutId)
+            timeoutRef.current = null
+            timeoutId = null
+          }
+          throw err
+        }),
+        timeoutPromise
+      ]) as Awaited<ReturnType<typeof db.getLocations>>
       
-      // Clear timeout if request succeeded
+      // Clear timeout if we got here (query succeeded)
       if (timeoutId) {
         clearTimeout(timeoutId)
         timeoutRef.current = null
+        timeoutId = null
       }
       
       // Check if component is still mounted before updating state
       if (!isMountedRef.current) return
       
-      if (result.error) throw result.error
+      if (result.error) {
+        // If it's a network error and we haven't retried, try once more
+        if (retryCount < 1 && (result.error.message?.includes('network') || result.error.message?.includes('fetch'))) {
+          await new Promise(resolve => setTimeout(resolve, 1000)) // Wait 1 second before retry
+          return loadInitialData(retryCount + 1)
+        }
+        throw result.error
+      }
+      
       if (!result.data || result.data.length === 0) {
-        if (!isMountedRef.current) return
+        if (!isMountedRef.current) {
+          setLoading(false)
+          return
+        }
         setError(translate('no_locations_found') || 'No locations found')
         setAllLocations([])
         setLocations([])
+        setLoading(false)
         return
       }
       
@@ -137,13 +182,17 @@ export function GeographicNavigator({
       const allUniqueLocations = Array.from(unique.values())
       
       // Only update state if component is still mounted
-      if (!isMountedRef.current) return
+      if (!isMountedRef.current) {
+        setLoading(false)
+        return
+      }
       
       setAllLocations(allUniqueLocations) // Store all locations
       setLocations(allUniqueLocations) // Set current view
       setBreadcrumb([])
       setCurrentLevel('national')
       setError(null)
+      setLoading(false) // CRITICAL: Set loading to false on success
     } catch (error) {
       // Clear timeout on error
       if (timeoutId) {
@@ -155,7 +204,19 @@ export function GeographicNavigator({
       if (!isMountedRef.current) return
       
       console.error('Error loading locations:', error)
-      setError(error instanceof Error ? error.message : 'Failed to load locations')
+      const errorMessage = error instanceof Error ? error.message : 'Failed to load locations'
+      
+      // Provide more helpful error messages
+      let userFriendlyMessage = errorMessage
+      if (errorMessage.includes('timeout')) {
+        userFriendlyMessage = 'Connection timeout. Please check your internet connection and try again.'
+      } else if (errorMessage.includes('network') || errorMessage.includes('fetch')) {
+        userFriendlyMessage = 'Network error. Please check your connection and try again.'
+      } else if (errorMessage.includes('JWT') || errorMessage.includes('auth')) {
+        userFriendlyMessage = 'Authentication error. Please refresh the page.'
+      }
+      
+      setError(userFriendlyMessage)
       setAllLocations([])
       setLocations([])
     } finally {
@@ -207,7 +268,7 @@ export function GeographicNavigator({
         return false
       }
 
-      filtered = filtered.filter(location => {
+      filtered = filtered.filter((location: Location) => {
         const name = normalize(location.name)
         const state = location.state ? normalize(location.state) : ''
         return name.includes(q) || state.includes(q) || aliasMatches(location)
@@ -229,7 +290,7 @@ export function GeographicNavigator({
 
   const handleLocationClick = async (locationId: string) => {
     // Search in allLocations first, then fallback to locations (for backward compatibility)
-    const location = allLocations.find(loc => loc.id === locationId) || locations.find(loc => loc.id === locationId)
+    const location = allLocations.find((loc: Location) => loc.id === locationId) || locations.find((loc: Location) => loc.id === locationId)
     if (!location) return
 
     // Track location selection
@@ -253,7 +314,7 @@ export function GeographicNavigator({
       newBreadcrumb = [location]
     } else if (location.type === 'state') {
       // Ensure national exists as the first crumb
-      const national = allLocations.find(l => l.type === 'national')
+      const national = allLocations.find((l: Location) => l.type === 'national')
       if (national) newBreadcrumb.push(national)
       newBreadcrumb.push(location)
     } else {
@@ -275,7 +336,7 @@ export function GeographicNavigator({
       if (result.error) throw result.error
       if (!result.data) return
       
-      const childLocations = result.data.filter(loc => 
+      const childLocations = result.data.filter((loc: Location) => 
         loc.parent_id === locationId || 
         (location.type === 'state' && loc.state === location.name)
       )
@@ -307,8 +368,8 @@ export function GeographicNavigator({
         if (result.error) throw result.error
         if (!result.data) return
         
-        const childLocations = result.data.filter(loc => 
-          loc.parent_id === location.id || 
+        const childLocations = result.data.filter((loc: Location) =>
+          loc.parent_id === location.id ||
           (location.type === 'state' && loc.state === location.name)
         )
         
@@ -444,7 +505,7 @@ export function GeographicNavigator({
                 <AlertCircle className="h-12 w-12 text-red-500 mx-auto mb-4" />
                 <p className="text-gray-700 mb-4 font-medium">{error}</p>
                 <Button
-                  onClick={loadInitialData}
+                  onClick={() => loadInitialData(0)}
                   variant="secondary"
                   className="flex items-center gap-2"
                 >

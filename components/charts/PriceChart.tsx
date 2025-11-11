@@ -118,12 +118,31 @@ export function PriceChart({
   }, [locationId, selectedPropertyType, selectedTimePeriod])
 
   const loadPropertyTypes = async () => {
+    let timeoutId: NodeJS.Timeout | null = null
+    
     try {
-      const result = await db.getPropertyTypes()
-      if (result.error) throw result.error
-      setPropertyTypes(result.data)
+      const timeoutPromise = new Promise<never>((_, reject) => {
+        timeoutId = setTimeout(() => reject(new Error('Request timeout')), 5000)
+      })
+
+      const dataPromise = db.getPropertyTypes()
+      const result = await Promise.race([dataPromise, timeoutPromise])
+
+      if (timeoutId) {
+        clearTimeout(timeoutId)
+        timeoutId = null
+      }
+
+      if ((result as any).error) throw (result as any).error
+      setPropertyTypes((result as any).data || [])
     } catch (error) {
+      if (timeoutId) {
+        clearTimeout(timeoutId)
+        timeoutId = null
+      }
       console.error('Error loading property types:', error)
+      // Set empty array on error so UI doesn't break
+      setPropertyTypes([])
     }
   }
 
@@ -131,24 +150,44 @@ export function PriceChart({
     setLoading(true)
     setError(null)
 
+    let timeoutId: NodeJS.Timeout | null = null
+
     try {
       const timePeriodYears = getTimePeriodYears(selectedTimePeriod)
-      let result = await db.getPriceTrend(
-        locationId, 
-        selectedPropertyType === 'all' ? undefined : selectedPropertyType,
-        timePeriodYears
-      )
+      
+      // Add timeout to prevent hanging (10 seconds)
+      const timeoutPromise = new Promise<never>((_, reject) => {
+        timeoutId = setTimeout(() => reject(new Error('Request timeout: Data loading took too long')), 10000)
+      })
 
-      if (result.error) throw result.error
+      const dataPromise = (async () => {
+        let result = await db.getPriceTrend(
+          locationId, 
+          selectedPropertyType === 'all' ? undefined : selectedPropertyType,
+          timePeriodYears
+        )
 
-      // If no data for selected type, fall back to all types
-      if (!result.data || result.data.length === 0) {
-        if (selectedPropertyType !== 'all') {
-          result = await db.getPriceTrend(locationId, undefined, timePeriodYears)
+        if (result.error) throw result.error
+
+        // If no data for selected type, fall back to all types
+        if (!result.data || result.data.length === 0) {
+          if (selectedPropertyType !== 'all') {
+            result = await db.getPriceTrend(locationId, undefined, timePeriodYears)
+          }
         }
+
+        return result
+      })()
+
+      const result = await Promise.race([dataPromise, timeoutPromise])
+
+      // Clear timeout if request succeeded
+      if (timeoutId) {
+        clearTimeout(timeoutId)
+        timeoutId = null
       }
 
-      const formattedData = (result.data || []).map((point: any) => ({
+      const formattedData = ((result as any).data || []).map((point: any) => ({
         ...point,
         period: `${point.year} Q${point.quarter}`,
         growth_rate: point.growth_rate || 0
@@ -156,8 +195,20 @@ export function PriceChart({
 
       setData(formattedData)
     } catch (error) {
+      // Clear timeout on error
+      if (timeoutId) {
+        clearTimeout(timeoutId)
+        timeoutId = null
+      }
+      
       console.error('Error loading price data:', error)
-      setError(error instanceof Error ? error.message : 'Failed to load data')
+      const errorMessage = error instanceof Error ? error.message : 'Failed to load data'
+      setError(errorMessage)
+      
+      // If timeout, show user-friendly message
+      if (errorMessage.includes('timeout')) {
+        setError('Loading is taking longer than expected. Please try again or select a different location.')
+      }
     } finally {
       setLoading(false)
     }
@@ -168,20 +219,34 @@ export function PriceChart({
     try {
       if (!locationId || propertyTypes.length === 0) return
       const timePeriodYears = getTimePeriodYears(selectedTimePeriod)
-      const checks = await Promise.all(
+      
+      // Add timeout for each check (5 seconds per check, but run in parallel)
+      const timeoutPromise = new Promise<never>((_, reject) => {
+        setTimeout(() => reject(new Error('Timeout')), 8000)
+      })
+
+      const checksPromise = Promise.all(
         propertyTypes.map(async (pt) => {
-          const res = await db.getPriceTrend(locationId, pt.id, timePeriodYears)
-          return { id: pt.id, hasData: !!res.data && res.data.length > 0 }
+          try {
+            const res = await db.getPriceTrend(locationId, pt.id, timePeriodYears)
+            return { id: pt.id, hasData: !!res.data && res.data.length > 0 }
+          } catch (e) {
+            // If individual check fails, assume no data
+            return { id: pt.id, hasData: false }
+          }
         })
       )
-      const ids = checks.filter(c => c.hasData).map(c => c.id)
+
+      const checks = await Promise.race([checksPromise, timeoutPromise])
+      const ids = (checks as any[]).filter(c => c.hasData).map(c => c.id)
       setAvailablePropertyTypes(ids)
       // If the currently selected type has no data, fall back to 'all'
       if (selectedPropertyType !== 'all' && !ids.includes(selectedPropertyType)) {
         setSelectedPropertyType('all')
       }
     } catch (e) {
-      // On error, just hide the filter
+      // On error or timeout, just hide the filter and show all types
+      console.warn('Error loading available types:', e)
       setAvailablePropertyTypes([])
     }
   }

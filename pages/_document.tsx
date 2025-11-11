@@ -14,7 +14,6 @@ export default function Document() {
         <meta name="description" content="Explore 20+ years of Mexican real estate price trends with interactive charts and geographic navigation. Perfect for investors, agents, and market analysts." />
         <meta name="keywords" content="mexican real estate, property prices, real estate trends, mexico property data, real estate analytics, mexico city property, monterrey real estate" />
         <meta name="author" content="PropTrenz" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />

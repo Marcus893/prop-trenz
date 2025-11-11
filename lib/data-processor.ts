@@ -293,7 +293,7 @@ export class SHFDataProcessor {
           if (response.error) throw response.error
           
           // Check if location already exists
-          const existing = response.data?.find(loc => 
+          const existing = response.data?.find((loc: Location) => 
             loc.name === location.name && 
             loc.type === location.type &&
             loc.state === location.state
@@ -370,7 +370,7 @@ export class SHFDataProcessor {
           const propertyTypeName = this.propertyTypeMap.get(row.global)!
           const propertyTypes = await db.getPropertyTypes()
           if (!propertyTypes.error) {
-            const propertyType = propertyTypes.data.find(pt => pt.name === propertyTypeName)
+            const propertyType = propertyTypes.data.find((pt: ResidentialPropertyType) => pt.name === propertyTypeName)
             propertyTypeId = propertyType?.id
           }
         }
