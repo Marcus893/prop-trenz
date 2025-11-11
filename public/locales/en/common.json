@@ -37,7 +37,7 @@
     "no_location_help": "Choose a location from the navigation panel to view price trends and analysis",
     "time_periods": {
       "1y": "1Y",
-      "2y": "2Y", 
+      "2y": "2Y",
       "5y": "5Y",
       "10y": "10Y",
       "max": "Max"
@@ -71,6 +71,7 @@
     "home": "Home",
     "charts": "Charts",
     "map": "Map",
+    "guides": "Guides",
     "calculators": "Calculators",
     "closing_cost_calculator": "Closing Cost",
     "ownership_cost_calculator": "Ownership Cost",
@@ -402,5 +403,26 @@
     "collapse": "Collapse",
     "close": "Close",
     "avg": "Avg"
+  },
+  "guides_page": {
+    "title": "Mexican Real Estate Guides",
+    "subtitle": "Data-backed articles that explain taxes, regulations, and market dynamics for every stage of the property lifecycle.",
+    "intro_banner": "PropTrenz curates data-backed playbooks for buying, owning, and selling property in Mexico. These living documents include tax rates, regulator references, and actionable checklists sourced from SAT circulars, SHF data, and local notaries.",
+    "cta_label": "Read the guide",
+    "filter_by_tags": "Filter by category",
+    "clear_filters": "Clear filters",
+    "no_guides": "No guides available in this language yet. Check back soon!"
+  },
+  "guides": {
+    "login_required_title": "Sign in to keep reading",
+    "login_required_description": "Log in to access premium market research, detailed tax breakdowns, and downloadable checklists tailored for serious investors.",
+    "signup_required_title": "Create a free account to unlock this guide",
+    "signup_required_description": "Create a complimentary PropTrenz account to unlock premium due diligence guides, stay on top of regulatory changes, and track your saved calculators.",
+    "signup_required_badge": "Create a free account",
+    "login_required_badge": "Members only",
+    "fallback_message": "This guide is currently only available in English. We're working on translating it to your selected language.",
+    "related_articles": "Related Articles",
+    "related_articles_description": "Continue reading with these related guides",
+    "read_more": "Read more"
   }
 }

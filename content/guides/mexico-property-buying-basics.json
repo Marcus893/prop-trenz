@@ -1,0 +1,80 @@
+{
+  "slug": "mexico-property-buying-basics",
+  "locale": "en",
+  "title": "Property Acquisition Basics in Mexico",
+  "metaTitle": "How Property Acquisitions Work in Mexico: Taxes, Permits, and Notaries",
+  "metaDescription": "An overview of the notary-driven closing process in Mexico, including ISAI transfer taxes, escrow considerations, and foreign ownership rules.",
+  "excerpt": "A high-level briefing on how residential purchases move from offer to escritura in Mexico, with key taxes and documents investors must understand before wiring funds.",
+  "heroKicker": "Buyer Playbook",
+  "status": "published",
+  "accessLevel": "public",
+  "tags": ["mexico-real-estate", "buying", "notary"],
+  "updatedAt": "2025-11-10T12:00:00.000Z",
+  "sections": [
+    {
+      "heading": "Why Notaries Control Closings",
+      "paragraphs": [
+        "Every conveyance of a fee-simple property interest in Mexico is formalised before a Notario Público. The notary is a federally licensed attorney who represents the Mexican state—not either party—and certifies that the deed complies with civil law.",
+        "Because the notary is responsible for tax collection and lien verification, investors should involve one early. A notary will typically review the draft purchase agreement, confirm seller title with the Public Registry, and prepare the escritura for signing."
+      ],
+      "dataPoints": [
+        { "label": "Notary fee reference", "value": "MXN 15,000 – 30,000 for MXN 3M transactions" }
+      ]
+    },
+    {
+      "heading": "Understanding ISAI and Municipal Taxes",
+      "paragraphs": [
+        "Most municipalities impose an Impuesto Sobre Adquisición de Inmuebles (ISAI) on the property value recorded in the deed. Rates vary from 2% to 4.5%, and the notary collects the tax on behalf of the municipality."
+      ],
+      "bullets": [
+        "Benchmark the ISAI brackets with the municipal treasury (tesorería).",
+        "Confirm whether the municipality offers early-payment discounts or reduced rates for first-time buyers.",
+        "Ensure the notary receipt (acuse) shows the amount remitted to the treasury."
+      ]
+    },
+    {
+      "heading": "Foreign Buyer Requirements",
+      "paragraphs": [
+        "Properties within 50 kilometres of the coast or 100 kilometres of the border fall inside the restricted zone. Foreign buyers need either a fideicomiso (bank trust) or a Mexican entity to hold title.",
+        "The Ministry of Foreign Affairs (SRE) issues a permit for each fideicomiso. Banks charge an initial setup fee (MXN 15,000 – 25,000) and annual administration averages MXN 10,000 – 20,000."
+      ],
+      "dataPoints": [
+        { "label": "Restricted zone distance", "value": "50 km coastline / 100 km international border" }
+      ]
+    },
+    {
+      "heading": "Due Diligence Checklist",
+      "paragraphs": [
+        "Serious investors organise a due diligence file that contains the cadastral certificate, no-lien certificate, HOA compliance letter, and proof of property tax payments (predial).",
+        "Because many sellers rely on paper archives, the notary’s office may take 1–2 weeks to retrieve certified copies from the Public Registry. Build this timeline into your closing expectations."
+      ],
+      "bullets": [
+        "Cadastral certificate (certificado catastral) dated within 90 days.",
+        "Non-lien certificate (certificado de libertad de gravamen).",
+        "Property tax receipts covering the current year.",
+        "HOA constancia showing no outstanding fees." 
+      ]
+    },
+    {
+      "heading": "Funds Flow and Escrow Options",
+      "paragraphs": [
+        "Mexico does not require escrow, and many closings rely on direct transfers to the seller or notary trust account on signature day. Cross-border investors often work with escrow providers in the United States to comply with AML requirements.",
+        "When using escrow, the notary must receive the funds release letter before recording the deed. Exchange-rate volatility means most buyers deliver pesos a few days in advance to avoid last-minute complications."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "How long does a residential closing take in Mexico?",
+      "answer": "An arms-length residential transaction typically closes 30–45 days after offer acceptance. The schedule depends on how quickly the notary receives tax certificates, HOA clearances, and—for foreign buyers—the SRE permit." 
+    },
+    {
+      "question": "Are notary fees negotiable?",
+      "answer": "Notaries set their own tariff, but competition keeps fees within a 0.5% to 1% band of the declared property value. Investors often secure slightly lower rates by offering repeat business or bundling multiple transactions."
+    },
+    {
+      "question": "Can a foreign buyer hold title without a fideicomiso?",
+      "answer": "Foreign nationals may form a Mexican corporation or obtain temporary/permanent residency. However, if the asset is inside the restricted zone, SAT still requires the fideicomiso structure for direct ownership."
+    }
+  ]
+}

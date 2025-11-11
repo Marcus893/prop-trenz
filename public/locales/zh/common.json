@@ -71,6 +71,7 @@
     "home": "首页",
     "charts": "图表",
     "map": "地图",
+    "guides": "指南",
     "calculators": "计算工具",
     "closing_cost_calculator": "过户成本",
     "ownership_cost_calculator": "持有成本",
@@ -400,5 +401,25 @@
     "collapse": "折叠",
     "close": "关闭",
     "avg": "平均"
+  },
+  "guides_page": {
+    "title": "墨西哥房地产指南",
+    "subtitle": "以数据为依据的文章，解释购房全周期涉及的税费、法规与市场动态。",
+    "intro_banner": "PropTrenz 汇整面向墨西哥买房、持有与出售阶段的实务手册。这些常更新的内容引用 SAT 公文、SHF 数据与当地公证人信息，提供可执行的检查清单。",
+    "cta_label": "阅读指南",
+    "filter_by_tags": "按类别筛选",
+    "clear_filters": "清除筛选"
+  },
+  "guides": {
+    "login_required_title": "登录后继续阅读",
+    "login_required_description": "登录即可访问高级市场研究、详细税务解析以及为专业投资者准备的可下载清单。",
+    "signup_required_title": "注册免费账户以解锁本指南",
+    "signup_required_description": "注册 PropTrenz 免费账户，解锁高级尽调指南，及时掌握监管变化，并保存你的计算工具。",
+    "signup_required_badge": "注册免费账户",
+    "login_required_badge": "仅限会员",
+    "fallback_message": "本指南目前仅提供英文版本。我们正在努力将其翻译为您选择的语言。",
+    "related_articles": "相关文章",
+    "related_articles_description": "继续阅读这些相关指南",
+    "read_more": "阅读更多"
   }
 }

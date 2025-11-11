@@ -18,7 +18,8 @@ import {
   User,
   Menu,
   X,
-  Calculator
+  Calculator,
+  BookOpen
 } from 'lucide-react'
 
 interface LayoutProps {
@@ -88,6 +89,7 @@ export function Layout({ children, title, subtitle }: LayoutProps) {
     { name: t('common.charts', 'Charts'), href: '/charts', icon: BarChart3 },
     { name: t('common.map', 'Map'), href: '/map', icon: Map },
     { name: t('common.calculators', 'Calculators'), href: '/calculators', icon: Calculator },
+    { name: t('common.guides', 'Guides'), href: '/guides', icon: BookOpen },
   ]
 
   // Add profile link for signed-in users

@@ -9,7 +9,12 @@
     "postinstall": "next telemetry disable || true",
     "scrape:banorte": "node scripts/scrape-banorte-tableau.js",
     "scrape:banorte:cdmx": "node scripts/scrape-banorte-tableau.js cdmx",
-    "scrape:banorte:monterrey": "node scripts/scrape-banorte-tableau.js monterrey"
+    "scrape:banorte:monterrey": "node scripts/scrape-banorte-tableau.js monterrey",
+    "generate-guide": "ts-node --project tsconfig.scripts.json scripts/generate-guides.ts",
+    "generate-images": "ts-node --project tsconfig.scripts.json scripts/generate-images.ts",
+    "publish-guide": "ts-node --project tsconfig.scripts.json scripts/publish-guide.ts",
+    "translate-guides": "ts-node --project tsconfig.scripts.json scripts/translate-guides.ts",
+    "publish-translations": "ts-node --project tsconfig.scripts.json scripts/publish-translations.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.45.4",
@@ -35,9 +40,11 @@
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",
     "autoprefixer": "^10.4.19",
+    "dotenv": "^17.2.3",
     "playwright": "^1.41.0",
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.4",
+    "ts-node": "^10.9.2",
     "typescript": "^5.4.5"
   }
 }

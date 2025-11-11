@@ -37,6 +37,11 @@ CONTACT_FORM_FROM_EMAIL="PropTrenz <support@send.proptrenz.com>"
 # Next.js Configuration
 NEXTAUTH_URL=http://localhost:3000
 NEXTAUTH_SECRET=your_random_secret_string
+
+# Programmatic SEO (Optional)
+OPENAI_API_KEY=your_openai_key # For text generation
+OPENAI_PSEO_MODEL=gpt-4o-mini # optional override
+GEMINI_API_KEY=your_gemini_api_key # For image generation (or use GOOGLE_AI_API_KEY)
 ```
 
 ### 3. Database Setup
@@ -119,6 +124,83 @@ The application will be available at `http://localhost:3000`
 ### Support
 
 For issues or questions, check the console logs and ensure all environment variables are properly set.
+
+## Programmatic SEO Workflow
+
+The app ships with a lightweight pSEO pipeline that stores generated guides in `content/guides`. Each guide is rendered at `/guides/[slug]` and can be gated behind sign-in or email capture.
+
+### SEO Optimizations
+
+All generated guides include comprehensive SEO features:
+
+- **Structured Data**: JSON-LD schemas for Article and FAQPage (enables rich snippets)
+- **Meta Tags**: Optimized title (50-60 chars), description (150-160 chars), Open Graph, Twitter Cards
+- **Canonical URLs**: Prevents duplicate content issues
+- **Semantic HTML**: Proper article structure with microdata attributes
+- **Sitemap Integration**: Guides automatically included in `/sitemap.xml`
+- **Keyword Optimization**: Natural keyword density (2-3 mentions per section) without stuffing
+- **Content Length**: 1500-2500 words for topical authority
+
+### Generation Process
+
+1. **Configure OpenAI**: set `OPENAI_API_KEY` (and optionally override the model with `OPENAI_PSEO_MODEL`).
+2. **Set site URL** (optional): `NEXT_PUBLIC_SITE_URL=https://proptrenz.com` for canonical URLs and OG images.
+3. **Install dependencies** (if not already installed):
+   ```bash
+   npm install
+   ```
+
+4. **Generate a draft**:
+   ```bash
+   npm run generate-guide -- --slug=playa-del-carmen-buying-guide --topic="Buying property in Playa del Carmen" --keywords="Playa del Carmen real estate, Quintana Roo ISAI" --locale=en --access=public
+   ```
+   
+   To skip image generation (useful if you hit billing limits):
+   ```bash
+   npm run generate-guide -- --slug=playa-del-carmen-buying-guide --topic="Buying property in Playa del Carmen" --keywords="Playa del Carmen real estate, Quintana Roo ISAI" --locale=en --access=public --skip-images=true
+   ```
+   
+   To generate images for an existing guide later:
+   ```bash
+   npm run generate-images -- --slug=playa-del-carmen-buying-guide
+   ```
+
+5. **Review & publish**: 
+   - Option A: Manually edit the JSON file and set `"status": "published"`, then run:
+     ```bash
+     npm run translate-guides -- --slug=playa-del-carmen-buying-guide
+     ```
+     Or to translate all published guides with missing translations:
+     ```bash
+     npm run translate-guides
+     ```
+   - Option B: Use the publish script (automatically generates translations):
+     ```bash
+     npm run publish-guide -- --slug=playa-del-carmen-buying-guide
+     ```
+   
+   **Note**: If you manually change the status to "published" in the JSON file, you need to run `npm run translate-guides` separately to generate translations. The `publish-guide` script automatically triggers translations.
+
+6. **Automatic translations**: When a guide is published using the `publish-guide` script, translations to Spanish and Chinese are automatically generated using OpenAI. Translations are saved as `{slug}-{locale}.json` and start as drafts for review.
+
+Guides respect `accessLevel` (`public`, `login_required`, `email_capture`). Auth-protected content displays an inline sign-in/sign-up form that plugs into Supabase Auth.
+
+### Translation System
+
+- **Auto-translation**: When you publish a guide, translations to all supported locales (es, zh) are automatically generated
+- **Locale-specific files**: Translations are stored as `{slug}-{locale}.json` (e.g., `mexico-property-buying-basics-es.json`)
+- **Routing**: Guides are automatically served in the correct locale based on the user's language preference
+- **Manual translation**: To generate translations for a specific guide or all published guides:
+  ```bash
+  # Translate a specific guide
+  npm run translate-guides -- --slug=your-slug
+  
+  # Regenerate translations (useful when translation logic is updated, e.g., to update tags)
+  npm run translate-guides -- --slug=your-slug --force
+  
+  # Translate all published guides with missing translations
+  npm run translate-guides
+  ```
 
 
 

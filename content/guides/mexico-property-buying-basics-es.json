@@ -1,0 +1,96 @@
+{
+  "slug": "mexico-property-buying-basics-es",
+  "locale": "es",
+  "status": "published",
+  "accessLevel": "public",
+  "tags": [
+    "inmuebles-mexico",
+    "compra",
+    "notario"
+  ],
+  "updatedAt": "2025-11-10T23:25:47.990Z",
+  "title": "Fundamentos de la Adquisición de Propiedades en México",
+  "metaTitle": "Cómo Funcionan las Adquisiciones de Propiedades en México: Impuestos, Permisos y Notarios",
+  "metaDescription": "Una visión general del proceso de cierre dirigido por notarios en México, incluidos los impuestos de transferencia ISAI, consideraciones de fideicomiso y reglas de propiedad extranjera.",
+  "excerpt": "Un resumen de alto nivel sobre cómo las compras residenciales pasan de la oferta a la escritura en México, con impuestos clave y documentos que los inversores deben entender antes de transferir fondos.",
+  "heroKicker": "Guía del Comprador",
+  "mainImageAlt": "Fundamentos de la Adquisición de Propiedades en México",
+  "sections": [
+    {
+      "heading": "Por qué los Notarios Controlan los Cierres",
+      "paragraphs": [
+        "Cada transferencia de un interés de propiedad en pleno dominio en México se formaliza ante un Notario Público. El notario es un abogado con licencia federal que representa al estado mexicano—no a ninguna de las partes—y certifica que la escritura cumple con la ley civil.",
+        "Debido a que el notario es responsable de la recaudación de impuestos y la verificación de gravámenes, los inversores deben involucrar a uno desde el principio. Un notario típicamente revisará el borrador del contrato de compra, confirmará el título del vendedor con el Registro Público y preparará la escritura para su firma."
+      ],
+      "dataPoints": [
+        {
+          "label": "Referencia de honorarios del notario",
+          "value": "MXN 15,000 – 30,000 para transacciones de MXN 3M"
+        }
+      ],
+      "imageAlt": "Por qué los Notarios Controlan los Cierres"
+    },
+    {
+      "heading": "Comprendiendo el ISAI y los Impuestos Municipales",
+      "paragraphs": [
+        "La mayoría de los municipios imponen un Impuesto Sobre Adquisición de Inmuebles (ISAI) sobre el valor de la propiedad registrado en la escritura. Las tasas varían del 2% al 4.5%, y el notario recauda el impuesto en nombre del municipio."
+      ],
+      "bullets": [
+        "Comparar los tramos del ISAI con la tesorería municipal.",
+        "Confirmar si el municipio ofrece descuentos por pago anticipado o tarifas reducidas para compradores primerizos.",
+        "Asegurarse de que el recibo del notario (acuse) muestre el monto remitido a la tesorería."
+      ],
+      "imageAlt": "Comprendiendo el ISAI y los Impuestos Municipales"
+    },
+    {
+      "heading": "Requisitos para Compradores Extranjeros",
+      "paragraphs": [
+        "Las propiedades dentro de 50 kilómetros de la costa o 100 kilómetros de la frontera caen dentro de la zona restringida. Los compradores extranjeros necesitan un fideicomiso (fideicomiso bancario) o una entidad mexicana para mantener el título.",
+        "La Secretaría de Relaciones Exteriores (SRE) emite un permiso para cada fideicomiso. Los bancos cobran una tarifa de configuración inicial (MXN 15,000 – 25,000) y la administración anual promedia MXN 10,000 – 20,000."
+      ],
+      "dataPoints": [
+        {
+          "label": "Distancia de la zona restringida",
+          "value": "50 km costa / 100 km frontera internacional"
+        }
+      ],
+      "imageAlt": "Requisitos para Compradores Extranjeros"
+    },
+    {
+      "heading": "Lista de Verificación de Diligencia Debida",
+      "paragraphs": [
+        "Los inversores serios organizan un archivo de diligencia debida que contiene el certificado catastral, el certificado de no gravamen, la carta de cumplimiento de la HOA y el comprobante de pagos de impuestos sobre la propiedad (predial).",
+        "Debido a que muchos vendedores dependen de archivos en papel, la oficina del notario puede tardar de 1 a 2 semanas en recuperar copias certificadas del Registro Público. Incorporar este cronograma en sus expectativas de cierre."
+      ],
+      "bullets": [
+        "Certificado catastral (certificado catastral) con fecha dentro de los 90 días.",
+        "Certificado de no gravamen (certificado de libertad de gravamen).",
+        "Recibos de impuestos sobre la propiedad que cubren el año en curso.",
+        "Constancia de la HOA que muestra que no hay cuotas pendientes."
+      ],
+      "imageAlt": "Lista de Verificación de Diligencia Debida"
+    },
+    {
+      "heading": "Flujo de Fondos y Opciones de Fideicomiso",
+      "paragraphs": [
+        "México no requiere fideicomiso, y muchos cierres dependen de transferencias directas al vendedor o a la cuenta de fideicomiso del notario el día de la firma. Los inversores transfronterizos a menudo trabajan con proveedores de fideicomiso en los Estados Unidos para cumplir con los requisitos de AML.",
+        "Al utilizar un fideicomiso, el notario debe recibir la carta de liberación de fondos antes de registrar la escritura. La volatilidad del tipo de cambio significa que la mayoría de los compradores entregan pesos unos días antes para evitar complicaciones de último minuto."
+      ],
+      "imageAlt": "Flujo de Fondos y Opciones de Fideicomiso"
+    }
+  ],
+  "faq": [
+    {
+      "question": "¿Cuánto tiempo tarda un cierre residencial en México?",
+      "answer": "Una transacción residencial a precio de mercado típicamente cierra de 30 a 45 días después de la aceptación de la oferta. El cronograma depende de qué tan rápido el notario reciba los certificados de impuestos, las autorizaciones de la HOA y—para compradores extranjeros—el permiso de la SRE."
+    },
+    {
+      "question": "¿Son negociables los honorarios del notario?",
+      "answer": "Los notarios establecen su propia tarifa, pero la competencia mantiene los honorarios dentro de un rango del 0.5% al 1% del valor declarado de la propiedad. Los inversores a menudo aseguran tarifas ligeramente más bajas al ofrecer negocios repetidos o agrupar múltiples transacciones."
+    },
+    {
+      "question": "¿Puede un comprador extranjero tener el título sin un fideicomiso?",
+      "answer": "Los ciudadanos extranjeros pueden formar una corporación mexicana u obtener residencia temporal/permanente. Sin embargo, si el activo está dentro de la zona restringida, el SAT aún requiere la estructura de fideicomiso para la propiedad directa."
+    }
+  ]
+}
