@@ -753,12 +753,22 @@ async function scrapeTableauDashboard() {
           }
 
           // Merge new neighborhoods with existing ones (only add neighborhoods that don't exist)
+          // Use both colonia name AND month as unique identifier to allow same colonia with different months
           const existingNeighborhoods = allData[worksheetName][countyName] || [];
-          const existingColonias = new Set(existingNeighborhoods.map(n => n.colonia.toLowerCase()));
-          
-          const newNeighborhoods = neighborhoods.filter(n => 
-            !existingColonias.has(n.colonia.toLowerCase())
+          const existingKeys = new Set(
+            existingNeighborhoods.map(n => {
+              const colonia = (n.colonia || '').toLowerCase().trim();
+              const mes = (n.mes || '').toLowerCase().trim();
+              return `${colonia}::${mes}`;
+            })
           );
+          
+          const newNeighborhoods = neighborhoods.filter(n => {
+            const colonia = (n.colonia || '').toLowerCase().trim();
+            const mes = (n.mes || '').toLowerCase().trim();
+            const key = `${colonia}::${mes}`;
+            return !existingKeys.has(key);
+          });
           
           if (newNeighborhoods.length > 0) {
             console.log(`    Adding ${newNeighborhoods.length} new neighborhoods (${existingNeighborhoods.length} already existed)`);

@@ -285,13 +285,35 @@ function MapController({ onMapReady }: { onMapReady: (map: L.Map) => void }) {
   return null
 }
 
+// Helper function to translate month names in date strings
+function translateDate(dateString: string, t: (key: string, options?: any) => string): string {
+  if (!dateString) return dateString
+  
+  // Parse format like "October 2025"
+  const parts = dateString.trim().split(' ')
+  if (parts.length === 2) {
+    const monthName = parts[0]
+    const year = parts[1]
+    
+    // Try to translate the month name
+    const translatedMonth = t(`map.months.${monthName}`, { defaultValue: monthName })
+    
+    return `${translatedMonth} ${year}`
+  }
+  
+  // If format doesn't match, return as-is
+  return dateString
+}
+
 // Component to wrap Marker and store ref
 function NeighborhoodMarker({ 
   marker, 
-  onMarkerReady 
+  onMarkerReady,
+  translateDateFn
 }: { 
   marker: { key: string; coords: [number, number]; color: string; price: number; neighborhood: Neighborhood }
   onMarkerReady: (key: string, markerInstance: L.Marker) => void
+  translateDateFn: (dateString: string) => string
 }) {
   const markerRef = useRef<L.Marker | null>(null)
   
@@ -318,7 +340,7 @@ function NeighborhoodMarker({
             ${Math.round(marker.price).toLocaleString('es-MX')}/m²
           </p>
           <p className="text-xs text-gray-500">
-            {marker.neighborhood.mes}
+            {translateDateFn(marker.neighborhood.mes)}
           </p>
         </div>
       </Popup>
@@ -329,6 +351,12 @@ function NeighborhoodMarker({
 export function NeighborhoodMap({ data }: NeighborhoodMapProps) {
   const { t } = useTranslation('common')
   const [selectedMunicipality, setSelectedMunicipality] = useState<string | null>(null)
+  
+  // Create translateDate function bound to current translation function
+  const translateDateFn = useMemo(() => {
+    return (dateString: string) => translateDate(dateString, t)
+  }, [t])
+  
   const [neighborhoodCoords, setNeighborhoodCoords] = useState<Map<string, [number, number]>>(new Map())
   const [geocodingProgress, setGeocodingProgress] = useState<{ current: number; total: number } | null>(null)
   const [savedCoordsLoaded, setSavedCoordsLoaded] = useState(false)
@@ -388,13 +416,68 @@ export function NeighborhoodMap({ data }: NeighborhoodMapProps) {
     loadCoords()
   }, [])
 
+  // Helper function to parse month string and get comparable date
+  const parseMonthDate = (mes: string): Date | null => {
+    if (!mes) return null
+    try {
+      // Handle formats like "September 2025", "October 2025"
+      const parts = mes.trim().split(' ')
+      if (parts.length === 2) {
+        const monthNames = ['january', 'february', 'march', 'april', 'may', 'june', 
+                           'july', 'august', 'september', 'october', 'november', 'december']
+        const monthIndex = monthNames.findIndex(m => m.startsWith(parts[0].toLowerCase()))
+        const year = parseInt(parts[1])
+        if (monthIndex >= 0 && !isNaN(year)) {
+          return new Date(year, monthIndex, 1)
+        }
+      }
+    } catch (e) {
+      // Invalid format
+    }
+    return null
+  }
+
+  // Helper function to get the most recent month from a list of neighborhoods
+  const getMostRecentMonth = (neighborhoods: Neighborhood[]): string | null => {
+    if (neighborhoods.length === 0) return null
+    
+    const monthDates = neighborhoods
+      .map(n => ({ mes: n.mes, date: parseMonthDate(n.mes) }))
+      .filter(item => item.date !== null)
+      .sort((a, b) => {
+        if (!a.date || !b.date) return 0
+        return b.date.getTime() - a.date.getTime() // Most recent first
+      })
+    
+    return monthDates.length > 0 ? monthDates[0].mes : null
+  }
+
+  // Helper function to filter neighborhoods to only the most recent month
+  const filterToMostRecentMonth = (neighborhoods: Neighborhood[]): Neighborhood[] => {
+    const mostRecentMonth = getMostRecentMonth(neighborhoods)
+    if (!mostRecentMonth) return neighborhoods
+    
+    return neighborhoods.filter(n => n.mes === mostRecentMonth)
+  }
+
+  // Helper function to get the most recent neighborhood entry for a given colonia name
+  const getMostRecentNeighborhood = (neighborhoods: Neighborhood[], colonia: string): Neighborhood | null => {
+    const sameColonia = neighborhoods.filter(n => n.colonia === colonia)
+    if (sameColonia.length === 0) return null
+    
+    const mostRecentMonth = getMostRecentMonth(sameColonia)
+    if (!mostRecentMonth) return sameColonia[0]
+    
+    return sameColonia.find(n => n.mes === mostRecentMonth) || sameColonia[0]
+  }
+
   // Get current city name from data
   const currentCity = useMemo(() => {
     const cities = Object.keys(data)
     return cities.length > 0 ? cities[0] : 'Monterrey'
   }, [data])
 
-  // Calculate average prices and prepare marker data
+  // Calculate average prices and prepare marker data (using only most recent month)
   const markers = useMemo(() => {
     const result: Array<{
       municipality: string
@@ -410,7 +493,27 @@ export function NeighborhoodMap({ data }: NeighborhoodMapProps) {
       Object.entries(cityData).forEach(([municipality, neighborhoods]) => {
         const coords = MUNICIPALITY_COORDS[municipality]
         if (coords && neighborhoods.length > 0) {
-          const prices = neighborhoods
+          // Filter to only most recent month
+          const recentNeighborhoods = filterToMostRecentMonth(neighborhoods)
+          
+          // Get unique colonias (in case there are duplicates from different months)
+          const uniqueColonias = new Map<string, Neighborhood>()
+          recentNeighborhoods.forEach(n => {
+            const existing = uniqueColonias.get(n.colonia)
+            if (!existing) {
+              uniqueColonias.set(n.colonia, n)
+            } else {
+              // Keep the one with the most recent month
+              const existingDate = parseMonthDate(existing.mes)
+              const newDate = parseMonthDate(n.mes)
+              if (newDate && existingDate && newDate > existingDate) {
+                uniqueColonias.set(n.colonia, n)
+              }
+            }
+          })
+          
+          const uniqueNeighborhoods = Array.from(uniqueColonias.values())
+          const prices = uniqueNeighborhoods
             .map(n => parseFloat(n.precio))
             .filter(p => !isNaN(p) && p > 0)
           
@@ -420,8 +523,8 @@ export function NeighborhoodMap({ data }: NeighborhoodMapProps) {
               municipality,
               position: coords,
               avgPrice,
-              neighborhoodCount: neighborhoods.length,
-              neighborhoods,
+              neighborhoodCount: uniqueNeighborhoods.length,
+              neighborhoods: uniqueNeighborhoods,
             })
           }
         }
@@ -525,11 +628,28 @@ export function NeighborhoodMap({ data }: NeighborhoodMapProps) {
     geocodeNeighborhoods()
   }, [selectedData, savedCoordsLoaded, currentCity])
 
-  // Get neighborhood markers for selected municipality
+  // Get neighborhood markers for selected municipality (using only most recent month)
   const neighborhoodMarkers = useMemo(() => {
     if (!selectedData) return []
     
-    const markers = selectedData.neighborhoods
+    // Filter to most recent month and get unique colonias
+    const recentNeighborhoods = filterToMostRecentMonth(selectedData.neighborhoods)
+    const uniqueColonias = new Map<string, Neighborhood>()
+    recentNeighborhoods.forEach(n => {
+      const existing = uniqueColonias.get(n.colonia)
+      if (!existing) {
+        uniqueColonias.set(n.colonia, n)
+      } else {
+        // Keep the one with the most recent month
+        const existingDate = parseMonthDate(existing.mes)
+        const newDate = parseMonthDate(n.mes)
+        if (newDate && existingDate && newDate > existingDate) {
+          uniqueColonias.set(n.colonia, n)
+        }
+      }
+    })
+    
+    const markers = Array.from(uniqueColonias.values())
       .map(neighborhood => {
         const key = `${selectedData.municipality}-${neighborhood.colonia}`
         const coords = neighborhoodCoords.get(key)
@@ -548,7 +668,7 @@ export function NeighborhoodMap({ data }: NeighborhoodMapProps) {
       })
       .filter((m): m is NonNullable<typeof m> => m !== null)
     
-    console.log(`[Markers] Created ${markers.length} markers for ${selectedData.municipality} (${selectedData.neighborhoods.length} total neighborhoods, ${neighborhoodCoords.size} coordinates available)`)
+    console.log(`[Markers] Created ${markers.length} markers for ${selectedData.municipality} (${selectedData.neighborhoods.length} total neighborhoods, ${recentNeighborhoods.length} from most recent month, ${neighborhoodCoords.size} coordinates available)`)
     return markers
   }, [selectedData, neighborhoodCoords])
 
@@ -643,6 +763,7 @@ export function NeighborhoodMap({ data }: NeighborhoodMapProps) {
             key={marker.key}
             marker={marker}
             onMarkerReady={handleMarkerReady}
+            translateDateFn={translateDateFn}
           />
         ))}
       </MapContainer>
@@ -758,49 +879,71 @@ export function NeighborhoodMap({ data }: NeighborhoodMapProps) {
             </div>
           </div>
           
-          {/* Scrollable Neighborhood List */}
+          {/* Scrollable Neighborhood List - Only show most recent month */}
           <div className="flex-1 overflow-y-auto px-3 md:px-4 py-2 space-y-2 min-h-0">
-            {selectedData.neighborhoods
-              .filter(neighborhood => 
-                searchQuery === '' || 
-                neighborhood.colonia.toLowerCase().includes(searchQuery.toLowerCase())
-              )
-              .sort((a, b) => parseFloat(b.precio) - parseFloat(a.precio))
-              .map((neighborhood, idx) => {
-                const key = `${selectedData.municipality}-${neighborhood.colonia}`
-                const hasCoords = neighborhoodCoords.has(key)
-                
-                return (
-                  <div 
-                    key={idx} 
-                    onClick={() => hasCoords && handleNeighborhoodClick(selectedData.municipality, neighborhood)}
-                    className={`p-2 rounded text-xs border-l-2 cursor-pointer transition-colors ${
-                      hasCoords 
-                        ? 'bg-gray-50 border-green-500 hover:bg-gray-100 hover:border-green-600' 
-                        : 'bg-gray-50 border-gray-300 cursor-not-allowed opacity-60'
-                    }`}
-                  >
-                    <div className="font-medium flex items-center gap-2">
-                      {neighborhood.colonia}
-                      {hasCoords && (
-                        <span className="text-xs text-green-600">●</span>
-                      )}
-                    </div>
-                    <div className="text-gray-600">
-                      ${Math.round(parseFloat(neighborhood.precio)).toLocaleString('es-MX')}/m²
-                    </div>
-                    <div className="text-gray-500 text-xs">{neighborhood.mes}</div>
-                  </div>
-                )
-              })}
+            {(() => {
+              // Filter to most recent month and get unique colonias
+              const recentNeighborhoods = filterToMostRecentMonth(selectedData.neighborhoods)
+              const uniqueColonias = new Map<string, Neighborhood>()
+              recentNeighborhoods.forEach(n => {
+                const existing = uniqueColonias.get(n.colonia)
+                if (!existing) {
+                  uniqueColonias.set(n.colonia, n)
+                } else {
+                  // Keep the one with the most recent month
+                  const existingDate = parseMonthDate(existing.mes)
+                  const newDate = parseMonthDate(n.mes)
+                  if (newDate && existingDate && newDate > existingDate) {
+                    uniqueColonias.set(n.colonia, n)
+                  }
+                }
+              })
               
-            {searchQuery && selectedData.neighborhoods.filter(n => 
-              n.colonia.toLowerCase().includes(searchQuery.toLowerCase())
-            ).length === 0 && (
-              <div className="text-sm text-gray-500 text-center py-4">
-                {t('map.no_neighborhoods_found')} "{searchQuery}"
-              </div>
-            )}
+              const displayNeighborhoods = Array.from(uniqueColonias.values())
+                .filter(neighborhood => 
+                  searchQuery === '' || 
+                  neighborhood.colonia.toLowerCase().includes(searchQuery.toLowerCase())
+                )
+                .sort((a, b) => parseFloat(b.precio) - parseFloat(a.precio))
+              
+              return (
+                <>
+                  {displayNeighborhoods.map((neighborhood, idx) => {
+                    const key = `${selectedData.municipality}-${neighborhood.colonia}`
+                    const hasCoords = neighborhoodCoords.has(key)
+                    
+                    return (
+                      <div 
+                        key={`${neighborhood.colonia}-${neighborhood.mes}`}
+                        onClick={() => hasCoords && handleNeighborhoodClick(selectedData.municipality, neighborhood)}
+                        className={`p-2 rounded text-xs border-l-2 cursor-pointer transition-colors ${
+                          hasCoords 
+                            ? 'bg-gray-50 border-green-500 hover:bg-gray-100 hover:border-green-600' 
+                            : 'bg-gray-50 border-gray-300 cursor-not-allowed opacity-60'
+                        }`}
+                      >
+                        <div className="font-medium flex items-center gap-2">
+                          {neighborhood.colonia}
+                          {hasCoords && (
+                            <span className="text-xs text-green-600">●</span>
+                          )}
+                        </div>
+                        <div className="text-gray-600">
+                          ${Math.round(parseFloat(neighborhood.precio)).toLocaleString('es-MX')}/m²
+                        </div>
+                        <div className="text-gray-500 text-xs">{translateDateFn(neighborhood.mes)}</div>
+                      </div>
+                    )
+                  })}
+                  
+                  {searchQuery && displayNeighborhoods.length === 0 && (
+                    <div className="text-sm text-gray-500 text-center py-4">
+                      {t('map.no_neighborhoods_found')} "{searchQuery}"
+                    </div>
+                  )}
+                </>
+              )
+            })()}
           </div>
           </>
           )}

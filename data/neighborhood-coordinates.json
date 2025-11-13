@@ -3482,5 +3482,377 @@
   "Tláhuac-Selene": [
     19.284981,
     -99.0049086
+  ],
+  "Benito Juárez-Iztaccihuatl": [
+    19.3901799,
+    -99.1357457
+  ],
+  "Venustiano Carranza-Emilio Carranza": [
+    19.4493672,
+    -99.1207025
+  ],
+  "Venustiano Carranza-Alvaro Obregon": [
+    19.4128291,
+    -99.1186659
+  ],
+  "Álvaro Obregón-San Gabriel": [
+    19.3845655,
+    -99.2447709
+  ],
+  "Álvaro Obregón-Pueblo Santa Fe": [
+    19.380094233490926,
+    -99.23833249237762
+  ],
+  "Álvaro Obregón-Lomas De Santa Fe": [
+    19.3867834,
+    -99.2407804
+  ],
+  "Álvaro Obregón-El Cuernito": [
+    19.3881815,
+    -99.2181152
+  ],
+  "Álvaro Obregón-Cuevitas": [
+    19.3868551,
+    -99.2256211
+  ],
+  "Álvaro Obregón-Villa Verdun": [
+    19.338842,
+    -99.2571687
+  ],
+  "Álvaro Obregón-Tizampampano Del Pueblo Tetelpan": [
+    19.3422419,
+    -99.225708
+  ],
+  "Álvaro Obregón-San Jose Del Olivar": [
+    19.3376301,
+    -99.2279686
+  ],
+  "Álvaro Obregón-Atlamaya": [
+    19.3493334,
+    -99.2036717
+  ],
+  "Álvaro Obregón-Colina Del Sur": [
+    19.3664979,
+    -99.2263972
+  ],
+  "Azcapotzalco-Barrio San Mateo": [
+    19.48300823961737,
+    -99.18923929762873
+  ],
+  "Azcapotzalco-Angel Zimbron": [
+    19.467811,
+    -99.1890762
+  ],
+  "Azcapotzalco-Jardin Azpeitia": [
+    19.4723795,
+    -99.1748174
+  ],
+  "Azcapotzalco-Unidad Cuitlahuac": [
+    19.47154265,
+    -99.16778947187103
+  ],
+  "Coyoacán-Barrio La Concepcion": [
+    19.3488232,
+    -99.1584657
+  ],
+  "Coyoacán-Campestre Coyoacan": [
+    19.3091807,
+    -99.116957
+  ],
+  "Iztapalapa-Granjas De San Antonio": [
+    19.3636522,
+    -99.1070935
+  ],
+  "Iztapalapa-Jacarandas": [
+    19.34624,
+    -99.0514743
+  ],
+  "Iztapalapa-San Miguel Teotongo Secc Ranchito": [
+    19.335151,
+    -98.9861697
+  ],
+  "Iztapalapa-Tenorios": [
+    19.3292317,
+    -99.0199301
+  ],
+  "Iztapalapa-El Rosario": [
+    19.3017691,
+    -99.0655306
+  ],
+  "Iztapalapa-Celoalliotli": [
+    19.2912912,
+    -99.0710395
+  ],
+  "Guadalupe-Ejido Las Escobas": [
+    25.677734492480692,
+    -100.13111010099556
+  ],
+  "San Pedro Garza García-Hacienda Los Callejones": [
+    25.6651753,
+    -100.4018251
+  ],
+  "Gustavo A. Madero-Ampliacion Progreso Nacional": [
+    19.5165062,
+    -99.1600952
+  ],
+  "Gustavo A. Madero-Del Obrero": [
+    19.4998377,
+    -99.0906027
+  ],
+  "Gustavo A. Madero-Cuchilla Del Tesoro": [
+    19.4485601,
+    -99.058129
+  ],
+  "Cuajimalpa de Morelos-Abdias Garcia Soto": [
+    19.3508674,
+    -99.2936399
+  ],
+  "Cuajimalpa de Morelos-Las Tinajas": [
+    19.3528581,
+    -99.2854195
+  ],
+  "Cuajimalpa de Morelos-Ampliacion Memetla": [
+    19.3558203,
+    -99.2865955
+  ],
+  "La Magdalena Contreras-El Maestro": [
+    19.3047731,
+    -99.2413803
+  ],
+  "La Magdalena Contreras-La Cruz": [
+    19.3088632,
+    -99.2344662
+  ],
+  "La Magdalena Contreras-Plazuela Del Pedregal": [
+    19.3041247,
+    -99.2327705
+  ],
+  "Tlalpan-Barrio Del Niño Jesus": [
+    19.29052505,
+    -99.16134194278206
+  ],
+  "Tlalpan-Tlalcoligia": [
+    19.275231,
+    -99.1719343
+  ],
+  "Tlalpan-Ex Hacienda Coapa": [
+    19.3000233,
+    -99.10777089999999
+  ],
+  "Tlalpan-Villa Coapa": [
+    19.2943799,
+    -99.1255182
+  ],
+  "Xochimilco-Paseos Del Sur": [
+    19.2742848,
+    -99.1222462
+  ],
+  "Xochimilco-Barrio San Marcos": [
+    19.25508825,
+    -99.10584958615152
+  ],
+  "Tláhuac-Barrio Santa Ana Norte": [
+    19.3010975,
+    -99.0378495
+  ],
+  "Tláhuac-La Conchita Zapotitlan": [
+    19.2895756,
+    -99.0270523
+  ],
+  "Monterrey-Cumbres Del Sol": [
+    25.765427626866714,
+    -100.42435470699651
+  ],
+  "Monterrey-Cumbres Elite Premier Privada Everest": [
+    25.74357839837105,
+    -100.40476727615989
+  ],
+  "Monterrey-Fracc Cumbres Allegro": [
+    25.3588719,
+    -100.30684640680191
+  ],
+  "Monterrey-Cumbres De San Agustin Privada Chelsea": [
+    25.3588719,
+    -100.30684640680191
+  ],
+  "Monterrey-Paseo De Cumbres 4 Sector": [
+    25.717329550000002,
+    -100.38414991339233
+  ],
+  "Monterrey-Reserva Cumbres": [
+    25.3588719,
+    -100.30684640680191
+  ],
+  "Monterrey-Cumbres Elite 1Er Sector": [
+    25.731411700000002,
+    -100.41002509878487
+  ],
+  "Monterrey-Cumbres Elite 8 Sector": [
+    25.731411700000002,
+    -100.41002509878487
+  ],
+  "Monterrey-Cima Del Bosque": [
+    25.73345345,
+    -100.41133553708885
+  ],
+  "Monterrey-Monterrey": [
+    25.6802019,
+    -100.315258
+  ],
+  "Monterrey-Cumbres De Santa Clara 3 Sector": [
+    25.741149800000002,
+    -100.39749953237504
+  ],
+  "Monterrey-Cima De Las Cumbres": [
+    25.72452445,
+    -100.37748672628283
+  ],
+  "Monterrey-Cumbres Ampliacion 2Do Sector": [
+    25.70683875,
+    -100.37378714386054
+  ],
+  "Monterrey-Industrial Lincoln": [
+    25.71680065,
+    -100.35794051269993
+  ],
+  "Monterrey-Agricola": [
+    25.7762343,
+    -100.41770170524504
+  ],
+  "Monterrey-Buenos Aires": [
+    25.664957,
+    -100.27558564340981
+  ],
+  "Monterrey-Ladrillera": [
+    25.6549971,
+    -100.27521083444444
+  ],
+  "Monterrey-Tecnologico": [
+    25.648853000000003,
+    -100.29376951793282
+  ],
+  "Monterrey-Altavista": [
+    25.63959715,
+    -100.29534715739926
+  ],
+  "Monterrey-Rincon De La Primavera": [
+    25.64546395,
+    -100.27096639647661
+  ],
+  "Monterrey-Burocratas Municipales": [
+    25.63358565,
+    -100.2946999136714
+  ],
+  "Monterrey-La Campana": [
+    25.6379671,
+    -100.2996759
+  ],
+  "Monterrey-Altavista Invernadero": [
+    25.63863235,
+    -100.28875113749243
+  ],
+  "Monterrey-Contry": [
+    25.641005800000002,
+    -100.2835832433895
+  ],
+  "Monterrey-Jardines Del Paseo": [
+    25.62175455,
+    -100.30308216143484
+  ],
+  "Monterrey-Lomas De Montecristo": [
+    25.62595055,
+    -100.30555402595706
+  ],
+  "Monterrey-Bosque Rdcial Los Angeles (Los Angeles Residencial)": [
+    25.63419235,
+    -100.31476842195619
+  ],
+  "Monterrey-Sierra Ventana": [
+    25.634008350000002,
+    -100.28849952493485
+  ],
+  "Monterrey-Valle De Las Brisas": [
+    25.626420799999998,
+    -100.2901292240609
+  ],
+  "Monterrey-Jardines Del Contry": [
+    25.6757009,
+    -100.3456106
+  ],
+  "Monterrey-Privada Fundadores": [
+    25.62106032911607,
+    -100.30495390275715
+  ],
+  "Monterrey-Las Brisas": [
+    25.620784999999998,
+    -100.27773930939529
+  ],
+  "Monterrey-Villa Las Fuentes": [
+    25.6120959,
+    -100.26468732041926
+  ],
+  "Monterrey-Satelite Acueducto": [
+    25.60499355,
+    -100.27755128907404
+  ],
+  "Monterrey-Prados De La Silla": [
+    25.608790869831953,
+    -100.26399105675917
+  ],
+  "Monterrey-Loma Bonita": [
+    25.58323,
+    -100.26132103866458
+  ],
+  "Monterrey-Fomerrey 45": [
+    25.5928714,
+    -100.24281853298345
+  ],
+  "Monterrey-La Estanzuela": [
+    25.580274449999997,
+    -100.24061070708764
+  ],
+  "Monterrey-Lomas De Valle Alto": [
+    25.584626,
+    -100.25968143044811
+  ],
+  "Monterrey-Los Azulejos": [
+    25.570325129635005,
+    -100.28089870432748
+  ],
+  "Monterrey-Bosques De Valle Alto Sector Las Veredas": [
+    25.577886499999998,
+    -100.28084266658874
+  ],
+  "Monterrey-Rincon De Los Prados": [
+    25.5743916,
+    -100.2739878105441
+  ],
+  "Monterrey-Mision Canterias": [
+    25.574675499999998,
+    -100.23869363003216
+  ],
+  "Monterrey-El Uro (Villa Las Flores)": [
+    25.5513668,
+    -100.23621763108108
+  ],
+  "Monterrey-Las Granadas Rdcial": [
+    25.551537,
+    -100.2186910231872
+  ],
+  "Monterrey-Laderas Sector Abedul": [
+    25.54998965,
+    -100.21195987839408
+  ],
+  "Monterrey-Campestre Los Cristales": [
+    25.5390976,
+    -100.2081928
+  ],
+  "Monterrey-Valle De Cristal (Sector Budget)": [
+    25.532771250000003,
+    -100.20943682336652
+  ],
+  "Apodaca-Apodaca": [
+    25.7871006,
+    -100.18507694543185
   ]
 }
