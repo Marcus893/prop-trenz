@@ -25,6 +25,9 @@ export type TrackingEvent =
   | 'contact_widget_submitted'
   | 'contact_widget_success'
   | 'contact_widget_failure'
+  | 'home_top_mover_clicked'
+  | 'home_explore_charts_clicked'
+  | 'home_explore_calculators_clicked'
 
 export interface TrackingProperties {
   [key: string]: string | number | boolean | undefined | null

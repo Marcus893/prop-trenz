@@ -85,16 +85,31 @@
     "or": "or"
   },
   "home": {
-    "hero_description": "Explore Mexican Real Estate Price Trends with Interactive Charts and Geographic Navigation",
+    "hero_title": "Mexican Real Estate Intelligence",
+    "hero_description": "Explore Price Trends, Calculate Costs, and Make Informed Decisions",
     "years_of_data": "20+ Years of Data",
     "states_and_cities": "32 States & 100+ Cities",
     "interactive_charts": "Interactive Charts",
+    "interactive_tools": "Interactive Tools",
     "national_snapshot": "National Snapshot",
     "yoy": "YoY",
     "qoq": "QoQ",
     "top_movers_states_yoy": "Top Movers (States) – YoY",
     "top_movers_municipalities_yoy": "Top Movers (Municipalities) – YoY",
     "select_location": "Select a location to view price trends",
+    "view_all": "View All",
+    "explore_charts": "Explore Charts",
+    "calculate_costs": "Calculate Costs",
+    "quick_actions_title": "Get Started",
+    "explore_charts_action": "Explore Price Charts",
+    "explore_charts_action_desc": "View interactive charts for any location",
+    "calculate_costs_action": "Calculate Costs",
+    "calculate_costs_action_desc": "Estimate buying, owning, and selling costs",
+    "explore_map_action": "Explore Map",
+    "explore_map_action_desc": "Visualize data on an interactive map",
+    "get_started": "Get Started",
+    "calculate_now": "Calculate Now",
+    "view_map": "View Map",
     "historical_data_title": "Historical Data",
     "historical_data_description": "Access 20+ years of quarterly real estate price data from SHF",
     "geographic_coverage_title": "Geographic Coverage",
@@ -205,52 +220,62 @@
         "isai": {
           "label": "Property Acquisition Tax (ISAI)",
           "helper": "Typical: 2% - 4.5% of property value",
-          "note": "A state-level transfer tax. The percentage varies by state and municipality."
+          "note": "A state-level transfer tax. The percentage varies by state and municipality.",
+          "glossary": "The Impuesto sobre Adquisición de Inmuebles (ISAI) is a state-level transfer tax paid by the buyer when purchasing real estate in Mexico. The rate varies significantly by state (ranging from 2% to 4.5%) and sometimes by municipality. This tax is calculated based on the property's transaction value and is one of the largest closing costs. Some states offer exemptions or reduced rates for first-time buyers or low-income families. The tax must be paid before the property transfer can be completed."
         },
         "notaryFees": {
           "label": "Notary Fees",
           "helper": "Typical: 0.5% - 2% of property value",
-          "note": "Covers the government-appointed notary who certifies the transaction."
+          "note": "Covers the government-appointed notary who certifies the transaction.",
+          "glossary": "Notary fees cover the services of a Mexican notary public (notario público), who is a government-appointed legal professional required to oversee real estate transactions in Mexico. Unlike in the U.S., Mexican notaries are highly trained lawyers with exclusive authority to certify property transfers. Their fees typically range from 0.5% to 2% of the property value and cover document preparation, legal verification, title certification, and registration with the Public Registry. The notary ensures the transaction complies with Mexican law and handles the transfer of title."
         },
         "registrationFees": {
           "label": "Property Registration Fees",
           "helper": "Typical: 0.5% - 1% of property value",
-          "note": "Official registration in the Public Registry."
+          "note": "Official registration in the Public Registry.",
+          "glossary": "Property registration fees are paid to register the property transfer in the Public Registry of Property (Registro Público de la Propiedad). This official registration creates a public record of your ownership and is essential for establishing legal title. The fee typically ranges from 0.5% to 1% of the property value and varies by state and municipality. Without proper registration, you cannot prove legal ownership or sell the property in the future. The notary public typically handles this registration as part of the closing process."
         },
         "fideicomisoSetup": {
           "label": "Fideicomiso (Bank Trust) Setup",
           "helper": "Typical fixed fee: $1500 - $2,000 USD",
-          "note": "Required one-time setup for foreign buyers in restricted zones."
+          "note": "Required one-time setup for foreign buyers in restricted zones.",
+          "glossary": "A fideicomiso (bank trust) is required for foreign buyers purchasing property in Mexico's restricted zones (within 50 km of the coastline or 100 km of the border). This trust structure allows foreigners to have beneficial ownership of the property while a Mexican bank holds legal title. The initial setup fee typically ranges from $1,500 to $2,000 USD and is a one-time cost paid during closing. The trust has a 50-year term (renewable) and provides the same rights as direct ownership, including the ability to sell, rent, or bequeath the property. Annual maintenance fees apply after the initial setup."
         },
         "foreignAffairsPermit": {
           "label": "Foreign Affairs Ministry Permit",
           "helper": "Typical fixed fee: ~$7,500 MXN",
-          "note": "Permit from the Secretaría de Relaciones Exteriores for foreign buyers."
+          "note": "Permit from the Secretaría de Relaciones Exteriores for foreign buyers.",
+          "glossary": "The Foreign Affairs Ministry Permit (permiso de la Secretaría de Relaciones Exteriores) is required for foreign buyers purchasing property in restricted zones through a fideicomiso. This permit grants permission for the bank trust to be established and must be obtained before the property transfer can be completed. The fee is typically around 7,500 MXN and is a one-time cost. The application process is usually handled by the notary or bank setting up the fideicomiso, and it can take several weeks to process. This permit is mandatory for all foreign buyers in restricted zones."
         },
         "legalFees": {
           "label": "Legal / Attorney Services",
           "helper": "Typical: $1,500 - $3,000+ USD",
-          "note": "Due diligence, contract review, and transaction oversight."
+          "note": "Due diligence, contract review, and transaction oversight.",
+          "glossary": "Legal and attorney services include due diligence, contract review, title verification, and transaction oversight. While the notary public handles the legal transfer, many buyers hire an independent attorney to review contracts, verify property conditions, check for liens or encumbrances, and ensure their interests are protected. Legal fees typically range from $1,500 to $3,000+ USD depending on the complexity of the transaction and the attorney's experience. This is especially recommended for foreign buyers unfamiliar with Mexican real estate law. An attorney can also help negotiate contract terms and handle any disputes that arise."
         },
         "iva": {
           "label": "IVA (Value Added Tax)",
           "helper": "Typical: 16% applied to professional services",
-          "note": "Often applied to notary and legal service fees."
+          "note": "Often applied to notary and legal service fees.",
+          "glossary": "IVA (Impuesto al Valor Agregado) is Mexico's value-added tax, similar to sales tax in the U.S. but applied to services. The standard rate is 16% and is applied to professional services such as notary fees, legal services, and other professional fees during the closing process. IVA is not applied to the property purchase itself (residential real estate is exempt), but it does apply to the services rendered. For example, if notary fees are 30,000 MXN, the total with IVA would be 34,800 MXN (30,000 + 16%). This tax is mandatory and cannot be avoided."
         },
         "appraisalFees": {
           "label": "Appraisal Fees",
           "helper": "Typical fixed fee: $300 - $600 USD",
-          "note": "Assessment of the property value for tax and due diligence."
+          "note": "Assessment of the property value for tax and due diligence.",
+          "glossary": "Appraisal fees cover the cost of a professional property valuation conducted by a licensed appraiser. This assessment determines the property's market value, which is used for tax calculations (including ISAI and predial taxes) and due diligence purposes. Lenders may also require an appraisal if you're financing the purchase. Appraisal fees typically range from $300 to $600 USD and are usually paid directly to the appraiser. The appraisal helps ensure you're paying a fair price and provides documentation for tax purposes. Some buyers skip this if they're confident in the purchase price, but it's recommended for due diligence."
         },
         "titleInsurance": {
           "label": "Title Insurance",
           "helper": "Typical: 0.5% - 1% of property value (optional)",
-          "note": "Protection against title disputes. Optional depending on risk tolerance."
+          "note": "Protection against title disputes. Optional depending on risk tolerance.",
+          "glossary": "Title insurance protects buyers against losses from title defects, liens, encumbrances, or ownership disputes that may arise after the purchase. While common in the U.S., title insurance is optional in Mexico and not widely used. The cost typically ranges from 0.5% to 1% of the property value and is a one-time premium. Title insurance can provide peace of mind, especially for foreign buyers, but many transactions proceed without it since the notary public's due diligence process is thorough. Whether to purchase title insurance depends on your risk tolerance and the specific property circumstances."
         },
         "escrowFees": {
           "label": "Escrow Fees",
           "helper": "Typical fixed fee: ~$500 USD",
-          "note": "Neutral third party to hold funds during the transaction."
+          "note": "Neutral third party to hold funds during the transaction.",
+          "glossary": "Escrow fees cover the cost of using a neutral third party (escrow agent) to hold funds and documents during the transaction until all conditions are met. Escrow services provide security for both buyer and seller by ensuring funds are only released when the transaction is complete and all obligations are fulfilled. While not mandatory in Mexico, escrow is commonly used in international transactions and provides an additional layer of protection. Fees typically range around $500 USD and are usually split between buyer and seller. The escrow agent coordinates the closing process and ensures all parties meet their obligations before releasing funds."
         }
       }
     },
@@ -281,27 +306,32 @@
         "propertyTaxes": {
           "label": "Property Taxes (Predial)",
           "helper": "Typical annual rate: 0.1% - 0.15% of cadastral value",
-          "note": "Paid annually based on government-assessed value. Discounts often available for early payment."
+          "note": "Paid annually based on government-assessed value. Discounts often available for early payment.",
+          "glossary": "Property taxes (predial) are annual taxes paid to the local municipality based on the government-assessed cadastral value of the property. The rate typically ranges from 0.1% to 0.15% of the cadastral value, which is usually lower than the market value. These taxes fund local infrastructure and services. Most municipalities offer significant discounts (often 10-25%) for early payment, with the discount decreasing as the payment deadline approaches. Property taxes are mandatory and failure to pay can result in penalties, liens, or even property seizure. The tax is due annually and varies by municipality and property type."
         },
         "hoaFees": {
           "label": "Homeowners Association (HOA) Fees",
           "helper": "Typical monthly fee: MXN 2,000 – 6,000",
-          "note": "Mandatory for condos/gated communities; covers shared amenities, security, and maintenance."
+          "note": "Mandatory for condos/gated communities; covers shared amenities, security, and maintenance.",
+          "glossary": "Homeowners Association (HOA) fees, known as 'cuotas de mantenimiento' in Mexico, are monthly fees paid by property owners in condominiums, gated communities, and planned developments. These fees are mandatory and cover shared expenses such as landscaping, security services, pool maintenance, common area upkeep, building insurance, and administrative costs. Fees typically range from MXN 2,000 to 6,000 per month but can be higher for luxury developments with extensive amenities. HOA fees are set by the homeowners' association and can increase over time. Failure to pay can result in penalties and legal action. These fees are separate from property taxes and are not tax-deductible."
         },
         "fideicomisoAnnual": {
           "label": "Fideicomiso (Bank Trust) Fee",
           "helper": "Typical annual fee: MXN 10,000 – 20,000 ($500 - $900 USD)",
-          "note": "Required for foreign owners in restricted zones (coasts/borders). Paid to the trustee bank."
+          "note": "Required for foreign owners in restricted zones (coasts/borders). Paid to the trustee bank.",
+          "glossary": "The annual fideicomiso (bank trust) fee is a mandatory maintenance fee paid to the trustee bank by foreign property owners in Mexico's restricted zones. This fee covers the bank's administrative costs for maintaining the trust, including record-keeping, tax reporting, and trust administration. Annual fees typically range from MXN 10,000 to 20,000 (approximately $500 to $900 USD) and vary by bank and property value. The trust has a 50-year term (renewable) and this annual fee must be paid for the entire duration. Failure to pay can result in penalties and may affect your ability to sell or transfer the property. Some banks offer discounts for automatic payments or multi-year prepayment."
         },
         "insurance": {
           "label": "Insurance",
           "helper": "Typical annual premium: MXN 8,000 – 20,000 (coverage dependent)",
-          "note": "Recommended for natural disaster coverage (hurricanes, earthquakes) and theft."
+          "note": "Recommended for natural disaster coverage (hurricanes, earthquakes) and theft.",
+          "glossary": "Property insurance in Mexico is highly recommended, especially in coastal areas prone to hurricanes and regions with earthquake risk. Insurance typically covers natural disasters (hurricanes, earthquakes, floods), fire, theft, and liability. Annual premiums typically range from MXN 8,000 to 20,000 depending on coverage limits, property value, location, and risk factors. While not legally required, insurance provides essential protection given Mexico's exposure to natural disasters. Many lenders require insurance if you have a mortgage. Coverage options vary widely, and it's important to understand what's included (and excluded) in your policy. Some policies exclude certain natural disasters or require separate riders."
         },
         "propertyManagement": {
           "label": "Property Management Fees",
           "helper": "Typical: 8% - 15% of annual rental income",
-          "note": "Applied if renting the property out and using a third-party management service."
+          "note": "Applied if renting the property out and using a third-party management service.",
+          "glossary": "Property management fees are charged by third-party companies that handle the day-to-day management of rental properties. These services typically include tenant screening, rent collection, property maintenance, marketing, accounting, and handling tenant issues. Management fees typically range from 8% to 15% of the monthly rental income and are usually paid monthly. Some management companies charge additional fees for services like repairs, tenant placement, or marketing. For absentee owners or those who don't want to deal with tenant management, property management services are essential. The fee percentage often varies based on the level of service provided and the property's location and type."
         }
       }
     },
@@ -348,7 +378,19 @@
       "other_costs_label": "Estimated other costs",
       "total_costs": "Estimated total costs",
       "percent_of_sale": "Percent of sale price",
-      "disclaimer": "Actual taxes are determined by your Notary Public and SAT. Keep facturas and consult professionals for precise calculations."
+      "disclaimer": "Actual taxes are determined by your Notary Public and SAT. Keep facturas and consult professionals for precise calculations.",
+      "glossary": {
+        "capital_gains_tax": "Capital gains tax (ISR - Impuesto Sobre la Renta) is a tax on the profit from selling real estate in Mexico. For residents, the tax is calculated on the taxable gain (sale price minus purchase price, improvements, and deductions) and uses a progressive rate system. If the taxable gain exceeds 250,000 MXN, the portion above 250,000 MXN is taxed at 35%. Residents may qualify for a primary residence exemption of up to approximately 5,500,000 MXN if certain conditions are met. Non-residents pay a flat 35% tax on the net gain. Proper documentation (facturas) is essential for claiming deductions and exemptions.",
+        "agent_commission": "Real estate agent commission is the fee paid to the real estate agent or broker who facilitates the sale. Commission rates typically range from 5% to 8% of the sale price, with 6% being most common. This commission is subject to IVA (16% value-added tax), so the total cost includes both the commission and the tax. The commission is usually paid at closing and is negotiable. Some sellers choose to sell without an agent (FSBO - For Sale By Owner) to avoid this cost, but this requires handling marketing, negotiations, and paperwork independently.",
+        "fideicomiso_cancellation": "Fideicomiso cancellation fee is charged by the trustee bank when a foreign owner sells property held in a bank trust (fideicomiso). This administrative fee covers the bank's costs to cancel the trust, release the title, and transfer ownership to the new buyer. The fee typically ranges from MXN 15,000 to 25,000 and varies by bank. This is a one-time fee paid at closing and is only applicable if the property was held in a fideicomiso. The fee is also subject to IVA (16%).",
+        "attorney_fees": "Attorney or legal advisor fees for sellers cover services such as contract review, negotiation assistance, due diligence, and transaction oversight. While not mandatory, many sellers hire an attorney to ensure their interests are protected, especially in complex transactions or when selling to foreign buyers. Fees typically range from MXN 20,000 to 50,000+ depending on the complexity and attorney's experience. Attorney fees are subject to IVA (16%). An attorney can help negotiate terms, review contracts, handle disputes, and ensure compliance with Mexican real estate law.",
+        "iva": "IVA (Impuesto al Valor Agregado) is Mexico's value-added tax applied to professional services. The standard rate is 16% and applies to real estate agent commissions, attorney fees, fideicomiso cancellation fees, and other professional services during the sale. IVA is not applied to the property sale itself (residential real estate sales are exempt from IVA), but it does apply to the services rendered. For example, if an agent commission is 180,000 MXN (6% of 3,000,000 MXN), the total with IVA would be 208,800 MXN (180,000 + 16%). This tax is mandatory and cannot be avoided for professional services.",
+        "primary_residence_exemption": "The primary residence exemption allows Mexican tax residents to exclude up to approximately 5,500,000 MXN (approximately 700,000 UDIs) from capital gains tax when selling their primary residence. To qualify, you must: (1) have an RFC (Mexican tax ID), (2) have a CURP (Mexican national ID), (3) have used the property as your primary residence, and (4) not have claimed this exemption in the past 3 years. This exemption significantly reduces or eliminates capital gains tax for many sellers. The exemption amount is adjusted periodically based on UDI values. Proper documentation and compliance with all requirements are essential to claim this exemption.",
+        "taxable_gain": "Taxable gain is the profit from the sale after subtracting the cost basis (original purchase price), capital improvements (with facturas), allowable deductions (closing costs, selling expenses), and applicable exemptions (such as the primary residence exemption). The formula is: Sale Price - Purchase Price - Improvements - Deductions - Exemptions = Taxable Gain. Only the taxable gain is subject to capital gains tax. If the taxable gain is zero or negative (you sold at a loss), no capital gains tax is due. Proper documentation (facturas) is essential to claim improvements and deductions, reducing your taxable gain and tax liability.",
+        "purchase_price": "The original purchase price is the amount you paid when you first bought the property. This is the baseline cost basis used to calculate your capital gains. It should match the purchase price stated in your original deed (escritura). If you purchased the property in a foreign currency, use the exchange rate at the time of purchase to convert to MXN. This amount is subtracted from the sale price to determine your initial gain. Keeping records of your original purchase documents is essential for tax purposes.",
+        "capital_improvements": "Capital improvements are permanent enhancements made to the property that increase its value, such as renovations, additions, major repairs, or infrastructure upgrades. To claim these improvements as deductions, you must have facturas (official Mexican invoices with tax ID) for all expenses. Common improvements include kitchen remodels, bathroom renovations, room additions, new roofs, plumbing or electrical upgrades, and landscaping. Regular maintenance and repairs are not considered capital improvements. Only improvements with proper facturas can be deducted from your capital gains, so it's important to request facturas for all major work done on the property.",
+        "deductible_costs": "Allowable closing deductions include expenses directly related to the sale of the property that can be subtracted from your capital gains. These typically include: real estate agent commissions, notary fees, legal fees, title insurance, escrow fees, transfer taxes, and other closing costs paid during the sale. These deductions reduce your taxable gain, thereby reducing your capital gains tax. To claim these deductions, you must have proper documentation (facturas or receipts) for all expenses. Some expenses may be subject to limitations or restrictions, so consult with a tax professional to ensure you're claiming all eligible deductions."
+      }
     }
   },
   "calculators_page": {

@@ -17,6 +17,7 @@
     "publish-translations": "ts-node --project tsconfig.scripts.json scripts/publish-translations.ts"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.24.1",
     "@supabase/supabase-js": "^2.45.4",
     "clsx": "^2.1.1",
     "i18next": "^23.10.1",

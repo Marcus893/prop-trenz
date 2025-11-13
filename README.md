@@ -39,9 +39,10 @@ NEXTAUTH_URL=http://localhost:3000
 NEXTAUTH_SECRET=your_random_secret_string
 
 # Programmatic SEO (Optional)
-OPENAI_API_KEY=your_openai_key # For text generation
+OPENAI_API_KEY=your_openai_key # For text generation and image generation (DALL-E 3)
 OPENAI_PSEO_MODEL=gpt-4o-mini # optional override
-GEMINI_API_KEY=your_gemini_api_key # For image generation (or use GOOGLE_AI_API_KEY)
+GEMINI_API_KEY=your_gemini_key # For guide translations
+GEMINI_MODEL=gemini-2.0-flash # optional override (default: gemini-2.0-flash)
 ```
 
 ### 3. Database Setup

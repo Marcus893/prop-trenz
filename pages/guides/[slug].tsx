@@ -11,6 +11,7 @@ import { ProtectedContent } from '@/components/content/ProtectedContent'
 import { Badge } from '@/components/ui/badge'
 import { ArrowRight } from 'lucide-react'
 import { parseLinks } from '@/lib/pseo/parseLinks'
+import { Accordion } from '@/components/ui/accordion'
 
 interface RelatedGuide {
   slug: string
@@ -23,11 +24,16 @@ interface RelatedGuide {
 interface GuidePageProps {
   guide: GuideArticle
   canonicalUrl: string
+  hreflangUrls: {
+    en: string
+    es: string
+    zh: string
+  }
   isFallbackLocale?: boolean
   relatedGuides?: RelatedGuide[]
 }
 
-export default function GuidePage({ guide, canonicalUrl, isFallbackLocale, relatedGuides = [] }: GuidePageProps) {
+export default function GuidePage({ guide, canonicalUrl, hreflangUrls, isFallbackLocale, relatedGuides = [] }: GuidePageProps) {
   const { t } = useTranslation('common')
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://proptrenz.com'
   const ogImage = guide.mainImageUrl || `${baseUrl}/api/og?title=${encodeURIComponent(guide.metaTitle || guide.title)}`
@@ -99,7 +105,7 @@ export default function GuidePage({ guide, canonicalUrl, isFallbackLocale, relat
     },
     articleSection: guide.tags?.[0] || 'Real Estate',
     keywords: guide.tags.join(', '),
-    inLanguage: guide.locale
+    inLanguage: guide.locale === 'en' ? 'en-US' : guide.locale === 'es' ? 'es-MX' : 'zh-CN'
   }
 
   if (guide.mainImageUrl) {
@@ -134,11 +140,11 @@ export default function GuidePage({ guide, canonicalUrl, isFallbackLocale, relat
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta name="keywords" content={guide.tags.join(', ')} />
         
-        {/* Hreflang tags for multilingual SEO */}
-        <link rel="alternate" hrefLang="en" href={`${baseUrl}/en/guides/${guide.slug.replace(/-en$|-es$|-zh$/, '')}`} />
-        <link rel="alternate" hrefLang="es" href={`${baseUrl}/es/guides/${guide.slug.replace(/-en$|-es$|-zh$/, '')}`} />
-        <link rel="alternate" hrefLang="zh" href={`${baseUrl}/zh/guides/${guide.slug.replace(/-en$|-es$|-zh$/, '')}`} />
-        <link rel="alternate" hrefLang="x-default" href={`${baseUrl}/guides/${guide.slug.replace(/-en$|-es$|-zh$/, '')}`} />
+        {/* Hreflang tags for multilingual SEO - tells Google which language version to show */}
+        <link rel="alternate" hrefLang="en" href={hreflangUrls.en} />
+        <link rel="alternate" hrefLang="es" href={hreflangUrls.es} />
+        <link rel="alternate" hrefLang="zh" href={hreflangUrls.zh} />
+        <link rel="alternate" hrefLang="x-default" href={hreflangUrls.en} />
         
         {/* Open Graph */}
         <meta property="og:type" content="article" />
@@ -217,7 +223,7 @@ export default function GuidePage({ guide, canonicalUrl, isFallbackLocale, relat
             {new Date(guide.updatedAt).toISOString()}
           </time>
           {guide.mainImageUrl && (
-            <div className="relative mt-6 h-64 w-full overflow-hidden rounded-2xl bg-gray-100 md:h-96">
+            <div className="relative mt-6 h-96 w-full overflow-hidden rounded-2xl bg-gray-100 md:h-[36rem]">
               {guide.mainImageUrl.startsWith('data:') ? (
                 <img
                   src={guide.mainImageUrl}
@@ -290,15 +296,13 @@ export default function GuidePage({ guide, canonicalUrl, isFallbackLocale, relat
 
             {guide.faq && guide.faq.length > 0 && (
               <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-                <h2 className="text-2xl font-semibold text-gray-900">Frequently asked questions</h2>
-                <div className="mt-4 space-y-6">
-                  {guide.faq.map((item) => (
-                    <div key={item.question}>
-                      <h3 className="text-lg font-medium text-gray-900">{item.question}</h3>
-                      <p className="mt-2 text-sm leading-6 text-gray-700">{parseLinks(item.answer)}</p>
-                    </div>
-                  ))}
-                </div>
+                <h2 className="text-2xl font-semibold text-gray-900 mb-6">Frequently asked questions</h2>
+                <Accordion
+                  items={guide.faq.map((item) => ({
+                    question: item.question,
+                    answer: <div>{parseLinks(item.answer)}</div>
+                  }))}
+                />
               </section>
             )}
 
@@ -424,7 +428,19 @@ export const getStaticProps: GetStaticProps<GuidePageProps> = async ({ params, l
   // If guide locale doesn't match requested locale (fallback case), we still show it
   // but note that it's in a different language
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://proptrenz.com'
-  const canonicalUrl = `${baseUrl}/guides/${slug}`
+  
+  // Build canonical URL with proper locale prefix
+  // Next.js i18n: default locale (en) has no prefix, others have /locale prefix
+  const canonicalUrl = validLocale === 'en' 
+    ? `${baseUrl}/guides/${baseSlug}`
+    : `${baseUrl}/${validLocale}/guides/${baseSlug}`
+  
+  // Build hreflang URLs for all language versions
+  const hreflangUrls = {
+    en: `${baseUrl}/guides/${baseSlug}`,
+    es: `${baseUrl}/es/guides/${baseSlug}`,
+    zh: `${baseUrl}/zh/guides/${baseSlug}`
+  }
 
   // Find related guides based on shared tags
   const relatedGuides = await findRelatedGuides(guide, 3)
@@ -443,6 +459,7 @@ export const getStaticProps: GetStaticProps<GuidePageProps> = async ({ params, l
       ...translations,
       guide,
       canonicalUrl,
+      hreflangUrls,
       isFallbackLocale: guide.locale !== validLocale,
       relatedGuides: serializedRelatedGuides
     },

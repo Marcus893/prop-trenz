@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Layout } from '@/components/Layout'
 import { GeographicNavigator } from '@/components/navigation/GeographicNavigator'
 import { PriceChart } from '@/components/charts/PriceChart'
@@ -7,9 +7,11 @@ import { db } from '@/lib/supabase'
 import { GetServerSideProps } from 'next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
+import { useRouter } from 'next/router'
 
 export default function ChartsPage() {
   const { t } = useTranslation('common')
+  const router = useRouter()
   const [selectedLocationId, setSelectedLocationId] = useState<string>('')
   const [selectedLocationName, setSelectedLocationName] = useState<string>('')
   const [selectedLocationType, setSelectedLocationType] = useState<string>('')
@@ -37,6 +39,15 @@ export default function ChartsPage() {
       setSelectedLocationType('unknown')
     }
   }
+
+  // Load location from query parameter if present
+  useEffect(() => {
+    const locationId = router.query.location as string
+    if (locationId && locationId !== selectedLocationId && router.isReady) {
+      handleLocationSelect(locationId)
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [router.query.location, router.isReady])
 
   return (
     <Layout title={t('charts.title')} subtitle={t('charts.subtitle')}>

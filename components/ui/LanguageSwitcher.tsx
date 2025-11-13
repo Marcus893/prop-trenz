@@ -30,7 +30,19 @@ export function LanguageSwitcher({ className }: LanguageSwitcherProps) {
     if (router.locale !== languageCode) {
       track('language_changed', { from: router.locale || 'en', to: languageCode })
       const { pathname, asPath, query } = router
-      router.push({ pathname, query }, asPath, { locale: languageCode, scroll: false })
+      
+      // For guide pages, we need to extract the base slug and remove any locale suffix
+      if (pathname === '/guides/[slug]' && query.slug) {
+        const currentSlug = query.slug as string
+        // Remove locale suffix from slug if present (e.g., "how-to-find-a-rental-in-mexico-es" -> "how-to-find-a-rental-in-mexico")
+        const baseSlug = currentSlug.replace(/-en$|-es$|-zh$/, '')
+        
+        // Navigate to the guide with the base slug and new locale
+        router.push(`/guides/${baseSlug}`, `/guides/${baseSlug}`, { locale: languageCode, scroll: false })
+      } else {
+        // For other pages, use the standard Next.js i18n routing
+        router.push({ pathname, query }, asPath, { locale: languageCode, scroll: false })
+      }
     }
     setIsOpen(false)
   }

@@ -170,16 +170,20 @@ export const getStaticProps: GetStaticProps<GuidesIndexProps> = async ({ locale,
   const translations = await serverSideTranslations(validLocale, ['common'])
   const guides = await listPublishedGuides(validLocale)
 
-  const trimmedGuides = guides.map((guide) => ({
-    slug: guide.slug,
-    title: guide.title,
-    excerpt: guide.excerpt || guide.metaDescription,
-    updatedAt: guide.updatedAt,
-    accessLevel: guide.accessLevel,
-    tags: guide.tags || [],
-    mainImageUrl: guide.mainImageUrl || null,
-    mainImageAlt: guide.mainImageAlt || null
-  }))
+  const trimmedGuides = guides.map((guide) => {
+    // Extract base slug (remove locale suffix if present) for routing
+    const baseSlug = guide.slug.replace(/-en$|-es$|-zh$/, '')
+    return {
+      slug: baseSlug, // Use base slug for routing
+      title: guide.title,
+      excerpt: guide.excerpt || guide.metaDescription,
+      updatedAt: guide.updatedAt,
+      accessLevel: guide.accessLevel,
+      tags: guide.tags || [],
+      mainImageUrl: guide.mainImageUrl || null,
+      mainImageAlt: guide.mainImageAlt || null
+    }
+  })
 
   // Extract all unique tags
   const allTags = Array.from(new Set(guides.flatMap((guide) => guide.tags || []))).sort()

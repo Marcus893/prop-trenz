@@ -85,16 +85,31 @@
     "or": "o"
   },
   "home": {
-    "hero_description": "Explora las Tendencias de Precios de Bienes Raíces Mexicanos con Gráficos Interactivos y Navegación Geográfica",
+    "hero_title": "Inteligencia Inmobiliaria Mexicana",
+    "hero_description": "Explora Tendencias de Precios, Calcula Costos y Toma Decisiones Informadas",
     "years_of_data": "20+ Años de Datos",
     "states_and_cities": "32 Estados y 100+ Ciudades",
     "interactive_charts": "Gráficos Interactivos",
+    "interactive_tools": "Herramientas Interactivas",
     "national_snapshot": "Panorama Nacional",
-    "yoy": "AaA",
-    "qoq": "TaT",
-    "top_movers_states_yoy": "Principales Movimientos (Estados) – AaA",
-    "top_movers_municipalities_yoy": "Principales Movimientos (Municipios) – AaA",
+    "yoy": "A/A",
+    "qoq": "T/T",
+    "top_movers_states_yoy": "Principales Movimientos (Estados) – A/A",
+    "top_movers_municipalities_yoy": "Principales Movimientos (Municipios) – A/A",
     "select_location": "Selecciona una ubicación para ver las tendencias de precios",
+    "view_all": "Ver Todo",
+    "explore_charts": "Explorar Gráficos",
+    "calculate_costs": "Calcular Costos",
+    "quick_actions_title": "Comenzar",
+    "explore_charts_action": "Explorar Gráficos de Precios",
+    "explore_charts_action_desc": "Ver gráficos interactivos para cualquier ubicación",
+    "calculate_costs_action": "Calcular Costos",
+    "calculate_costs_action_desc": "Estima costos de compra, propiedad y venta",
+    "explore_map_action": "Explorar Mapa",
+    "explore_map_action_desc": "Visualiza datos en un mapa interactivo",
+    "get_started": "Comenzar",
+    "calculate_now": "Calcular Ahora",
+    "view_map": "Ver Mapa",
     "historical_data_title": "Datos Históricos",
     "historical_data_description": "Accede a más de 20 años de datos trimestrales de precios de bienes raíces de SHF",
     "geographic_coverage_title": "Cobertura Geográfica",
@@ -206,52 +221,62 @@
         "isai": {
           "label": "Impuesto sobre Adquisición de Inmuebles (ISAI)",
           "helper": "Típico: 2% - 4.5% del valor de la propiedad",
-          "note": "Un impuesto estatal de traslado. El porcentaje varía según el estado y el municipio."
+          "note": "Un impuesto estatal de traslado. El porcentaje varía según el estado y el municipio.",
+          "glossary": "El Impuesto sobre Adquisición de Inmuebles (ISAI) es un impuesto estatal de transferencia pagado por el comprador al adquirir bienes raíces en México. La tasa varía significativamente por estado (que van del 2% al 4.5%) y a veces por municipio. Este impuesto se calcula en base al valor de transacción de la propiedad y es uno de los mayores costos de cierre. Algunos estados ofrecen exenciones o tasas reducidas para compradores primerizos o familias de bajos ingresos. El impuesto debe pagarse antes de que se complete la transferencia de la propiedad."
         },
         "notaryFees": {
           "label": "Honorarios de Notario",
           "helper": "Típico: 0.5% - 2% del valor de la propiedad",
-          "note": "Cubre al notario designado por el gobierno que certifica la transacción."
+          "note": "Cubre al notario designado por el gobierno que certifica la transacción.",
+          "glossary": "Los honorarios notariales cubren los servicios de un notario público mexicano (notario público), quien es un profesional legal designado por el gobierno requerido para supervisar las transacciones inmobiliarias en México. A diferencia de Estados Unidos, los notarios mexicanos son abogados altamente capacitados con autoridad exclusiva para certificar transferencias de propiedad. Sus honorarios generalmente oscilan entre el 0.5% y el 2% del valor de la propiedad y cubren la preparación de documentos, verificación legal, certificación de título y registro en el Registro Público. El notario asegura que la transacción cumpla con la ley mexicana y maneja la transferencia del título."
         },
         "registrationFees": {
           "label": "Derechos de Registro de la Propiedad",
           "helper": "Típico: 0.5% - 1% del valor de la propiedad",
-          "note": "Registro oficial en el Registro Público de la Propiedad."
+          "note": "Registro oficial en el Registro Público de la Propiedad.",
+          "glossary": "Los derechos de registro de propiedad se pagan para registrar la transferencia de propiedad en el Registro Público de la Propiedad. Este registro oficial crea un registro público de su propiedad y es esencial para establecer el título legal. La tarifa generalmente oscila entre el 0.5% y el 1% del valor de la propiedad y varía según el estado y el municipio. Sin el registro adecuado, no puede probar la propiedad legal o vender la propiedad en el futuro. El notario público generalmente maneja este registro como parte del proceso de cierre."
         },
         "fideicomisoSetup": {
           "label": "Constitución de Fideicomiso Bancario",
           "helper": "Cuota fija típica: $1,500 - $2,000 USD",
-          "note": "Requerido como trámite único para compradores extranjeros en zonas restringidas."
+          "note": "Requerido como trámite único para compradores extranjeros en zonas restringidas.",
+          "glossary": "Un fideicomiso bancario es requerido para compradores extranjeros que compran propiedad en las zonas restringidas de México (dentro de 50 km de la costa o 100 km de la frontera). Esta estructura de fideicomiso permite a los extranjeros tener propiedad beneficiosa de la propiedad mientras un banco mexicano posee el título legal. La tarifa de configuración inicial generalmente oscila entre $1,500 y $2,000 USD y es un costo único pagado durante el cierre. El fideicomiso tiene un plazo de 50 años (renovable) y proporciona los mismos derechos que la propiedad directa, incluida la capacidad de vender, alquilar o legar la propiedad. Se aplican tarifas de mantenimiento anual después de la configuración inicial."
         },
         "foreignAffairsPermit": {
           "label": "Permiso de la Secretaría de Relaciones Exteriores",
           "helper": "Cuota fija típica: ~$7,500 MXN",
-          "note": "Permiso necesario para compradores extranjeros emitido por la SRE."
+          "note": "Permiso necesario para compradores extranjeros emitido por la SRE.",
+          "glossary": "El Permiso del Ministerio de Relaciones Exteriores (permiso de la Secretaría de Relaciones Exteriores) es requerido para compradores extranjeros que compran propiedad en zonas restringidas a través de un fideicomiso. Este permiso otorga permiso para establecer el fideicomiso bancario y debe obtenerse antes de que se complete la transferencia de la propiedad. La tarifa es típicamente alrededor de 7,500 MXN y es un costo único. El proceso de solicitud generalmente es manejado por el notario o banco que establece el fideicomiso, y puede tomar varias semanas procesar. Este permiso es obligatorio para todos los compradores extranjeros en zonas restringidas."
         },
         "legalFees": {
           "label": "Servicios Legales / Abogado",
           "helper": "Típico: $1,500 - $3,000+ USD",
-          "note": "Debida diligencia, revisión de contratos y supervisión de la transacción."
+          "note": "Debida diligencia, revisión de contratos y supervisión de la transacción.",
+          "glossary": "Los servicios legales y de abogado incluyen diligencia debida, revisión de contratos, verificación de título y supervisión de transacciones. Aunque el notario público maneja la transferencia legal, muchos compradores contratan un abogado independiente para revisar contratos, verificar condiciones de la propiedad, verificar gravámenes o cargas, y asegurar que sus intereses estén protegidos. Los honorarios legales generalmente oscilan entre $1,500 y $3,000+ USD dependiendo de la complejidad de la transacción y la experiencia del abogado. Esto es especialmente recomendado para compradores extranjeros no familiarizados con la ley inmobiliaria mexicana."
         },
         "iva": {
           "label": "IVA (Impuesto al Valor Agregado)",
           "helper": "Típico: 16% aplicado a servicios profesionales",
-          "note": "Frecuentemente se aplica a los honorarios notariales y legales."
+          "note": "Frecuentemente se aplica a los honorarios notariales y legales.",
+          "glossary": "IVA (Impuesto al Valor Agregado) es el impuesto al valor agregado de México, similar al impuesto sobre las ventas en Estados Unidos pero aplicado a servicios. La tasa estándar es del 16% y se aplica a servicios profesionales como honorarios notariales, servicios legales y otros honorarios profesionales durante el proceso de cierre. El IVA no se aplica a la compra de la propiedad en sí (los bienes raíces residenciales están exentos), pero sí se aplica a los servicios prestados. Por ejemplo, si los honorarios notariales son 30,000 MXN, el total con IVA sería 34,800 MXN (30,000 + 16%). Este impuesto es obligatorio y no se puede evitar."
         },
         "appraisalFees": {
           "label": "Avalúo",
           "helper": "Cuota fija típica: $300 - $600 USD",
-          "note": "Valuación de la propiedad para efectos fiscales y de diligencia."
+          "note": "Valuación de la propiedad para efectos fiscales y de diligencia.",
+          "glossary": "Los honorarios de avalúo cubren el costo de una valoración profesional de la propiedad realizada por un avaluador con licencia. Esta evaluación determina el valor de mercado de la propiedad, que se usa para cálculos de impuestos (incluyendo ISAI e impuestos prediales) y propósitos de diligencia debida. Los prestamistas también pueden requerir un avalúo si está financiando la compra. Los honorarios de avalúo generalmente oscilan entre $300 y $600 USD y generalmente se pagan directamente al avaluador."
         },
         "titleInsurance": {
           "label": "Seguro de Título",
           "helper": "Típico: 0.5% - 1% del valor de la propiedad (opcional)",
-          "note": "Protección contra disputas sobre la titularidad. Opcional según el nivel de riesgo."
+          "note": "Protección contra disputas sobre la titularidad. Opcional según el nivel de riesgo.",
+          "glossary": "El seguro de título protege a los compradores contra pérdidas por defectos de título, gravámenes, cargas o disputas de propiedad que pueden surgir después de la compra. Aunque es común en Estados Unidos, el seguro de título es opcional en México y no se usa ampliamente. El costo generalmente oscila entre el 0.5% y el 1% del valor de la propiedad y es una prima única. El seguro de título puede proporcionar tranquilidad, especialmente para compradores extranjeros, pero muchas transacciones proceden sin él ya que el proceso de diligencia debida del notario público es exhaustivo."
         },
         "escrowFees": {
           "label": "Honorarios de Fideicomiso/Escrow",
           "helper": "Cuota fija típica: ~$500 USD",
-          "note": "Tercero neutral que resguarda los fondos durante la transacción."
+          "note": "Tercero neutral que resguarda los fondos durante la transacción.",
+          "glossary": "Los honorarios de escrow cubren el costo de usar un tercero neutral (agente de escrow) para resguardar fondos y documentos durante la transacción hasta que se cumplan todas las condiciones. Los servicios de escrow brindan seguridad tanto para el comprador como para el vendedor al garantizar que los fondos solo se liberen cuando la transacción esté completa y todas las obligaciones se hayan cumplido. Aunque no es obligatorio en México, el escrow se usa comúnmente en transacciones internacionales y proporciona una capa adicional de protección. Los honorarios suelen rondar los $500 USD y generalmente se dividen entre comprador y vendedor."
         }
       }
     },
@@ -282,27 +307,32 @@
         "propertyTaxes": {
           "label": "Impuesto Predial",
           "helper": "Tasa anual típica: 0.1% - 0.15% del valor catastral",
-          "note": "Se paga de forma anual con base en el valor catastral. Suele haber descuentos por pago anticipado."
+          "note": "Se paga de forma anual con base en el valor catastral. Suele haber descuentos por pago anticipado.",
+          "glossary": "Los impuestos prediales son impuestos anuales pagados al municipio local basados en el valor catastral evaluado por el gobierno de la propiedad. La tasa generalmente oscila entre el 0.1% y el 0.15% del valor catastral, que generalmente es menor que el valor de mercado. Estos impuestos financian infraestructura y servicios locales. La mayoría de los municipios ofrecen descuentos significativos (a menudo 10-25%) por pago anticipado, con el descuento disminuyendo a medida que se acerca la fecha límite de pago. Los impuestos prediales son obligatorios y el incumplimiento del pago puede resultar en multas, gravámenes o incluso el embargo de la propiedad."
         },
         "hoaFees": {
           "label": "Cuotas de Asociación de Condóminos (HOA)",
           "helper": "Cuota mensual típica: MXN 2,000 – 6,000",
-          "note": "Obligatorias para condominios o fraccionamientos cerrados; cubren amenidades, seguridad y mantenimiento."
+          "note": "Obligatorias para condominios o fraccionamientos cerrados; cubren amenidades, seguridad y mantenimiento.",
+          "glossary": "Las cuotas de la Asociación de Condóminos (HOA), conocidas como 'cuotas de mantenimiento' en México, son tarifas mensuales pagadas por los propietarios en condominios, fraccionamientos cerrados y desarrollos planificados. Estas tarifas son obligatorias y cubren gastos compartidos como jardinería, servicios de seguridad, mantenimiento de piscinas, mantenimiento de áreas comunes, seguro del edificio y costos administrativos. Las tarifas típicamente oscilan entre MXN 2,000 y 6,000 por mes pero pueden ser más altas para desarrollos de lujo con amenidades extensas. Las cuotas HOA son establecidas por la asociación de propietarios y pueden aumentar con el tiempo."
         },
         "fideicomisoAnnual": {
           "label": "Cuota Anual de Fideicomiso Bancario",
           "helper": "Cuota anual típica: MXN 10,000 – 20,000 ($500 - $900 USD)",
-          "note": "Requerida para propietarios extranjeros en zonas restringidas. Se paga al banco fiduciario."
+          "note": "Requerida para propietarios extranjeros en zonas restringidas. Se paga al banco fiduciario.",
+          "glossary": "La tarifa anual del fideicomiso bancario es una tarifa de mantenimiento obligatoria pagada al banco fiduciario por propietarios extranjeros en las zonas restringidas de México. Esta tarifa cubre los costos administrativos del banco para mantener el fideicomiso, incluyendo mantenimiento de registros, reportes fiscales y administración del fideicomiso. Las tarifas anuales generalmente oscilan entre MXN 10,000 y 20,000 (aproximadamente $500 a $900 USD) y varían según el banco y el valor de la propiedad. El fideicomiso tiene un plazo de 50 años (renovable) y esta tarifa anual debe pagarse durante toda la duración."
         },
         "insurance": {
           "label": "Seguro",
           "helper": "Prima anual típica: MXN 8,000 – 20,000 (según cobertura)",
-          "note": "Recomendado para cobertura contra huracanes, terremotos y robo."
+          "note": "Recomendado para cobertura contra huracanes, terremotos y robo.",
+          "glossary": "El seguro de propiedad en México es altamente recomendado, especialmente en áreas costeras propensas a huracanes y regiones con riesgo de terremotos. El seguro típicamente cubre desastres naturales (huracanes, terremotos, inundaciones), incendio, robo y responsabilidad. Las primas anuales generalmente oscilan entre MXN 8,000 y 20,000 dependiendo de los límites de cobertura, valor de la propiedad, ubicación y factores de riesgo. Aunque no es legalmente requerido, el seguro proporciona protección esencial dada la exposición de México a desastres naturales."
         },
         "propertyManagement": {
           "label": "Comisión de Administración",
           "helper": "Típico: 8% - 15% del ingreso anual por renta",
-          "note": "Se aplica si se renta la propiedad mediante un servicio de administración externo."
+          "note": "Se aplica si se renta la propiedad mediante un servicio de administración externo.",
+          "glossary": "Las comisiones de administración de propiedades son cobradas por empresas terceras que manejan la administración día a día de propiedades en renta. Estos servicios típicamente incluyen selección de inquilinos, cobro de renta, mantenimiento de la propiedad, marketing, contabilidad y manejo de problemas con inquilinos. Las tarifas de administración generalmente oscilan entre el 8% y el 15% del ingreso mensual por renta y generalmente se pagan mensualmente. Para propietarios ausentes o aquellos que no quieren lidiar con la administración de inquilinos, los servicios de administración de propiedades son esenciales."
         }
       }
     },
@@ -349,7 +379,19 @@
       "other_costs_label": "Otros costos estimados",
       "total_costs": "Costos totales estimados",
       "percent_of_sale": "Porcentaje del precio de venta",
-      "disclaimer": "Los impuestos reales los determina el Notario Público y el SAT. Conserva tus facturas y consulta profesionales para cálculos exactos."
+      "disclaimer": "Los impuestos reales los determina el Notario Público y el SAT. Conserva tus facturas y consulta profesionales para cálculos exactos.",
+      "glossary": {
+        "capital_gains_tax": "El impuesto sobre la ganancia de capital (ISR - Impuesto Sobre la Renta) es un impuesto sobre la ganancia de la venta de bienes raíces en México. Para residentes, el impuesto se calcula sobre la ganancia gravable (precio de venta menos precio de compra, mejoras y deducciones) y usa un sistema de tasas progresivas. Si la ganancia gravable excede 250,000 MXN, la porción por encima de 250,000 MXN se grava al 35%. Los residentes pueden calificar para una exención de residencia principal de hasta aproximadamente 5,500,000 MXN si se cumplen ciertas condiciones. Los no residentes pagan un impuesto de tasa fija del 35% sobre la ganancia neta. La documentación adecuada (facturas) es esencial para reclamar deducciones y exenciones.",
+        "agent_commission": "La comisión del agente inmobiliario es la tarifa pagada al agente o corredor inmobiliario que facilita la venta. Las tasas de comisión generalmente oscilan entre el 5% y el 8% del precio de venta, siendo el 6% el más común. Esta comisión está sujeta a IVA (16% de impuesto al valor agregado), por lo que el costo total incluye tanto la comisión como el impuesto. La comisión generalmente se paga al cierre y es negociable.",
+        "fideicomiso_cancellation": "La tarifa de cancelación de fideicomiso es cobrada por el banco fiduciario cuando un propietario extranjero vende una propiedad mantenida en un fideicomiso bancario. Esta tarifa administrativa cubre los costos del banco para cancelar el fideicomiso, liberar el título y transferir la propiedad al nuevo comprador. La tarifa generalmente oscila entre MXN 15,000 y 25,000 y varía según el banco. Esta es una tarifa única pagada al cierre y solo es aplicable si la propiedad estaba mantenida en un fideicomiso. La tarifa también está sujeta a IVA (16%).",
+        "attorney_fees": "Los honorarios de abogado o asesor legal para vendedores cubren servicios como revisión de contratos, asistencia en negociaciones, diligencia debida y supervisión de transacciones. Aunque no son obligatorios, muchos vendedores contratan un abogado para asegurar que sus intereses estén protegidos, especialmente en transacciones complejas o al vender a compradores extranjeros. Los honorarios generalmente oscilan entre MXN 20,000 y 50,000+ y están sujetos a IVA (16%).",
+        "iva": "IVA (Impuesto al Valor Agregado) es el impuesto al valor agregado de México aplicado a servicios profesionales. La tasa estándar es del 16% y se aplica a comisiones de agentes inmobiliarios, honorarios de abogados, tarifas de cancelación de fideicomiso y otros servicios profesionales durante la venta. El IVA no se aplica a la venta de la propiedad en sí (las ventas de bienes raíces residenciales están exentas de IVA), pero sí se aplica a los servicios prestados.",
+        "primary_residence_exemption": "La exención de residencia principal permite a los residentes fiscales mexicanos excluir hasta aproximadamente 5,500,000 MXN (aproximadamente 700,000 UDIs) del impuesto sobre la ganancia de capital al vender su residencia principal. Para calificar, debe tener: (1) un RFC (ID fiscal mexicano), (2) un CURP (ID nacional mexicano), (3) haber usado la propiedad como su residencia principal, y (4) no haber reclamado esta exención en los últimos 3 años. Esta exención reduce significativamente o elimina el impuesto sobre la ganancia de capital para muchos vendedores.",
+        "taxable_gain": "La ganancia gravable es la ganancia de la venta después de restar la base de costo (precio de compra original), mejoras de capital (con facturas), deducciones permitidas (costos de cierre, gastos de venta) y exenciones aplicables (como la exención de residencia principal). La fórmula es: Precio de Venta - Precio de Compra - Mejoras - Deducciones - Exenciones = Ganancia Gravable. Solo la ganancia gravable está sujeta al impuesto sobre la ganancia de capital. Si la ganancia gravable es cero o negativa (vendió con pérdida), no se debe impuesto sobre la ganancia de capital.",
+        "purchase_price": "El precio de compra original es el monto que pagó cuando compró la propiedad por primera vez. Esta es la base de costo de referencia utilizada para calcular sus ganancias de capital. Debe coincidir con el precio de compra indicado en su escritura original (escritura). Si compró la propiedad en una moneda extranjera, use el tipo de cambio al momento de la compra para convertir a MXN. Este monto se resta del precio de venta para determinar su ganancia inicial.",
+        "capital_improvements": "Las mejoras de capital son mejoras permanentes realizadas en la propiedad que aumentan su valor, como renovaciones, adiciones, reparaciones mayores o mejoras de infraestructura. Para reclamar estas mejoras como deducciones, debe tener facturas (facturas oficiales mexicanas con ID fiscal) para todos los gastos. Las mejoras comunes incluyen remodelaciones de cocina, renovaciones de baño, adiciones de habitaciones, techos nuevos, mejoras de plomería o eléctricas, y paisajismo. El mantenimiento regular y las reparaciones no se consideran mejoras de capital.",
+        "deductible_costs": "Las deducciones permitidas de cierre incluyen gastos directamente relacionados con la venta de la propiedad que pueden restarse de sus ganancias de capital. Estos típicamente incluyen: comisiones de agentes inmobiliarios, honorarios notariales, honorarios legales, seguro de título, honorarios de escrow, impuestos de transferencia y otros costos de cierre pagados durante la venta. Estas deducciones reducen su ganancia gravable, reduciendo así su impuesto sobre la ganancia de capital."
+      }
     }
   },
   "calculators_page": {

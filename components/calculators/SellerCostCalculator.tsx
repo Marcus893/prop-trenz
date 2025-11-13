@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'next-i18next'
+import { InfoIcon } from '@/components/ui/tooltip'
 
 const DEFAULT_PRIMARY_RESIDENCE_EXEMPTION = '5500000'
 
@@ -227,9 +228,16 @@ export function SellerCostCalculator() {
         </div>
         <div className="grid gap-4 md:grid-cols-2">
           <div className="space-y-2">
-            <label className="block text-sm font-medium text-gray-700">
-              {t('calculators.seller_cost.purchase_price_label', 'Original purchase price')}
-            </label>
+            <div className="flex items-center gap-2">
+              <label className="block text-sm font-medium text-gray-700">
+                {t('calculators.seller_cost.purchase_price_label', 'Original purchase price')}
+              </label>
+              <InfoIcon
+                content={t('calculators.seller_cost.glossary.purchase_price', 'The original purchase price is the amount you paid when you first bought the property. This is the baseline cost basis used to calculate your capital gains. It should match the purchase price stated in your original deed (escritura).')}
+                className="flex-shrink-0"
+                iconClassName="h-3 w-3"
+              />
+            </div>
             <div className="relative rounded-lg">
               <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
                 <span className="text-gray-500 sm:text-sm">$</span>
@@ -247,9 +255,16 @@ export function SellerCostCalculator() {
             </div>
           </div>
           <div className="space-y-2">
-            <label className="block text-sm font-medium text-gray-700">
-              {t('calculators.seller_cost.improvements_label', 'Capital improvements (facturas)')}
-            </label>
+            <div className="flex items-center gap-2">
+              <label className="block text-sm font-medium text-gray-700">
+                {t('calculators.seller_cost.improvements_label', 'Capital improvements (facturas)')}
+              </label>
+              <InfoIcon
+                content={t('calculators.seller_cost.glossary.capital_improvements', 'Capital improvements are permanent enhancements made to the property that increase its value, such as renovations, additions, major repairs, or infrastructure upgrades. To claim these improvements as deductions, you must have facturas (official Mexican invoices with tax ID) for all expenses.')}
+                className="flex-shrink-0"
+                iconClassName="h-3 w-3"
+              />
+            </div>
             <div className="relative rounded-lg">
               <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
                 <span className="text-gray-500 sm:text-sm">$</span>
@@ -267,9 +282,16 @@ export function SellerCostCalculator() {
             </div>
           </div>
           <div className="space-y-2">
-            <label className="block text-sm font-medium text-gray-700">
-              {t('calculators.seller_cost.deductible_costs_label', 'Allowable closing deductions')}
-            </label>
+            <div className="flex items-center gap-2">
+              <label className="block text-sm font-medium text-gray-700">
+                {t('calculators.seller_cost.deductible_costs_label', 'Allowable closing deductions')}
+              </label>
+              <InfoIcon
+                content={t('calculators.seller_cost.glossary.deductible_costs', 'Allowable closing deductions include expenses directly related to the sale of the property that can be subtracted from your capital gains. These typically include: real estate agent commissions, notary fees, legal fees, title insurance, escrow fees, transfer taxes, and other closing costs paid during the sale.')}
+                className="flex-shrink-0"
+                iconClassName="h-3 w-3"
+              />
+            </div>
             <div className="relative rounded-lg">
               <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
                 <span className="text-gray-500 sm:text-sm">$</span>
@@ -286,14 +308,21 @@ export function SellerCostCalculator() {
               />
             </div>
           </div>
-          {state.residencyStatus === 'resident' && (
+            {state.residencyStatus === 'resident' && (
             <div className="space-y-2">
-              <label className="block text-sm font-medium text-gray-700">
-                {t(
-                  'calculators.seller_cost.primary_residence_exemption_label',
-                  'Primary residence exemption (MXN)'
-                )}
-              </label>
+              <div className="flex items-center gap-2">
+                <label className="block text-sm font-medium text-gray-700">
+                  {t(
+                    'calculators.seller_cost.primary_residence_exemption_label',
+                    'Primary residence exemption (MXN)'
+                  )}
+                </label>
+                <InfoIcon
+                  content={t('calculators.seller_cost.glossary.primary_residence_exemption', 'The primary residence exemption allows Mexican tax residents to exclude up to approximately 5,500,000 MXN from capital gains tax when selling their primary residence. To qualify, you must have an RFC, CURP, used the property as your primary residence, and not have claimed this exemption in the past 3 years.')}
+                  className="flex-shrink-0"
+                  iconClassName="h-3 w-3"
+                />
+              </div>
               <div className="relative rounded-lg">
                 <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
                   <span className="text-gray-500 sm:text-sm">$</span>
@@ -332,9 +361,15 @@ export function SellerCostCalculator() {
       <section className="bg-white shadow-sm rounded-xl border border-gray-100 p-6 space-y-6 transition-shadow">
         <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
           <div className="space-y-2 md:flex-1">
-            <h3 className="text-lg font-semibold text-gray-900">
-              {t('calculators.seller_cost.capital_gains_title', 'Capital gains tax (ISR)')}
-            </h3>
+            <div className="flex items-center gap-2">
+              <h3 className="text-lg font-semibold text-gray-900">
+                {t('calculators.seller_cost.capital_gains_title', 'Capital gains tax (ISR)')}
+              </h3>
+              <InfoIcon
+                content={t('calculators.seller_cost.glossary.capital_gains_tax', 'Capital gains tax (ISR - Impuesto Sobre la Renta) is a tax on the profit from selling real estate in Mexico. For residents, the tax is calculated on the taxable gain and uses a progressive rate system. Non-residents pay a flat 35% tax on the net gain.')}
+                className="flex-shrink-0"
+              />
+            </div>
             <p className="text-sm text-gray-600">
               {t(
                 'calculators.seller_cost.capital_gains_helper',
@@ -343,9 +378,11 @@ export function SellerCostCalculator() {
             </p>
           </div>
           <div className="space-y-2 md:w-60">
-            <label className="block text-sm font-medium text-gray-700">
-              {t('calculators.seller_cost.capital_gains_rate_label', 'Estimated tax rate (%)')}
-            </label>
+            <div className="flex items-center gap-2">
+              <label className="block text-sm font-medium text-gray-700">
+                {t('calculators.seller_cost.capital_gains_rate_label', 'Estimated tax rate (%)')}
+              </label>
+            </div>
             <input
               type="text"
               inputMode="decimal"
@@ -371,8 +408,15 @@ export function SellerCostCalculator() {
           </div>
         </div>
         <div className="rounded-lg bg-gray-50 p-4 space-y-2">
-          <div className="flex justify-between text-sm text-gray-600">
-            <span>{t('calculators.seller_cost.taxable_gain_label', 'Taxable gain')}</span>
+          <div className="flex justify-between items-center text-sm text-gray-600">
+            <div className="flex items-center gap-1">
+              <span>{t('calculators.seller_cost.taxable_gain_label', 'Taxable gain')}</span>
+              <InfoIcon
+                content={t('calculators.seller_cost.glossary.taxable_gain', 'Taxable gain is the profit from the sale after subtracting the cost basis (original purchase price), capital improvements (with facturas), allowable deductions, and applicable exemptions. Only the taxable gain is subject to capital gains tax.')}
+                className="flex-shrink-0"
+                iconClassName="h-3 w-3"
+              />
+            </div>
             <span>{formatCurrencyMaybe(taxableGain)}</span>
           </div>
           <div className="flex justify-between text-sm text-gray-600">
@@ -389,9 +433,15 @@ export function SellerCostCalculator() {
       <section className="bg-white shadow-sm rounded-xl border border-gray-100 p-6 space-y-6 transition-shadow">
         <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
           <div className="space-y-2 md:flex-1">
-            <h3 className="text-lg font-semibold text-gray-900">
-              {t('calculators.seller_cost.agent_commission_title', 'Real estate agent commission')}
-            </h3>
+            <div className="flex items-center gap-2">
+              <h3 className="text-lg font-semibold text-gray-900">
+                {t('calculators.seller_cost.agent_commission_title', 'Real estate agent commission')}
+              </h3>
+              <InfoIcon
+                content={t('calculators.seller_cost.glossary.agent_commission', 'Real estate agent commission is the fee paid to the real estate agent or broker who facilitates the sale. Commission rates typically range from 5% to 8% of the sale price, with 6% being most common. This commission is subject to IVA (16% value-added tax).')}
+                className="flex-shrink-0"
+              />
+            </div>
             <p className="text-sm text-gray-600">
               {t(
                 'calculators.seller_cost.agent_commission_helper',
@@ -431,9 +481,16 @@ export function SellerCostCalculator() {
             <p className="text-2xl font-semibold text-gray-900">
               {formatCurrencyMXN(agentCommission)}
             </p>
-            <p className="text-xs text-gray-500">
-              {t('calculators.seller_cost.agent_commission_breakdown', 'Includes IVA on commission')}
-            </p>
+            <div className="flex items-center gap-1">
+              <p className="text-xs text-gray-500">
+                {t('calculators.seller_cost.agent_commission_breakdown', 'Includes IVA on commission')}
+              </p>
+              <InfoIcon
+                content={t('calculators.seller_cost.glossary.iva', 'IVA (Impuesto al Valor Agregado) is Mexico\'s value-added tax applied to professional services. The standard rate is 16% and applies to real estate agent commissions, attorney fees, and other professional services during the sale.')}
+                className="flex-shrink-0"
+                iconClassName="h-3 w-3"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -441,9 +498,15 @@ export function SellerCostCalculator() {
       <section className="bg-white shadow-sm rounded-xl border border-gray-100 p-6 space-y-6 transition-shadow">
         <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
           <div className="space-y-2 md:flex-1">
-            <h3 className="text-lg font-semibold text-gray-900">
-              {t('calculators.seller_cost.attorney_title', 'Legal or closing advisor')}
-            </h3>
+            <div className="flex items-center gap-2">
+              <h3 className="text-lg font-semibold text-gray-900">
+                {t('calculators.seller_cost.attorney_title', 'Legal or closing advisor')}
+              </h3>
+              <InfoIcon
+                content={t('calculators.seller_cost.glossary.attorney_fees', 'Attorney or legal advisor fees for sellers cover services such as contract review, negotiation assistance, due diligence, and transaction oversight. Fees typically range from MXN 20,000 to 50,000+ and are subject to IVA (16%).')}
+                className="flex-shrink-0"
+              />
+            </div>
             <p className="text-sm text-gray-600">
               {t(
                 'calculators.seller_cost.attorney_helper',
@@ -486,9 +549,16 @@ export function SellerCostCalculator() {
               {t('calculators.seller_cost.attorney_estimate_label', 'Estimated cost')}
             </p>
             <p className="text-2xl font-semibold text-gray-900">{formatCurrencyMXN(attorneyFee)}</p>
-            <p className="text-xs text-gray-500">
-              {t('calculators.seller_cost.professional_fee_breakdown', 'Includes IVA on professional fees')}
-            </p>
+                <div className="flex items-center gap-1">
+                  <p className="text-xs text-gray-500">
+                    {t('calculators.seller_cost.professional_fee_breakdown', 'Includes IVA on professional fees')}
+                  </p>
+                  <InfoIcon
+                    content={t('calculators.seller_cost.glossary.iva', 'IVA (Impuesto al Valor Agregado) is Mexico\'s value-added tax applied to professional services. The standard rate is 16% and applies to real estate agent commissions, attorney fees, fideicomiso cancellation fees, and other professional services during the sale.')}
+                    className="flex-shrink-0"
+                    iconClassName="h-3 w-3"
+                  />
+                </div>
           </div>
         </div>
       </section>
@@ -496,9 +566,15 @@ export function SellerCostCalculator() {
       <section className="bg-white shadow-sm rounded-xl border border-gray-100 p-6 space-y-6 transition-shadow">
         <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
           <div className="space-y-2 md:flex-1">
-            <h3 className="text-lg font-semibold text-gray-900">
-              {t('calculators.seller_cost.fideicomiso_title', 'Fideicomiso (bank trust) cancellation')}
-            </h3>
+            <div className="flex items-center gap-2">
+              <h3 className="text-lg font-semibold text-gray-900">
+                {t('calculators.seller_cost.fideicomiso_title', 'Fideicomiso (bank trust) cancellation')}
+              </h3>
+              <InfoIcon
+                content={t('calculators.seller_cost.glossary.fideicomiso_cancellation', 'Fideicomiso cancellation fee is charged by the trustee bank when a foreign owner sells property held in a bank trust. This administrative fee covers the bank\'s costs to cancel the trust, release the title, and transfer ownership. The fee typically ranges from MXN 15,000 to 25,000 and is subject to IVA (16%).')}
+                className="flex-shrink-0"
+              />
+            </div>
             <p className="text-sm text-gray-600">
               {t(
                 'calculators.seller_cost.fideicomiso_helper',

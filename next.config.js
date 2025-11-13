@@ -11,6 +11,16 @@ const nextConfig = {
         hostname: 'oaidalleapiprodscus.blob.core.windows.net',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'th.bing.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'bing.com',
+        pathname: '/**',
+      },
     ],
     // Allow data URLs for Gemini-generated images (base64)
     dangerouslyAllowSVG: true,

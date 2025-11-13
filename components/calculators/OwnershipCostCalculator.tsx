@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'next-i18next'
+import { InfoIcon } from '@/components/ui/tooltip'
 
 type PercentageBase = 'propertyValue' | 'rentalIncome'
 
@@ -397,6 +398,10 @@ export function OwnershipCostCalculator() {
                     <h3 className="text-lg font-semibold text-gray-900">
                       {t(item.labelKey, item.labelDefault)}
                     </h3>
+                    <InfoIcon
+                      content={t(`${item.labelKey.replace('.label', '.glossary')}`, item.noteDefault)}
+                      className="flex-shrink-0"
+                    />
                     {!item.required && (
                       <span className="inline-flex items-center rounded-full bg-blue-50 px-3 py-0.5 text-xs font-medium text-blue-700">
                         {t('calculators.ownership_cost.optional_label', 'Optional')}

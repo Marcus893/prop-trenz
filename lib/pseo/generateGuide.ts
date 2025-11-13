@@ -7,10 +7,14 @@ const DEFAULT_TAGS = ['mexico-real-estate', 'market-intelligence']
 
 export async function generateGuide(params: GenerateGuideParams): Promise<GuideArticle> {
   const accessLevel = params.accessLevel ?? 'public'
-  const tags = params.tags && params.tags.length > 0 ? params.tags : DEFAULT_TAGS
 
   console.log('[pSEO] Generating guide content...')
   const draft = await generateGuideDraft(params)
+  
+  // Determine tags: prefer AI-generated tags, then provided tags, then defaults
+  const tags = draft.tags && draft.tags.length > 0 
+    ? draft.tags 
+    : (params.tags && params.tags.length > 0 ? params.tags : DEFAULT_TAGS)
 
   // Generate images (unless skipped)
   let mainImageUrl: string | undefined

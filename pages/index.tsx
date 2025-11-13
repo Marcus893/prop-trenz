@@ -1,16 +1,26 @@
 import React, { useState } from 'react'
 import { Layout } from '@/components/Layout'
-import { GeographicNavigator } from '@/components/navigation/GeographicNavigator'
-import { PriceChart } from '@/components/charts/PriceChart'
 import { Card } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
 import { LogoSVG } from '@/components/ui/Logo'
+import { AnimatedCounter } from '@/components/ui/AnimatedCounter'
 import { useTranslation } from 'next-i18next'
-import { TrendingUp, MapPin, BarChart3 } from 'lucide-react'
-import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ReferenceLine } from 'recharts'
+import { useRouter } from 'next/router'
+import { 
+  TrendingUp, 
+  MapPin, 
+  BarChart3, 
+  Calculator, 
+  ArrowRight,
+  ChevronRight,
+  Sparkles,
+  Zap
+} from 'lucide-react'
+import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ReferenceLine, Area, AreaChart } from 'recharts'
 import { GetStaticProps } from 'next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import { db, Location } from '@/lib/supabase'
-import { getValidLocale } from '@/utils/i18n'
+import { db } from '@/lib/supabase'
+import { useTracking } from '@/lib/useTracking'
 
 type TopMover = { id: string; name: string; growthYoY: number; state?: string }
 
@@ -27,12 +37,20 @@ interface HomeProps {
 
 export default function HomePage({ nationalSnapshot, nationalTrend = [], topMoversStates, topMoversCities }: HomeProps) {
   const { t } = useTranslation('common')
-  const [selectedLocationId, setSelectedLocationId] = useState<string>('')
-  const [selectedLocationName, setSelectedLocationName] = useState<string>('')
+  const router = useRouter()
+  const { track } = useTracking()
+
+  // Format trend data for chart
+  const chartData = nationalTrend.map((point) => ({
+    period: `${point.year}Q${point.quarter}`,
+    value: Number(point.index_value),
+    year: point.year,
+    quarter: point.quarter
+  }))
 
   const getMiniYAxisDomain = () => {
-    if (!nationalTrend || nationalTrend.length === 0) return [0, 100]
-    const values = nationalTrend.map(p => Number(p.index_value))
+    if (!chartData || chartData.length === 0) return [0, 100]
+    const values = chartData.map(p => p.value)
     const min = Math.min(...values)
     const max = Math.max(...values)
     const range = Math.max(1, max - min)
@@ -40,113 +58,280 @@ export default function HomePage({ nationalSnapshot, nationalTrend = [], topMove
     return [Math.max(0, min - pad), max + pad]
   }
 
-  const handleLocationSelect = (locationId: string) => {
-    setSelectedLocationId(locationId)
-    // In a real app, you'd fetch the location name from the database
-    setSelectedLocationName('Selected Location')
+  const handleExploreCharts = () => {
+    track('home_explore_charts_clicked')
+    router.push('/charts')
+  }
+
+  const handleExploreCalculators = () => {
+    track('home_explore_calculators_clicked')
+    router.push('/calculators')
   }
 
   return (
     <Layout>
       <div className="space-y-6">
         {/* Hero Section */}
-        <Card className="p-8 text-center bg-gradient-to-r from-blue-600 to-blue-700 text-white">
-          <div className="flex justify-center mb-6">
-            <LogoSVG showText={true} size="lg" className="text-white" style={{ height: '80px', width: 'auto' }} />
-          </div>
-          <p className="text-xl mb-6">
-            {t('home.hero_description', 'Explore Mexican Real Estate Price Trends with Interactive Charts and Geographic Navigation')}
-          </p>
-          <div className="flex justify-center gap-4">
-            <div className="flex items-center gap-2">
-              <TrendingUp className="h-5 w-5" />
-              <span>{t('home.years_of_data', '20+ Years of Data')}</span>
+        <Card className="p-8 md:p-12 text-center bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white relative overflow-hidden">
+          {/* Decorative background elements */}
+          <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500 opacity-10 rounded-full -mr-32 -mt-32"></div>
+          <div className="absolute bottom-0 left-0 w-48 h-48 bg-blue-400 opacity-10 rounded-full -ml-24 -mb-24"></div>
+          
+          <div className="relative z-10">
+            <div className="flex justify-center mb-6 animate-fade-in">
+              <LogoSVG showText={true} size="lg" className="text-white" style={{ height: '80px', width: 'auto' }} />
             </div>
-            <div className="flex items-center gap-2">
-              <MapPin className="h-5 w-5" />
-              <span>{t('home.states_and_cities', '32 States & 100+ Cities')}</span>
+            <h1 className="text-3xl md:text-4xl font-bold mb-4 animate-slide-up">
+              {t('home.hero_title', 'Mexican Real Estate Intelligence')}
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 text-blue-100 animate-slide-up delay-100">
+              {t('home.hero_description', 'Explore Price Trends, Calculate Costs, and Make Informed Decisions')}
+            </p>
+            
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8 animate-slide-up delay-200">
+              <Button
+                onClick={handleExploreCharts}
+                className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-3 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              >
+                <BarChart3 className="mr-2 h-5 w-5" />
+                {t('home.explore_charts', 'Explore Charts')}
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+              <Button
+                onClick={handleExploreCalculators}
+                className="bg-blue-500 text-white hover:bg-blue-400 px-8 py-3 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-blue-400"
+              >
+                <Calculator className="mr-2 h-5 w-5" />
+                {t('home.calculate_costs', 'Calculate Costs')}
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
             </div>
-            <div className="flex items-center gap-2">
-              <BarChart3 className="h-5 w-5" />
-              <span>{t('home.interactive_charts', 'Interactive Charts')}</span>
+
+            {/* Stats */}
+            <div className="flex flex-wrap justify-center gap-6 md:gap-8 animate-slide-up delay-300">
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 hover:bg-white/20 transition-colors">
+                <TrendingUp className="h-5 w-5" />
+                <span className="font-semibold">{t('home.years_of_data', '20+ Years of Data')}</span>
+              </div>
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 hover:bg-white/20 transition-colors">
+                <MapPin className="h-5 w-5" />
+                <span className="font-semibold">{t('home.states_and_cities', '32 States & 100+ Cities')}</span>
+              </div>
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 hover:bg-white/20 transition-colors">
+                <Sparkles className="h-5 w-5" />
+                <span className="font-semibold">{t('home.interactive_tools', 'Interactive Tools')}</span>
+              </div>
             </div>
           </div>
         </Card>
 
         {/* Quick Insights */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <Card className="p-6">
-            <h3 className="text-lg font-semibold mb-3">{t('home.national_snapshot', 'National Snapshot')}</h3>
-            <div className="grid grid-cols-2 gap-4">
+          <Card className="p-6 hover:shadow-lg transition-shadow duration-300 group">
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-lg font-semibold">{t('home.national_snapshot', 'National Snapshot')}</h3>
+              <Zap className="h-5 w-5 text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity" />
+            </div>
+            <div className="grid grid-cols-2 gap-4 mb-4">
               <div className="space-y-1">
                 <div className="text-gray-600 text-sm">{t('home.yoy', 'YoY')}</div>
-                <div className={`text-2xl font-semibold ${nationalSnapshot.yoy >= 0 ? 'text-green-600' : 'text-red-600'}`}>{nationalSnapshot.yoy.toFixed(1)}%</div>
+                <div className={`text-3xl font-bold ${nationalSnapshot.yoy >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+                  <AnimatedCounter value={nationalSnapshot.yoy} suffix="%" decimals={1} />
+                </div>
               </div>
               <div className="space-y-1">
                 <div className="text-gray-600 text-sm">{t('home.qoq', 'QoQ')}</div>
-                <div className={`text-2xl font-semibold ${nationalSnapshot.qoq >= 0 ? 'text-green-600' : 'text-red-600'}`}>{nationalSnapshot.qoq.toFixed(1)}%</div>
+                <div className={`text-3xl font-bold ${nationalSnapshot.qoq >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+                  <AnimatedCounter value={nationalSnapshot.qoq} suffix="%" decimals={1} />
+                </div>
               </div>
             </div>
+            
+            {/* Mini Trend Chart */}
+            {chartData.length > 0 && (
+              <div className="mt-4 h-24">
+                <ResponsiveContainer width="100%" height="100%">
+                  <AreaChart data={chartData.slice(-8)}>
+                    <defs>
+                      <linearGradient id="colorTrend" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="5%" stopColor="#3b82f6" stopOpacity={0.3}/>
+                        <stop offset="95%" stopColor="#3b82f6" stopOpacity={0}/>
+                      </linearGradient>
+                    </defs>
+                    <Area 
+                      type="monotone" 
+                      dataKey="value" 
+                      stroke="#3b82f6" 
+                      strokeWidth={2}
+                      fill="url(#colorTrend)"
+                      dot={false}
+                    />
+                    <XAxis 
+                      dataKey="period" 
+                      tick={{ fontSize: 10 }}
+                      interval="preserveStartEnd"
+                    />
+                    <Tooltip 
+                      contentStyle={{ 
+                        backgroundColor: 'white', 
+                        border: '1px solid #e5e7eb',
+                        borderRadius: '6px',
+                        fontSize: '12px'
+                      }}
+                      formatter={(value: number) => [`${value.toFixed(1)}`, 'Index']}
+                    />
+                  </AreaChart>
+                </ResponsiveContainer>
+              </div>
+            )}
           </Card>
 
-          <Card className="p-6">
-            <h3 className="text-lg font-semibold mb-2">{t('home.top_movers_states_yoy', 'Top Movers (States) – YoY')}</h3>
+          <Card className="p-6 hover:shadow-lg transition-shadow duration-300">
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-lg font-semibold">{t('home.top_movers_states_yoy', 'Top Movers (States) – YoY')}</h3>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={handleExploreCharts}
+                className="text-blue-600 hover:text-blue-700"
+              >
+                {t('home.view_all', 'View All')}
+                <ChevronRight className="ml-1 h-4 w-4" />
+              </Button>
+            </div>
             <div className="space-y-2">
               {topMoversStates.map((m, idx) => (
-                <div key={`${m.name}-${idx}`} className="flex items-start justify-between rounded-md border border-gray-200 px-3 py-2">
-                  <div className="flex items-start gap-2 min-w-0">
-                    <span className="text-xs w-6 h-6 inline-flex items-center justify-center rounded bg-blue-50 text-blue-600 font-semibold">{idx + 1}</span>
-                    <span className="whitespace-normal break-words hyphens-auto leading-snug">{m.name}</span>
+                <div
+                  key={`${m.name}-${idx}`}
+                  className="w-full flex items-start justify-between rounded-md border border-gray-200 px-3 py-2 bg-white"
+                >
+                  <div className="flex items-start gap-2 min-w-0 flex-1">
+                    <span className={`text-xs w-6 h-6 inline-flex items-center justify-center rounded font-semibold ${
+                      idx === 0 ? 'bg-yellow-100 text-yellow-700' :
+                      idx === 1 ? 'bg-gray-100 text-gray-700' :
+                      idx === 2 ? 'bg-orange-100 text-orange-700' :
+                      'bg-blue-50 text-blue-600'
+                    }`}>
+                      {idx + 1}
+                    </span>
+                    <span className="whitespace-normal break-words hyphens-auto leading-snug text-left">{m.name}</span>
                   </div>
-                  <span className={`${m.growthYoY >= 0 ? 'text-green-600' : 'text-red-600'} font-semibold ml-3 shrink-0`}>{m.growthYoY.toFixed(1)}%</span>
+                  <div className="flex items-center gap-2 shrink-0">
+                    <span className={`font-semibold ${m.growthYoY >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+                      {m.growthYoY >= 0 ? '+' : ''}{m.growthYoY.toFixed(1)}%
+                    </span>
+                  </div>
                 </div>
               ))}
             </div>
           </Card>
 
-          <Card className="p-6">
-            <h3 className="text-lg font-semibold mb-2">{t('home.top_movers_municipalities_yoy', 'Top Movers (Municipalities) – YoY')}</h3>
+          <Card className="p-6 hover:shadow-lg transition-shadow duration-300">
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-lg font-semibold">{t('home.top_movers_municipalities_yoy', 'Top Movers (Municipalities) – YoY')}</h3>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={handleExploreCharts}
+                className="text-blue-600 hover:text-blue-700"
+              >
+                {t('home.view_all', 'View All')}
+                <ChevronRight className="ml-1 h-4 w-4" />
+              </Button>
+            </div>
             <div className="space-y-2">
-              {topMoversCities.map((m, idx) => (
-                <div key={`${m.state || 'na'}-${m.name}-${idx}`} className="flex items-start justify-between rounded-md border border-gray-200 px-3 py-2">
-                  <div className="flex items-start gap-2 min-w-0">
-                    <span className="text-xs w-6 h-6 inline-flex items-center justify-center rounded bg-green-50 text-green-700 font-semibold">{idx + 1}</span>
-                    <span className="whitespace-normal break-words hyphens-auto leading-snug">{(m.name === 'Benito Juárez' && m.state === 'Quintana Roo') ? `${m.name} (Cancún)` : m.name}</span>
+              {topMoversCities.map((m, idx) => {
+                const displayName = (m.name === 'Benito Juárez' && m.state === 'Quintana Roo') 
+                  ? `${m.name} (Cancún)` 
+                  : m.name
+                return (
+                  <div
+                    key={`${m.state || 'na'}-${m.name}-${idx}`}
+                    className="w-full flex items-start justify-between rounded-md border border-gray-200 px-3 py-2 bg-white"
+                  >
+                    <div className="flex items-start gap-2 min-w-0 flex-1">
+                      <span className={`text-xs w-6 h-6 inline-flex items-center justify-center rounded font-semibold ${
+                        idx === 0 ? 'bg-yellow-100 text-yellow-700' :
+                        idx === 1 ? 'bg-gray-100 text-gray-700' :
+                        idx === 2 ? 'bg-orange-100 text-orange-700' :
+                        'bg-green-50 text-green-700'
+                      }`}>
+                        {idx + 1}
+                      </span>
+                      <span className="whitespace-normal break-words hyphens-auto leading-snug text-left">{displayName}</span>
+                    </div>
+                    <div className="flex items-center gap-2 shrink-0">
+                      <span className={`font-semibold ${m.growthYoY >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+                        {m.growthYoY >= 0 ? '+' : ''}{m.growthYoY.toFixed(1)}%
+                      </span>
+                    </div>
                   </div>
-                  <span className={`${m.growthYoY >= 0 ? 'text-green-600' : 'text-red-600'} font-semibold ml-3 shrink-0`}>{m.growthYoY.toFixed(1)}%</span>
-                </div>
-              ))}
+                )
+              })}
             </div>
           </Card>
         </div>
         {/* Main Content removed from home to keep page focused */}
 
-        {/* Features Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <Card className="p-6 text-center">
-            <TrendingUp className="h-12 w-12 mx-auto mb-4 text-blue-600" />
-            <h3 className="text-lg font-semibold mb-2">{t('home.historical_data_title', 'Historical Data')}</h3>
-            <p className="text-gray-600">
-              {t('home.historical_data_description', 'Access 20+ years of quarterly real estate price data from SHF')}
-            </p>
-          </Card>
+        {/* Quick Actions */}
+        <Card className="p-6 bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-blue-200">
+          <h2 className="text-2xl font-bold mb-4 text-center text-gray-900">
+            {t('home.quick_actions_title', 'Get Started')}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <button
+              onClick={handleExploreCharts}
+              className="p-6 bg-white rounded-lg border-2 border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all duration-300 text-left group"
+            >
+              <BarChart3 className="h-8 w-8 text-blue-600 mb-3 group-hover:scale-110 transition-transform" />
+              <h3 className="text-lg font-semibold mb-2 text-gray-900">
+                {t('home.explore_charts_action', 'Explore Price Charts')}
+              </h3>
+              <p className="text-gray-600 text-sm mb-3">
+                {t('home.explore_charts_action_desc', 'View interactive charts for any location')}
+              </p>
+              <span className="text-blue-600 font-medium text-sm flex items-center group-hover:translate-x-1 transition-transform">
+                {t('home.get_started', 'Get Started')}
+                <ArrowRight className="ml-1 h-4 w-4" />
+              </span>
+            </button>
 
-          <Card className="p-6 text-center">
-            <MapPin className="h-12 w-12 mx-auto mb-4 text-green-600" />
-            <h3 className="text-lg font-semibold mb-2">{t('home.geographic_coverage_title', 'Geographic Coverage')}</h3>
-            <p className="text-gray-600">
-              {t('home.geographic_coverage_description', 'Explore data for all 32 Mexican states and 100+ municipalities')}
-            </p>
-          </Card>
+            <button
+              onClick={handleExploreCalculators}
+              className="p-6 bg-white rounded-lg border-2 border-gray-200 hover:border-green-500 hover:shadow-lg transition-all duration-300 text-left group"
+            >
+              <Calculator className="h-8 w-8 text-green-600 mb-3 group-hover:scale-110 transition-transform" />
+              <h3 className="text-lg font-semibold mb-2 text-gray-900">
+                {t('home.calculate_costs_action', 'Calculate Costs')}
+              </h3>
+              <p className="text-gray-600 text-sm mb-3">
+                {t('home.calculate_costs_action_desc', 'Estimate buying, owning, and selling costs')}
+              </p>
+              <span className="text-green-600 font-medium text-sm flex items-center group-hover:translate-x-1 transition-transform">
+                {t('home.calculate_now', 'Calculate Now')}
+                <ArrowRight className="ml-1 h-4 w-4" />
+              </span>
+            </button>
 
-          <Card className="p-6 text-center">
-            <BarChart3 className="h-12 w-12 mx-auto mb-4 text-purple-600" />
-            <h3 className="text-lg font-semibold mb-2">{t('home.interactive_charts_title', 'Interactive Charts')}</h3>
-            <p className="text-gray-600">
-              {t('home.interactive_charts_description', 'Visualize trends with interactive line charts and growth analysis')}
-            </p>
-          </Card>
-        </div>
+            <button
+              onClick={() => router.push('/map')}
+              className="p-6 bg-white rounded-lg border-2 border-gray-200 hover:border-purple-500 hover:shadow-lg transition-all duration-300 text-left group"
+            >
+              <MapPin className="h-8 w-8 text-purple-600 mb-3 group-hover:scale-110 transition-transform" />
+              <h3 className="text-lg font-semibold mb-2 text-gray-900">
+                {t('home.explore_map_action', 'Explore Map')}
+              </h3>
+              <p className="text-gray-600 text-sm mb-3">
+                {t('home.explore_map_action_desc', 'Visualize data on an interactive map')}
+              </p>
+              <span className="text-purple-600 font-medium text-sm flex items-center group-hover:translate-x-1 transition-transform">
+                {t('home.view_map', 'View Map')}
+                <ArrowRight className="ml-1 h-4 w-4" />
+              </span>
+            </button>
+          </div>
+        </Card>
       </div>
     </Layout>
   )
