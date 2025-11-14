@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Layout } from '@/components/Layout'
 import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { LogoSVG } from '@/components/ui/Logo'
 import { AnimatedCounter } from '@/components/ui/AnimatedCounter'
+import { AuthForm } from '@/components/auth/AuthForm'
 import { useTranslation } from 'next-i18next'
 import { useRouter } from 'next/router'
 import { 
@@ -39,6 +40,67 @@ export default function HomePage({ nationalSnapshot, nationalTrend = [], topMove
   const { t } = useTranslation('common')
   const router = useRouter()
   const { track } = useTracking()
+  const [showAuth, setShowAuth] = useState(false)
+
+  const [authMode, setAuthMode] = useState<'signin' | 'signup'>('signup')
+
+  // Check for signup modal trigger (localStorage or hash)
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    
+    const checkSignup = () => {
+      // Check hash first (most reliable)
+      if (window.location.hash === '#signup') {
+        console.log('[Signup] Hash detected, opening modal')
+        setShowAuth(true)
+        setAuthMode('signup')
+        // Remove hash from URL
+        window.history.replaceState(null, '', window.location.pathname + window.location.search)
+        return true
+      }
+      
+      // Check localStorage flag
+      const showSignup = localStorage.getItem('showSignupModal')
+      if (showSignup === 'true') {
+        console.log('[Signup] localStorage flag detected, opening modal')
+        setShowAuth(true)
+        setAuthMode('signup')
+        localStorage.removeItem('showSignupModal')
+        return true
+      }
+      
+      return false
+    }
+    
+    // Check immediately on mount
+    checkSignup()
+    
+    // Check after router events
+    const handleRouteChangeComplete = () => {
+      setTimeout(() => checkSignup(), 100)
+    }
+    
+    router.events.on('routeChangeComplete', handleRouteChangeComplete)
+    
+    // Also check on hash change
+    const handleHashChange = () => {
+      checkSignup()
+    }
+    window.addEventListener('hashchange', handleHashChange)
+    
+    // Check periodically for localStorage changes (when navigating from another page)
+    const interval = setInterval(() => {
+      if (!showAuth) { // Only check if modal isn't already open
+        checkSignup()
+      }
+    }, 200)
+    
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChangeComplete)
+      window.removeEventListener('hashchange', handleHashChange)
+      clearInterval(interval)
+    }
+  }, [router, showAuth])
 
   // Format trend data for chart
   const chartData = nationalTrend.map((point) => ({
@@ -333,6 +395,23 @@ export default function HomePage({ nationalSnapshot, nationalTrend = [], topMove
           </div>
         </Card>
       </div>
+
+      {/* Auth Modal */}
+      {showAuth && (
+        <div className="fixed inset-0 z-50 overflow-y-auto">
+          <div className="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+            <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" onClick={() => setShowAuth(false)} />
+            <div className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-md sm:w-full">
+              <AuthForm 
+                mode={authMode} 
+                onModeChange={setAuthMode}
+                onClose={() => setShowAuth(false)}
+                className="border-0"
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </Layout>
   )
 }

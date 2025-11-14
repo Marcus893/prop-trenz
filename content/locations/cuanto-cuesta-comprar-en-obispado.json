@@ -1,0 +1,96 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-obispado",
+  "locationName": "Obispado",
+  "locationType": "neighborhood",
+  "city": "Monterrey",
+  "municipality": "Monterrey",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Obispado, Monterrey?",
+    "metaTitle": "Precios Obispado Mty 2024: $63,705/m² ¡Descubre más!",
+    "metaDescription": "¿Pensando en invertir en Obispado? Descubre el precio promedio por metro cuadrado: $63,705. ¡Datos actualizados y consejos para tu compra inteligente en Monterrey!",
+    "introduction": "Obispado, en Monterrey, es una colonia que sigue atrayendo miradas para comprar propiedad. ¿Por qué? Su ubicación estratégica, cerca de todo, y su ambiente tranquilo son grandes atractivos. Actualmente, el precio promedio ronda los $63,705 por metro cuadrado. Así que si estás considerando mudarte o invertir por aquí, es bueno tener estos datos en mente.\n\nClaro que los precios varían dependiendo de la calle, el tipo de propiedad y hasta la vista que tengas. Pero, ¡ojo!, según nuestros datos, hemos notado que el precio está presentando una ligera disminución, así que, ¡podría ser un buen momento para buscar oportunidades!",
+    "mustVisitSpots": [
+      {
+        "name": "Mirador del Obispado",
+        "description": "Imprescindible para disfrutar de vistas panorámicas de Monterrey. ¡Ideal para fotos espectaculares!"
+      },
+      {
+        "name": "Parque Niños Héroes",
+        "description": "Un pulmón verde en la ciudad, perfecto para caminar, correr o simplemente relajarte al aire libre."
+      },
+      {
+        "name": "Restaurantes sobre la Avenida Obispado",
+        "description": "Encontrarás desde antojitos mexicanos hasta cocina internacional. ¡Hay opciones para todos los gustos!"
+      },
+      {
+        "name": "Basílica de Nuestra Señora del Roble",
+        "description": "Un ícono religioso de Monterrey, con una arquitectura impresionante y una rica historia."
+      }
+    ],
+    "priceInsights": "El precio promedio de $63,705 por metro cuadrado en Obispado es competitivo dentro del mercado de Monterrey. Si lo comparamos con colonias más exclusivas, como Valle Oriente, Obispado ofrece una alternativa más accesible sin sacrificar ubicación y calidad de vida. \n\nEs importante estar al tanto de la tendencia a la baja que estamos observando en los precios. Con 5 meses de datos disponibles, podemos inferir que el mercado se está ajustando, lo que podría representar una oportunidad para negociar un mejor precio. Factores como las tasas de interés, la disponibilidad de crédito hipotecario y el desarrollo de nuevos proyectos en la zona podrían seguir influyendo en los precios en el futuro cercano. ¡Mantente informado y asesórate con un profesional para tomar la mejor decisión!",
+    "slug": "cuanto-cuesta-comprar-en-obispado"
+  },
+  "locationData": {
+    "name": "Obispado",
+    "type": "neighborhood",
+    "city": "Monterrey",
+    "municipality": "Monterrey",
+    "neighborhoods": [
+      {
+        "colonia": "Obispado",
+        "precio": "62798",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Obispado",
+        "precio": "63705",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Obispado",
+        "precio": "125892",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Obispado",
+        "precio": "130365",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Obispado",
+        "precio": "128955",
+        "mes": "June 2025"
+      }
+    ],
+    "averagePrice": 63705,
+    "priceHistory": [
+      {
+        "month": "June 2025",
+        "price": 128955,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 130365,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 125892,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 62798,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 63705,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-14T15:43:17.327Z",
+  "updatedAt": "2025-11-14T15:43:17.327Z"
+}

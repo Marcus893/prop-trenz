@@ -1,0 +1,454 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-iztapalapa",
+  "locationName": "Iztapalapa",
+  "locationType": "municipality",
+  "city": "Ciudad de México",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Iztapalapa?",
+    "metaTitle": "Precios Iztapalapa CDMX 2024 | $25,605/m²",
+    "metaDescription": "Descubre el precio promedio por metro cuadrado en Iztapalapa: $25,605. Analizamos la tendencia de precios y te contamos por qué Iztapalapa es una opción. ¡Entérate!",
+    "introduction": "Si estás pensando en comprar casa o departamento en la Ciudad de México, Iztapalapa es una alcaldía que vale la pena considerar. Con su vibrante cultura y creciente oferta inmobiliaria, Iztapalapa ofrece opciones para diversos presupuestos. Actualmente, el precio promedio por metro cuadrado ronda los $25,605 pesos. ¡Vamos a ver qué onda con los precios por acá!\n\nIztapalapa es conocida por su rica historia, su gente trabajadora y su cercanía a importantes centros económicos de la CDMX. Si buscas un lugar con ambiente familiar, mercados llenos de color y una conexión auténtica con la ciudad, Iztapalapa podría ser tu próximo hogar. Ojo, en los últimos meses hemos visto una ligera disminución en los precios, así que estate atento a las oportunidades.",
+    "mustVisitSpots": [
+      {
+        "name": "Cerro de la Estrella",
+        "description": "Este parque nacional ofrece vistas panorámicas de la ciudad y es un sitio histórico importante con ruinas arqueológicas y un museo."
+      },
+      {
+        "name": "Central de Abasto",
+        "description": "Uno de los mercados mayoristas más grandes del mundo, ideal para experimentar la vida cotidiana y encontrar productos frescos a precios increíbles."
+      },
+      {
+        "name": "Parque Recreativo Santa Cruz Meyehualco",
+        "description": "Un espacio verde perfecto para actividades al aire libre, con áreas para picnic, juegos infantiles y canchas deportivas."
+      },
+      {
+        "name": "Mercado Río Frío",
+        "description": "Un mercado local auténtico donde puedes encontrar comida deliciosa, artesanías y productos frescos a precios accesibles."
+      }
+    ],
+    "priceInsights": "El precio promedio de $25,605 pesos por metro cuadrado en Iztapalapa la convierte en una opción atractiva en comparación con otras alcaldías más céntricas de la Ciudad de México, donde los precios pueden ser significativamente más altos. Sin embargo, es importante considerar que este es un promedio y que los precios pueden variar dependiendo de la ubicación específica, el tipo de propiedad y las amenidades.\n\nEn los últimos cinco meses, hemos observado una ligera tendencia a la baja en los precios de las propiedades en Iztapalapa. Esto podría deberse a diversos factores, como cambios en la demanda, fluctuaciones en las tasas de interés y el desarrollo de nuevos proyectos inmobiliarios. Es fundamental que te mantengas informado y compares diferentes opciones para encontrar la mejor oportunidad. Te recomiendo acercarte a un asesor inmobiliario local para que te guíe en el proceso.",
+    "slug": "cuanto-cuesta-comprar-en-iztapalapa"
+  },
+  "locationData": {
+    "name": "Iztapalapa",
+    "type": "municipality",
+    "city": "Ciudad de México",
+    "neighborhoods": [
+      {
+        "colonia": "Ampliacion Sinatel",
+        "precio": "40022",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Ermita Zaragoza",
+        "precio": "20629",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Santa Martha Acatitla Norte",
+        "precio": "18222",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Santa Martha Acatitla Sur",
+        "precio": "13858",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pueblo San Sebastian Tecoloxtitla",
+        "precio": "23278",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Xalpa",
+        "precio": "18935",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Citlalli",
+        "precio": "24700",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Reforma Politica",
+        "precio": "19270",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Desarrollo Urbano Quetzalcoatl",
+        "precio": "23234",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Las Peñas",
+        "precio": "23536",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "La Era",
+        "precio": "28055",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Zacahuitzco",
+        "precio": "36768",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Colonial Iztapalapa",
+        "precio": "29421",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Unidad Santa Cruz Meyehualco",
+        "precio": "27310",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Santa Maria Aztahuacan",
+        "precio": "17119",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Ejercito De Agua Prieta",
+        "precio": "21685",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Chinampac De Juarez",
+        "precio": "20208",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Juan Escutia",
+        "precio": "25783",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Tepalcates",
+        "precio": "29346",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Unidad Ejercito Constitucionalista",
+        "precio": "24825",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Guadalupe Del Moral",
+        "precio": "33717",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Progresista",
+        "precio": "26126",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Unidad Vicente Guerrero",
+        "precio": "23418",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Constitucion De 1917",
+        "precio": "34739",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Barrio San Miguel",
+        "precio": "27170",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Presidentes De Mexico",
+        "precio": "21849",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Consejo Agrarista Mexicano",
+        "precio": "16335",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Lomas De San Lorenzo",
+        "precio": "22243",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Valle De San Lorenzo",
+        "precio": "21393",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "El Vergel",
+        "precio": "27219",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Carlos Jonguitud Barrios",
+        "precio": "29588",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Lomas Estrella",
+        "precio": "27550",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "San Nicolas Tolentino",
+        "precio": "25740",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Cerro De La Estrella",
+        "precio": "24827",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Benito Juarez",
+        "precio": "21340",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "San Juan Xalpa",
+        "precio": "21631",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Paraje San Juan",
+        "precio": "21130",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Paraje San Juan Cerro",
+        "precio": "35901",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "El Manto",
+        "precio": "24251",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Real Del Moral",
+        "precio": "35159",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Paseos De Churubusco",
+        "precio": "33167",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pueblo Aculco",
+        "precio": "29896",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "El Sifon",
+        "precio": "22048",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pueblo Magdalena Atlazolpa",
+        "precio": "23578",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Apatlaco",
+        "precio": "26696",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "El Retoño",
+        "precio": "27614",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "San Andres Tetepilco",
+        "precio": "33464",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Banjidal",
+        "precio": "39281",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Sinatel",
+        "precio": "37628",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "El Prado",
+        "precio": "36013",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Unidad Modelo",
+        "precio": "28465",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Escuadron 201",
+        "precio": "27604",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Valle Del Sur",
+        "precio": "16508",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pueblo Culhuacan",
+        "precio": "22856",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Granjas Estrella",
+        "precio": "20210",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Granjas De San Antonio",
+        "precio": "27556",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Jacarandas",
+        "precio": "16090",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "San Miguel Teotongo Secc Ranchito",
+        "precio": "13931",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Tenorios",
+        "precio": "15556",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "El Rosario",
+        "precio": "25543",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Celoalliotli",
+        "precio": "20111",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Renovacion",
+        "precio": "19050",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "La Esperanza",
+        "precio": "21954",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Pueblo Mexicaltzingo",
+        "precio": "30373",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Sector Popular",
+        "precio": "34850",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Jose Lopez Portillo",
+        "precio": "19978",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Barrio San Antonio",
+        "precio": "37298",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Pueblo Santa Martha Acatitla",
+        "precio": "15533",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Lomas De La Estancia",
+        "precio": "21129",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Ixtlahuacan",
+        "precio": "28176",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Purisima Atlazolpa",
+        "precio": "29461",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Granjas Esmeralda",
+        "precio": "25924",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Los Cipreses",
+        "precio": "30222",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Barrio San Lucas",
+        "precio": "27984",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Lomas El Manto",
+        "precio": "21230",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "El Molino",
+        "precio": "26240",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Paraje Zacatepec",
+        "precio": "17768",
+        "mes": "June 2025"
+      }
+    ],
+    "averagePrice": 25604.563636363637,
+    "priceHistory": [
+      {
+        "month": "June 2025",
+        "price": 26553.640625,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 25940.672413793105,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 25459.454545454544,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 26046.50909090909,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 25604.563636363637,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-14T19:46:13.337Z",
+  "updatedAt": "2025-11-14T19:46:13.337Z"
+}

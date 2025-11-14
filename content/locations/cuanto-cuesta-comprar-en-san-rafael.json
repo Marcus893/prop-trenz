@@ -1,0 +1,96 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-san-rafael",
+  "locationName": "San Rafael",
+  "locationType": "neighborhood",
+  "city": "Ciudad de México",
+  "municipality": "Cuauhtémoc",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en San Rafael, CDMX?",
+    "metaTitle": "Precios en San Rafael Ciudad de México 2024 | $65,702/m²",
+    "metaDescription": "Descubre los precios de bienes raíces en San Rafael, CDMX. Precio promedio actual: $65,702/m². ¡Una joya en Cuauhtémoc con alta demanda! Conoce más aquí.",
+    "introduction": "San Rafael, una colonia con encanto en el corazón de la alcaldía Cuauhtémoc, ¡es un lugar cada vez más atractivo para vivir! Si estás pensando en comprar aquí, te preguntarás: ¿cuánto cuesta? Actualmente, el precio promedio ronda los $65,702 por metro cuadrado. \n\nSan Rafael combina lo clásico con lo moderno, lo que la hace súper atractiva. Su ubicación céntrica, la oferta cultural y gastronómica, y la tranquilidad que se respira son grandes imanes. Además, los precios han ido subiendo en los últimos meses, así que ¡es buen momento para echar un ojo!",
+    "mustVisitSpots": [
+      {
+        "name": "Teatro San Rafael",
+        "description": "Un ícono de la colonia, con una cartelera variada que va desde obras clásicas hasta producciones contemporáneas."
+      },
+      {
+        "name": "Mercado San Cosme",
+        "description": "Un mercado tradicional donde encuentras de todo, desde frutas y verduras frescas hasta antojitos mexicanos deliciosos."
+      },
+      {
+        "name": "Alameda de Santa María la Ribera",
+        "description": "Aunque no está estrictamente en San Rafael, queda muy cerca y es ideal para un paseo tranquilo o una tarde en familia."
+      },
+      {
+        "name": "Restaurantes y Cafés de la Calle Gabino Barreda",
+        "description": "Esta calle está llena de opciones para comer rico, desde restaurantes con propuestas innovadoras hasta cafés con mucho ambiente."
+      }
+    ],
+    "priceInsights": "Con un precio promedio de $65,702 por metro cuadrado, San Rafael se ubica en un rango medio-alto dentro de la Ciudad de México. Este precio refleja la demanda creciente por la zona y su ubicación privilegiada. Si comparamos con otras colonias de Cuauhtémoc, San Rafael ofrece una excelente relación calidad-precio considerando su ambiente tranquilo y su cercanía a importantes centros culturales y de negocios. En los últimos 5 meses hemos visto una tendencia al alza, lo que sugiere que invertir en San Rafael puede ser una buena decisión a largo plazo. Factores como la remodelación de edificios antiguos, la apertura de nuevos negocios y la mejora de la infraestructura influyen directamente en el valor de las propiedades en esta colonia.",
+    "slug": "cuanto-cuesta-comprar-en-san-rafael"
+  },
+  "locationData": {
+    "name": "San Rafael",
+    "type": "neighborhood",
+    "city": "Ciudad de México",
+    "municipality": "Cuauhtémoc",
+    "neighborhoods": [
+      {
+        "colonia": "San Rafael",
+        "precio": "65739",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "San Rafael",
+        "precio": "65702",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "San Rafael",
+        "precio": "65351",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "San Rafael",
+        "precio": "65070",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "San Rafael",
+        "precio": "64815",
+        "mes": "June 2025"
+      }
+    ],
+    "averagePrice": 65702,
+    "priceHistory": [
+      {
+        "month": "June 2025",
+        "price": 64815,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 65070,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 65351,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 65739,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 65702,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-14T19:58:51.682Z",
+  "updatedAt": "2025-11-14T19:58:51.682Z"
+}

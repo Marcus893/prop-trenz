@@ -1,0 +1,96 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-hipodromo",
+  "locationName": "Hipodromo",
+  "locationType": "neighborhood",
+  "city": "Ciudad de México",
+  "municipality": "Cuauhtémoc",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Hipódromo, CDMX?",
+    "metaTitle": "Precios en Hipódromo CDMX 2024 | $75,176/m²",
+    "metaDescription": "Descubre el precio promedio en Hipódromo, CDMX: $75,176/m². Analizamos la tendencia actual y te damos los mejores insights para tu inversión inmobiliaria.",
+    "introduction": "Si estás pensando en invertir en bienes raíces en la Ciudad de México, Hipódromo es una colonia que definitivamente debes tener en el radar. Con su encanto bohemio, calles arboladas y una vibrante vida cultural, Hipódromo ofrece una calidad de vida envidiable. Actualmente, el precio promedio por metro cuadrado ronda los $75,176 pesos, pero ¿qué significa esto realmente? Sigue leyendo para descubrir si Hipódromo es la opción ideal para ti.\n\nLa colonia Hipódromo, ubicada en la alcaldía Cuauhtémoc, es conocida por su arquitectura Art Déco, su ambiente relajado y su cercanía a importantes centros culturales y de entretenimiento. ¡Es un lugar perfecto para quienes buscan un estilo de vida activo y conectado!",
+    "mustVisitSpots": [
+      {
+        "name": "Parque México",
+        "description": "Un pulmón verde en el corazón de Hipódromo, ideal para pasear, hacer ejercicio o simplemente relajarse en sus bancas."
+      },
+      {
+        "name": "Mercado Medellín",
+        "description": "Un mercado vibrante con una gran variedad de productos frescos, antojitos mexicanos y comida internacional."
+      },
+      {
+        "name": "Avenida Ámsterdam",
+        "description": "Con su peculiar trazo elíptico, esta avenida es el corazón de la colonia, llena de restaurantes, cafés y boutiques."
+      },
+      {
+        "name": "El Japonez Hipódromo",
+        "description": "Un restaurante de alta cocina japonesa con un ambiente moderno y sofisticado, perfecto para una cena especial."
+      }
+    ],
+    "priceInsights": "El precio promedio de $75,176 pesos por metro cuadrado en Hipódromo la sitúa como una colonia de gama media-alta dentro de la Ciudad de México. Si bien es una inversión considerable, comparado con otras zonas como Polanco o Lomas de Chapultepec, Hipódromo ofrece una excelente relación precio-valor, considerando su ubicación privilegiada y su creciente popularidad. \n\nEs importante tener en cuenta que, según nuestros datos de los últimos 5 meses, los precios han estado disminuyendo ligeramente. Esto podría ser una oportunidad para encontrar buenas ofertas, pero también es crucial analizar a fondo el mercado y las tendencias a largo plazo antes de tomar una decisión. Factores como la inflación, las tasas de interés y el desarrollo de nuevos proyectos inmobiliarios en la zona pueden influir en el futuro de los precios.",
+    "slug": "cuanto-cuesta-comprar-en-hipodromo"
+  },
+  "locationData": {
+    "name": "Hipodromo",
+    "type": "neighborhood",
+    "city": "Ciudad de México",
+    "municipality": "Cuauhtémoc",
+    "neighborhoods": [
+      {
+        "colonia": "Hipodromo",
+        "precio": "75421",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Hipodromo",
+        "precio": "75176",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Hipodromo",
+        "precio": "75098",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Hipodromo",
+        "precio": "75494",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Hipodromo",
+        "precio": "75927",
+        "mes": "June 2025"
+      }
+    ],
+    "averagePrice": 75176,
+    "priceHistory": [
+      {
+        "month": "June 2025",
+        "price": 75927,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 75494,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 75098,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 75421,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 75176,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-14T19:57:27.284Z",
+  "updatedAt": "2025-11-14T19:57:27.284Z"
+}

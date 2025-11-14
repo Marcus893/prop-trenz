@@ -1,0 +1,100 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-juarez",
+  "locationName": "Juarez",
+  "locationType": "neighborhood",
+  "city": "Ciudad de México",
+  "municipality": "Cuauhtémoc",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Juarez, CDMX?",
+    "metaTitle": "Precios en Juarez CDMX 2024 | $83,401/m²",
+    "metaDescription": "Descubre el precio promedio por metro cuadrado en la colonia Juarez: $83,401. ¡Analizamos la tendencia y te damos los mejores tips para invertir!",
+    "introduction": "Si estás pensando en comprar un depa o una casa en la Ciudad de México, la colonia Juarez es una excelente opción. Ubicada en la alcaldía Cuauhtémoc, esta zona es conocida por su vibrante vida cultural, su arquitectura ecléctica y su excelente ubicación. Actualmente, el precio promedio por metro cuadrado en Juarez ronda los $83,401 pesos. \n\nPero, ¿qué hace tan atractiva a la Juarez? Además de su ambiente bohemio y sus calles arboladas, la colonia ofrece una gran variedad de restaurantes, bares, galerías de arte y boutiques. Y aunque los precios han mostrado una ligera tendencia a la baja en los últimos meses, sigue siendo una inversión inteligente debido a su alta demanda y potencial de revalorización.",
+    "mustVisitSpots": [
+      {
+        "name": "Avenida Álvaro Obregón",
+        "description": "El corazón de la colonia Juarez, repleta de restaurantes, bares y edificios históricos con fachadas impresionantes."
+      },
+      {
+        "name": "Museo del Chocolate (MUCHO)",
+        "description": "Un lugar imperdible para los amantes del chocolate, donde podrás aprender sobre su historia y proceso de elaboración."
+      },
+      {
+        "name": "Mercado Medellín",
+        "description": "Un mercado vibrante con productos de todo México y Latinoamérica, perfecto para encontrar ingredientes exóticos y probar platillos deliciosos."
+      },
+      {
+        "name": "El Moro Roma",
+        "description": "Aunque técnicamente está en la Roma Norte, queda tan cerca que vale la pena una visita para disfrutar de sus famosos churros con chocolate."
+      },
+      {
+        "name": "Parque Pushkin",
+        "description": "Un oasis de tranquilidad en medio del bullicio de la ciudad, ideal para relajarse, leer un libro o pasear con tu mascota."
+      }
+    ],
+    "priceInsights": "Con un precio promedio de $83,401 pesos por metro cuadrado, la colonia Juarez se posiciona como una zona de precio medio-alto dentro de la Ciudad de México. Si lo comparamos con otras colonias de la alcaldía Cuauhtémoc, como la Roma Norte o la Condesa, Juarez puede resultar un poco más accesible, aunque la diferencia no es abismal. En los últimos 5 meses, hemos observado una ligera disminución en los precios, lo cual podría ser una oportunidad interesante para comprar antes de que vuelvan a subir. Factores como la remodelación de edificios antiguos, la apertura de nuevos negocios y la creciente demanda de vivienda en la zona podrían influir en un futuro aumento de los precios.",
+    "slug": "cuanto-cuesta-comprar-en-juarez"
+  },
+  "locationData": {
+    "name": "Juarez",
+    "type": "neighborhood",
+    "city": "Ciudad de México",
+    "municipality": "Cuauhtémoc",
+    "neighborhoods": [
+      {
+        "colonia": "Juarez",
+        "precio": "83616",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Juarez",
+        "precio": "83401",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Juarez",
+        "precio": "87689",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Juarez",
+        "precio": "92709",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Juarez",
+        "precio": "98197",
+        "mes": "June 2025"
+      }
+    ],
+    "averagePrice": 83401,
+    "priceHistory": [
+      {
+        "month": "June 2025",
+        "price": 98197,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 92709,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 87689,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 83616,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 83401,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-14T19:58:13.574Z",
+  "updatedAt": "2025-11-14T19:58:13.574Z"
+}

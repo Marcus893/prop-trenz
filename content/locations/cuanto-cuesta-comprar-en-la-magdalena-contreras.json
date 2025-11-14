@@ -1,0 +1,183 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-la-magdalena-contreras",
+  "locationName": "La Magdalena Contreras",
+  "locationType": "municipality",
+  "city": "Ciudad de México",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en La Magdalena Contreras?",
+    "metaTitle": "Precios en La Magdalena Contreras CDMX | $35,653/m²",
+    "metaDescription": "Descubre los precios de bienes raíces en La Magdalena Contreras, CDMX. Precio promedio actual: $35,653/m². ¡Encuentra la propiedad ideal aquí!",
+    "introduction": "¿Pensando en comprar casa en la Ciudad de México? La Magdalena Contreras es una excelente opción si buscas un ambiente más tranquilo, pero sin alejarte de la capital. Aquí encontrarás desde casas con jardín hasta departamentos modernos con vistas increíbles. Actualmente, el precio promedio por metro cuadrado en La Magdalena Contreras ronda los $35,653 pesos, lo que la convierte en una alternativa atractiva en comparación con otras zonas más céntricas. \n\nAunque los precios han mostrado una ligera disminución en los últimos meses, La Magdalena Contreras sigue siendo una inversión inteligente. Su ubicación estratégica, su entorno natural y su creciente oferta de servicios la hacen un lugar cada vez más codiciado para vivir.",
+    "mustVisitSpots": [
+      {
+        "name": "Los Dinamos",
+        "description": "Un parque nacional ideal para practicar senderismo y disfrutar de la naturaleza, con cascadas y ríos perfectos para un día de campo."
+      },
+      {
+        "name": "Restaurantes en San Nicolás Totolapan",
+        "description": "Conocidos por su auténtica comida mexicana, estos restaurantes ofrecen platillos tradicionales en un ambiente campestre y acogedor."
+      },
+      {
+        "name": "Mercado de la Magdalena Contreras",
+        "description": "Un mercado local donde encontrarás productos frescos, antojitos mexicanos y artesanías a precios accesibles."
+      },
+      {
+        "name": "Parroquia de Santa María Magdalena",
+        "description": "Una iglesia histórica con una arquitectura impresionante que refleja la rica herencia cultural de la zona."
+      },
+      {
+        "name": "El Huerto Roma Verde (cerca)",
+        "description": "Aunque no está *exactamente* en La Magdalena Contreras, un corto viaje te lleva a este espacio comunitario y huerto urbano que ofrece talleres, eventos y productos orgánicos."
+      }
+    ],
+    "priceInsights": "El precio promedio de $35,653 pesos por metro cuadrado en La Magdalena Contreras es competitivo dentro del mercado de la Ciudad de México. Si bien es más elevado que algunas alcaldías periféricas, se encuentra por debajo de zonas como Polanco o la Roma.  La ligera disminución que hemos observado en los últimos 5 meses podría ser una oportunidad para invertir, ya que los precios podrían estabilizarse o incluso aumentar en el futuro. Factores como la demanda, el desarrollo de nuevas infraestructuras y las tasas de interés pueden influir en la evolución de los precios en esta alcaldía.",
+    "slug": "cuanto-cuesta-comprar-en-la-magdalena-contreras"
+  },
+  "locationData": {
+    "name": "La Magdalena Contreras",
+    "type": "municipality",
+    "city": "Ciudad de México",
+    "neighborhoods": [
+      {
+        "colonia": "San Jeronimo Lidice",
+        "precio": "52690",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Heroes De Padierna",
+        "precio": "37287",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "San Jeronimo Aculco",
+        "precio": "40111",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Santa Teresa",
+        "precio": "39217",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "San Francisco",
+        "precio": "39847",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Barrio San Francisco",
+        "precio": "34491",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Lomas Quebradas",
+        "precio": "35532",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Cuauhtemoc",
+        "precio": "41986",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "La Malinche",
+        "precio": "22359",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Los Padres",
+        "precio": "17378",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pueblo San Bernabe Ocotepec",
+        "precio": "28334",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Huayatla",
+        "precio": "18071",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pueblo Nuevo Alto",
+        "precio": "51921",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "El Rosal",
+        "precio": "33022",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pueblo Nuevo Bajo",
+        "precio": "32550",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Barranca Seca",
+        "precio": "28397",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pueblo La Magdalena",
+        "precio": "30102",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pueblo San Nicolas Totolapan",
+        "precio": "31095",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "El Toro",
+        "precio": "39587",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "El Maestro",
+        "precio": "55013",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "La Cruz",
+        "precio": "26606",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Plazuela Del Pedregal",
+        "precio": "38020",
+        "mes": "October 2025"
+      }
+    ],
+    "averagePrice": 35652.6,
+    "priceHistory": [
+      {
+        "month": "June 2025",
+        "price": 38525.88888888889,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 38429.6,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 37715.26315789474,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 34419.84210526316,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 35652.6,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-14T19:46:38.630Z",
+  "updatedAt": "2025-11-14T19:46:38.630Z"
+}

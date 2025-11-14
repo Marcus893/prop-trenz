@@ -1,0 +1,96 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-san-pedro",
+  "locationName": "San Pedro",
+  "locationType": "neighborhood",
+  "city": "Ciudad de México",
+  "municipality": "Cuajimalpa de Morelos",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en San Pedro, CDMX?",
+    "metaTitle": "Precios en San Pedro CDMX 2024 | $45,242/m²",
+    "metaDescription": "Descubre los precios de bienes raíces en San Pedro, Cuajimalpa. Precio promedio: $45,242/m². ¡Analizamos la tendencia y te damos los mejores insights!",
+    "introduction": "Si estás pensando en invertir en bienes raíces en la Ciudad de México, San Pedro, en Cuajimalpa, podría ser una excelente opción. Esta colonia ofrece una combinación de tranquilidad y cercanía a zonas clave de la ciudad. Actualmente, el precio promedio por metro cuadrado se ubica en $45,242 pesos, un dato importante para tener en cuenta al planificar tu compra.\n\nSan Pedro se distingue por su ambiente residencial y su ubicación privilegiada dentro de Cuajimalpa. Aunque en los últimos 5 meses hemos visto una ligera disminución en los precios, sigue siendo una zona atractiva para familias y profesionales que buscan calidad de vida y acceso a servicios.",
+    "mustVisitSpots": [
+      {
+        "name": "Parque La Mexicana (relativamente cerca)",
+        "description": "Aunque no está *exactamente* en San Pedro, queda muy cerca. Es un parque enorme con áreas verdes, lagos artificiales y espacios para actividades al aire libre. ¡Ideal para un día en familia!"
+      },
+      {
+        "name": "Restaurantes locales en la Carretera México-Toluca",
+        "description": "Sobre la carretera encontrarás una buena variedad de restaurantes, desde fondas con comida casera hasta opciones más gourmet. ¡Perfecto para una comida rápida o una cena especial!"
+      },
+      {
+        "name": "Centros comerciales cercanos (Santa Fe)",
+        "description": "Si buscas tiendas departamentales y entretenimiento, el Centro Comercial Santa Fe está a pocos minutos en coche. ¡Encuentra todo lo que necesitas en un solo lugar!"
+      },
+      {
+        "name": "Mercados locales",
+        "description": "Aunque no hay uno *en* San Pedro, Cuajimalpa tiene mercados cercanos donde encuentras productos frescos, flores y antojitos mexicanos. ¡Una experiencia auténtica!"
+      }
+    ],
+    "priceInsights": "El precio promedio de $45,242 por metro cuadrado en San Pedro refleja su estatus como una zona residencial de nivel socioeconómico medio-alto dentro de la Ciudad de México. Si lo comparamos con otras colonias de Cuajimalpa, San Pedro se encuentra en un rango competitivo, aunque ligeramente más accesible que zonas como Bosques de las Lomas. La ligera tendencia a la baja que hemos observado en los últimos meses podría representar una oportunidad para compradores.\n\nEs importante considerar que los precios pueden variar significativamente dependiendo del tipo de propiedad, su ubicación específica dentro de San Pedro, el tamaño, la antigüedad y los acabados. Factores como la seguridad, la cercanía a escuelas y servicios, y las vistas también influyen en el valor de los inmuebles. Por lo tanto, te recomiendo consultar con un agente inmobiliario local para obtener una evaluación precisa de las propiedades que te interesen.",
+    "slug": "cuanto-cuesta-comprar-en-san-pedro"
+  },
+  "locationData": {
+    "name": "San Pedro",
+    "type": "neighborhood",
+    "city": "Ciudad de México",
+    "municipality": "Cuajimalpa de Morelos",
+    "neighborhoods": [
+      {
+        "colonia": "San Pedro",
+        "precio": "45553",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "San Pedro",
+        "precio": "45242",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "San Pedro",
+        "precio": "45348",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "San Pedro",
+        "precio": "45362",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "San Pedro",
+        "precio": "45313",
+        "mes": "June 2025"
+      }
+    ],
+    "averagePrice": 45242,
+    "priceHistory": [
+      {
+        "month": "June 2025",
+        "price": 45313,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 45362,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 45348,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 45553,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 45242,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-14T04:21:37.816Z",
+  "updatedAt": "2025-11-14T04:21:37.817Z"
+}

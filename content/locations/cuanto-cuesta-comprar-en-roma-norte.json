@@ -1,0 +1,96 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-roma-norte",
+  "locationName": "Roma Norte",
+  "locationType": "neighborhood",
+  "city": "Ciudad de México",
+  "municipality": "Cuauhtémoc",
+  "content": {
+    "title": "Cuánto Cuesta Comprar en Roma Norte, CDMX",
+    "metaTitle": "Precios en Roma Norte CDMX 2024 | $81,057/m²",
+    "metaDescription": "¿Pensando en invertir en Roma Norte? Descubre el precio promedio actual por metro cuadrado: $81,057. Análisis actualizado y lugares imperdibles en esta colonia trendy de la CDMX.",
+    "introduction": "¡Andas buscando depa en la Roma Norte, qué chido! Esta colonia en la Cuauhtémoc es de las más buscadas en la Ciudad de México, y no es para menos. Con sus calles arboladas, arquitectura increíble y ambiente relajado, la Roma Norte tiene un encanto único. Actualmente, el precio promedio anda alrededor de $81,057 por metro cuadrado. \n\nClaro, los precios varían dependiendo de la calle, el tamaño y las amenidades del depa, pero esa cifra te da una buena idea. Y ojo, que en los últimos meses hemos visto una ligera disminución en los precios, así que ¡podría ser un buen momento para encontrar una ganga!",
+    "mustVisitSpots": [
+      {
+        "name": "Parque México",
+        "description": "Un oasis en medio de la ciudad, perfecto para pasear, hacer ejercicio o simplemente relajarte en una banca."
+      },
+      {
+        "name": "Mercado Roma",
+        "description": "Un lugar obligado para los amantes de la comida, con una gran variedad de opciones gastronómicas de alta calidad."
+      },
+      {
+        "name": "Plaza Río de Janeiro",
+        "description": "Con su réplica del David de Miguel Ángel, esta plaza es un punto de encuentro popular y un lugar ideal para tomar fotos."
+      },
+      {
+        "name": "Restaurante Rosetta",
+        "description": "De la reconocida chef Elena Reygadas, ofrece una experiencia culinaria inolvidable con platillos italianos y mexicanos."
+      }
+    ],
+    "priceInsights": "El precio promedio de $81,057 por metro cuadrado en la Roma Norte es considerablemente más alto que el promedio de la Ciudad de México en general, lo cual refleja la alta demanda y el prestigio de la zona. Sin embargo, comparado con colonias como Polanco o Lomas de Chapultepec, la Roma Norte suele ser un poco más accesible, aunque igual implica una inversión importante. En los últimos 5 meses, hemos observado una ligera tendencia a la baja en los precios. Esto podría deberse a varios factores, como las fluctuaciones del mercado inmobiliario, la disponibilidad de nuevas construcciones y las tasas de interés hipotecarias. Estate atento a estos factores si planeas comprar.",
+    "slug": "cuanto-cuesta-comprar-en-roma-norte"
+  },
+  "locationData": {
+    "name": "Roma Norte",
+    "type": "neighborhood",
+    "city": "Ciudad de México",
+    "municipality": "Cuauhtémoc",
+    "neighborhoods": [
+      {
+        "colonia": "Roma Norte",
+        "precio": "81154",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Roma Norte",
+        "precio": "81057",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Roma Norte",
+        "precio": "81556",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Roma Norte",
+        "precio": "82400",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Roma Norte",
+        "precio": "83348",
+        "mes": "June 2025"
+      }
+    ],
+    "averagePrice": 81057,
+    "priceHistory": [
+      {
+        "month": "June 2025",
+        "price": 83348,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 82400,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 81556,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 81154,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 81057,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-14T19:57:12.862Z",
+  "updatedAt": "2025-11-14T19:57:12.862Z"
+}

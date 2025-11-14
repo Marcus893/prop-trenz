@@ -1,0 +1,92 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-contry-sol",
+  "locationName": "Contry Sol",
+  "locationType": "neighborhood",
+  "city": "Monterrey",
+  "municipality": "Guadalupe",
+  "content": {
+    "title": "¿Cuánto cuesta comprar casa en Contry Sol?",
+    "metaTitle": "Precios en Contry Sol, Mty | $31,088/m² (Actualizado)",
+    "metaDescription": "Descubre los precios de casas en Contry Sol, Monterrey. Precio promedio: $31,088/m². ¡Infórmate antes de invertir en esta colonia de Guadalupe!",
+    "introduction": "Si estás pensando en comprar casa en Monterrey, ¡Contry Sol es una opción que vale la pena considerar! Esta colonia, ubicada en el municipio de Guadalupe, ofrece una buena mezcla de tranquilidad y acceso a servicios. Actualmente, el precio promedio por metro cuadrado en Contry Sol ronda los $31,088.  Es una zona que atrae tanto a familias jóvenes como a personas que buscan un lugar seguro y bien comunicado.",
+    "mustVisitSpots": [
+      {
+        "name": "Parque Tolteca",
+        "description": "Ideal para actividades al aire libre, con áreas verdes, juegos infantiles y canchas deportivas. Perfecto para pasar un rato en familia."
+      },
+      {
+        "name": "Plaza Contry Sol",
+        "description": "Un punto de encuentro con variedad de comercios, restaurantes y servicios. Aquí encuentras todo lo que necesitas para el día a día."
+      },
+      {
+        "name": "Avenida Eloy Cavazos",
+        "description": "La principal arteria vial que conecta Contry Sol con el resto de Guadalupe y Monterrey. Encontrarás desde supermercados hasta pequeños negocios locales."
+      }
+    ],
+    "priceInsights": "El precio promedio de $31,088 por metro cuadrado en Contry Sol es competitivo si lo comparamos con otras zonas de Monterrey. Sin embargo, es importante tener en cuenta que en los últimos meses hemos observado una ligera tendencia a la baja en los precios, aunque solo contamos con datos de los últimos 5 meses. Esto podría ser una oportunidad para encontrar buenas ofertas, pero también es crucial analizar bien el mercado antes de tomar una decisión. Factores como la ubicación específica dentro de la colonia, el tamaño del terreno, la antigüedad de la construcción y las amenidades de la propiedad pueden influir significativamente en el precio final.",
+    "slug": "cuanto-cuesta-comprar-en-contry-sol"
+  },
+  "locationData": {
+    "name": "Contry Sol",
+    "type": "neighborhood",
+    "city": "Monterrey",
+    "municipality": "Guadalupe",
+    "neighborhoods": [
+      {
+        "colonia": "Contry Sol",
+        "precio": "31752",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Contry Sol",
+        "precio": "31088",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Contry Sol",
+        "precio": "63117",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Contry Sol",
+        "precio": "63952",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Contry Sol",
+        "precio": "65050",
+        "mes": "June 2025"
+      }
+    ],
+    "averagePrice": 31088,
+    "priceHistory": [
+      {
+        "month": "June 2025",
+        "price": 65050,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 63952,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 63117,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 31752,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 31088,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-14T15:43:04.538Z",
+  "updatedAt": "2025-11-14T15:43:04.538Z"
+}

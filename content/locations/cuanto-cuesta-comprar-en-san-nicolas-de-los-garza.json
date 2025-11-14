@@ -1,0 +1,274 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-municipio-san-nicolas-de-los-garza",
+  "locationName": "San Nicolás de los Garza",
+  "locationType": "municipality",
+  "city": "Monterrey",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en San Nicolás de los Garza?",
+    "metaTitle": "Precios en San Nicolás de los Garza | $52,204/m²",
+    "metaDescription": "Descubre el precio promedio por metro cuadrado en San Nicolás de los Garza, Monterrey: $52,204. ¡Entérate si es el momento ideal para invertir en tu hogar!",
+    "introduction": "San Nicolás de los Garza, ¡un municipio con mucho que ofrecer aquí en Monterrey! Si estás pensando en comprar una propiedad por estos rumbos, seguramente te interesa saber cuánto te va a costar. Actualmente, el precio promedio está alrededor de $52,204 por metro cuadrado.\n\nSan Nicolás es una excelente opción por su cercanía a centros laborales, su buena infraestructura y la variedad de opciones de vivienda. ¡Tiene de todo, desde departamentos modernos hasta casas amplias para la familia!",
+    "mustVisitSpots": [
+      {
+        "name": "Parque Niños Héroes",
+        "description": "Un parque enorme con áreas verdes, juegos infantiles y hasta un lago artificial para pasar un día en familia."
+      },
+      {
+        "name": "Plaza Principal de San Nicolás",
+        "description": "El corazón del municipio, ideal para disfrutar de eventos culturales y la arquitectura local."
+      },
+      {
+        "name": "Cinépolis Sendero Apodaca",
+        "description": "Para los amantes del cine, este complejo ofrece las últimas películas y una gran variedad de opciones de comida."
+      },
+      {
+        "name": "Restaurantes en Avenida Universidad",
+        "description": "Encontrarás desde tacos hasta cortes de carne de primera calidad, ¡para todos los gustos y presupuestos!"
+      }
+    ],
+    "priceInsights": "El precio promedio de $52,204 por metro cuadrado en San Nicolás de los Garza es competitivo dentro del área metropolitana de Monterrey. Si bien hemos visto una ligera tendencia a la baja en los últimos 5 meses, esto podría ser una oportunidad para encontrar buenas ofertas. \n\nEs importante considerar que factores como la ubicación específica dentro de San Nicolás (cercanía a avenidas principales, centros comerciales, etc.), el tamaño del terreno, la antigüedad de la propiedad y los acabados influyen directamente en el precio final. ¡No dudes en explorar diferentes opciones para encontrar la que mejor se ajuste a tus necesidades y presupuesto!",
+    "slug": "cuanto-cuesta-comprar-en-municipio-san-nicolas-de-los-garza"
+  },
+  "locationData": {
+    "name": "San Nicolás de los Garza",
+    "type": "municipality",
+    "city": "Monterrey",
+    "neighborhoods": [
+      {
+        "colonia": "Lomas Del Roble",
+        "precio": "41367",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Anahuac",
+        "precio": "96369",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Nuevo Periferico",
+        "precio": "34881",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Chapultepec",
+        "precio": "22420",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Centro De San Nicolas De Los Garza",
+        "precio": "39184",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Potrero Anahuac",
+        "precio": "52531",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Cuauhtemoc 3 Sector",
+        "precio": "53213",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Cuauhtemoc 2 Sector",
+        "precio": "53862",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Roble Norte",
+        "precio": "25179",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Villa Universidad",
+        "precio": "24861",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Villas De Anahuac",
+        "precio": "28118",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Roble San Nicolas",
+        "precio": "37708",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Anahuac Sendero",
+        "precio": "36498",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Riberas De San Nicolas",
+        "precio": "41290",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Valle De Santo Domingo",
+        "precio": "20032",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Jardines De Anahuac 2 Sec",
+        "precio": "42862",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Jardines De Anahuac 3 Sec",
+        "precio": "48585",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Residencial Nova",
+        "precio": "42719",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Garza Cantu (Predio Aldape)",
+        "precio": "37459",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Industrias Del Vidrio 2 Sec",
+        "precio": "51450",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Hda Los Morales 1 Sector",
+        "precio": "34780",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Miguel Aleman",
+        "precio": "23272",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Alcatraces Residencial",
+        "precio": "37096",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Jardines De Casa Blanca",
+        "precio": "24784",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Bosques De Linda Vista 1Er Sector",
+        "precio": "26539",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Hacienda Los Angeles",
+        "precio": "32062",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Palmas Diamante",
+        "precio": "29321",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Arboledas De San Jorge",
+        "precio": "49871",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Hacienda Los Morales 3 Sec",
+        "precio": "58128",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Casa Blanca",
+        "precio": "71406",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Balcones De Anahuac",
+        "precio": "60262",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Tabachines",
+        "precio": "52487",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Las Puentes 3 Sec",
+        "precio": "46040",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Rincon De Las Puentes",
+        "precio": "60855",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Heroes De Mexico 2Do Sector",
+        "precio": "52286",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Las Puentes 4 Sec",
+        "precio": "69154",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Living San Nicolas",
+        "precio": "79567",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Vivenza",
+        "precio": "68820",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Las Puentes 2 Sec",
+        "precio": "48053",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Pedregal Sto Domingo 3 Sec",
+        "precio": "63488",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Francisco Garza Sada",
+        "precio": "46274",
+        "mes": "June 2025"
+      }
+    ],
+    "averagePrice": 52203.88888888889,
+    "priceHistory": [
+      {
+        "month": "June 2025",
+        "price": 76695.1875,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 75757.67741935483,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 78950.6,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 38868.32142857143,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 52203.88888888889,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-14T16:57:44.616Z",
+  "updatedAt": "2025-11-14T16:57:44.616Z"
+}

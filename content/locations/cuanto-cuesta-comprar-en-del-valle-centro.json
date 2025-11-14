@@ -1,0 +1,96 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-del-valle-centro",
+  "locationName": "Del Valle Centro",
+  "locationType": "neighborhood",
+  "city": "Ciudad de México",
+  "municipality": "Benito Juárez",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Del Valle Centro?",
+    "metaTitle": "Precios Del Valle Centro CDMX 2024 | $58,948/m²",
+    "metaDescription": "Descubre cuánto cuesta vivir en Del Valle Centro. Precios actualizados de propiedades: $58,948/m². ¡Entérate si es el momento ideal para invertir!",
+    "introduction": "¿Estás pensando en comprar depa o casa en la Del Valle Centro? ¡Excelente elección! Esta colonia en la alcaldía Benito Juárez es súper céntrica y tiene un ambiente increíble. Actualmente, el precio promedio por metro cuadrado anda alrededor de los $58,948 pesos. \n\nLa Del Valle Centro es famosa por sus calles arboladas, su ambiente tranquilo y su cercanía a todo. Tienes parques, restaurantes, centros comerciales, ¡de todo a la mano! Los precios han mostrado una ligera disminución en los últimos meses, así que ¡podría ser un buen momento para echarle un ojo!",
+    "mustVisitSpots": [
+      {
+        "name": "Parque de los Venados",
+        "description": "Un clásico para pasar la tarde, con áreas verdes, juegos infantiles y hasta un pequeño lago."
+      },
+      {
+        "name": "Mercado 2 de Abril",
+        "description": "Ideal para encontrar productos frescos, antojitos mexicanos y probar la comida local."
+      },
+      {
+        "name": "Avenida División del Norte",
+        "description": "Llena de restaurantes, cafeterías y tiendas, perfecta para dar un paseo y disfrutar del ambiente."
+      },
+      {
+        "name": "Iglesia de Nuestra Señora de Guadalupe del Buen Consejo",
+        "description": "Un hermoso templo con una arquitectura impresionante que vale la pena visitar."
+      }
+    ],
+    "priceInsights": "Con un precio promedio de $58,948 pesos por metro cuadrado, la Del Valle Centro se ubica en un rango medio-alto comparado con otras zonas de la Ciudad de México. Si bien es cierto que los precios han ido disminuyendo en los últimos 5 meses, esto podría ser una oportunidad para encontrar mejores ofertas. Factores como la ubicación específica dentro de la colonia, el tamaño del inmueble y sus características (antigüedad, acabados, amenidades) influyen directamente en el precio final.",
+    "slug": "cuanto-cuesta-comprar-en-del-valle-centro"
+  },
+  "locationData": {
+    "name": "Del Valle Centro",
+    "type": "neighborhood",
+    "city": "Ciudad de México",
+    "municipality": "Benito Juárez",
+    "neighborhoods": [
+      {
+        "colonia": "Del Valle Centro",
+        "precio": "59034",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Del Valle Centro",
+        "precio": "58948",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Del Valle Centro",
+        "precio": "58887",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Del Valle Centro",
+        "precio": "59325",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Del Valle Centro",
+        "precio": "59814",
+        "mes": "June 2025"
+      }
+    ],
+    "averagePrice": 58948,
+    "priceHistory": [
+      {
+        "month": "June 2025",
+        "price": 59814,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 59325,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 58887,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 59034,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 58948,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-14T19:59:57.093Z",
+  "updatedAt": "2025-11-14T19:59:57.093Z"
+}

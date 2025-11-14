@@ -1,0 +1,96 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-mitras-centro",
+  "locationName": "Mitras Centro",
+  "locationType": "neighborhood",
+  "city": "Monterrey",
+  "municipality": "Monterrey",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Mitras Centro?",
+    "metaTitle": "Precios Mitras Centro Mty 2024 | $41,119/m²",
+    "metaDescription": "Descubre el precio promedio en Mitras Centro, Monterrey: $41,119/m². Analizamos la colonia para que tomes la mejor decisión de inversión. ¡Entra ahora!",
+    "introduction": "¿Pensando en invertir en Mitras Centro, Monterrey? ¡Excelente elección! Esta colonia tiene mucho que ofrecer, desde su ubicación estratégica hasta su ambiente vibrante. Actualmente, el precio promedio por metro cuadrado ronda los $41,119 pesos. Si estás buscando un lugar con buena conectividad y acceso a servicios, Mitras Centro podría ser justo lo que necesitas.\n\nAunque el precio promedio es un buen punto de partida, es importante considerar que los precios en Mitras Centro han mostrado una ligera tendencia a la baja en los últimos 5 meses. ¡Sigue leyendo para entender mejor el mercado y tomar una decisión informada!",
+    "mustVisitSpots": [
+      {
+        "name": "Parque Aztlán",
+        "description": "Un espacio verde ideal para relajarte, hacer ejercicio o pasar un rato agradable con la familia."
+      },
+      {
+        "name": "Avenida Ruiz Cortines",
+        "description": "Principal arteria vial con acceso a comercios, restaurantes y servicios de todo tipo."
+      },
+      {
+        "name": "Restaurantes locales en la calle Mitras",
+        "description": "Disfruta de la gastronomía local en los restaurantes de la calle Mitras, desde antojitos hasta platillos más elaborados."
+      },
+      {
+        "name": "Plazas comerciales cercanas",
+        "description": "Encontrarás varias plazas comerciales con tiendas departamentales, cines y opciones de entretenimiento."
+      }
+    ],
+    "priceInsights": "Con un precio promedio de $41,119 pesos por metro cuadrado, Mitras Centro se encuentra en un rango accesible dentro del mercado inmobiliario de Monterrey. Si lo comparamos con otras zonas de la ciudad, encontrarás opciones más exclusivas con precios más elevados, pero también colonias más económicas con menos amenidades. \n\nEs importante tener en cuenta que los precios en Mitras Centro han mostrado una ligera disminución en los últimos meses. Aunque esta tendencia podría ser temporal, vale la pena investigar las causas y considerar cómo podría afectar tu inversión. Factores como la oferta y la demanda, las condiciones económicas generales y los nuevos desarrollos en la zona pueden influir en los precios.",
+    "slug": "cuanto-cuesta-comprar-en-mitras-centro"
+  },
+  "locationData": {
+    "name": "Mitras Centro",
+    "type": "neighborhood",
+    "city": "Monterrey",
+    "municipality": "Monterrey",
+    "neighborhoods": [
+      {
+        "colonia": "Mitras Centro",
+        "precio": "40014",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Mitras Centro",
+        "precio": "41119",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Mitras Centro",
+        "precio": "79223",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Mitras Centro",
+        "precio": "80290",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Mitras Centro",
+        "precio": "80010",
+        "mes": "June 2025"
+      }
+    ],
+    "averagePrice": 41119,
+    "priceHistory": [
+      {
+        "month": "June 2025",
+        "price": 80010,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 80290,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 79223,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 40014,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 41119,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-14T15:42:53.767Z",
+  "updatedAt": "2025-11-14T15:42:53.767Z"
+}

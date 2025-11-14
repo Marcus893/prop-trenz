@@ -1,0 +1,268 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-venustiano-carranza",
+  "locationName": "Venustiano Carranza",
+  "locationType": "municipality",
+  "city": "Ciudad de México",
+  "content": {
+    "title": "¿Cuánto Cuesta Comprar en Venustiano Carranza?",
+    "metaTitle": "Precios Venustiano Carranza CDMX 2024 | $34,091/m²",
+    "metaDescription": "¿Pensando en comprar en Venustiano Carranza? Descubre los precios actualizados por metro cuadrado, la tendencia del mercado y por qué esta alcaldía es una gran opción en CDMX. ¡Entérate!",
+    "introduction": "Si estás buscando un lugar vibrante y con excelente conectividad en la Ciudad de México, ¡Venustiano Carranza podría ser para ti! Esta alcaldía tiene una gran variedad de opciones, desde departamentos modernos hasta casas con historia. Pero, ¿cuánto cuesta realmente vivir aquí? El precio promedio actual ronda los $34,091 pesos por metro cuadrado, un número que vale la pena considerar al planear tu inversión.\n\nVenustiano Carranza es conocida por su rica historia, sus mercados bulliciosos y su ubicación estratégica cerca del centro de la ciudad. Además, la alcaldía ofrece una mezcla interesante de tradición y modernidad, lo que la convierte en un lugar atractivo para familias, jóvenes profesionales y jubilados. Los precios han estado aumentando en los últimos meses, así que es un buen momento para explorar tus opciones.",
+    "mustVisitSpots": [
+      {
+        "name": "Mercado de Sonora",
+        "description": "Famoso por su diversidad de productos, desde artesanías y hierbas medicinales hasta animales y artículos esotéricos. ¡Una experiencia única!"
+      },
+      {
+        "name": "Palacio Legislativo de San Lázaro",
+        "description": "Sede del Congreso de la Unión, un impresionante edificio con murales que narran la historia de México."
+      },
+      {
+        "name": "Archivo General de la Nación",
+        "description": "Resguarda documentos históricos de México, un lugar fascinante para los amantes de la historia y la investigación."
+      },
+      {
+        "name": "Deportivo Oceanía",
+        "description": "Un espacio público con canchas deportivas, áreas verdes y actividades recreativas para toda la familia."
+      },
+      {
+        "name": "Restaurantes en la colonia Jardín Balbuena",
+        "description": "Esta colonia es conocida por su amplia oferta gastronómica, desde tacos hasta restaurantes de alta cocina. ¡Hay algo para todos los gustos!"
+      }
+    ],
+    "priceInsights": "Actualmente, el precio promedio en Venustiano Carranza se sitúa en $34,091 pesos por metro cuadrado. Si lo comparamos con otras alcaldías de la Ciudad de México, Venustiano Carranza ofrece una opción más accesible sin sacrificar la cercanía a puntos clave de la ciudad. Aunque quizás no alcance los precios premium de Polanco o la Condesa, ofrece una excelente relación calidad-precio.\n\nEn los últimos 5 meses hemos observado una tendencia al alza en los precios, lo que indica que la demanda por propiedades en la zona está creciendo. Este incremento podría estar influenciado por la mejora en la infraestructura, la apertura de nuevos negocios y la creciente popularidad de la alcaldía entre jóvenes y familias. ¡Así que estate atento al mercado si estás pensando en comprar por aquí!",
+    "slug": "cuanto-cuesta-comprar-en-venustiano-carranza"
+  },
+  "locationData": {
+    "name": "Venustiano Carranza",
+    "type": "municipality",
+    "city": "Ciudad de México",
+    "neighborhoods": [
+      {
+        "colonia": "Venustiano Carranza",
+        "precio": "53756",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Valle Gomez",
+        "precio": "39487",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Popular Rastro",
+        "precio": "27391",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Nicolas Bravo",
+        "precio": "23660",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Morelos",
+        "precio": "28180",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Janitzio",
+        "precio": "36978",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "20 De Noviembre",
+        "precio": "37670",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Simon Bolivar",
+        "precio": "28283",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Romero Rubio",
+        "precio": "33432",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pensador Mexicano",
+        "precio": "22332",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Peñon De Los Baños",
+        "precio": "34594",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Zona Centro",
+        "precio": "26962",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "10 De Mayo",
+        "precio": "22031",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "7 De Julio",
+        "precio": "31628",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Merced Balbuena",
+        "precio": "34299",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Lorenzo Boturini",
+        "precio": "35435",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Artes Graficas",
+        "precio": "33626",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Sevilla",
+        "precio": "38567",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Jamaica",
+        "precio": "39417",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Magdalena Mixiuhca",
+        "precio": "29133",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pueblo De La Magdalena Mixiuhca",
+        "precio": "48738",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Jardin Balbuena",
+        "precio": "35366",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Aeronautica Militar",
+        "precio": "37760",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Valentin Gomez Farias",
+        "precio": "43709",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "General Ignacio Zaragoza",
+        "precio": "28712",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Federal",
+        "precio": "36104",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "4 Arboles",
+        "precio": "38409",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Aviacion Civil",
+        "precio": "31567",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Ampliacion Aviacion Civil",
+        "precio": "37844",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Puebla",
+        "precio": "35127",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Cuchilla Pantitlan",
+        "precio": "28799",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "5To Tramo 20 De Noviembre",
+        "precio": "37680",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Moctezuma 2A. Seccion",
+        "precio": "37106",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Emilio Carranza",
+        "precio": "31945",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Alvaro Obregon",
+        "precio": "28122",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Santa Cruz Aviacion",
+        "precio": "49986",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Arenal Puerto Aereo",
+        "precio": "20088",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Aquiles Serdan",
+        "precio": "27348",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Moctezuma 1A Seccion",
+        "precio": "39031",
+        "mes": "July 2025"
+      }
+    ],
+    "averagePrice": 34090.63333333333,
+    "priceHistory": [
+      {
+        "month": "June 2025",
+        "price": 33940.885714285716,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 34392.28571428572,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 33431.23529411765,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 34357.030303030304,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 34090.63333333333,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-14T19:47:41.822Z",
+  "updatedAt": "2025-11-14T19:47:41.822Z"
+}

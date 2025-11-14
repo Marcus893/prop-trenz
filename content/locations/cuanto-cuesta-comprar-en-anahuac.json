@@ -1,0 +1,96 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-anahuac",
+  "locationName": "Anahuac",
+  "locationType": "neighborhood",
+  "city": "Monterrey",
+  "municipality": "San Nicolás de los Garza",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Anáhuac, Monterrey?",
+    "metaTitle": "Precios en Anáhuac, Mty 2024 | $95,510/m²",
+    "metaDescription": "Descubre el precio por metro cuadrado en Anáhuac, Monterrey: ¡$95,510! Analizamos la tendencia actual y te damos las claves para invertir inteligentemente. ¡Entérate ahora!",
+    "introduction": "Si estás pensando en comprar una propiedad en Monterrey, ¡Anáhuac es una colonia que definitivamente debes considerar! Ubicada en San Nicolás de los Garza, Anáhuac ofrece una excelente combinación de tranquilidad y acceso a servicios. Actualmente, el precio promedio por metro cuadrado ronda los $95,510 pesos, lo que la convierte en una opción atractiva para diferentes presupuestos. \n\nAnáhuac es una colonia con mucho que ofrecer. Desde su cercanía a importantes centros comerciales y educativos hasta su ambiente familiar, es un lugar ideal para establecerte. Sin embargo, es importante tener en cuenta que los precios han mostrado una ligera tendencia a la baja en los últimos 5 meses. ¡Así que es un buen momento para investigar a fondo!",
+    "mustVisitSpots": [
+      {
+        "name": "Parque Lineal Anáhuac",
+        "description": "Ideal para ejercitarte al aire libre o simplemente disfrutar de una caminata relajante."
+      },
+      {
+        "name": "Plaza de Anáhuac",
+        "description": "El corazón de la colonia, perfecta para disfrutar de eventos locales y convivir con los vecinos."
+      },
+      {
+        "name": "Restaurantes sobre la Av. República Mexicana",
+        "description": "Encontrarás una gran variedad de opciones gastronómicas para todos los gustos y presupuestos."
+      },
+      {
+        "name": "Centros comerciales cercanos",
+        "description": "Aprovecha la cercanía a centros comerciales como Plaza Citadel y Paseo La Fe para tus compras y entretenimiento."
+      }
+    ],
+    "priceInsights": "El precio promedio de $95,510 pesos por metro cuadrado en Anáhuac es competitivo dentro del mercado inmobiliario de Monterrey, especialmente si consideramos su ubicación en San Nicolás de los Garza. Si lo comparamos con otras colonias de la ciudad, Anáhuac se posiciona como una opción más accesible sin sacrificar calidad de vida y cercanía a servicios. \n\nEs crucial tener en cuenta la ligera tendencia a la baja que hemos observado en los últimos 5 meses. Esto podría ser resultado de diversos factores, como cambios en las tasas de interés, la oferta y demanda de propiedades, o incluso el desarrollo de nuevos proyectos en la zona. Si estás pensando en invertir, te recomiendo estar atento a estos factores y buscar asesoría de un experto para tomar la mejor decisión.",
+    "slug": "cuanto-cuesta-comprar-en-anahuac"
+  },
+  "locationData": {
+    "name": "Anahuac",
+    "type": "neighborhood",
+    "city": "Monterrey",
+    "municipality": "San Nicolás de los Garza",
+    "neighborhoods": [
+      {
+        "colonia": "Anahuac",
+        "precio": "96369",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Anahuac",
+        "precio": "95510",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Anahuac",
+        "precio": "194136",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Anahuac",
+        "precio": "199084",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Anahuac",
+        "precio": "199321",
+        "mes": "June 2025"
+      }
+    ],
+    "averagePrice": 95510,
+    "priceHistory": [
+      {
+        "month": "June 2025",
+        "price": 199321,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 199084,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 194136,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 96369,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 95510,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-14T17:12:54.881Z",
+  "updatedAt": "2025-11-14T17:12:54.882Z"
+}

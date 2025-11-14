@@ -14,7 +14,9 @@
     "generate-images": "ts-node --project tsconfig.scripts.json scripts/generate-images.ts",
     "publish-guide": "ts-node --project tsconfig.scripts.json scripts/publish-guide.ts",
     "translate-guides": "ts-node --project tsconfig.scripts.json scripts/translate-guides.ts",
-    "publish-translations": "ts-node --project tsconfig.scripts.json scripts/publish-translations.ts"
+    "publish-translations": "ts-node --project tsconfig.scripts.json scripts/publish-translations.ts",
+    "generate-location": "ts-node --project tsconfig.scripts.json scripts/generate-location.ts",
+    "generate-locations": "ts-node --project tsconfig.scripts.json scripts/generate-locations.ts"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",

@@ -1,0 +1,174 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-iztacalco",
+  "locationName": "Iztacalco",
+  "locationType": "municipality",
+  "city": "Ciudad de México",
+  "content": {
+    "title": "Cuánto cuesta comprar en Iztacalco, CDMX",
+    "metaTitle": "Precios en Iztacalco CDMX 2024 | $32,649/m²",
+    "metaDescription": "¿Quieres invertir en Iztacalco? Descubre el precio promedio actual por metro cuadrado: $32,649. ¡Entérate de la tendencia y encuentra la mejor opción!",
+    "introduction": "Iztacalco, en el corazón de la Ciudad de México, es una excelente opción si estás pensando en comprar una propiedad. Con su ubicación estratégica y ambiente vibrante, ofrece una mezcla de tradición y modernidad que atrae a muchos. Actualmente, el precio promedio por metro cuadrado se sitúa en $32,649, un dato clave para tomar una decisión informada.\n\nEsta alcaldía tiene un encanto especial, con mercados llenos de vida, parques tranquilos y una gran variedad de opciones gastronómicas. ¡Es un lugar donde siempre hay algo nuevo por descubrir! Además, si bien los precios han mostrado una ligera tendencia a la baja en los últimos meses, entender el contexto es crucial.",
+    "mustVisitSpots": [
+      {
+        "name": "Parque de los Venados",
+        "description": "Un clásico de Iztacalco, perfecto para pasear, hacer ejercicio o simplemente relajarte en un día soleado."
+      },
+      {
+        "name": "Mercado de Iztacalco",
+        "description": "Sumérgete en la cultura local y prueba delicias culinarias en este mercado lleno de colores y sabores."
+      },
+      {
+        "name": "Ciudad Deportiva Magdalena Mixhuca",
+        "description": "Un espacio enorme para practicar deportes, disfrutar de conciertos y eventos, ¡siempre hay algo pasando!"
+      },
+      {
+        "name": "Foro Sol",
+        "description": "Un emblemático recinto para conciertos y eventos masivos. ¡Consulta su cartelera, seguro encuentras algo que te guste!"
+      }
+    ],
+    "priceInsights": "Actualmente, el precio promedio en Iztacalco ronda los $32,649 por metro cuadrado. Si comparamos esto con otras zonas de la Ciudad de México, Iztacalco suele ofrecer una opción más accesible, sin sacrificar la cercanía a importantes centros de trabajo y entretenimiento.\n\nAunque hemos observado una ligera disminución en los precios durante los últimos 5 meses, es importante considerar que el mercado inmobiliario es dinámico. Factores como la ubicación específica dentro de Iztacalco, el tipo de propiedad (casa, departamento, terreno) y las condiciones generales del mercado pueden influir en el precio final.",
+    "slug": "cuanto-cuesta-comprar-en-iztacalco"
+  },
+  "locationData": {
+    "name": "Iztacalco",
+    "type": "municipality",
+    "city": "Ciudad de México",
+    "neighborhoods": [
+      {
+        "colonia": "Granjas Mexico",
+        "precio": "43541",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Agricola Oriental",
+        "precio": "35779",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Agricola Pantitlan",
+        "precio": "29290",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Gabriel Ramos Millan Seccion Bramadero",
+        "precio": "28835",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Gabriel Ramos Millan",
+        "precio": "28576",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Ampliacion Gabriel Ramos Millan",
+        "precio": "23147",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Infonavit Iztacalco",
+        "precio": "23212",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Juventino Rosas",
+        "precio": "30275",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Tlazintla",
+        "precio": "25030",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Reforma Iztaccihuatl Sur",
+        "precio": "39576",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Barrio Los Reyes",
+        "precio": "34039",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Santa Anita",
+        "precio": "30954",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Barrio Zapotla",
+        "precio": "34429",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Barrio San Miguel",
+        "precio": "24816",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Campamento 2 De Octubre",
+        "precio": "25064",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Reforma Iztaccihuatl Norte",
+        "precio": "33698",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Militar Marte",
+        "precio": "38258",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Barrio Santiago Sur",
+        "precio": "42719",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Viaducto Piedad",
+        "precio": "37580",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "La Cruz",
+        "precio": "36984",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Gabriel Ramos Millan Secc Tlacotal",
+        "precio": "45635",
+        "mes": "June 2025"
+      }
+    ],
+    "averagePrice": 32649.055555555555,
+    "priceHistory": [
+      {
+        "month": "June 2025",
+        "price": 34569,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 33444.5,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 32522.684210526317,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 32043.052631578947,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 32649.055555555555,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-14T19:45:58.493Z",
+  "updatedAt": "2025-11-14T19:45:58.493Z"
+}

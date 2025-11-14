@@ -1,0 +1,96 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-lomas-de-chapultepec-i-seccion",
+  "locationName": "Lomas De Chapultepec I Seccion",
+  "locationType": "neighborhood",
+  "city": "Ciudad de México",
+  "municipality": "Miguel Hidalgo",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Lomas I Seccion?",
+    "metaTitle": "Lomas I Seccion: Precios 2024 | $72,499/m²",
+    "metaDescription": "Descubre el precio promedio en Lomas De Chapultepec I Seccion: $72,499/m². ¡Invierte en una de las zonas más exclusivas de la CDMX! Tendencia al alza.",
+    "introduction": "¿Pensando en invertir en bienes raíces en la Ciudad de México? Lomas de Chapultepec I Sección es una opción que definitivamente debes considerar. Con su ubicación privilegiada y su ambiente exclusivo, esta colonia ofrece un estilo de vida inigualable. Actualmente, el precio promedio por metro cuadrado ronda los $72,499, pero, ¡ojo!, esta zona está cada vez más cotizada.",
+    "mustVisitSpots": [
+      {
+        "name": "Parque de las Américas",
+        "description": "Un oasis de tranquilidad perfecto para pasear, hacer ejercicio o simplemente relajarte en medio del bullicio de la ciudad."
+      },
+      {
+        "name": "Restaurantes de Paseo de la Reforma",
+        "description": "A un paso de Lomas, encontrarás una gran variedad de restaurantes de alta cocina con vistas espectaculares."
+      },
+      {
+        "name": "Auditorio Nacional",
+        "description": "Disfruta de eventos de talla mundial a pocos minutos de tu hogar en este icónico recinto."
+      },
+      {
+        "name": "Tiendas de lujo en Masaryk",
+        "description": "Si buscas exclusividad y las últimas tendencias, Masaryk está a la vuelta de la esquina con sus boutiques de diseñador."
+      }
+    ],
+    "priceInsights": "El precio promedio de $72,499 por metro cuadrado en Lomas de Chapultepec I Sección la posiciona como una de las zonas más exclusivas de la CDMX. Si lo comparamos con el promedio de la ciudad, que suele ser más bajo, vemos que aquí pagas por la ubicación, seguridad y estilo de vida. Además, los datos de los últimos 5 meses nos indican que los precios están en aumento, lo que significa que tu inversión podría revalorizarse con el tiempo. Factores como la demanda, la disponibilidad de propiedades y las mejoras en la infraestructura pueden influir en esta tendencia alcista.",
+    "slug": "cuanto-cuesta-comprar-en-lomas-de-chapultepec-i-seccion"
+  },
+  "locationData": {
+    "name": "Lomas De Chapultepec I Seccion",
+    "type": "neighborhood",
+    "city": "Ciudad de México",
+    "municipality": "Miguel Hidalgo",
+    "neighborhoods": [
+      {
+        "colonia": "Lomas De Chapultepec I Seccion",
+        "precio": "72739",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Lomas De Chapultepec I Seccion",
+        "precio": "72499",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Lomas De Chapultepec I Seccion",
+        "precio": "72062",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Lomas De Chapultepec I Seccion",
+        "precio": "72552",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Lomas De Chapultepec I Seccion",
+        "precio": "72163",
+        "mes": "June 2025"
+      }
+    ],
+    "averagePrice": 72499,
+    "priceHistory": [
+      {
+        "month": "June 2025",
+        "price": 72163,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 72552,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 72062,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 72739,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 72499,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-14T19:56:35.718Z",
+  "updatedAt": "2025-11-14T19:56:35.718Z"
+}

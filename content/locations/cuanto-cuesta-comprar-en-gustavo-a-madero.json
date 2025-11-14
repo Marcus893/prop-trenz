@@ -1,0 +1,409 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-gustavo-a-madero",
+  "locationName": "Gustavo A. Madero",
+  "locationType": "municipality",
+  "city": "Ciudad de México",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Gustavo A. Madero?",
+    "metaTitle": "Precios en Gustavo A. Madero CDMX | $35,286/m²",
+    "metaDescription": "¿Pensando en invertir en Gustavo A. Madero? Descubre el precio promedio por metro cuadrado: $35,286. ¡Infórmate sobre el mercado inmobiliario aquí!",
+    "introduction": "Si andas buscando un lugar chido para invertir en la Ciudad de México, ¡échale un ojo a Gustavo A. Madero! Este municipio, lleno de vida y cultura, ofrece opciones para todos los gustos y presupuestos. Actualmente, el precio promedio por metro cuadrado se encuentra alrededor de los $35,286. \n\nGustavo A. Madero es conocida por su rica historia, sus mercados vibrantes y su excelente ubicación, conectada con el resto de la CDMX. Y sí, los precios han ido subiendo en los últimos meses, así que ¡es buen momento para considerar invertir!",
+    "mustVisitSpots": [
+      {
+        "name": "Basílica de Guadalupe",
+        "description": "Un imperdible para los creyentes y amantes de la arquitectura. ¡Un lugar lleno de historia y fe!"
+      },
+      {
+        "name": "Parque Tepeyac",
+        "description": "Ideal para un paseo tranquilo, hacer ejercicio o disfrutar de un día en familia. ¡Un respiro de la ciudad!"
+      },
+      {
+        "name": "Mercado Río Blanco",
+        "description": "Encuentra de todo, desde comida deliciosa hasta artesanías únicas. ¡Un verdadero festín para los sentidos!"
+      },
+      {
+        "name": "Cineteca Nacional",
+        "description": "Aunque no está *exactamente* en GAM, está muy cerca y es un must para los cinéfilos. ¡Siempre hay algo interesante en cartelera!"
+      }
+    ],
+    "priceInsights": "Con un precio promedio de $35,286 por metro cuadrado, Gustavo A. Madero se posiciona como una opción atractiva dentro del mercado inmobiliario de la Ciudad de México. Si bien no es la zona más económica, ofrece una excelente relación calidad-precio considerando su ubicación estratégica y su amplia oferta de servicios. \n\nEs importante tener en cuenta que hemos observado una tendencia al alza en los precios durante los últimos 5 meses. Factores como la creciente demanda, la mejora en la infraestructura y la gentrificación en algunas zonas podrían estar influyendo en este incremento. Así que, si estás pensando en comprar, ¡no te duermas en los laureles!",
+    "slug": "cuanto-cuesta-comprar-en-gustavo-a-madero"
+  },
+  "locationData": {
+    "name": "Gustavo A. Madero",
+    "type": "municipality",
+    "city": "Ciudad de México",
+    "neighborhoods": [
+      {
+        "colonia": "Lindavista Norte",
+        "precio": "53095",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "San Juan De Aragon Iv Seccion",
+        "precio": "37453",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "San Juan De Aragon Iii Seccion",
+        "precio": "29886",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "San Juan De Aragon Ii Seccion",
+        "precio": "27531",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "San Juan De Aragon I Seccion",
+        "precio": "44360",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "San Juan De Aragon Vi Seccion",
+        "precio": "26777",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Providencia",
+        "precio": "29137",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "San Felipe De Jesus",
+        "precio": "17170",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Campestre Aragon",
+        "precio": "26536",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Ampliacion Casas Aleman",
+        "precio": "26560",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "D M Nacional",
+        "precio": "29236",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "El Coyol",
+        "precio": "32087",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Nueva Atzacoalco",
+        "precio": "25284",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Vasco De Quiroga",
+        "precio": "33032",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pueblo De Santiago Atzacoalco",
+        "precio": "34254",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "C T M El Risco",
+        "precio": "27946",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Valle Del Tepeyac",
+        "precio": "49078",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Martin Carrera",
+        "precio": "35800",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Constitucion De La Republica",
+        "precio": "32504",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Granjas Modernas",
+        "precio": "29931",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Bondojito",
+        "precio": "38822",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Tablas De San Agustin",
+        "precio": "32297",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Emiliano Zapata",
+        "precio": "29825",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Guadalupe Tepeyac",
+        "precio": "44937",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Estrella",
+        "precio": "36371",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Tres Estrellas",
+        "precio": "44009",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Aragon La Villa",
+        "precio": "48202",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Villa Gustavo A Madero",
+        "precio": "38556",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Santa Isabel Tola",
+        "precio": "36944",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Residencial Zacatenco",
+        "precio": "44555",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "San Pedro Zacatenco",
+        "precio": "44165",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Lindavista Sur",
+        "precio": "46617",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Tepeyac Insurgentes",
+        "precio": "38600",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Magdalena De Las Salinas",
+        "precio": "51383",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Guadalupe Insurgentes",
+        "precio": "45937",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Vallejo",
+        "precio": "36600",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Industrial",
+        "precio": "36388",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Nueva Vallejo",
+        "precio": "48012",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "San Bartolo Atepehuacan",
+        "precio": "38758",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Churubusco Tepeyac",
+        "precio": "36860",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Planetario Lindavista",
+        "precio": "34376",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Nueva Industrial Vallejo",
+        "precio": "42193",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "San Jose Ticoman",
+        "precio": "51749",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Barrio La Purisima Ticoman",
+        "precio": "31484",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Torres Lindavista",
+        "precio": "47655",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Residencial La Escalera",
+        "precio": "37121",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Barrio Candelaria Ticoman",
+        "precio": "43345",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Residencial Acueducto De Guadalupe",
+        "precio": "37069",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Jorge Negrete",
+        "precio": "19234",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Zona Escolar Oriente",
+        "precio": "20918",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Zona Escolar",
+        "precio": "17086",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Guadalupe Proletaria",
+        "precio": "20708",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Progreso Nacional",
+        "precio": "17742",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Santa Rosa",
+        "precio": "28978",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Ampliacion Progreso Nacional",
+        "precio": "24241",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Del Obrero",
+        "precio": "28367",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Cuchilla Del Tesoro",
+        "precio": "25894",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "7 De Noviembre",
+        "precio": "32649",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Ex Ejido San Juan De Aragon Sector 33",
+        "precio": "18049",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Capultitlan",
+        "precio": "37773",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "El Arbolillo",
+        "precio": "26073",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Santa Maria Ticoman",
+        "precio": "31671",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Panamericana",
+        "precio": "24264",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "La Esmeralda",
+        "precio": "24330",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "San Juan De Aragon Vii Seccion",
+        "precio": "23929",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Gabriel Hernandez",
+        "precio": "32901",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "San Pedro El Chico",
+        "precio": "28741",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Pueblo San Juan De Aragon",
+        "precio": "25310",
+        "mes": "June 2025"
+      }
+    ],
+    "averagePrice": 35286.32075471698,
+    "priceHistory": [
+      {
+        "month": "June 2025",
+        "price": 35114.15517241379,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 35061.57407407407,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 35090.18518518518,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 35465.7962962963,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 35286.32075471698,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-14T19:45:45.596Z",
+  "updatedAt": "2025-11-14T19:45:45.596Z"
+}

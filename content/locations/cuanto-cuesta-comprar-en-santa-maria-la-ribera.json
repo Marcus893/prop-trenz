@@ -1,0 +1,96 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-santa-maria-la-ribera",
+  "locationName": "Santa Maria La Ribera",
+  "locationType": "neighborhood",
+  "city": "Ciudad de México",
+  "municipality": "Cuauhtémoc",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Santa Maria La Ribera?",
+    "metaTitle": "Precios en Santa Maria La Ribera CDMX 2024 | $55,362/m²",
+    "metaDescription": "Descubre los precios de bienes raíces en Santa Maria La Ribera. Precio promedio $55,362/m². ¡Conoce la colonia que lo tiene todo en la CDMX!",
+    "introduction": "¿Estás pensando en invertir en Santa Maria La Ribera? ¡Excelente elección! Esta colonia en el corazón de la Ciudad de México tiene un encanto único que combina historia, cultura y modernidad. Actualmente, el precio promedio por metro cuadrado ronda los $55,362, lo que la convierte en una opción atractiva para quienes buscan un hogar con personalidad. \n\nSanta Maria La Ribera, ubicada en la alcaldía Cuauhtémoc, es conocida por su ambiente relajado, sus calles arboladas y su arquitectura ecléctica. Además, su ubicación estratégica la hace accesible a otras zonas importantes de la ciudad. Y con la tendencia de precios al alza que hemos observado en los últimos 5 meses, ¡invertir aquí podría ser una excelente decisión!",
+    "mustVisitSpots": [
+      {
+        "name": "Kiosco Morisco",
+        "description": "El corazón de la colonia, un impresionante monumento traído de la Exposición Universal de Nueva Orleans."
+      },
+      {
+        "name": "Museo del Caricatura",
+        "description": "Un espacio dedicado al arte del cartón político y la caricatura en México."
+      },
+      {
+        "name": "Mercado de la Dalia",
+        "description": "Un mercado tradicional donde encontrarás antojitos mexicanos, productos frescos y un ambiente muy local."
+      },
+      {
+        "name": "Casa de los Mascarones",
+        "description": "Una joya arquitectónica con una fachada impresionante llena de mascarones."
+      }
+    ],
+    "priceInsights": "El precio promedio de $55,362 por metro cuadrado en Santa Maria La Ribera es competitivo en comparación con otras colonias céntricas de la Ciudad de México. Si bien algunas zonas exclusivas de la ciudad alcanzan precios mucho más altos, Santa Maria La Ribera ofrece una excelente relación calidad-precio considerando su ubicación privilegiada y su creciente popularidad. \n\nEn los últimos 5 meses, hemos notado una tendencia al alza en los precios de las propiedades. Esto puede deberse a varios factores, como el aumento en la demanda de vivienda en la zona, la rehabilitación de edificios antiguos y la llegada de nuevos restaurantes y comercios que están revitalizando la colonia. Por lo tanto, si estás considerando comprar aquí, ¡este podría ser el momento oportuno!",
+    "slug": "cuanto-cuesta-comprar-en-santa-maria-la-ribera"
+  },
+  "locationData": {
+    "name": "Santa Maria La Ribera",
+    "type": "neighborhood",
+    "city": "Ciudad de México",
+    "municipality": "Cuauhtémoc",
+    "neighborhoods": [
+      {
+        "colonia": "Santa Maria La Ribera",
+        "precio": "55053",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Santa Maria La Ribera",
+        "precio": "55362",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Santa Maria La Ribera",
+        "precio": "54678",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Santa Maria La Ribera",
+        "precio": "53683",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Santa Maria La Ribera",
+        "precio": "53290",
+        "mes": "June 2025"
+      }
+    ],
+    "averagePrice": 55362,
+    "priceHistory": [
+      {
+        "month": "June 2025",
+        "price": 53290,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 53683,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 54678,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 55053,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 55362,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-14T19:59:04.667Z",
+  "updatedAt": "2025-11-14T19:59:04.668Z"
+}

@@ -1,0 +1,96 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-polanco-iv-seccion",
+  "locationName": "Polanco Iv Seccion",
+  "locationType": "neighborhood",
+  "city": "Ciudad de México",
+  "municipality": "Miguel Hidalgo",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Polanco Iv Seccion?",
+    "metaTitle": "Precios en Polanco Iv Seccion CDMX | $93,556/m² (2024)",
+    "metaDescription": "Descubre el precio promedio por metro cuadrado en Polanco Iv Seccion: $93,556/m². ¿Es el momento de invertir en esta exclusiva colonia de la CDMX? ¡Entérate!",
+    "introduction": "Polanco Iv Seccion es sin duda una joya dentro de la Ciudad de México, ¿verdad? Imagínate vivir aquí, rodeado de exclusividad y con todo a la mano. Si estás pensando en comprar una propiedad, debes saber que el precio promedio actual ronda los $93,556 por metro cuadrado. \n\nUbicada en la alcaldía Miguel Hidalgo, esta colonia es famosa por su ambiente tranquilo, sus calles arboladas y su cercanía a algunos de los mejores restaurantes y tiendas de la ciudad. Aunque los precios han mostrado una ligera disminución en los últimos meses, Polanco Iv Seccion sigue siendo una inversión atractiva.",
+    "mustVisitSpots": [
+      {
+        "name": "Parque América",
+        "description": "Un oasis verde perfecto para un paseo matutino o simplemente relajarte un rato."
+      },
+      {
+        "name": "Avenida Horacio",
+        "description": "Llena de boutiques de lujo, restaurantes de alta cocina y galerías de arte."
+      },
+      {
+        "name": "El Palacio de Hierro Polanco",
+        "description": "Una tienda departamental icónica con una selección increíble de productos."
+      },
+      {
+        "name": "Lincoln Park",
+        "description": "Un espacio público con senderos para caminar, áreas verdes, un aviario y el Teatro Ángela Peralta."
+      }
+    ],
+    "priceInsights": "Con un precio promedio de $93,556 por metro cuadrado, comprar en Polanco Iv Seccion representa una inversión importante. Si comparamos con otras zonas de la Ciudad de México, este precio se ubica en el extremo superior, reflejando la exclusividad y los beneficios de vivir en esta colonia. Ahora, ojo, hemos visto una ligera disminución en los precios en los últimos 5 meses. Esto podría ser una oportunidad para encontrar buenas ofertas. Factores como la ubicación específica dentro de la colonia, el tamaño y las características de la propiedad, así como las condiciones del mercado inmobiliario, pueden influir en el precio final.",
+    "slug": "cuanto-cuesta-comprar-en-polanco-iv-seccion"
+  },
+  "locationData": {
+    "name": "Polanco Iv Seccion",
+    "type": "neighborhood",
+    "city": "Ciudad de México",
+    "municipality": "Miguel Hidalgo",
+    "neighborhoods": [
+      {
+        "colonia": "Polanco Iv Seccion",
+        "precio": "93386",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Polanco Iv Seccion",
+        "precio": "93556",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Polanco Iv Seccion",
+        "precio": "95829",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Polanco Iv Seccion",
+        "precio": "97040",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Polanco Iv Seccion",
+        "precio": "98366",
+        "mes": "June 2025"
+      }
+    ],
+    "averagePrice": 93556,
+    "priceHistory": [
+      {
+        "month": "June 2025",
+        "price": 98366,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 97040,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 95829,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 93386,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 93556,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-14T19:56:17.932Z",
+  "updatedAt": "2025-11-14T19:56:17.933Z"
+}

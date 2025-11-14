@@ -1,0 +1,96 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-del-valle-sur",
+  "locationName": "Del Valle Sur",
+  "locationType": "neighborhood",
+  "city": "Ciudad de México",
+  "municipality": "Benito Juárez",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Del Valle Sur?",
+    "metaTitle": "Precios en Del Valle Sur CDMX 2024 | $61,218/m²",
+    "metaDescription": "Descubre cuánto cuesta vivir en Del Valle Sur. Precios actualizados al 2024: $61,218/m². ¡Entérate si es la colonia ideal para invertir en la CDMX!",
+    "introduction": "Si estás pensando en comprar depa o casa en la Ciudad de México, seguramente te has topado con Del Valle Sur. Esta colonia en la alcaldía Benito Juárez es una joyita, con una ubicación estratégica y un ambiente súper agradable. Actualmente, el precio promedio por metro cuadrado ronda los $61,218. ¿Suena bien? ¡Pues sigue leyendo para saber si es la opción ideal para ti! \n\nLo bueno es que, según nuestros datos de los últimos 5 meses, los precios en Del Valle Sur van para arriba. Esto significa que invertir aquí podría ser una excelente decisión a largo plazo. Vamos a analizar a fondo los precios y a contarte por qué esta colonia sigue siendo tan cotizada.",
+    "mustVisitSpots": [
+      {
+        "name": "Parque de los Venados",
+        "description": "Ideal para un paseo dominical, hacer ejercicio o simplemente relajarte un rato. Siempre hay actividades y eventos."
+      },
+      {
+        "name": "Mercado de Medellín",
+        "description": "Un paraíso gastronómico donde encuentras de todo: comida típica mexicana, ingredientes exóticos y sabores internacionales. ¡Imperdible!"
+      },
+      {
+        "name": "Avenida Universidad",
+        "description": "Llena de restaurantes, cafeterías y comercios. Perfecta para dar una vuelta y disfrutar del ambiente de la colonia."
+      },
+      {
+        "name": "Cineteca Nacional",
+        "description": "Aunque está justo al lado, es un obligado para los amantes del cine de arte y las opciones alternativas."
+      }
+    ],
+    "priceInsights": "El precio promedio de $61,218 por metro cuadrado en Del Valle Sur la coloca en un rango competitivo dentro de la Ciudad de México. Si lo comparamos con otras colonias de la Benito Juárez, como Nápoles o Roma Sur, Del Valle Sur ofrece una opción atractiva, a veces incluso más accesible, sin sacrificar calidad de vida ni ubicación. \n\nLa tendencia alcista en los precios que hemos observado en los últimos meses sugiere que la demanda por propiedades en la zona sigue siendo alta. Factores como su excelente ubicación, la cercanía a importantes vías de comunicación, la oferta de servicios y la seguridad contribuyen a este aumento constante. Es importante considerar que los precios pueden variar dependiendo de la calle, el tipo de inmueble y las amenidades que ofrezca cada propiedad. ¡Pero no te desanimes! Con un poco de investigación y la ayuda de un buen agente inmobiliario, seguro encuentras la opción perfecta para ti en Del Valle Sur!",
+    "slug": "cuanto-cuesta-comprar-en-del-valle-sur"
+  },
+  "locationData": {
+    "name": "Del Valle Sur",
+    "type": "neighborhood",
+    "city": "Ciudad de México",
+    "municipality": "Benito Juárez",
+    "neighborhoods": [
+      {
+        "colonia": "Del Valle Sur",
+        "precio": "61834",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Del Valle Sur",
+        "precio": "61218",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Del Valle Sur",
+        "precio": "59978",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Del Valle Sur",
+        "precio": "59395",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Del Valle Sur",
+        "precio": "59197",
+        "mes": "June 2025"
+      }
+    ],
+    "averagePrice": 61218,
+    "priceHistory": [
+      {
+        "month": "June 2025",
+        "price": 59197,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 59395,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 59978,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 61834,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 61218,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-14T19:59:43.271Z",
+  "updatedAt": "2025-11-14T19:59:43.271Z"
+}

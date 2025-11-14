@@ -1,0 +1,264 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-municipio-guadalupe",
+  "locationName": "Guadalupe",
+  "locationType": "municipality",
+  "city": "Monterrey",
+  "content": {
+    "title": "¿Cuánto cuesta comprar casa en Guadalupe?",
+    "metaTitle": "Precios en Guadalupe, Mty 2024 | $27,257/m²",
+    "metaDescription": "Descubre el precio promedio por metro cuadrado en Guadalupe, Monterrey. ¿Es buen momento para invertir? ¡Checa la info más reciente y toma la mejor decisión!",
+    "introduction": "¿Estás pensando en comprar casa en Guadalupe? ¡Excelente elección! Este municipio conurbado de Monterrey tiene mucho que ofrecer. Desde su ambiente familiar hasta su cercanía con importantes centros comerciales y de trabajo, Guadalupe es una opción atractiva para muchos. Actualmente, el precio promedio por metro cuadrado aquí ronda los $27,257 pesos, así que vamos a desglosar un poco más esta información para que tengas una idea clara de lo que puedes esperar.\n\nY aunque los datos de los últimos meses muestran una ligera tendencia a la baja, no te espantes, esto puede significar una oportunidad para encontrar buenas ofertas. ¡Sigue leyendo para saber más!",
+    "mustVisitSpots": [
+      {
+        "name": "Parque Tolteca",
+        "description": "Un espacio verde ideal para pasar un día en familia, hacer ejercicio o simplemente relajarte."
+      },
+      {
+        "name": "Estadio BBVA",
+        "description": "Casa de los Rayados de Monterrey, un imperdible para los amantes del fútbol."
+      },
+      {
+        "name": "Multiplaza Lindavista",
+        "description": "Un centro comercial con una gran variedad de tiendas, restaurantes y entretenimiento."
+      },
+      {
+        "name": "Zoológico La Pastora",
+        "description": "Perfecto para una tarde divertida con los niños, con una gran diversidad de animales."
+      }
+    ],
+    "priceInsights": "El precio promedio de $27,257 pesos por metro cuadrado en Guadalupe lo coloca en un rango accesible dentro de la zona metropolitana de Monterrey. Si lo comparamos con otros municipios más exclusivos, Guadalupe ofrece una alternativa más económica sin sacrificar la cercanía a servicios y oportunidades de empleo. \n\nLa ligera tendencia a la baja que hemos observado en los últimos 5 meses podría ser influenciada por diversos factores, como la oferta y demanda local, las tasas de interés hipotecarias y el desarrollo de nuevos proyectos inmobiliarios en la zona. Es importante estar atento a estos factores para tomar una decisión informada al momento de comprar.",
+    "slug": "cuanto-cuesta-comprar-en-municipio-guadalupe"
+  },
+  "locationData": {
+    "name": "Guadalupe",
+    "type": "municipality",
+    "city": "Monterrey",
+    "neighborhoods": [
+      {
+        "colonia": "Centro De Guadalupe",
+        "precio": "19787",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Contry La Silla",
+        "precio": "29104",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Linda Vista",
+        "precio": "37740",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Libertad",
+        "precio": "31116",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Jardines De La Pastora",
+        "precio": "41855",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Bosques De La Pastora",
+        "precio": "33199",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Cerradas De Linda Vista",
+        "precio": "26006",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Azteca",
+        "precio": "21801",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Nueva Linda Vista",
+        "precio": "23848",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Guadalupe Victoria",
+        "precio": "25313",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Rincon De La Sierra",
+        "precio": "26320",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pedregal De Lnda Vista",
+        "precio": "17110",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Valles De La Silla",
+        "precio": "37020",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Privada San Carlos",
+        "precio": "22599",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Jardines De Andalucia",
+        "precio": "25580",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Sierra Morena",
+        "precio": "16862",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Dos Rios",
+        "precio": "22469",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Los Cristales 1Er Sector",
+        "precio": "31698",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "La Victoria",
+        "precio": "26929",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Adolfo Prieto 4To Sector",
+        "precio": "34891",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Valles Contry 2Do Sector",
+        "precio": "36347",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Bosques Del Contry",
+        "precio": "32005",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Contry Sol",
+        "precio": "31752",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Valle Del Contry",
+        "precio": "29283",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Contry Los Nogales",
+        "precio": "27718",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Mision Santa Fe",
+        "precio": "18954",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Riberas De Dos Rios",
+        "precio": "23819",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Los Faisanes",
+        "precio": "22446",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Peninsula",
+        "precio": "23248",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Ejido Las Escobas",
+        "precio": "24566",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "10 De Mayo",
+        "precio": "59211",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "La Hacienda",
+        "precio": "46366",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Siete Colinas",
+        "precio": "61694",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "La Purisima",
+        "precio": "57669",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Melchor Ocampo",
+        "precio": "83948",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Valle De Torremolinos",
+        "precio": "59954",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Rincon Del Contry",
+        "precio": "76313",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "15 De Mayo",
+        "precio": "94729",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Riberas Del Rio",
+        "precio": "33222",
+        "mes": "June 2025"
+      }
+    ],
+    "averagePrice": 27257.133333333335,
+    "priceHistory": [
+      {
+        "month": "June 2025",
+        "price": 55389.3,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 55149.9375,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 53284.74193548387,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 27476.51724137931,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 27257.133333333335,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-14T16:57:35.715Z",
+  "updatedAt": "2025-11-14T16:57:35.715Z"
+}

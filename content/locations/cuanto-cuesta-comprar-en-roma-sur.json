@@ -1,0 +1,96 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-roma-sur",
+  "locationName": "Roma Sur",
+  "locationType": "neighborhood",
+  "city": "Ciudad de México",
+  "municipality": "Cuauhtémoc",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Roma Sur?",
+    "metaTitle": "Precios Roma Sur CDMX 2024 | $66,256/m² ¡Descúbrelo!",
+    "metaDescription": "¿Pensando en invertir en Roma Sur? Descubre el precio promedio actual de $66,256/m² y qué hace tan especial a esta colonia. ¡Tu futuro hogar te espera!",
+    "introduction": "Si estás buscando un lugar con onda, bien ubicado y con un toque bohemio en la Ciudad de México, ¡Roma Sur podría ser tu próximo hogar! Esta colonia, ubicada en la alcaldía Cuauhtémoc, se ha convertido en una de las zonas más cotizadas de la ciudad. ¿Te preguntas cuánto cuesta vivir aquí? Actualmente, el precio promedio por metro cuadrado ronda los $66,256 pesos.\n\nRoma Sur tiene un encanto particular. Sus calles arboladas, su arquitectura ecléctica y su ambiente relajado la hacen irresistible. Además, su excelente ubicación te permite estar cerca de todo lo que necesitas. Y ojo, ¡los precios están subiendo! Así que si te interesa, ¡ponte las pilas!",
+    "mustVisitSpots": [
+      {
+        "name": "Mercado Medellín",
+        "description": "Un clásico para encontrar productos frescos, antojitos mexicanos y hasta comida internacional. ¡Un festín para tus sentidos!"
+      },
+      {
+        "name": "Parque México",
+        "description": "El corazón de la Roma, ideal para pasear, hacer ejercicio o simplemente relajarte bajo la sombra de sus árboles."
+      },
+      {
+        "name": "Álvaro Obregón",
+        "description": "Una de las avenidas principales, llena de cafés, restaurantes y boutiques. ¡Perfecta para un paseo dominical!"
+      },
+      {
+        "name": "Fuente de Cibeles",
+        "description": "Un ícono de la ciudad, punto de encuentro y símbolo de la conexión entre México y España."
+      }
+    ],
+    "priceInsights": "Con un precio promedio de $66,256 por metro cuadrado, Roma Sur se posiciona como una colonia de gama media-alta en la Ciudad de México. Si comparamos este precio con otras zonas de la ciudad, vemos que se encuentra por encima del promedio general, pero aún existen opciones más exclusivas en Polanco o Lomas de Chapultepec. La tendencia de precios en Roma Sur ha sido al alza en los últimos meses, con un aumento constante en los últimos 5 meses. Esto se debe a su creciente popularidad, su excelente ubicación y la revalorización de la zona gracias a nuevos desarrollos inmobiliarios y la renovación de espacios públicos. Factores como la cercanía a centros de trabajo, la oferta cultural y gastronómica, y la seguridad también influyen en el valor de las propiedades.",
+    "slug": "cuanto-cuesta-comprar-en-roma-sur"
+  },
+  "locationData": {
+    "name": "Roma Sur",
+    "type": "neighborhood",
+    "city": "Ciudad de México",
+    "municipality": "Cuauhtémoc",
+    "neighborhoods": [
+      {
+        "colonia": "Roma Sur",
+        "precio": "65894",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Roma Sur",
+        "precio": "66256",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Roma Sur",
+        "precio": "66206",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Roma Sur",
+        "precio": "66153",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Roma Sur",
+        "precio": "66127",
+        "mes": "June 2025"
+      }
+    ],
+    "averagePrice": 66256,
+    "priceHistory": [
+      {
+        "month": "June 2025",
+        "price": 66127,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 66153,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 66206,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 65894,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 66256,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-14T20:09:22.364Z",
+  "updatedAt": "2025-11-14T20:09:22.365Z"
+}

@@ -6,6 +6,7 @@ import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 import { Loader2 } from 'lucide-react'
 import { useTranslation } from 'next-i18next'
+import { NeighborhoodPriceChart } from './NeighborhoodPriceChart'
 
 // Fix for Leaflet default marker icons in Next.js
 if (typeof window !== 'undefined') {
@@ -309,12 +310,17 @@ function translateDate(dateString: string, t: (key: string, options?: any) => st
 function NeighborhoodMarker({ 
   marker, 
   onMarkerReady,
-  translateDateFn
+  translateDateFn,
+  municipality,
+  onShowChart
 }: { 
   marker: { key: string; coords: [number, number]; color: string; price: number; neighborhood: Neighborhood }
   onMarkerReady: (key: string, markerInstance: L.Marker) => void
   translateDateFn: (dateString: string) => string
+  municipality: string
+  onShowChart: (municipality: string, neighborhood: Neighborhood) => void
 }) {
+  const { t } = useTranslation('common')
   const markerRef = useRef<L.Marker | null>(null)
   
   // Use callback ref to capture marker instance
@@ -334,14 +340,21 @@ function NeighborhoodMarker({
       icon={customIcon}
     >
       <Popup>
-        <div className="text-center">
-          <h3 className="font-bold text-sm mb-1">{marker.neighborhood.colonia}</h3>
+        <div className="text-center min-w-[100px]">
+          <h3 className="font-bold text-sm">{marker.neighborhood.colonia}</h3>
           <p className="text-xs text-gray-600 font-semibold">
             ${Math.round(marker.price).toLocaleString('es-MX')}/m²
           </p>
           <p className="text-xs text-gray-500">
             {translateDateFn(marker.neighborhood.mes)}
           </p>
+          <button
+            onClick={() => onShowChart(municipality, marker.neighborhood)}
+            className="w-full text-xs text-blue-600 hover:text-blue-800 font-medium px-2 py-1 rounded bg-blue-50 hover:bg-blue-100 transition-colors border border-blue-200"
+            title={t('map.view_chart', 'View price history')}
+          >
+            {t('map.chart', 'Chart')}
+          </button>
         </div>
       </Popup>
     </Marker>
@@ -363,32 +376,17 @@ export function NeighborhoodMap({ data }: NeighborhoodMapProps) {
   const [searchQuery, setSearchQuery] = useState('')
   const [mapInstance, setMapInstance] = useState<L.Map | null>(null)
   const [isCardCollapsed, setIsCardCollapsed] = useState(false)
+  const [selectedNeighborhoodForChart, setSelectedNeighborhoodForChart] = useState<{
+    name: string
+    municipality: string
+    data: Array<{ mes: string; precio: string; date: Date; price: number; displayDate: string }>
+  } | null>(null)
   const coordsRef = useRef<Map<string, [number, number]>>(new Map())
   const markerRefs = useRef<Map<string, L.Marker>>(new Map())
   
   // Handle marker ready - store ref
   const handleMarkerReady = (key: string, markerInstance: L.Marker) => {
     markerRefs.current.set(key, markerInstance)
-  }
-  
-  // Handle neighborhood click - pan to marker and open popup
-  const handleNeighborhoodClick = (municipality: string, neighborhood: Neighborhood) => {
-    const key = `${municipality}-${neighborhood.colonia}`
-    const coords = neighborhoodCoords.get(key)
-    
-    if (coords && mapInstance) {
-      // Pan to the neighborhood location
-      mapInstance.setView(coords, 15, { animate: true, duration: 0.5 })
-      
-      // Find and open the marker popup
-      const marker = markerRefs.current.get(key)
-      if (marker) {
-        // Small delay to ensure map has panned
-        setTimeout(() => {
-          marker.openPopup()
-        }, 500)
-      }
-    }
   }
   
   // Clear search when closing sidebar
@@ -538,6 +536,73 @@ export function NeighborhoodMap({ data }: NeighborhoodMapProps) {
     if (!selectedMunicipality) return null
     return markers.find(m => m.municipality === selectedMunicipality)
   }, [selectedMunicipality, markers])
+
+  // Extract all historical data for a neighborhood (from original unfiltered data)
+  const getHistoricalDataForNeighborhood = useMemo(() => {
+    return (municipality: string, colonia: string) => {
+      // Access original unfiltered data from the data prop (not selectedData which is filtered)
+      const cityData = data[currentCity]
+      if (!cityData || !cityData[municipality]) return []
+      
+      // Get ALL neighborhoods with the same name from ALL months (not just most recent)
+      const allNeighborhoods = cityData[municipality].filter(
+        n => n.colonia === colonia
+      )
+      
+      // Convert to chart data format
+      return allNeighborhoods
+        .map(n => {
+          const date = parseMonthDate(n.mes)
+          if (!date) return null
+          
+          const price = parseFloat(n.precio)
+          if (isNaN(price) || price <= 0) return null
+          
+          return {
+            mes: n.mes,
+            precio: n.precio,
+            date,
+            price,
+            displayDate: translateDateFn(n.mes)
+          }
+        })
+        .filter((item): item is NonNullable<typeof item> => item !== null)
+        .sort((a, b) => a.date.getTime() - b.date.getTime())
+    }
+  }, [data, currentCity, translateDateFn])
+
+  // Handle neighborhood click - show chart or pan to marker
+  const handleNeighborhoodClick = (municipality: string, neighborhood: Neighborhood, showChart: boolean = false) => {
+    if (showChart) {
+      // Show historical chart
+      const historicalData = getHistoricalDataForNeighborhood(municipality, neighborhood.colonia)
+      if (historicalData.length > 0) {
+        setSelectedNeighborhoodForChart({
+          name: neighborhood.colonia,
+          municipality,
+          data: historicalData
+        })
+      }
+    } else {
+      // Pan to marker and open popup (original behavior)
+      const key = `${municipality}-${neighborhood.colonia}`
+      const coords = neighborhoodCoords.get(key)
+      
+      if (coords && mapInstance) {
+        // Pan to the neighborhood location
+        mapInstance.setView(coords, 15, { animate: true, duration: 0.5 })
+        
+        // Find and open the marker popup
+        const marker = markerRefs.current.get(key)
+        if (marker) {
+          // Small delay to ensure map has panned
+          setTimeout(() => {
+            marker.openPopup()
+          }, 500)
+        }
+      }
+    }
+  }
   
   // Keep ref in sync with state
   useEffect(() => {
@@ -764,6 +829,17 @@ export function NeighborhoodMap({ data }: NeighborhoodMapProps) {
             marker={marker}
             onMarkerReady={handleMarkerReady}
             translateDateFn={translateDateFn}
+            municipality={selectedData?.municipality || ''}
+            onShowChart={(municipality, neighborhood) => {
+              const historicalData = getHistoricalDataForNeighborhood(municipality, neighborhood.colonia)
+              if (historicalData.length > 0) {
+                setSelectedNeighborhoodForChart({
+                  name: neighborhood.colonia,
+                  municipality,
+                  data: historicalData
+                })
+              }
+            }}
           />
         ))}
       </MapContainer>
@@ -803,6 +879,27 @@ export function NeighborhoodMap({ data }: NeighborhoodMapProps) {
           <span className="text-sm text-gray-700">
             {t('map.loading_neighborhoods')} ({geocodingProgress.current}/{geocodingProgress.total})
           </span>
+        </div>
+      )}
+
+      {/* Historical Price Chart Modal */}
+      {selectedNeighborhoodForChart && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-50 z-[100000] flex items-center justify-center p-4"
+          onClick={() => setSelectedNeighborhoodForChart(null)}
+        >
+          <div 
+            className="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <NeighborhoodPriceChart
+              neighborhoodName={selectedNeighborhoodForChart.name}
+              municipality={selectedNeighborhoodForChart.municipality}
+              data={selectedNeighborhoodForChart.data}
+              onClose={() => setSelectedNeighborhoodForChart(null)}
+              translateDate={translateDateFn}
+            />
+          </div>
         </div>
       )}
 
@@ -915,21 +1012,37 @@ export function NeighborhoodMap({ data }: NeighborhoodMapProps) {
                     return (
                       <div 
                         key={`${neighborhood.colonia}-${neighborhood.mes}`}
-                        onClick={() => hasCoords && handleNeighborhoodClick(selectedData.municipality, neighborhood)}
-                        className={`p-2 rounded text-xs border-l-2 cursor-pointer transition-colors ${
+                        onClick={() => {
+                          if (hasCoords) {
+                            handleNeighborhoodClick(selectedData.municipality, neighborhood, false)
+                          }
+                        }}
+                        className={`p-2 rounded text-xs border-l-2 transition-colors ${
                           hasCoords 
-                            ? 'bg-gray-50 border-green-500 hover:bg-gray-100 hover:border-green-600' 
+                            ? 'bg-gray-50 border-green-500 hover:bg-gray-100 hover:border-green-600 cursor-pointer' 
                             : 'bg-gray-50 border-gray-300 cursor-not-allowed opacity-60'
                         }`}
                       >
-                        <div className="font-medium flex items-center gap-2">
+                        <div className="font-medium flex items-center gap-2 mb-1">
                           {neighborhood.colonia}
                           {hasCoords && (
                             <span className="text-xs text-green-600">●</span>
                           )}
                         </div>
-                        <div className="text-gray-600">
-                          ${Math.round(parseFloat(neighborhood.precio)).toLocaleString('es-MX')}/m²
+                        <div className="flex items-center justify-between mb-1">
+                          <div className="text-gray-600 font-semibold">
+                            ${Math.round(parseFloat(neighborhood.precio)).toLocaleString('es-MX')}/m²
+                          </div>
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation()
+                              handleNeighborhoodClick(selectedData.municipality, neighborhood, true)
+                            }}
+                            className="text-xs text-blue-600 hover:text-blue-800 font-medium px-2 py-1 rounded hover:bg-blue-50 transition-colors"
+                            title={t('map.view_chart', 'View price history')}
+                          >
+                            {t('map.chart', 'Chart')}
+                          </button>
                         </div>
                         <div className="text-gray-500 text-xs">{translateDateFn(neighborhood.mes)}</div>
                       </div>

@@ -1,0 +1,76 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-ladrillera",
+  "locationName": "Ladrillera",
+  "locationType": "neighborhood",
+  "city": "Monterrey",
+  "municipality": "Monterrey",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Ladrillera, Mty?",
+    "metaTitle": "Precios en Ladrillera, Monterrey | $71,108/m²",
+    "metaDescription": "¿Pensando en invertir en Ladrillera, Monterrey? Descubre los precios actuales de propiedades: ¡$71,108/m²! Explora esta colonia y encuentra tu hogar ideal.",
+    "introduction": "¿Te late la idea de comprar casa o depa en Ladrillera, Monterrey? ¡Buena elección! Ladrillera es una colonia con mucho que ofrecer y, si estás buscando opciones, es crucial saber cómo andan los precios por acá. Actualmente, el precio promedio está en $71,108 por metro cuadrado. \n\nUbicada en el corazón de Monterrey, Ladrillera combina la tranquilidad de un barrio residencial con la cercanía a centros comerciales, escuelas y avenidas principales. Si buscas un lugar bien conectado y con un ambiente familiar, ¡Ladrillera podría ser para ti! Ahora bien, es importante tener en cuenta que los precios han mostrado una ligera tendencia a la baja en los últimos meses, así que estate atento.",
+    "mustVisitSpots": [
+      {
+        "name": "Parque Ladrillera",
+        "description": "Un espacio verde ideal para relajarte, hacer ejercicio o pasar un rato agradable con la familia."
+      },
+      {
+        "name": "Mercado Ladrillera",
+        "description": "Donde encontrarás productos frescos, antojitos y la esencia del comercio local."
+      },
+      {
+        "name": "Calle Raúl Rangel Frías",
+        "description": "Una de las principales arterias de la colonia, con acceso a diversos comercios y servicios."
+      },
+      {
+        "name": "Iglesia de la Sagrada Familia",
+        "description": "Un punto de referencia importante dentro de la comunidad."
+      }
+    ],
+    "priceInsights": "El precio promedio actual en Ladrillera se sitúa en $71,108 por metro cuadrado. Si lo comparamos con otras zonas de Monterrey, podríamos decir que está en un rango intermedio, aunque más cercano a zonas residenciales tradicionales. La ligera tendencia a la baja que hemos observado en los últimos 3 meses puede deberse a diversos factores, como la oferta y demanda actual de propiedades en la zona, las tasas de interés de los créditos hipotecarios y el desarrollo de nuevos proyectos inmobiliarios en áreas cercanas. Es importante que estés al tanto de estos factores para tomar la mejor decisión de compra.",
+    "slug": "cuanto-cuesta-comprar-en-ladrillera"
+  },
+  "locationData": {
+    "name": "Ladrillera",
+    "type": "neighborhood",
+    "city": "Monterrey",
+    "municipality": "Monterrey",
+    "neighborhoods": [
+      {
+        "colonia": "Ladrillera",
+        "precio": "71108",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Ladrillera",
+        "precio": "142707",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Ladrillera",
+        "precio": "143866",
+        "mes": "June 2025"
+      }
+    ],
+    "averagePrice": 71108,
+    "priceHistory": [
+      {
+        "month": "June 2025",
+        "price": 143866,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 142707,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 71108,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-14T17:12:30.929Z",
+  "updatedAt": "2025-11-14T17:12:30.929Z"
+}

@@ -1,0 +1,80 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-jardines-del-campestre",
+  "locationName": "Jardines Del Campestre",
+  "locationType": "neighborhood",
+  "city": "Monterrey",
+  "municipality": "San Pedro Garza García",
+  "content": {
+    "title": "¿Cuánto Cuesta Comprar en Jardines Del Campestre?",
+    "metaTitle": "Jardines Del Campestre: Precios 2024 | $109,702/m²",
+    "metaDescription": "Descubre el precio actual en Jardines Del Campestre, Monterrey: $109,702/m². ¡Infórmate sobre la zona y encuentra tu hogar ideal en San Pedro Garza García!",
+    "introduction": "Si estás pensando en invertir en bienes raíces en Monterrey, Jardines Del Campestre es una colonia que definitivamente debes considerar. Ubicada en el municipio de San Pedro Garza García, esta zona se caracteriza por su ambiente tranquilo, seguridad y cercanía a importantes centros comerciales y educativos. Actualmente, el precio promedio para comprar una propiedad aquí ronda los $109,702 pesos por metro cuadrado. \n\nJardines Del Campestre ofrece una excelente calidad de vida, con amplias áreas verdes y una gran variedad de opciones residenciales. Si bien los precios han mostrado una ligera tendencia a la baja en los últimos meses, la plusvalía de la zona se mantiene gracias a su ubicación privilegiada y alta demanda.",
+    "mustVisitSpots": [
+      {
+        "name": "Parque Rufino Tamayo",
+        "description": "Un espacio verde ideal para relajarse, hacer ejercicio o disfrutar de un picnic en familia. Cuenta con áreas de juegos infantiles y senderos para caminar."
+      },
+      {
+        "name": "Plaza Fiesta San Agustín",
+        "description": "Un centro comercial con una amplia variedad de tiendas, restaurantes y cines. Perfecto para pasar una tarde de compras o disfrutar de una comida deliciosa."
+      },
+      {
+        "name": "Club Campestre Monterrey",
+        "description": "Un exclusivo club deportivo con campos de golf, canchas de tenis, albercas y otras instalaciones recreativas."
+      },
+      {
+        "name": "Restaurantes en Av. Vasconcelos",
+        "description": "A pocos minutos, encontrarás una gran oferta gastronómica en Av. Vasconcelos, con opciones para todos los gustos y presupuestos."
+      },
+      {
+        "name": "Colegios privados de alto nivel",
+        "description": "Jardines del Campestre está cerca de algunas de las mejores escuelas privadas de Monterrey, ideal si tienes hijos."
+      }
+    ],
+    "priceInsights": "El precio promedio actual en Jardines Del Campestre, de $109,702 pesos por metro cuadrado, refleja la exclusividad y alta demanda de la zona. Si bien este precio puede parecer elevado en comparación con otras colonias de Monterrey, es importante considerar la calidad de vida, seguridad y ubicación privilegiada que ofrece Jardines Del Campestre. Observamos una ligera tendencia a la baja en los precios en los últimos 3 meses, lo cual podría representar una oportunidad para quienes buscan invertir. Factores como la tasa de interés, la inflación y el desarrollo de nuevos proyectos inmobiliarios en la zona podrían influir en la evolución de los precios en el futuro.",
+    "slug": "cuanto-cuesta-comprar-en-jardines-del-campestre"
+  },
+  "locationData": {
+    "name": "Jardines Del Campestre",
+    "type": "neighborhood",
+    "city": "Monterrey",
+    "municipality": "San Pedro Garza García",
+    "neighborhoods": [
+      {
+        "colonia": "Jardines Del Campestre",
+        "precio": "104753",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Jardines Del Campestre",
+        "precio": "109702",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Jardines Del Campestre",
+        "precio": "199417",
+        "mes": "July 2025"
+      }
+    ],
+    "averagePrice": 109702,
+    "priceHistory": [
+      {
+        "month": "July 2025",
+        "price": 199417,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 104753,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 109702,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-14T17:11:24.619Z",
+  "updatedAt": "2025-11-14T17:11:24.619Z"
+}

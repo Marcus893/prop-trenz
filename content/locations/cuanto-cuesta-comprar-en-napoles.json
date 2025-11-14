@@ -1,0 +1,96 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-napoles",
+  "locationName": "Napoles",
+  "locationType": "neighborhood",
+  "city": "Ciudad de México",
+  "municipality": "Benito Juárez",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Napoles, CDMX?",
+    "metaTitle": "Precios en Napoles, CDMX 2024 | $64,773/m²",
+    "metaDescription": "¿Pensando en invertir en Napoles? Descubre el precio promedio por metro cuadrado ($64,773) y qué onda con la tendencia de precios en esta colonia trendy de Benito Juárez.",
+    "introduction": "¿Te late la idea de vivir en una zona céntrica, con onda y llena de vida en la Ciudad de México? Napoles, en la alcaldía Benito Juárez, podría ser tu próximo hogar. Esta colonia es famosa por su excelente ubicación, su ambiente tranquilo y su amplia oferta de restaurantes y servicios. Actualmente, el precio promedio por metro cuadrado para comprar una propiedad aquí ronda los $64,773.\n\nSi bien los precios han mostrado una ligera tendencia a la baja en los últimos meses, Napoles sigue siendo una de las colonias más buscadas en la CDMX. Su plusvalía se mantiene gracias a su excelente conectividad, su cercanía a centros de trabajo y su vibrante vida cultural.",
+    "mustVisitSpots": [
+      {
+        "name": "Parque de los Venados",
+        "description": "Un clásico de la zona, ideal para un paseo tranquilo, hacer ejercicio o disfrutar de un picnic con la familia."
+      },
+      {
+        "name": "WTC Ciudad de México",
+        "description": "Un importante centro de negocios y eventos, además de contar con una amplia variedad de restaurantes y tiendas."
+      },
+      {
+        "name": "Restaurantes y Cafés de la calle Pennsylvania",
+        "description": "Encontrarás desde comida tradicional mexicana hasta propuestas internacionales, ¡hay algo para todos los gustos!"
+      },
+      {
+        "name": "Teatro en Corto Nápoles",
+        "description": "Una propuesta innovadora para disfrutar de obras de teatro breves y originales en un ambiente íntimo."
+      }
+    ],
+    "priceInsights": "El precio promedio de $64,773 por metro cuadrado en Napoles refleja su posición como una colonia de alta demanda dentro de la Ciudad de México. Si bien este precio puede parecer elevado en comparación con otras zonas de la ciudad, es importante considerar que Napoles ofrece una calidad de vida superior, con acceso a servicios, transporte y entretenimiento de primer nivel. \n\nEn los últimos 5 meses, hemos observado una ligera disminución en los precios, pero es importante tener en cuenta que esta tendencia podría cambiar en el futuro. Factores como la inflación, las tasas de interés y la demanda de vivienda pueden influir en la evolución de los precios en Napoles.",
+    "slug": "cuanto-cuesta-comprar-en-napoles"
+  },
+  "locationData": {
+    "name": "Napoles",
+    "type": "neighborhood",
+    "city": "Ciudad de México",
+    "municipality": "Benito Juárez",
+    "neighborhoods": [
+      {
+        "colonia": "Napoles",
+        "precio": "65056",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Napoles",
+        "precio": "64773",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Napoles",
+        "precio": "64552",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Napoles",
+        "precio": "64646",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Napoles",
+        "precio": "64953",
+        "mes": "June 2025"
+      }
+    ],
+    "averagePrice": 64773,
+    "priceHistory": [
+      {
+        "month": "June 2025",
+        "price": 64953,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 64646,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 64552,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 65056,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 64773,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-14T20:00:10.408Z",
+  "updatedAt": "2025-11-14T20:00:10.408Z"
+}

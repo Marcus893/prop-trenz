@@ -1,0 +1,100 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-mitras-norte",
+  "locationName": "Mitras Norte",
+  "locationType": "neighborhood",
+  "city": "Monterrey",
+  "municipality": "Monterrey",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Mitras Norte?",
+    "metaTitle": "Precios en Mitras Norte, Mty | $51,777/m² (2024)",
+    "metaDescription": "Descubre el precio promedio para comprar casa en Mitras Norte, Monterrey. ¡Entérate si es el momento ideal para invertir en esta colonia!",
+    "introduction": "¿Estás pensando en comprar casa en Mitras Norte, Monterrey? ¡Es una excelente opción! Esta colonia, ubicada en el corazón de la ciudad, ofrece una combinación de tranquilidad y acceso a todo lo que necesitas. Actualmente, el precio promedio por metro cuadrado en Mitras Norte ronda los $51,777 pesos. Así que, si andas buscando opciones, ten en cuenta esta cifra para empezar a armar tu presupuesto. \n\nMitras Norte es conocida por su ambiente familiar, sus calles arboladas y su cercanía a centros comerciales, escuelas y hospitales. Aunque hemos visto una ligera tendencia a la baja en los precios en los últimos meses, sigue siendo una zona muy demandada, ¡así que no te duermas en los laureles si encuentras algo que te guste!",
+    "mustVisitSpots": [
+      {
+        "name": "Parque Aztlán",
+        "description": "Ideal para un día de picnic o para que los niños jueguen. ¡Siempre hay ambiente familiar!"
+      },
+      {
+        "name": "Plaza Real Mitras",
+        "description": "Aquí encontrarás desde restaurantes hasta tiendas departamentales. ¡Perfecta para hacer tus compras!"
+      },
+      {
+        "name": "Restaurante El Pipiripau",
+        "description": "Un clásico de la zona para disfrutar de comida mexicana deliciosa. ¡No te pierdas sus enchiladas!"
+      },
+      {
+        "name": "Iglesia de San Judas Tadeo",
+        "description": "Un lugar tranquilo para reflexionar y disfrutar de la arquitectura local."
+      },
+      {
+        "name": "Mercado de Abastos Mitras",
+        "description": "¡Encuentra frutas, verduras y productos frescos a precios increíbles!"
+      }
+    ],
+    "priceInsights": "El precio promedio de $51,777 por metro cuadrado en Mitras Norte es competitivo considerando su ubicación estratégica en Monterrey. Si lo comparamos con otras zonas de la ciudad, como San Pedro Garza García, Mitras Norte ofrece una opción más accesible sin sacrificar la calidad de vida. Aunque hemos observado una ligera disminución en los precios en los últimos 5 meses, esto podría representar una oportunidad para invertir, ya que la demanda en la zona sigue siendo alta. Factores como la disponibilidad de terrenos, la construcción de nuevos desarrollos y las tasas de interés hipotecarias pueden influir en la fluctuación de los precios en el futuro.",
+    "slug": "cuanto-cuesta-comprar-en-mitras-norte"
+  },
+  "locationData": {
+    "name": "Mitras Norte",
+    "type": "neighborhood",
+    "city": "Monterrey",
+    "municipality": "Monterrey",
+    "neighborhoods": [
+      {
+        "colonia": "Mitras Norte",
+        "precio": "49426",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Mitras Norte",
+        "precio": "51777",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Mitras Norte",
+        "precio": "98317",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Mitras Norte",
+        "precio": "99610",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Mitras Norte",
+        "precio": "103766",
+        "mes": "June 2025"
+      }
+    ],
+    "averagePrice": 51777,
+    "priceHistory": [
+      {
+        "month": "June 2025",
+        "price": 103766,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 99610,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 98317,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 49426,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 51777,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-14T15:42:36.710Z",
+  "updatedAt": "2025-11-14T15:42:36.710Z"
+}

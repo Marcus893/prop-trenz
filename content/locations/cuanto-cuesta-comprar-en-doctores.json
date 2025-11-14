@@ -1,0 +1,96 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-doctores",
+  "locationName": "Doctores",
+  "locationType": "neighborhood",
+  "city": "Ciudad de México",
+  "municipality": "Cuauhtémoc",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Doctores, CDMX?",
+    "metaTitle": "Precios en Doctores CDMX 2024 | $59,035/m²",
+    "metaDescription": "¿Pensando en invertir en Doctores? Descubre el precio promedio actual de $59,035/m² y las últimas tendencias del mercado. ¡Tu hogar en la Cuauhtémoc te espera!",
+    "introduction": "Si estás buscando un lugar con onda en la Ciudad de México, ¡Doctores podría ser para ti! Esta colonia en la alcaldía Cuauhtémoc tiene una vibra auténtica y una ubicación estratégica. Actualmente, el precio promedio por metro cuadrado anda alrededor de $59,035, pero ¿qué significa eso realmente? Seguí leyendo para entender mejor el mercado inmobiliario en Doctores y si es la inversión ideal para vos. Ojo, los precios han estado bajando un poquito en los últimos meses, así que es un buen momento para estar atento.",
+    "mustVisitSpots": [
+      {
+        "name": "Mercado Hidalgo",
+        "description": "Un clásico de la colonia para encontrar de todo, desde comida hasta ropa y artículos para el hogar. ¡Un verdadero laberinto de tesoros!"
+      },
+      {
+        "name": "Arena México",
+        "description": "Si te gusta la lucha libre, este es EL lugar. Emociónate con los vuelos y llaves de los luchadores más famosos de México."
+      },
+      {
+        "name": "Parque del Artesano",
+        "description": "Un espacio verde tranquilo para relajarse y disfrutar del aire fresco. Ideal para un picnic o simplemente para observar a la gente."
+      },
+      {
+        "name": "El Turix",
+        "description": "Famoso por sus cochinita pibil y marquesitas, este puesto callejero siempre tiene fila, ¡y con razón!"
+      }
+    ],
+    "priceInsights": "Actualmente, el precio promedio en Doctores se ubica en $59,035 por metro cuadrado. Comparado con otras zonas de la Ciudad de México, podría considerarse una opción más accesible, aunque esto depende mucho de la ubicación específica dentro de la colonia y el tipo de propiedad que busques. Lo importante es saber que, según nuestros datos de los últimos 5 meses, los precios han mostrado una ligera tendencia a la baja. Esto podría ser una oportunidad para encontrar mejores ofertas, pero también es crucial considerar factores como la inflación y la demanda general en la zona. No hay que olvidar que la plusvalía de la zona puede estar influenciada por su cercanía a lugares emblemáticos y su creciente popularidad entre jóvenes y artistas.",
+    "slug": "cuanto-cuesta-comprar-en-doctores"
+  },
+  "locationData": {
+    "name": "Doctores",
+    "type": "neighborhood",
+    "city": "Ciudad de México",
+    "municipality": "Cuauhtémoc",
+    "neighborhoods": [
+      {
+        "colonia": "Doctores",
+        "precio": "59357",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Doctores",
+        "precio": "59035",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Doctores",
+        "precio": "59078",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Doctores",
+        "precio": "59429",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Doctores",
+        "precio": "59746",
+        "mes": "June 2025"
+      }
+    ],
+    "averagePrice": 59035,
+    "priceHistory": [
+      {
+        "month": "June 2025",
+        "price": 59746,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 59429,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 59078,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 59357,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 59035,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-14T19:58:25.341Z",
+  "updatedAt": "2025-11-14T19:58:25.341Z"
+}

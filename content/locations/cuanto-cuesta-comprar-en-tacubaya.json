@@ -1,0 +1,96 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-tacubaya",
+  "locationName": "Tacubaya",
+  "locationType": "neighborhood",
+  "city": "Ciudad de México",
+  "municipality": "Miguel Hidalgo",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Tacubaya, CDMX?",
+    "metaTitle": "Precios en Tacubaya CDMX 2024 | $55,020/m²",
+    "metaDescription": "Descubre cuánto cuesta vivir en Tacubaya, CDMX. Precio promedio actual: $55,020/m². Analizamos la tendencia de precios y te damos tips para invertir bien. ¡Entra ahora!",
+    "introduction": "¿Estás pensando en comprar un depa o casa en la Ciudad de México? ¡Tacubaya es una colonia que vale la pena considerar! Con su ubicación estratégica y un ambiente que mezcla lo tradicional con lo moderno, Tacubaya ofrece opciones para todos los gustos y presupuestos. Actualmente, el precio promedio por metro cuadrado ronda los $55,020 pesos, pero ¡ojo!, esto es solo un punto de partida.\n\nTacubaya tiene una vibra única. Está súper bien conectada con el resto de la ciudad y cuenta con una historia rica que se refleja en su arquitectura y sus calles. Si buscas un lugar con personalidad y con acceso a todo, Tacubaya podría ser tu próxima casa. Ahora, analicemos qué onda con los precios y qué puedes esperar encontrar.",
+    "mustVisitSpots": [
+      {
+        "name": "Mercado Tacubaya",
+        "description": "Un mercado tradicional con una gran variedad de comida, flores y productos locales. ¡Ideal para vivir la experiencia Tacubaya!"
+      },
+      {
+        "name": "Parque Lira",
+        "description": "Un espacio verde perfecto para relajarte, hacer ejercicio o disfrutar de un picnic. ¡Un oasis en medio de la ciudad!"
+      },
+      {
+        "name": "El Claustro de Tacubaya",
+        "description": "Un edificio histórico con arquitectura colonial impresionante. ¡Un must para los amantes de la historia y la cultura!"
+      },
+      {
+        "name": "Restaurantes sobre Av. Revolución",
+        "description": "Encontrarás opciones deliciosas y variadas, desde comida mexicana tradicional hasta propuestas más modernas y alternativas."
+      }
+    ],
+    "priceInsights": "Con un precio promedio de $55,020 pesos por metro cuadrado, Tacubaya se encuentra en un rango accesible comparado con otras colonias más exclusivas de la Ciudad de México. Sin embargo, es importante considerar que este precio puede variar dependiendo de la ubicación específica dentro de la colonia, el tamaño y las características del inmueble.\n\nEn los últimos meses, hemos observado una ligera tendencia a la baja en los precios de las propiedades en Tacubaya. Con base en los datos de los últimos 5 meses, esta disminución podría deberse a diversos factores, como las condiciones generales del mercado inmobiliario o cambios en la demanda de la zona. Te recomendamos mantenerte al tanto de las fluctuaciones del mercado y analizar cuidadosamente las opciones disponibles antes de tomar una decisión.",
+    "slug": "cuanto-cuesta-comprar-en-tacubaya"
+  },
+  "locationData": {
+    "name": "Tacubaya",
+    "type": "neighborhood",
+    "city": "Ciudad de México",
+    "municipality": "Miguel Hidalgo",
+    "neighborhoods": [
+      {
+        "colonia": "Tacubaya",
+        "precio": "55679",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Tacubaya",
+        "precio": "55020",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Tacubaya",
+        "precio": "56263",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Tacubaya",
+        "precio": "57011",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Tacubaya",
+        "precio": "56158",
+        "mes": "June 2025"
+      }
+    ],
+    "averagePrice": 55020,
+    "priceHistory": [
+      {
+        "month": "June 2025",
+        "price": 56158,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 57011,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 56263,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 55679,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 55020,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-14T19:58:01.695Z",
+  "updatedAt": "2025-11-14T19:58:01.695Z"
+}

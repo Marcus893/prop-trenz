@@ -1,0 +1,96 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-polanco-v-seccion",
+  "locationName": "Polanco V Seccion",
+  "locationType": "neighborhood",
+  "city": "Ciudad de México",
+  "municipality": "Miguel Hidalgo",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Polanco V Seccion?",
+    "metaTitle": "Precios Polanco V Seccion CDMX 2024 | $91,166/m²",
+    "metaDescription": "Descubre el precio promedio por metro cuadrado en Polanco V Seccion: $91,166/m². Encuentra la propiedad ideal en esta exclusiva colonia de la CDMX.",
+    "introduction": "Pensando en invertir en bienes raíces en la Ciudad de México? Polanco V Seccion es una opción que vale la pena considerar. Esta colonia, ubicada en la alcaldía Miguel Hidalgo, es conocida por su ambiente tranquilo, sus calles arboladas y su cercanía a algunos de los mejores restaurantes y tiendas de la ciudad. Actualmente, el precio promedio por metro cuadrado en Polanco V Seccion ronda los $91,166, pero ojo, ¡los precios están bajando! \n\nSi buscas un lugar con estilo, buena ubicación y un ambiente relajado dentro de la vibrante CDMX, Polanco V Seccion podría ser tu próximo hogar. Veamos qué más tiene para ofrecer esta joya de la ciudad.",
+    "mustVisitSpots": [
+      {
+        "name": "Parque América",
+        "description": "Un oasis verde perfecto para pasear, hacer ejercicio o simplemente relajarte bajo la sombra de los árboles."
+      },
+      {
+        "name": "Restaurantes de Emilio Castelar",
+        "description": "Esta calle es famosa por su amplia oferta gastronómica, desde cocina mexicana tradicional hasta opciones internacionales."
+      },
+      {
+        "name": "Tiendas de lujo en Masaryk",
+        "description": "A pocos pasos de Polanco V Seccion, encontrarás boutiques de diseñador y tiendas exclusivas para satisfacer tus gustos más sofisticados."
+      },
+      {
+        "name": "Galerías de arte locales",
+        "description": "Explora el talento artístico local en las diversas galerías que se esconden en las calles de Polanco V Seccion."
+      }
+    ],
+    "priceInsights": "Actualmente, el precio promedio de $91,166 por metro cuadrado en Polanco V Seccion la posiciona como una zona premium dentro de la Ciudad de México, aunque no tan cara como otras secciones de Polanco. Sin embargo, es importante tener en cuenta que los precios han mostrado una ligera tendencia a la baja en los últimos 5 meses. Esto podría representar una oportunidad para aquellos que buscan invertir en la zona a un precio más accesible. \n\n¿Qué influye en estos precios? La ubicación exacta dentro de la colonia, el tamaño y estado de la propiedad, y la demanda general en el mercado inmobiliario de la CDMX juegan un papel importante. Es fundamental hacer una investigación exhaustiva y consultar con un agente inmobiliario local para tomar la mejor decisión.",
+    "slug": "cuanto-cuesta-comprar-en-polanco-v-seccion"
+  },
+  "locationData": {
+    "name": "Polanco V Seccion",
+    "type": "neighborhood",
+    "city": "Ciudad de México",
+    "municipality": "Miguel Hidalgo",
+    "neighborhoods": [
+      {
+        "colonia": "Polanco V Seccion",
+        "precio": "91515",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Polanco V Seccion",
+        "precio": "91166",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Polanco V Seccion",
+        "precio": "91541",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Polanco V Seccion",
+        "precio": "93092",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Polanco V Seccion",
+        "precio": "95085",
+        "mes": "June 2025"
+      }
+    ],
+    "averagePrice": 91166,
+    "priceHistory": [
+      {
+        "month": "June 2025",
+        "price": 95085,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 93092,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 91541,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 91515,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 91166,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-14T19:48:19.511Z",
+  "updatedAt": "2025-11-14T19:48:19.511Z"
+}

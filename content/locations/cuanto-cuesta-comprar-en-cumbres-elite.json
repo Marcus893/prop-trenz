@@ -1,0 +1,70 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-cumbres-elite",
+  "locationName": "Cumbres Elite",
+  "locationType": "neighborhood",
+  "city": "Monterrey",
+  "municipality": "Monterrey",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Cumbres Elite?",
+    "metaTitle": "Precios en Cumbres Elite Mty 2024 | $85,332/m²",
+    "metaDescription": "Descubre el precio promedio en Cumbres Elite, Monterrey: ¡$85,332/m²! Entérate por qué esta colonia es una excelente inversión. ¡Consulta ahora!",
+    "introduction": "¿Estás pensando en comprar casa o departamento en Monterrey? Cumbres Elite es una excelente opción si buscas un lugar con plusvalía y acceso a todo lo que necesitas. Ubicada en el poniente de la ciudad, esta colonia ofrece una gran calidad de vida y se ha convertido en una de las zonas más atractivas para vivir. Actualmente, el precio promedio en Cumbres Elite ronda los $85,332 por metro cuadrado, ¡un gran indicativo del valor que tiene esta zona!\n\nAdemás, si has estado siguiendo el mercado inmobiliario, seguramente sabrás que los precios en Cumbres Elite han ido aumentando en los últimos meses. Aunque solo tenemos datos de los últimos dos meses, la tendencia apunta a un crecimiento constante, lo que la convierte en una inversión inteligente a largo plazo.",
+    "mustVisitSpots": [
+      {
+        "name": "Parque Cumbres Elite",
+        "description": "Ideal para un paseo familiar, hacer ejercicio al aire libre o simplemente disfrutar de un momento de tranquilidad en medio de la ciudad."
+      },
+      {
+        "name": "Plaza Cumbres",
+        "description": "Aquí encontrarás una gran variedad de tiendas, restaurantes y servicios para satisfacer todas tus necesidades."
+      },
+      {
+        "name": "Restaurante La Catarina",
+        "description": "Un lugar perfecto para disfrutar de la deliciosa gastronomía mexicana con un toque moderno y sofisticado."
+      },
+      {
+        "name": "Gimnasio Smart Fit Cumbres",
+        "description": "Mantente en forma y saludable con las modernas instalaciones y clases dirigidas de este gimnasio."
+      },
+      {
+        "name": "HEB Cumbres",
+        "description": "Realiza tus compras de supermercado con la mejor calidad y variedad de productos."
+      }
+    ],
+    "priceInsights": "Con un precio promedio de $85,332 por metro cuadrado, Cumbres Elite se posiciona como una de las colonias más atractivas dentro de Monterrey. Este precio refleja la alta demanda y la calidad de vida que ofrece la zona. Si comparamos con otras áreas de Monterrey, Cumbres Elite se encuentra en un rango competitivo, ofreciendo una excelente relación entre precio y valor.\n\nLa tendencia al alza que hemos observado en los últimos dos meses indica que la demanda por propiedades en Cumbres Elite sigue creciendo. Factores como la ubicación estratégica, la seguridad, la cercanía a centros comerciales y educativos, y la calidad de las construcciones influyen directamente en el precio de las propiedades en esta colonia. Si estás considerando invertir, ahora podría ser un buen momento.",
+    "slug": "cuanto-cuesta-comprar-en-cumbres-elite"
+  },
+  "locationData": {
+    "name": "Cumbres Elite",
+    "type": "neighborhood",
+    "city": "Monterrey",
+    "municipality": "Monterrey",
+    "neighborhoods": [
+      {
+        "colonia": "Cumbres Elite",
+        "precio": "85332",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Cumbres Elite",
+        "precio": "83364",
+        "mes": "June 2025"
+      }
+    ],
+    "averagePrice": 85332,
+    "priceHistory": [
+      {
+        "month": "June 2025",
+        "price": 83364,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 85332,
+        "date": "2025-08-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-14T17:11:49.744Z",
+  "updatedAt": "2025-11-14T17:11:49.745Z"
+}

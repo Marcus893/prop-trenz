@@ -1,9 +1,13 @@
 import { GetServerSideProps } from 'next'
 import { listPublishedGuides } from '@/lib/pseo/storage'
+import { listLocationPages, loadLocationPage } from '@/lib/locations/storage'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://proptrenz.com'
 
-function generateSiteMap(guides: Array<{ slug: string; locale: string; updatedAt: string }>) {
+function generateSiteMap(
+  guides: Array<{ slug: string; locale: string; updatedAt: string }>,
+  locationPages: Array<{ slug: string; updatedAt: string }>
+) {
   const staticPages = [
     { url: '', changefreq: 'daily', priority: '1.0' },
     { url: '/charts', changefreq: 'weekly', priority: '0.8' },
@@ -42,6 +46,18 @@ function generateSiteMap(guides: Array<{ slug: string; locale: string; updatedAt
      `
        )
        .join('')}
+     ${locationPages
+       .map(
+         (location) => `
+       <url>
+           <loc>${SITE_URL}/${location.slug}</loc>
+           <lastmod>${new Date(location.updatedAt).toISOString()}</lastmod>
+           <changefreq>monthly</changefreq>
+           <priority>0.8</priority>
+       </url>
+     `
+       )
+       .join('')}
    </urlset>
  `
 }
@@ -62,8 +78,17 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
     ...zhGuides.map((g) => ({ slug: g.slug, locale: 'zh', updatedAt: g.updatedAt }))
   ]
 
-  // Generate the XML sitemap with the guides data
-  const sitemap = generateSiteMap(allGuides)
+  // Fetch all location pages
+  const locationSlugs = listLocationPages()
+  const locationPages = locationSlugs
+    .map((slug) => {
+      const page = loadLocationPage(slug)
+      return page ? { slug: page.slug, updatedAt: page.updatedAt } : null
+    })
+    .filter((page): page is { slug: string; updatedAt: string } => page !== null)
+
+  // Generate the XML sitemap with the guides and location pages data
+  const sitemap = generateSiteMap(allGuides, locationPages)
 
   res.setHeader('Content-Type', 'text/xml')
   res.write(sitemap)

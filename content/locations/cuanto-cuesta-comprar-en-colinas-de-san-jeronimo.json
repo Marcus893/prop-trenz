@@ -1,0 +1,96 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-colinas-de-san-jeronimo",
+  "locationName": "Colinas De San Jeronimo",
+  "locationType": "neighborhood",
+  "city": "Monterrey",
+  "municipality": "Monterrey",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Colinas De San Jeronimo?",
+    "metaTitle": "Precios en Colinas San Jeronimo Monterrey | $50,474/m²",
+    "metaDescription": "Descubre el precio promedio para comprar en Colinas De San Jeronimo, Monterrey: $50,474/m². ¡Encuentra tu hogar en esta increíble colonia!",
+    "introduction": "¿Pensando en invertir en bienes raíces en Monterrey? Colinas De San Jeronimo es una opción que definitivamente debes considerar. Esta colonia, ubicada en un punto estratégico de la ciudad, ofrece una combinación atractiva de tranquilidad y cercanía a todo lo que necesitas. Actualmente, el precio promedio por metro cuadrado ronda los $50,474 pesos, pero, ¿es una buena inversión? Vamos a analizarlo.\n\nColinas De San Jeronimo es conocida por su ambiente familiar y su acceso a importantes avenidas, centros comerciales y escuelas de prestigio. Aunque hemos notado una ligera tendencia a la baja en los precios en los últimos meses, entender el contexto del mercado es clave para tomar la mejor decisión.",
+    "mustVisitSpots": [
+      {
+        "name": "Parque Bosques Del Valle",
+        "description": "Un espacio verde ideal para relajarte, hacer ejercicio o disfrutar de un picnic en familia. ¡Perfecto para desconectarte del ajetreo de la ciudad!"
+      },
+      {
+        "name": "Plaza San Jeronimo",
+        "description": "Aquí encontrarás una gran variedad de restaurantes, tiendas y servicios. ¡Un punto de encuentro para los residentes de la colonia!"
+      },
+      {
+        "name": "Restaurante La Nacional",
+        "description": "Si buscas una experiencia gastronómica auténtica, no te pierdas La Nacional. ¡Sus platillos típicos te encantarán!"
+      },
+      {
+        "name": "Colegio Irlandés Monterrey",
+        "description": "Uno de los colegios más reconocidos de la zona, ideal si tienes hijos en edad escolar y buscas una educación de calidad."
+      }
+    ],
+    "priceInsights": "Con un precio promedio de $50,474 por metro cuadrado, Colinas De San Jeronimo se encuentra en un rango competitivo dentro del mercado inmobiliario de Monterrey. Si bien este precio puede parecer elevado, es importante considerar la ubicación privilegiada de la colonia y su alta demanda. Los precios en Monterrey varían significativamente dependiendo de la zona, pero Colinas De San Jeronimo ofrece un buen balance entre precio y calidad de vida. \n\nEs crucial estar al tanto de la tendencia a la baja que hemos observado en los últimos 5 meses. Factores como las tasas de interés, la oferta y la demanda, y el desarrollo de nuevas construcciones en la zona pueden influir en el precio final. Por eso, te recomendamos mantenerte informado y asesorarte con un profesional inmobiliario antes de tomar cualquier decisión.",
+    "slug": "cuanto-cuesta-comprar-en-colinas-de-san-jeronimo"
+  },
+  "locationData": {
+    "name": "Colinas De San Jeronimo",
+    "type": "neighborhood",
+    "city": "Monterrey",
+    "municipality": "Monterrey",
+    "neighborhoods": [
+      {
+        "colonia": "Colinas De San Jeronimo",
+        "precio": "50843",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Colinas De San Jeronimo",
+        "precio": "50474",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Colinas De San Jeronimo",
+        "precio": "100789",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Colinas De San Jeronimo",
+        "precio": "99052",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Colinas De San Jeronimo",
+        "precio": "98956",
+        "mes": "June 2025"
+      }
+    ],
+    "averagePrice": 50474,
+    "priceHistory": [
+      {
+        "month": "June 2025",
+        "price": 98956,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 99052,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 100789,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 50843,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 50474,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-14T15:43:11.084Z",
+  "updatedAt": "2025-11-14T15:43:11.084Z"
+}

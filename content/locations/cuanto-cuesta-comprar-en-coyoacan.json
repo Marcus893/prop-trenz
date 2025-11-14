@@ -1,0 +1,368 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-coyoacan",
+  "locationName": "Coyoacán",
+  "locationType": "municipality",
+  "city": "Ciudad de México",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Coyoacán?",
+    "metaTitle": "Precios en Coyoacán CDMX 2024 | $45,621/m²",
+    "metaDescription": "Descubre los precios de propiedades en Coyoacán, Ciudad de México. Precio promedio actual: $45,621/m². ¡Encuentra la casa de tus sueños en este encantador municipio!",
+    "introduction": "¿Estás pensando en comprar casa en Coyoacán? ¡Excelente elección! Este municipio de la Ciudad de México tiene un encanto único, con sus calles empedradas, sus plazas llenas de vida y su ambiente bohemio. Actualmente, el precio promedio para comprar una propiedad aquí ronda los $45,621 pesos por metro cuadrado. \n\nCoyoacán es conocido por su rica historia, su vibrante escena cultural y su excelente ubicación dentro de la CDMX. Vivir aquí te permite disfrutar de una gran oferta gastronómica, artística y de entretenimiento, además de estar bien conectado con otras zonas de la ciudad. Ojo, los precios han mostrado una ligera tendencia a la baja en los últimos 5 meses, así que ¡podría ser un buen momento para invertir!",
+    "mustVisitSpots": [
+      {
+        "name": "Centro Histórico de Coyoacán",
+        "description": "Un imperdible con su ambiente colonial, la Parroquia de San Juan Bautista y el Jardín Hidalgo."
+      },
+      {
+        "name": "Museo Frida Kahlo (Casa Azul)",
+        "description": "Sumérgete en la vida y obra de la famosa pintora mexicana en su emblemática casa."
+      },
+      {
+        "name": "Mercado de Coyoacán",
+        "description": "Un lugar lleno de color y sabor donde puedes encontrar antojitos, artesanías y productos frescos."
+      },
+      {
+        "name": "Viveros de Coyoacán",
+        "description": "Ideal para un paseo tranquilo, hacer ejercicio o simplemente disfrutar de la naturaleza en medio de la ciudad."
+      },
+      {
+        "name": "Iglesia de San Juan Bautista",
+        "description": "Una joya arquitectónica del siglo XVI con una rica historia y un impresionante interior."
+      }
+    ],
+    "priceInsights": "Con un precio promedio de $45,621 pesos por metro cuadrado, Coyoacán se encuentra en un rango medio-alto dentro del mercado inmobiliario de la Ciudad de México. Si lo comparamos con otras alcaldías, podríamos decir que es una opción más accesible que Polanco o la Roma, pero más costosa que Iztapalapa o Gustavo A. Madero. \n\nEs importante tener en cuenta que este es solo un promedio, y los precios pueden variar significativamente dependiendo de la ubicación específica dentro de Coyoacán, el tamaño de la propiedad, sus características y su estado de conservación. En los últimos 5 meses hemos visto una ligera disminución en los precios, influenciada quizás por factores como la inflación y las tasas de interés. Sin embargo, Coyoacán sigue siendo una zona muy atractiva para vivir, por lo que es probable que los precios se mantengan relativamente estables a largo plazo.",
+    "slug": "cuanto-cuesta-comprar-en-coyoacan"
+  },
+  "locationData": {
+    "name": "Coyoacán",
+    "type": "municipality",
+    "city": "Ciudad de México",
+    "neighborhoods": [
+      {
+        "colonia": "Prados De Coyoacan",
+        "precio": "77546",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Culhuacan Ctm Canal Nacional",
+        "precio": "47338",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Cafetales",
+        "precio": "40448",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Villa Quietud",
+        "precio": "37238",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Haciendas De Coyoacan",
+        "precio": "34791",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Santa Cecilia",
+        "precio": "40060",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Las Campanas",
+        "precio": "39181",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Los Girasoles",
+        "precio": "40839",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Alianza Popular Revolucionaria",
+        "precio": "31973",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "San Francisco Culhuacan Barrio De San Francisco",
+        "precio": "35000",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Paseos De Taxqueña",
+        "precio": "41885",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Prado Churubusco",
+        "precio": "40418",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Churubusco Country Club",
+        "precio": "44872",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Campestre Churubusco",
+        "precio": "37662",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Educacion",
+        "precio": "34084",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Ex-Ejido De San Francisco Culhuacan",
+        "precio": "34847",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Avante",
+        "precio": "41211",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Espartaco",
+        "precio": "46588",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pueblo San Pablo Tepetlapa",
+        "precio": "56750",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Ex Hacienda Coapa",
+        "precio": "42301",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Viejo Ejido Santa Ursula Coapa",
+        "precio": "48677",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pueblo De Santa Ursula Coapa",
+        "precio": "45153",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pedregal De Santa Ursula",
+        "precio": "43267",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Bosques De Tetlameya",
+        "precio": "36596",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Cantil Del Pedregal",
+        "precio": "72342",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Adolfo Ruiz Cortinez",
+        "precio": "44195",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Xotepingo",
+        "precio": "48827",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Ciudad Jardin",
+        "precio": "47774",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "San Diego Churubusco",
+        "precio": "52590",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Del Carmen",
+        "precio": "52279",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Barrio Santa Catarina",
+        "precio": "51741",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Villa Coyoacan",
+        "precio": "48789",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Barrio San Lucas",
+        "precio": "38700",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Parque San Andres",
+        "precio": "45221",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "El Rosedal",
+        "precio": "47568",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pueblo De Los Reyes",
+        "precio": "44686",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Barrio Del Niño Jesus",
+        "precio": "45397",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Cuadrante De San Francisco",
+        "precio": "51460",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Romero De Terreros",
+        "precio": "44843",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pedregal De Sn Francisco",
+        "precio": "49323",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Barrio Oxtopulco Universidad",
+        "precio": "54599",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pedregal De Santo Domingo",
+        "precio": "43327",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Copilco Universidad",
+        "precio": "53525",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Ajusco",
+        "precio": "43029",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pedregal De Carrasco",
+        "precio": "48708",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Olimpica",
+        "precio": "46524",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Insurgentes Cuicuilco",
+        "precio": "45043",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Jardines Del Pedregal De San Angel",
+        "precio": "46019",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pueblo La Candelaria",
+        "precio": "48292",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "El Reloj",
+        "precio": "53282",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Barrio La Concepcion",
+        "precio": "45213",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Campestre Coyoacan",
+        "precio": "37563",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "El Rosario",
+        "precio": "43042",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Culhuacan Ctm Seccion Viii",
+        "precio": "30875",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Joyas Del Pedregal",
+        "precio": "43230",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Copilco El Alto",
+        "precio": "40077",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "El Parque De Coyoacan",
+        "precio": "38196",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Jardines De Coyoacan",
+        "precio": "36824",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "El Mirador",
+        "precio": "43348",
+        "mes": "June 2025"
+      }
+    ],
+    "averagePrice": 45621.063829787236,
+    "priceHistory": [
+      {
+        "month": "June 2025",
+        "price": 46906.09433962264,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 46510.69387755102,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 46251.4,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 45736.16,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 45621.063829787236,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-14T19:43:09.663Z",
+  "updatedAt": "2025-11-14T19:43:09.663Z"
+}

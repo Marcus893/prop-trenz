@@ -1,0 +1,389 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-azcapotzalco",
+  "locationName": "Azcapotzalco",
+  "locationType": "municipality",
+  "city": "Ciudad de México",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Azcapotzalco?",
+    "metaTitle": "Precios en Azcapotzalco CDMX 2024 | $39,469/m²",
+    "metaDescription": "¿Quieres invertir en Azcapotzalco? Descubre el precio promedio por metro cuadrado ($39,469) y los factores que influyen. ¡Encuentra tu hogar ideal!",
+    "introduction": "¿Pensando en comprar depa o casa en Azcapotzalco? ¡Buena elección! Este municipio de la Ciudad de México tiene un encanto único, con un ambiente que mezcla lo tradicional y lo moderno. Actualmente, el precio promedio por metro cuadrado anda alrededor de los $39,469 pesos.\n\nAzcapotzalco ofrece una excelente ubicación, conectividad y una amplia gama de servicios, desde mercados locales hasta centros comerciales. Además, su cercanía con otras zonas importantes de la ciudad la convierte en una opción atractiva para familias y jóvenes profesionales. Y ojo, los precios están subiendo, ¡así que es un buen momento para echar un vistazo!",
+    "mustVisitSpots": [
+      {
+        "name": "Parque Tezozómoc",
+        "description": "Un oasis urbano perfecto para relajarse, hacer ejercicio o disfrutar de un picnic con la familia."
+      },
+      {
+        "name": "Mercado Azcapotzalco",
+        "description": "Sumérgete en la cultura local probando antojitos y comprando productos frescos a precios accesibles."
+      },
+      {
+        "name": "Arena Ciudad de México",
+        "description": "Disfruta de eventos deportivos, conciertos y espectáculos de talla internacional en este recinto icónico."
+      },
+      {
+        "name": "Casa de Cultura Azcapotzalco",
+        "description": "Un espacio para disfrutar de exposiciones de arte, talleres y eventos culturales para toda la comunidad."
+      }
+    ],
+    "priceInsights": "Con un precio promedio de $39,469 por metro cuadrado, Azcapotzalco se posiciona como una opción atractiva dentro del mercado inmobiliario de la Ciudad de México. Si bien no es la zona más económica, ofrece una excelente relación calidad-precio considerando su ubicación, servicios y potencial de crecimiento.\n\nDurante los últimos 5 meses, hemos observado una tendencia al alza en los precios de las propiedades en Azcapotzalco. Esto puede deberse a diversos factores, como el desarrollo de nuevos proyectos inmobiliarios, la mejora de la infraestructura y la creciente demanda de vivienda en la zona. Si estás considerando invertir, ¡ahora podría ser el momento oportuno!",
+    "slug": "cuanto-cuesta-comprar-en-azcapotzalco"
+  },
+  "locationData": {
+    "name": "Azcapotzalco",
+    "type": "municipality",
+    "city": "Ciudad de México",
+    "neighborhoods": [
+      {
+        "colonia": "Industrial Vallejo",
+        "precio": "41880",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Barrio Coltongo",
+        "precio": "39739",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Santa Cruz De Las Salinas",
+        "precio": "41780",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Coltongo",
+        "precio": "36005",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pro Hogar",
+        "precio": "38275",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Aldana",
+        "precio": "46313",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pueblo San Francisco Xocotitla",
+        "precio": "49671",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Arenal",
+        "precio": "49188",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Ampliacion Del Gas",
+        "precio": "45295",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Del Gas",
+        "precio": "44261",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Tlatilco",
+        "precio": "44527",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Nueva Santa Maria",
+        "precio": "45480",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Obrero Popular",
+        "precio": "46214",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "San Salvador Xochimanca",
+        "precio": "53944",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Barrio San Bernabe",
+        "precio": "48811",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Claveria",
+        "precio": "43238",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "San Alvaro",
+        "precio": "41284",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Del Recreo",
+        "precio": "40249",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Barrio Nextengo",
+        "precio": "42524",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Centro De Azcapotzalco",
+        "precio": "41132",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Libertad",
+        "precio": "47385",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Santo Tomas",
+        "precio": "45236",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "El Jaguey",
+        "precio": "41761",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Estacion Pantaco",
+        "precio": "31755",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Cosmopolita",
+        "precio": "39431",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pueblo Santa Barbara",
+        "precio": "35340",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pueblo Santa Catarina",
+        "precio": "38042",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Barrio San Andres",
+        "precio": "34614",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Barrio San Marcos",
+        "precio": "33282",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Santa Ines",
+        "precio": "39149",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pueblo San Andres",
+        "precio": "41572",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pueblo San Martin Xochinahuac",
+        "precio": "31746",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "El Rosario",
+        "precio": "34664",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pasteros",
+        "precio": "36252",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pueblo Santo Domingo",
+        "precio": "39856",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "La",
+        "precio": "37682",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Tezozomoc",
+        "precio": "40044",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Petrolera",
+        "precio": "36312",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pueblo San Juan Tlihuaca",
+        "precio": "35362",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Providencia",
+        "precio": "37588",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Ex-Hacienda El Rosario",
+        "precio": "34867",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Prados Del Rosario",
+        "precio": "31106",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pueblo San Pedro Xalpa",
+        "precio": "39568",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Ampliacion San Pedro Xalpa",
+        "precio": "35699",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pueblo Santiago Ahuizotla",
+        "precio": "30897",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pueblo San Miguel Amantla",
+        "precio": "40677",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "San Antonio",
+        "precio": "29785",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pueblo San Bartolo Cahualtongo",
+        "precio": "41873",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Industrial San Antonio",
+        "precio": "41764",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Ampliacion Petrolera",
+        "precio": "43381",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pueblo San Francisco Tetecala",
+        "precio": "40559",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Barrio Los Reyes",
+        "precio": "37497",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Ampliacion Cosmopolita",
+        "precio": "39316",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Barrio San Mateo",
+        "precio": "33846",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Angel Zimbron",
+        "precio": "35977",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Jardin Azpeitia",
+        "precio": "40479",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Unidad Cuitlahuac",
+        "precio": "38187",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Sindicato Mexicano De Electricistas",
+        "precio": "41384",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Porvenir",
+        "precio": "33373",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "La Raza",
+        "precio": "49271",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Plenitud",
+        "precio": "34459",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Reynosa Tamaulipas",
+        "precio": "21896",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Un Hogar Para Cada Trabajador",
+        "precio": "35415",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "San Sebastian",
+        "precio": "31164",
+        "mes": "June 2025"
+      }
+    ],
+    "averagePrice": 39468.77777777778,
+    "priceHistory": [
+      {
+        "month": "June 2025",
+        "price": 38456.5,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 39422.02,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 39744.48,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 40073.056603773584,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 39468.77777777778,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-14T17:51:16.028Z",
+  "updatedAt": "2025-11-14T17:51:16.028Z"
+}

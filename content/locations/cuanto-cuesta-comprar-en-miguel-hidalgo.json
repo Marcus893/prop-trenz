@@ -1,0 +1,318 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-miguel-hidalgo",
+  "locationName": "Miguel Hidalgo",
+  "locationType": "municipality",
+  "city": "Ciudad de México",
+  "content": {
+    "title": "¿Cuánto Cuesta Comprar en Miguel Hidalgo?",
+    "metaTitle": "Precios en Miguel Hidalgo CDMX | $66,051/m²",
+    "metaDescription": "Descubre el precio promedio por metro cuadrado en Miguel Hidalgo, CDMX: $66,051. ¡Explora las mejores zonas y la tendencia actual del mercado inmobiliario aquí!",
+    "introduction": "Si estás pensando en comprar un depa o casa en la Ciudad de México, Miguel Hidalgo es una opción que seguro has considerado. Con su mezcla de tradición y modernidad, esta alcaldía ofrece opciones para todos los gustos y presupuestos. Actualmente, el precio promedio por metro cuadrado se encuentra alrededor de los $66,051 pesos.\n\nMiguel Hidalgo es conocida por sus áreas verdes, su vida nocturna y su excelente ubicación. Ya sea que busques un ambiente familiar o un lugar cerca de los centros de negocios, seguro encontrarás algo que se ajuste a tus necesidades. ¡Vamos a explorar un poco más a fondo el tema de los precios!",
+    "mustVisitSpots": [
+      {
+        "name": "Parque Lincoln",
+        "description": "Un oasis en medio de Polanco, perfecto para un paseo tranquilo o una tarde de picnic."
+      },
+      {
+        "name": "Mercado Escandón",
+        "description": "Ideal para probar la auténtica comida mexicana y encontrar productos frescos de la región."
+      },
+      {
+        "name": "Museo Nacional de Antropología",
+        "description": "Un imperdible para los amantes de la historia y la cultura mexicana."
+      },
+      {
+        "name": "Avenida Presidente Masaryk",
+        "description": "El corazón de Polanco, con boutiques de lujo, restaurantes de alta cocina y una vibrante vida social."
+      },
+      {
+        "name": "Castillo de Chapultepec",
+        "description": "Un castillo histórico con vistas espectaculares de la ciudad y exposiciones interesantes."
+      }
+    ],
+    "priceInsights": "El precio promedio de $66,051 pesos por metro cuadrado en Miguel Hidalgo la sitúa como una de las alcaldías más caras de la Ciudad de México, aunque ligeramente por debajo de otras zonas premium como la Roma o la Condesa. Sin embargo, es importante tener en cuenta que este es un promedio y que los precios pueden variar significativamente dependiendo de la ubicación específica, el tamaño y las características de la propiedad. En los últimos 5 meses, hemos observado una ligera tendencia a la baja en los precios, lo cual podría ser una buena noticia para los compradores. Factores como la inflación, las tasas de interés y la demanda del mercado pueden influir en esta tendencia.",
+    "slug": "cuanto-cuesta-comprar-en-miguel-hidalgo"
+  },
+  "locationData": {
+    "name": "Miguel Hidalgo",
+    "type": "municipality",
+    "city": "Ciudad de México",
+    "neighborhoods": [
+      {
+        "colonia": "Bosque De Chapultepec I Seccion",
+        "precio": "103346",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "San Lorenzo Tlatenango",
+        "precio": "46305",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Argentina Poniente",
+        "precio": "43330",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "San Joaquin",
+        "precio": "46805",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Periodista",
+        "precio": "55622",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Torre Blanca",
+        "precio": "45117",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Tacuba",
+        "precio": "47118",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Popotla",
+        "precio": "42479",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Anahuac I Seccion",
+        "precio": "64198",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Anahuac Ii Seccion",
+        "precio": "52506",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Tlaxpana",
+        "precio": "48927",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Veronica Anzures",
+        "precio": "67849",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Mariano Escobedo",
+        "precio": "80556",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Los Manzanos",
+        "precio": "47454",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Modelo Pensil",
+        "precio": "50807",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Cuauhtemoc Pensil",
+        "precio": "68647",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pensil Norte",
+        "precio": "44741",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Francisco I Madero",
+        "precio": "60790",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Irrigacion",
+        "precio": "68468",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Polanco I Seccion",
+        "precio": "70929",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Polanco Ii Seccion",
+        "precio": "77656",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Granada",
+        "precio": "82169",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Polanco Iii Seccion",
+        "precio": "96160",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Polanco Iv Seccion",
+        "precio": "93386",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Polanco V Seccion",
+        "precio": "91515",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Anzures",
+        "precio": "67092",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Ampliacion Granada",
+        "precio": "81913",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Bosque De Chapultepec Ii Seccion",
+        "precio": "69107",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "San Miguel Chapultepec Ii Seccion",
+        "precio": "73347",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "San Miguel Chapultepec I Seccion",
+        "precio": "60130",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Escandon I Seccion",
+        "precio": "65625",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Escandon Ii Seccion",
+        "precio": "67325",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Tacubaya",
+        "precio": "55679",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Lomas De Chapultepec Iv Seccion",
+        "precio": "81078",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Lomas De Chapultepec V Seccion",
+        "precio": "64147",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Lomas De Chapultepec Iii Seccion",
+        "precio": "64850",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Reforma Social",
+        "precio": "57973",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Lomas De Chapultepec Ii Seccion",
+        "precio": "76284",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Lomas De Chapultepec Vi Seccion",
+        "precio": "68595",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Lomas De Chapultepec Viii Seccion",
+        "precio": "58733",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Lomas De Chapultepec I Seccion",
+        "precio": "72739",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Bosque De Las Lomas",
+        "precio": "49968",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Lomas De Reforma",
+        "precio": "69328",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Lomas Altas",
+        "precio": "55974",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Lomas De Bezares",
+        "precio": "53407",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Real De Las Lomas",
+        "precio": "66725",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Argentina Antigua",
+        "precio": "42772",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Lomas De Chapultepec Vii Seccion",
+        "precio": "96311",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "10 De Abril",
+        "precio": "81375",
+        "mes": "June 2025"
+      }
+    ],
+    "averagePrice": 66051.15217391304,
+    "priceHistory": [
+      {
+        "month": "June 2025",
+        "price": 67841.23913043478,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 66656.17391304347,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 66848.8085106383,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 64715.19565217391,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 66051.15217391304,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-14T19:46:51.123Z",
+  "updatedAt": "2025-11-14T19:46:51.123Z"
+}

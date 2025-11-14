@@ -1,0 +1,328 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-tlalpan",
+  "locationName": "Tlalpan",
+  "locationType": "municipality",
+  "city": "Ciudad de México",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Tlalpan?",
+    "metaTitle": "Precios en Tlalpan CDMX | $41,209/m² | Guía 2024",
+    "metaDescription": "¿Pensando en invertir en Tlalpan? Descubre el precio promedio por metro cuadrado ($41,209) y lo que hace especial a esta alcaldía de la CDMX. ¡Entérate aquí!",
+    "introduction": "Tlalpan, en el corazón de la Ciudad de México, es una joya que combina tradición, naturaleza y una excelente calidad de vida. Si estás considerando comprar una propiedad aquí, ¡has llegado al lugar correcto! Actualmente, el precio promedio por metro cuadrado en Tlalpan ronda los $41,209. \n\nEsta alcaldía es famosa por sus paisajes boscosos, su rica historia y su ambiente tranquilo, alejado del bullicio del centro. Pero, ¿qué hace que Tlalpan sea tan atractiva para invertir en bienes raíces? Sigue leyendo y descubre todo lo que necesitas saber.",
+    "mustVisitSpots": [
+      {
+        "name": "Parque Nacional Fuentes Brotantes de Tlalpan",
+        "description": "Un oasis natural perfecto para un día de campo, caminar o simplemente relajarte rodeado de vegetación."
+      },
+      {
+        "name": "Zona Arqueológica de Cuicuilco",
+        "description": "Sumérgete en la historia prehispánica de la Ciudad de México y descubre los vestigios de una antigua civilización."
+      },
+      {
+        "name": "San Miguel Topilejo",
+        "description": "Un pueblo con encanto, famoso por su gastronomía tradicional y sus festividades llenas de color y alegría."
+      },
+      {
+        "name": "Six Flags México",
+        "description": "Si buscas adrenalina y diversión, este parque de atracciones es una excelente opción para pasar un día inolvidable."
+      },
+      {
+        "name": "Mercado de la Paz",
+        "description": "Un mercado tradicional donde encontrarás productos frescos, comida típica y artesanías locales."
+      }
+    ],
+    "priceInsights": "Con un precio promedio de $41,209 por metro cuadrado, Tlalpan se posiciona como una opción atractiva dentro del mercado inmobiliario de la Ciudad de México. Si bien puede ser un poco más elevado que otras alcaldías, la calidad de vida, la seguridad y la cercanía a espacios naturales justifican la inversión. Observamos una ligera tendencia a la baja en los precios durante los últimos 5 meses, lo que podría representar una oportunidad para encontrar buenas ofertas. Factores como la ubicación específica dentro de Tlalpan, el tipo de propiedad (casa, departamento, terreno) y las amenidades que ofrece influyen significativamente en el precio final.",
+    "slug": "cuanto-cuesta-comprar-en-tlalpan"
+  },
+  "locationData": {
+    "name": "Tlalpan",
+    "type": "municipality",
+    "city": "Ciudad de México",
+    "neighborhoods": [
+      {
+        "colonia": "Ampliacion Fuentes Del Pedregal",
+        "precio": "72782",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Toriello Guerra",
+        "precio": "71751",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Granjas Coapa",
+        "precio": "41864",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Tenorios",
+        "precio": "41792",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Residencial Villa Coapa",
+        "precio": "38135",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Narciso Mendoza",
+        "precio": "38096",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Residencial Acoxpa",
+        "precio": "29316",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Lomas Del Pedregal Framboyanes",
+        "precio": "70788",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pueblo San Lorenzo Huipulco",
+        "precio": "34125",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Tlalpan",
+        "precio": "37936",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Club De Golf Mexico",
+        "precio": "38356",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Arenal Tepepan",
+        "precio": "38887",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Colinas Del Bosque",
+        "precio": "43000",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Valle Escondido",
+        "precio": "32234",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Valle De Tepepan",
+        "precio": "67555",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Fuentes De Tepepan",
+        "precio": "36890",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Ejidos De San Pedro Martir",
+        "precio": "31736",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pueblo San Pedro Martir",
+        "precio": "27169",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pueblo Chimalcoyotl",
+        "precio": "30023",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "La Joya",
+        "precio": "35954",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Villa Tlalpan",
+        "precio": "35613",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "San Buenaventura",
+        "precio": "41867",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Tlalpan Centro",
+        "precio": "37172",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pueblo Santa Ursula Xitla",
+        "precio": "35562",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Fuentes Brotantes",
+        "precio": "33601",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pueblo San Andres Totoltepec",
+        "precio": "23053",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Tlalpuente",
+        "precio": "35724",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pueblo San Miguel Xicalco",
+        "precio": "23061",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pueblo Santo Tomas Ajusco",
+        "precio": "27076",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Rincon Del Pedregal",
+        "precio": "45166",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Heroes De Padierna",
+        "precio": "31864",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Jardines Del Ajusco",
+        "precio": "29712",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Lomas De Padierna",
+        "precio": "32281",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Popular Santa Teresa",
+        "precio": "58132",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Fuentes Del Pedregal",
+        "precio": "49115",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Jardines En La Montaña",
+        "precio": "52491",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Parque Del Pedregal",
+        "precio": "46801",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Ampliacion Isidro Fabela",
+        "precio": "42071",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Lomas Del Pedregal",
+        "precio": "62312",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Barrio Del Niño Jesus",
+        "precio": "33321",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Tlalcoligia",
+        "precio": "33690",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Ex Hacienda Coapa",
+        "precio": "39643",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Villa Coapa",
+        "precio": "42551",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Miguel Hidalgo",
+        "precio": "30475",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Cruz Del Farol",
+        "precio": "26326",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Isidro Fabela",
+        "precio": "43481",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Rinconada Coapa 2A Seccion",
+        "precio": "43719",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Zacayucan Peña Pobre",
+        "precio": "62218",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Villa Lazaro Cardenas",
+        "precio": "35094",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Arenal De Guadalupe",
+        "precio": "47844",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Pueblo San Miguel Topilejo",
+        "precio": "17583",
+        "mes": "June 2025"
+      }
+    ],
+    "averagePrice": 41209.48717948718,
+    "priceHistory": [
+      {
+        "month": "June 2025",
+        "price": 41301.934782608696,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 40706,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 39917.075,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 41052.89743589744,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 41209.48717948718,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-14T19:47:27.871Z",
+  "updatedAt": "2025-11-14T19:47:27.871Z"
+}

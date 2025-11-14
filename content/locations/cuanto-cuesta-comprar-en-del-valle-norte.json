@@ -1,0 +1,100 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-del-valle-norte",
+  "locationName": "Del Valle Norte",
+  "locationType": "neighborhood",
+  "city": "Ciudad de México",
+  "municipality": "Benito Juárez",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Del Valle Norte?",
+    "metaTitle": "Precios en Del Valle Norte CDMX | $56,010/m² | 2024",
+    "metaDescription": "Descubre los precios de propiedades en Del Valle Norte, CDMX. Precio promedio actual: $56,010/m². ¡Infórmate y encuentra tu hogar ideal en Benito Juárez!",
+    "introduction": "¿Estás pensando en comprar depa o casa en la Del Valle Norte? ¡Excelente elección! Esta colonia en la alcaldía Benito Juárez es conocida por su ambiente tranquilo, sus calles arboladas y su excelente ubicación. El precio promedio por metro cuadrado anda alrededor de $56,010, pero vamos a desglosarlo para que tengas una idea más clara. La Del Valle Norte es una zona súper céntrica y bien conectada, lo que la hace muy atractiva para vivir.\n\nClaro que, como en cualquier lugar, los precios varían dependiendo de la calle, el tipo de propiedad y sus acabados. Acompáñame a explorar más a fondo los precios en esta colonia y qué factores influyen en ellos. ¡Vamos a ver si la Del Valle Norte es para ti!",
+    "mustVisitSpots": [
+      {
+        "name": "Parque de los Venados",
+        "description": "Un parque clásico para relajarte, pasear a tu perro o disfrutar de un picnic. ¡Siempre hay ambiente y eventos!"
+      },
+      {
+        "name": "Mercado de la Del Valle",
+        "description": "Un mercado tradicional donde encuentras de todo: desde frutas y verduras frescas hasta antojitos mexicanos deliciosos."
+      },
+      {
+        "name": "Avenida División del Norte",
+        "description": "Llena de restaurantes, cafeterías y tiendas para todos los gustos. Ideal para salir a dar una vuelta."
+      },
+      {
+        "name": "El Lago Restaurant",
+        "description": "Considerado por muchos como la mejor experiencia culinaria de la zona, este restaurante es ideal para celebrar ocasiones especiales."
+      },
+      {
+        "name": "Cinépolis Universidad",
+        "description": "Un complejo de cines popular entre los residentes del área, ideal para disfrutar de los estrenos más recientes."
+      }
+    ],
+    "priceInsights": "El precio promedio de $56,010 por metro cuadrado en Del Valle Norte la coloca en un rango medio-alto dentro de la Ciudad de México. Aunque esto pueda sonar elevado, es importante considerar la ubicación privilegiada de la colonia, su seguridad y la calidad de vida que ofrece. En los últimos 5 meses, hemos observado una ligera tendencia a la baja en los precios. Esto podría ser una buena noticia si estás buscando comprar, ya que podrías encontrar algunas oportunidades interesantes. Factores como la tasa de interés, la oferta y demanda de propiedades, y las nuevas construcciones pueden influir en los precios. Te recomiendo estar atento a las fluctuaciones del mercado para tomar la mejor decisión.",
+    "slug": "cuanto-cuesta-comprar-en-del-valle-norte"
+  },
+  "locationData": {
+    "name": "Del Valle Norte",
+    "type": "neighborhood",
+    "city": "Ciudad de México",
+    "municipality": "Benito Juárez",
+    "neighborhoods": [
+      {
+        "colonia": "Del Valle Norte",
+        "precio": "56067",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Del Valle Norte",
+        "precio": "56010",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Del Valle Norte",
+        "precio": "55693",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Del Valle Norte",
+        "precio": "56030",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Del Valle Norte",
+        "precio": "56714",
+        "mes": "June 2025"
+      }
+    ],
+    "averagePrice": 56010,
+    "priceHistory": [
+      {
+        "month": "June 2025",
+        "price": 56714,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 56030,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 55693,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 56067,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 56010,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-14T19:59:16.744Z",
+  "updatedAt": "2025-11-14T19:59:16.744Z"
+}

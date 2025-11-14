@@ -1,0 +1,96 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-del-valle",
+  "locationName": "Del Valle",
+  "locationType": "neighborhood",
+  "city": "Monterrey",
+  "municipality": "San Pedro Garza García",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Del Valle, Monterrey?",
+    "metaTitle": "Precios en Del Valle Monterrey 2024 | $93,743/m²",
+    "metaDescription": "Descubre los precios actuales en Del Valle, Monterrey. ¡El m² está en $93,743! Encuentra tu hogar ideal en esta exclusiva colonia de San Pedro Garza García.",
+    "introduction": "¿Estás pensando en comprar una propiedad en Del Valle, Monterrey? ¡Excelente elección! Del Valle es una colonia súper cotizada en San Pedro Garza García, conocida por su ambiente residencial tranquilo y su cercanía a todo lo que necesitas. Actualmente, el precio promedio por metro cuadrado aquí ronda los $93,743 pesos.  Situada en uno de los municipios más prósperos del país, Del Valle ofrece una calidad de vida excepcional con acceso a parques, restaurantes de primer nivel y centros comerciales exclusivos.  Según nuestros datos, hemos visto una ligera disminución en los precios en los últimos meses, lo que podría ser una buena oportunidad para invertir.",
+    "mustVisitSpots": [
+      {
+        "name": "Parque Rufino Tamayo",
+        "description": "Un oasis verde perfecto para un paseo relajante o una tarde de picnic."
+      },
+      {
+        "name": "Plaza Fiesta San Agustín",
+        "description": "Un centro comercial con una gran variedad de tiendas, restaurantes y opciones de entretenimiento."
+      },
+      {
+        "name": "Restaurantes en Calzada San Pedro",
+        "description": "Del Valle tiene acceso rápido a la Calzada San Pedro, donde encontrarás una oferta gastronómica impresionante, desde comida mexicana hasta cocina internacional."
+      },
+      {
+        "name": "Gimnasios y estudios de yoga",
+        "description": "En Del Valle, encontrarás varias opciones para mantenerte en forma y relajarte, desde gimnasios completos hasta estudios de yoga boutique."
+      }
+    ],
+    "priceInsights": "El precio promedio de $93,743 pesos por metro cuadrado en Del Valle refleja su exclusividad y alta demanda. Si lo comparamos con otras zonas de Monterrey, Del Valle se posiciona como una de las colonias más caras, pero también ofrece una calidad de vida superior. La ligera tendencia a la baja que hemos observado en los últimos 5 meses podría ser atribuible a diversos factores, como las fluctuaciones del mercado inmobiliario y las condiciones económicas generales. No obstante, factores como la ubicación privilegiada, la seguridad y los servicios de primer nivel siguen haciendo de Del Valle una inversión atractiva a largo plazo.",
+    "slug": "cuanto-cuesta-comprar-en-del-valle"
+  },
+  "locationData": {
+    "name": "Del Valle",
+    "type": "neighborhood",
+    "city": "Monterrey",
+    "municipality": "San Pedro Garza García",
+    "neighborhoods": [
+      {
+        "colonia": "Del Valle",
+        "precio": "90848",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Del Valle",
+        "precio": "93743",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Del Valle",
+        "precio": "181326",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Del Valle",
+        "precio": "181600",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Del Valle",
+        "precio": "181531",
+        "mes": "June 2025"
+      }
+    ],
+    "averagePrice": 93743,
+    "priceHistory": [
+      {
+        "month": "June 2025",
+        "price": 181531,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 181600,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 181326,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 90848,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 93743,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-14T17:11:32.143Z",
+  "updatedAt": "2025-11-14T17:11:32.144Z"
+}

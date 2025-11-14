@@ -1,0 +1,1478 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-municipio-monterrey",
+  "locationName": "Monterrey",
+  "locationType": "municipality",
+  "city": "Monterrey",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Monterrey?",
+    "metaTitle": "Precios en Monterrey, Monterrey | $43,089/m²",
+    "metaDescription": "¿Pensando en invertir en Monterrey? Descubre el precio promedio por metro cuadrado: $43,089. ¡Analizamos las tendencias y te damos la info clave para tu compra!",
+    "introduction": "¡Qué onda! Si andas considerando comprar casa o depa en Monterrey, estás en el lugar correcto. Monterrey, Monterrey, es un municipio vibrante con un montón que ofrecer, desde su rica cultura hasta su creciente economía. Ahorita, el precio promedio anda alrededor de $43,089 por metro cuadrado. ¡Vamos a darle una mirada más profunda a lo que eso significa!\n\nMonterrey es conocido por su dinamismo y la combinación perfecta entre modernidad y tradición. Vivir aquí te da acceso a un sinfín de oportunidades laborales, educativas y de entretenimiento. Además, ¡la comida es deliciosa!",
+    "mustVisitSpots": [
+      {
+        "name": "Parque Fundidora",
+        "description": "Un imperdible para disfrutar de espacios verdes, museos y eventos culturales. ¡Ideal para un día en familia o una caminata relajante!"
+      },
+      {
+        "name": "Barrio Antiguo",
+        "description": "El corazón histórico de Monterrey, lleno de bares, restaurantes y arquitectura colonial. ¡Perfecto para una noche de fiesta o una cena romántica!"
+      },
+      {
+        "name": "Cumbres de Monterrey",
+        "description": "Si te gusta la naturaleza, ¡las Cumbres son tu lugar! Senderismo, vistas panorámicas y aire fresco garantizado."
+      },
+      {
+        "name": "Macroplaza",
+        "description": "Una de las plazas más grandes del mundo, rodeada de edificios emblemáticos y monumentos históricos. ¡Un punto de encuentro para los regios!"
+      },
+      {
+        "name": "Museo MARCO",
+        "description": "Un espacio dedicado al arte contemporáneo con exposiciones de artistas nacionales e internacionales. ¡Para los amantes del arte y la cultura!"
+      }
+    ],
+    "priceInsights": "Ahora, hablemos de los billetes. Con un precio promedio de $43,089 por metro cuadrado, comprar en Monterrey puede ser una inversión importante, pero con mucho potencial. Este precio refleja la alta demanda y el atractivo de la zona. \n\nOjo, que en los últimos 5 meses hemos visto una ligera tendencia a la baja en los precios. Esto podría significar una buena oportunidad para negociar o encontrar ofertas interesantes. Factores como la ubicación exacta dentro del municipio, el tipo de propiedad (casa, departamento, terreno), y las amenidades (seguridad, áreas verdes, etc.) pueden influir significativamente en el precio final. ¡Así que a investigar y comparar!",
+    "slug": "cuanto-cuesta-comprar-en-municipio-monterrey"
+  },
+  "locationData": {
+    "name": "Monterrey",
+    "type": "municipality",
+    "city": "Monterrey",
+    "neighborhoods": [
+      {
+        "colonia": "Paseo De Cumbres 2 Y 3 Sector",
+        "precio": "31370",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Mirasol",
+        "precio": "39779",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Cumbres 3Er Sector",
+        "precio": "36654",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Las Colinas Residencial",
+        "precio": "67641",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Vista Hermosa",
+        "precio": "38997",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Torres De San Jeronimo",
+        "precio": "64552",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Bernardo Reyes",
+        "precio": "37665",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Mitras Centro",
+        "precio": "40014",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Maria Luisa",
+        "precio": "37590",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Centro De Monterrey",
+        "precio": "63537",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Independencia",
+        "precio": "52590",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Renacimiento",
+        "precio": "39961",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Obrera",
+        "precio": "71342",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Florida  ( Rdcial Florida )",
+        "precio": "61309",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Del Paseo Residencial",
+        "precio": "60166",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "El Pinito",
+        "precio": "29668",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Villa Del Rio",
+        "precio": "36549",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Ciudad Satelite",
+        "precio": "36690",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Balcones De Las Mitras",
+        "precio": "26456",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Real Cumbres",
+        "precio": "32902",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Cerradas De Cumbres",
+        "precio": "25412",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Puerta De Hierro",
+        "precio": "30012",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Cumbres De San Agustin",
+        "precio": "31855",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Estrella",
+        "precio": "20543",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Fomerrey 116 (San Bernabe 8)",
+        "precio": "42681",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Topo Chico",
+        "precio": "22601",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Cumbres De Santa Clara",
+        "precio": "34288",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Bosques De Las Cumbres",
+        "precio": "38084",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Cumbres Mediterraneo",
+        "precio": "39256",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Cumbres Elite 6To Sector",
+        "precio": "33576",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Cumbres Elite 4To Sector",
+        "precio": "29663",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Cumbres Las Palmas",
+        "precio": "31603",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Residencial Cumbres 6To Sector",
+        "precio": "35001",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Colonial Cumbres",
+        "precio": "35717",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pedregal Cumbres",
+        "precio": "26610",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Cumbres Oro",
+        "precio": "32171",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Portal De Cumbres",
+        "precio": "26487",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Cumbres Quinta Real",
+        "precio": "21642",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Valle De Las Cumbres 1Er Sector",
+        "precio": "29660",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Hacienda Mitras 2Do Sector",
+        "precio": "28085",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Valle Verde 2Do Sector",
+        "precio": "22300",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Mision Lincoln",
+        "precio": "39408",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Valle De Infonavit 1Er Sector",
+        "precio": "43391",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Valle De Los Cedros",
+        "precio": "44132",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Cumbres 5To Sector",
+        "precio": "35906",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Cumbres 4To Sector",
+        "precio": "37546",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Valle Verde 1Er Sector",
+        "precio": "34285",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Los Cristales",
+        "precio": "37690",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Las Jaras",
+        "precio": "28701",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Los Cristales ( La Presita )",
+        "precio": "36361",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "La Herradura",
+        "precio": "53167",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Priv El Uro (Los Suarez)",
+        "precio": "31512",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Priv Sienna",
+        "precio": "40396",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Laderas Sector Garanday",
+        "precio": "33676",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Priv El Uro",
+        "precio": "81199",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "La Joya Residencial Sector Magnolia",
+        "precio": "35347",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "La Joya Residencial Sector Calandria",
+        "precio": "38897",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "La Joya Residencial Sector Loreto",
+        "precio": "36028",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "El Encino",
+        "precio": "37367",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Las Diligencias",
+        "precio": "40505",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Bosques Del Vergel",
+        "precio": "41376",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Portal Del Huajuco",
+        "precio": "33688",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Vistancia",
+        "precio": "29896",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Bosques De Vistancia",
+        "precio": "39661",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Canterias",
+        "precio": "31498",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "La Toscana Rdcial",
+        "precio": "33639",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Palmares",
+        "precio": "35053",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Las Estancias",
+        "precio": "52265",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "La Estanzuela 19",
+        "precio": "29945",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Privada Valle Alto",
+        "precio": "45805",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Sierra Alta",
+        "precio": "47328",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Sierra Alta 1Er Sector Rincon De La Sierra Y De La Virgen",
+        "precio": "40038",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Bosques De Valle Alto",
+        "precio": "39426",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Valle Alto (Banco De Las Flores)",
+        "precio": "38909",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Sierra Alta 5 Sector",
+        "precio": "40316",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Sierra Alta 6 Sector",
+        "precio": "42184",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Flor De Piedra",
+        "precio": "35345",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Lagos Del Vergel",
+        "precio": "40035",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Lomas Del Hipico",
+        "precio": "35739",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Sierra Alta 2Do Sector",
+        "precio": "38944",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "La Estanzuela 6",
+        "precio": "57242",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Milagros De Valle Alto",
+        "precio": "41429",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Residencial De La Sierra",
+        "precio": "41026",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Granja Postal",
+        "precio": "50655",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Paseo Del Vergel 1Er Sector",
+        "precio": "43758",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Antigua Estanzuela",
+        "precio": "40074",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Bosques De La Estanzuela",
+        "precio": "48152",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Nueva Estanzuela",
+        "precio": "37387",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "El Vergel",
+        "precio": "39004",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Lomas Del Vergel",
+        "precio": "37611",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Contry Sur",
+        "precio": "51261",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "La Estanzuela 14",
+        "precio": "67698",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Lagos Del Bosque",
+        "precio": "24676",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pedregal La Silla",
+        "precio": "33994",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Valle De Bosquencinos",
+        "precio": "30126",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Bosque Encinos",
+        "precio": "40212",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Las Torres",
+        "precio": "28057",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Cortijo Del Rio",
+        "precio": "32485",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "San Angel Sur ( Los Remates )",
+        "precio": "47661",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Burocratas Del Estado",
+        "precio": "53296",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Cumbres 2Do Sector",
+        "precio": "31658",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Residencial Dinastia",
+        "precio": "60428",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Mitras Norte",
+        "precio": "49426",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Residencial Lincoln",
+        "precio": "47366",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Industrial",
+        "precio": "56935",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Hidalgo",
+        "precio": "56010",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Del Norte",
+        "precio": "66298",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Bella Vista",
+        "precio": "53671",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Rdcial Centrika Sector Crisoles",
+        "precio": "28038",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Rdcial Centrika Sector Palmas",
+        "precio": "40584",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Terminal",
+        "precio": "48606",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Acero",
+        "precio": "61714",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Martinez",
+        "precio": "16809",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Privada Pinos",
+        "precio": "30462",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Fco I Madero",
+        "precio": "57642",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Los Fresnos",
+        "precio": "47067",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Villas De Linda Vista",
+        "precio": "45664",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Santa Fe",
+        "precio": "25744",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Nuevo Repueblo",
+        "precio": "38715",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Roma",
+        "precio": "61217",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "San Pio X",
+        "precio": "22716",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Mirador",
+        "precio": "65201",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Obispado",
+        "precio": "62798",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Deportivo Obispado",
+        "precio": "35744",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Chepevera",
+        "precio": "68223",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Mitras Sur",
+        "precio": "42043",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Residencial Galerias",
+        "precio": "79193",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Rincon Del Valle",
+        "precio": "61495",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Del Carmen",
+        "precio": "43292",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Balcones Del Carmen",
+        "precio": "35203",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Miravalle",
+        "precio": "69974",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Santa Maria",
+        "precio": "71326",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "San Jeronimo",
+        "precio": "65100",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Rincon De Santa Maria",
+        "precio": "69156",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Colinas Del Valle",
+        "precio": "47887",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "U De Colonos Cooperativa Cuauhtemoc",
+        "precio": "64517",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "San Jemo",
+        "precio": "43529",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Colinas De San Jeronimo",
+        "precio": "50843",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Prados De San Jeronimo",
+        "precio": "44476",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Rincon De San Jeronimo",
+        "precio": "48857",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Las Lajas",
+        "precio": "59183",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Hacienda San Jeronimo",
+        "precio": "41923",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Cumbres 1Er Sector",
+        "precio": "46244",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Emiliano Zapata",
+        "precio": "55159",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Leones",
+        "precio": "45902",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Gonzalitos",
+        "precio": "34522",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Los Cedros",
+        "precio": "22317",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Cumbres Elite 5To Sector",
+        "precio": "34629",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Cumbres Oro Sector Le Fontaine",
+        "precio": "29799",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Cumbres Elite 2Do Sector",
+        "precio": "24593",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Privadas De Cumbres (Privada Recinto)",
+        "precio": "27699",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Cumbres Elite 7 Sector",
+        "precio": "37656",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Cumbres Elite, 3Er Sector",
+        "precio": "60987",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Cumbres Elite, Sector Villas",
+        "precio": "28073",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Paseo De Cumbres 1 Sector",
+        "precio": "29814",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Cumbres Elite Premier Privada Alpes",
+        "precio": "27243",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Hacienda Santa Clara",
+        "precio": "29088",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Cumbres Del Sol",
+        "precio": "32068",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Cumbres Elite Premier Privada Everest",
+        "precio": "27789",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Fracc Cumbres Allegro",
+        "precio": "39836",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Cumbres De San Agustin Privada Chelsea",
+        "precio": "29215",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Paseo De Cumbres 4 Sector",
+        "precio": "25527",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Reserva Cumbres",
+        "precio": "24096",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Cumbres Elite 1Er Sector",
+        "precio": "23668",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Cumbres Elite 8 Sector",
+        "precio": "29632",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Cima Del Bosque",
+        "precio": "33109",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Monterrey",
+        "precio": "42479",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Cumbres De Santa Clara 3 Sector",
+        "precio": "25490",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Cima De Las Cumbres",
+        "precio": "33029",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Cumbres Ampliacion 2Do Sector",
+        "precio": "31243",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Industrial Lincoln",
+        "precio": "58098",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Agricola",
+        "precio": "64237",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Buenos Aires",
+        "precio": "92991",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Ladrillera",
+        "precio": "71108",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Tecnologico",
+        "precio": "67692",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Altavista",
+        "precio": "36481",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Rincon De La Primavera",
+        "precio": "78733",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Burocratas Municipales",
+        "precio": "67297",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "La Campana",
+        "precio": "53116",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Altavista Invernadero",
+        "precio": "73956",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Contry",
+        "precio": "45917",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Jardines Del Paseo",
+        "precio": "46650",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Lomas De Montecristo",
+        "precio": "66192",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Bosque Rdcial Los Angeles (Los Angeles Residencial)",
+        "precio": "61606",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Sierra Ventana",
+        "precio": "63713",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Valle De Las Brisas",
+        "precio": "37690",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Jardines Del Contry",
+        "precio": "35384",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Privada Fundadores",
+        "precio": "63395",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Las Brisas",
+        "precio": "39236",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Villa Las Fuentes",
+        "precio": "28066",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Satelite Acueducto",
+        "precio": "38222",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Prados De La Silla",
+        "precio": "29581",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Loma Bonita",
+        "precio": "32564",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Fomerrey 45",
+        "precio": "42475",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "La Estanzuela",
+        "precio": "38367",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Lomas De Valle Alto",
+        "precio": "53558",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Los Azulejos",
+        "precio": "38356",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Bosques De Valle Alto Sector Las Veredas",
+        "precio": "33403",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Rincon De Los Prados",
+        "precio": "42235",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Mision Canterias",
+        "precio": "41329",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "El Uro (Villa Las Flores)",
+        "precio": "34785",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Las Granadas Rdcial",
+        "precio": "36273",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Laderas Sector Abedul",
+        "precio": "33893",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Campestre Los Cristales",
+        "precio": "35664",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Valle De Cristal (Sector Budget)",
+        "precio": "30913",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Aires Del Vergel",
+        "precio": "67030",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Cerezos (Cerezos De Laderas)",
+        "precio": "70787",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Las Bugambilias",
+        "precio": "58956",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Cerradas De Valle Alto Residencial",
+        "precio": "86076",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Satelite Acueducto 7Mo Sector",
+        "precio": "80695",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Bosques De Satelite",
+        "precio": "77910",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "La Hacienda",
+        "precio": "68427",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Las Brisas Sector La Punta",
+        "precio": "75391",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Lomas Del Paseo",
+        "precio": "104805",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Empleados De La Sfeo",
+        "precio": "159023",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Mexico",
+        "precio": "98535",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Vidriera",
+        "precio": "35811",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Talleres",
+        "precio": "95804",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Loma Larga",
+        "precio": "127414",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Lomas De San Francisco",
+        "precio": "140250",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Hacienda San Francisco",
+        "precio": "79014",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Cumbres Del Valle",
+        "precio": "120815",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Balcones De Colinas De San Jeronimo",
+        "precio": "88054",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Burocratas Federales",
+        "precio": "53520",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "16 De Septiembre",
+        "precio": "91529",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Villa Mitras 2Do Sector",
+        "precio": "35402",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Santa Cecilia",
+        "precio": "49637",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Villa Dorada",
+        "precio": "70732",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Paseo De Las Mitras",
+        "precio": "38571",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Colinas De Las Cumbres",
+        "precio": "58845",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Cumbres Callejuelas",
+        "precio": "66969",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Cumbres Providencia",
+        "precio": "77477",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Las Plazas",
+        "precio": "50369",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Cumbres San Agustin Sector Frances",
+        "precio": "51536",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Cumbres Madeira",
+        "precio": "92216",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Cumbres Elite",
+        "precio": "85332",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "San Luis",
+        "precio": "42443",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Colinas De Valle Verde",
+        "precio": "48655",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Cumbre Alta",
+        "precio": "43204",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Regina",
+        "precio": "106950",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Sarabia",
+        "precio": "107937",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Rdcial Centrika Sector Victoria",
+        "precio": "88695",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Rdcial Centrika Sector Del Lago",
+        "precio": "77660",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Caracol",
+        "precio": "79432",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Centro",
+        "precio": "126711",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Roma Sur",
+        "precio": "88439",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Ancon Del Huajuco",
+        "precio": "58754",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Primavera",
+        "precio": "125105",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Arroyo Seco",
+        "precio": "56257",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Balcones De Altavista",
+        "precio": "83681",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "La Altamira",
+        "precio": "78670",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Alfonso Reyes",
+        "precio": "145695",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Paseo De Las Privanzas 5 Sector",
+        "precio": "98696",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "La Republica",
+        "precio": "116893",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Contry Tesoro",
+        "precio": "115314",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Mas Palomas",
+        "precio": "104560",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Residencial Vistalta",
+        "precio": "99273",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Campestre Mederos",
+        "precio": "67048",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Las Esmeraldas",
+        "precio": "62803",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Club Residencial Carolco 2Do Sector",
+        "precio": "78997",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Valle Del Vergel",
+        "precio": "65207",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Fracc Landana",
+        "precio": "80961",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Villas Del Uro",
+        "precio": "63060",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Encinos Del Vergel",
+        "precio": "75613",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Brisas De Valle Alto",
+        "precio": "78996",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Sierra Alta 3 Sector De Las Aves Y De Las Rosas",
+        "precio": "82902",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Rincon Del Vergel( Privada Rincon Del Vergel)",
+        "precio": "93892",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Las Callejas",
+        "precio": "75735",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Urbi Villa Del Rey",
+        "precio": "66494",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Cumbres Renacimiento",
+        "precio": "60191",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Lomas De Cumbres",
+        "precio": "62714",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Valle Verde 3Er Sector",
+        "precio": "51900",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Colonial De San Jeronimo",
+        "precio": "93611",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Churubusco",
+        "precio": "60006",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Jardin",
+        "precio": "139186",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Antigua Ex Hacienda Ancon Del Huajuco",
+        "precio": "59398",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Jardines Roma",
+        "precio": "100926",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Brisas Diamante",
+        "precio": "83843",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Mirador Residencial",
+        "precio": "142540",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Priv San Francisco",
+        "precio": "75638",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Los Encinos",
+        "precio": "77010",
+        "mes": "June 2025"
+      }
+    ],
+    "averagePrice": 43089.05517241379,
+    "priceHistory": [
+      {
+        "month": "June 2025",
+        "price": 85802.63888888889,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 86177.25110132158,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 83051.05,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 41882.452229299364,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 43089.05517241379,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-14T16:20:33.355Z",
+  "updatedAt": "2025-11-14T16:20:33.356Z"
+}

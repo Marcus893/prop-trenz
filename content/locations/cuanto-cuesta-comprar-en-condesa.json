@@ -1,0 +1,100 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-condesa",
+  "locationName": "Condesa",
+  "locationType": "neighborhood",
+  "city": "Ciudad de México",
+  "municipality": "Cuauhtémoc",
+  "content": {
+    "title": "Cuánto Cuesta Comprar en Condesa, CDMX",
+    "metaTitle": "Precios en Condesa CDMX 2024 | $76,544/m²",
+    "metaDescription": "Descubre cuánto cuesta comprar un depa en la Condesa, CDMX. Precio promedio por metro cuadrado: $76,544. ¡Entérate si es el momento ideal para invertir!",
+    "introduction": "¿Estás pensando en comprar un depa en la Condesa, en la Ciudad de México? ¡Excelente elección! La Condesa es una de las colonias más cool y deseadas de la CDMX, famosa por sus calles arboladas, su ambiente bohemio y su vibrante vida nocturna. Si te late la idea de vivir aquí, seguro te estás preguntando: ¿cuánto me va a costar? Actualmente, el precio promedio en la Condesa ronda los $76,544 por metro cuadrado.\n\nLa Condesa es un lugar que lo tiene todo: parques hermosos, restaurantes de primer nivel, galerías de arte y una ubicación privilegiada cerca de otras zonas importantes de la ciudad. Además, los precios en la Condesa han estado aumentando en los últimos meses, así que, ¡ojo!, si estás buscando invertir, podría ser un buen momento.",
+    "mustVisitSpots": [
+      {
+        "name": "Parque México",
+        "description": "Un oasis urbano perfecto para un paseo, un picnic o simplemente relajarte bajo la sombra de un árbol."
+      },
+      {
+        "name": "Mercado Medellín",
+        "description": "Un mercado tradicional con una gran variedad de productos frescos, comida exótica y un ambiente auténtico."
+      },
+      {
+        "name": "El Péndulo",
+        "description": "Una librería-cafetería icónica de la Condesa, ideal para pasar una tarde leyendo y disfrutando de un buen café."
+      },
+      {
+        "name": "Contramar",
+        "description": "Uno de los restaurantes de mariscos más populares de la ciudad, famoso por su atún a la mexicana y su ambiente relajado."
+      },
+      {
+        "name": "Calles Ámsterdam y Tamaulipas",
+        "description": "Calles emblemáticas con una gran oferta de restaurantes, boutiques y galerías de arte."
+      }
+    ],
+    "priceInsights": "El precio promedio de $76,544 por metro cuadrado en la Condesa es considerablemente más alto que el promedio de otras colonias en la Ciudad de México, reflejando su alta demanda y atractivo. Sin embargo, si lo comparamos con otras zonas premium como Polanco o Lomas de Chapultepec, aún se encuentra en un rango competitivo. \n\nDurante los últimos 5 meses, hemos visto una tendencia al alza en los precios de la Condesa. Esto podría deberse a varios factores, como el aumento en la demanda de vivienda en la zona, la inversión en nuevos desarrollos inmobiliarios y la constante mejora de la infraestructura y servicios.  Considerá que factores como la ubicación específica dentro de la Condesa, el tamaño, la antigüedad y las amenidades del inmueble, pueden influir significativamente en el precio final.",
+    "slug": "cuanto-cuesta-comprar-en-condesa"
+  },
+  "locationData": {
+    "name": "Condesa",
+    "type": "neighborhood",
+    "city": "Ciudad de México",
+    "municipality": "Cuauhtémoc",
+    "neighborhoods": [
+      {
+        "colonia": "Condesa",
+        "precio": "76813",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Condesa",
+        "precio": "76544",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Condesa",
+        "precio": "76074",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Condesa",
+        "precio": "76092",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Condesa",
+        "precio": "76452",
+        "mes": "June 2025"
+      }
+    ],
+    "averagePrice": 76544,
+    "priceHistory": [
+      {
+        "month": "June 2025",
+        "price": 76452,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 76092,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 76074,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 76813,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 76544,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-14T03:02:21.323Z",
+  "updatedAt": "2025-11-14T03:02:21.324Z"
+}

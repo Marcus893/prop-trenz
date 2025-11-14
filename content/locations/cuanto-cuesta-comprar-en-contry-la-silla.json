@@ -1,0 +1,96 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-contry-la-silla",
+  "locationName": "Contry La Silla",
+  "locationType": "neighborhood",
+  "city": "Monterrey",
+  "municipality": "Guadalupe",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Contry La Silla?",
+    "metaTitle": "Precios Contry La Silla Mty | $28,831/m² | 2024",
+    "metaDescription": "Descubre los precios actualizados en Contry La Silla, Monterrey. ¡Conoce el precio promedio por metro cuadrado y si es el momento ideal para invertir!",
+    "introduction": "Si estás pensando en invertir en bienes raíces en Monterrey, ¡Contry La Silla es una opción que definitivamente debes considerar! Esta colonia, ubicada en el municipio de Guadalupe, tiene mucho que ofrecer y, con su ambiente familiar y acceso a servicios, se ha convertido en un lugar muy atractivo para vivir.\n\nActualmente, el precio promedio por metro cuadrado en Contry La Silla ronda los $28,831 pesos. Pero, ¿qué significa este precio en el contexto del mercado inmobiliario de Monterrey? Y, más importante aún, ¿es una buena inversión a futuro? ¡Sigue leyendo para descubrirlo! Tomemos en cuenta que los precios han estado disminuyendo ligeramente en los últimos meses, según nuestros datos.",
+    "mustVisitSpots": [
+      {
+        "name": "Parque Tolteca",
+        "description": "Un parque muy popular para familias con áreas verdes, juegos infantiles y canchas deportivas."
+      },
+      {
+        "name": "Plaza Contry La Silla",
+        "description": "Un centro comercial conveniente con tiendas, restaurantes y servicios."
+      },
+      {
+        "name": "Avenida Eugenio Garza Sada",
+        "description": "Aunque no está *en* Contry La Silla, su cercanía te da acceso fácil a una gran variedad de restaurantes, tiendas y entretenimiento."
+      },
+      {
+        "name": "Restaurantes locales en Avenida Las Américas",
+        "description": "Encontrarás desde comida tradicional mexicana hasta opciones internacionales, ¡perfecto para una cena en familia o con amigos!"
+      }
+    ],
+    "priceInsights": "El precio promedio de $28,831 pesos por metro cuadrado en Contry La Silla la coloca en un rango accesible comparado con otras zonas residenciales de Monterrey. Si bien no es la colonia más económica, ofrece una excelente relación calidad-precio considerando su ubicación, servicios y ambiente.\n\nEs importante tener en cuenta que la tendencia de los precios ha sido ligeramente a la baja en los últimos 5 meses. Esto podría ser una oportunidad para encontrar buenas ofertas, ¡pero también es crucial investigar a fondo y considerar factores como la ubicación específica dentro de la colonia, el estado de la propiedad y las fluctuaciones del mercado en general! Varios factores influyen en el precio, como la demanda y la tasa de interés.",
+    "slug": "cuanto-cuesta-comprar-en-contry-la-silla"
+  },
+  "locationData": {
+    "name": "Contry La Silla",
+    "type": "neighborhood",
+    "city": "Monterrey",
+    "municipality": "Guadalupe",
+    "neighborhoods": [
+      {
+        "colonia": "Contry La Silla",
+        "precio": "29104",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Contry La Silla",
+        "precio": "28831",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Contry La Silla",
+        "precio": "57936",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Contry La Silla",
+        "precio": "57655",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Contry La Silla",
+        "precio": "58213",
+        "mes": "June 2025"
+      }
+    ],
+    "averagePrice": 28831,
+    "priceHistory": [
+      {
+        "month": "June 2025",
+        "price": 58213,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 57655,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 57936,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 29104,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 28831,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-14T17:12:21.289Z",
+  "updatedAt": "2025-11-14T17:12:21.289Z"
+}

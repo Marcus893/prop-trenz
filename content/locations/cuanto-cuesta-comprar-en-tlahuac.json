@@ -1,0 +1,159 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-tlahuac",
+  "locationName": "Tláhuac",
+  "locationType": "municipality",
+  "city": "Ciudad de México",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Tláhuac?",
+    "metaTitle": "Precios en Tláhuac CDMX 2024 | $23,840/m²",
+    "metaDescription": "Descubre los precios de casas y departamentos en Tláhuac, Ciudad de México. Precio promedio $23,840/m². ¡Encuentra tu hogar en esta alcaldía con encanto!",
+    "introduction": "¿Pensando en comprar casa o departamento en la Ciudad de México? Tláhuac es una alcaldía con un encanto especial que vale la pena considerar. Con sus paisajes lacustres y ambiente tranquilo, ofrece una alternativa interesante al bullicio de otras zonas de la ciudad. Actualmente, el precio promedio por metro cuadrado en Tláhuac se sitúa alrededor de los $23,840, lo que la convierte en una opción accesible para muchos. Si buscas un lugar con precios más asequibles sin sacrificar la cercanía a la CDMX, ¡Tláhuac podría ser tu próximo hogar!\n\nY ojo, aunque los datos recientes de los últimos 5 meses indican una ligera disminución en los precios, es importante estar al tanto de las tendencias del mercado para tomar la mejor decisión.",
+    "mustVisitSpots": [
+      {
+        "name": "Canal de Chalco",
+        "description": "Un lugar icónico para disfrutar de paseos en trajinera y admirar la belleza natural de la zona lacustre."
+      },
+      {
+        "name": "Pueblo de San Andrés Mixquic",
+        "description": "Famoso por su celebración del Día de Muertos, ofrece una rica tradición cultural y una arquitectura colonial encantadora."
+      },
+      {
+        "name": "Parque de las Garzas",
+        "description": "Un espacio verde ideal para relajarse, hacer ejercicio y disfrutar de la naturaleza en familia."
+      },
+      {
+        "name": "Mercado de Tláhuac",
+        "description": "Un mercado tradicional donde encontrarás productos frescos, antojitos mexicanos y la calidez de su gente."
+      }
+    ],
+    "priceInsights": "Con un precio promedio de $23,840 por metro cuadrado, Tláhuac se posiciona como una de las opciones más accesibles dentro de la Ciudad de México. Si comparamos con otras alcaldías, los precios aquí son significativamente más bajos, lo que la hace atractiva para compradores primerizos o aquellos que buscan maximizar su presupuesto. Sin embargo, hay que tener en cuenta que los precios pueden variar según la ubicación específica dentro de la alcaldía y el tipo de propiedad. Los datos de los últimos 5 meses sugieren una ligera tendencia a la baja en los precios, aunque factores como el desarrollo de nuevas infraestructuras, la demanda del mercado y las tasas de interés pueden influir en su evolución futura. Es crucial mantenerse informado y consultar con expertos para tomar una decisión bien fundamentada.",
+    "slug": "cuanto-cuesta-comprar-en-tlahuac"
+  },
+  "locationData": {
+    "name": "Tláhuac",
+    "type": "municipality",
+    "city": "Ciudad de México",
+    "neighborhoods": [
+      {
+        "colonia": "Guadalupe Tlaltenco",
+        "precio": "34223",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Barrio Los Reyes",
+        "precio": "31225",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Granjas Cabrera",
+        "precio": "30092",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pueblo San Francisco Tlaltenco",
+        "precio": "24493",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "La Estacion",
+        "precio": "21239",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Barrio Santa Ana Poniente",
+        "precio": "21791",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Las Arboledas",
+        "precio": "22122",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Los Olivos",
+        "precio": "21698",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Miguel Hidalgo",
+        "precio": "25137",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "La Draga",
+        "precio": "21520",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Villa Centroamericana",
+        "precio": "19467",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Del Mar",
+        "precio": "19896",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Ampliacion Los Olivos",
+        "precio": "19853",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Selene",
+        "precio": "14617",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Barrio Santa Ana Norte",
+        "precio": "23197",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "La Conchita Zapotitlan",
+        "precio": "32928",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "La Nopalera",
+        "precio": "24413",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "La Turba",
+        "precio": "23460",
+        "mes": "August 2025"
+      }
+    ],
+    "averagePrice": 23839.53846153846,
+    "priceHistory": [
+      {
+        "month": "June 2025",
+        "price": 25618.3125,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 23600.764705882353,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 23087.466666666667,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 23383.785714285714,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 23839.53846153846,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-14T19:47:02.883Z",
+  "updatedAt": "2025-11-14T19:47:02.883Z"
+}

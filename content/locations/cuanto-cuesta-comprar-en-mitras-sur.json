@@ -1,0 +1,76 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-mitras-sur",
+  "locationName": "Mitras Sur",
+  "locationType": "neighborhood",
+  "city": "Monterrey",
+  "municipality": "Monterrey",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Mitras Sur?",
+    "metaTitle": "Precios en Mitras Sur, Mty | $42,043/m²",
+    "metaDescription": "Descubre el precio por metro cuadrado en Mitras Sur, Monterrey. Datos actualizados y análisis del mercado inmobiliario. ¡Encuentra tu hogar ideal!",
+    "introduction": "¿Pensando en comprar casa en Mitras Sur, Monterrey? ¡Excelente elección! Esta colonia es súper popular por su ubicación estratégica y ambiente tranquilo. Actualmente, el precio promedio por metro cuadrado anda alrededor de $42,043. \n\nMitras Sur está bien conectada, con acceso a avenidas importantes y cerca de todo lo que necesitas: centros comerciales, escuelas, hospitales… ¡La vida aquí es bastante cómoda! Además, los precios han mostrado una ligera disminución en los últimos meses, así que podría ser un buen momento para invertir.",
+    "mustVisitSpots": [
+      {
+        "name": "Parque Aztlán",
+        "description": "Un parque tranquilo ideal para pasear con la familia o hacer ejercicio al aire libre. Siempre hay eventos y actividades."
+      },
+      {
+        "name": "Mercado de Abastos Estrella",
+        "description": "Encuentra frutas, verduras y productos frescos a precios increíbles. ¡Un clásico de la zona!"
+      },
+      {
+        "name": "Restaurantes sobre la Ave. Ruiz Cortines",
+        "description": "Desde tacos hasta mariscos, la oferta gastronómica es amplia y deliciosa. ¡Perfecto para una comida casual o una cena especial!"
+      },
+      {
+        "name": "Plazas comerciales cercanas",
+        "description": "Tienes opciones como Plaza Real Lincoln y Plaza Cumbres, con tiendas departamentales, cines y restaurantes para todos los gustos."
+      }
+    ],
+    "priceInsights": "El precio promedio de $42,043 por metro cuadrado en Mitras Sur es bastante competitivo considerando su ubicación en Monterrey. Si lo comparamos con otras zonas de la ciudad, Mitras Sur ofrece una buena relación calidad-precio, especialmente si buscas un lugar tranquilo pero bien conectado. \n\nAunque los datos de los últimos tres meses muestran una ligera tendencia a la baja, es importante recordar que el mercado inmobiliario es dinámico y puede verse afectado por diversos factores como la oferta y la demanda, tasas de interés y proyectos de desarrollo urbano.",
+    "slug": "cuanto-cuesta-comprar-en-mitras-sur"
+  },
+  "locationData": {
+    "name": "Mitras Sur",
+    "type": "neighborhood",
+    "city": "Monterrey",
+    "municipality": "Monterrey",
+    "neighborhoods": [
+      {
+        "colonia": "Mitras Sur",
+        "precio": "42043",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Mitras Sur",
+        "precio": "91364",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Mitras Sur",
+        "precio": "90527",
+        "mes": "June 2025"
+      }
+    ],
+    "averagePrice": 42043,
+    "priceHistory": [
+      {
+        "month": "June 2025",
+        "price": 90527,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 91364,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 42043,
+        "date": "2025-09-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-14T15:42:42.009Z",
+  "updatedAt": "2025-11-14T15:42:42.010Z"
+}

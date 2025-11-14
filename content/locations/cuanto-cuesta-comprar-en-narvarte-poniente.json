@@ -1,0 +1,96 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-narvarte-poniente",
+  "locationName": "Narvarte Poniente",
+  "locationType": "neighborhood",
+  "city": "Ciudad de México",
+  "municipality": "Benito Juárez",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Narvarte Poniente?",
+    "metaTitle": "Precios en Narvarte Poniente CDMX | $54,317/m² | 2024",
+    "metaDescription": "Descubre el precio promedio por metro cuadrado en Narvarte Poniente: $54,317. ¡Entérate si es el momento ideal para invertir en esta joya de la CDMX!",
+    "introduction": "¿Estás pensando en comprar depa o casa en la Narvarte Poniente? ¡Excelente elección! Esta colonia de la Benito Juárez, en la Ciudad de México, tiene un encanto único y es súper buscada por su ambiente tranquilo y conectado. Actualmente, el precio promedio por metro cuadrado aquí ronda los $54,317 pesos, pero ¿será una buena inversión? ¡Vamos a analizarlo!\n\nLa Narvarte Poniente destaca por su ubicación estratégica, llena de parques arbolados, cafeterías acogedoras y una vibra relajada. Además, ¡está cerquita de todo! Si buscas un lugar con excelente conectividad y un ambiente familiar, ¡esta colonia podría ser tu próximo hogar!",
+    "mustVisitSpots": [
+      {
+        "name": "Parque Delta",
+        "description": "Un centro comercial gigante con un parque en medio. Perfecto para ir de compras y luego relajarte al aire libre."
+      },
+      {
+        "name": "Mercado Lázaro Cárdenas",
+        "description": "Un mercado tradicional donde encuentras de todo, desde frutas y verduras frescas hasta antojitos mexicanos deliciosos."
+      },
+      {
+        "name": "Restaurantes sobre la Avenida Universidad",
+        "description": "Una gran variedad de opciones para comer, desde comida mexicana hasta cocina internacional. ¡Siempre hay algo nuevo por probar!"
+      },
+      {
+        "name": "Cafeterías de especialidad",
+        "description": "La Narvarte Poniente está llena de pequeñas cafeterías con granos de café de alta calidad y ambientes súper agradables."
+      }
+    ],
+    "priceInsights": "El precio promedio de $54,317 por metro cuadrado en Narvarte Poniente es competitivo si lo comparamos con otras zonas céntricas de la Ciudad de México. Sin embargo, es importante considerar que hemos visto una ligera tendencia a la baja en los precios durante los últimos 5 meses. \n\nFactores como la disponibilidad de propiedades, las tasas de interés y la demanda del mercado pueden influir en estos precios. ¡Te recomiendo estar atento a las fluctuaciones y consultar con un experto inmobiliario para tomar la mejor decisión!",
+    "slug": "cuanto-cuesta-comprar-en-narvarte-poniente"
+  },
+  "locationData": {
+    "name": "Narvarte Poniente",
+    "type": "neighborhood",
+    "city": "Ciudad de México",
+    "municipality": "Benito Juárez",
+    "neighborhoods": [
+      {
+        "colonia": "Narvarte Poniente",
+        "precio": "54459",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Narvarte Poniente",
+        "precio": "54317",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Narvarte Poniente",
+        "precio": "54465",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Narvarte Poniente",
+        "precio": "55070",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Narvarte Poniente",
+        "precio": "55715",
+        "mes": "June 2025"
+      }
+    ],
+    "averagePrice": 54317,
+    "priceHistory": [
+      {
+        "month": "June 2025",
+        "price": 55715,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 55070,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 54465,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 54459,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 54317,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-14T20:00:34.905Z",
+  "updatedAt": "2025-11-14T20:00:34.905Z"
+}
