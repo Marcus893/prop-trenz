@@ -478,12 +478,9 @@
     "no_guides": "No guides available in this language yet. Check back soon!"
   },
   "guides": {
-    "login_required_title": "Sign in to keep reading",
-    "login_required_description": "Log in to access premium market research, detailed tax breakdowns, and downloadable checklists tailored for serious investors.",
     "signup_required_title": "Create a free account to unlock this guide",
-    "signup_required_description": "Create a complimentary PropTrenz account to unlock premium due diligence guides, stay on top of regulatory changes, and track your saved calculators.",
+    "signup_required_description": "Create a complimentary PropTrenz account to unlock premium due diligence guides.",
     "signup_required_badge": "Create a free account",
-    "login_required_badge": "Members only",
     "fallback_message": "This guide is currently only available in English. We're working on translating it to your selected language.",
     "related_articles": "Related Articles",
     "related_articles_description": "Continue reading with these related guides",

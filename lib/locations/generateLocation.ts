@@ -5,6 +5,7 @@ import { saveLocationPage, locationPageExists, type LocationPage } from './stora
 export interface GenerateLocationParams {
   locationName: string
   skipImages?: boolean
+  cityFilter?: 'Ciudad de México' | 'Monterrey' | 'Jalisco'
 }
 
 export interface GenerateLocationResult {
@@ -31,12 +32,13 @@ export async function generateLocationPage(
 export async function generateLocationPages(
   params: GenerateLocationParams
 ): Promise<GenerateLocationResult> {
-  const { locationName } = params
+  const { locationName, cityFilter } = params
   
-  console.log(`[Location Page] Looking up data for: ${locationName}`)
+  const cityFilterText = cityFilter ? ` in ${cityFilter}` : ''
+  console.log(`[Location Page] Looking up data for: ${locationName}${cityFilterText}`)
   
   // Find ALL location data matches (can be multiple if same name, different types)
-  const allLocationData = findAllLocationData(locationName)
+  const allLocationData = findAllLocationData(locationName, cityFilter)
   
   if (allLocationData.length === 0) {
     throw new Error(

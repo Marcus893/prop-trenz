@@ -476,12 +476,9 @@
     "clear_filters": "Limpiar filtros"
   },
   "guides": {
-    "login_required_title": "Inicia sesión para continuar leyendo",
-    "login_required_description": "Inicia sesión para acceder a análisis de mercado premium, desgloses detallados de impuestos y listas de verificación descargables para inversionistas serios.",
     "signup_required_title": "Crea una cuenta gratuita para desbloquear esta guía",
-    "signup_required_description": "Crea una cuenta gratuita en PropTrenz para desbloquear guías de debida diligencia premium, mantenerte al día con cambios regulatorios y guardar tus calculadoras.",
+    "signup_required_description": "Crea una cuenta gratuita en PropTrenz para desbloquear guías de debida diligencia premium.",
     "signup_required_badge": "Crea una cuenta gratuita",
-    "login_required_badge": "Solo miembros",
     "fallback_message": "Esta guía actualmente solo está disponible en inglés. Estamos trabajando en traducirla a tu idioma seleccionado.",
     "related_articles": "Artículos Relacionados",
     "related_articles_description": "Continúa leyendo con estas guías relacionadas",

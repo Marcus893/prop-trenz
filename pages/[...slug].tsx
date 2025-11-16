@@ -8,6 +8,8 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 import Link from 'next/link'
 import { useTranslation } from 'next-i18next'
 import { useRouter } from 'next/router'
+import { TrendingUp, TrendingDown } from 'lucide-react'
+import { useMemo } from 'react'
 
 interface LocationPageProps {
   page: LocationPage
@@ -21,11 +23,93 @@ export default function LocationPageComponent({ page, canonicalUrl }: LocationPa
   const router = useRouter()
 
   // Prepare chart data
-  const chartData = locationData.priceHistory.map(point => ({
-    month: point.month,
-    price: Math.round(point.price),
-    date: point.date
-  }))
+  const chartData = useMemo(() => {
+    return locationData.priceHistory
+      .map(point => ({
+        month: point.month,
+        price: Math.round(point.price),
+        date: point.date instanceof Date ? point.date : new Date(point.date)
+      }))
+      .sort((a, b) => a.date.getTime() - b.date.getTime())
+  }, [locationData.priceHistory])
+
+  // Helper function to get quarter from date
+  const getQuarter = (date: Date): { year: number; quarter: number } => {
+    const month = date.getMonth() // 0-11
+    const quarter = Math.floor(month / 3) + 1 // 1-4
+    return { year: date.getFullYear(), quarter }
+  }
+
+  // Calculate growth metrics
+  const growthMetrics = useMemo(() => {
+    if (chartData.length < 2) return null
+
+    const latest = chartData[chartData.length - 1]
+
+    // Quarter-over-quarter growth (QoQ)
+    // Group data by quarter and calculate average price per quarter
+    const quarters = new Map<string, { prices: number[]; dates: Date[] }>()
+    
+    chartData.forEach(point => {
+      const { year, quarter } = getQuarter(point.date)
+      const key = `${year}-Q${quarter}`
+      
+      if (!quarters.has(key)) {
+        quarters.set(key, { prices: [], dates: [] })
+      }
+      
+      const quarterData = quarters.get(key)!
+      quarterData.prices.push(point.price)
+      quarterData.dates.push(point.date)
+    })
+
+    const quarterEntries = Array.from(quarters.entries())
+      .map(([key, data]) => ({
+        key,
+        avgPrice: data.prices.reduce((sum, p) => sum + p, 0) / data.prices.length,
+        dates: data.dates
+      }))
+      .sort((a, b) => {
+        // Sort by earliest date in quarter
+        const aDate = new Date(Math.min(...a.dates.map(d => d.getTime())))
+        const bDate = new Date(Math.min(...b.dates.map(d => d.getTime())))
+        return aDate.getTime() - bDate.getTime()
+      })
+
+    let qoqGrowth: number | null = null
+    if (quarterEntries.length >= 2) {
+      const latestQuarter = quarterEntries[quarterEntries.length - 1]
+      const previousQuarter = quarterEntries[quarterEntries.length - 2]
+      
+      if (previousQuarter.avgPrice > 0) {
+        qoqGrowth = ((latestQuarter.avgPrice - previousQuarter.avgPrice) / previousQuarter.avgPrice) * 100
+      }
+    }
+
+    // Year-over-year growth (only if we have data from the same month one year ago)
+    let yoyGrowth: number | null = null
+    if (chartData.length > 0) {
+      const latestDate = latest.date
+      const oneYearAgo = new Date(latestDate)
+      oneYearAgo.setFullYear(latestDate.getFullYear() - 1)
+      
+      // Find data point from approximately one year ago (same month, previous year)
+      const yearAgoData = chartData.find(point => {
+        const pointDate = point.date
+        return pointDate.getFullYear() === oneYearAgo.getFullYear() &&
+               pointDate.getMonth() === oneYearAgo.getMonth()
+      })
+      
+      if (yearAgoData && yearAgoData.price > 0) {
+        yoyGrowth = ((latest.price - yearAgoData.price) / yearAgoData.price) * 100
+      }
+    }
+
+    return {
+      qoq: qoqGrowth,
+      yoy: yoyGrowth
+    }
+  }, [chartData])
 
   // Format month for display in Spanish
   const formatMonth = (monthString: string): string => {
@@ -261,6 +345,43 @@ export default function LocationPageComponent({ page, canonicalUrl }: LocationPa
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 Evolución de Precios
               </h2>
+              
+              {/* Growth Metrics */}
+              {growthMetrics && (
+                <div className="grid grid-cols-2 gap-4 mb-4 pb-4 border-b border-gray-200">
+                  {growthMetrics.qoq !== null && (
+                    <div>
+                      <p className="text-xs text-gray-500 mb-1">{t('map.qoq_growth', 'Crecimiento Trimestral (QoQ)')}</p>
+                      <div className={`flex items-center gap-1 ${growthMetrics.qoq >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+                        {growthMetrics.qoq >= 0 ? (
+                          <TrendingUp className="h-4 w-4" />
+                        ) : (
+                          <TrendingDown className="h-4 w-4" />
+                        )}
+                        <span className="font-semibold">
+                          {growthMetrics.qoq >= 0 ? '+' : ''}{growthMetrics.qoq.toFixed(2)}%
+                        </span>
+                      </div>
+                    </div>
+                  )}
+                  {growthMetrics.yoy !== null && (
+                    <div>
+                      <p className="text-xs text-gray-500 mb-1">{t('map.yoy_growth', 'Crecimiento Anual (YoY)')}</p>
+                      <div className={`flex items-center gap-1 ${growthMetrics.yoy >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+                        {growthMetrics.yoy >= 0 ? (
+                          <TrendingUp className="h-4 w-4" />
+                        ) : (
+                          <TrendingDown className="h-4 w-4" />
+                        )}
+                        <span className="font-semibold">
+                          {growthMetrics.yoy >= 0 ? '+' : ''}{growthMetrics.yoy.toFixed(2)}%
+                        </span>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
+              
               <div style={{ height: '300px' }}>
                 <ResponsiveContainer width="100%" height="100%">
                   <LineChart data={chartData} margin={{ top: 5, right: 20, left: 10, bottom: 10 }}>

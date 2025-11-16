@@ -21,6 +21,17 @@ npm run generate-location "Monterrey"
 npm run generate-location "San Nicolás de los Garza"
 ```
 
+**With City Filter** (optional):
+When multiple locations share the same name across different cities, you can filter by city:
+
+```bash
+npm run generate-location "Providencia" jalisco
+npm run generate-location "Del Valle" monterrey
+npm run generate-location "Condesa" cdmx
+```
+
+Valid city filter options: `cdmx`, `monterrey`, `jalisco`, `gdl`, `guadalajara`
+
 ### Generate Multiple Location Pages (Batch)
 
 Edit `scripts/generate-locations.ts` and add location names to the `LOCATIONS` array:
@@ -39,6 +50,20 @@ Then run:
 npm run generate-locations
 ```
 
+**With City Filter** (optional):
+To generate pages only from a specific city's dataset:
+
+```bash
+npm run generate-locations jalisco
+npm run generate-locations cdmx
+npm run generate-locations monterrey
+```
+
+Valid city filter options: `cdmx`, `monterrey`, `jalisco`, `gdl`, `guadalajara`
+
+**Why use a city filter?**
+When locations share the same name across cities (e.g., "Providencia" exists in both CDMX and Jalisco), the filter ensures you only generate pages from the specified city's dataset, avoiding ambiguous matches.
+
 The batch script includes:
 - Automatic retry logic with exponential backoff for rate limits
 - Delays between requests to avoid API throttling
@@ -56,10 +81,15 @@ Pages are generated with URLs at the root level:
 ## How It Works
 
 1. **Data Lookup**: Searches existing neighborhood/municipality data from:
-   - `public/data/banorte-neighborhood-data-cdmx.json`
-   - `public/data/banorte-neighborhood-data-monterrey.json`
+   - `public/data/banorte-neighborhood-data-cdmx.json` (Ciudad de México)
+   - `public/data/banorte-neighborhood-data-monterrey.json` (Monterrey)
+   - `public/data/banorte-neighborhood-data-jalisco.json` (Jalisco)
    
-   The system uses **exact matching only** - no partial matches. If multiple locations share the same name (e.g., neighborhood + municipality), only the municipality is selected for generation.
+   The system uses **exact matching only** - no partial matches. 
+   
+   **City Filtering**: When a city filter is specified (e.g., `npm run generate-locations jalisco`), the system only searches in that city's dataset. This is useful when locations share the same name across cities (e.g., "Providencia" exists in both CDMX and Jalisco).
+   
+   If multiple locations share the same name within a city (e.g., neighborhood + municipality), only the municipality is selected for generation.
 
 2. **Content Generation**: Uses Gemini 2.0 Flash to generate:
    - SEO-optimized title and meta description
@@ -162,11 +192,13 @@ You'll get:
 
 After running:
 ```bash
-npm run generate-locations
+npm run generate-locations jalisco
 ```
 
 You'll see:
-- Progress for each location: `[1/10] Processing: Monterrey`
+- City filter confirmation: `📍 City filter enabled: Jalisco`
+- Progress for each location: `[1/10] Processing: Guadalajara`
+- Data lookup with city context: `[Location Page] Looking up data for: Providencia in Jalisco`
 - Success/failure status for each page
 - Summary report at the end with total successful/failed pages
 - URLs for all generated pages

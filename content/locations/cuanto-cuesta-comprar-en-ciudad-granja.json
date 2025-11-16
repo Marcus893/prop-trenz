@@ -1,0 +1,171 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-ciudad-granja",
+  "locationName": "Ciudad Granja",
+  "locationType": "neighborhood",
+  "city": "Jalisco",
+  "municipality": "Zapopan",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Ciudad Granja?",
+    "metaTitle": "Precios en Ciudad Granja Jalisco | $52,565/m² (2024)",
+    "metaDescription": "Descubre cuánto cuesta vivir en Ciudad Granja, Jalisco. Precios actualizados de propiedades: $52,565/m². ¡Encuentra tu hogar ideal en Zapopan!",
+    "introduction": "Ciudad Granja, en Zapopan, Jalisco, se ha convertido en una opción cada vez más atractiva para quienes buscan invertir en bienes raíces. ¿Por qué? Por su excelente ubicación, su ambiente tranquilo y su cercanía a servicios y amenidades. Si estás considerando comprar una casa o departamento aquí, seguro te preguntas: ¿cuánto cuesta? Actualmente, el precio promedio por metro cuadrado en Ciudad Granja ronda los $52,565. \n\nEsto la convierte en una zona con un costo de vida atractivo considerando sus beneficios. Durante los últimos 12 meses, hemos visto una tendencia al alza en los precios, lo que indica un mercado dinámico y con potencial de crecimiento a futuro.",
+    "mustVisitSpots": [
+      {
+        "name": "Parque Metropolitano de Guadalajara",
+        "description": "Aunque no está *exactamente* en Ciudad Granja, está súper cerca y es perfecto para correr, andar en bici o simplemente relajarte al aire libre."
+      },
+      {
+        "name": "Plaza Galerías",
+        "description": "Un centro comercial grande con tiendas de todo tipo, cines y restaurantes. ¡Ideal para pasar la tarde!"
+      },
+      {
+        "name": "Restaurantes en Av. Vallarta",
+        "description": "Sobre Av. Vallarta, cerca de Ciudad Granja, encontrarás una gran variedad de restaurantes con opciones para todos los gustos y presupuestos, desde comida mexicana hasta cocina internacional."
+      },
+      {
+        "name": "Tianguis de los Miércoles en Ciudad Granja",
+        "description": "Si buscas algo más local y auténtico, no te pierdas el tianguis que se pone los miércoles. ¡Encontrarás de todo, desde fruta y verdura fresca hasta ropa y curiosidades!"
+      }
+    ],
+    "priceInsights": "Con un precio promedio de $52,565 por metro cuadrado, Ciudad Granja se posiciona como una opción interesante dentro del mercado inmobiliario de Jalisco. Si lo comparamos con otras zonas de Zapopan o incluso de Guadalajara, encontramos que ofrece una buena relación calidad-precio, especialmente si consideramos su ubicación y las amenidades cercanas. La tendencia al alza que hemos observado en los últimos meses sugiere que la demanda en la zona está creciendo, lo que podría ser un buen indicador para quienes buscan invertir. Factores como la construcción de nuevos desarrollos, la mejora de la infraestructura y la creciente popularidad de la zona entre familias jóvenes podrían estar influyendo en este incremento de precios.",
+    "slug": "cuanto-cuesta-comprar-en-ciudad-granja"
+  },
+  "locationData": {
+    "name": "Ciudad Granja",
+    "type": "neighborhood",
+    "city": "Jalisco",
+    "municipality": "Zapopan",
+    "neighborhoods": [
+      {
+        "colonia": "Ciudad Granja",
+        "precio": "52565",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Ciudad Granja",
+        "precio": "52117",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Ciudad Granja",
+        "precio": "51874",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Ciudad Granja",
+        "precio": "51445",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Ciudad Granja",
+        "precio": "51314",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Ciudad Granja",
+        "precio": "50928",
+        "mes": "May 2025"
+      },
+      {
+        "colonia": "Ciudad Granja",
+        "precio": "50963",
+        "mes": "April 2025"
+      },
+      {
+        "colonia": "Ciudad Granja",
+        "precio": "50983",
+        "mes": "March 2025"
+      },
+      {
+        "colonia": "Ciudad Granja",
+        "precio": "50895",
+        "mes": "February 2025"
+      },
+      {
+        "colonia": "Ciudad Granja",
+        "precio": "50396",
+        "mes": "January 2025"
+      },
+      {
+        "colonia": "Ciudad Granja",
+        "precio": "49865",
+        "mes": "December 2024"
+      },
+      {
+        "colonia": "Ciudad Granja",
+        "precio": "49568",
+        "mes": "November 2024"
+      },
+      {
+        "colonia": "Ciudad Granja",
+        "precio": "49438",
+        "mes": "October 2024"
+      }
+    ],
+    "averagePrice": 52565,
+    "priceHistory": [
+      {
+        "month": "October 2024",
+        "price": 49438,
+        "date": "2024-10-01T06:00:00.000Z"
+      },
+      {
+        "month": "November 2024",
+        "price": 49568,
+        "date": "2024-11-01T06:00:00.000Z"
+      },
+      {
+        "month": "December 2024",
+        "price": 49865,
+        "date": "2024-12-01T06:00:00.000Z"
+      },
+      {
+        "month": "February 2025",
+        "price": 50895,
+        "date": "2025-02-01T06:00:00.000Z"
+      },
+      {
+        "month": "March 2025",
+        "price": 50983,
+        "date": "2025-03-01T06:00:00.000Z"
+      },
+      {
+        "month": "April 2025",
+        "price": 50963,
+        "date": "2025-04-01T06:00:00.000Z"
+      },
+      {
+        "month": "May 2025",
+        "price": 50928,
+        "date": "2025-05-01T06:00:00.000Z"
+      },
+      {
+        "month": "June 2025",
+        "price": 51314,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 51445,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 51874,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 52117,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 52565,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-16T20:11:46.993Z",
+  "updatedAt": "2025-11-16T20:11:46.993Z"
+}

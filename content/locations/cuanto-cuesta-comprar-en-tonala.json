@@ -1,0 +1,139 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-tonala",
+  "locationName": "Tonalá",
+  "locationType": "municipality",
+  "city": "Jalisco",
+  "content": {
+    "title": "¿Cuánto Cuesta Comprar en Tonalá, Jalisco?",
+    "metaTitle": "Precios en Tonalá Jalisco | $18,705/m² | 2024",
+    "metaDescription": "Descubre el costo de comprar en Tonalá, Jalisco. Precio promedio: $18,705/m². ¡Inversión segura con alta plusvalía cerca de Guadalajara!",
+    "introduction": "¡Pensando en invertir en bienes raíces cerca de Guadalajara? Tonalá, Jalisco, es una excelente opción. Este municipio te ofrece una combinación única de tradición artesanal, rica cultura y una ubicación estratégica. Actualmente, el precio promedio por metro cuadrado aquí ronda los $18,705 pesos, haciendo de Tonalá una alternativa atractiva para aquellos que buscan una propiedad con potencial de crecimiento.",
+    "mustVisitSpots": [
+      {
+        "name": "El Tianguis de Tonalá",
+        "description": "¡No te pierdas el famoso Tianguis! Lleno de artesanías, muebles y productos locales, es el lugar perfecto para encontrar tesoros únicos y disfrutar del ambiente vibrante de Tonalá."
+      },
+      {
+        "name": "Museo Nacional de la Cerámica",
+        "description": "Sumérgete en la historia de la cerámica mexicana en este museo fascinante. Descubre piezas impresionantes y aprende sobre las técnicas tradicionales que han hecho famoso a Tonalá."
+      },
+      {
+        "name": "Parroquia de Santiago Apóstol",
+        "description": "Visita esta hermosa iglesia, un símbolo icónico de Tonalá. Admira su arquitectura y disfruta de la tranquilidad de este espacio religioso."
+      },
+      {
+        "name": "Restaurantes de birria y mariscos",
+        "description": "¡Tonalá es famoso por su deliciosa comida! No te vayas sin probar la birria, un platillo tradicional jalisciense, o los frescos mariscos que ofrecen los restaurantes locales."
+      }
+    ],
+    "priceInsights": "El precio promedio actual de $18,705 por metro cuadrado en Tonalá lo posiciona como una opción accesible comparado con otras zonas metropolitanas de Jalisco. Durante los últimos 12 meses, hemos observado una tendencia al alza en los precios, lo que indica un creciente interés en la zona. Varios factores influyen en estos precios, incluyendo la demanda de vivienda, la cercanía a Guadalajara y el desarrollo de nuevas infraestructuras. Invertir ahora en Tonalá podría significar una excelente plusvalía a futuro.",
+    "slug": "cuanto-cuesta-comprar-en-tonala"
+  },
+  "locationData": {
+    "name": "Tonalá",
+    "type": "municipality",
+    "city": "Jalisco",
+    "neighborhoods": [
+      {
+        "colonia": "Lomas De La Soledad",
+        "precio": "22056",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Tonala Centro",
+        "precio": "18499",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Hacienda Real",
+        "precio": "18338",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Coyula",
+        "precio": "18281",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Santa Paula",
+        "precio": "16353",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Bosques De Tonala",
+        "precio": "20946",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "La Providencia",
+        "precio": "22011",
+        "mes": "July 2025"
+      }
+    ],
+    "averagePrice": 18705.4,
+    "priceHistory": [
+      {
+        "month": "October 2024",
+        "price": 18146,
+        "date": "2024-10-01T06:00:00.000Z"
+      },
+      {
+        "month": "November 2024",
+        "price": 17093.666666666668,
+        "date": "2024-11-01T06:00:00.000Z"
+      },
+      {
+        "month": "December 2024",
+        "price": 16640,
+        "date": "2024-12-01T06:00:00.000Z"
+      },
+      {
+        "month": "February 2025",
+        "price": 16904.25,
+        "date": "2025-02-01T06:00:00.000Z"
+      },
+      {
+        "month": "March 2025",
+        "price": 17799.5,
+        "date": "2025-03-01T06:00:00.000Z"
+      },
+      {
+        "month": "April 2025",
+        "price": 16623.4,
+        "date": "2025-04-01T06:00:00.000Z"
+      },
+      {
+        "month": "May 2025",
+        "price": 18035,
+        "date": "2025-05-01T06:00:00.000Z"
+      },
+      {
+        "month": "June 2025",
+        "price": 18508.285714285714,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 18869.2,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 18177,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 18926.833333333332,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 18705.4,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-16T20:09:24.652Z",
+  "updatedAt": "2025-11-16T20:09:24.652Z"
+}

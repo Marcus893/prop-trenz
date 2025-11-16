@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import Head from 'next/head'
 import { Layout } from '@/components/Layout'
 import { GeographicNavigator } from '@/components/navigation/GeographicNavigator'
 import { PriceChart } from '@/components/charts/PriceChart'
@@ -49,9 +50,70 @@ export default function ChartsPage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [router.query.location, router.isReady])
 
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://proptrenz.com'
+  let currentPath = router.asPath.split('?')[0] // Remove query params
+  
+  // Remove locale prefix from path if present
+  if (currentPath.startsWith('/es/') || currentPath.startsWith('/zh/')) {
+    currentPath = currentPath.replace(/^\/es\/|\/zh\//, '/')
+  }
+  if (currentPath === '/es' || currentPath === '/zh') {
+    currentPath = '/'
+  }
+  
+  // Build hreflang URLs for all language versions
+  const hreflangUrls = {
+    en: `${baseUrl}${currentPath}`,
+    es: `${baseUrl}/es${currentPath}`,
+    zh: `${baseUrl}/zh${currentPath}`
+  }
+
   return (
-    <Layout title={t('charts.title')} subtitle={t('charts.subtitle')}>
-      <div className="space-y-6">
+    <>
+      <Head>
+        {/* Hreflang tags for multilingual SEO */}
+        <link rel="alternate" hrefLang="en" href={hreflangUrls.en} />
+        <link rel="alternate" hrefLang="es" href={hreflangUrls.es} />
+        <link rel="alternate" hrefLang="zh" href={hreflangUrls.zh} />
+        <link rel="alternate" hrefLang="x-default" href={hreflangUrls.en} />
+        
+        {/* Spanish-speaking countries (LATAM) -> Spanish version */}
+        <link rel="alternate" hrefLang="es-MX" href={hreflangUrls.es} />
+        <link rel="alternate" hrefLang="es-AR" href={hreflangUrls.es} />
+        <link rel="alternate" hrefLang="es-CO" href={hreflangUrls.es} />
+        <link rel="alternate" hrefLang="es-CL" href={hreflangUrls.es} />
+        <link rel="alternate" hrefLang="es-PE" href={hreflangUrls.es} />
+        <link rel="alternate" hrefLang="es-EC" href={hreflangUrls.es} />
+        <link rel="alternate" hrefLang="es-VE" href={hreflangUrls.es} />
+        <link rel="alternate" hrefLang="es-GT" href={hreflangUrls.es} />
+        <link rel="alternate" hrefLang="es-CU" href={hreflangUrls.es} />
+        <link rel="alternate" hrefLang="es-BO" href={hreflangUrls.es} />
+        <link rel="alternate" hrefLang="es-DO" href={hreflangUrls.es} />
+        <link rel="alternate" hrefLang="es-HN" href={hreflangUrls.es} />
+        <link rel="alternate" hrefLang="es-PY" href={hreflangUrls.es} />
+        <link rel="alternate" hrefLang="es-SV" href={hreflangUrls.es} />
+        <link rel="alternate" hrefLang="es-NI" href={hreflangUrls.es} />
+        <link rel="alternate" hrefLang="es-CR" href={hreflangUrls.es} />
+        <link rel="alternate" hrefLang="es-PA" href={hreflangUrls.es} />
+        <link rel="alternate" hrefLang="es-UY" href={hreflangUrls.es} />
+        <link rel="alternate" hrefLang="es-PR" href={hreflangUrls.es} />
+        
+        {/* English-speaking countries -> English version */}
+        <link rel="alternate" hrefLang="en-US" href={hreflangUrls.en} />
+        <link rel="alternate" hrefLang="en-GB" href={hreflangUrls.en} />
+        <link rel="alternate" hrefLang="en-CA" href={hreflangUrls.en} />
+        <link rel="alternate" hrefLang="en-AU" href={hreflangUrls.en} />
+        <link rel="alternate" hrefLang="en-NZ" href={hreflangUrls.en} />
+        <link rel="alternate" hrefLang="en-IE" href={hreflangUrls.en} />
+        <link rel="alternate" hrefLang="en-ZA" href={hreflangUrls.en} />
+        
+        {/* Chinese-speaking countries/regions -> Chinese version */}
+        <link rel="alternate" hrefLang="zh-CN" href={hreflangUrls.zh} />
+        <link rel="alternate" hrefLang="zh-TW" href={hreflangUrls.zh} />
+        <link rel="alternate" hrefLang="zh-HK" href={hreflangUrls.zh} />
+      </Head>
+      <Layout title={t('charts.title')} subtitle={t('charts.subtitle')}>
+        <div className="space-y-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <GeographicNavigator
             onLocationSelect={handleLocationSelect}
@@ -97,7 +159,8 @@ export default function ChartsPage() {
           )}
         </div>
       </div>
-    </Layout>
+      </Layout>
+    </>
   )
 }
 

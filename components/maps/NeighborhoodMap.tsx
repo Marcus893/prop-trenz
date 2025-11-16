@@ -56,6 +56,11 @@ const MUNICIPALITY_COORDS: { [key: string]: [number, number] } = {
   'Tlalpan': [19.2833, -99.2333],
   'Venustiano Carranza': [19.4333, -99.1000],
   'Xochimilco': [19.2667, -99.1056],
+  // Jalisco municipalities
+  'Guadalajara': [20.6597, -103.3496],
+  'Tlaquepaque': [20.6409, -103.2933],
+  'Tonalá': [20.6244, -103.2342],
+  'Zapopan': [20.7236, -103.3848],
 }
 
 function getPriceColor(avgPrice: number): string {
@@ -81,6 +86,10 @@ async function geocodeWithPhoton(
   neighborhoodName: string,
   city: string = 'Monterrey'
 ): Promise<[number, number] | null> {
+  // Determine city name for geocoding
+  const cityName = city === 'Ciudad de México' ? 'Ciudad de México' 
+    : (city === 'Jalisco' || city === 'Guadalajara') ? 'Guadalajara' 
+    : 'Monterrey'
   try {
     // Clean query - remove problematic special characters
     const cleanQuery = query
@@ -111,6 +120,11 @@ async function geocodeWithPhoton(
         if (city === 'Ciudad de México') {
           // CDMX bounds
           if (lat >= 19.0 && lat <= 20.0 && lon >= -99.4 && lon <= -98.9) {
+            return [lat, lon]
+          }
+        } else if (city === 'Jalisco' || city === 'Guadalajara') {
+          // Jalisco/Guadalajara bounds
+          if (lat >= 20.4 && lat <= 20.8 && lon >= -103.6 && lon <= -103.1) {
             return [lat, lon]
           }
         } else {
@@ -186,23 +200,48 @@ async function geocodeNeighborhood(
   // Build Photon queries - use correct city/state name
   const queries: string[] = []
   const genericNames = ['Hidalgo', 'Terminal', 'Industrial', 'Centro', 'Norte', 'Sur', 'Este', 'Oeste']
-  const cityState = city === 'Ciudad de México' ? 'Ciudad de México' : 'Nuevo León'
-  const cityName = city === 'Ciudad de México' ? 'Ciudad de México' : 'Monterrey'
+  let cityState: string
+  let cityName: string
+  if (city === 'Ciudad de México') {
+    cityState = 'Ciudad de México'
+    cityName = 'Ciudad de México'
+  } else if (city === 'Jalisco' || city === 'Guadalajara') {
+    cityState = 'Jalisco'
+    cityName = 'Guadalajara'
+  } else {
+    cityState = 'Nuevo León'
+    cityName = 'Monterrey'
+  }
   
   for (const name of expandedVariants) {
+    // Base queries for all neighborhoods
     queries.push(`${name}, ${municipality}, ${cityState}`)
     queries.push(`${name}, ${municipality}`)
     queries.push(`${name} ${municipality} ${cityState}`)
     
+    // Add city name for better specificity (especially for Jalisco)
+    queries.push(`${name}, ${municipality}, ${cityName}, ${cityState}`)
+    queries.push(`${name}, ${cityName}, ${cityState}`)
+    
     // For very generic names, try more specific queries
     if (name.length <= 10 || genericNames.some(g => name.includes(g))) {
-      queries.push(`${name}, ${municipality}, ${cityName}, ${cityState}`)
       queries.push(`${municipality} ${name}, ${cityState}`)
       queries.push(`${name} colonia ${municipality}, ${cityState}`)
       queries.push(`${name} neighborhood ${municipality}, ${cityState}`)
+      queries.push(`${name} colonia ${municipality}, ${cityName}, ${cityState}`)
       // Try searching with the full original name for generic terms
       if (name !== neighborhoodName) {
         queries.push(`${neighborhoodName}, ${municipality}, ${cityState}`)
+        queries.push(`${neighborhoodName}, ${municipality}, ${cityName}, ${cityState}`)
+      }
+    }
+    
+    // For Jalisco, add additional queries with "Guadalajara" explicitly
+    if (cityState === 'Jalisco') {
+      queries.push(`${name}, ${municipality}, Guadalajara, Jalisco`)
+      queries.push(`${name}, Guadalajara, Jalisco`)
+      if (municipality !== 'Guadalajara') {
+        queries.push(`${name}, ${municipality}, Guadalajara`)
       }
     }
   }
@@ -472,6 +511,10 @@ export function NeighborhoodMap({ data }: NeighborhoodMapProps) {
   // Get current city name from data
   const currentCity = useMemo(() => {
     const cities = Object.keys(data)
+    // Prefer CDMX, then Jalisco, then Monterrey, then first available
+    if (cities.includes('Ciudad de México')) return 'Ciudad de México'
+    if (cities.includes('Jalisco')) return 'Jalisco'
+    if (cities.includes('Monterrey')) return 'Monterrey'
     return cities.length > 0 ? cities[0] : 'Monterrey'
   }, [data])
 
@@ -485,7 +528,7 @@ export function NeighborhoodMap({ data }: NeighborhoodMapProps) {
       neighborhoods: Neighborhood[]
     }> = []
 
-    // Process data for the current city (Monterrey or Ciudad de México)
+    // Process data for the current city (Ciudad de México, Jalisco, or Monterrey)
     const cityData = data[currentCity]
     if (cityData) {
       Object.entries(cityData).forEach(([municipality, neighborhoods]) => {
@@ -643,7 +686,9 @@ export function NeighborhoodMap({ data }: NeighborhoodMapProps) {
         console.log(`[Geocoding] ${i + 1}/${neighborhoodsToGeocode.length}: ${neighborhood.colonia}`)
         
         // Try geocoding
-        const cityName = currentCity === 'Ciudad de México' ? 'Ciudad de México' : 'Monterrey'
+        const cityName = currentCity === 'Ciudad de México' ? 'Ciudad de México' 
+          : currentCity === 'Jalisco' ? 'Guadalajara' 
+          : 'Monterrey'
         const coords = await geocodeNeighborhood(
           neighborhood.colonia,
           selectedData.municipality,
@@ -760,10 +805,15 @@ export function NeighborhoodMap({ data }: NeighborhoodMapProps) {
         map.fitBounds(bounds, { padding: [50, 50], maxZoom: 11 })
       } else {
         // Default: center on the city
-        const cityCenter = currentCity === 'Ciudad de México' 
-          ? [19.4326, -99.1332] 
-          : [25.6866, -100.3161]
-        map.setView(cityCenter as [number, number], 11)
+        let cityCenter: [number, number]
+        if (currentCity === 'Ciudad de México') {
+          cityCenter = [19.4326, -99.1332]
+        } else if (currentCity === 'Jalisco') {
+          cityCenter = [20.6597, -103.3496] // Guadalajara center
+        } else {
+          cityCenter = [25.6866, -100.3161] // Monterrey center
+        }
+        map.setView(cityCenter, 11)
       }
     }, [neighborhoodMarkers, selectedData, markers, map, currentCity])
     
@@ -774,6 +824,8 @@ export function NeighborhoodMap({ data }: NeighborhoodMapProps) {
   const center: [number, number] = useMemo(() => {
     if (currentCity === 'Ciudad de México') {
       return [19.4326, -99.1332] // CDMX center
+    } else if (currentCity === 'Jalisco') {
+      return [20.6597, -103.3496] // Guadalajara center
     }
     return [25.6866, -100.3161] // Monterrey center
   }, [currentCity])

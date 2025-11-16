@@ -8,15 +8,58 @@ const DASHBOARD_URL = 'https://public.tableau.com/app/profile/dashboards.7967/vi
 function normalizeMes(mes) {
   if (!mes) return mes;
   
-  // Already in correct format: "September 2025"
-  if (mes.match(/^[A-Za-z]+ \d{4}$/)) {
-    return mes;
+  // Trim and normalize whitespace
+  mes = mes.trim().replace(/\s+/g, ' ');
+  
+  // Spanish month names mapping (case-insensitive)
+  const spanishMonthMap = {
+    'enero': 'January',
+    'febrero': 'February',
+    'marzo': 'March',
+    'abril': 'April',
+    'mayo': 'May',
+    'junio': 'June',
+    'julio': 'July',
+    'agosto': 'August',
+    'septiembre': 'September',
+    'octubre': 'October',
+    'noviembre': 'November',
+    'diciembre': 'December'
+  };
+  
+  // Spanish month abbreviations mapping (3-letter abbreviations)
+  const spanishAbbrMap = {
+    'ene': 'January',
+    'feb': 'February',
+    'mar': 'March',
+    'abr': 'April',
+    'may': 'May',
+    'jun': 'June',
+    'jul': 'July',
+    'ago': 'August',
+    'sep': 'September',
+    'oct': 'October',
+    'nov': 'November',
+    'dic': 'December'
+  };
+  
+  // Format: "enero de 2025", "enero 2025", "Enero de 2025" (Spanish month names)
+  const spanishFormat = mes.match(/^([a-záéíóúñ]+)\s+(?:de\s+)?(\d{4})$/i);
+  if (spanishFormat) {
+    const monthName = spanishFormat[1].toLowerCase();
+    const year = spanishFormat[2];
+    
+    const englishMonth = spanishMonthMap[monthName];
+    if (englishMonth) {
+      return `${englishMonth} ${year}`;
+    }
   }
   
-  // Format: "Sep-25" or "Sep-2025"
-  const shortFormat = mes.match(/^([A-Za-z]{3})-(\d{2,4})$/);
+  // Format: "ene-25", "ene-2025", "ene 2025", "ene 25" (Spanish abbreviations)
+  // Also handle cases with optional whitespace: "ene - 25", "ene- 25", etc.
+  let shortFormat = mes.match(/^([a-záéíóúñ]{3})\s*-\s*(\d{2,4})$/i);
   if (shortFormat) {
-    const monthAbbr = shortFormat[1];
+    const monthAbbr = shortFormat[1].toLowerCase();
     let year = shortFormat[2];
     
     // Convert 2-digit year to 4-digit
@@ -24,28 +67,63 @@ function normalizeMes(mes) {
       year = '20' + year;
     }
     
-    const monthMap = {
-      'Jan': 'January', 'Feb': 'February', 'Mar': 'March', 'Apr': 'April',
-      'May': 'May', 'Jun': 'June', 'Jul': 'July', 'Aug': 'August',
-      'Sep': 'September', 'Oct': 'October', 'Nov': 'November', 'Dec': 'December'
-    };
+    // Check Spanish abbreviations
+    const fullMonth = spanishAbbrMap[monthAbbr];
+    if (fullMonth) {
+      return `${fullMonth} ${year}`;
+    }
     
-    const fullMonth = monthMap[monthAbbr] || monthAbbr;
-    return `${fullMonth} ${year}`;
+    console.warn(`[normalizeMes] Unknown month abbreviation: ${monthAbbr}, original: ${mes}`);
+    return mes;
+  }
+  
+  // Format: "ene 2025", "ene 25", "jun 2025" (space-separated Spanish abbreviations)
+  shortFormat = mes.match(/^([a-záéíóúñ]{3})\s+(\d{2,4})$/i);
+  if (shortFormat) {
+    const monthAbbr = shortFormat[1].toLowerCase();
+    let year = shortFormat[2];
+    
+    // Convert 2-digit year to 4-digit
+    if (year.length === 2) {
+      year = '20' + year;
+    }
+    
+    // Check Spanish abbreviations
+    const fullMonth = spanishAbbrMap[monthAbbr];
+    if (fullMonth) {
+      return `${fullMonth} ${year}`;
+    }
+    
+    console.warn(`[normalizeMes] Unknown month abbreviation: ${monthAbbr}, original: ${mes}`);
+    return mes;
+  }
+  
+  // Already in correct format: "September 2025" (full English month name with 4+ letters)
+  // Only check this after checking for abbreviations to avoid false matches
+  if (mes.match(/^[A-Za-z]{4,} \d{4}$/)) {
+    // Capitalize first letter of month and return
+    const parts = mes.split(' ');
+    const month = parts[0];
+    const year = parts[1];
+    const capitalizedMonth = month.charAt(0).toUpperCase() + month.slice(1).toLowerCase();
+    return `${capitalizedMonth} ${year}`;
   }
   
   // Return as-is if format is unrecognized
   return mes;
 }
 
-// Allow selecting specific worksheet via CLI arg: `node scripts/scrape-banorte-tableau.js cdmx|monterrey|all`
+// Allow selecting specific worksheet via CLI arg: `node scripts/scrape-banorte-tableau.js cdmx|monterrey|jalisco|all`
 const arg = (process.argv[2] || '').toLowerCase();
-let WORKSHEETS = ['Ciudad de México', 'Monterrey'];
+let WORKSHEETS = ['Ciudad de México', 'Monterrey', 'Jalisco'];
 if (arg === 'cdmx' || arg === 'ciudad' || arg === 'ciudad-de-mexico' || arg === 'ciudad_de_mexico') {
   WORKSHEETS = ['Ciudad de México'];
 }
 if (arg === 'monterrey' || arg === 'mty') {
   WORKSHEETS = ['Monterrey'];
+}
+if (arg === 'jalisco' || arg === 'gdl' || arg === 'guadalajara') {
+  WORKSHEETS = ['Jalisco'];
 }
 
 async function scrapeTableauDashboard() {
@@ -226,10 +304,6 @@ async function scrapeTableauDashboard() {
   });
   console.log('Available clickable texts:', allTexts);
   
-  // Take a screenshot for debugging
-  await page.screenshot({ path: 'data/dashboard-loaded.png', fullPage: true });
-  console.log('Screenshot saved to data/dashboard-loaded.png');
-  
   // Wait a bit more for any lazy-loaded content
   await page.waitForTimeout(3000);
 
@@ -245,12 +319,15 @@ async function scrapeTableauDashboard() {
       filesToLoad.add('banorte-neighborhood-data-cdmx.json');
     } else if (WORKSHEETS[0] === 'Monterrey') {
       filesToLoad.add('banorte-neighborhood-data-monterrey.json');
+    } else if (WORKSHEETS[0] === 'Jalisco') {
+      filesToLoad.add('banorte-neighborhood-data-jalisco.json');
     }
   } else {
     // Multiple worksheets - load all relevant files
     filesToLoad.add('banorte-neighborhood-data.json');
     filesToLoad.add('banorte-neighborhood-data-cdmx.json');
     filesToLoad.add('banorte-neighborhood-data-monterrey.json');
+    filesToLoad.add('banorte-neighborhood-data-jalisco.json');
   }
   
   // Load each file once
@@ -808,6 +885,8 @@ async function scrapeTableauDashboard() {
       filename = 'banorte-neighborhood-data-cdmx.json';
     } else if (WORKSHEETS[0] === 'Monterrey') {
       filename = 'banorte-neighborhood-data-monterrey.json';
+    } else if (WORKSHEETS[0] === 'Jalisco') {
+      filename = 'banorte-neighborhood-data-jalisco.json';
     }
   }
   
@@ -867,8 +946,8 @@ async function extractMapTooltips(frame, countyName) {
 
     console.log(`    Scanning map (${bounds.width}x${bounds.height})...`);
 
-    // Systematic scan of the map
-    const gridSize = 15;
+    // Systematic scan of the map - use a denser grid to find more neighborhoods
+    const gridSize = 20;
     const stepX = bounds.width / gridSize;
     const stepY = bounds.height / gridSize;
 
@@ -940,8 +1019,8 @@ async function extractMapTooltips(frame, countyName) {
             const mesMatch = tooltipText?.match(/Mes[:\s]+(.+?)(?=Precio|\n|\r|$)/is);
             if (mesMatch) {
               mes = mesMatch[1].trim();
-              // Clean up any trailing whitespace or punctuation
-              mes = mes.replace(/\s+$/, '').trim();
+              // Clean up any trailing whitespace, punctuation, or currency symbols
+              mes = mes.replace(/\s+$/, '').replace(/[$\s]+$/, '').trim();
               // Normalize date format
               mes = normalizeMes(mes);
             }

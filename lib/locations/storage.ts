@@ -7,7 +7,7 @@ export interface LocationPage {
   slug: string
   locationName: string
   locationType: 'neighborhood' | 'municipality' | 'city' | 'state'
-  city: 'Ciudad de México' | 'Monterrey'
+  city: 'Ciudad de México' | 'Monterrey' | 'Jalisco'
   municipality?: string
   content: LocationPageContent
   locationData: LocationData

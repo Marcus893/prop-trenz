@@ -39,9 +39,7 @@ NEXTAUTH_URL=http://localhost:3000
 NEXTAUTH_SECRET=your_random_secret_string
 
 # Programmatic SEO (Optional)
-OPENAI_API_KEY=your_openai_key # For text generation and image generation (DALL-E 3)
-OPENAI_PSEO_MODEL=gpt-4o-mini # optional override
-GEMINI_API_KEY=your_gemini_key # For guide translations
+GEMINI_API_KEY=your_gemini_key # For guide generation and translations
 GEMINI_MODEL=gemini-2.0-flash # optional override (default: gemini-2.0-flash)
 ```
 
@@ -144,7 +142,7 @@ All generated guides include comprehensive SEO features:
 
 ### Generation Process
 
-1. **Configure OpenAI**: set `OPENAI_API_KEY` (and optionally override the model with `OPENAI_PSEO_MODEL`).
+1. **Configure Gemini**: set `GEMINI_API_KEY` (and optionally override the model with `GEMINI_MODEL`).
 2. **Set site URL** (optional): `NEXT_PUBLIC_SITE_URL=https://proptrenz.com` for canonical URLs and OG images.
 3. **Install dependencies** (if not already installed):
    ```bash
@@ -182,9 +180,9 @@ All generated guides include comprehensive SEO features:
    
    **Note**: If you manually change the status to "published" in the JSON file, you need to run `npm run translate-guides` separately to generate translations. The `publish-guide` script automatically triggers translations.
 
-6. **Automatic translations**: When a guide is published using the `publish-guide` script, translations to Spanish and Chinese are automatically generated using OpenAI. Translations are saved as `{slug}-{locale}.json` and start as drafts for review.
+6. **Automatic translations**: When a guide is published using the `publish-guide` script, translations to Spanish and Chinese are automatically generated using Gemini. Translations are saved as `{slug}-{locale}.json` and start as drafts for review.
 
-Guides respect `accessLevel` (`public`, `login_required`, `email_capture`). Auth-protected content displays an inline sign-in/sign-up form that plugs into Supabase Auth.
+Guides respect `accessLevel` (`public`, `email_capture`). Auth-protected content displays an inline sign-up form that plugs into Supabase Auth.
 
 ### Translation System
 

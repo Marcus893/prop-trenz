@@ -1,0 +1,171 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-las-fuentes",
+  "locationName": "Las Fuentes",
+  "locationType": "neighborhood",
+  "city": "Jalisco",
+  "municipality": "Zapopan",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Las Fuentes, Jalisco?",
+    "metaTitle": "Precios en Las Fuentes Jalisco | $37,866/m² Actualizado",
+    "metaDescription": "Descubre el precio promedio por m² en Las Fuentes, Zapopan: $37,866. ¡Entérate por qué esta colonia es una excelente inversión en Jalisco y conoce sus atractivos!",
+    "introduction": "¿Estás pensando en comprar casa o departamento en Las Fuentes, Jalisco? ¡Buena elección! Esta colonia en Zapopan tiene un encanto especial y se ha convertido en una opción muy atractiva para vivir e invertir. Actualmente, el precio promedio por metro cuadrado ronda los $37,866, lo que la hace competitiva dentro del mercado inmobiliario de la zona metropolitana de Guadalajara.\n\nLas Fuentes destaca por su ubicación estratégica, con fácil acceso a importantes vías de comunicación, centros comerciales y escuelas. Además, ofrece un ambiente tranquilo y familiar que atrae a muchos compradores. Los precios han estado aumentando en los últimos meses, así que es un buen momento para considerar tu compra.",
+    "mustVisitSpots": [
+      {
+        "name": "Parque de las Fuentes",
+        "description": "Un espacio verde ideal para relajarse, hacer ejercicio o disfrutar de un picnic en familia. ¡Siempre hay gente paseando y disfrutando del aire libre!"
+      },
+      {
+        "name": "Plaza Las Fuentes",
+        "description": "Aquí encuentras desde restaurantes y cafeterías hasta tiendas de ropa y servicios. ¡Es el punto de encuentro de la colonia para ir de compras o cenar!"
+      },
+      {
+        "name": "Avenida López Mateos Sur",
+        "description": "Una de las principales arterias de la ciudad, con acceso a una gran variedad de comercios, servicios y opciones de transporte público."
+      },
+      {
+        "name": "Restaurante La Gorda",
+        "description": "Famoso por sus deliciosas tortas ahogadas y otros platillos típicos de la región. ¡Un lugar imperdible para probar la gastronomía local!"
+      }
+    ],
+    "priceInsights": "El precio promedio de $37,866 por metro cuadrado en Las Fuentes refleja el valor de la zona y su creciente demanda. Si comparamos con otras colonias en Zapopan y Jalisco, Las Fuentes se posiciona como una opción atractiva en términos de precio y calidad de vida. La tendencia de precios ha sido al alza durante los últimos 12 meses, lo que indica un interés constante por la zona. Factores como la ubicación privilegiada, la seguridad y la oferta de servicios contribuyen a este aumento en el valor de las propiedades. ¡Si estás buscando invertir, Las Fuentes podría ser tu próxima jugada maestra!",
+    "slug": "cuanto-cuesta-comprar-en-las-fuentes"
+  },
+  "locationData": {
+    "name": "Las Fuentes",
+    "type": "neighborhood",
+    "city": "Jalisco",
+    "municipality": "Zapopan",
+    "neighborhoods": [
+      {
+        "colonia": "Las Fuentes",
+        "precio": "37866",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Las Fuentes",
+        "precio": "37763",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Las Fuentes",
+        "precio": "37449",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Las Fuentes",
+        "precio": "36865",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Las Fuentes",
+        "precio": "36545",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Las Fuentes",
+        "precio": "35528",
+        "mes": "May 2025"
+      },
+      {
+        "colonia": "Las Fuentes",
+        "precio": "34983",
+        "mes": "April 2025"
+      },
+      {
+        "colonia": "Las Fuentes",
+        "precio": "34902",
+        "mes": "March 2025"
+      },
+      {
+        "colonia": "Las Fuentes",
+        "precio": "34863",
+        "mes": "February 2025"
+      },
+      {
+        "colonia": "Las Fuentes",
+        "precio": "35403",
+        "mes": "January 2025"
+      },
+      {
+        "colonia": "Las Fuentes",
+        "precio": "35715",
+        "mes": "December 2024"
+      },
+      {
+        "colonia": "Las Fuentes",
+        "precio": "36251",
+        "mes": "November 2024"
+      },
+      {
+        "colonia": "Las Fuentes",
+        "precio": "35830",
+        "mes": "October 2024"
+      }
+    ],
+    "averagePrice": 37866,
+    "priceHistory": [
+      {
+        "month": "October 2024",
+        "price": 35830,
+        "date": "2024-10-01T06:00:00.000Z"
+      },
+      {
+        "month": "November 2024",
+        "price": 36251,
+        "date": "2024-11-01T06:00:00.000Z"
+      },
+      {
+        "month": "December 2024",
+        "price": 35715,
+        "date": "2024-12-01T06:00:00.000Z"
+      },
+      {
+        "month": "February 2025",
+        "price": 34863,
+        "date": "2025-02-01T06:00:00.000Z"
+      },
+      {
+        "month": "March 2025",
+        "price": 34902,
+        "date": "2025-03-01T06:00:00.000Z"
+      },
+      {
+        "month": "April 2025",
+        "price": 34983,
+        "date": "2025-04-01T06:00:00.000Z"
+      },
+      {
+        "month": "May 2025",
+        "price": 35528,
+        "date": "2025-05-01T06:00:00.000Z"
+      },
+      {
+        "month": "June 2025",
+        "price": 36545,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 36865,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 37449,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 37763,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 37866,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-16T20:12:58.263Z",
+  "updatedAt": "2025-11-16T20:12:58.263Z"
+}

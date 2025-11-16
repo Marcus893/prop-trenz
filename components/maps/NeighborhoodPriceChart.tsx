@@ -132,6 +132,17 @@ export function NeighborhoodPriceChart({
     return formatPrice(value)
   }
 
+  // Calculate Y-axis domain to center the line
+  const getYAxisDomain = useMemo(() => {
+    if (sortedData.length === 0) return [0, 100000] as [number, number]
+    const prices = sortedData.map(d => d.price)
+    const min = Math.min(...prices)
+    const max = Math.max(...prices)
+    const range = max - min
+    const padding = range * 5
+    return [Math.max(0, min - padding), max + padding] as [number, number]
+  }, [sortedData])
+
   return (
     <Card className="p-4 md:p-6 bg-white shadow-lg">
       <div className="flex justify-between items-start mb-4">
@@ -199,13 +210,15 @@ export function NeighborhoodPriceChart({
                 tick={{ fill: '#6b7280' }}
                 angle={-45}
                 textAnchor="end"
-                height={60}
+                height={80}
+                interval={0}
               />
               <YAxis
                 stroke="#6b7280"
                 fontSize={12}
                 tick={{ fill: '#6b7280' }}
                 tickFormatter={(value) => `$${Math.round(value / 1000)}k`}
+                domain={getYAxisDomain}
               />
               <Tooltip
                 formatter={(value: number, name: string) => [

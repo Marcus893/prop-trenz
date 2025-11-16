@@ -1,0 +1,623 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-guadalajara",
+  "locationName": "Guadalajara",
+  "locationType": "municipality",
+  "city": "Jalisco",
+  "content": {
+    "title": "¿Cuánto cuesta comprar casa en Guadalajara?",
+    "metaTitle": "Precios en Guadalajara Jalisco | $41,179/m² (2024)",
+    "metaDescription": "Descubre el costo de vivir en Guadalajara, Jalisco. Precio promedio actual: $41,179/m². ¡Infórmate sobre el mercado inmobiliario tapatío!",
+    "introduction": "¿Pensando en comprar casa en la Perla Tapatía? Guadalajara, con su rica cultura, vibrante vida nocturna y deliciosa gastronomía, es una excelente opción para invertir en bienes raíces. Actualmente, el precio promedio por metro cuadrado se encuentra alrededor de $41,179 pesos. \n\nGuadalajara, capital de Jalisco, ofrece una gran variedad de opciones de vivienda, desde modernos departamentos en el centro hasta amplias casas en zonas residenciales. Si estás considerando mudarte o invertir, es importante conocer las tendencias del mercado inmobiliario. En los últimos 12 meses hemos observado una ligera disminución en los precios, ¡así que podría ser un buen momento para buscar oportunidades!",
+    "mustVisitSpots": [
+      {
+        "name": "Tlaquepaque",
+        "description": "Un pueblo mágico dentro de la ciudad, famoso por sus galerías de arte, artesanías y restaurantes tradicionales."
+      },
+      {
+        "name": "Centro Histórico",
+        "description": "Llena de edificios coloniales impresionantes, como la Catedral de Guadalajara y el Teatro Degollado."
+      },
+      {
+        "name": "Chapultepec",
+        "description": "Un corredor cultural con parques, cafés, restaurantes y una animada vida nocturna."
+      },
+      {
+        "name": "Mercado Libertad (San Juan de Dios)",
+        "description": "Uno de los mercados más grandes de Latinoamérica, ideal para encontrar de todo, desde comida hasta artesanías."
+      },
+      {
+        "name": "Parque Metropolitano",
+        "description": "Un extenso parque urbano perfecto para actividades al aire libre, como correr, andar en bicicleta o simplemente relajarse."
+      }
+    ],
+    "priceInsights": "El precio promedio de $41,179 pesos por metro cuadrado en Guadalajara es competitivo si lo comparamos con otras grandes ciudades de México. Dentro del estado de Jalisco, puede ser un poco más elevado que en municipios más pequeños, pero ofrece ventajas inigualables en cuanto a servicios, infraestructura y oportunidades laborales. La ligera tendencia a la baja que hemos visto en los últimos meses podría estar influenciada por factores como la oferta y demanda, las tasas de interés y la situación económica general. Es importante considerar que los precios varían significativamente dependiendo de la ubicación, el tamaño y las características de la propiedad. ¡Asesórate con un experto para encontrar la mejor opción para ti!",
+    "slug": "cuanto-cuesta-comprar-en-guadalajara"
+  },
+  "locationData": {
+    "name": "Guadalajara",
+    "type": "municipality",
+    "city": "Jalisco",
+    "neighborhoods": [
+      {
+        "colonia": "Providencia",
+        "precio": "69815",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Country Club",
+        "precio": "69576",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Vallarta San Jorge",
+        "precio": "68156",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Colomos Providencia",
+        "precio": "67616",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Lomas Del Country",
+        "precio": "63262",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Circunvalacion Americas",
+        "precio": "63235",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Ladron De Guevara",
+        "precio": "62272",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Colinas De San Javier",
+        "precio": "62077",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Arcos Vallarta",
+        "precio": "61522",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Americana",
+        "precio": "61396",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Chapultepec Country",
+        "precio": "60784",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Vallarta Poniente",
+        "precio": "59739",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Prados Providencia",
+        "precio": "58958",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Vallarta",
+        "precio": "58944",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Italia Providencia",
+        "precio": "58856",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Jardines Del Country",
+        "precio": "58351",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Fabrica De Atemajac",
+        "precio": "35343",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "San Miguel De Mezquitan",
+        "precio": "49873",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Mezquitan Country",
+        "precio": "43088",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Ayuntamiento",
+        "precio": "55179",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Lomas De Providencia",
+        "precio": "58387",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Lomas De Guevara",
+        "precio": "52711",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Vallarta Norte",
+        "precio": "58419",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Jardines De Los Arcos",
+        "precio": "39444",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Chapalita",
+        "precio": "54398",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Jardines Del Bosque",
+        "precio": "53283",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Moderna",
+        "precio": "56965",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Del Fresno",
+        "precio": "32277",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Del Sur",
+        "precio": "25577",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Jardines De La Cruz",
+        "precio": "29025",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Jardines Del Sur",
+        "precio": "34471",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Villa Guerrero",
+        "precio": "30171",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Nueva España",
+        "precio": "42724",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Polanco",
+        "precio": "26504",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Lomas De Polanco",
+        "precio": "25868",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Miravalle",
+        "precio": "23184",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Morelos",
+        "precio": "41110",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Guadalajara Centro",
+        "precio": "49866",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "La Perla",
+        "precio": "33843",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "San Juan De Dios",
+        "precio": "35707",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Centro Barranquitas",
+        "precio": "40723",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "La Aurora",
+        "precio": "34203",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Ferrocarril",
+        "precio": "25704",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "El Rosario",
+        "precio": "28603",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Quinta Velarde",
+        "precio": "45953",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Atlas",
+        "precio": "41576",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Sutaj",
+        "precio": "37861",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Magaña",
+        "precio": "28926",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Lomas Del Paradero",
+        "precio": "35437",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "La Loma",
+        "precio": "32347",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "San Antonio",
+        "precio": "33569",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Hormiguero",
+        "precio": "31561",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Jardines De La Paz",
+        "precio": "30937",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Jardines De Los Historiadores",
+        "precio": "25426",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Popular Hornos",
+        "precio": "37859",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Jardines De Los Poetas",
+        "precio": "35871",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "San Rafael",
+        "precio": "24121",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "San Andres",
+        "precio": "20187",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Agustin Yañez (La Florida)",
+        "precio": "17840",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Aldama Tetlan",
+        "precio": "27286",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Jardines De Guadalupe",
+        "precio": "51222",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "La Penal",
+        "precio": "27226",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Blanco Y Cuellar",
+        "precio": "24887",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Talpita",
+        "precio": "24161",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Balcones De Oblatos",
+        "precio": "29529",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Lomas De San Eugenio",
+        "precio": "26264",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Oblatos",
+        "precio": "32718",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "La Esperanza (La Federacha)",
+        "precio": "20225",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Huentitan El Alto",
+        "precio": "34577",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Colinas De Huentitan",
+        "precio": "24969",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Huentitan El Bajo",
+        "precio": "36480",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Lomas Del Paraiso Iii",
+        "precio": "32140",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Rancho Nuevo",
+        "precio": "43147",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Lomas De Independencia",
+        "precio": "34645",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Jardines Alcalde",
+        "precio": "37308",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Independencia",
+        "precio": "36183",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Villas De San Juan",
+        "precio": "30003",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Colinas De La Normal",
+        "precio": "40816",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Alcalde Barranquitas",
+        "precio": "42000",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Santa Monica",
+        "precio": "37838",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Lagos Del Country",
+        "precio": "42755",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "San Bernardo",
+        "precio": "40258",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Obrera",
+        "precio": "57386",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Verde Valle",
+        "precio": "30760",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "El Rastro",
+        "precio": "33160",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Jardines Del Rosario",
+        "precio": "29698",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Lagos De Oriente",
+        "precio": "24552",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "San Juan Bosco",
+        "precio": "24516",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Circunvalacion Oblatos",
+        "precio": "32372",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Beatriz Hernandez",
+        "precio": "22812",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Independencia Oriente",
+        "precio": "23879",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Santa Eduwiges",
+        "precio": "36476",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Belisario Dominguez",
+        "precio": "31024",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Santa Cecilia",
+        "precio": "24932",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Observatorio",
+        "precio": "35887",
+        "mes": "May 2025"
+      },
+      {
+        "colonia": "Universitaria",
+        "precio": "37793",
+        "mes": "May 2025"
+      },
+      {
+        "colonia": "Progreso",
+        "precio": "24174",
+        "mes": "May 2025"
+      },
+      {
+        "colonia": "Lomas Del Paraiso Ii",
+        "precio": "21950",
+        "mes": "May 2025"
+      },
+      {
+        "colonia": "Lomas Del Gallo",
+        "precio": "19720",
+        "mes": "February 2025"
+      },
+      {
+        "colonia": "Revolucion",
+        "precio": "32108",
+        "mes": "January 2025"
+      },
+      {
+        "colonia": "San Eugenio",
+        "precio": "25200",
+        "mes": "January 2025"
+      },
+      {
+        "colonia": "San Isidro Oblatos",
+        "precio": "38440",
+        "mes": "November 2024"
+      },
+      {
+        "colonia": "Jardines Plaza Del Sol",
+        "precio": "36565",
+        "mes": "October 2024"
+      }
+    ],
+    "averagePrice": 41178.8,
+    "priceHistory": [
+      {
+        "month": "October 2024",
+        "price": 42793.10294117647,
+        "date": "2024-10-01T06:00:00.000Z"
+      },
+      {
+        "month": "November 2024",
+        "price": 43071.78787878788,
+        "date": "2024-11-01T06:00:00.000Z"
+      },
+      {
+        "month": "December 2024",
+        "price": 43570.39344262295,
+        "date": "2024-12-01T06:00:00.000Z"
+      },
+      {
+        "month": "February 2025",
+        "price": 41589.328571428574,
+        "date": "2025-02-01T06:00:00.000Z"
+      },
+      {
+        "month": "March 2025",
+        "price": 40367.15189873418,
+        "date": "2025-03-01T06:00:00.000Z"
+      },
+      {
+        "month": "April 2025",
+        "price": 40107.950617283954,
+        "date": "2025-04-01T06:00:00.000Z"
+      },
+      {
+        "month": "May 2025",
+        "price": 40039.31707317073,
+        "date": "2025-05-01T06:00:00.000Z"
+      },
+      {
+        "month": "June 2025",
+        "price": 40375.48809523809,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 40414.619047619046,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 40384.97530864197,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 41041.555555555555,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 41178.8,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-16T20:08:36.438Z",
+  "updatedAt": "2025-11-16T20:08:36.438Z"
+}

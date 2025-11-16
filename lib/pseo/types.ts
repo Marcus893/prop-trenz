@@ -1,4 +1,4 @@
-export type GuideAccessLevel = 'public' | 'login_required' | 'email_capture'
+export type GuideAccessLevel = 'public' | 'email_capture'
 
 export type GuideStatus = 'draft' | 'review' | 'published'
 

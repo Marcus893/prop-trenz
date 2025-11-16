@@ -1,0 +1,175 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-guadalajara-centro",
+  "locationName": "Guadalajara Centro",
+  "locationType": "neighborhood",
+  "city": "Jalisco",
+  "municipality": "Guadalajara",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Guadalajara Centro?",
+    "metaTitle": "Precios en Guadalajara Centro Jalisco | $49,866/m²",
+    "metaDescription": "Descubre el precio promedio para comprar en Guadalajara Centro, Jalisco: ¡$49,866/m²! ¿Vale la pena invertir aquí? ¡Averígualo!",
+    "introduction": "¡Quihubole! ¿Estás pensando en echar raíces en el corazón de Jalisco? Guadalajara Centro es una joya con su arquitectura colonial, su vibrante vida cultural y su ambiente lleno de tradición. Si andas buscando depa o casa por acá, te va a interesar saber que el precio promedio actual ronda los $49,866 por metro cuadrado. \n\nComprar en Guadalajara Centro significa estar a tiro de piedra de todo: museos, teatros, restaurantes y un montón de opciones para el entretenimiento. Además, con la tendencia al alza en los precios, ¡podría ser una inversión inteligente!",
+    "mustVisitSpots": [
+      {
+        "name": "Teatro Degollado",
+        "description": "Un ícono arquitectónico de Guadalajara, perfecto para disfrutar de obras y espectáculos de primer nivel."
+      },
+      {
+        "name": "Plaza de Armas",
+        "description": "El corazón del Centro Histórico, ideal para relajarse, escuchar música y sentir el pulso de la ciudad."
+      },
+      {
+        "name": "Mercado San Juan de Dios (Libertad)",
+        "description": "Uno de los mercados más grandes de Latinoamérica, donde encuentras de todo, desde comida típica hasta artesanías."
+      },
+      {
+        "name": "Catedral de Guadalajara",
+        "description": "Una imponente construcción religiosa con una rica historia y arquitectura impresionante."
+      },
+      {
+        "name": "Instituto Cultural Cabañas",
+        "description": "Un antiguo hospicio que alberga impresionantes murales de José Clemente Orozco, ¡una visita obligada!"
+      }
+    ],
+    "priceInsights": "Actualmente, el precio promedio en Guadalajara Centro se ubica en $49,866 por metro cuadrado. Si comparamos con otras zonas de Jalisco, el Centro suele tener precios competitivos, aunque puede variar dependiendo de la ubicación exacta, el tamaño y las características de la propiedad. A lo largo de los últimos 12 meses, hemos visto una tendencia al alza en los precios, lo que sugiere que la demanda en esta área está aumentando. Factores como la cercanía a puntos de interés, la disponibilidad de servicios y el desarrollo de nuevos proyectos inmobiliarios podrían estar influyendo en este incremento. Así que, si tienes pensado comprar, ¡quizás sea buen momento para empezar a buscar!",
+    "slug": "cuanto-cuesta-comprar-en-guadalajara-centro"
+  },
+  "locationData": {
+    "name": "Guadalajara Centro",
+    "type": "neighborhood",
+    "city": "Jalisco",
+    "municipality": "Guadalajara",
+    "neighborhoods": [
+      {
+        "colonia": "Guadalajara Centro",
+        "precio": "49866",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Guadalajara Centro",
+        "precio": "48358",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Guadalajara Centro",
+        "precio": "47386",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Guadalajara Centro",
+        "precio": "47254",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Guadalajara Centro",
+        "precio": "47121",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Guadalajara Centro",
+        "precio": "46959",
+        "mes": "May 2025"
+      },
+      {
+        "colonia": "Guadalajara Centro",
+        "precio": "46435",
+        "mes": "April 2025"
+      },
+      {
+        "colonia": "Guadalajara Centro",
+        "precio": "46048",
+        "mes": "March 2025"
+      },
+      {
+        "colonia": "Guadalajara Centro",
+        "precio": "45932",
+        "mes": "February 2025"
+      },
+      {
+        "colonia": "Guadalajara Centro",
+        "precio": "45474",
+        "mes": "January 2025"
+      },
+      {
+        "colonia": "Guadalajara Centro",
+        "precio": "45278",
+        "mes": "December 2024"
+      },
+      {
+        "colonia": "Guadalajara Centro",
+        "precio": "44968",
+        "mes": "November 2024"
+      },
+      {
+        "colonia": "Guadalajara Centro",
+        "precio": "45012",
+        "mes": "October 2024"
+      }
+    ],
+    "averagePrice": 49866,
+    "priceHistory": [
+      {
+        "month": "October 2024",
+        "price": 45012,
+        "date": "2024-10-01T06:00:00.000Z"
+      },
+      {
+        "month": "November 2024",
+        "price": 44968,
+        "date": "2024-11-01T06:00:00.000Z"
+      },
+      {
+        "month": "December 2024",
+        "price": 45278,
+        "date": "2024-12-01T06:00:00.000Z"
+      },
+      {
+        "month": "February 2025",
+        "price": 45932,
+        "date": "2025-02-01T06:00:00.000Z"
+      },
+      {
+        "month": "March 2025",
+        "price": 46048,
+        "date": "2025-03-01T06:00:00.000Z"
+      },
+      {
+        "month": "April 2025",
+        "price": 46435,
+        "date": "2025-04-01T06:00:00.000Z"
+      },
+      {
+        "month": "May 2025",
+        "price": 46959,
+        "date": "2025-05-01T06:00:00.000Z"
+      },
+      {
+        "month": "June 2025",
+        "price": 47121,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 47254,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 47386,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 48358,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 49866,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-16T20:11:22.205Z",
+  "updatedAt": "2025-11-16T20:11:22.205Z"
+}

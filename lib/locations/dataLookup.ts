@@ -10,7 +10,7 @@ export interface LocationPriceData {
 export interface LocationData {
   name: string
   type: 'neighborhood' | 'municipality' | 'city' | 'state'
-  city: 'Ciudad de México' | 'Monterrey'
+  city: 'Ciudad de México' | 'Monterrey' | 'Jalisco'
   municipality?: string
   neighborhoods: LocationPriceData[]
   averagePrice: number
@@ -25,9 +25,14 @@ export interface LocationData {
  * Find location data by name (searches neighborhoods, municipalities, cities, states)
  * Only uses exact matches - no partial matching
  * Returns the first match found (for backward compatibility)
+ * @param locationName - The name of the location to search for
+ * @param cityFilter - Optional city filter ('Ciudad de México', 'Monterrey', 'Jalisco'). If provided, only searches in that city.
  */
-export function findLocationData(locationName: string): LocationData | null {
-  const allMatches = findAllLocationData(locationName)
+export function findLocationData(
+  locationName: string,
+  cityFilter?: 'Ciudad de México' | 'Monterrey' | 'Jalisco'
+): LocationData | null {
+  const allMatches = findAllLocationData(locationName, cityFilter)
   return allMatches.length > 0 ? allMatches[0] : null
 }
 
@@ -35,16 +40,32 @@ export function findLocationData(locationName: string): LocationData | null {
  * Find ALL location data matches by name (searches neighborhoods, municipalities, cities, states)
  * Only uses exact matches - no partial matching
  * Returns all matches found, allowing multiple locations with the same name but different types
+ * @param locationName - The name of the location to search for
+ * @param cityFilter - Optional city filter ('Ciudad de México', 'Monterrey', 'Jalisco'). If provided, only searches in that city.
  */
-export function findAllLocationData(locationName: string): LocationData[] {
+export function findAllLocationData(
+  locationName: string,
+  cityFilter?: 'Ciudad de México' | 'Monterrey' | 'Jalisco'
+): LocationData[] {
   const normalizedName = normalizeLocationName(locationName)
   const matches: LocationData[] = []
   
-  // Search BOTH cities for exact matches only
+  // If city filter is provided, only search in that city
+  if (cityFilter) {
+    const cityData = loadCityData(cityFilter)
+    if (cityData) {
+      const exactMatches = searchInCityDataExactOnlyAll(cityData, normalizedName, cityFilter)
+      matches.push(...exactMatches)
+    }
+    return matches
+  }
+  
+  // Otherwise, search all cities for exact matches
   const cdmxData = loadCityData('Ciudad de México')
   const monterreyData = loadCityData('Monterrey')
+  const jaliscoData = loadCityData('Jalisco')
   
-  // Find all exact matches in both cities
+  // Find all exact matches in all cities
   if (cdmxData) {
     const exactMatches = searchInCityDataExactOnlyAll(cdmxData, normalizedName, 'Ciudad de México')
     matches.push(...exactMatches)
@@ -52,6 +73,11 @@ export function findAllLocationData(locationName: string): LocationData[] {
   
   if (monterreyData) {
     const exactMatches = searchInCityDataExactOnlyAll(monterreyData, normalizedName, 'Monterrey')
+    matches.push(...exactMatches)
+  }
+  
+  if (jaliscoData) {
+    const exactMatches = searchInCityDataExactOnlyAll(jaliscoData, normalizedName, 'Jalisco')
     matches.push(...exactMatches)
   }
   
@@ -67,10 +93,15 @@ function normalizeLocationName(name: string): string {
     .replace(/\s+/g, ' ')
 }
 
-function loadCityData(city: 'Ciudad de México' | 'Monterrey'): any {
-  const filename = city === 'Ciudad de México' 
-    ? 'banorte-neighborhood-data-cdmx.json'
-    : 'banorte-neighborhood-data-monterrey.json'
+function loadCityData(city: 'Ciudad de México' | 'Monterrey' | 'Jalisco'): any {
+  let filename: string
+  if (city === 'Ciudad de México') {
+    filename = 'banorte-neighborhood-data-cdmx.json'
+  } else if (city === 'Monterrey') {
+    filename = 'banorte-neighborhood-data-monterrey.json'
+  } else {
+    filename = 'banorte-neighborhood-data-jalisco.json'
+  }
   
   const filePath = path.join(process.cwd(), 'public', 'data', filename)
   
@@ -92,7 +123,7 @@ function loadCityData(city: 'Ciudad de México' | 'Monterrey'): any {
 function searchInCityDataExactOnly(
   cityData: any,
   searchName: string,
-  city: 'Ciudad de México' | 'Monterrey'
+  city: 'Ciudad de México' | 'Monterrey' | 'Jalisco'
 ): LocationData | null {
   const matches = searchInCityDataExactOnlyAll(cityData, searchName, city)
   return matches.length > 0 ? matches[0] : null
@@ -102,7 +133,7 @@ function searchInCityDataExactOnly(
 function searchInCityDataExactOnlyAll(
   cityData: any,
   searchName: string,
-  city: 'Ciudad de México' | 'Monterrey'
+  city: 'Ciudad de México' | 'Monterrey' | 'Jalisco'
 ): LocationData[] {
   // Get the actual data (structure is { "City Name": { "Municipality": [...] } })
   const cityKey = Object.keys(cityData)[0]
@@ -154,7 +185,7 @@ function buildNeighborhoodData(
   colonia: string,
   municipality: string,
   allNeighborhoods: LocationPriceData[],
-  city: 'Ciudad de México' | 'Monterrey'
+  city: 'Ciudad de México' | 'Monterrey' | 'Jalisco'
 ): LocationData {
   // Get all entries for this neighborhood (across all months)
   const neighborhoodEntries = allNeighborhoods.filter(n => 
@@ -195,7 +226,7 @@ function buildNeighborhoodData(
 function buildMunicipalityData(
   municipality: string,
   neighborhoods: LocationPriceData[],
-  city: 'Ciudad de México' | 'Monterrey'
+  city: 'Ciudad de México' | 'Monterrey' | 'Jalisco'
 ): LocationData {
   // Get unique neighborhoods
   const uniqueNeighborhoods = new Map<string, LocationPriceData>()

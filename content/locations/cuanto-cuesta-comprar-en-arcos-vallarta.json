@@ -1,0 +1,171 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-arcos-vallarta",
+  "locationName": "Arcos Vallarta",
+  "locationType": "neighborhood",
+  "city": "Jalisco",
+  "municipality": "Guadalajara",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Arcos Vallarta?",
+    "metaTitle": "Precios en Arcos Vallarta Jalisco | $61,522/m²",
+    "metaDescription": "Descubre los precios de casas y departamentos en Arcos Vallarta, Guadalajara. Precio promedio actual: $61,522/m². ¡Invierte en una zona con alta plusvalía!",
+    "introduction": "Si estás pensando en invertir en bienes raíces en Guadalajara, ¡Arcos Vallarta te va a encantar! Esta colonia, ubicada en el corazón de la ciudad, es conocida por su ambiente tranquilo, su cercanía a importantes centros comerciales y su excelente conectividad. Actualmente, el precio promedio por metro cuadrado en Arcos Vallarta ronda los $61,522 pesos, un precio que refleja la alta demanda y la calidad de vida que ofrece la zona.\n\nArcos Vallarta no sólo es una excelente opción para vivir, sino también una inversión inteligente. Con una tendencia de precios al alza en los últimos 12 meses, comprar aquí podría significar un buen retorno en el futuro. ¡Vamos a explorar juntos por qué esta colonia es tan atractiva!",
+    "mustVisitSpots": [
+      {
+        "name": "Avenida Chapultepec",
+        "description": "A pocos pasos de Arcos Vallarta, Chapultepec es famosa por su ambiente bohemio, sus galerías de arte, restaurantes y vida nocturna."
+      },
+      {
+        "name": "Parque Revolución (Parque Rojo)",
+        "description": "Un espacio verde ideal para relajarse, hacer ejercicio o disfrutar de un picnic. ¡Perfecto para un domingo familiar!"
+      },
+      {
+        "name": "Mercado Juárez",
+        "description": "Un mercado tradicional donde puedes encontrar desde comida típica hasta artesanías y productos locales."
+      },
+      {
+        "name": "Restaurantes de la Calle Argentina",
+        "description": "Conocida por su diversa oferta gastronómica, encontrarás opciones para todos los gustos y presupuestos."
+      }
+    ],
+    "priceInsights": "Con un precio promedio de $61,522 pesos por metro cuadrado, Arcos Vallarta se posiciona como una colonia de gama media-alta en Guadalajara. Si lo comparamos con el promedio estatal de Jalisco, notarás que Arcos Vallarta se encuentra ligeramente por encima, lo que se justifica por su ubicación privilegiada, su infraestructura y su creciente popularidad. La tendencia al alza en los precios que hemos observado en los últimos 12 meses indica una fuerte demanda y una creciente plusvalía. Factores como la cercanía a importantes vías de comunicación, la presencia de universidades y centros de trabajo, así como la inversión en nuevos desarrollos inmobiliarios, contribuyen a este aumento constante en los precios.",
+    "slug": "cuanto-cuesta-comprar-en-arcos-vallarta"
+  },
+  "locationData": {
+    "name": "Arcos Vallarta",
+    "type": "neighborhood",
+    "city": "Jalisco",
+    "municipality": "Guadalajara",
+    "neighborhoods": [
+      {
+        "colonia": "Arcos Vallarta",
+        "precio": "61522",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Arcos Vallarta",
+        "precio": "61000",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Arcos Vallarta",
+        "precio": "60461",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Arcos Vallarta",
+        "precio": "60310",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Arcos Vallarta",
+        "precio": "60076",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Arcos Vallarta",
+        "precio": "59673",
+        "mes": "May 2025"
+      },
+      {
+        "colonia": "Arcos Vallarta",
+        "precio": "59290",
+        "mes": "April 2025"
+      },
+      {
+        "colonia": "Arcos Vallarta",
+        "precio": "58985",
+        "mes": "March 2025"
+      },
+      {
+        "colonia": "Arcos Vallarta",
+        "precio": "59080",
+        "mes": "February 2025"
+      },
+      {
+        "colonia": "Arcos Vallarta",
+        "precio": "58852",
+        "mes": "January 2025"
+      },
+      {
+        "colonia": "Arcos Vallarta",
+        "precio": "58811",
+        "mes": "December 2024"
+      },
+      {
+        "colonia": "Arcos Vallarta",
+        "precio": "58655",
+        "mes": "November 2024"
+      },
+      {
+        "colonia": "Arcos Vallarta",
+        "precio": "58759",
+        "mes": "October 2024"
+      }
+    ],
+    "averagePrice": 61522,
+    "priceHistory": [
+      {
+        "month": "October 2024",
+        "price": 58759,
+        "date": "2024-10-01T06:00:00.000Z"
+      },
+      {
+        "month": "November 2024",
+        "price": 58655,
+        "date": "2024-11-01T06:00:00.000Z"
+      },
+      {
+        "month": "December 2024",
+        "price": 58811,
+        "date": "2024-12-01T06:00:00.000Z"
+      },
+      {
+        "month": "February 2025",
+        "price": 59080,
+        "date": "2025-02-01T06:00:00.000Z"
+      },
+      {
+        "month": "March 2025",
+        "price": 58985,
+        "date": "2025-03-01T06:00:00.000Z"
+      },
+      {
+        "month": "April 2025",
+        "price": 59290,
+        "date": "2025-04-01T06:00:00.000Z"
+      },
+      {
+        "month": "May 2025",
+        "price": 59673,
+        "date": "2025-05-01T06:00:00.000Z"
+      },
+      {
+        "month": "June 2025",
+        "price": 60076,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 60310,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 60461,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 61000,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 61522,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-16T20:10:31.029Z",
+  "updatedAt": "2025-11-16T20:10:31.029Z"
+}

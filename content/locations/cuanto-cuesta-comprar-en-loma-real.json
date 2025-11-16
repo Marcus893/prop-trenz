@@ -1,0 +1,171 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-loma-real",
+  "locationName": "Loma Real",
+  "locationType": "neighborhood",
+  "city": "Jalisco",
+  "municipality": "Zapopan",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Loma Real, Jalisco?",
+    "metaTitle": "Precios en Loma Real, Jalisco | $60,331/m²",
+    "metaDescription": "Descubre el precio promedio para comprar en Loma Real, Zapopan. ¡Entérate por qué esta zona de Jalisco es una excelente inversión! Precios actualizados.",
+    "introduction": "¿Estás pensando en invertir en bienes raíces en Jalisco? ¡Loma Real en Zapopan podría ser justo lo que buscas! Esta colonia está ganando popularidad y, con ella, el valor de sus propiedades. Actualmente, el precio promedio por metro cuadrado ronda los $60,331.\n\n  Loma Real se ubica en Zapopan, una de las zonas más dinámicas de Guadalajara. Su ambiente tranquilo y acceso a servicios la hacen muy atractiva. Además, ¡la plusvalía va en aumento! En los últimos 12 meses hemos visto una tendencia al alza en los precios, lo que la convierte en una opción interesante para inversionistas y familias que buscan un hogar.",
+    "mustVisitSpots": [
+      {
+        "name": "Parque de Loma Real",
+        "description": "Un espacio verde ideal para relajarte, hacer ejercicio o pasar tiempo con la familia. Siempre hay gente disfrutando del aire libre."
+      },
+      {
+        "name": "Plaza del Sol",
+        "description": "Aunque no está exactamente en Loma Real, está súper cerca y ofrece una gran variedad de tiendas, restaurantes y entretenimiento."
+      },
+      {
+        "name": "Restaurantes locales en Av. Guadalupe",
+        "description": "Encontrarás desde taquerías hasta restaurantes de alta cocina. ¡Hay opciones para todos los gustos y presupuestos!"
+      },
+      {
+        "name": "Iglesia de Loma Real",
+        "description": "Un punto de referencia importante en la colonia, con una comunidad activa y eventos regulares."
+      }
+    ],
+    "priceInsights": "Con un precio promedio de $60,331 por metro cuadrado, Loma Real se posiciona como una opción interesante dentro del mercado inmobiliario de Zapopan. Si bien puede ser un poco más elevado que otras zonas, la creciente demanda y la calidad de vida que ofrece justifican esta inversión.\n\n  La tendencia al alza en los precios, observada en los últimos 12 meses, sugiere que el valor de las propiedades en Loma Real seguirá aumentando. Factores como la ubicación estratégica, la cercanía a servicios y la tranquilidad del entorno contribuyen a esta apreciación. ¡Considera que la demanda está subiendo!",
+    "slug": "cuanto-cuesta-comprar-en-loma-real"
+  },
+  "locationData": {
+    "name": "Loma Real",
+    "type": "neighborhood",
+    "city": "Jalisco",
+    "municipality": "Zapopan",
+    "neighborhoods": [
+      {
+        "colonia": "Loma Real",
+        "precio": "60331",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Loma Real",
+        "precio": "61373",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Loma Real",
+        "precio": "58928",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Loma Real",
+        "precio": "60112",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Loma Real",
+        "precio": "57825",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Loma Real",
+        "precio": "57578",
+        "mes": "May 2025"
+      },
+      {
+        "colonia": "Loma Real",
+        "precio": "55511",
+        "mes": "April 2025"
+      },
+      {
+        "colonia": "Loma Real",
+        "precio": "53679",
+        "mes": "March 2025"
+      },
+      {
+        "colonia": "Loma Real",
+        "precio": "53245",
+        "mes": "February 2025"
+      },
+      {
+        "colonia": "Loma Real",
+        "precio": "51302",
+        "mes": "January 2025"
+      },
+      {
+        "colonia": "Loma Real",
+        "precio": "51108",
+        "mes": "December 2024"
+      },
+      {
+        "colonia": "Loma Real",
+        "precio": "50018",
+        "mes": "November 2024"
+      },
+      {
+        "colonia": "Loma Real",
+        "precio": "49203",
+        "mes": "October 2024"
+      }
+    ],
+    "averagePrice": 60331,
+    "priceHistory": [
+      {
+        "month": "October 2024",
+        "price": 49203,
+        "date": "2024-10-01T06:00:00.000Z"
+      },
+      {
+        "month": "November 2024",
+        "price": 50018,
+        "date": "2024-11-01T06:00:00.000Z"
+      },
+      {
+        "month": "December 2024",
+        "price": 51108,
+        "date": "2024-12-01T06:00:00.000Z"
+      },
+      {
+        "month": "February 2025",
+        "price": 53245,
+        "date": "2025-02-01T06:00:00.000Z"
+      },
+      {
+        "month": "March 2025",
+        "price": 53679,
+        "date": "2025-03-01T06:00:00.000Z"
+      },
+      {
+        "month": "April 2025",
+        "price": 55511,
+        "date": "2025-04-01T06:00:00.000Z"
+      },
+      {
+        "month": "May 2025",
+        "price": 57578,
+        "date": "2025-05-01T06:00:00.000Z"
+      },
+      {
+        "month": "June 2025",
+        "price": 57825,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 60112,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 58928,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 61373,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 60331,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-16T20:12:09.744Z",
+  "updatedAt": "2025-11-16T20:12:09.744Z"
+}

@@ -1,19 +1,7 @@
-import type { GuideArticle, GenerateGuideParams, GuideSection, GuideFAQItem } from './types'
+import { GoogleGenerativeAI } from '@google/generative-ai'
+import type { GenerateGuideParams, GuideSection, GuideFAQItem } from './types'
 
-const OPENAI_API_URL = 'https://api.openai.com/v1/chat/completions'
-const MODEL = process.env.OPENAI_PSEO_MODEL || 'gpt-4o-mini'
-
-interface OpenAIDelta {
-  choices: Array<{
-    message?: {
-      role: string
-      content: string
-    }
-    delta?: {
-      content?: string
-    }
-  }>
-}
+const MODEL = process.env.GEMINI_MODEL || 'gemini-2.0-flash'
 
 function buildPrompt(params: GenerateGuideParams): string {
   const dataPoints = params.dataPoints
@@ -182,59 +170,103 @@ interface GuideDraft {
   faq?: GuideFAQItem[]
 }
 
+/**
+ * Clean and parse JSON response from Gemini, handling common formatting issues
+ */
+function cleanAndParseJSON(content: string): any {
+  // Remove markdown code blocks (```json ... ``` or ``` ... ```)
+  let cleaned = content.trim()
+  
+  const jsonBlockMatch = cleaned.match(/```(?:json)?\s*([\s\S]*?)\s*```/)
+  if (jsonBlockMatch && jsonBlockMatch[1]) {
+    cleaned = jsonBlockMatch[1].trim()
+  }
+  
+  // Remove any leading/trailing markdown formatting
+  cleaned = cleaned.replace(/^```json\s*/i, '').replace(/\s*```$/i, '').trim()
+  
+  // Handle control characters that might break JSON parsing
+  // Escape control characters within string values
+  let jsonText = ''
+  let inString = false
+  let escapeNext = false
+  
+  for (let i = 0; i < cleaned.length; i++) {
+    const char = cleaned[i]
+    
+    if (escapeNext) {
+      jsonText += char
+      escapeNext = false
+      continue
+    }
+    
+    if (char === '\\') {
+      jsonText += char
+      escapeNext = true
+      continue
+    }
+    
+    if (char === '"') {
+      inString = !inString
+      jsonText += char
+      continue
+    }
+    
+    if (inString) {
+      // Within a string, escape control characters
+      if (char === '\n') {
+        jsonText += '\\n'
+      } else if (char === '\r') {
+        jsonText += '\\r'
+      } else if (char === '\t') {
+        jsonText += '\\t'
+      } else if (char.charCodeAt(0) < 32 && char !== ' ') {
+        // Skip other control characters
+        continue
+      } else {
+        jsonText += char
+      }
+    } else {
+      jsonText += char
+    }
+  }
+  
+  return JSON.parse(jsonText)
+}
+
 export async function generateGuideDraft(params: GenerateGuideParams): Promise<GuideDraft> {
-  const apiKey = process.env.OPENAI_API_KEY
+  const apiKey = process.env.GEMINI_API_KEY
   if (!apiKey) {
-    throw new Error('OPENAI_API_KEY is not configured')
+    throw new Error('GEMINI_API_KEY is not configured')
   }
 
-  const prompt = buildPrompt(params)
-
-  const response = await fetch(OPENAI_API_URL, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${apiKey}`
-    },
-    body: JSON.stringify({
-      model: MODEL,
+  const genAI = new GoogleGenerativeAI(apiKey)
+  const model = genAI.getGenerativeModel({ 
+    model: MODEL,
+    generationConfig: {
       temperature: 0.8, // High temperature for maximum creativity and human-like variation
-      messages: [
-        { 
-          role: 'system', 
-          content: 'You are a real estate professional in Mexico with 15+ years of hands-on experience. You write guides based on your actual experience, not as an AI generating content. Write in first person, use contractions, vary sentence structure dramatically, include personal observations, and write conversationally as if explaining to a friend. The goal is to sound 100% human - like a real person sharing real knowledge, not an AI article.' 
-        },
-        { role: 'user', content: prompt }
-      ]
-    })
+      topP: 0.95,
+      topK: 40,
+    }
   })
 
-  if (!response.ok) {
-    const errorText = await response.text()
-    throw new Error(`OpenAI request failed (${response.status}): ${errorText}`)
-  }
+  const systemInstruction = 'You are a real estate professional in Mexico with 15+ years of hands-on experience. You write guides based on your actual experience, not as an AI generating content. Write in first person, use contractions, vary sentence structure dramatically, include personal observations, and write conversationally as if explaining to a friend. The goal is to sound 100% human - like a real person sharing real knowledge, not an AI article.'
 
-  const json = (await response.json()) as OpenAIDelta
-  let content = json.choices?.[0]?.message?.content || json.choices?.[0]?.delta?.content
-  if (!content) {
-    throw new Error('OpenAI returned an empty response')
-  }
-
-  // Extract JSON from markdown code blocks if present
-  content = content.trim()
-  
-  // Remove markdown code blocks (```json ... ``` or ``` ... ```)
-  const jsonBlockMatch = content.match(/```(?:json)?\s*([\s\S]*?)\s*```/)
-  if (jsonBlockMatch && jsonBlockMatch[1]) {
-    content = jsonBlockMatch[1].trim()
-  }
-  
-  // Also handle cases where JSON might be wrapped in other markdown
-  // Remove any leading/trailing markdown formatting
-  content = content.replace(/^```json\s*/i, '').replace(/\s*```$/i, '').trim()
+  const prompt = buildPrompt(params)
+  const fullPrompt = `${systemInstruction}\n\n${prompt}`
 
   try {
-    const parsed = JSON.parse(content)
+    const result = await model.generateContent(fullPrompt)
+    const response = await result.response
+    let content = response.text()
+
+    if (!content) {
+      throw new Error('Gemini returned an empty response')
+    }
+
+    // Clean and parse JSON
+    const parsed = cleanAndParseJSON(content)
+    
     const sections: GuideSection[] = (parsed.sections || []).map((section: any) => ({
       heading: section.heading,
       paragraphs: section.paragraphs || [],
@@ -257,8 +289,19 @@ export async function generateGuideDraft(params: GenerateGuideParams): Promise<G
       faq
     }
   } catch (error) {
-    console.error('[pSEO] Failed to parse OpenAI response', error)
-    console.error('[pSEO] Raw content received:', content.substring(0, 500))
-    throw new Error(`OpenAI response was not valid JSON: ${error instanceof Error ? error.message : String(error)}. Raw content preview logged above.`)
+    console.error('[pSEO] Failed to parse Gemini response', error)
+    if (error instanceof Error && error.message.includes('JSON')) {
+      // Try to log the raw content for debugging
+      try {
+        const result = await model.generateContent(fullPrompt)
+        const response = await result.response
+        const rawContent = response.text()
+        console.error('[pSEO] Raw content received:', rawContent?.substring(0, 500))
+      } catch (logError) {
+        // Ignore logging errors
+      }
+    }
+    throw new Error(`Gemini response was not valid JSON: ${error instanceof Error ? error.message : String(error)}. Raw content preview logged above.`)
   }
 }
+

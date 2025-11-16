@@ -475,12 +475,9 @@
     "clear_filters": "清除筛选"
   },
   "guides": {
-    "login_required_title": "登录后继续阅读",
-    "login_required_description": "登录即可访问高级市场研究、详细税务解析以及为专业投资者准备的可下载清单。",
     "signup_required_title": "注册免费账户以解锁本指南",
-    "signup_required_description": "注册 PropTrenz 免费账户，解锁高级尽调指南，及时掌握监管变化，并保存你的计算工具。",
+    "signup_required_description": "注册 PropTrenz 免费账户，解锁高级指南。",
     "signup_required_badge": "注册免费账户",
-    "login_required_badge": "仅限会员",
     "fallback_message": "本指南目前仅提供英文版本。我们正在努力将其翻译为您选择的语言。",
     "related_articles": "相关文章",
     "related_articles_description": "继续阅读这些相关指南",

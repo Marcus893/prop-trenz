@@ -3854,5 +3854,725 @@
   "Apodaca-Apodaca": [
     25.7871006,
     -100.18507694543185
+  ],
+  "Guadalajara-Providencia": [
+    20.6885448,
+    -103.3899005
+  ],
+  "Guadalajara-Country Club": [
+    20.70559965,
+    -103.3722792413831
+  ],
+  "Guadalajara-Vallarta San Jorge": [
+    20.675978,
+    -103.3979042
+  ],
+  "Guadalajara-Colomos Providencia": [
+    20.7026561,
+    -103.3842571
+  ],
+  "Guadalajara-Lomas Del Country": [
+    20.6983653,
+    -103.36546607547706
+  ],
+  "Guadalajara-Circunvalacion Americas": [
+    20.696169750000003,
+    -103.37230239558599
+  ],
+  "Guadalajara-Ladron De Guevara": [
+    20.6760789,
+    -103.3779083
+  ],
+  "Guadalajara-Colinas De San Javier": [
+    20.7030517,
+    -103.4022405
+  ],
+  "Guadalajara-Arcos Vallarta": [
+    20.6733185,
+    -103.3869741
+  ],
+  "Guadalajara-Americana": [
+    20.6721658,
+    -103.3643856
+  ],
+  "Guadalajara-Chapultepec Country": [
+    20.6968865,
+    -103.3670597
+  ],
+  "Guadalajara-Vallarta Poniente": [
+    20.673296,
+    -103.3919705
+  ],
+  "Guadalajara-Prados Providencia": [
+    20.6885448,
+    -103.3899005
+  ],
+  "Guadalajara-Vallarta": [
+    20.6768994,
+    -103.43202599730145
+  ],
+  "Guadalajara-Italia Providencia": [
+    20.6924391,
+    -103.3801802
+  ],
+  "Guadalajara-Jardines Del Country": [
+    20.7082042,
+    -103.3619351
+  ],
+  "Guadalajara-Fabrica De Atemajac": [
+    20.71265,
+    -103.3567101
+  ],
+  "Guadalajara-San Miguel De Mezquitan": [
+    20.7015843,
+    -103.3559968
+  ],
+  "Guadalajara-Mezquitan Country": [
+    20.6964982,
+    -103.3617562
+  ],
+  "Guadalajara-Ayuntamiento": [
+    20.692418238019794,
+    -103.37042211139588
+  ],
+  "Guadalajara-Lomas De Providencia": [
+    20.697345249999998,
+    -103.39226728338816
+  ],
+  "Guadalajara-Lomas De Guevara": [
+    20.6898697,
+    -103.3834417
+  ],
+  "Guadalajara-Vallarta Norte": [
+    20.6778651,
+    -103.3876689
+  ],
+  "Guadalajara-Jardines De Los Arcos": [
+    20.6693611,
+    -103.3986009
+  ],
+  "Guadalajara-Chapalita": [
+    20.6644623,
+    -103.3969701
+  ],
+  "Guadalajara-Jardines Del Bosque": [
+    20.6632852,
+    -103.3852897
+  ],
+  "Guadalajara-Moderna": [
+    20.6649322,
+    -103.3608351
+  ],
+  "Guadalajara-Del Fresno": [
+    20.53098,
+    -103.25312
+  ],
+  "Guadalajara-Del Sur": [
+    20.6250416,
+    -103.3891039
+  ],
+  "Guadalajara-Jardines De La Cruz": [
+    20.6480959,
+    -103.3803652
+  ],
+  "Guadalajara-Jardines Del Sur": [
+    20.6350539,
+    -103.3915231
+  ],
+  "Guadalajara-Villa Guerrero": [
+    20.6296319,
+    -103.3891413
+  ],
+  "Guadalajara-Nueva España": [
+    20.6143951,
+    -103.3921348
+  ],
+  "Guadalajara-Polanco": [
+    20.626716,
+    -103.3689068
+  ],
+  "Guadalajara-Lomas De Polanco": [
+    20.6307524,
+    -103.3742283
+  ],
+  "Guadalajara-Miravalle": [
+    20.612166,
+    -103.3455796
+  ],
+  "Guadalajara-Morelos": [
+    20.6801764,
+    -103.34057139219577
+  ],
+  "Guadalajara-Guadalajara Centro": [
+    20.6720375,
+    -103.338396
+  ],
+  "Guadalajara-La Perla": [
+    20.6808736,
+    -103.3365818
+  ],
+  "Guadalajara-San Juan De Dios": [
+    20.67509225,
+    -103.3404448811126
+  ],
+  "Guadalajara-Centro Barranquitas": [
+    20.6829382,
+    -103.3429969
+  ],
+  "Guadalajara-La Aurora": [
+    20.662458100000002,
+    -103.28561015154074
+  ],
+  "Guadalajara-Ferrocarril": [
+    20.6464657,
+    -103.3514161
+  ],
+  "Guadalajara-El Rosario": [
+    20.645423197448142,
+    -103.27772610847879
+  ],
+  "Guadalajara-Quinta Velarde": [
+    20.6535405,
+    -103.3333578
+  ],
+  "Guadalajara-Atlas": [
+    20.70095656845787,
+    -103.33006269359957
+  ],
+  "Guadalajara-Sutaj": [
+    20.6720375,
+    -103.338396
+  ],
+  "Guadalajara-Magaña": [
+    20.64198031451657,
+    -103.28307609653311
+  ],
+  "Guadalajara-Lomas Del Paradero": [
+    20.6250416,
+    -103.3891039
+  ],
+  "Guadalajara-La Loma": [
+    20.7346969,
+    -103.3209562
+  ],
+  "Guadalajara-San Antonio": [
+    20.726936428620977,
+    -103.3170710268104
+  ],
+  "Guadalajara-Hormiguero": [
+    20.6720375,
+    -103.338396
+  ],
+  "Guadalajara-Jardines De La Paz": [
+    20.649501,
+    -103.373849
+  ],
+  "Guadalajara-Jardines De Los Historiadores": [
+    20.6658159,
+    -103.39372830270582
+  ],
+  "Guadalajara-Popular Hornos": [
+    20.643996367006647,
+    -103.30900683904315
+  ],
+  "Guadalajara-Jardines De Los Poetas": [
+    20.6507887,
+    -103.290274
+  ],
+  "Guadalajara-San Rafael": [
+    20.6768994,
+    -103.43202599730145
+  ],
+  "Guadalajara-San Andres": [
+    20.6652823,
+    -103.30607351027402
+  ],
+  "Guadalajara-Agustin Yañez (La Florida)": [
+    20.665052783893177,
+    -103.3712651648337
+  ],
+  "Guadalajara-Aldama Tetlan": [
+    20.6598028,
+    -103.27596785275003
+  ],
+  "Guadalajara-Jardines De Guadalupe": [
+    20.6658159,
+    -103.39372830270582
+  ],
+  "Guadalajara-La Penal": [
+    20.66803785,
+    -103.3132215006548
+  ],
+  "Guadalajara-Blanco Y Cuellar": [
+    20.62569475,
+    -103.37670310466048
+  ],
+  "Guadalajara-Talpita": [
+    20.68452435,
+    -103.30709815
+  ],
+  "Guadalajara-Balcones De Oblatos": [
+    20.68439365,
+    -103.28969402700261
+  ],
+  "Guadalajara-Lomas De San Eugenio": [
+    20.685564,
+    -103.283737
+  ],
+  "Guadalajara-Oblatos": [
+    20.670293299999997,
+    -103.32252241508183
+  ],
+  "Guadalajara-La Esperanza (La Federacha)": [
+    20.706298349999997,
+    -103.31390235
+  ],
+  "Guadalajara-Huentitan El Alto": [
+    20.7164402,
+    -103.29745675725806
+  ],
+  "Guadalajara-Colinas De Huentitan": [
+    20.7338741,
+    -103.3181345
+  ],
+  "Guadalajara-Huentitan El Bajo": [
+    20.7395834,
+    -103.3192932
+  ],
+  "Guadalajara-Lomas Del Paraiso Iii": [
+    20.7285761,
+    -103.3250224
+  ],
+  "Guadalajara-Rancho Nuevo": [
+    20.7204681,
+    -103.331331
+  ],
+  "Guadalajara-Lomas De Independencia": [
+    20.717809,
+    -103.3235863
+  ],
+  "Guadalajara-Jardines Alcalde": [
+    20.7065692,
+    -103.3406222
+  ],
+  "Guadalajara-Independencia": [
+    20.70478605,
+    -103.3276735328663
+  ],
+  "Guadalajara-Villas De San Juan": [
+    20.7015149,
+    -103.3354323
+  ],
+  "Guadalajara-Colinas De La Normal": [
+    20.6983589,
+    -103.3419043
+  ],
+  "Guadalajara-Alcalde Barranquitas": [
+    20.6876921,
+    -103.34354015598575
+  ],
+  "Guadalajara-Santa Monica": [
+    20.6799647,
+    -103.3492325
+  ],
+  "Zapopan-Los Robles": [
+    20.7548219,
+    -103.420825
+  ],
+  "Zapopan-Hacienda De Las Lomas": [
+    20.6851102,
+    -103.4152635
+  ],
+  "Zapopan-Loma Real": [
+    20.6884124,
+    -103.4140941
+  ],
+  "Zapopan-Jacarandas": [
+    20.7157582,
+    -103.3824158
+  ],
+  "Zapopan-Vallarta Universidad": [
+    20.6879507,
+    -103.4275051
+  ],
+  "Zapopan-El Vigia": [
+    20.7334002,
+    -103.3915849
+  ],
+  "Zapopan-Santa Isabel": [
+    20.7070027,
+    -103.4092125
+  ],
+  "Zapopan-Jocotan": [
+    20.6856818,
+    -103.4391661
+  ],
+  "Zapopan-Loma Blanca": [
+    20.7154325,
+    -103.3893427
+  ],
+  "Zapopan-El Zapote": [
+    20.6547196,
+    -103.4177988
+  ],
+  "Zapopan-Volcan Del Colli": [
+    20.6618924,
+    -103.4555925
+  ],
+  "Zapopan-Zapopan Centro": [
+    20.7211203,
+    -103.3913671
+  ],
+  "Zapopan-Ciudad Granja": [
+    20.6794244,
+    -103.4481621
+  ],
+  "Zapopan-La Giralda": [
+    20.6444224,
+    -103.4063719
+  ],
+  "Zapopan-El Capullo": [
+    20.7205738,
+    -103.38685717843413
+  ],
+  "Zapopan-La Venta Del Astillero": [
+    20.7270544,
+    -103.5457655
+  ],
+  "Zapopan-Pinar De La Venta": [
+    20.72186285,
+    -103.52669624419383
+  ],
+  "Zapopan-Zapopan": [
+    20.7211203,
+    -103.3913671
+  ],
+  "Zapopan-Las Agujas": [
+    20.7439011,
+    -103.5128101
+  ],
+  "Zapopan-La Magdalena": [
+    20.69542335,
+    -103.41917432801324
+  ],
+  "Zapopan-Copalita": [
+    20.6768994,
+    -103.43202599730145
+  ],
+  "Zapopan-Loma Chica": [
+    20.69687105548802,
+    -103.39598299772389
+  ],
+  "Zapopan-San Juan De Ocotan": [
+    20.7104453,
+    -103.454092
+  ],
+  "Zapopan-Rancho Contento": [
+    20.71304065,
+    -103.47959793970185
+  ],
+  "Zapopan-Viveros Del Valle": [
+    20.7486257,
+    -103.4360252
+  ],
+  "Zapopan-Nuevo Mexico": [
+    20.7615269,
+    -103.4394183
+  ],
+  "Zapopan-Jardines De Nuevo Mexico": [
+    20.7654852,
+    -103.44429775684773
+  ],
+  "Zapopan-Vicente Guerrero": [
+    20.7669426,
+    -103.4366744
+  ],
+  "Zapopan-Hogares De Nuevo Mexico": [
+    20.7658707,
+    -103.4254889
+  ],
+  "Zapopan-El Tigre": [
+    20.7671114,
+    -103.4175581
+  ],
+  "Zapopan-Jardines Del Vergel": [
+    20.7522222,
+    -103.3725339
+  ],
+  "Zapopan-Emiliano Zapata": [
+    20.7497711,
+    -103.3639342
+  ],
+  "Zapopan-San Isidro": [
+    20.7907026,
+    -103.3536931
+  ],
+  "Zapopan-Colinas Del Rey": [
+    20.7513155,
+    -103.4053916
+  ],
+  "Zapopan-Lomas De Zapopan": [
+    20.7442974,
+    -103.4004027
+  ],
+  "Zapopan-Arcos De Zapopan": [
+    20.74123515,
+    -103.40735491399295
+  ],
+  "Zapopan-La Tuzania": [
+    20.7355898,
+    -103.412886
+  ],
+  "Zapopan-San Isidro Ejidal": [
+    20.7300639,
+    -103.3980437
+  ],
+  "Zapopan-San Francisco": [
+    20.727646,
+    -103.405643
+  ],
+  "Zapopan-Altamira": [
+    20.7122212,
+    -103.3877763
+  ],
+  "Zapopan-Guadalajarita": [
+    20.7137122,
+    -103.3984298
+  ],
+  "Zapopan-Seattle": [
+    20.7199684,
+    -103.3763286
+  ],
+  "Zapopan-Los Maestros": [
+    20.7231394,
+    -103.3782813
+  ],
+  "Zapopan-Tepeyac": [
+    20.7246044,
+    -103.3839783
+  ],
+  "Zapopan-Constitucion": [
+    20.7285537,
+    -103.3700736
+  ],
+  "Zapopan-La Palmita": [
+    20.729098,
+    -103.3562452
+  ],
+  "Zapopan-Hogares Del Batan": [
+    20.7264147,
+    -103.3472649
+  ],
+  "Zapopan-Lomas Del Batan": [
+    20.7251293,
+    -103.3517807
+  ],
+  "Zapopan-Venustiano Carranza": [
+    20.7243743,
+    -103.360718
+  ],
+  "Zapopan-27 De Septiembre": [
+    20.726587,
+    -103.3603318
+  ],
+  "Zapopan-Atemajac Del Valle": [
+    20.659648699999998,
+    -103.41925834322356
+  ],
+  "Zapopan-Colinas De Atemajac": [
+    20.7194681,
+    -103.3625327
+  ],
+  "Zapopan-Lomas De Atemajac": [
+    20.7156734,
+    -103.3649453
+  ],
+  "Zapopan-San Wenceslao": [
+    20.6994386,
+    -103.4099546
+  ],
+  "Zapopan-Jardines Vallarta": [
+    20.6831128,
+    -103.4286316
+  ],
+  "Zapopan-Prados Guadalupe": [
+    20.6731756,
+    -103.4206808
+  ],
+  "Zapopan-Lomas De Guadalupe": [
+    20.6683773,
+    -103.4174193
+  ],
+  "Zapopan-Ciudad De Los Niños": [
+    20.6619928,
+    -103.4104241
+  ],
+  "Zapopan-Chapalita Oriente": [
+    20.664643,
+    -103.4055317
+  ],
+  "Zapopan-Chapalita Sur": [
+    20.657350800000003,
+    -103.42535425
+  ],
+  "Zapopan-Tepeyac Casino": [
+    20.6598847,
+    -103.4152949
+  ],
+  "Zapopan-Loma Bonita Ejidal": [
+    20.6275042,
+    -103.404269
+  ],
+  "Zapopan-Colinas De Las Aguilas": [
+    20.6228652,
+    -103.4108136
+  ],
+  "Zapopan-Las Aguilas": [
+    20.6268013,
+    -103.4143541
+  ],
+  "Zapopan-El Colli Urbano": [
+    20.6433698,
+    -103.4326006
+  ],
+  "Zapopan-Paseos Del Sol": [
+    20.6384401,
+    -103.4301222
+  ],
+  "Zapopan-Las Alamedas": [
+    20.6360304,
+    -103.4363235
+  ],
+  "Zapopan-Las Fuentes": [
+    20.6246642,
+    -103.4284056
+  ],
+  "Zapopan-Francisco Sarabia": [
+    20.6120318,
+    -103.4348214
+  ],
+  "Zapopan-El Campanario": [
+    20.5931098,
+    -103.4369276
+  ],
+  "Zapopan-Santa Ana Tepetitlan": [
+    20.6217723,
+    -103.4555066
+  ],
+  "Zapopan-Mariano Otero": [
+    20.640127707697957,
+    -103.41634019858431
+  ],
+  "Zapopan-Miramar": [
+    20.6419743,
+    -103.4538329
+  ],
+  "Zapopan-Paraisos Del Colli": [
+    20.6500061,
+    -103.450271
+  ],
+  "Zapopan-12 De Diciembre": [
+    20.6485297,
+    -103.4631155
+  ],
+  "Tlaquepaque-Los Magueyes": [
+    20.5826003,
+    -103.3914447
+  ],
+  "Tlaquepaque-Las Juntas": [
+    20.6067384,
+    -103.3391417
+  ],
+  "Tlaquepaque-Balcones De Santa Maria": [
+    20.610198,
+    -103.393021
+  ],
+  "Tlaquepaque-El Real": [
+    20.59581,
+    -103.40771
+  ],
+  "Tlaquepaque-Colonial Tlaquepaque": [
+    20.632334,
+    -103.309468
+  ],
+  "Tlaquepaque-Santa Maria Tequepexpan": [
+    20.59673925,
+    -103.39798224103988
+  ],
+  "Tlaquepaque-San Pedrito": [
+    20.6145061,
+    -103.28805145001067
+  ],
+  "Tlaquepaque-Las Pomas": [
+    20.57932825729703,
+    -103.42597299863137
+  ],
+  "Tlaquepaque-Lomas De San Miguel": [
+    20.590044,
+    -103.356343
+  ],
+  "Tlaquepaque-Toluquilla": [
+    20.57664655,
+    -103.37209235
+  ],
+  "Tlaquepaque-Alamo Industrial": [
+    20.61541915,
+    -103.41828901799474
+  ],
+  "Tlaquepaque-Haciendas De San Jose": [
+    20.603255949999998,
+    -103.4089657778398
+  ],
+  "Tlaquepaque-El Vergel": [
+    20.6116425,
+    -103.3200511
+  ],
+  "Tlaquepaque-Santa Anita": [
+    20.5509918,
+    -103.4437644
+  ],
+  "Tlaquepaque-El Tapatio": [
+    20.6116425,
+    -103.3200511
+  ],
+  "Tlaquepaque-Buenos Aires": [
+    20.589570157899203,
+    -103.35133570737095
+  ],
+  "Tlaquepaque-Francisco I Madero": [
+    20.57548121992955,
+    -103.36059855525845
+  ],
+  "Tlaquepaque-Cerro Del Cuatro": [
+    20.5995454,
+    -103.3631227
+  ],
+  "Tlaquepaque-Los Portales": [
+    20.62538394994128,
+    -103.29589592611245
+  ],
+  "Tlaquepaque-Los Puestos": [
+    20.59025165,
+    -103.25850385
+  ],
+  "Tonalá-Lomas De La Soledad": [
+    20.5678556,
+    -103.183403
+  ],
+  "Tonalá-Tonala Centro": [
+    20.6241367,
+    -103.2421263
+  ],
+  "Tonalá-Hacienda Real": [
+    20.591988,
+    -103.2347421
+  ],
+  "Tonalá-Coyula": [
+    20.661146,
+    -103.2292949
+  ],
+  "Tonalá-Santa Paula": [
+    20.583978385819645,
+    -103.2424971695832
   ]
 }

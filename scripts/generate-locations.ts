@@ -6,6 +6,37 @@ import { generateLocationPages } from '../lib/locations/generateLocation'
 // Load environment variables
 dotenv.config({ path: '.env.local' })
 
+// Parse command line arguments
+const args = process.argv.slice(2)
+const cityArg = args[0]?.toLowerCase()
+
+// Map city argument to city name
+const CITY_MAP: Record<string, 'Ciudad de México' | 'Monterrey' | 'Jalisco'> = {
+  'cdmx': 'Ciudad de México',
+  'mexico-city': 'Ciudad de México',
+  'mexico city': 'Ciudad de México',
+  'monterrey': 'Monterrey',
+  'mty': 'Monterrey',
+  'jalisco': 'Jalisco',
+  'gdl': 'Jalisco',
+  'guadalajara': 'Jalisco'
+}
+
+const cityFilter: 'Ciudad de México' | 'Monterrey' | 'Jalisco' | undefined = cityArg 
+  ? CITY_MAP[cityArg] 
+  : undefined
+
+if (cityArg && !cityFilter) {
+  console.error(`❌ Invalid city argument: "${cityArg}"`)
+  console.error('Valid options: cdmx, monterrey, jalisco, gdl, guadalajara')
+  process.exit(1)
+}
+
+if (cityFilter) {
+  console.log(`\n📍 City filter enabled: ${cityFilter}`)
+  console.log('   Only searching in this city\'s dataset\n')
+}
+
 // ============================================
 // CONFIGURATION: Add your location names here
 // ============================================
@@ -64,7 +95,27 @@ const LOCATIONS: string[] = [
     "Del Valle Sur",
     "Del Valle Centro",
     "Napoles",
-    "Narvarte Poniente"
+    "Narvarte Poniente",
+
+    // Jalisco
+    "Guadalajara",
+    "Zapopan",
+    "Tlaquepaque",
+    "Tonalá",
+    "Americana",
+    "Providencia",
+    "Chapalita",
+    "Ladron De Guevara",
+    "Arcos Vallarta",
+    "Jardines Del Bosque",
+    "Colinas de San Javier",
+    "Guadalajara Centro",
+    "Ciudad Granja",
+    "Zapopan Centro",
+    "Loma Real",
+    "La Estancia",
+    "Seattle",
+    "Las Fuentes"
 ]
 
 // ============================================
@@ -113,7 +164,7 @@ async function generateWithRetry(
   
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
-      const result = await generateLocationPages({ locationName })
+      const result = await generateLocationPages({ locationName, cityFilter })
       return { success: true, result }
     } catch (error) {
       lastError = error instanceof Error ? error : new Error(String(error))

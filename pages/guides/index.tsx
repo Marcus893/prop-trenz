@@ -1,9 +1,11 @@
+import Head from 'next/head'
 import { Layout } from '@/components/Layout'
 import Link from 'next/link'
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import type { GetStaticProps } from 'next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
+import { useRouter } from 'next/router'
 import { listPublishedGuides } from '@/lib/pseo/storage'
 import type { GuideArticle } from '@/lib/pseo/types'
 import { Badge } from '@/components/ui/badge'
@@ -20,7 +22,13 @@ interface GuidesIndexProps {
 
 export default function GuidesIndex({ guides, allTags }: GuidesIndexProps) {
   const { t } = useTranslation('common')
+  const router = useRouter()
   const [selectedTags, setSelectedTags] = useState<string[]>([])
+
+  // Clear tag filters when switching language so users see results immediately
+  useEffect(() => {
+    setSelectedTags([])
+  }, [router.locale])
 
   const filteredGuides = useMemo(() => {
     if (selectedTags.length === 0) {
@@ -33,8 +41,69 @@ export default function GuidesIndex({ guides, allTags }: GuidesIndexProps) {
     setSelectedTags((prev) => (prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]))
   }
 
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://proptrenz.com'
+  let currentPath = router.asPath.split('?')[0] // Remove query params
+  
+  // Remove locale prefix from path if present
+  if (currentPath.startsWith('/es/') || currentPath.startsWith('/zh/')) {
+    currentPath = currentPath.replace(/^\/es\/|\/zh\//, '/')
+  }
+  if (currentPath === '/es' || currentPath === '/zh') {
+    currentPath = '/'
+  }
+  
+  // Build hreflang URLs for all language versions
+  const hreflangUrls = {
+    en: `${baseUrl}${currentPath}`,
+    es: `${baseUrl}/es${currentPath}`,
+    zh: `${baseUrl}/zh${currentPath}`
+  }
+
   return (
-    <Layout
+    <>
+      <Head>
+        {/* Hreflang tags for multilingual SEO */}
+        <link rel="alternate" hrefLang="en" href={hreflangUrls.en} />
+        <link rel="alternate" hrefLang="es" href={hreflangUrls.es} />
+        <link rel="alternate" hrefLang="zh" href={hreflangUrls.zh} />
+        <link rel="alternate" hrefLang="x-default" href={hreflangUrls.en} />
+        
+        {/* Spanish-speaking countries (LATAM) -> Spanish version */}
+        <link rel="alternate" hrefLang="es-MX" href={hreflangUrls.es} />
+        <link rel="alternate" hrefLang="es-AR" href={hreflangUrls.es} />
+        <link rel="alternate" hrefLang="es-CO" href={hreflangUrls.es} />
+        <link rel="alternate" hrefLang="es-CL" href={hreflangUrls.es} />
+        <link rel="alternate" hrefLang="es-PE" href={hreflangUrls.es} />
+        <link rel="alternate" hrefLang="es-EC" href={hreflangUrls.es} />
+        <link rel="alternate" hrefLang="es-VE" href={hreflangUrls.es} />
+        <link rel="alternate" hrefLang="es-GT" href={hreflangUrls.es} />
+        <link rel="alternate" hrefLang="es-CU" href={hreflangUrls.es} />
+        <link rel="alternate" hrefLang="es-BO" href={hreflangUrls.es} />
+        <link rel="alternate" hrefLang="es-DO" href={hreflangUrls.es} />
+        <link rel="alternate" hrefLang="es-HN" href={hreflangUrls.es} />
+        <link rel="alternate" hrefLang="es-PY" href={hreflangUrls.es} />
+        <link rel="alternate" hrefLang="es-SV" href={hreflangUrls.es} />
+        <link rel="alternate" hrefLang="es-NI" href={hreflangUrls.es} />
+        <link rel="alternate" hrefLang="es-CR" href={hreflangUrls.es} />
+        <link rel="alternate" hrefLang="es-PA" href={hreflangUrls.es} />
+        <link rel="alternate" hrefLang="es-UY" href={hreflangUrls.es} />
+        <link rel="alternate" hrefLang="es-PR" href={hreflangUrls.es} />
+        
+        {/* English-speaking countries -> English version */}
+        <link rel="alternate" hrefLang="en-US" href={hreflangUrls.en} />
+        <link rel="alternate" hrefLang="en-GB" href={hreflangUrls.en} />
+        <link rel="alternate" hrefLang="en-CA" href={hreflangUrls.en} />
+        <link rel="alternate" hrefLang="en-AU" href={hreflangUrls.en} />
+        <link rel="alternate" hrefLang="en-NZ" href={hreflangUrls.en} />
+        <link rel="alternate" hrefLang="en-IE" href={hreflangUrls.en} />
+        <link rel="alternate" hrefLang="en-ZA" href={hreflangUrls.en} />
+        
+        {/* Chinese-speaking countries/regions -> Chinese version */}
+        <link rel="alternate" hrefLang="zh-CN" href={hreflangUrls.zh} />
+        <link rel="alternate" hrefLang="zh-TW" href={hreflangUrls.zh} />
+        <link rel="alternate" hrefLang="zh-HK" href={hreflangUrls.zh} />
+      </Head>
+      <Layout
       title={t('guides_page.title', 'Mexican Real Estate Guides')}
       subtitle={t(
         'guides_page.subtitle',
@@ -127,9 +196,7 @@ export default function GuidesIndex({ guides, allTags }: GuidesIndexProps) {
                   {guide.accessLevel !== 'public' && (
                     <Badge variant="outline" className="flex items-center gap-1 border-blue-200 text-blue-700">
                       <Lock className="h-3 w-3" />
-                      {guide.accessLevel === 'email_capture'
-                        ? t('guides.signup_required_badge', 'Create a free account')
-                        : t('guides.login_required_badge', 'Members only')}
+                      {t('guides.signup_required_badge', 'Create a free account')}
                     </Badge>
                   )}
                 </div>
@@ -161,7 +228,8 @@ export default function GuidesIndex({ guides, allTags }: GuidesIndexProps) {
           </div>
         )}
       </section>
-    </Layout>
+      </Layout>
+    </>
   )
 }
 

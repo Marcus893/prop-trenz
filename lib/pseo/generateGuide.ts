@@ -1,5 +1,5 @@
 import type { GenerateGuideParams, GuideArticle } from './types'
-import { generateGuideDraft } from './openai'
+import { generateGuideDraft } from './gemini'
 import { saveGuideDraft } from './storage'
 import { generateMainImage, generateSectionImage } from './imageGeneration'
 

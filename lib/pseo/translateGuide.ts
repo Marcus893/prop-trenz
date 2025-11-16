@@ -23,6 +23,30 @@ const TAG_TRANSLATIONS: Record<string, { es: string; zh: string }> = {
     es: 'inteligencia-de-mercado',
     zh: '市场情报'
   },
+  'moving-to-mexico': {
+    es: 'mudarse-a-mexico',
+    zh: '移居墨西哥'
+  },
+  'lifestyle': {
+    es: 'calidad-de-vida',
+    zh: '生活质量'
+  },
+  'digital-nomad': {
+    es: 'nómada-digital',
+    zh: '数字游民'
+  },
+  'property-laws': {
+    es: 'leyes-de-propiedad',
+    zh: '财产法'
+  },
+  'legal-ownership': {
+    es: 'propiedad-legal',
+    zh: '合法所有权'
+  },
+  'real-estate-glossary': {
+    es: 'glosario-inmobiliario',
+    zh: '房地产术语表'
+  },
   'buying': {
     es: 'compra',
     zh: '购买'
@@ -62,22 +86,98 @@ const TAG_TRANSLATIONS: Record<string, { es: string; zh: string }> = {
 }
 
 /**
- * Translate tags consistently using the tag mapping dictionary
+ * Translate tags using the tag mapping dictionary, with Gemini fallback for unknown tags
  */
-function translateTags(tags: string[], targetLocale: string): string[] {
+async function translateTags(tags: string[], targetLocale: string): Promise<string[]> {
   if (targetLocale === 'en') {
     return tags
   }
 
-  return tags.map((tag) => {
+  const apiKey = process.env.GEMINI_API_KEY
+  if (!apiKey) {
+    // Fallback: use mapping only if Gemini is not configured
+    return tags.map((tag) => {
+      const translation = TAG_TRANSLATIONS[tag]
+      if (translation) {
+        return targetLocale === 'es' ? translation.es : translation.zh
+      }
+      return tag.toLowerCase().replace(/\s+/g, '-')
+    })
+  }
+
+  const translatedTags: string[] = []
+  const tagsToTranslate: string[] = []
+
+  // First, use the mapping for known tags
+  for (const tag of tags) {
     const translation = TAG_TRANSLATIONS[tag]
     if (translation) {
-      return targetLocale === 'es' ? translation.es : translation.zh
+      translatedTags.push(targetLocale === 'es' ? translation.es : translation.zh)
+    } else {
+      tagsToTranslate.push(tag)
     }
-    // If tag not in mapping, convert to lowercase and replace spaces with hyphens
-    // This is a fallback for unknown tags
-    return tag.toLowerCase().replace(/\s+/g, '-')
-  })
+  }
+
+  // If there are tags to translate, use Gemini
+  if (tagsToTranslate.length > 0) {
+    try {
+      const genAI = new GoogleGenerativeAI(apiKey)
+      const model = genAI.getGenerativeModel({ model: MODEL })
+
+      const localeName = LOCALE_NAMES[targetLocale] || targetLocale
+      const prompt = `Translate the following tags to ${localeName}. These are tags for a real estate guide about Mexico.
+
+Tags to translate:
+${tagsToTranslate.map((tag, idx) => `${idx + 1}. ${tag}`).join('\n')}
+
+Requirements:
+- For Spanish (es): Translate to Spanish and use kebab-case (lowercase with hyphens). Example: "moving-to-mexico" → "mudarse-a-mexico"
+- For Chinese (zh): Translate to Chinese characters. Example: "moving-to-mexico" → "移居墨西哥"
+- Keep the meaning accurate and natural in the target language
+- Return ONLY a JSON array of translated tags in the same order, no other text
+
+Output format: ["translated-tag-1", "translated-tag-2", ...]`
+
+      const result = await model.generateContent(prompt)
+      const response = await result.response
+      let content = response.text()?.trim()
+
+      if (content) {
+        // Remove markdown code blocks if present
+        const jsonBlockMatch = content.match(/```(?:json)?\s*([\s\S]*?)\s*```/)
+        if (jsonBlockMatch && jsonBlockMatch[1]) {
+          content = jsonBlockMatch[1].trim()
+        }
+        content = content.replace(/^```json\s*/i, '').replace(/\s*```$/i, '').trim()
+
+        // Try to extract JSON array
+        const firstBracket = content.indexOf('[')
+        const lastBracket = content.lastIndexOf(']')
+        if (firstBracket !== -1 && lastBracket !== -1 && lastBracket > firstBracket) {
+          content = content.substring(firstBracket, lastBracket + 1)
+        }
+
+        const translated = JSON.parse(content) as string[]
+        if (Array.isArray(translated) && translated.length === tagsToTranslate.length) {
+          translatedTags.push(...translated)
+        } else {
+          // Fallback: use original tags if translation failed
+          console.warn(`[pSEO] Tag translation returned unexpected format, using original tags`)
+          translatedTags.push(...tagsToTranslate)
+        }
+      } else {
+        // Fallback: use original tags if translation failed
+        console.warn(`[pSEO] Tag translation returned empty response, using original tags`)
+        translatedTags.push(...tagsToTranslate)
+      }
+    } catch (error) {
+      console.warn(`[pSEO] Failed to translate tags with Gemini, using original tags:`, error)
+      // Fallback: use original tags if translation failed
+      translatedTags.push(...tagsToTranslate)
+    }
+  }
+
+  return translatedTags
 }
 
 // Regex for extracting markdown links - defined at module level to avoid scope issues
@@ -412,8 +512,8 @@ export async function translateGuideToLocale(
     }
   })
 
-  // Use consistent tag translation mapping instead of AI-translated tags
-  const translatedTags = translateTags(sourceGuide.tags, targetLocale)
+  // Translate tags using mapping and Gemini for unknown tags
+  const translatedTags = await translateTags(sourceGuide.tags, targetLocale)
 
   const translatedGuide: GuideArticle = {
     slug: sourceGuide.slug,
