@@ -78,6 +78,22 @@ CREATE TABLE data_upload_logs (
     uploaded_by UUID REFERENCES users(id)
 );
 
+-- Neighborhood Coordinates Table
+-- Stores coordinates for neighborhoods (used in map visualization)
+-- Note: neighborhood_name can be duplicated across different municipalities
+CREATE TABLE neighborhood_coordinates (
+    id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+    municipality VARCHAR(255) NOT NULL,
+    neighborhood_name VARCHAR(500) NOT NULL,
+    latitude DECIMAL(10, 8) NOT NULL,
+    longitude DECIMAL(11, 8) NOT NULL,
+    city VARCHAR(255) NOT NULL,
+    location_id UUID REFERENCES locations(id),
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    UNIQUE(municipality, neighborhood_name)
+);
+
 -- Create indexes for better performance
 CREATE INDEX idx_locations_type ON locations(type);
 CREATE INDEX idx_locations_state ON locations(state);
@@ -87,6 +103,10 @@ CREATE INDEX idx_price_indices_property_type ON residential_price_indices(proper
 CREATE INDEX idx_price_indices_year_quarter ON residential_price_indices(year, quarter);
 CREATE INDEX idx_watchlists_user ON user_watchlists(user_id);
 CREATE INDEX idx_watchlists_location ON user_watchlists(location_id);
+CREATE INDEX idx_neighborhood_coordinates_name ON neighborhood_coordinates(neighborhood_name);
+CREATE INDEX idx_neighborhood_coordinates_municipality ON neighborhood_coordinates(municipality);
+CREATE INDEX idx_neighborhood_coordinates_city ON neighborhood_coordinates(city);
+CREATE INDEX idx_neighborhood_coordinates_location ON neighborhood_coordinates(location_id);
 
 -- Row Level Security (RLS) policies
 ALTER TABLE locations ENABLE ROW LEVEL SECURITY;
@@ -95,11 +115,13 @@ ALTER TABLE residential_price_indices ENABLE ROW LEVEL SECURITY;
 ALTER TABLE users ENABLE ROW LEVEL SECURITY;
 ALTER TABLE user_watchlists ENABLE ROW LEVEL SECURITY;
 ALTER TABLE data_upload_logs ENABLE ROW LEVEL SECURITY;
+ALTER TABLE neighborhood_coordinates ENABLE ROW LEVEL SECURITY;
 
 -- Public read access for locations and price data
 CREATE POLICY "Public read access for locations" ON locations FOR SELECT USING (true);
 CREATE POLICY "Public read access for property types" ON residential_property_types FOR SELECT USING (true);
 CREATE POLICY "Public read access for price indices" ON residential_price_indices FOR SELECT USING (true);
+CREATE POLICY "Public read access for neighborhood coordinates" ON neighborhood_coordinates FOR SELECT USING (true);
 
 -- User-specific policies for watchlists
 CREATE POLICY "Users can manage their own watchlists" ON user_watchlists 
@@ -113,6 +135,10 @@ CREATE POLICY "Admins can manage data uploads" ON data_upload_logs
             'marcusding1@gmail.com'
         )
     ));
+
+-- Allow authenticated users to insert/update coordinates (for map editing)
+CREATE POLICY "Authenticated users can manage coordinates" ON neighborhood_coordinates 
+    FOR ALL USING (auth.role() = 'authenticated');
 
 -- Functions for data processing
 CREATE OR REPLACE FUNCTION get_price_trend(

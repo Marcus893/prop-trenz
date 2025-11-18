@@ -267,11 +267,15 @@ async function geocodeNeighborhood(
   return null
 }
 
-// Load saved coordinates from JSON file
-async function loadSavedCoordinates(): Promise<Map<string, [number, number]>> {
+// Load saved coordinates from database for a specific city (all municipalities in that city)
+async function loadSavedCoordinates(city?: string): Promise<Map<string, [number, number]>> {
   try {
-    const response = await fetch('/data/neighborhood-coordinates.json')
+    const url = city 
+      ? `/api/neighborhood-coordinates?city=${encodeURIComponent(city)}`
+      : '/api/neighborhood-coordinates'
+    const response = await fetch(url)
     if (!response.ok) {
+      console.warn('Failed to fetch coordinates from database, falling back to empty map')
       return new Map()
     }
     const data = await response.json()
@@ -283,16 +287,16 @@ async function loadSavedCoordinates(): Promise<Map<string, [number, number]>> {
 }
 
 // Save coordinates to server
-async function saveCoordinates(coordinates: Map<string, [number, number]>): Promise<{ success: boolean; error?: string }> {
+async function saveCoordinates(coordinates: Map<string, [number, number]>, city?: string): Promise<{ success: boolean; error?: string }> {
   try {
     const coordinatesObj = Object.fromEntries(coordinates)
-    console.log(`[Save] Attempting to save ${Object.keys(coordinatesObj).length} coordinates`)
+    console.log(`[Save] Attempting to save ${Object.keys(coordinatesObj).length} coordinates${city ? ` for city: ${city}` : ''}`)
     const response = await fetch('/api/save-coordinates', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ coordinates: coordinatesObj }),
+      body: JSON.stringify({ coordinates: coordinatesObj, ...(city && { city }) }),
     })
     
     if (!response.ok) {
@@ -440,18 +444,33 @@ export function NeighborhoodMap({ data }: NeighborhoodMapProps) {
     setIsCardCollapsed(false)
   }, [selectedMunicipality])
 
-  // Load saved coordinates on mount
+  // Get current city name from data (must be defined before useEffect that uses it)
+  const currentCity = useMemo(() => {
+    const cities = Object.keys(data)
+    // Prefer CDMX, then Jalisco, then Monterrey, then first available
+    if (cities.includes('Ciudad de México')) return 'Ciudad de México'
+    if (cities.includes('Jalisco')) return 'Jalisco'
+    if (cities.includes('Monterrey')) return 'Monterrey'
+    return cities.length > 0 ? cities[0] : 'Monterrey'
+  }, [data])
+
+  // Load saved coordinates when city changes (loads all municipalities for that city)
   useEffect(() => {
+    if (!currentCity) {
+      setSavedCoordsLoaded(false)
+      return
+    }
+
     const loadCoords = async () => {
-      console.log('[Load] Loading saved coordinates...')
-      const saved = await loadSavedCoordinates()
-      console.log(`[Load] Loaded ${saved.size} saved coordinates`)
+      console.log(`[Load] Loading saved coordinates for city: ${currentCity}`)
+      const saved = await loadSavedCoordinates(currentCity)
+      console.log(`[Load] Loaded ${saved.size} saved coordinates for ${currentCity}`)
       setNeighborhoodCoords(saved)
       coordsRef.current = saved // Initialize ref with loaded coordinates
       setSavedCoordsLoaded(true)
     }
     loadCoords()
-  }, [])
+  }, [currentCity])
 
   // Helper function to parse month string and get comparable date
   const parseMonthDate = (mes: string): Date | null => {
@@ -497,26 +516,7 @@ export function NeighborhoodMap({ data }: NeighborhoodMapProps) {
     return neighborhoods.filter(n => n.mes === mostRecentMonth)
   }
 
-  // Helper function to get the most recent neighborhood entry for a given colonia name
-  const getMostRecentNeighborhood = (neighborhoods: Neighborhood[], colonia: string): Neighborhood | null => {
-    const sameColonia = neighborhoods.filter(n => n.colonia === colonia)
-    if (sameColonia.length === 0) return null
-    
-    const mostRecentMonth = getMostRecentMonth(sameColonia)
-    if (!mostRecentMonth) return sameColonia[0]
-    
-    return sameColonia.find(n => n.mes === mostRecentMonth) || sameColonia[0]
-  }
 
-  // Get current city name from data
-  const currentCity = useMemo(() => {
-    const cities = Object.keys(data)
-    // Prefer CDMX, then Jalisco, then Monterrey, then first available
-    if (cities.includes('Ciudad de México')) return 'Ciudad de México'
-    if (cities.includes('Jalisco')) return 'Jalisco'
-    if (cities.includes('Monterrey')) return 'Monterrey'
-    return cities.length > 0 ? cities[0] : 'Monterrey'
-  }, [data])
 
   // Calculate average prices and prepare marker data (using only most recent month)
   const markers = useMemo(() => {
@@ -726,7 +726,7 @@ export function NeighborhoodMap({ data }: NeighborhoodMapProps) {
         
         // Save new coordinates to server
         console.log(`[Geocoding] Saving ${coordsToSave.size} coordinates to server...`)
-        const saveResult = await saveCoordinates(coordsToSave)
+        const saveResult = await saveCoordinates(coordsToSave, currentCity)
         console.log(`[Geocoding] Save result:`, saveResult)
       } else {
         console.warn(`[Geocoding] No coordinates to save`)
@@ -778,7 +778,7 @@ export function NeighborhoodMap({ data }: NeighborhoodMapProps) {
       })
       .filter((m): m is NonNullable<typeof m> => m !== null)
     
-    console.log(`[Markers] Created ${markers.length} markers for ${selectedData.municipality} (${selectedData.neighborhoods.length} total neighborhoods, ${recentNeighborhoods.length} from most recent month, ${neighborhoodCoords.size} coordinates available)`)
+    console.log(`[Markers] Created ${markers.length} markers for ${selectedData.municipality} (${selectedData.neighborhoods.length} total neighborhoods, ${neighborhoodCoords.size} coordinates available)`)
     return markers
   }, [selectedData, neighborhoodCoords])
 
@@ -937,7 +937,7 @@ export function NeighborhoodMap({ data }: NeighborhoodMapProps) {
       {/* Historical Price Chart Modal */}
       {selectedNeighborhoodForChart && (
         <div 
-          className="fixed inset-0 bg-black bg-opacity-50 z-[100000] flex items-center justify-center p-4"
+          className="absolute inset-0 bg-black bg-opacity-50 z-[100000] flex items-center justify-center p-4"
           onClick={() => setSelectedNeighborhoodForChart(null)}
         >
           <div 

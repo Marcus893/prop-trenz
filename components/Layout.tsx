@@ -19,16 +19,18 @@ import {
   Menu,
   X,
   Calculator,
-  BookOpen
+  BookOpen,
+  TrendingUp
 } from 'lucide-react'
 
 interface LayoutProps {
   children: ReactNode
   title?: string
   subtitle?: string
+  hideHeader?: boolean
 }
 
-export function Layout({ children, title, subtitle }: LayoutProps) {
+export function Layout({ children, title, subtitle, hideHeader = false }: LayoutProps) {
   const { t } = useTranslation('common')
   const { user, signOut } = useAuth()
   const router = useRouter()
@@ -86,6 +88,7 @@ export function Layout({ children, title, subtitle }: LayoutProps) {
 
   const navigation = [
     { name: t('common.home', 'Home'), href: '/', icon: Home },
+    { name: t('common.insights', 'Insights'), href: '/insights', icon: TrendingUp },
     { name: t('common.charts', 'Charts'), href: '/charts', icon: BarChart3 },
     { name: t('common.map', 'Map'), href: '/map', icon: Map },
     { name: t('common.calculators', 'Calculators'), href: '/calculators', icon: Calculator },
@@ -189,7 +192,7 @@ export function Layout({ children, title, subtitle }: LayoutProps) {
       )}
 
       {/* Desktop sidebar */}
-      <div className="hidden lg:flex lg:flex-shrink-0 lg:flex-col lg:self-stretch">
+      <div className="hidden lg:flex lg:flex-shrink-0 lg:flex-col lg:self-stretch lg:z-10">
         <div className="flex flex-col w-64 flex-1">
           <div ref={sidebarRef} className="flex flex-col border-r border-gray-200 bg-white sticky top-0" style={{ minHeight: '100vh' }}>
             <div className="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
@@ -247,24 +250,27 @@ export function Layout({ children, title, subtitle }: LayoutProps) {
         <div className="sticky top-0 z-10 lg:hidden pl-1 pt-1 sm:pl-3 sm:pt-3 bg-gray-50">
           <button
             type="button"
-            className="-ml-0.5 -mt-0.5 h-12 w-12 inline-flex items-center justify-center rounded-md text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+            className="-ml-0.5 -mt-0.5 px-4 py-3 inline-flex items-center gap-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 font-medium"
             onClick={() => setSidebarOpen(true)}
           >
-            <Menu className="h-6 w-6" />
+            <Menu className="h-8 w-8" />
+            <span>{t('common.menu', 'Menu')}</span>
           </button>
         </div>
 
-        <main className="flex-1">
-          <div className="py-6">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <main className="flex-1 overflow-x-hidden">
+          <div className={hideHeader ? "" : "py-6"}>
+            <div className={hideHeader ? "" : "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"}>
               {/* Header */}
-              <div className="flex items-center justify-between mb-6">
-                <div>
-                  <h1 className="text-2xl font-bold text-gray-900">{title || ' '}</h1>
-                  <p className="text-gray-600">{subtitle || ' '}</p>
+              {!hideHeader && (
+                <div className="flex items-center justify-between mb-6">
+                  <div>
+                    <h1 className="text-2xl font-bold text-gray-900">{title || ' '}</h1>
+                    <p className="text-gray-600">{subtitle || ' '}</p>
+                  </div>
+                  <LanguageSwitcher />
                 </div>
-                <LanguageSwitcher />
-              </div>
+              )}
 
               {children}
             </div>

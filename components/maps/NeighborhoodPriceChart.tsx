@@ -143,6 +143,41 @@ export function NeighborhoodPriceChart({
     return [Math.max(0, min - padding), max + padding] as [number, number]
   }, [sortedData])
 
+  // Determine if we should show quarterly labels (if there's a year or more of data)
+  const shouldShowQuarterlyLabels = useMemo(() => {
+    if (sortedData.length < 12) return false
+    const firstDate = sortedData[0].date
+    const lastDate = sortedData[sortedData.length - 1].date
+    const monthsDiff = (lastDate.getFullYear() - firstDate.getFullYear()) * 12 + 
+                       (lastDate.getMonth() - firstDate.getMonth())
+    return monthsDiff >= 12
+  }, [sortedData])
+
+  // Custom tick formatter for X-axis - show quarterly labels when there's a year+ of data
+  const formatXAxisTick = useMemo(() => {
+    if (!shouldShowQuarterlyLabels) {
+      // Show all labels for less than a year
+      return (tickItem: string) => tickItem
+    }
+
+    // For a year or more, only show quarterly labels
+    return (tickItem: string) => {
+      // Find the data point that matches this displayDate
+      const dataPoint = sortedData.find(d => d.displayDate === tickItem)
+      if (!dataPoint) return ''
+      
+      const date = dataPoint.date
+      const month = date.getMonth() // 0-11
+      const quarter = Math.floor(month / 3) + 1 // 1-4
+      
+      // Only show label for Q1 (January), Q2 (April), Q3 (July), Q4 (October)
+      if (month === 0 || month === 3 || month === 6 || month === 9) {
+        return `${date.getFullYear()} Q${quarter}`
+      }
+      return ''
+    }
+  }, [shouldShowQuarterlyLabels, sortedData])
+
   return (
     <Card className="p-4 md:p-6 bg-white shadow-lg">
       <div className="flex justify-between items-start mb-4">
@@ -206,12 +241,13 @@ export function NeighborhoodPriceChart({
               <XAxis
                 dataKey="displayDate"
                 stroke="#6b7280"
-                fontSize={12}
+                fontSize={shouldShowQuarterlyLabels ? 11 : 12}
                 tick={{ fill: '#6b7280' }}
-                angle={-45}
-                textAnchor="end"
-                height={80}
-                interval={0}
+                angle={shouldShowQuarterlyLabels ? 0 : -45}
+                textAnchor={shouldShowQuarterlyLabels ? 'middle' : 'end'}
+                height={shouldShowQuarterlyLabels ? 20 : 60}
+                interval={shouldShowQuarterlyLabels ? 'preserveStartEnd' : 0}
+                tickFormatter={formatXAxisTick}
               />
               <YAxis
                 stroke="#6b7280"

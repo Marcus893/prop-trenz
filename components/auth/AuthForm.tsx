@@ -29,6 +29,13 @@ export function AuthForm({ mode, onModeChange, onClose, className }: AuthFormPro
   useEffect(() => {
     setMounted(true)
   }, [])
+
+  // Track when signup modal opens
+  useEffect(() => {
+    if (mode === 'signup' && mounted) {
+      track('signup_modal_opened')
+    }
+  }, [mode, mounted, track])
   
   // Fallback function for translations
   const translate = (key: string) => {
@@ -52,6 +59,26 @@ export function AuthForm({ mode, onModeChange, onClose, className }: AuthFormPro
   const [showConfirmPassword, setShowConfirmPassword] = useState(false)
   const [error, setError] = useState('')
   const [success, setSuccess] = useState('')
+  const [formStarted, setFormStarted] = useState(false)
+  const [formSubmitted, setFormSubmitted] = useState(false)
+
+  // Track form abandonment when modal closes without completion
+  useEffect(() => {
+    if (!onClose) return
+    
+    return () => {
+      // Component unmounting or mode changing
+      if (mode === 'signup' && formStarted && !formSubmitted && !success) {
+        track('signup_form_abandoned', {
+          fields_filled: {
+            email: formData.email ? 1 : 0,
+            password: formData.password ? 1 : 0,
+            name: formData.name ? 1 : 0,
+          }
+        })
+      }
+    }
+  }, [mode, formStarted, formSubmitted, success, formData, onClose, track])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -59,6 +86,12 @@ export function AuthForm({ mode, onModeChange, onClose, className }: AuthFormPro
     setSuccess('')
 
     if (mode === 'signup') {
+      // Track form submission
+      if (!formSubmitted) {
+        setFormSubmitted(true)
+        track('signup_form_submitted')
+      }
+
       if (formData.password !== formData.confirmPassword) {
         setError('Passwords do not match')
         return
@@ -92,8 +125,12 @@ export function AuthForm({ mode, onModeChange, onClose, className }: AuthFormPro
         if (error) {
           setError(error.message)
           track('user_signed_up', { success: false, error: error.message })
+          // Reset formSubmitted flag on error so user can retry
+          setFormSubmitted(false)
         } else {
+          // Track successful signup completion
           track('user_signed_up', { success: true, method: 'email', language: formData.language })
+          track('signup_form_completed', { method: 'email', language: formData.language })
           setSuccess('Check your email for verification link')
           if (router.locale !== formData.language) {
             router.replace({ pathname: router.pathname, query: router.query }, router.asPath, {
@@ -108,6 +145,9 @@ export function AuthForm({ mode, onModeChange, onClose, className }: AuthFormPro
       }
     } catch (err) {
       setError('An unexpected error occurred')
+      if (mode === 'signup') {
+        setFormSubmitted(false)
+      }
     }
   }
 
@@ -128,6 +168,11 @@ export function AuthForm({ mode, onModeChange, onClose, className }: AuthFormPro
   }
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    // Track when user starts filling the form
+    if (mode === 'signup' && !formStarted) {
+      setFormStarted(true)
+      track('signup_form_started')
+    }
     setFormData(prev => ({
       ...prev,
       [e.target.name]: e.target.value
@@ -153,7 +198,19 @@ export function AuthForm({ mode, onModeChange, onClose, className }: AuthFormPro
     <Card className={`p-6 max-w-md mx-auto relative ${className}`}>
       {onClose && (
         <button
-          onClick={onClose}
+          onClick={() => {
+            // Track abandonment if form was started but not completed
+            if (mode === 'signup' && formStarted && !formSubmitted && !success) {
+              track('signup_form_abandoned', {
+                fields_filled: {
+                  email: formData.email ? 1 : 0,
+                  password: formData.password ? 1 : 0,
+                  name: formData.name ? 1 : 0,
+                }
+              })
+            }
+            onClose()
+          }}
           className="absolute top-4 right-4 p-2 hover:bg-gray-100 rounded-full transition-colors"
         >
           <X className="h-5 w-5 text-gray-500" />
@@ -171,11 +228,24 @@ export function AuthForm({ mode, onModeChange, onClose, className }: AuthFormPro
 
       <form onSubmit={handleSubmit} className="space-y-4">
         <Button type="button" variant="secondary" onClick={async () => {
+          // Track Google signup attempt if in signup mode
+          if (mode === 'signup') {
+            track('signup_form_submitted', { method: 'google' })
+          }
           const { error } = await signInWithGoogle()
           if (!error) {
-            track('user_signed_in', { success: true, method: 'google' })
+            if (mode === 'signup') {
+              track('user_signed_up', { success: true, method: 'google' })
+              track('signup_form_completed', { method: 'google' })
+            } else {
+              track('user_signed_in', { success: true, method: 'google' })
+            }
           } else {
-            track('user_signed_in', { success: false, method: 'google', error: error.message })
+            if (mode === 'signup') {
+              track('user_signed_up', { success: false, method: 'google', error: error.message })
+            } else {
+              track('user_signed_in', { success: false, method: 'google', error: error.message })
+            }
           }
         }} className="w-full flex items-center justify-center gap-2">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" className="h-4 w-4"><path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12 s5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C33.64,6.053,29.084,4,24,4C12.954,4,4,12.954,4,24 s8.954,20,20,20s20-8.954,20-20C44,22.659,43.862,21.35,43.611,20.083z"/><path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,16.108,18.961,13,24,13c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657 C33.64,6.053,29.084,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/><path fill="#4CAF50" d="M24,44c5.176,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36 c-5.202,0-9.623-3.317-11.277-7.943l-6.563,5.048C9.48,39.556,16.227,44,24,44z"/><path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.147-4.11,5.571c0.001-0.001,0.002-0.001,0.003-0.002 l6.19,5.238C36.95,40.188,44,35,44,24C44,22.659,43.862,21.35,43.611,20.083z"/></svg>

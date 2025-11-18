@@ -1,6 +1,7 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
+import { createPortal } from 'react-dom'
 import { useRouter } from 'next/router'
 import { Button } from '@/components/ui/button'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
@@ -17,6 +18,13 @@ export function LanguageSwitcher({ className }: LanguageSwitcherProps) {
   const router = useRouter()
   const { track } = useTracking()
   const [isOpen, setIsOpen] = useState(false)
+  const [mounted, setMounted] = useState(false)
+  const buttonRef = useRef<HTMLButtonElement>(null)
+  const [dropdownPosition, setDropdownPosition] = useState({ top: 0, right: 0 })
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   const languages = [
     { code: 'en', name: 'English', flag: '🇺🇸' },
@@ -25,6 +33,22 @@ export function LanguageSwitcher({ className }: LanguageSwitcherProps) {
   ]
 
   const currentLanguage = languages.find(lang => lang.code === router.locale) || languages[0]
+
+  // Calculate dropdown position when opening - always opens downward
+  useEffect(() => {
+    if (isOpen && buttonRef.current) {
+      // Use requestAnimationFrame to ensure button position is calculated correctly
+      requestAnimationFrame(() => {
+        if (buttonRef.current) {
+          const rect = buttonRef.current.getBoundingClientRect()
+          setDropdownPosition({
+            top: rect.bottom + 8, // Always open downward, 8px below button
+            right: window.innerWidth - rect.right
+          })
+        }
+      })
+    }
+  }, [isOpen])
 
   const handleLanguageChange = (languageCode: string) => {
     if (router.locale !== languageCode) {
@@ -50,6 +74,7 @@ export function LanguageSwitcher({ className }: LanguageSwitcherProps) {
   return (
     <div className={`relative ${className}`}>
       <Button
+        ref={buttonRef}
         variant="ghost"
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center gap-2"
@@ -59,36 +84,48 @@ export function LanguageSwitcher({ className }: LanguageSwitcherProps) {
         <span className="sm:hidden">{currentLanguage.flag}</span>
       </Button>
 
-      {isOpen && (
-        <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg border border-gray-200 z-50">
-          <div className="py-1">
-            {languages.map((language) => (
-              <button
-                key={language.code}
-                onClick={() => handleLanguageChange(language.code)}
-                className={`w-full flex items-center justify-between px-4 py-2 text-sm hover:bg-gray-100 ${
-                  router.locale === language.code ? 'bg-blue-50 text-blue-600' : 'text-gray-700'
-                }`}
-              >
-                <div className="flex items-center gap-3">
-                  <span className="text-lg">{language.flag}</span>
-                  <span>{language.name}</span>
-                </div>
-                {router.locale === language.code && (
-                  <Check className="h-4 w-4 text-blue-600" />
-                )}
-              </button>
-            ))}
+      {isOpen && mounted && createPortal(
+        <>
+          {/* Overlay to close dropdown */}
+          <div
+            className="fixed inset-0 z-[99998]"
+            onClick={() => setIsOpen(false)}
+          />
+          {/* Dropdown menu - using fixed positioning to ensure it's above overlay */}
+          <div 
+            className="fixed w-48 bg-white rounded-md shadow-lg border border-gray-200 z-[99999]"
+            style={{ 
+              top: `${dropdownPosition.top}px`,
+              right: `${dropdownPosition.right}px`
+            }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="py-1">
+              {languages.map((language) => (
+                <button
+                  key={language.code}
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation()
+                    handleLanguageChange(language.code)
+                  }}
+                  className={`w-full flex items-center justify-between px-4 py-2 text-sm hover:bg-gray-100 active:bg-gray-200 cursor-pointer transition-colors ${
+                    router.locale === language.code ? 'bg-blue-50 text-blue-600' : 'text-gray-700'
+                  }`}
+                >
+                  <div className="flex items-center gap-3">
+                    <span className="text-lg">{language.flag}</span>
+                    <span>{language.name}</span>
+                  </div>
+                  {router.locale === language.code && (
+                    <Check className="h-4 w-4 text-blue-600" />
+                  )}
+                </button>
+              ))}
+            </div>
           </div>
-        </div>
-      )}
-
-      {/* Overlay to close dropdown */}
-      {isOpen && (
-        <div
-          className="fixed inset-0 z-40"
-          onClick={() => setIsOpen(false)}
-        />
+        </>,
+        document.body
       )}
     </div>
   )

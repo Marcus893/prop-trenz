@@ -171,66 +171,58 @@ export default function MapPage() {
         <link rel="alternate" hrefLang="zh-TW" href={hreflangUrls.zh} />
         <link rel="alternate" hrefLang="zh-HK" href={hreflangUrls.zh} />
       </Head>
-      <Layout>
+      <Layout title={t('map.title')} subtitle={t('map.subtitle')}>
         <div className="space-y-6">
-        <Card className="p-6">
-          <h1 className="text-2xl font-bold mb-2 flex items-center gap-2">
-            <MapPin className="h-6 w-6" />
-            {t('map.title')}
-          </h1>
-          <p className="text-gray-600 mb-4">
-            {t('map.subtitle')}
-          </p>
-
-          {loading && (
-            <div className="flex items-center justify-center h-[600px] bg-gray-50 rounded-lg">
-              <div className="text-center">
-                <Loader2 className="h-8 w-8 animate-spin text-blue-600 mx-auto mb-4" />
-                <p className="text-gray-600">{t('map.loading_neighborhood_data')}</p>
-              </div>
-            </div>
-          )}
-
-          {error && (
-            <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
-              <p className="text-red-600">{t('map.error_loading_data')}: {error}</p>
-              <p className="text-sm text-red-500 mt-2">
-                {t('map.data_files_required')}
-                <br />• /public/data/banorte-neighborhood-data-monterrey.json
-                <br />• /public/data/banorte-neighborhood-data-cdmx.json
-                <br />• /public/data/banorte-neighborhood-data-jalisco.json
-              </p>
-            </div>
-          )}
-
-          {data && !loading && (
-            <div className="space-y-4">
-              <div className="flex items-center gap-4">
-                <label className="text-sm font-medium">{t('map.city')}:</label>
-                <Select value={selectedCity} onValueChange={setSelectedCity}>
-                  <SelectTrigger className="w-[200px]">
-                    <span>{selectedCity}</span>
-                  </SelectTrigger>
-                  <SelectContent>
-                    {Object.keys(data).map(city => (
-                      <SelectItem key={city} value={city}>
-                        {city}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </div>
-              
-              {data[selectedCity] && (
-                <NeighborhoodMap 
-                  key={selectedCity} 
-                  data={{ [selectedCity]: data[selectedCity] }} 
-                />
+          <Card className="p-6">
+              {loading && (
+                <div className="flex items-center justify-center h-[600px] bg-gray-50 rounded-lg">
+                  <div className="text-center">
+                    <Loader2 className="h-8 w-8 animate-spin text-blue-600 mx-auto mb-4" />
+                    <p className="text-gray-600">{t('map.loading_neighborhood_data')}</p>
+                  </div>
+                </div>
               )}
-            </div>
-          )}
-        </Card>
-      </div>
+
+              {error && (
+                <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
+                  <p className="text-red-600">{t('map.error_loading_data')}: {error}</p>
+                  <p className="text-sm text-red-500 mt-2">
+                    {t('map.data_files_required')}
+                    <br />• /public/data/banorte-neighborhood-data-monterrey.json
+                    <br />• /public/data/banorte-neighborhood-data-cdmx.json
+                    <br />• /public/data/banorte-neighborhood-data-jalisco.json
+                  </p>
+                </div>
+              )}
+
+              {data && !loading && (
+                <div className="space-y-4">
+                  <div className="flex items-center gap-4">
+                    <label className="text-sm font-medium">{t('map.city')}:</label>
+                    <Select value={selectedCity} onValueChange={setSelectedCity}>
+                      <SelectTrigger className="w-[200px]">
+                        <span>{selectedCity}</span>
+                      </SelectTrigger>
+                      <SelectContent>
+                        {Object.keys(data).map(city => (
+                          <SelectItem key={city} value={city}>
+                            {city}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </div>
+                  
+                  {data[selectedCity] && (
+                    <NeighborhoodMap 
+                      key={selectedCity} 
+                      data={{ [selectedCity]: data[selectedCity] }} 
+                    />
+                  )}
+                </div>
+              )}
+          </Card>
+        </div>
       </Layout>
     </>
   )

@@ -111,34 +111,82 @@ export default function LocationPageComponent({ page, canonicalUrl }: LocationPa
     }
   }, [chartData])
 
-  // Format month for display in Spanish
-  const formatMonth = (monthString: string): string => {
-    // Extract month and year from "October 2025" format
-    const parts = monthString.split(' ')
-    if (parts.length === 2) {
-      const monthName = parts[0]
-      const year = parts[1]
+  // Determine if we should show quarterly labels (if there's 12+ months of data)
+  const shouldShowQuarterlyLabels = useMemo(() => {
+    return chartData.length >= 12 // 12 months = 1 year
+  }, [chartData.length])
+
+  // Find the first month of each quarter that exists in the data
+  const quarterlyMonths = useMemo(() => {
+    if (!shouldShowQuarterlyLabels) return new Set<string>()
+    
+    const quarterMap = new Map<string, { monthString: string; date: Date }>() // key: "2025-Q1", value: { monthString, date }
+    
+    chartData.forEach(point => {
+      const date = point.date
+      const month = date.getMonth() // 0-11
+      const quarter = Math.floor(month / 3) + 1 // 1-4
+      const year = date.getFullYear()
+      const key = `${year}-Q${quarter}`
       
-      // Map English month names to Spanish
-      const monthMap: Record<string, string> = {
-        'January': 'Enero',
-        'February': 'Febrero',
-        'March': 'Marzo',
-        'April': 'Abril',
-        'May': 'Mayo',
-        'June': 'Junio',
-        'July': 'Julio',
-        'August': 'Agosto',
-        'September': 'Septiembre',
-        'October': 'Octubre',
-        'November': 'Noviembre',
-        'December': 'Diciembre'
+      // Find the earliest month in each quarter
+      const existing = quarterMap.get(key)
+      if (!existing || date.getTime() < existing.date.getTime()) {
+        quarterMap.set(key, { monthString: point.month, date })
       }
-      
-      const translatedMonth = monthMap[monthName] || monthName
-      return `${translatedMonth} ${year}`
+    })
+    
+    return new Set(Array.from(quarterMap.values()).map(v => v.monthString))
+  }, [chartData, shouldShowQuarterlyLabels])
+
+  // Format month for display in Spanish, or show quarterly labels when there's a year+ of data
+  const formatMonth = (monthString: string): string => {
+    if (!shouldShowQuarterlyLabels) {
+      // Extract month and year from "October 2025" format
+      const parts = monthString.split(' ')
+      if (parts.length === 2) {
+        const monthName = parts[0]
+        const year = parts[1]
+        
+        // Map English month names to Spanish
+        const monthMap: Record<string, string> = {
+          'January': 'Enero',
+          'February': 'Febrero',
+          'March': 'Marzo',
+          'April': 'Abril',
+          'May': 'Mayo',
+          'June': 'Junio',
+          'July': 'Julio',
+          'August': 'Agosto',
+          'September': 'Septiembre',
+          'October': 'Octubre',
+          'November': 'Noviembre',
+          'December': 'Diciembre'
+        }
+        
+        const translatedMonth = monthMap[monthName] || monthName
+        return `${translatedMonth} ${year}`
+      }
+      return monthString
     }
-    return monthString
+
+    // For a year or more, show only quarterly labels
+    // Check if this month is the first month of a quarter in our data
+    if (!quarterlyMonths.has(monthString)) {
+      return ''
+    }
+    
+    // Find the data point to get quarter info
+    const dataPoint = chartData.find(d => d.month === monthString)
+    if (!dataPoint) return ''
+    
+    const date = dataPoint.date
+    const month = date.getMonth() // 0-11
+    const quarter = Math.floor(month / 3) + 1 // 1-4
+    const year = date.getFullYear()
+    
+    // Use Spanish format: T1, T2, T3, T4 (Trimestre)
+    return `T${quarter} ${year}`
   }
 
   // Calculate Y-axis domain to center the line
@@ -384,18 +432,27 @@ export default function LocationPageComponent({ page, canonicalUrl }: LocationPa
               
               <div style={{ height: '300px' }}>
                 <ResponsiveContainer width="100%" height="100%">
-                  <LineChart data={chartData} margin={{ top: 5, right: 20, left: 10, bottom: 10 }}>
+                  <LineChart 
+                    data={chartData} 
+                    margin={{ 
+                      top: 5, 
+                      right: 20, 
+                      left: 10, 
+                      bottom: shouldShowQuarterlyLabels ? 10 : 10 
+                    }}
+                  >
                     <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
                     <XAxis
                       dataKey="month"
                       stroke="#6b7280"
-                      fontSize={12}
-                      tick={{ fill: '#6b7280' }}
-                      angle={-45}
-                      textAnchor="end"
-                      height={80}
+                      fontSize={shouldShowQuarterlyLabels ? 11 : 12}
+                      tick={{ fill: '#6b7280', fontSize: shouldShowQuarterlyLabels ? 11 : 12 }}
+                      angle={shouldShowQuarterlyLabels ? 0 : -45}
+                      textAnchor={shouldShowQuarterlyLabels ? 'middle' : 'end'}
+                      height={shouldShowQuarterlyLabels ? 20 : 80}
                       interval={0}
                       tickFormatter={formatMonth}
+                      tickMargin={shouldShowQuarterlyLabels ? 4 : 8}
                     />
                     <YAxis
                       stroke="#6b7280"

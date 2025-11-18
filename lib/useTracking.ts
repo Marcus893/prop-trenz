@@ -28,9 +28,27 @@ export type TrackingEvent =
   | 'home_top_mover_clicked'
   | 'home_explore_charts_clicked'
   | 'home_explore_calculators_clicked'
+  | 'insights_explore_charts_clicked'
+  | 'insights_neighborhood_clicked'
+  // Conversion funnel events
+  | 'signup_button_clicked'
+  | 'signup_modal_opened'
+  | 'signup_form_started'
+  | 'signup_form_submitted'
+  | 'signup_form_completed'
+  | 'signup_form_abandoned'
+
+export type TrackingPropertyValue = 
+  | string 
+  | number 
+  | boolean 
+  | null 
+  | undefined 
+  | { [key: string]: TrackingPropertyValue }
+  | TrackingPropertyValue[]
 
 export interface TrackingProperties {
-  [key: string]: string | number | boolean | undefined | null
+  [key: string]: TrackingPropertyValue
 }
 
 export function useTracking() {

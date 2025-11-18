@@ -315,6 +315,25 @@ export function PriceChart({
     return [domainMin, domainMax]
   }
 
+  // Determine if we should show fewer labels (if there's a year or more of data - 4+ quarters)
+  const shouldShowQuarterlyLabels = useMemo(() => {
+    return chartData.length >= 4 // 4 quarters = 1 year
+  }, [chartData.length])
+
+  // Custom tick formatter - show all labels, but we'll use interval to reduce crowding
+  const formatXAxisTick = useMemo(() => {
+    return (tickItem: string) => tickItem
+  }, [])
+
+  // Calculate interval - show every other tick when there's a year+ of data
+  const xAxisInterval = useMemo(() => {
+    if (!shouldShowQuarterlyLabels) {
+      return 0 // Show all labels
+    }
+    // Show every other tick (this will naturally show Q1, Q3, Q1, Q3 pattern)
+    return 1
+  }, [shouldShowQuarterlyLabels])
+
   if (loading) {
     return (
       <Card className={`p-6 ${className}`}>
@@ -422,14 +441,25 @@ export function PriceChart({
 
       <div className="h-80">
         <ResponsiveContainer width="100%" height="100%">
-          <LineChart data={chartData} margin={{ top: 16, right: 32, left: 20, bottom: 24 }}>
+          <LineChart 
+            data={chartData} 
+            margin={{ 
+              top: 16, 
+              right: 32, 
+              left: 20, 
+              bottom: shouldShowQuarterlyLabels ? 10 : 24 
+            }}
+          >
             <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
             <XAxis 
               dataKey="period" 
               stroke="#666"
-              fontSize={12}
-              tick={{ fontSize: 12 }}
-              tickMargin={8}
+              fontSize={shouldShowQuarterlyLabels ? 11 : 12}
+              tick={{ fontSize: shouldShowQuarterlyLabels ? 11 : 12 }}
+              tickMargin={shouldShowQuarterlyLabels ? 4 : 8}
+              height={shouldShowQuarterlyLabels ? 20 : 40}
+              interval={xAxisInterval}
+              tickFormatter={formatXAxisTick}
             />
             <YAxis 
               stroke="#666"
