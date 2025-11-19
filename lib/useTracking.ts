@@ -29,7 +29,6 @@ export type TrackingEvent =
   | 'home_explore_charts_clicked'
   | 'home_explore_calculators_clicked'
   | 'insights_explore_charts_clicked'
-  | 'insights_neighborhood_clicked'
   // Conversion funnel events
   | 'signup_button_clicked'
   | 'signup_modal_opened'

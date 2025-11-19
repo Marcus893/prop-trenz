@@ -6,6 +6,7 @@ import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 import { Loader2 } from 'lucide-react'
 import { useTranslation } from 'next-i18next'
+import { useRouter } from 'next/router'
 import { NeighborhoodPriceChart } from './NeighborhoodPriceChart'
 
 // Fix for Leaflet default marker icons in Next.js
@@ -316,6 +317,7 @@ async function saveCoordinates(coordinates: Map<string, [number, number]>, city?
 
 interface NeighborhoodMapProps {
   data: NeighborhoodData
+  selectedCity: string
 }
 
 // Component to handle map interactions and expose map instance
@@ -324,6 +326,60 @@ function MapController({ onMapReady }: { onMapReady: (map: L.Map) => void }) {
   
   useEffect(() => {
     onMapReady(map)
+    
+    // Function to set popup z-index and ensure markers are behind popups
+    const setPopupZIndex = () => {
+      const container = map.getContainer()
+      if (!container) return
+      
+      // Set marker pane z-index to be lower than popup pane
+      const markerPane = map.getPane('markerPane')
+      if (markerPane) {
+        markerPane.style.zIndex = '300'
+      }
+      
+      // Set z-index on popup pane (higher than markers)
+      const popupPane = map.getPane('popupPane')
+      if (popupPane) {
+        popupPane.style.zIndex = '400'
+      }
+      
+      const popupPaneElement = container.querySelector('.leaflet-popup-pane') as HTMLElement
+      if (popupPaneElement) {
+        popupPaneElement.style.zIndex = '400'
+      }
+      
+      // Set z-index on all popup elements
+      const popups = container.querySelectorAll('.leaflet-popup')
+      popups.forEach((popup) => {
+        const popupEl = popup as HTMLElement
+        popupEl.style.zIndex = '400'
+        
+        const wrapper = popupEl.querySelector('.leaflet-popup-content-wrapper') as HTMLElement
+        if (wrapper) {
+          wrapper.style.zIndex = '400'
+        }
+        
+        const tip = popupEl.querySelector('.leaflet-popup-tip') as HTMLElement
+        if (tip) {
+          tip.style.zIndex = '400'
+        }
+      })
+    }
+    
+    // Set initially
+    setPopupZIndex()
+    
+    // Set when popup opens
+    map.on('popupopen', setPopupZIndex)
+    
+    // Also set on a slight delay to catch any timing issues
+    const timeout = setTimeout(setPopupZIndex, 100)
+    
+    return () => {
+      map.off('popupopen', setPopupZIndex)
+      clearTimeout(timeout)
+    }
   }, [map, onMapReady])
   
   return null
@@ -355,13 +411,15 @@ function NeighborhoodMarker({
   onMarkerReady,
   translateDateFn,
   municipality,
-  onShowChart
+  onShowChart,
+  onMarkerClick
 }: { 
   marker: { key: string; coords: [number, number]; color: string; price: number; neighborhood: Neighborhood }
   onMarkerReady: (key: string, markerInstance: L.Marker) => void
   translateDateFn: (dateString: string) => string
   municipality: string
   onShowChart: (municipality: string, neighborhood: Neighborhood) => void
+  onMarkerClick?: (municipality: string, neighborhood: Neighborhood) => void
 }) {
   const { t } = useTranslation('common')
   const markerRef = useRef<L.Marker | null>(null)
@@ -381,8 +439,15 @@ function NeighborhoodMarker({
       ref={setMarkerRef}
       position={marker.coords}
       icon={customIcon}
+      eventHandlers={{
+        click: () => {
+          if (onMarkerClick) {
+            onMarkerClick(municipality, marker.neighborhood)
+          }
+        }
+      }}
     >
-      <Popup>
+      <Popup className="leaflet-popup-above-panel">
         <div className="text-center min-w-[100px]">
           <h3 className="font-bold text-sm">{marker.neighborhood.colonia}</h3>
           <p className="text-xs text-gray-600 font-semibold">
@@ -404,8 +469,9 @@ function NeighborhoodMarker({
   )
 }
 
-export function NeighborhoodMap({ data }: NeighborhoodMapProps) {
+export function NeighborhoodMap({ data, selectedCity: selectedCityProp }: NeighborhoodMapProps) {
   const { t } = useTranslation('common')
+  const router = useRouter()
   const [selectedMunicipality, setSelectedMunicipality] = useState<string | null>(null)
   
   // Create translateDate function bound to current translation function
@@ -427,6 +493,40 @@ export function NeighborhoodMap({ data }: NeighborhoodMapProps) {
   const coordsRef = useRef<Map<string, [number, number]>>(new Map())
   const markerRefs = useRef<Map<string, L.Marker>>(new Map())
   
+  // Helper functions for URL encoding/decoding
+  const encodeName = (name: string): string => {
+    return encodeURIComponent(name.toLowerCase().replace(/ /g, '-'))
+  }
+  
+  const decodeName = (encoded: string): string => {
+    if (!encoded) return ''
+    try {
+      // Handle double-encoded URLs (decode multiple times if needed)
+      let decoded = encoded
+      let maxDecodes = 5 // Safety limit
+      while (decoded.includes('%') && maxDecodes > 0) {
+        try {
+          const prevDecoded = decoded
+          decoded = decodeURIComponent(decoded)
+          // If decoding didn't change anything, break
+          if (prevDecoded === decoded) break
+          maxDecodes--
+        } catch (e) {
+          // If decode fails, break and use current value
+          break
+        }
+      }
+      return decoded.replace(/-/g, ' ')
+    } catch (e) {
+      // Fallback: just replace dashes and try basic decode
+      try {
+        return decodeURIComponent(encoded).replace(/-/g, ' ')
+      } catch (e2) {
+        return encoded.replace(/-/g, ' ')
+      }
+    }
+  }
+  
   // Handle marker ready - store ref
   const handleMarkerReady = (key: string, markerInstance: L.Marker) => {
     markerRefs.current.set(key, markerInstance)
@@ -434,25 +534,230 @@ export function NeighborhoodMap({ data }: NeighborhoodMapProps) {
   
   // Clear search when closing sidebar
   const handleCloseSidebar = () => {
+    // First, clear the chart state
+    setSelectedNeighborhoodForChart(null)
+    
+    // Then clear municipality state
     setSelectedMunicipality(null)
     setSearchQuery('')
     setIsCardCollapsed(false)
+    
+    // Remove municipality and neighborhood parameters from URL when panel is closed
+    // Do this after a small delay to ensure state updates have processed
+    if (router.isReady) {
+      setTimeout(() => {
+        const query = { ...router.query }
+        delete query.municipality
+        delete query.neighborhood
+        delete query.chart
+        
+        router.replace(
+          {
+            pathname: router.pathname,
+            query
+          },
+          undefined,
+          { shallow: true }
+        )
+      }, 0)
+    }
+    
+    // Zoom out to show all municipalities when panel closes
+    if (mapInstance && markers.length > 0) {
+      try {
+        if (!mapInstance.getContainer()) return
+        const allMunicipalityPoints: [number, number][] = markers.map(m => m.position)
+        const bounds = L.latLngBounds(allMunicipalityPoints)
+        mapInstance.fitBounds(bounds, { padding: [50, 50], maxZoom: 11 })
+      } catch (e) {
+        console.warn('Error zooming out on sidebar close:', e)
+      }
+    }
   }
   
   // Reset collapsed state when municipality changes
   useEffect(() => {
     setIsCardCollapsed(false)
   }, [selectedMunicipality])
-
-  // Get current city name from data (must be defined before useEffect that uses it)
-  const currentCity = useMemo(() => {
-    const cities = Object.keys(data)
-    // Prefer CDMX, then Jalisco, then Monterrey, then first available
-    if (cities.includes('Ciudad de México')) return 'Ciudad de México'
-    if (cities.includes('Jalisco')) return 'Jalisco'
-    if (cities.includes('Monterrey')) return 'Monterrey'
-    return cities.length > 0 ? cities[0] : 'Monterrey'
-  }, [data])
+  
+  // Use the selected city from props (which comes from URL or user selection)
+  const currentCity = selectedCityProp
+  
+  // Declare refs for URL sync and restoration
+  const municipalitySyncInitializedRef = useRef(false)
+  const chartSyncInitializedRef = useRef(false)
+  const neighborhoodUpdateInProgressRef = useRef(false)
+  const urlRestoredRef = useRef(false)
+  const chartRestoredRef = useRef(false)
+  const neighborhoodZoomedRef = useRef(false)
+  
+  // Reset state when city changes (municipality/neighborhood are city-specific)
+  useEffect(() => {
+    setSelectedMunicipality(null)
+    setSelectedNeighborhoodForChart(null)
+    // Reset restoration refs when city changes
+    urlRestoredRef.current = false
+    chartRestoredRef.current = false
+    neighborhoodZoomedRef.current = false
+    municipalitySyncInitializedRef.current = false
+    chartSyncInitializedRef.current = false
+  }, [currentCity])
+  
+  // Sync municipality to URL
+  useEffect(() => {
+    if (!router.isReady || !data || !currentCity) return
+    
+    // Don't sync on initial load if municipality is in URL (let restoration handle it)
+    if (!municipalitySyncInitializedRef.current && router.query.municipality) {
+      municipalitySyncInitializedRef.current = true
+      return
+    }
+    municipalitySyncInitializedRef.current = true
+    
+    // Verify municipality exists in current city before syncing
+    if (selectedMunicipality) {
+      const cityData = data[currentCity]
+      if (!cityData || !cityData[selectedMunicipality]) {
+        // Municipality doesn't exist in current city, don't sync
+        return
+      }
+    }
+    
+    const currentMunicipality = router.query.municipality as string | undefined
+    
+    // Only update if we have a selected municipality and it's different from URL
+    // Don't remove municipality from URL - let it persist
+    if (selectedMunicipality) {
+      const newMunicipality = encodeName(selectedMunicipality)
+      if (currentMunicipality !== newMunicipality) {
+        const query = { ...router.query }
+        query.municipality = newMunicipality
+      
+        router.replace(
+          {
+            pathname: router.pathname,
+            query
+          },
+          undefined,
+          { shallow: true }
+        )
+      }
+    }
+    // Note: We don't remove municipality from URL when selectedMunicipality is null
+    // This preserves the URL state when restoration hasn't completed yet
+  }, [selectedMunicipality, router.isReady, router.query.municipality, data, currentCity])
+  
+  // Sync chart state to URL
+  useEffect(() => {
+    if (!router.isReady || !data || !currentCity) return
+    
+    // Don't sync if we're in the middle of a user-initiated neighborhood update
+    if (neighborhoodUpdateInProgressRef.current) {
+      return
+    }
+    
+    // Don't sync on initial load if neighborhood is in URL (let restoration handle it)
+    if (!chartSyncInitializedRef.current && router.query.neighborhood) {
+      chartSyncInitializedRef.current = true
+      return
+    }
+    chartSyncInitializedRef.current = true
+    
+    // If municipality is null (panel is closed), remove neighborhood and chart from URL
+    if (!selectedMunicipality) {
+      const currentNeighborhood = router.query.neighborhood as string | undefined
+      const currentChart = router.query.chart as string | undefined
+      if (currentNeighborhood || currentChart) {
+        const query = { ...router.query }
+        delete query.neighborhood
+        delete query.chart
+        router.replace(
+          {
+            pathname: router.pathname,
+            query
+          },
+          undefined,
+          { shallow: true }
+        )
+      }
+      return
+    }
+    
+    // Verify neighborhood exists in current city before syncing
+    if (selectedNeighborhoodForChart) {
+      const cityData = data[currentCity]
+      if (!cityData || !selectedMunicipality || !cityData[selectedMunicipality]) {
+        // Municipality doesn't exist in current city, don't sync
+        return
+      }
+      const neighborhoods = cityData[selectedMunicipality]
+      const neighborhoodExists = neighborhoods.some(n => n.colonia === selectedNeighborhoodForChart.name)
+      if (!neighborhoodExists) {
+        // Neighborhood doesn't exist in current city, don't sync
+        return
+      }
+    }
+    
+    const currentNeighborhood = router.query.neighborhood as string | undefined
+    const currentChart = router.query.chart as string | undefined
+    
+    // Only update if chart state changed
+    // Don't update neighborhood here - let handleNeighborhoodClick handle neighborhood changes
+    const chartStateChanged = (currentChart === 'true') !== !!selectedNeighborhoodForChart
+    
+    if (chartStateChanged) {
+      const query = { ...router.query }
+      if (selectedNeighborhoodForChart) {
+        // Chart is open: ensure neighborhood and chart flag are set
+        query.neighborhood = encodeName(selectedNeighborhoodForChart.name)
+        query.chart = 'true'
+      } else {
+        // Chart is closed: remove chart flag but keep neighborhood (it will be updated by handleNeighborhoodClick if needed)
+        delete query.chart
+        // Only remove neighborhood if it doesn't match any active state
+        // If neighborhood is in URL, keep it (it will be updated by user actions)
+        // We don't remove it here to avoid conflicts with handleNeighborhoodClick
+      }
+      
+      router.replace(
+        {
+          pathname: router.pathname,
+          query
+        },
+        undefined,
+        { shallow: true }
+      )
+    }
+  }, [selectedNeighborhoodForChart, router.isReady, router.query.neighborhood, data, currentCity, selectedMunicipality])
+  
+  // Restore municipality from URL on mount
+  useEffect(() => {
+    if (!router.isReady || !data || Object.keys(data).length === 0 || urlRestoredRef.current) return
+    
+    const urlMunicipality = router.query.municipality as string | undefined
+    
+    // Restore municipality
+    if (urlMunicipality) {
+      const decodedMunicipality = decodeName(urlMunicipality)
+      const cityData = data[currentCity]
+      if (cityData) {
+        // Find municipality with case-insensitive match
+        const municipalityKeys = Object.keys(cityData)
+        const matchedMunicipality = municipalityKeys.find(
+          key => key.toLowerCase() === decodedMunicipality.toLowerCase()
+        )
+        if (matchedMunicipality) {
+          setSelectedMunicipality(matchedMunicipality)
+        } else {
+          // Log for debugging if municipality not found
+          console.warn(`[Restore] Municipality not found: "${decodedMunicipality}" (decoded from "${urlMunicipality}")`)
+          console.warn(`[Restore] Available municipalities:`, municipalityKeys.slice(0, 5))
+        }
+      }
+    }
+    
+    urlRestoredRef.current = true
+  }, [router.isReady, router.query.municipality, data, currentCity])
 
   // Load saved coordinates when city changes (loads all municipalities for that city)
   useEffect(() => {
@@ -614,6 +919,165 @@ export function NeighborhoodMap({ data }: NeighborhoodMapProps) {
     }
   }, [data, currentCity, translateDateFn])
 
+  // Restore neighborhood zoom and popup from URL
+  useEffect(() => {
+    if (!router.isReady || !selectedMunicipality || !mapInstance || !savedCoordsLoaded || neighborhoodZoomedRef.current || !data) return
+    
+    const urlNeighborhood = router.query.neighborhood as string | undefined
+    const urlChart = router.query.chart as string | undefined
+    
+    // Only zoom if neighborhood is in URL but chart is not open (or if chart is open, we'll handle it separately)
+    if (urlNeighborhood && !selectedNeighborhoodForChart) {
+      const decodedNeighborhood = decodeName(urlNeighborhood)
+      const cityData = data[currentCity]
+      
+      if (cityData && cityData[selectedMunicipality]) {
+        // Find the actual neighborhood object from data to get the exact name
+        const neighborhoods = cityData[selectedMunicipality]
+        const neighborhood = neighborhoods.find(n => 
+          n.colonia.toLowerCase() === decodedNeighborhood.toLowerCase()
+        )
+        
+        if (neighborhood) {
+          // Use the actual neighborhood name from data for the key
+          const key = `${selectedMunicipality}-${neighborhood.colonia}`
+          
+          // Try to find the neighborhood coordinates
+          const coords = neighborhoodCoords.get(key)
+          
+          if (coords && mapInstance) {
+            try {
+              // Check if map is still valid
+              if (!mapInstance.getContainer()) {
+                neighborhoodZoomedRef.current = true
+                return
+              }
+              // Pan to the neighborhood location
+              mapInstance.setView(coords, 15, { animate: true, duration: 0.5 })
+              
+              // Find and open the marker popup
+              const marker = markerRefs.current.get(key)
+              if (marker) {
+                // Small delay to ensure map has panned
+                setTimeout(() => {
+                  try {
+                    if (marker && mapInstance && mapInstance.getContainer()) {
+                      marker.openPopup()
+                    }
+                  } catch (e) {
+                    console.warn('Error opening marker popup:', e)
+                  }
+                  neighborhoodZoomedRef.current = true
+                }, 600)
+              } else {
+                neighborhoodZoomedRef.current = true
+              }
+            } catch (e) {
+              console.warn('Error zooming to neighborhood:', e)
+              neighborhoodZoomedRef.current = true
+            }
+          } else {
+            // Coordinates not loaded yet, wait a bit and try again
+            const retryTimeout = setTimeout(() => {
+              const retryCoords = neighborhoodCoords.get(key)
+              if (retryCoords && mapInstance) {
+                try {
+                  if (!mapInstance.getContainer()) {
+                    neighborhoodZoomedRef.current = true
+                    return
+                  }
+                  mapInstance.setView(retryCoords, 15, { animate: true, duration: 0.5 })
+                  const retryMarker = markerRefs.current.get(key)
+                  if (retryMarker) {
+                    setTimeout(() => {
+                      try {
+                        if (retryMarker && mapInstance && mapInstance.getContainer()) {
+                          retryMarker.openPopup()
+                        }
+                      } catch (e) {
+                        console.warn('Error opening marker popup on retry:', e)
+                      }
+                      neighborhoodZoomedRef.current = true
+                    }, 600)
+                  } else {
+                    neighborhoodZoomedRef.current = true
+                  }
+                } catch (e) {
+                  console.warn('Error zooming to neighborhood on retry:', e)
+                  neighborhoodZoomedRef.current = true
+                }
+              } else {
+                neighborhoodZoomedRef.current = true
+              }
+            }, 1000)
+            
+            return () => clearTimeout(retryTimeout)
+          }
+        } else {
+          neighborhoodZoomedRef.current = true
+        }
+      } else {
+        neighborhoodZoomedRef.current = true
+      }
+    } else if (!urlNeighborhood) {
+      neighborhoodZoomedRef.current = true
+    }
+  }, [router.isReady, router.query.neighborhood, selectedMunicipality, mapInstance, savedCoordsLoaded, neighborhoodCoords, markerRefs, selectedNeighborhoodForChart, data, currentCity])
+  
+  // Reset zoom ref when neighborhood changes
+  useEffect(() => {
+    neighborhoodZoomedRef.current = false
+  }, [router.query.neighborhood])
+  
+  // Restore chart from URL after getHistoricalDataForNeighborhood is available
+  useEffect(() => {
+    if (!router.isReady || !data || Object.keys(data).length === 0 || chartRestoredRef.current || !getHistoricalDataForNeighborhood || !selectedMunicipality) return
+    
+    const urlNeighborhood = router.query.neighborhood as string | undefined
+    const urlChart = router.query.chart as string | undefined
+    
+    // Restore chart if both neighborhood and chart flag are present
+    if (urlChart === 'true' && urlNeighborhood && selectedMunicipality) {
+      const decodedNeighborhood = decodeName(urlNeighborhood)
+      const cityData = data[currentCity]
+      
+      if (cityData && cityData[selectedMunicipality]) {
+        const neighborhoods = cityData[selectedMunicipality]
+        // Find neighborhood with case-insensitive match
+        const neighborhood = neighborhoods.find(n => 
+          n.colonia.toLowerCase() === decodedNeighborhood.toLowerCase()
+        )
+        
+        if (neighborhood) {
+          const historicalData = getHistoricalDataForNeighborhood(selectedMunicipality, neighborhood.colonia)
+          if (historicalData.length > 0) {
+            setSelectedNeighborhoodForChart({
+              name: neighborhood.colonia,
+              municipality: selectedMunicipality,
+              data: historicalData
+            })
+            
+            // Also zoom to the neighborhood when chart is opened
+            if (mapInstance && savedCoordsLoaded) {
+              try {
+                if (!mapInstance.getContainer()) return
+                const key = `${selectedMunicipality}-${neighborhood.colonia}`
+                const coords = neighborhoodCoords.get(key)
+                if (coords) {
+                  mapInstance.setView(coords, 15, { animate: true, duration: 0.5 })
+                }
+              } catch (e) {
+                console.warn('Error zooming to neighborhood for chart:', e)
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    chartRestoredRef.current = true
+  }, [router.isReady, router.query.neighborhood, router.query.chart, data, currentCity, selectedMunicipality, getHistoricalDataForNeighborhood, mapInstance, savedCoordsLoaded, neighborhoodCoords])
+
   // Handle neighborhood click - show chart or pan to marker
   const handleNeighborhoodClick = (municipality: string, neighborhood: Neighborhood, showChart: boolean = false) => {
     if (showChart) {
@@ -625,23 +1089,81 @@ export function NeighborhoodMap({ data }: NeighborhoodMapProps) {
           municipality,
           data: historicalData
         })
+        
+        // Update URL immediately with chart flag
+        if (router.isReady) {
+          const query = { ...router.query }
+          query.neighborhood = encodeName(neighborhood.colonia)
+          query.chart = 'true'
+          router.replace(
+            {
+              pathname: router.pathname,
+              query
+            },
+            undefined,
+            { shallow: true }
+          )
+        }
       }
     } else {
+      // Close any open chart when clicking a neighborhood (not opening chart)
+      if (selectedNeighborhoodForChart) {
+        setSelectedNeighborhoodForChart(null)
+      }
+      
+      // Update URL immediately with new neighborhood (but not chart flag)
+      // Do this first to prevent sync effects from overriding with old neighborhood
+      if (router.isReady) {
+        // Set flag to prevent sync effect from interfering
+        neighborhoodUpdateInProgressRef.current = true
+        
+        const query = { ...router.query }
+        query.neighborhood = encodeName(neighborhood.colonia)
+        // Remove chart flag if it exists (since we're not opening chart)
+        delete query.chart
+        
+        router.replace(
+          {
+            pathname: router.pathname,
+            query
+          },
+          undefined,
+          { shallow: true }
+        )
+        
+        // Clear flag after a short delay to allow router to update
+        setTimeout(() => {
+          neighborhoodUpdateInProgressRef.current = false
+        }, 200)
+      }
+      
       // Pan to marker and open popup (original behavior)
       const key = `${municipality}-${neighborhood.colonia}`
       const coords = neighborhoodCoords.get(key)
       
       if (coords && mapInstance) {
-        // Pan to the neighborhood location
-        mapInstance.setView(coords, 15, { animate: true, duration: 0.5 })
-        
-        // Find and open the marker popup
-        const marker = markerRefs.current.get(key)
-        if (marker) {
-          // Small delay to ensure map has panned
-          setTimeout(() => {
-            marker.openPopup()
-          }, 500)
+        try {
+          // Check if map is still valid
+          if (!mapInstance.getContainer()) return
+          // Pan to the neighborhood location
+          mapInstance.setView(coords, 15, { animate: true, duration: 0.5 })
+          
+          // Find and open the marker popup
+          const marker = markerRefs.current.get(key)
+          if (marker) {
+            // Small delay to ensure map has panned
+            setTimeout(() => {
+              try {
+                if (marker && mapInstance && mapInstance.getContainer()) {
+                  marker.openPopup()
+                }
+              } catch (e) {
+                console.warn('Error opening marker popup on click:', e)
+              }
+            }, 500)
+          }
+        } catch (e) {
+          console.warn('Error zooming to neighborhood on click:', e)
         }
       }
     }
@@ -785,35 +1307,99 @@ export function NeighborhoodMap({ data }: NeighborhoodMapProps) {
   // Component to adjust map view when neighborhoods are loaded or city changes
   function MapViewAdjuster() {
     const map = useMap()
+    const hasAdjustedRef = useRef(false)
+    const lastSelectedDataRef = useRef<string | null>(null)
+    const previousSelectedMunicipalityRef = useRef<string | null>(selectedMunicipality)
+    
+    // Helper to check if map is valid
+    const isMapValid = () => {
+      try {
+        return map && map.getContainer() && !(map as any)._destroyed
+      } catch {
+        return false
+      }
+    }
+    
+    // Separate effect to handle zoom out when municipality panel closes
+    useEffect(() => {
+      if (!isMapValid()) return
+      
+      const prevValue = previousSelectedMunicipalityRef.current
+      const currentValue = selectedMunicipality
+      
+      // Detect if municipality panel was just closed (selectedMunicipality went from value to null)
+      if (prevValue !== null && currentValue === null && markers.length > 0) {
+        try {
+          // Municipality was just closed - zoom out to show all municipalities
+          const allMunicipalityPoints: [number, number][] = markers.map(m => m.position)
+          const bounds = L.latLngBounds(allMunicipalityPoints)
+          map.fitBounds(bounds, { padding: [50, 50], maxZoom: 11 })
+        } catch (e) {
+          console.warn('Error zooming out on municipality close:', e)
+        }
+      }
+      // Update ref after checking
+      previousSelectedMunicipalityRef.current = currentValue
+    }, [selectedMunicipality, markers, map])
     
     useEffect(() => {
-      if (neighborhoodMarkers.length > 0 && selectedData) {
-        // Create a bounds group that includes the municipality and all neighborhoods
-        const allPoints: [number, number][] = [selectedData.position]
-        neighborhoodMarkers.forEach(m => {
-          allPoints.push(m.coords)
-        })
-        const bounds = L.latLngBounds(allPoints)
-        map.fitBounds(bounds, { padding: [50, 50], maxZoom: 14 })
-      } else if (selectedData) {
-        // If no neighborhoods yet, just center on municipality
-        map.setView(selectedData.position, 13)
-      } else if (markers.length > 0) {
-        // If no municipality selected, fit all municipality markers
-        const allMunicipalityPoints: [number, number][] = markers.map(m => m.position)
-        const bounds = L.latLngBounds(allMunicipalityPoints)
-        map.fitBounds(bounds, { padding: [50, 50], maxZoom: 11 })
-      } else {
-        // Default: center on the city
-        let cityCenter: [number, number]
-        if (currentCity === 'Ciudad de México') {
-          cityCenter = [19.4326, -99.1332]
-        } else if (currentCity === 'Jalisco') {
-          cityCenter = [20.6597, -103.3496] // Guadalajara center
-        } else {
-          cityCenter = [25.6866, -100.3161] // Monterrey center
+      if (!isMapValid()) return
+      
+      // Only auto-adjust view when municipality first changes, not on every render
+      const currentMunicipalityKey = selectedData ? `${selectedData.municipality}-${neighborhoodMarkers.length}` : null
+      
+      // Reset adjustment flag when municipality changes
+      if (lastSelectedDataRef.current !== currentMunicipalityKey) {
+        hasAdjustedRef.current = false
+        lastSelectedDataRef.current = currentMunicipalityKey
+      }
+      
+      // Skip if already adjusted or if map is zoomed in close (user has manually zoomed)
+      let currentZoom: number
+      try {
+        currentZoom = map.getZoom()
+      } catch {
+        return
+      }
+      if (hasAdjustedRef.current || currentZoom >= 14) {
+        return
+      }
+      
+      try {
+        if (neighborhoodMarkers.length > 0 && selectedData) {
+          // Create a bounds group that includes the municipality and all neighborhoods
+          const allPoints: [number, number][] = [selectedData.position]
+          neighborhoodMarkers.forEach(m => {
+            allPoints.push(m.coords)
+          })
+          const bounds = L.latLngBounds(allPoints)
+          map.fitBounds(bounds, { padding: [50, 50], maxZoom: 14 })
+          hasAdjustedRef.current = true
+        } else if (selectedData && !hasAdjustedRef.current) {
+          // If no neighborhoods yet, just center on municipality (only on first selection)
+          map.setView(selectedData.position, 13)
+          hasAdjustedRef.current = true
+        } else if (markers.length > 0 && !selectedData && !hasAdjustedRef.current) {
+          // If no municipality selected, fit all municipality markers (only once)
+          const allMunicipalityPoints: [number, number][] = markers.map(m => m.position)
+          const bounds = L.latLngBounds(allMunicipalityPoints)
+          map.fitBounds(bounds, { padding: [50, 50], maxZoom: 11 })
+          hasAdjustedRef.current = true
+        } else if (!selectedData && markers.length === 0 && !hasAdjustedRef.current) {
+          // Default: center on the city (only once)
+          let cityCenter: [number, number]
+          if (currentCity === 'Ciudad de México') {
+            cityCenter = [19.4326, -99.1332]
+          } else if (currentCity === 'Jalisco') {
+            cityCenter = [20.6597, -103.3496] // Guadalajara center
+          } else {
+            cityCenter = [25.6866, -100.3161] // Monterrey center
+          }
+          map.setView(cityCenter, 11)
+          hasAdjustedRef.current = true
         }
-        map.setView(cityCenter, 11)
+      } catch (e) {
+        console.warn('Error adjusting map view:', e)
       }
     }, [neighborhoodMarkers, selectedData, markers, map, currentCity])
     
@@ -831,139 +1417,15 @@ export function NeighborhoodMap({ data }: NeighborhoodMapProps) {
   }, [currentCity])
 
   return (
-    <div className="w-full h-[600px] relative rounded-lg overflow-hidden border" style={{ isolation: 'isolate' }}>
-      <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
-        <MapContainer
-          center={center}
-          zoom={11}
-          style={{ height: '100%', width: '100%' }}
-          scrollWheelZoom={true}
-        >
-        <MapController onMapReady={(map) => setMapInstance(map)} />
-        <MapViewAdjuster />
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        {/* Municipality markers (larger, 20px) */}
-        {markers.map((marker) => {
-          const color = getPriceColor(marker.avgPrice)
-          const customIcon = createCustomIcon(color, 20)
-          
-          return (
-            <Marker
-              key={marker.municipality}
-              position={marker.position}
-              icon={customIcon}
-              eventHandlers={{
-                click: () => setSelectedMunicipality(marker.municipality),
-              }}
-            >
-              <Popup>
-                <div className="text-center">
-                  <h3 className="font-bold text-sm mb-1">{marker.municipality}</h3>
-                  <p className="text-xs text-gray-600">
-                    {t('map.avg')}: ${Math.round(marker.avgPrice).toLocaleString('es-MX')}/m²
-                  </p>
-                  <p className="text-xs text-gray-500">
-                    {marker.neighborhoodCount} {t('map.neighborhoods')}
-                  </p>
-                </div>
-              </Popup>
-            </Marker>
-          )
-        })}
-        
-        {/* Neighborhood markers (smaller, 12px) */}
-        {neighborhoodMarkers.map((marker) => (
-          <NeighborhoodMarker
-            key={marker.key}
-            marker={marker}
-            onMarkerReady={handleMarkerReady}
-            translateDateFn={translateDateFn}
-            municipality={selectedData?.municipality || ''}
-            onShowChart={(municipality, neighborhood) => {
-              const historicalData = getHistoricalDataForNeighborhood(municipality, neighborhood.colonia)
-              if (historicalData.length > 0) {
-                setSelectedNeighborhoodForChart({
-                  name: neighborhood.colonia,
-                  municipality,
-                  data: historicalData
-                })
-              }
-            }}
-          />
-        ))}
-      </MapContainer>
-      </div>
-
-      {/* Legend */}
-      <div className="absolute top-4 right-4 bg-white p-2 md:p-3 rounded-lg shadow-lg z-[1000] text-xs">
-        <div className="font-bold mb-2">{t('map.price_per_m2')}</div>
-        <div className="space-y-1">
-          <div className="flex items-center gap-2">
-            <div className="w-4 h-4 rounded-full bg-green-500"></div>
-            <span>&lt; $30,000</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <div className="w-4 h-4 rounded-full bg-lime-500"></div>
-            <span>$30,000 - $50,000</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <div className="w-4 h-4 rounded-full bg-yellow-500"></div>
-            <span>$50,000 - $70,000</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <div className="w-4 h-4 rounded-full bg-orange-500"></div>
-            <span>$70,000 - $90,000</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <div className="w-4 h-4 rounded-full bg-red-500"></div>
-            <span>&gt; $90,000</span>
-          </div>
-        </div>
-      </div>
-
-      {/* Geocoding progress indicator */}
-      {geocodingProgress && (
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white p-3 rounded-lg shadow-lg z-[1000] flex items-center gap-3">
-          <Loader2 className="h-4 w-4 animate-spin text-blue-600" />
-          <span className="text-sm text-gray-700">
-            {t('map.loading_neighborhoods')} ({geocodingProgress.current}/{geocodingProgress.total})
-          </span>
-        </div>
-      )}
-
-      {/* Historical Price Chart Modal */}
-      {selectedNeighborhoodForChart && (
-        <div 
-          className="absolute inset-0 bg-black bg-opacity-50 z-[100000] flex items-center justify-center p-4"
-          onClick={() => setSelectedNeighborhoodForChart(null)}
-        >
-          <div 
-            className="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <NeighborhoodPriceChart
-              neighborhoodName={selectedNeighborhoodForChart.name}
-              municipality={selectedNeighborhoodForChart.municipality}
-              data={selectedNeighborhoodForChart.data}
-              onClose={() => setSelectedNeighborhoodForChart(null)}
-              translateDate={translateDateFn}
-            />
-          </div>
-        </div>
-      )}
-
-      {/* Sidebar with neighborhood details */}
+    <div className="w-full flex flex-col md:flex-row gap-4">
+      {/* Sidebar with neighborhood details - positioned outside map */}
       {selectedData && (
         <div 
-          className={`fixed md:absolute left-4 right-4 md:left-auto md:right-auto md:max-w-sm bg-white rounded-t-lg md:rounded-lg shadow-lg flex flex-col overflow-hidden transition-all duration-300 ${
+          className={`w-full md:w-64 md:flex-shrink-0 bg-white rounded-lg shadow-lg flex flex-col overflow-hidden transition-all duration-300 ${
             isCardCollapsed 
-              ? 'bottom-0 max-h-[80px] md:top-4 md:max-h-[80px]' 
-              : 'bottom-0 max-h-[50vh] md:top-4 md:max-h-[500px]'
-          }`} 
-          style={{ zIndex: 99999 }}
+              ? 'max-h-[80px]' 
+              : 'max-h-[400px] md:max-h-[600px]'
+          }`}
         >
           {/* Collapse handle - visible on mobile */}
           <div 
@@ -1114,6 +1576,166 @@ export function NeighborhoodMap({ data }: NeighborhoodMapProps) {
           )}
         </div>
       )}
+
+      {/* Map container */}
+      <div className={`w-full h-[600px] relative rounded-lg overflow-hidden border ${selectedData ? 'md:flex-1' : ''}`} style={{ position: 'relative', zIndex: 0 }}>
+        <div style={{ position: 'absolute', inset: 0, zIndex: 1 }}>
+          <MapContainer
+            className="leaflet-map-container"
+            center={center}
+            zoom={11}
+            style={{ height: '100%', width: '100%' }}
+            scrollWheelZoom={true}
+          >
+        <MapController onMapReady={(map) => setMapInstance(map)} />
+        <MapViewAdjuster />
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+        {/* Municipality markers (larger, 20px) */}
+        {markers.map((marker) => {
+          const color = getPriceColor(marker.avgPrice)
+          const customIcon = createCustomIcon(color, 20)
+          
+          return (
+            <Marker
+              key={marker.municipality}
+              position={marker.position}
+              icon={customIcon}
+              eventHandlers={{
+                click: () => setSelectedMunicipality(marker.municipality),
+              }}
+            >
+              <Popup className="leaflet-popup-above-panel">
+                <div className="text-center">
+                  <h3 className="font-bold text-sm mb-1">{marker.municipality}</h3>
+                  <p className="text-xs text-gray-600">
+                    {t('map.avg')}: ${Math.round(marker.avgPrice).toLocaleString('es-MX')}/m²
+                  </p>
+                  <p className="text-xs text-gray-500">
+                    {marker.neighborhoodCount} {t('map.neighborhoods')}
+                  </p>
+                </div>
+              </Popup>
+            </Marker>
+          )
+        })}
+        
+        {/* Neighborhood markers (smaller, 12px) */}
+        {neighborhoodMarkers.map((marker) => (
+          <NeighborhoodMarker
+            key={marker.key}
+            marker={marker}
+            onMarkerReady={handleMarkerReady}
+            translateDateFn={translateDateFn}
+            municipality={selectedData?.municipality || ''}
+            onShowChart={(municipality, neighborhood) => {
+              const historicalData = getHistoricalDataForNeighborhood(municipality, neighborhood.colonia)
+              if (historicalData.length > 0) {
+                setSelectedNeighborhoodForChart({
+                  name: neighborhood.colonia,
+                  municipality,
+                  data: historicalData
+                })
+                
+                // Update URL immediately with chart flag
+                if (router.isReady) {
+                  const query = { ...router.query }
+                  query.neighborhood = encodeName(neighborhood.colonia)
+                  query.chart = 'true'
+                  router.replace(
+                    {
+                      pathname: router.pathname,
+                      query
+                    },
+                    undefined,
+                    { shallow: true }
+                  )
+                }
+              }
+            }}
+            onMarkerClick={(municipality, neighborhood) => {
+              // Update URL when marker is clicked
+              if (router.isReady) {
+                const query = { ...router.query }
+                query.neighborhood = encodeName(neighborhood.colonia)
+                // Remove chart flag if it exists (since we're not opening chart)
+                delete query.chart
+                
+                router.replace(
+                  {
+                    pathname: router.pathname,
+                    query
+                  },
+                  undefined,
+                  { shallow: true }
+                )
+              }
+            }}
+          />
+        ))}
+      </MapContainer>
+        </div>
+
+        {/* Legend */}
+        <div className="absolute top-4 right-4 bg-white p-2 md:p-3 rounded-lg shadow-lg z-[1000] text-xs">
+          <div className="font-bold mb-2">{t('map.price_per_m2')}</div>
+          <div className="space-y-1">
+            <div className="flex items-center gap-2">
+              <div className="w-4 h-4 rounded-full bg-green-500"></div>
+              <span>&lt; $30,000</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-4 h-4 rounded-full bg-lime-500"></div>
+              <span>$30,000 - $50,000</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-4 h-4 rounded-full bg-yellow-500"></div>
+              <span>$50,000 - $70,000</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-4 h-4 rounded-full bg-orange-500"></div>
+              <span>$70,000 - $90,000</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-4 h-4 rounded-full bg-red-500"></div>
+              <span>&gt; $90,000</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Geocoding progress indicator */}
+        {geocodingProgress && (
+          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white p-3 rounded-lg shadow-lg z-[1000] flex items-center gap-3">
+            <Loader2 className="h-4 w-4 animate-spin text-blue-600" />
+            <span className="text-sm text-gray-700">
+              {t('map.loading_neighborhoods')} ({geocodingProgress.current}/{geocodingProgress.total})
+            </span>
+          </div>
+        )}
+
+        {/* Historical Price Chart Modal */}
+        {selectedNeighborhoodForChart && (
+          <div 
+            className="absolute inset-0 bg-black bg-opacity-50 z-[100000] flex items-center justify-center p-4"
+            onClick={() => setSelectedNeighborhoodForChart(null)}
+          >
+            <div 
+              className="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <NeighborhoodPriceChart
+                neighborhoodName={selectedNeighborhoodForChart.name}
+                municipality={selectedNeighborhoodForChart.municipality}
+                data={selectedNeighborhoodForChart.data}
+                onClose={() => setSelectedNeighborhoodForChart(null)}
+                translateDate={translateDateFn}
+              />
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   )
 }

@@ -460,9 +460,19 @@ export default function LocationPageComponent({ page, canonicalUrl }: LocationPa
                       tick={{ fill: '#6b7280' }}
                       tickFormatter={(value) => `$${Math.round(value / 1000)}k`}
                       domain={getYAxisDomain()}
+                      width={50}
+                      label={{ 
+                        value: 'Precio de Venta por m²', 
+                        angle: -90, 
+                        position: 'left',
+                        style: { textAnchor: 'middle', fill: '#6b7280', fontSize: '12px' }
+                      }}
                     />
                     <Tooltip
-                      formatter={(value: number) => `$${Math.round(value).toLocaleString('es-MX')}/m²`}
+                      formatter={(value: number, name: string) => [
+                        `$${Math.round(value).toLocaleString('es-MX')}/m²`,
+                        'Precio de Venta por m²'
+                      ]}
                       labelStyle={{ color: '#374151', fontWeight: 'bold' }}
                       contentStyle={{
                         backgroundColor: 'white',

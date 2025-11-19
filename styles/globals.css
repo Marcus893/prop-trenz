@@ -50,6 +50,32 @@
   animation-fill-mode: both;
 }
 
+/* Leaflet markers - should be behind popups */
+.leaflet-marker-pane {
+  z-index: 300 !important;
+}
+
+.leaflet-marker-icon {
+  z-index: 300 !important;
+}
+
+/* Leaflet popups - should be above markers */
+.leaflet-popup-pane {
+  z-index: 400 !important;
+}
+
+.leaflet-popup {
+  z-index: 400 !important;
+}
+
+.leaflet-popup-content-wrapper {
+  z-index: 400 !important;
+}
+
+.leaflet-popup-tip {
+  z-index: 400 !important;
+}
+
 .delay-200 {
   animation-delay: 0.2s;
   animation-fill-mode: both;

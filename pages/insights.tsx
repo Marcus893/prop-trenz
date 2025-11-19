@@ -137,15 +137,15 @@ export default function InsightsPage({ nationalSnapshot, nationalTrend = [], top
                   </Card>
 
                   <Card className="p-6 hover:shadow-lg transition-shadow">
-                    <div className="flex items-center justify-between mb-4">
-                      <h3 className="text-lg font-semibold">{t('home.top_movers_states_yoy', 'Top Movers (States) – YoY')}</h3>
+                    <div className="mb-4">
+                      <h3 className="text-lg font-semibold mb-2">{t('home.top_movers_states_yoy', 'Top Movers (States) – YoY')}</h3>
                       <Button
                         variant="ghost"
                         size="sm"
                         onClick={handleExploreCharts}
-                        className="text-blue-600 hover:text-blue-700"
+                        className="text-blue-600 hover:text-blue-700 -ml-2 flex items-center"
                       >
-                        {t('home.view_all', 'View All')}
+                        <span>{t('home.view_all', 'View All')}</span>
                         <ChevronRight className="ml-1 h-4 w-4" />
                       </Button>
                     </div>
@@ -177,15 +177,15 @@ export default function InsightsPage({ nationalSnapshot, nationalTrend = [], top
                   </Card>
 
                   <Card className="p-6 hover:shadow-lg transition-shadow">
-                    <div className="flex items-center justify-between mb-4">
-                      <h3 className="text-lg font-semibold">{t('home.top_movers_municipalities_yoy', 'Top Movers (Municipalities) – YoY')}</h3>
+                    <div className="mb-4">
+                      <h3 className="text-lg font-semibold mb-2">{t('home.top_movers_municipalities_yoy', 'Top Movers (Municipalities) – YoY')}</h3>
                       <Button
                         variant="ghost"
                         size="sm"
                         onClick={handleExploreCharts}
-                        className="text-blue-600 hover:text-blue-700"
+                        className="text-blue-600 hover:text-blue-700 -ml-2 flex items-center"
                       >
-                        {t('home.view_all', 'View All')}
+                        <span>{t('home.view_all', 'View All')}</span>
                         <ChevronRight className="ml-1 h-4 w-4" />
                       </Button>
                     </div>

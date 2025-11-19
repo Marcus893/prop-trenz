@@ -255,11 +255,18 @@ export function NeighborhoodPriceChart({
                 tick={{ fill: '#6b7280' }}
                 tickFormatter={(value) => `$${Math.round(value / 1000)}k`}
                 domain={getYAxisDomain}
+                width={50}
+                label={{ 
+                  value: t('map.selling_price_per_m2', 'Selling Price per m²'), 
+                  angle: -90, 
+                  position: 'left',
+                  style: { textAnchor: 'middle', fill: '#6b7280', fontSize: '12px' }
+                }}
               />
               <Tooltip
                 formatter={(value: number, name: string) => [
                   formatTooltipValue(value),
-                  t('map.price', 'Price')
+                  t('map.selling_price_per_m2', 'Selling Price per m²')
                 ]}
                 labelFormatter={(label) => label}
                 labelStyle={{ color: '#374151', fontWeight: 'bold' }}

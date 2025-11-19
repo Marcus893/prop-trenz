@@ -34,22 +34,45 @@ The following events are automatically tracked for the sign-up conversion funnel
 
 ### Step 2: Define Funnel Steps
 
-Add the following steps in order:
+1. In the funnel builder, click **"+ Add step"** or **"Add step"** button
+2. For each step, select **"Event"** as the step type
+3. Type the event name in the search box (events are case-sensitive)
+4. Add the following steps in order:
 
-1. **Step 1:** `signup_button_clicked`
+**Step 1:** `signup_button_clicked`
+   - Type: Event
+   - Event name: `signup_button_clicked`
    - Description: "User clicked signup button"
+   - Click **"Add step"** to add the next step
    
-2. **Step 2:** `signup_modal_opened`
+**Step 2:** `signup_modal_opened`
+   - Type: Event
+   - Event name: `signup_modal_opened`
    - Description: "Signup modal opened"
+   - Click **"Add step"** to add the next step
    
-3. **Step 3:** `signup_form_started`
+**Step 3:** `signup_form_started`
+   - Type: Event
+   - Event name: `signup_form_started`
    - Description: "User started filling form"
+   - Click **"Add step"** to add the next step
    
-4. **Step 4:** `signup_form_submitted`
+**Step 4:** `signup_form_submitted`
+   - Type: Event
+   - Event name: `signup_form_submitted`
    - Description: "User submitted form"
+   - Click **"Add step"** to add the next step
    
-5. **Step 5:** `signup_form_completed` OR `user_signed_up` (with `success: true`)
+**Step 5:** `signup_form_completed`
+   - Type: Event
+   - Event name: `signup_form_completed`
    - Description: "User completed signup"
+   - This is the final step
+
+**Note:** If you can't find an event name, check:
+- Go to **Activity** → **Live Events** in PostHog to see if events are being received
+- Verify the event name matches exactly (case-sensitive)
+- Make sure you're in production mode (events only track in production)
 
 ### Step 3: Configure Funnel Settings
 
