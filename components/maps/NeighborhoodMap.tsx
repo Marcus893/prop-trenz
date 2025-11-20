@@ -490,6 +490,10 @@ export function NeighborhoodMap({ data, selectedCity: selectedCityProp }: Neighb
     municipality: string
     data: Array<{ mes: string; precio: string; date: Date; price: number; displayDate: string }>
   } | null>(null)
+  const [selectedMunicipalityForChart, setSelectedMunicipalityForChart] = useState<{
+    name: string
+    data: Array<{ mes: string; precio: string; date: Date; price: number; displayDate: string }>
+  } | null>(null)
   const coordsRef = useRef<Map<string, [number, number]>>(new Map())
   const markerRefs = useRef<Map<string, L.Marker>>(new Map())
   
@@ -536,6 +540,7 @@ export function NeighborhoodMap({ data, selectedCity: selectedCityProp }: Neighb
   const handleCloseSidebar = () => {
     // First, clear the chart state
     setSelectedNeighborhoodForChart(null)
+    setSelectedMunicipalityForChart(null)
     
     // Then clear municipality state
     setSelectedMunicipality(null)
@@ -550,6 +555,7 @@ export function NeighborhoodMap({ data, selectedCity: selectedCityProp }: Neighb
         delete query.municipality
         delete query.neighborhood
         delete query.chart
+        delete query.municipalityChart
         
         router.replace(
           {
@@ -595,6 +601,7 @@ export function NeighborhoodMap({ data, selectedCity: selectedCityProp }: Neighb
   useEffect(() => {
     setSelectedMunicipality(null)
     setSelectedNeighborhoodForChart(null)
+    setSelectedMunicipalityForChart(null)
     // Reset restoration refs when city changes
     urlRestoredRef.current = false
     chartRestoredRef.current = false
@@ -919,6 +926,54 @@ export function NeighborhoodMap({ data, selectedCity: selectedCityProp }: Neighb
     }
   }, [data, currentCity, translateDateFn])
 
+  const getHistoricalDataForMunicipality = useMemo(() => {
+    return (municipality: string) => {
+      // Access original unfiltered data from the data prop
+      const cityData = data[currentCity]
+      if (!cityData || !cityData[municipality]) return []
+      
+      // Get ALL neighborhoods from this municipality from ALL months
+      const allNeighborhoods = cityData[municipality]
+      
+      // Group by month and calculate average price per month
+      const monthlyData = new Map<string, { prices: number[]; mes: string }>()
+      
+      allNeighborhoods.forEach(n => {
+        const date = parseMonthDate(n.mes)
+        if (!date) return
+        
+        const price = parseFloat(n.precio)
+        if (isNaN(price) || price <= 0) return
+        
+        const monthKey = n.mes
+        if (!monthlyData.has(monthKey)) {
+          monthlyData.set(monthKey, { prices: [], mes: n.mes })
+        }
+        monthlyData.get(monthKey)!.prices.push(price)
+      })
+      
+      // Convert to chart data format with average prices
+      return Array.from(monthlyData.entries())
+        .map(([monthKey, { mes, prices }]) => {
+          const date = parseMonthDate(mes)
+          if (!date) return null
+          
+          // Calculate average price for this month
+          const avgPrice = prices.reduce((sum, p) => sum + p, 0) / prices.length
+          
+          return {
+            mes,
+            precio: avgPrice.toFixed(2),
+            date,
+            price: avgPrice,
+            displayDate: translateDateFn(mes)
+          }
+        })
+        .filter((item): item is NonNullable<typeof item> => item !== null)
+        .sort((a, b) => a.date.getTime() - b.date.getTime())
+    }
+  }, [data, currentCity, translateDateFn])
+
   // Restore neighborhood zoom and popup from URL
   useEffect(() => {
     if (!router.isReady || !selectedMunicipality || !mapInstance || !savedCoordsLoaded || neighborhoodZoomedRef.current || !data) return
@@ -1078,9 +1133,124 @@ export function NeighborhoodMap({ data, selectedCity: selectedCityProp }: Neighb
     chartRestoredRef.current = true
   }, [router.isReady, router.query.neighborhood, router.query.chart, data, currentCity, selectedMunicipality, getHistoricalDataForNeighborhood, mapInstance, savedCoordsLoaded, neighborhoodCoords])
 
+  // Restore municipality chart from URL
+  useEffect(() => {
+    if (!router.isReady || !data || Object.keys(data).length === 0 || !getHistoricalDataForMunicipality || !selectedMunicipality) return
+    
+    const urlMunicipalityChart = router.query.municipalityChart as string | undefined
+    
+    // Restore chart if municipalityChart flag is present
+    if (urlMunicipalityChart === 'true' && selectedMunicipality) {
+      const historicalData = getHistoricalDataForMunicipality(selectedMunicipality)
+      if (historicalData.length > 0) {
+        setSelectedMunicipalityForChart({
+          name: selectedMunicipality,
+          data: historicalData
+        })
+      }
+    }
+  }, [router.isReady, router.query.municipalityChart, data, currentCity, selectedMunicipality, getHistoricalDataForMunicipality])
+
+  // Sync municipality chart to URL
+  useEffect(() => {
+    if (!router.isReady) return
+    
+    const urlMunicipalityChart = router.query.municipalityChart as string | undefined
+    const currentChart = urlMunicipalityChart === 'true'
+    
+    // Only sync if state changed (not on initial load)
+    if (currentChart === !!selectedMunicipalityForChart) return
+    
+    if (selectedMunicipalityForChart) {
+      // Chart is open: add municipalityChart flag
+      const query = { ...router.query }
+      query.municipalityChart = 'true'
+      router.replace(
+        {
+          pathname: router.pathname,
+          query
+        },
+        undefined,
+        { shallow: true }
+      )
+    } else {
+      // Chart is closed: remove municipalityChart flag
+      const query = { ...router.query }
+      delete query.municipalityChart
+      router.replace(
+        {
+          pathname: router.pathname,
+          query
+        },
+        undefined,
+        { shallow: true }
+      )
+    }
+  }, [selectedMunicipalityForChart, router.isReady, router.query.municipalityChart])
+
+  // Handle municipality chart click
+  const handleMunicipalityChartClick = (municipality?: string) => {
+    const targetMunicipality = municipality || selectedMunicipality
+    if (!targetMunicipality) {
+      console.warn('handleMunicipalityChartClick: No municipality provided')
+      return
+    }
+    
+    // Set municipality if provided (for popup clicks) and different from current
+    if (municipality && municipality !== selectedMunicipality) {
+      setSelectedMunicipality(municipality)
+    }
+    
+    // Ensure municipality is set (for panel button clicks)
+    if (!selectedMunicipality && targetMunicipality) {
+      setSelectedMunicipality(targetMunicipality)
+    }
+    
+    // Close neighborhood chart if open
+    if (selectedNeighborhoodForChart) {
+      setSelectedNeighborhoodForChart(null)
+    }
+    
+    const historicalData = getHistoricalDataForMunicipality(targetMunicipality)
+    if (historicalData.length > 0) {
+      setSelectedMunicipalityForChart({
+        name: targetMunicipality,
+        data: historicalData
+      })
+      
+      // Update URL immediately with municipalityChart flag
+      if (router.isReady) {
+        const query = { ...router.query }
+        query.municipalityChart = 'true'
+        // Ensure municipality is in URL
+        if (targetMunicipality) {
+          query.municipality = encodeName(targetMunicipality)
+        }
+        // Remove neighborhood chart params if they exist
+        delete query.neighborhood
+        delete query.chart
+        router.replace(
+          {
+            pathname: router.pathname,
+            query
+          },
+          undefined,
+          { shallow: true }
+        )
+      }
+    } else {
+      console.warn('handleMunicipalityChartClick: No historical data found for', targetMunicipality)
+    }
+  }
+
   // Handle neighborhood click - show chart or pan to marker
   const handleNeighborhoodClick = (municipality: string, neighborhood: Neighborhood, showChart: boolean = false) => {
     if (showChart) {
+      // Close municipality chart if open
+      if (selectedMunicipalityForChart) {
+        setSelectedMunicipalityForChart(null)
+      }
+      
       // Show historical chart
       const historicalData = getHistoricalDataForNeighborhood(municipality, neighborhood.colonia)
       if (historicalData.length > 0) {
@@ -1095,6 +1265,8 @@ export function NeighborhoodMap({ data, selectedCity: selectedCityProp }: Neighb
           const query = { ...router.query }
           query.neighborhood = encodeName(neighborhood.colonia)
           query.chart = 'true'
+          // Remove municipalityChart param if it exists
+          delete query.municipalityChart
           router.replace(
             {
               pathname: router.pathname,
@@ -1110,6 +1282,10 @@ export function NeighborhoodMap({ data, selectedCity: selectedCityProp }: Neighb
       if (selectedNeighborhoodForChart) {
         setSelectedNeighborhoodForChart(null)
       }
+      // Close municipality chart if open
+      if (selectedMunicipalityForChart) {
+        setSelectedMunicipalityForChart(null)
+      }
       
       // Update URL immediately with new neighborhood (but not chart flag)
       // Do this first to prevent sync effects from overriding with old neighborhood
@@ -1119,8 +1295,9 @@ export function NeighborhoodMap({ data, selectedCity: selectedCityProp }: Neighb
         
         const query = { ...router.query }
         query.neighborhood = encodeName(neighborhood.colonia)
-        // Remove chart flag if it exists (since we're not opening chart)
+        // Remove chart flags if they exist (since we're not opening chart)
         delete query.chart
+        delete query.municipalityChart
         
         router.replace(
           {
@@ -1439,6 +1616,18 @@ export function NeighborhoodMap({ data, selectedCity: selectedCityProp }: Neighb
           <div className="flex justify-between items-center p-3 md:p-4 pb-3 border-b bg-white flex-shrink-0">
             <h3 className="font-bold text-base md:text-lg">{selectedData.municipality}</h3>
             <div className="flex items-center gap-2">
+              {!isCardCollapsed && selectedData && (
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation()
+                    handleMunicipalityChartClick(selectedData.municipality)
+                  }}
+                  className="text-xs text-blue-600 hover:text-blue-800 font-medium px-2 py-1 rounded hover:bg-blue-50 transition-colors"
+                  title={t('map.view_chart', 'View price history')}
+                >
+                  {t('map.chart', 'Chart')}
+                </button>
+              )}
               <button
                 onClick={() => setIsCardCollapsed(!isCardCollapsed)}
                 className="text-gray-500 hover:text-gray-700 text-sm md:hidden"
@@ -1613,9 +1802,19 @@ export function NeighborhoodMap({ data, selectedCity: selectedCityProp }: Neighb
                   <p className="text-xs text-gray-600">
                     {t('map.avg')}: ${Math.round(marker.avgPrice).toLocaleString('es-MX')}/m²
                   </p>
-                  <p className="text-xs text-gray-500">
+                  <p className="text-xs text-gray-500 mb-2">
                     {marker.neighborhoodCount} {t('map.neighborhoods')}
                   </p>
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation()
+                      handleMunicipalityChartClick(marker.municipality)
+                    }}
+                    className="text-xs text-blue-600 hover:text-blue-800 font-medium px-2 py-1 rounded hover:bg-blue-50 transition-colors"
+                    title={t('map.view_chart', 'View price history')}
+                  >
+                    {t('map.chart', 'Chart')}
+                  </button>
                 </div>
               </Popup>
             </Marker>
@@ -1631,6 +1830,11 @@ export function NeighborhoodMap({ data, selectedCity: selectedCityProp }: Neighb
             translateDateFn={translateDateFn}
             municipality={selectedData?.municipality || ''}
             onShowChart={(municipality, neighborhood) => {
+              // Close municipality chart if open
+              if (selectedMunicipalityForChart) {
+                setSelectedMunicipalityForChart(null)
+              }
+              
               const historicalData = getHistoricalDataForNeighborhood(municipality, neighborhood.colonia)
               if (historicalData.length > 0) {
                 setSelectedNeighborhoodForChart({
@@ -1644,6 +1848,8 @@ export function NeighborhoodMap({ data, selectedCity: selectedCityProp }: Neighb
                   const query = { ...router.query }
                   query.neighborhood = encodeName(neighborhood.colonia)
                   query.chart = 'true'
+                  // Remove municipalityChart param if it exists
+                  delete query.municipalityChart
                   router.replace(
                     {
                       pathname: router.pathname,
@@ -1715,7 +1921,7 @@ export function NeighborhoodMap({ data, selectedCity: selectedCityProp }: Neighb
           </div>
         )}
 
-        {/* Historical Price Chart Modal */}
+        {/* Historical Price Chart Modal - Neighborhood */}
         {selectedNeighborhoodForChart && (
           <div 
             className="absolute inset-0 bg-black bg-opacity-50 z-[100000] flex items-center justify-center p-4"
@@ -1730,6 +1936,27 @@ export function NeighborhoodMap({ data, selectedCity: selectedCityProp }: Neighb
                 municipality={selectedNeighborhoodForChart.municipality}
                 data={selectedNeighborhoodForChart.data}
                 onClose={() => setSelectedNeighborhoodForChart(null)}
+                translateDate={translateDateFn}
+              />
+            </div>
+          </div>
+        )}
+
+        {/* Historical Price Chart Modal - Municipality */}
+        {selectedMunicipalityForChart && (
+          <div 
+            className="absolute inset-0 bg-black bg-opacity-50 z-[100000] flex items-center justify-center p-4"
+            onClick={() => setSelectedMunicipalityForChart(null)}
+          >
+            <div 
+              className="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <NeighborhoodPriceChart
+                neighborhoodName={selectedMunicipalityForChart.name}
+                municipality=""
+                data={selectedMunicipalityForChart.data}
+                onClose={() => setSelectedMunicipalityForChart(null)}
                 translateDate={translateDateFn}
               />
             </div>

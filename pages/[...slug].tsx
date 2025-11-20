@@ -185,8 +185,8 @@ export default function LocationPageComponent({ page, canonicalUrl }: LocationPa
     const quarter = Math.floor(month / 3) + 1 // 1-4
     const year = date.getFullYear()
     
-    // Use Spanish format: T1, T2, T3, T4 (Trimestre)
-    return `T${quarter} ${year}`
+    // Use format: 2024/Q4
+    return `${year}/Q${quarter}`
   }
 
   // Calculate Y-axis domain to center the line
@@ -196,7 +196,10 @@ export default function LocationPageComponent({ page, canonicalUrl }: LocationPa
     const min = Math.min(...prices)
     const max = Math.max(...prices)
     const range = max - min
-    const padding = range * 5
+    const minPadding = min * 0.1
+    const rangePadding = range * 2
+    const padding = Math.max(minPadding, rangePadding)
+
     return [Math.max(0, min - padding), max + padding]
   }
 

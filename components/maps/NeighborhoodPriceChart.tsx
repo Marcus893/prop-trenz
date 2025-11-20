@@ -37,7 +37,7 @@ export function NeighborhoodPriceChart({
   onClose,
   translateDate
 }: NeighborhoodPriceChartProps) {
-  const { t } = useTranslation('common')
+  const { t, i18n } = useTranslation('common')
 
   // Sort data by date
   const sortedData = useMemo(() => {
@@ -139,7 +139,13 @@ export function NeighborhoodPriceChart({
     const min = Math.min(...prices)
     const max = Math.max(...prices)
     const range = max - min
-    const padding = range * 5
+    
+    // Use 15% padding on each side for better visualization
+    // If range is very small (less than 10% of min), use 10% of min as minimum padding
+    const minPadding = min * 0.1
+    const rangePadding = range * 3
+    const padding = Math.max(minPadding, rangePadding)
+    
     return [Math.max(0, min - padding), max + padding] as [number, number]
   }, [sortedData])
 
@@ -153,30 +159,55 @@ export function NeighborhoodPriceChart({
     return monthsDiff >= 12
   }, [sortedData])
 
-  // Custom tick formatter for X-axis - show quarterly labels when there's a year+ of data
-  const formatXAxisTick = useMemo(() => {
-    if (!shouldShowQuarterlyLabels) {
-      // Show all labels for less than a year
-      return (tickItem: string) => tickItem
-    }
+  // Get unique quarters from the data for quarterly labeling
+  const uniqueQuarters = useMemo(() => {
+    if (!shouldShowQuarterlyLabels) return new Set<string>()
+    
+    const quarters = new Set<string>()
+    sortedData.forEach(point => {
+      const date = point.date
+      const year = date.getFullYear()
+      const quarter = Math.floor(date.getMonth() / 3) + 1
+      quarters.add(`${year}-Q${quarter}`)
+    })
+    return quarters
+  }, [shouldShowQuarterlyLabels, sortedData])
 
-    // For a year or more, only show quarterly labels
+  // Custom tick formatter for X-axis - always show quarterly labels for consistency
+  const formatXAxisTick = useMemo(() => {
+    // Get current language for quarter label format
+    const locale = i18n.language?.slice(0, 2) || 'en'
+    
+    // Determine quarter prefix based on language
+    // English: Q, Spanish: T (Trimestre), Chinese: Q
+    const quarterPrefix = locale === 'es' ? 'T' : 'Q'
+    
+    // Always use quarterly labels for consistency across all cities
     return (tickItem: string) => {
       // Find the data point that matches this displayDate
       const dataPoint = sortedData.find(d => d.displayDate === tickItem)
       if (!dataPoint) return ''
       
       const date = dataPoint.date
+      const year = date.getFullYear()
       const month = date.getMonth() // 0-11
       const quarter = Math.floor(month / 3) + 1 // 1-4
+      const quarterKey = `${year}-${quarterPrefix}${quarter}`
       
-      // Only show label for Q1 (January), Q2 (April), Q3 (July), Q4 (October)
-      if (month === 0 || month === 3 || month === 6 || month === 9) {
-        return `${date.getFullYear()} Q${quarter}`
+      // Show label if this is the first occurrence of this quarter in the data
+      // Check if this is the first data point for this quarter
+      const isFirstInQuarter = sortedData.findIndex(d => {
+        const dYear = d.date.getFullYear()
+        const dQuarter = Math.floor(d.date.getMonth() / 3) + 1
+        return `${dYear}-${quarterPrefix}${dQuarter}` === quarterKey
+      }) === sortedData.findIndex(d => d.displayDate === tickItem)
+      
+      if (isFirstInQuarter) {
+        return `${year}/${quarterPrefix}${quarter}`
       }
       return ''
     }
-  }, [shouldShowQuarterlyLabels, sortedData])
+  }, [sortedData, i18n.language])
 
   return (
     <Card className="p-4 md:p-6 bg-white shadow-lg">
@@ -185,7 +216,7 @@ export function NeighborhoodPriceChart({
           <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-1">
             {neighborhoodName}
           </h3>
-          <p className="text-sm text-gray-600">{municipality}</p>
+          {municipality && <p className="text-sm text-gray-600">{municipality}</p>}
         </div>
         <button
           onClick={onClose}
@@ -236,17 +267,17 @@ export function NeighborhoodPriceChart({
       {sortedData.length > 0 ? (
         <div className="w-full" style={{ height: '300px' }}>
           <ResponsiveContainer width="100%" height="100%">
-            <LineChart data={sortedData} margin={{ top: 5, right: 20, left: 10, bottom: 5 }}>
+            <LineChart data={sortedData} margin={{ top: 5, right: 25, left: 10, bottom: 5 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
               <XAxis
                 dataKey="displayDate"
                 stroke="#6b7280"
-                fontSize={shouldShowQuarterlyLabels ? 11 : 12}
+                fontSize={11}
                 tick={{ fill: '#6b7280' }}
-                angle={shouldShowQuarterlyLabels ? 0 : -45}
-                textAnchor={shouldShowQuarterlyLabels ? 'middle' : 'end'}
-                height={shouldShowQuarterlyLabels ? 20 : 60}
-                interval={shouldShowQuarterlyLabels ? 'preserveStartEnd' : 0}
+                angle={0}
+                textAnchor="middle"
+                height={20}
+                interval={0}
                 tickFormatter={formatXAxisTick}
               />
               <YAxis

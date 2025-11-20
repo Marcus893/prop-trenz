@@ -491,7 +491,7 @@ export function GeographicNavigator({
 
       {/* Locations Grid (scrollable) */}
       <div className="relative">
-        <div className="h-[60vh] overflow-y-auto pr-2">
+        <div className="h-[300px] md:h-[400px] lg:h-[60vh] overflow-y-auto pr-2">
           {loading ? (
             <div className="flex items-center justify-center h-full">
               <div className="text-center">

@@ -189,7 +189,7 @@ export function PriceChart({
 
       const formattedData = ((result as any).data || []).map((point: any) => ({
         ...point,
-        period: `${point.year} Q${point.quarter}`,
+        period: `${point.year}/Q${point.quarter}`,
         growth_rate: point.growth_rate || 0
       }))
 
@@ -406,7 +406,7 @@ export function PriceChart({
         </div>
 
         {data.length > 0 && (
-          <div className="flex items-center gap-4 mb-4">
+          <div className="flex items-center gap-4">
             <div className="text-sm text-gray-600">
               {t('charts.period_range')}: {data[0].period} - {data[data.length - 1].period}
             </div>
@@ -422,7 +422,7 @@ export function PriceChart({
 
       <div className="h-80">
         <ResponsiveContainer width="100%" height="100%">
-          <LineChart data={chartData} margin={{ top: 16, right: 32, left: 20, bottom: 24 }}>
+          <LineChart data={chartData} margin={{ top: 0, right: 5, left: 10, bottom: 0 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
             <XAxis 
               dataKey="period" 
@@ -435,10 +435,9 @@ export function PriceChart({
               stroke="#666"
               fontSize={12}
               tick={{ fontSize: 12 }}
-              tickMargin={12}
+              tickMargin={2}
               tickFormatter={(value) => displayMode === 'mxn' ? new Intl.NumberFormat(undefined, { maximumFractionDigits: 0 }).format(value) : value.toFixed(0)}
               domain={getYAxisDomain()}
-              label={{ value: displayMode === 'mxn' ? 'MXN' : t('charts.price_index'), angle: -90, position: 'left', offset: -5, style: { fill: '#666' } }}
             />
             <Tooltip
               formatter={(value: any) => formatTooltipValue(value)}
@@ -472,16 +471,16 @@ export function PriceChart({
       </div>
 
       {chartData.length > 0 && (
-        <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-          <div className="bg-gray-50 p-3 rounded-lg">
+        <div className="mt-4 grid grid-cols-1 gap-4 text-sm">
+          <div className="bg-gray-50 p-3 rounded-lg flex justify-between items-center">
             <div className="font-medium text-gray-700">{displayMode === 'mxn' ? t('charts.starting_price') : t('charts.starting_value')}</div>
             <div className="text-base font-semibold tracking-tight tabular-nums whitespace-nowrap overflow-hidden text-ellipsis text-right">{displayMode === 'mxn' ? formatMX((chartData[0] as any).price_mxn) : chartData[0].index_value.toFixed(2)}</div>
           </div>
-          <div className="bg-gray-50 p-3 rounded-lg">
+          <div className="bg-gray-50 p-3 rounded-lg flex justify-between items-center">
             <div className="font-medium text-gray-700">{displayMode === 'mxn' ? t('charts.current_price') : t('charts.current_value')}</div>
             <div className="text-base font-semibold tracking-tight tabular-nums whitespace-nowrap overflow-hidden text-ellipsis text-right">{displayMode === 'mxn' ? formatMX((chartData[chartData.length - 1] as any).price_mxn) : chartData[chartData.length - 1].index_value.toFixed(2)}</div>
           </div>
-          <div className="bg-gray-50 p-3 rounded-lg">
+          <div className="bg-gray-50 p-3 rounded-lg flex justify-between items-center">
             <div className="font-medium text-gray-700">{t('charts.total_growth')}</div>
             <div className={`text-lg font-semibold ${getGrowthColor()} text-right`}>
               {calculateGrowthRate().toFixed(1)}%
