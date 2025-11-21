@@ -25,9 +25,9 @@ interface GuidePageProps {
   guide: GuideArticle
   canonicalUrl: string
   hreflangUrls: {
-    en: string
-    es: string
-    zh: string
+    en?: string
+    es?: string
+    zh?: string
   }
   isFallbackLocale?: boolean
   relatedGuides?: RelatedGuide[]
@@ -141,10 +141,12 @@ export default function GuidePage({ guide, canonicalUrl, hreflangUrls, isFallbac
         <meta name="keywords" content={guide.tags.join(', ')} />
         
         {/* Hreflang tags for multilingual SEO - tells Google which language version to show */}
-        <link rel="alternate" hrefLang="en" href={hreflangUrls.en} />
-        <link rel="alternate" hrefLang="es" href={hreflangUrls.es} />
-        <link rel="alternate" hrefLang="zh" href={hreflangUrls.zh} />
-        <link rel="alternate" hrefLang="x-default" href={hreflangUrls.en} />
+        {/* Only include hreflang tags for versions that actually exist */}
+        {hreflangUrls.en && <link rel="alternate" hrefLang="en" href={hreflangUrls.en} />}
+        {hreflangUrls.es && <link rel="alternate" hrefLang="es" href={hreflangUrls.es} />}
+        {hreflangUrls.zh && <link rel="alternate" hrefLang="zh" href={hreflangUrls.zh} />}
+        {/* x-default should point to the primary version (English if available, otherwise first available) */}
+        <link rel="alternate" hrefLang="x-default" href={hreflangUrls.en || hreflangUrls.es || hreflangUrls.zh || canonicalUrl} />
         
         {/* Open Graph */}
         <meta property="og:type" content="article" />
@@ -429,17 +431,39 @@ export const getStaticProps: GetStaticProps<GuidePageProps> = async ({ params, l
   // but note that it's in a different language
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://proptrenz.com'
   
-  // Build canonical URL with proper locale prefix
-  // Next.js i18n: default locale (en) has no prefix, others have /locale prefix
-  const canonicalUrl = validLocale === 'en' 
+  // Build canonical URL - self-referential (points to itself) for proper SEO
+  // This ensures each language version is treated as its own canonical page
+  // Next.js i18n routing: default locale (en) has no prefix, others have /locale prefix
+  const currentUrl = validLocale === 'en' 
     ? `${baseUrl}/guides/${baseSlug}`
     : `${baseUrl}/${validLocale}/guides/${baseSlug}`
   
-  // Build hreflang URLs for all language versions
-  const hreflangUrls = {
-    en: `${baseUrl}/guides/${baseSlug}`,
-    es: `${baseUrl}/es/guides/${baseSlug}`,
-    zh: `${baseUrl}/zh/guides/${baseSlug}`
+  // Canonical should point to the current page (self-referential)
+  // This is the correct approach for multilingual content
+  const canonicalUrl = currentUrl
+  
+  // Check which language versions actually exist for this guide
+  const availableLocales = ['en', 'es', 'zh']
+  const existingVersions: string[] = []
+  
+  for (const loc of availableLocales) {
+    const versionGuide = await loadGuide(baseSlug, loc)
+    if (versionGuide && versionGuide.status === 'published') {
+      existingVersions.push(loc)
+    }
+  }
+  
+  // Build hreflang URLs only for versions that actually exist
+  // These should match the actual URLs that Next.js generates
+  const hreflangUrls: { en?: string; es?: string; zh?: string } = {}
+  if (existingVersions.includes('en')) {
+    hreflangUrls.en = `${baseUrl}/guides/${baseSlug}`
+  }
+  if (existingVersions.includes('es')) {
+    hreflangUrls.es = `${baseUrl}/es/guides/${baseSlug}`
+  }
+  if (existingVersions.includes('zh')) {
+    hreflangUrls.zh = `${baseUrl}/zh/guides/${baseSlug}`
   }
 
   // Find related guides based on shared tags

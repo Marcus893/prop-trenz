@@ -217,6 +217,23 @@ export default function LocationPageComponent({ page, canonicalUrl }: LocationPa
     description: content.metaDescription,
     url: canonicalUrl,
     inLanguage: 'es-MX',
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Inicio',
+          item: baseUrl
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: locationData.name,
+          item: canonicalUrl
+        }
+      ]
+    },
     publisher: {
       '@type': 'Organization',
       name: 'PropTrenz',
@@ -235,7 +252,19 @@ export default function LocationPageComponent({ page, canonicalUrl }: LocationPa
         addressRegion: locationData.city,
         addressCountry: 'MX'
       }
-    }
+    },
+    // Add price information as structured data
+    ...(locationData.averagePrice && {
+      offers: {
+        '@type': 'AggregateOffer',
+        priceCurrency: 'MXN',
+        lowPrice: Math.round(locationData.averagePrice * 0.9),
+        highPrice: Math.round(locationData.averagePrice * 1.1),
+        price: Math.round(locationData.averagePrice),
+        unitCode: 'MTK', // Square meter
+        unitText: 'por metro cuadrado'
+      }
+    })
   }
 
   return (
@@ -243,8 +272,9 @@ export default function LocationPageComponent({ page, canonicalUrl }: LocationPa
       <Head>
         <title>{pageTitle}</title>
         <meta name="description" content={content.metaDescription} />
-        <meta name="robots" content="index, follow" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <link rel="canonical" href={canonicalUrl} />
+        <meta name="keywords" content={`precio inmueble ${locationData.name}, comprar propiedad ${locationData.name}, precio por metro cuadrado ${locationData.name}, mercado inmobiliario ${locationData.city}`} />
         
         {/* Open Graph */}
         <meta property="og:title" content={pageTitle} />
