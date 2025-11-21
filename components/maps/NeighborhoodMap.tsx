@@ -406,6 +406,76 @@ function translateDate(dateString: string, t: (key: string, options?: any) => st
 }
 
 // Component to wrap Marker and store ref
+function MunicipalityMarker({ 
+  municipality,
+  position,
+  avgPrice,
+  neighborhoodCount,
+  color,
+  onMarkerReady,
+  onMunicipalityClick,
+  onChartClick
+}: { 
+  municipality: string
+  position: [number, number]
+  avgPrice: number
+  neighborhoodCount: number
+  color: string
+  onMarkerReady: (municipality: string, markerInstance: L.Marker) => void
+  onMunicipalityClick: (municipality: string) => void
+  onChartClick: (municipality: string) => void
+}) {
+  const { t } = useTranslation('common')
+  const markerRef = useRef<L.Marker | null>(null)
+  
+  // Use callback ref to capture marker instance
+  const setMarkerRef = (markerInstance: L.Marker | null) => {
+    markerRef.current = markerInstance
+    if (markerInstance) {
+      onMarkerReady(municipality, markerInstance)
+    }
+  }
+  
+  const customIcon = createCustomIcon(color, 20)
+  
+  return (
+    <Marker
+      ref={setMarkerRef}
+      position={position}
+      icon={customIcon}
+      eventHandlers={{
+        click: () => onMunicipalityClick(municipality),
+      }}
+    >
+      <Popup 
+        className="leaflet-popup-above-panel"
+        autoPan={true}
+        autoPanPadding={L.point(100, 200)}
+      >
+        <div className="text-center">
+          <h3 className="font-bold text-sm mb-1">{municipality}</h3>
+          <p className="text-xs text-gray-600">
+            {t('map.avg')}: ${Math.round(avgPrice).toLocaleString('es-MX')}/m²
+          </p>
+          <p className="text-xs text-gray-500 mb-2">
+            {neighborhoodCount} {t('map.neighborhoods')}
+          </p>
+          <button
+            onClick={(e) => {
+              e.stopPropagation()
+              onChartClick(municipality)
+            }}
+            className="text-xs text-blue-600 hover:text-blue-800 font-medium px-2 py-1 rounded hover:bg-blue-50 transition-colors"
+            title={t('map.view_chart', 'View price history')}
+          >
+            {t('map.chart', 'Chart')}
+          </button>
+        </div>
+      </Popup>
+    </Marker>
+  )
+}
+
 function NeighborhoodMarker({ 
   marker, 
   onMarkerReady,
@@ -447,7 +517,11 @@ function NeighborhoodMarker({
         }
       }}
     >
-      <Popup className="leaflet-popup-above-panel">
+      <Popup 
+        className="leaflet-popup-above-panel"
+        autoPan={true}
+        autoPanPadding={L.point(100, 200)}
+      >
         <div className="text-center min-w-[100px]">
           <h3 className="font-bold text-sm">{marker.neighborhood.colonia}</h3>
           <p className="text-xs text-gray-600 font-semibold">
@@ -496,6 +570,11 @@ export function NeighborhoodMap({ data, selectedCity: selectedCityProp }: Neighb
   } | null>(null)
   const coordsRef = useRef<Map<string, [number, number]>>(new Map())
   const markerRefs = useRef<Map<string, L.Marker>>(new Map())
+  const municipalityMarkerRefs = useRef<Map<string, L.Marker>>(new Map())
+  
+  const handleMunicipalityMarkerReady = (municipality: string, markerInstance: L.Marker) => {
+    municipalityMarkerRefs.current.set(municipality, markerInstance)
+  }
   
   // Helper functions for URL encoding/decoding
   const encodeName = (name: string): string => {
@@ -1041,6 +1120,7 @@ export function NeighborhoodMap({ data, selectedCity: selectedCityProp }: Neighb
                     neighborhoodZoomedRef.current = true
                     return
                   }
+                  // Pan to the neighborhood location
                   mapInstance.setView(retryCoords, 15, { animate: true, duration: 0.5 })
                   const retryMarker = markerRefs.current.get(key)
                   if (retryMarker) {
@@ -1119,6 +1199,7 @@ export function NeighborhoodMap({ data, selectedCity: selectedCityProp }: Neighb
                 const key = `${selectedMunicipality}-${neighborhood.colonia}`
                 const coords = neighborhoodCoords.get(key)
                 if (coords) {
+                  // Pan to the neighborhood location
                   mapInstance.setView(coords, 15, { animate: true, duration: 0.5 })
                 }
               } catch (e) {
@@ -1785,39 +1866,39 @@ export function NeighborhoodMap({ data, selectedCity: selectedCityProp }: Neighb
         {/* Municipality markers (larger, 20px) */}
         {markers.map((marker) => {
           const color = getPriceColor(marker.avgPrice)
-          const customIcon = createCustomIcon(color, 20)
           
           return (
-            <Marker
+            <MunicipalityMarker
               key={marker.municipality}
+              municipality={marker.municipality}
               position={marker.position}
-              icon={customIcon}
-              eventHandlers={{
-                click: () => setSelectedMunicipality(marker.municipality),
+              avgPrice={marker.avgPrice}
+              neighborhoodCount={marker.neighborhoodCount}
+              color={color}
+              onMarkerReady={handleMunicipalityMarkerReady}
+              onMunicipalityClick={(municipality) => {
+                setSelectedMunicipality(municipality)
+                // Center map on municipality marker - let Leaflet handle popup positioning
+                if (mapInstance) {
+                  try {
+                    if (!mapInstance.getContainer()) return
+                    mapInstance.setView(marker.position, 13, { animate: true, duration: 0.5 })
+                    // Open popup after map has panned
+                    setTimeout(() => {
+                      if (mapInstance && mapInstance.getContainer()) {
+                        const municipalityMarker = municipalityMarkerRefs.current.get(municipality)
+                        if (municipalityMarker) {
+                          municipalityMarker.openPopup()
+                        }
+                      }
+                    }, 600)
+                  } catch (e) {
+                    console.warn('Error centering on municipality marker:', e)
+                  }
+                }
               }}
-            >
-              <Popup className="leaflet-popup-above-panel">
-                <div className="text-center">
-                  <h3 className="font-bold text-sm mb-1">{marker.municipality}</h3>
-                  <p className="text-xs text-gray-600">
-                    {t('map.avg')}: ${Math.round(marker.avgPrice).toLocaleString('es-MX')}/m²
-                  </p>
-                  <p className="text-xs text-gray-500 mb-2">
-                    {marker.neighborhoodCount} {t('map.neighborhoods')}
-                  </p>
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation()
-                      handleMunicipalityChartClick(marker.municipality)
-                    }}
-                    className="text-xs text-blue-600 hover:text-blue-800 font-medium px-2 py-1 rounded hover:bg-blue-50 transition-colors"
-                    title={t('map.view_chart', 'View price history')}
-                  >
-                    {t('map.chart', 'Chart')}
-                  </button>
-                </div>
-              </Popup>
-            </Marker>
+              onChartClick={handleMunicipalityChartClick}
+            />
           )
         })}
         

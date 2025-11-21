@@ -10,7 +10,7 @@ import type { GuideArticle } from '@/lib/pseo/types'
 import { ProtectedContent } from '@/components/content/ProtectedContent'
 import { Badge } from '@/components/ui/badge'
 import { ArrowRight } from 'lucide-react'
-import { parseLinks } from '@/lib/pseo/parseLinks'
+import { parseTextWithReferences } from '@/lib/pseo/parseDataReferences'
 import { Accordion } from '@/components/ui/accordion'
 
 interface RelatedGuide {
@@ -270,14 +270,14 @@ export default function GuidePage({ guide, canonicalUrl, hreflangUrls, isFallbac
                   )}
                   {section.paragraphs.map((paragraph, index) => (
                     <p key={index} className="mt-3 text-base leading-7 text-gray-700">
-                      {parseLinks(paragraph)}
+                      {parseTextWithReferences(paragraph)}
                     </p>
                   ))}
                 </div>
                 {section.bullets && section.bullets.length > 0 && (
                   <ul className="list-disc space-y-2 rounded-xl border border-gray-100 bg-gray-50 p-4 pl-8 text-sm text-gray-700">
                     {section.bullets.map((bullet, index) => (
-                      <li key={index}>{parseLinks(bullet)}</li>
+                      <li key={index}>{parseTextWithReferences(bullet)}</li>
                     ))}
                   </ul>
                 )}
@@ -300,7 +300,7 @@ export default function GuidePage({ guide, canonicalUrl, hreflangUrls, isFallbac
                 <Accordion
                   items={guide.faq.map((item) => ({
                     question: item.question,
-                    answer: <div>{parseLinks(item.answer)}</div>
+                    answer: <div>{parseTextWithReferences(item.answer)}</div>
                   }))}
                 />
               </section>

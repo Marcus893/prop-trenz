@@ -8,8 +8,7 @@ interface ContactRequestBody {
 }
 
 const RESEND_API_KEY = process.env.RESEND_API_KEY
-const CONTACT_RECIPIENT =
-  process.env.CONTACT_FORM_RECIPIENT_EMAIL || 'marcusding1@gmail.com'
+const CONTACT_RECIPIENT = 'proptrenz@gmail.com'
 const CONTACT_FROM =
   process.env.CONTACT_FORM_FROM_EMAIL || 'PropTrenz Contact <support@proptrenz.com>'
 

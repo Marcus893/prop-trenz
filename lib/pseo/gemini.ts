@@ -17,6 +17,9 @@ Primary keywords: ${params.keywords.join(', ')}
 Structured data provided:
 ${dataPoints || 'None'}
 
+**CRITICAL DATA REFERENCE REQUIREMENT:**
+If this guide mentions specific neighborhoods, municipalities, or cities (like "hottest neighborhoods", "best areas", etc.), you MUST include data references for EVERY location mentioned. For example, if you mention "Polanco", you must include {{data:neighborhood:Polanco:Miguel Hidalgo:Ciudad de México:View Polanco prices}} in that same paragraph. This is MANDATORY and non-negotiable.
+
 CRITICAL: Output ONLY valid JSON. Do not wrap the response in markdown code blocks, do not add any explanation text, and do not use triple backticks. Return pure JSON that can be parsed directly.
 
 Output a JSON object with this exact schema:
@@ -79,30 +82,29 @@ CRITICAL CONTENT QUALITY REQUIREMENTS:
    - Each paragraph must provide unique value - no filler or repetition
    - Include specific examples, case studies, real-world scenarios, personal anecdotes, and concrete data
    - Reference specific Mexican regulations, SAT rules, state laws, and notary practices with context
-   - Include regional variations (e.g., "In Mexico City, the process differs from coastal areas...")
    - Use white space effectively - don't create walls of text. Mix paragraph lengths for visual variety
    - Start paragraphs with varied openings: "Here's what I've learned...", "The thing is...", "Now, if you're...", "What most people don't realize..."
 
-4. HUMANIZATION & WRITING STYLE (CRITICAL - THIS MUST SOUND 100% HUMAN):
-   - Write in FIRST PERSON constantly: "I've seen...", "In my experience...", "What I've learned...", "From what I've observed...", "I always tell clients...", "I've noticed...", "Here's what I know..."
-   - Use active voice almost exclusively - passive voice sounds robotic
-   - Vary sentence structure EXTREMELY - mix very short (3-8 words) with medium (12-18 words) and occasional longer (20-25 words)
-   - Start sentences with varied, conversational openings: "But here's the thing...", "Now, when it comes to...", "That said...", "Here's where it gets interesting...", "The reality is...", "Look, here's what happens...", "So here's the deal...", "What I mean is...", "Here's the kicker..."
-   - Use contractions CONSTANTLY: don't, isn't, can't, it's, you'll, they're, we've, I've, that's, here's, there's - aim for 5-8 per paragraph
+4. HUMANIZATION & ANTI-AI SLOP:
+   - Say what you mean directly. use specific details instead of broad contrasts.
+
+   - Vary your rhythm. sometimes use two things. sometimes four. sometimes just one damn thing.
+
+   - If you wouldn't say it in real conversation, don't write it.
+
+   - Use simple, active verbs. "show" not "highlighting." "help" not "facilitating.", avoid corporate speak.
+
+   - State your opinion. Skip the diplomatic warm-up.
+
    - Break up long sentences - humans don't write 30-word sentences. Keep most under 18 words
    - Use "you" constantly to connect: "You'll find...", "If you're looking...", "What you need to know...", "You might be wondering...", "Here's what you should do...", "You're probably thinking..."
-   - Include personal observations and real-world examples: "I've noticed that...", "One thing I always tell clients...", "In practice, what happens is...", "I've seen this happen dozens of times...", "Most people I work with..."
-   - Vary vocabulary aggressively - never use the same word twice in a paragraph. Use synonyms, different phrasings, alternate expressions
-   - Use conversational transitions: "But wait...", "Here's the kicker...", "Now, here's where things get tricky...", "That said...", "On the flip side...", "Here's the thing though...", "But here's what's interesting...", "Now, I know what you're thinking..."
+   - Include personal observations and real-world examples: "I've noticed that...", "In practice, what happens is...", "I've seen this happen dozens of times...", "Most people I work with..."
+   - Vary vocabulary aggressively - never use the same word twice in a paragraph. Use synonyms, different phrasings, alternate expressions.
    - Be direct and conversational - cut corporate speak. Say "It's expensive" not "It represents a significant financial investment". Say "You'll pay around 15,000 pesos" not "The approximate cost is 15,000 pesos"
-   - Use idioms and casual expressions naturally: "It's worth doing your homework", "The market can be a jungle", "Don't put all your eggs in one basket", "At the end of the day", "It's a no-brainer", "That's where things get dicey"
-   - Include rhetorical questions frequently: "But what does this mean for you?", "So how do you navigate this?", "Why does this matter?", "What's the catch?", "Here's the question:"
-   - Add occasional asides and parenthetical thoughts: "(This is where most people get tripped up)", "(I can't stress this enough)", "(Trust me on this one)", "(And I'm not kidding)", "(Seriously, this matters)"
-   - Use numbers and specifics naturally: "About 70% of renters I've worked with...", "Roughly 3 out of 5 properties...", "I'd say around 15,000 pesos...", "Maybe 20% of the time..."
    - Include imperfect, natural phrasing - don't make every sentence perfect. Humans write with slight variations, occasional redundancy, and natural flow
-   - Write like you're talking to someone over coffee, not like you're writing a corporate manual
-   - Use casual connectors: "So...", "Look...", "Now...", "Here's the thing...", "But...", "And..."
-   - Include occasional incomplete thoughts or trailing off: "But that's a whole other story...", "You get the idea...", "And so on..."
+   - Stop using fancy words: "utilize" → use, "execute" → do, "facilitate" → help, "implement" → start, "optimize" → improve, "leverage" → use. Write like you talk, you get the idea.
+   - Ask real questions that require thought to answer, avoid short hook questions.
+
 
 5. BULLET POINTS (CRITICAL - NO REPETITION):
    - Bullet points must ADD NEW INFORMATION not covered in the paragraphs
@@ -131,23 +133,49 @@ CRITICAL CONTENT QUALITY REQUIREMENTS:
    - Use semantic variations and related terms throughout
    - Include long-tail keyword phrases naturally in headings and content
 
-9. EXTERNAL LINKS:
+9. DATA REFERENCES (MANDATORY - THIS IS NON-NEGOTIABLE):
+   - **EVERY TIME** you mention a neighborhood, municipality, or city by name, you MUST include a data reference
+   - **NO EXCEPTIONS** - if you write "Polanco", "Roma", "Condesa", etc., you MUST add a data reference in the SAME paragraph
+   - Format: {{data:type:location:label}} or {{data:type:municipality:city:label}}
+   - IMPORTANT: Data references are plain text strings - include them exactly as shown in your JSON string values
+   
+   - **Examples of CORRECT usage (copy these patterns exactly):**
+     * "Polanco is expensive. {{data:neighborhood:Polanco:Miguel Hidalgo:Ciudad de México:View Polanco prices}} to see current listings."
+     * "Roma Norte and Roma Sur are trendy. {{data:neighborhood:Roma Norte:Cuauhtémoc:Ciudad de México:Explore Roma Norte}} and {{data:neighborhood:Roma Sur:Cuauhtémoc:Ciudad de México:Explore Roma Sur}} are both worth checking out."
+     * "Condesa has great parks. {{data:chart:neighborhood:Condesa:Cuauhtémoc:Ciudad de México:View Condesa price trends}} to see how prices have changed."
+     * "For Mexico City overall, {{data:city:Ciudad de México:Explore Mexico City map}} shows all neighborhoods."
+     * "Juárez is up-and-coming. {{data:neighborhood:Juárez:Cuauhtémoc:Ciudad de México:View Juárez prices}} to explore the area."
+     * "Coyoacán is historic. {{data:municipality:Coyoacán:Ciudad de México:Explore Coyoacán}} for more details."
+   
+   - **MANDATORY RULES:**
+     * If your guide is about "hottest neighborhoods" or "best areas", EVERY single neighborhood you mention MUST have a data reference
+     * Include at least ONE data reference per paragraph that mentions a location
+     * Use chart references when discussing price trends or market analysis
+     * Use neighborhood references for specific areas
+     * Use municipality references for broader areas
+     * **If you mention a neighborhood in a heading, include a data reference in the first paragraph of that section**
+   
+   - CRITICAL: When including data references in JSON strings, they are part of the string value - do not try to escape the curly braces, just include them as regular text within the string
+   - **QUALITY CHECK:** Before finalizing, count how many neighborhoods you mentioned. Every single one MUST have at least one data reference. If you mentioned 10 neighborhoods but only have 2 data references, you've failed this requirement. Go back and add data references for EVERY neighborhood you mentioned.
+
+10. EXTERNAL LINKS:
    - When mentioning websites, services, or external resources, include markdown-style links using the format [text](url)
    - Always use the full URL with https:// protocol
    - Link to relevant government sites, official resources, and reputable platforms
 
-10. AVOID:
+11. AVOID:
    - Repetitive information between paragraphs and bullets
    - Vague statements without specifics
    - Generic advice that could apply to any country
    - Surface-level explanations
    - Filler content or fluff
 
-11. QUALITY CHECK:
+12. QUALITY CHECK:
     - Before finalizing, ensure each section provides unique, valuable information
     - Verify that bullets add new information not in paragraphs
     - Confirm the guide would genuinely help someone navigate the topic comprehensively
     - Ensure the content demonstrates expertise and builds authority
+    - **MANDATORY DATA REFERENCE CHECK:** Count every neighborhood, municipality, and city you mentioned. Every single one MUST have at least one data reference. If you mentioned "Polanco", "Roma", "Condesa", "Juárez", "Coyoacán", etc., each must have a data reference. This is not optional - guides without proper data references will be rejected.
 
 CRITICAL REMINDER: This is NOT an AI article. This is a real expert sharing real knowledge. Write it like you're having a conversation with a friend who asked for your advice. Use "I" and "you" liberally. Include your actual thoughts and observations. Make it sound like a human wrote it after living through these experiences, not like an AI compiled information. If an AI detector reads this, it should think a real person wrote it. Be conversational, be real, be human.`
 }
@@ -185,14 +213,46 @@ function cleanAndParseJSON(content: string): any {
   // Remove any leading/trailing markdown formatting
   cleaned = cleaned.replace(/^```json\s*/i, '').replace(/\s*```$/i, '').trim()
   
-  // Handle control characters that might break JSON parsing
-  // Escape control characters within string values
+  // Try to find the JSON object boundaries if there's extra text
+  const jsonStart = cleaned.indexOf('{')
+  const jsonEnd = cleaned.lastIndexOf('}')
+  if (jsonStart !== -1 && jsonEnd !== -1 && jsonEnd > jsonStart) {
+    cleaned = cleaned.substring(jsonStart, jsonEnd + 1)
+  }
+  
+  // Handle control characters and escape issues within string values
   let jsonText = ''
   let inString = false
   let escapeNext = false
+  let inDataReference = false
+  let dataRefDepth = 0
   
   for (let i = 0; i < cleaned.length; i++) {
     const char = cleaned[i]
+    const nextChar = i + 1 < cleaned.length ? cleaned[i + 1] : ''
+    const prevChar = i > 0 ? cleaned[i - 1] : ''
+    
+    // Track data reference boundaries {{...}}
+    if (char === '{' && nextChar === '{' && !inString) {
+      inDataReference = true
+      dataRefDepth = 0
+      jsonText += char
+      continue
+    }
+    if (inDataReference) {
+      if (char === '{') dataRefDepth++
+      if (char === '}') {
+        dataRefDepth--
+        if (dataRefDepth === 0 && nextChar === '}') {
+          inDataReference = false
+          jsonText += char
+          continue
+        }
+      }
+      // Inside data reference, don't escape - just pass through
+      jsonText += char
+      continue
+    }
     
     if (escapeNext) {
       jsonText += char
@@ -213,25 +273,95 @@ function cleanAndParseJSON(content: string): any {
     }
     
     if (inString) {
-      // Within a string, escape control characters
+      // Within a string, handle special cases
       if (char === '\n') {
         jsonText += '\\n'
       } else if (char === '\r') {
         jsonText += '\\r'
       } else if (char === '\t') {
         jsonText += '\\t'
+      } else if (char === '\b') {
+        jsonText += '\\b'
+      } else if (char === '\f') {
+        jsonText += '\\f'
       } else if (char.charCodeAt(0) < 32 && char !== ' ') {
         // Skip other control characters
         continue
+      } else if (char === '"' && prevChar !== '\\') {
+        // Unescaped quote inside string - escape it
+        jsonText += '\\"'
       } else {
         jsonText += char
       }
     } else {
-      jsonText += char
+      // Outside strings, clean up whitespace issues
+      if (char === '\n' || char === '\r') {
+        // Replace newlines with space if they're not part of structure
+        if (prevChar !== ',' && prevChar !== ':' && prevChar !== '[' && prevChar !== '{') {
+          jsonText += ' '
+        }
+      } else if (char.charCodeAt(0) < 32 && char !== ' ' && char !== '\t') {
+        // Skip other control characters outside strings
+        continue
+      } else {
+        jsonText += char
+      }
     }
   }
   
-  return JSON.parse(jsonText)
+  // Try to fix common JSON issues
+  // Fix trailing commas
+  jsonText = jsonText.replace(/,(\s*[}\]])/g, '$1')
+  
+  // Fix double quotes before property names (e.g., ""answer" -> "answer")
+  jsonText = jsonText.replace(/""([a-zA-Z_$][a-zA-Z0-9_$]*)"\s*:/g, '"$1":')
+  
+  // Fix double quotes in property names that might have been escaped incorrectly
+  jsonText = jsonText.replace(/\\?""([a-zA-Z_$][a-zA-Z0-9_$]*)"\s*:/g, '"$1":')
+  
+  // Try parsing
+  try {
+    return JSON.parse(jsonText)
+  } catch (error) {
+    // If parsing fails, try to extract just the JSON object more aggressively
+    const errorMessage = error instanceof Error ? error.message : String(error)
+    console.error('[pSEO] JSON parse error, attempting recovery...')
+    console.error('[pSEO] Error:', errorMessage)
+    
+    // Try to extract position from error message
+    const positionMatch = errorMessage.match(/position (\d+)/)
+    if (positionMatch) {
+      const position = parseInt(positionMatch[1])
+      const start = Math.max(0, position - 100)
+      const end = Math.min(jsonText.length, position + 100)
+      console.error('[pSEO] Context around error:')
+      console.error(jsonText.substring(start, end))
+    }
+    
+    // Try to find and extract the main JSON object
+    const objMatch = jsonText.match(/\{[\s\S]*\}/)
+    if (objMatch) {
+      try {
+        // Try to fix common issues in the extracted JSON
+        let fixedJson = objMatch[0]
+        // Remove trailing commas
+        fixedJson = fixedJson.replace(/,(\s*[}\]])/g, '$1')
+        // Fix double quotes before property names (e.g., ""answer" -> "answer")
+        fixedJson = fixedJson.replace(/""([a-zA-Z_$][a-zA-Z0-9_$]*)"\s*:/g, '"$1":')
+        // Fix double quotes in property names that might have been escaped incorrectly
+        fixedJson = fixedJson.replace(/\\?""([a-zA-Z_$][a-zA-Z0-9_$]*)"\s*:/g, '"$1":')
+        // Try to fix unclosed strings by finding the last complete object
+        return JSON.parse(fixedJson)
+      } catch (e) {
+        console.error('[pSEO] Recovery attempt failed:', e instanceof Error ? e.message : String(e))
+        // Log a sample of the problematic JSON for debugging
+        console.error('[pSEO] First 500 chars of JSON:', jsonText.substring(0, 500))
+        throw error
+      }
+    }
+    
+    throw error
+  }
 }
 
 export async function generateGuideDraft(params: GenerateGuideParams): Promise<GuideDraft> {
