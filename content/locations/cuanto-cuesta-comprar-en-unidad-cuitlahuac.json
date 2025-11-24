@@ -1,0 +1,116 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-unidad-cuitlahuac",
+  "locationName": "Unidad Cuitlahuac",
+  "locationType": "neighborhood",
+  "city": "Ciudad de México",
+  "municipality": "Azcapotzalco",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Unidad Cuitlahuac?",
+    "metaTitle": "Unidad Cuitlahuac: Precios Propiedades 2024 | $38,187/m²",
+    "metaDescription": "¿Pensando en invertir en Unidad Cuitlahuac? Descubre el precio promedio por metro cuadrado: $38,187. ¡Entérate de la tendencia y decide inteligentemente!",
+    "introduction": "La Unidad Cuitlahuac, ubicada en la alcaldía Azcapotzalco, es una opción cada vez más atractiva para quienes buscan comprar un hogar en la Ciudad de México. Con su ambiente familiar y cercanía a importantes vías de comunicación, esta colonia ofrece una excelente calidad de vida. Actualmente, el precio promedio por metro cuadrado se sitúa en $38,187, haciendo que sea una alternativa interesante dentro del mercado inmobiliario de la capital.\n\nSi estás considerando la Unidad Cuitlahuac como tu próximo hogar, ¡llegaste al lugar correcto! Aquí te daremos una idea clara de lo que puedes esperar en cuanto a precios y por qué esta zona está ganando popularidad. Además, te contaremos sobre algunos lugares que hacen de esta colonia un lugar especial para vivir. ¡Sigue leyendo!",
+    "mustVisitSpots": [
+      {
+        "name": "Parque Cuitlahuac",
+        "description": "Ideal para relajarse o hacer ejercicio al aire libre, este parque ofrece áreas verdes, juegos infantiles y canchas deportivas."
+      },
+      {
+        "name": "Mercado Cuitlahuac",
+        "description": "Un lugar vibrante donde puedes encontrar productos frescos, comida deliciosa y artículos para el hogar a precios accesibles."
+      },
+      {
+        "name": "Avenidas Principales",
+        "description": "Explora las avenidas principales llenas de comercio local, desde restaurantes hasta tiendas de ropa y servicios."
+      },
+      {
+        "name": "Centros Comunitarios",
+        "description": "La Unidad Cuitlahuac cuenta con diversos centros comunitarios que ofrecen actividades culturales y recreativas para todas las edades."
+      }
+    ],
+    "priceInsights": "Con un precio promedio de $38,187 por metro cuadrado, la Unidad Cuitlahuac se posiciona como una opción accesible en comparación con otras zonas más céntricas de la Ciudad de México. Si bien este precio es un promedio, debes considerar que puede variar dependiendo del tamaño, la ubicación exacta dentro de la colonia y las características específicas de la propiedad.\n\nDurante los últimos 7 meses, hemos observado una tendencia al alza en los precios de las propiedades en la Unidad Cuitlahuac. Esta tendencia podría estar influenciada por factores como el desarrollo de nuevas infraestructuras en la zona, el aumento en la demanda de vivienda y la mejora en los servicios públicos. ¡No te duermas en los laureles si estás pensando en comprar aquí!",
+    "slug": "cuanto-cuesta-comprar-en-unidad-cuitlahuac"
+  },
+  "locationData": {
+    "name": "Unidad Cuitlahuac",
+    "type": "neighborhood",
+    "city": "Ciudad de México",
+    "municipality": "Azcapotzalco",
+    "neighborhoods": [
+      {
+        "colonia": "Unidad Cuitlahuac",
+        "precio": "38187",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Unidad Cuitlahuac",
+        "precio": "37983",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Unidad Cuitlahuac",
+        "precio": "36770",
+        "mes": "May 2025"
+      },
+      {
+        "colonia": "Unidad Cuitlahuac",
+        "precio": "35616",
+        "mes": "April 2025"
+      },
+      {
+        "colonia": "Unidad Cuitlahuac",
+        "precio": "34933",
+        "mes": "March 2025"
+      },
+      {
+        "colonia": "Unidad Cuitlahuac",
+        "precio": "34371",
+        "mes": "February 2025"
+      },
+      {
+        "colonia": "Unidad Cuitlahuac",
+        "precio": "32509",
+        "mes": "October 2024"
+      }
+    ],
+    "averagePrice": 38187,
+    "priceHistory": [
+      {
+        "month": "October 2024",
+        "price": 32509,
+        "date": "2024-10-01T06:00:00.000Z"
+      },
+      {
+        "month": "February 2025",
+        "price": 34371,
+        "date": "2025-02-01T06:00:00.000Z"
+      },
+      {
+        "month": "March 2025",
+        "price": 34933,
+        "date": "2025-03-01T06:00:00.000Z"
+      },
+      {
+        "month": "April 2025",
+        "price": 35616,
+        "date": "2025-04-01T06:00:00.000Z"
+      },
+      {
+        "month": "May 2025",
+        "price": 36770,
+        "date": "2025-05-01T06:00:00.000Z"
+      },
+      {
+        "month": "June 2025",
+        "price": 37983,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 38187,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-24T21:30:22.023Z",
+  "updatedAt": "2025-11-24T21:30:22.023Z"
+}

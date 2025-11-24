@@ -1,0 +1,171 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-barrio-santa-catarina",
+  "locationName": "Barrio Santa Catarina",
+  "locationType": "neighborhood",
+  "city": "Ciudad de México",
+  "municipality": "Coyoacán",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Santa Catarina, CDMX?",
+    "metaTitle": "Precios en Barrio Santa Catarina CDMX | $51,633/m²",
+    "metaDescription": "Descubre los precios de bienes raíces en Barrio Santa Catarina, Coyoacán. Precio promedio $51,633/m². ¡Encuentra tu hogar ideal en esta joya de la CDMX!",
+    "introduction": "¿Pensando en comprar casa o depa en la Ciudad de México? Barrio Santa Catarina, en Coyoacán, podría ser justo lo que estás buscando. Este encantador rinconcito ofrece una mezcla de tradición y modernidad, con calles empedradas y un ambiente tranquilo que te robará el corazón. Actualmente, el precio promedio por metro cuadrado aquí ronda los $51,633 pesos.\n\nSanta Catarina es conocido por su ambiente bohemio y su cercanía a lugares emblemáticos de Coyoacán. Es un lugar ideal para quienes buscan un estilo de vida relajado sin alejarse de la vibrante vida cultural de la ciudad. Aunque los precios han mostrado una ligera tendencia a la baja en los últimos 12 meses, sigue siendo una inversión atractiva.",
+    "mustVisitSpots": [
+      {
+        "name": "Parroquia de Santa Catarina",
+        "description": "Un hermoso templo que data del siglo XVI, un punto de referencia icónico en el barrio."
+      },
+      {
+        "name": "Plaza de Santa Catarina",
+        "description": "El corazón del barrio, perfecta para relajarse, disfrutar de un café y observar la vida local."
+      },
+      {
+        "name": "Mercado de Santa Catarina",
+        "description": "Un mercado tradicional donde encontrarás productos frescos, antojitos mexicanos y artesanías locales."
+      },
+      {
+        "name": "Restaurante Corazón de Maguey",
+        "description": "Un lugar popular para degustar la gastronomía oaxaqueña en un ambiente acogedor."
+      }
+    ],
+    "priceInsights": "Con un precio promedio de $51,633 pesos por metro cuadrado, Barrio Santa Catarina se posiciona como una opción atractiva dentro de Coyoacán y la Ciudad de México en general. Si bien puede no ser la colonia más económica, ofrece un excelente equilibrio entre precio, ubicación y calidad de vida. La ligera disminución en los precios durante los últimos 12 meses podría presentar una oportunidad interesante para quienes buscan invertir. Factores como la cercanía al centro de Coyoacán, la oferta de servicios y el ambiente tranquilo del barrio son elementos que influyen positivamente en el valor de las propiedades.",
+    "slug": "cuanto-cuesta-comprar-en-barrio-santa-catarina"
+  },
+  "locationData": {
+    "name": "Barrio Santa Catarina",
+    "type": "neighborhood",
+    "city": "Ciudad de México",
+    "municipality": "Coyoacán",
+    "neighborhoods": [
+      {
+        "colonia": "Barrio Santa Catarina",
+        "precio": "51741",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Barrio Santa Catarina",
+        "precio": "51633",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Barrio Santa Catarina",
+        "precio": "54529",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Barrio Santa Catarina",
+        "precio": "56715",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Barrio Santa Catarina",
+        "precio": "59602",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Barrio Santa Catarina",
+        "precio": "59691",
+        "mes": "May 2025"
+      },
+      {
+        "colonia": "Barrio Santa Catarina",
+        "precio": "61281",
+        "mes": "April 2025"
+      },
+      {
+        "colonia": "Barrio Santa Catarina",
+        "precio": "62942",
+        "mes": "March 2025"
+      },
+      {
+        "colonia": "Barrio Santa Catarina",
+        "precio": "63695",
+        "mes": "February 2025"
+      },
+      {
+        "colonia": "Barrio Santa Catarina",
+        "precio": "62527",
+        "mes": "January 2025"
+      },
+      {
+        "colonia": "Barrio Santa Catarina",
+        "precio": "61870",
+        "mes": "December 2024"
+      },
+      {
+        "colonia": "Barrio Santa Catarina",
+        "precio": "61896",
+        "mes": "November 2024"
+      },
+      {
+        "colonia": "Barrio Santa Catarina",
+        "precio": "64389",
+        "mes": "October 2024"
+      }
+    ],
+    "averagePrice": 51633,
+    "priceHistory": [
+      {
+        "month": "October 2024",
+        "price": 64389,
+        "date": "2024-10-01T06:00:00.000Z"
+      },
+      {
+        "month": "November 2024",
+        "price": 61896,
+        "date": "2024-11-01T06:00:00.000Z"
+      },
+      {
+        "month": "December 2024",
+        "price": 61870,
+        "date": "2024-12-01T06:00:00.000Z"
+      },
+      {
+        "month": "February 2025",
+        "price": 63695,
+        "date": "2025-02-01T06:00:00.000Z"
+      },
+      {
+        "month": "March 2025",
+        "price": 62942,
+        "date": "2025-03-01T06:00:00.000Z"
+      },
+      {
+        "month": "April 2025",
+        "price": 61281,
+        "date": "2025-04-01T06:00:00.000Z"
+      },
+      {
+        "month": "May 2025",
+        "price": 59691,
+        "date": "2025-05-01T06:00:00.000Z"
+      },
+      {
+        "month": "June 2025",
+        "price": 59602,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 56715,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 54529,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 51741,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 51633,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-24T21:30:34.007Z",
+  "updatedAt": "2025-11-24T21:30:34.007Z"
+}

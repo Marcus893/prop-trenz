@@ -1,0 +1,171 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-contadero",
+  "locationName": "Contadero",
+  "locationType": "neighborhood",
+  "city": "Ciudad de México",
+  "municipality": "Cuajimalpa de Morelos",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Contadero, CDMX?",
+    "metaTitle": "Precios en Contadero CDMX | $56,443/m² | Actualizado",
+    "metaDescription": "Descubre los precios de casas y depas en Contadero, CDMX. Precio promedio: $56,443/m². ¡Conoce por qué esta zona de Cuajimalpa es tan atractiva!",
+    "introduction": "Si estás pensando en comprar casa o depa en la Ciudad de México, Contadero es una opción que definitivamente tenés que considerar. Ubicada en la alcaldía Cuajimalpa de Morelos, esta colonia te ofrece un ambiente tranquilo y acceso a muchas comodidades. Actualmente, el precio promedio por metro cuadrado en Contadero ronda los $56,443 pesos. \n\nContadero es atractiva por su cercanía a zonas como Santa Fe y su ambiente más relajado, alejado del bullicio del centro de la ciudad. Además, los precios han estado aumentando en los últimos 12 meses, lo que la convierte en una buena inversión a futuro.",
+    "mustVisitSpots": [
+      {
+        "name": "Parque La Mexicana (cercano)",
+        "description": "Aunque no está *exactamente* en Contadero, este parque es un espacio verde enorme con actividades para toda la familia y a solo unos minutos."
+      },
+      {
+        "name": "Restaurantes en la Carretera México-Toluca",
+        "description": "Encontrarás una gran variedad de opciones gastronómicas, desde antojitos mexicanos hasta restaurantes con vistas panorámicas."
+      },
+      {
+        "name": "Centros Comerciales en Santa Fe (cercanos)",
+        "description": "Tenés acceso rápido a centros comerciales de primer nivel con tiendas, restaurantes y entretenimiento."
+      },
+      {
+        "name": "Mercado de Contadero",
+        "description": "Un lugar ideal para encontrar productos frescos y comida típica de la región, además de conocer a los vecinos."
+      }
+    ],
+    "priceInsights": "El precio promedio de $56,443 pesos por metro cuadrado en Contadero es competitivo considerando su ubicación en Cuajimalpa y la cercanía a Santa Fe. Si lo comparamos con otras zonas de la Ciudad de México, Contadero ofrece una buena relación calidad-precio, especialmente si buscas un ambiente más tranquilo y familiar. \n\nEs importante tener en cuenta que los precios en Contadero han estado aumentando en los últimos meses, lo cual indica una creciente demanda y un potencial de inversión interesante. Factores como la construcción de nuevos desarrollos, la mejora de la infraestructura y la demanda por espacios más alejados del centro, están influyendo en este incremento de precios.",
+    "slug": "cuanto-cuesta-comprar-en-contadero"
+  },
+  "locationData": {
+    "name": "Contadero",
+    "type": "neighborhood",
+    "city": "Ciudad de México",
+    "municipality": "Cuajimalpa de Morelos",
+    "neighborhoods": [
+      {
+        "colonia": "Contadero",
+        "precio": "56501",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Contadero",
+        "precio": "56443",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Contadero",
+        "precio": "56967",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Contadero",
+        "precio": "57589",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Contadero",
+        "precio": "57799",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Contadero",
+        "precio": "57141",
+        "mes": "May 2025"
+      },
+      {
+        "colonia": "Contadero",
+        "precio": "56475",
+        "mes": "April 2025"
+      },
+      {
+        "colonia": "Contadero",
+        "precio": "56081",
+        "mes": "March 2025"
+      },
+      {
+        "colonia": "Contadero",
+        "precio": "56152",
+        "mes": "February 2025"
+      },
+      {
+        "colonia": "Contadero",
+        "precio": "56188",
+        "mes": "January 2025"
+      },
+      {
+        "colonia": "Contadero",
+        "precio": "56307",
+        "mes": "December 2024"
+      },
+      {
+        "colonia": "Contadero",
+        "precio": "56301",
+        "mes": "November 2024"
+      },
+      {
+        "colonia": "Contadero",
+        "precio": "56236",
+        "mes": "October 2024"
+      }
+    ],
+    "averagePrice": 56443,
+    "priceHistory": [
+      {
+        "month": "October 2024",
+        "price": 56236,
+        "date": "2024-10-01T06:00:00.000Z"
+      },
+      {
+        "month": "November 2024",
+        "price": 56301,
+        "date": "2024-11-01T06:00:00.000Z"
+      },
+      {
+        "month": "December 2024",
+        "price": 56307,
+        "date": "2024-12-01T06:00:00.000Z"
+      },
+      {
+        "month": "February 2025",
+        "price": 56152,
+        "date": "2025-02-01T06:00:00.000Z"
+      },
+      {
+        "month": "March 2025",
+        "price": 56081,
+        "date": "2025-03-01T06:00:00.000Z"
+      },
+      {
+        "month": "April 2025",
+        "price": 56475,
+        "date": "2025-04-01T06:00:00.000Z"
+      },
+      {
+        "month": "May 2025",
+        "price": 57141,
+        "date": "2025-05-01T06:00:00.000Z"
+      },
+      {
+        "month": "June 2025",
+        "price": 57799,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 57589,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 56967,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 56501,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 56443,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-24T21:33:23.471Z",
+  "updatedAt": "2025-11-24T21:33:23.471Z"
+}

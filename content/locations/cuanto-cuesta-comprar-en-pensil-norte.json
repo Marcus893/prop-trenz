@@ -1,0 +1,121 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-pensil-norte",
+  "locationName": "Pensil Norte",
+  "locationType": "neighborhood",
+  "city": "Ciudad de México",
+  "municipality": "Miguel Hidalgo",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Pensil Norte?",
+    "metaTitle": "Precios en Pensil Norte CDMX 2024 | $45,227/m²",
+    "metaDescription": "Descubre el precio promedio por metro cuadrado en Pensil Norte, Ciudad de México: $45,227/m². ¡Entérate si es el momento ideal para invertir en esta colonia!",
+    "introduction": "Si estás considerando comprar casa o departamento en la Ciudad de México, Pensil Norte es una colonia que vale la pena tener en el radar. Ubicada en la alcaldía Miguel Hidalgo, esta zona ofrece una mezcla de tranquilidad y acceso a importantes vialidades y servicios. Actualmente, el precio promedio por metro cuadrado en Pensil Norte ronda los $45,227 pesos.\n\nPensil Norte es una opción atractiva para quienes buscan una buena relación calidad-precio dentro de la CDMX. Aunque los precios han mostrado una ligera tendencia a la baja en los últimos meses, la colonia sigue siendo una zona con mucho potencial. ¡Vamos a explorar qué hace a Pensil Norte tan especial y cómo se mueven los precios por aquí!",
+    "mustVisitSpots": [
+      {
+        "name": "Parque Lira",
+        "description": "Un espacio verde perfecto para relajarse, hacer ejercicio o pasear a tu mascota. Es un punto de encuentro popular entre los vecinos de la zona."
+      },
+      {
+        "name": "Mercado Pensil",
+        "description": "Aquí encontrarás una gran variedad de productos frescos, comida típica y todo lo necesario para el día a día. ¡Ideal para sumergirte en la cultura local!"
+      },
+      {
+        "name": "Avenida Marina Nacional",
+        "description": "Esta importante vialidad te conecta rápidamente con otras zonas de la ciudad y ofrece acceso a una gran variedad de restaurantes y comercios."
+      },
+      {
+        "name": "Tianguis de la Pensil",
+        "description": "Cada semana, este tianguis se instala con una gran variedad de productos, desde ropa y calzado hasta artículos para el hogar y comida preparada. ¡Un excelente lugar para encontrar gangas!"
+      }
+    ],
+    "priceInsights": "Con un precio promedio de $45,227 pesos por metro cuadrado, Pensil Norte se ubica como una opción accesible en comparación con otras colonias dentro de la alcaldía Miguel Hidalgo y la Ciudad de México en general. Si bien hemos observado una ligera disminución en los precios durante los últimos 7 meses, esto podría representar una oportunidad para aquellos que buscan invertir a mediano o largo plazo.\n\nEs importante considerar que diversos factores pueden influir en los precios de las propiedades en Pensil Norte. La ubicación específica dentro de la colonia, el tamaño y las características de la propiedad, así como las condiciones del mercado inmobiliario en general, son elementos clave a tener en cuenta al momento de tomar una decisión.",
+    "slug": "cuanto-cuesta-comprar-en-pensil-norte"
+  },
+  "locationData": {
+    "name": "Pensil Norte",
+    "type": "neighborhood",
+    "city": "Ciudad de México",
+    "municipality": "Miguel Hidalgo",
+    "neighborhoods": [
+      {
+        "colonia": "Pensil Norte",
+        "precio": "44741",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pensil Norte",
+        "precio": "45227",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Pensil Norte",
+        "precio": "43573",
+        "mes": "March 2025"
+      },
+      {
+        "colonia": "Pensil Norte",
+        "precio": "42970",
+        "mes": "February 2025"
+      },
+      {
+        "colonia": "Pensil Norte",
+        "precio": "40363",
+        "mes": "January 2025"
+      },
+      {
+        "colonia": "Pensil Norte",
+        "precio": "77899",
+        "mes": "December 2024"
+      },
+      {
+        "colonia": "Pensil Norte",
+        "precio": "94997",
+        "mes": "November 2024"
+      },
+      {
+        "colonia": "Pensil Norte",
+        "precio": "154258",
+        "mes": "October 2024"
+      }
+    ],
+    "averagePrice": 45227,
+    "priceHistory": [
+      {
+        "month": "October 2024",
+        "price": 154258,
+        "date": "2024-10-01T06:00:00.000Z"
+      },
+      {
+        "month": "November 2024",
+        "price": 94997,
+        "date": "2024-11-01T06:00:00.000Z"
+      },
+      {
+        "month": "December 2024",
+        "price": 77899,
+        "date": "2024-12-01T06:00:00.000Z"
+      },
+      {
+        "month": "February 2025",
+        "price": 42970,
+        "date": "2025-02-01T06:00:00.000Z"
+      },
+      {
+        "month": "March 2025",
+        "price": 43573,
+        "date": "2025-03-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 44741,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 45227,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-24T21:41:33.624Z",
+  "updatedAt": "2025-11-24T21:41:33.624Z"
+}

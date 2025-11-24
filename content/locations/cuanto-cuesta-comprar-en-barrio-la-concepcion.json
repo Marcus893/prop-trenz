@@ -1,0 +1,161 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-barrio-la-concepcion",
+  "locationName": "Barrio La Concepcion",
+  "locationType": "neighborhood",
+  "city": "Ciudad de México",
+  "municipality": "Coyoacán",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Barrio La Concepcion?",
+    "metaTitle": "Precios en Barrio La Concepcion, CDMX | $45,213/m² (2024)",
+    "metaDescription": "¿Buscando casa en Coyoacán? Descubre el precio promedio por metro cuadrado en Barrio La Concepcion: ¡$45,213/m²! Encuentra tu hogar ideal con esta guía de precios actualizada.",
+    "introduction": "Si estás pensando en comprar una propiedad en la Ciudad de México, Barrio La Concepcion, en Coyoacán, es una opción que definitivamente debes considerar. Con su ambiente tranquilo, calles arboladas y cercanía a importantes puntos de interés, este barrio ofrece una excelente calidad de vida. Actualmente, el precio promedio por metro cuadrado se encuentra alrededor de los $45,213 pesos, lo que lo convierte en una opción atractiva dentro de la zona sur de la ciudad.\n\nAunque el mercado inmobiliario es dinámico, los datos de los últimos 11 meses sugieren una ligera tendencia a la baja en los precios. Esto podría significar una oportunidad para encontrar una buena inversión a un precio más accesible. Pero, antes de tomar una decisión, ¡exploremos un poco más este encantador barrio!",
+    "mustVisitSpots": [
+      {
+        "name": "Parroquia de la Purísima Concepción",
+        "description": "Esta iglesia histórica es el corazón del barrio y un punto de referencia obligado. Su arquitectura colonial es impresionante y ofrece un respiro de la vida moderna."
+      },
+      {
+        "name": "Parque de la Conchita",
+        "description": "Un pequeño parque ideal para relajarse, leer un libro o simplemente disfrutar del aire fresco. Es un lugar tranquilo perfecto para desconectar."
+      },
+      {
+        "name": "Mercado de la Concepcion",
+        "description": "Aquí encontrarás una gran variedad de productos frescos, comida tradicional y artesanías locales. ¡Ideal para experimentar la auténtica vida de barrio!"
+      },
+      {
+        "name": "Cafeterías y restaurantes sobre la calle Cerro del Agua",
+        "description": "Disfruta de una tarde agradable explorando las diversas opciones gastronómicas que ofrecen las cafeterías y restaurantes de la zona. Hay algo para todos los gustos."
+      }
+    ],
+    "priceInsights": "El precio promedio de $45,213 pesos por metro cuadrado en Barrio La Concepcion se sitúa en un rango competitivo dentro del mercado inmobiliario de la Ciudad de México, especialmente considerando su ubicación privilegiada en Coyoacán. Si bien este precio puede parecer elevado, es importante compararlo con otras colonias de la zona, donde los precios pueden ser significativamente más altos.\n\nLa ligera tendencia a la baja observada en los últimos meses podría ser atribuible a diversos factores, como las condiciones económicas generales, la oferta y demanda de propiedades en la zona, o incluso proyectos de desarrollo cercanos. Es importante estar atento a estas fluctuaciones y analizar cuidadosamente el mercado antes de tomar una decisión de compra.",
+    "slug": "cuanto-cuesta-comprar-en-barrio-la-concepcion"
+  },
+  "locationData": {
+    "name": "Barrio La Concepcion",
+    "type": "neighborhood",
+    "city": "Ciudad de México",
+    "municipality": "Coyoacán",
+    "neighborhoods": [
+      {
+        "colonia": "Barrio La Concepcion",
+        "precio": "45213",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Barrio La Concepcion",
+        "precio": "54239",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Barrio La Concepcion",
+        "precio": "59681",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Barrio La Concepcion",
+        "precio": "67139",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Barrio La Concepcion",
+        "precio": "67175",
+        "mes": "May 2025"
+      },
+      {
+        "colonia": "Barrio La Concepcion",
+        "precio": "69313",
+        "mes": "April 2025"
+      },
+      {
+        "colonia": "Barrio La Concepcion",
+        "precio": "67489",
+        "mes": "March 2025"
+      },
+      {
+        "colonia": "Barrio La Concepcion",
+        "precio": "65745",
+        "mes": "February 2025"
+      },
+      {
+        "colonia": "Barrio La Concepcion",
+        "precio": "62255",
+        "mes": "January 2025"
+      },
+      {
+        "colonia": "Barrio La Concepcion",
+        "precio": "60939",
+        "mes": "December 2024"
+      },
+      {
+        "colonia": "Barrio La Concepcion",
+        "precio": "59895",
+        "mes": "November 2024"
+      },
+      {
+        "colonia": "Barrio La Concepcion",
+        "precio": "60305",
+        "mes": "October 2024"
+      }
+    ],
+    "averagePrice": 45213,
+    "priceHistory": [
+      {
+        "month": "October 2024",
+        "price": 60305,
+        "date": "2024-10-01T06:00:00.000Z"
+      },
+      {
+        "month": "November 2024",
+        "price": 59895,
+        "date": "2024-11-01T06:00:00.000Z"
+      },
+      {
+        "month": "December 2024",
+        "price": 60939,
+        "date": "2024-12-01T06:00:00.000Z"
+      },
+      {
+        "month": "February 2025",
+        "price": 65745,
+        "date": "2025-02-01T06:00:00.000Z"
+      },
+      {
+        "month": "March 2025",
+        "price": 67489,
+        "date": "2025-03-01T06:00:00.000Z"
+      },
+      {
+        "month": "April 2025",
+        "price": 69313,
+        "date": "2025-04-01T06:00:00.000Z"
+      },
+      {
+        "month": "May 2025",
+        "price": 67175,
+        "date": "2025-05-01T06:00:00.000Z"
+      },
+      {
+        "month": "June 2025",
+        "price": 67139,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 59681,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 54239,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 45213,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-24T21:31:06.364Z",
+  "updatedAt": "2025-11-24T21:31:06.364Z"
+}

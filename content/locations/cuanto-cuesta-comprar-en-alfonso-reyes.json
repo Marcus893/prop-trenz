@@ -1,0 +1,86 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-alfonso-reyes",
+  "locationName": "Alfonso Reyes",
+  "locationType": "neighborhood",
+  "city": "Monterrey",
+  "municipality": "Monterrey",
+  "content": {
+    "title": "Cuánto Cuesta Comprar en Alfonso Reyes, Monterrey",
+    "metaTitle": "Precios en Alfonso Reyes Mty 2024 | $145,695/m²",
+    "metaDescription": "¿Pensando en invertir en Alfonso Reyes? Descubre los precios actualizados en Monterrey, desde $145,695/m². ¡Encuentra la propiedad ideal hoy mismo!",
+    "introduction": "¿Te late la idea de vivir en Alfonso Reyes, Monterrey? Esta colonia está súper bien ubicada, conectada y tiene un ambiente que enamora. Si estás considerando comprar una propiedad por aquí, una de las primeras cosas que te preguntarás es: ¿cuánto cuesta? Actualmente, el precio promedio ronda los $145,695 por metro cuadrado.\n\nClaro, el precio puede variar dependiendo del tipo de propiedad, su ubicación específica dentro de Alfonso Reyes y sus características. Pero este promedio te da una buena idea de lo que puedes esperar. En los últimos meses hemos visto una ligera tendencia a la baja, así que este puede ser un buen momento para explorar tus opciones.",
+    "mustVisitSpots": [
+      {
+        "name": "Parque Fundidora",
+        "description": "Aunque técnicamente no está *en* Alfonso Reyes, está a un brinquito y es perfecto para un paseo, hacer ejercicio o disfrutar de eventos culturales."
+      },
+      {
+        "name": "Cintermex",
+        "description": "Este centro de convenciones siempre tiene algo interesante, desde exposiciones hasta eventos empresariales. ¡Siempre hay algo que ver!"
+      },
+      {
+        "name": "Galerías Monterrey",
+        "description": "Un centro comercial con muchísimas opciones para ir de compras, comer algo rico o simplemente pasar un buen rato."
+      },
+      {
+        "name": "Restaurantes y Cafés en Av. Garza Sada",
+        "description": "A unas cuadras de Alfonso Reyes encontrarás una gran variedad de restaurantes y cafés con opciones para todos los gustos."
+      }
+    ],
+    "priceInsights": "El precio promedio actual en Alfonso Reyes, de $145,695 por metro cuadrado, lo sitúa en un rango competitivo dentro de Monterrey. Si comparamos con otras colonias de la ciudad, Alfonso Reyes ofrece una buena relación entre ubicación, servicios y precio. Aunque hemos visto una ligera disminución en los precios en los últimos 4 meses, es importante recordar que el mercado inmobiliario es dinámico y puede verse afectado por diversos factores. La cercanía a centros de trabajo, universidades y vías principales como Garza Sada hacen que Alfonso Reyes siga siendo una opción atractiva para invertir y vivir.",
+    "slug": "cuanto-cuesta-comprar-en-alfonso-reyes"
+  },
+  "locationData": {
+    "name": "Alfonso Reyes",
+    "type": "neighborhood",
+    "city": "Monterrey",
+    "municipality": "Monterrey",
+    "neighborhoods": [
+      {
+        "colonia": "Alfonso Reyes",
+        "precio": "145695",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Alfonso Reyes",
+        "precio": "148471",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Alfonso Reyes",
+        "precio": "149040",
+        "mes": "May 2025"
+      },
+      {
+        "colonia": "Alfonso Reyes",
+        "precio": "150944",
+        "mes": "April 2025"
+      }
+    ],
+    "averagePrice": 145695,
+    "priceHistory": [
+      {
+        "month": "April 2025",
+        "price": 150944,
+        "date": "2025-04-01T06:00:00.000Z"
+      },
+      {
+        "month": "May 2025",
+        "price": 149040,
+        "date": "2025-05-01T06:00:00.000Z"
+      },
+      {
+        "month": "June 2025",
+        "price": 148471,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 145695,
+        "date": "2025-07-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-24T21:25:45.837Z",
+  "updatedAt": "2025-11-24T21:25:45.837Z"
+}

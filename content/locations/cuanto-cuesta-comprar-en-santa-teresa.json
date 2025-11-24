@@ -1,0 +1,171 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-santa-teresa",
+  "locationName": "Santa Teresa",
+  "locationType": "neighborhood",
+  "city": "Ciudad de México",
+  "municipality": "La Magdalena Contreras",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Santa Teresa?",
+    "metaTitle": "Precios en Santa Teresa CDMX | $39,521/m² | Actualizado",
+    "metaDescription": "¿Pensando en comprar en Santa Teresa? Descubre el precio promedio actual por metro cuadrado: $39,521. ¡Infórmate y toma la mejor decisión! Datos actualizados.",
+    "introduction": "¿Te late la idea de invertir en bienes raíces en la CDMX? Santa Teresa, en la alcaldía La Magdalena Contreras, es una colonia con mucho encanto que quizá no está en tu radar, ¡pero debería! Aquí, el precio promedio por metro cuadrado anda alrededor de los $39,521 pesos. Su ubicación, rodeada de naturaleza y con fácil acceso a servicios, la hace bastante atractiva.\n\nClaro, el mercado inmobiliario siempre está cambiando. En los últimos meses, hemos visto una ligera disminución en los precios, así que ¡ponte las pilas si estás buscando una buena oportunidad! Vamos a explorar un poquito más de lo que Santa Teresa tiene para ofrecer y qué onda con sus precios.",
+    "mustVisitSpots": [
+      {
+        "name": "Parque de la Marquesa",
+        "description": "Ideal para un fin de semana en familia, con áreas verdes para relajarse y disfrutar de la naturaleza."
+      },
+      {
+        "name": "Restaurantes en Avenida San Jerónimo",
+        "description": "Aunque no están precisamente en Santa Teresa, la cercanía a San Jerónimo ofrece una amplia variedad de opciones gastronómicas para todos los gustos."
+      },
+      {
+        "name": "Mercado de la Magdalena Contreras",
+        "description": "Un lugar perfecto para encontrar productos frescos, comida tradicional y artesanías locales."
+      },
+      {
+        "name": "Senderos en el Ajusco",
+        "description": "Si te gusta el senderismo y la aventura, los senderos cercanos al Ajusco son una excelente opción para disfrutar de la naturaleza."
+      }
+    ],
+    "priceInsights": "Ahorita, el precio promedio en Santa Teresa está en $39,521 pesos por metro cuadrado. Si lo comparamos con otras zonas de la CDMX, podríamos decir que está en un rango intermedio. No es de las colonias más caras, pero tampoco de las más económicas. Esto se debe a su ubicación privilegiada en La Magdalena Contreras, que ofrece un equilibrio entre tranquilidad y acceso a la ciudad.\n\nAhora, es importante considerar que el mercado ha estado un poco a la baja en los últimos 12 meses. Esto no significa que sea un mal momento para invertir, ¡al contrario! Podría ser una oportunidad para encontrar buenas ofertas. Varios factores influyen en los precios, como la disponibilidad de terrenos, los proyectos de construcción nuevos y la demanda de vivienda en la zona. Así que, ¡mantente atento y asesórate bien antes de tomar una decisión!",
+    "slug": "cuanto-cuesta-comprar-en-santa-teresa"
+  },
+  "locationData": {
+    "name": "Santa Teresa",
+    "type": "neighborhood",
+    "city": "Ciudad de México",
+    "municipality": "La Magdalena Contreras",
+    "neighborhoods": [
+      {
+        "colonia": "Santa Teresa",
+        "precio": "39217",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Santa Teresa",
+        "precio": "39521",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Santa Teresa",
+        "precio": "39368",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Santa Teresa",
+        "precio": "39421",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Santa Teresa",
+        "precio": "39721",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Santa Teresa",
+        "precio": "39303",
+        "mes": "May 2025"
+      },
+      {
+        "colonia": "Santa Teresa",
+        "precio": "39025",
+        "mes": "April 2025"
+      },
+      {
+        "colonia": "Santa Teresa",
+        "precio": "45222",
+        "mes": "March 2025"
+      },
+      {
+        "colonia": "Santa Teresa",
+        "precio": "49604",
+        "mes": "February 2025"
+      },
+      {
+        "colonia": "Santa Teresa",
+        "precio": "54601",
+        "mes": "January 2025"
+      },
+      {
+        "colonia": "Santa Teresa",
+        "precio": "50642",
+        "mes": "December 2024"
+      },
+      {
+        "colonia": "Santa Teresa",
+        "precio": "50201",
+        "mes": "November 2024"
+      },
+      {
+        "colonia": "Santa Teresa",
+        "precio": "46732",
+        "mes": "October 2024"
+      }
+    ],
+    "averagePrice": 39521,
+    "priceHistory": [
+      {
+        "month": "October 2024",
+        "price": 46732,
+        "date": "2024-10-01T06:00:00.000Z"
+      },
+      {
+        "month": "November 2024",
+        "price": 50201,
+        "date": "2024-11-01T06:00:00.000Z"
+      },
+      {
+        "month": "December 2024",
+        "price": 50642,
+        "date": "2024-12-01T06:00:00.000Z"
+      },
+      {
+        "month": "February 2025",
+        "price": 49604,
+        "date": "2025-02-01T06:00:00.000Z"
+      },
+      {
+        "month": "March 2025",
+        "price": 45222,
+        "date": "2025-03-01T06:00:00.000Z"
+      },
+      {
+        "month": "April 2025",
+        "price": 39025,
+        "date": "2025-04-01T06:00:00.000Z"
+      },
+      {
+        "month": "May 2025",
+        "price": 39303,
+        "date": "2025-05-01T06:00:00.000Z"
+      },
+      {
+        "month": "June 2025",
+        "price": 39721,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 39421,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 39368,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 39217,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 39521,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-24T21:39:06.459Z",
+  "updatedAt": "2025-11-24T21:39:06.459Z"
+}

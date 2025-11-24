@@ -1,0 +1,171 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-campestre-churubusco",
+  "locationName": "Campestre Churubusco",
+  "locationType": "neighborhood",
+  "city": "Ciudad de México",
+  "municipality": "Coyoacán",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Campestre Churubusco?",
+    "metaTitle": "Precios Campestre Churubusco CDMX | $37,694/m² Actualizado",
+    "metaDescription": "¿Pensando en comprar en Campestre Churubusco? Descubre el precio promedio por metro cuadrado: $37,694. ¡Datos actualizados para Coyoacán, CDMX! Conoce la zona y decide.",
+    "introduction": "Campestre Churubusco, en la alcaldía Coyoacán, es un lugar que enamora. Si estás considerando comprar una propiedad aquí, te va a encantar saber que el precio promedio actual ronda los $37,694 por metro cuadrado. ¡Un precio a considerar! \n\nEsta colonia es conocida por su ambiente tranquilo, sus calles arboladas y su cercanía a importantes vías de comunicación. Además, tienes todo a la mano: desde parques y restaurantes hasta escuelas y hospitales. Si buscas un lugar bien ubicado y con un toque tradicional, Campestre Churubusco podría ser tu próximo hogar. Ojo, los precios han mostrado una ligera tendencia a la baja en los últimos meses, así que ¡es buen momento para investigar!",
+    "mustVisitSpots": [
+      {
+        "name": "Parque de la Consolación",
+        "description": "Un espacio verde perfecto para relajarte, pasear a tu perro o disfrutar de un día al aire libre."
+      },
+      {
+        "name": "Mercado de Churubusco",
+        "description": "Ideal para encontrar productos frescos, antojitos mexicanos y todo lo que necesitas para el día a día."
+      },
+      {
+        "name": "Cineteca Nacional",
+        "description": "A unos pasos de Campestre Churubusco, este centro cultural es un imperdible para los amantes del cine."
+      },
+      {
+        "name": "Restaurantes sobre Av. División del Norte",
+        "description": "Aquí encontrarás una gran variedad de opciones gastronómicas, desde comida tradicional mexicana hasta platillos internacionales."
+      }
+    ],
+    "priceInsights": "Actualmente, el precio promedio en Campestre Churubusco se sitúa en $37,694 por metro cuadrado. Si lo comparamos con otras zonas de la Ciudad de México, podríamos decir que se encuentra en un rango medio-alto, reflejando la buena ubicación y la calidad de vida que ofrece la colonia. \n\nEs importante tener en cuenta que, según los datos de los últimos 12 meses, los precios han mostrado una ligera tendencia a la baja. Esto podría deberse a diversos factores, como la oferta y demanda del mercado, las condiciones económicas generales e incluso el desarrollo de nuevos proyectos en la zona. ¡Mantente al tanto y compara opciones antes de tomar una decisión!",
+    "slug": "cuanto-cuesta-comprar-en-campestre-churubusco"
+  },
+  "locationData": {
+    "name": "Campestre Churubusco",
+    "type": "neighborhood",
+    "city": "Ciudad de México",
+    "municipality": "Coyoacán",
+    "neighborhoods": [
+      {
+        "colonia": "Campestre Churubusco",
+        "precio": "37662",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Campestre Churubusco",
+        "precio": "37694",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Campestre Churubusco",
+        "precio": "37744",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Campestre Churubusco",
+        "precio": "38130",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Campestre Churubusco",
+        "precio": "38207",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Campestre Churubusco",
+        "precio": "38102",
+        "mes": "May 2025"
+      },
+      {
+        "colonia": "Campestre Churubusco",
+        "precio": "38071",
+        "mes": "April 2025"
+      },
+      {
+        "colonia": "Campestre Churubusco",
+        "precio": "38489",
+        "mes": "March 2025"
+      },
+      {
+        "colonia": "Campestre Churubusco",
+        "precio": "39826",
+        "mes": "February 2025"
+      },
+      {
+        "colonia": "Campestre Churubusco",
+        "precio": "40679",
+        "mes": "January 2025"
+      },
+      {
+        "colonia": "Campestre Churubusco",
+        "precio": "40437",
+        "mes": "December 2024"
+      },
+      {
+        "colonia": "Campestre Churubusco",
+        "precio": "39864",
+        "mes": "November 2024"
+      },
+      {
+        "colonia": "Campestre Churubusco",
+        "precio": "39039",
+        "mes": "October 2024"
+      }
+    ],
+    "averagePrice": 37694,
+    "priceHistory": [
+      {
+        "month": "October 2024",
+        "price": 39039,
+        "date": "2024-10-01T06:00:00.000Z"
+      },
+      {
+        "month": "November 2024",
+        "price": 39864,
+        "date": "2024-11-01T06:00:00.000Z"
+      },
+      {
+        "month": "December 2024",
+        "price": 40437,
+        "date": "2024-12-01T06:00:00.000Z"
+      },
+      {
+        "month": "February 2025",
+        "price": 39826,
+        "date": "2025-02-01T06:00:00.000Z"
+      },
+      {
+        "month": "March 2025",
+        "price": 38489,
+        "date": "2025-03-01T06:00:00.000Z"
+      },
+      {
+        "month": "April 2025",
+        "price": 38071,
+        "date": "2025-04-01T06:00:00.000Z"
+      },
+      {
+        "month": "May 2025",
+        "price": 38102,
+        "date": "2025-05-01T06:00:00.000Z"
+      },
+      {
+        "month": "June 2025",
+        "price": 38207,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 38130,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 37744,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 37662,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 37694,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-24T21:32:09.049Z",
+  "updatedAt": "2025-11-24T21:32:09.049Z"
+}

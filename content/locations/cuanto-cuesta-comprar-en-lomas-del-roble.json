@@ -1,0 +1,116 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-lomas-del-roble",
+  "locationName": "Lomas Del Roble",
+  "locationType": "neighborhood",
+  "city": "Monterrey",
+  "municipality": "San Nicolás de los Garza",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Lomas Del Roble?",
+    "metaTitle": "Precios Lomas Del Roble, Monterrey 2024 | $40,658/m²",
+    "metaDescription": "Descubre el precio actual en Lomas Del Roble, Monterrey: $40,658/m². Analizamos el mercado inmobiliario y te damos las claves para invertir inteligentemente. ¡Entérate ya!",
+    "introduction": "Si estás pensando en comprar una propiedad en Monterrey, Lomas Del Roble es una colonia que definitivamente debes considerar. Ubicada en San Nicolás de los Garza, esta zona ofrece una excelente calidad de vida, con accesibilidad a servicios y un ambiente tranquilo. Actualmente, el precio promedio por metro cuadrado en Lomas Del Roble ronda los $40,658 pesos.\n\nLomas Del Roble se ha convertido en una opción atractiva para familias y jóvenes profesionales que buscan un hogar en un entorno seguro y bien conectado. Si bien los precios han mostrado una ligera tendencia a la baja en los últimos meses, sigue siendo una inversión interesante. ¡Vamos a ver qué ofrece esta colonia y cómo se mueve el mercado inmobiliario por aquí!",
+    "mustVisitSpots": [
+      {
+        "name": "Parque Lomas Del Roble",
+        "description": "Un espacio verde ideal para disfrutar en familia, hacer ejercicio o simplemente relajarte un rato."
+      },
+      {
+        "name": "Centrito Comercial Lomas Del Roble",
+        "description": "Aquí encontrarás restaurantes, tiendas de conveniencia y otros servicios que facilitan tu día a día."
+      },
+      {
+        "name": "Iglesia de San Nicolás de Bari",
+        "description": "Un punto de referencia importante en la comunidad, con una arquitectura que vale la pena admirar."
+      },
+      {
+        "name": "Restaurantes sobre Av. Las Puentes",
+        "description": "Aprovecha la variedad de opciones gastronómicas, desde comida rápida hasta platillos más elaborados."
+      }
+    ],
+    "priceInsights": "El precio promedio de $40,658 por metro cuadrado en Lomas Del Roble es competitivo dentro del mercado inmobiliario de Monterrey. Si lo comparamos con otras zonas de San Nicolás, podríamos encontrar precios similares o ligeramente más altos, dependiendo de la ubicación específica y las características de la propiedad. La tendencia a la baja que hemos observado en los últimos 7 meses podría indicar una oportunidad para negociar un buen precio.\n\nEs importante considerar que factores como la antigüedad de la propiedad, el tamaño del terreno, las amenidades y la cercanía a centros comerciales o escuelas pueden influir significativamente en el precio final. Además, las tasas de interés hipotecarias y la situación económica general también juegan un papel importante en la dinámica del mercado.",
+    "slug": "cuanto-cuesta-comprar-en-lomas-del-roble"
+  },
+  "locationData": {
+    "name": "Lomas Del Roble",
+    "type": "neighborhood",
+    "city": "Monterrey",
+    "municipality": "San Nicolás de los Garza",
+    "neighborhoods": [
+      {
+        "colonia": "Lomas Del Roble",
+        "precio": "41367",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Lomas Del Roble",
+        "precio": "40658",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Lomas Del Roble",
+        "precio": "83727",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Lomas Del Roble",
+        "precio": "82772",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Lomas Del Roble",
+        "precio": "81250",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Lomas Del Roble",
+        "precio": "78734",
+        "mes": "May 2025"
+      },
+      {
+        "colonia": "Lomas Del Roble",
+        "precio": "75840",
+        "mes": "April 2025"
+      }
+    ],
+    "averagePrice": 40658,
+    "priceHistory": [
+      {
+        "month": "April 2025",
+        "price": 75840,
+        "date": "2025-04-01T06:00:00.000Z"
+      },
+      {
+        "month": "May 2025",
+        "price": 78734,
+        "date": "2025-05-01T06:00:00.000Z"
+      },
+      {
+        "month": "June 2025",
+        "price": 81250,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 82772,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 83727,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 41367,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 40658,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-24T21:24:52.812Z",
+  "updatedAt": "2025-11-24T21:24:52.812Z"
+}

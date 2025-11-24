@@ -61,6 +61,18 @@ const LOCATIONS: string[] = [
     "Obispado",
     "Ladrillera",
     "Anahuac",
+    "Vista Hermosa",
+    "Potrero Anahuac",
+    "Rincon De Las Puentes",
+    "Las Puentes 4 Sec",
+    "Cuauhtemoc 3 Sector",
+    "Lomas Del Roble",
+    "Tampiquito",
+    "Valle De Chipinque",
+    "Alfonso Reyes",
+    "Fuentes Del Valle",
+    "San Agustin",
+    "Los Colorines",
 
     // CDMX
     "Álvaro Obregón",
@@ -96,6 +108,66 @@ const LOCATIONS: string[] = [
     "Del Valle Centro",
     "Napoles",
     "Narvarte Poniente",
+    "San Angel",
+    "Pueblo Tizapan",
+    "Chimalistac",
+    "Lomas De Plateros",
+    "Claveria",
+    "Nueva Santa Maria",
+    "Centro De Azcapotzalco",
+    "Unidad Cuitlahuac",
+    "Barrio Santa Catarina",
+    "Barrio La Concepcion",
+    "San Diego Churubusco",
+    "Parque San Andres",
+    "Jardines De Coyoacan",
+    "Campestre Churubusco",
+    "Santa Fe Cuajimalpa",
+    "Lomas De Vista Hermosa",
+    "Contadero",
+    "Lindavista Norte",
+    "Lindavista Sur",
+    "Aragon La Villa",
+    "Industrial",
+    "Agricola Oriental",
+    "Granjas Mexico",
+    "Agricola Pantitlan",
+    "Viaducto Piedad",
+    "Lomas Estrella",
+    "Escuadron 201",
+    "Paseos De Churubusco",
+    "Prado Churubusco",
+    "Sinatel",
+    "El Prado",
+    "Unidad Modelo",
+    "Justo Sierra",
+    "Banjidal",
+    "San Jeronimo Lidice",
+    "Barranca Seca",
+    "Santa Teresa",
+    "San Miguel Chapultepec I Seccion",
+    "San Miguel Chapultepec Ii Seccion",
+    "Anzures",
+    "Veronica Anzures",
+    "Tacuba",
+    "Granada",
+    "Ampliacion Granada",
+    "Anahuac I Seccion",
+    "Pensil Norte",
+    "Popotla",
+    "Tlalpan Centro",
+    "Jardines En La Montaña",
+    "Valle De Tepepan",
+    "Granjas Coapa",
+    "Villa Coapa",
+    "Jardin Balbuena",
+    "Jamaica",
+    "Romero Rubio",
+    "General Ignacio Zaragoza",
+    "Valentin Gomez Farias",
+    "Pueblo Santa Maria Nativitas",
+    "Pueblo Santiago Tepalcatlalpan",
+    "San Lorenzo La Cebada",
 
     // Jalisco
     "Guadalajara",
@@ -123,6 +195,7 @@ const LOCATIONS: string[] = [
 interface GenerationResult {
   locationName: string
   success: boolean
+  skipped?: boolean
   pages?: Array<{ slug: string; type: string }>
   error?: string
   total?: number
@@ -202,6 +275,7 @@ async function main() {
   const results: GenerationResult[] = []
   let successCount = 0
   let failureCount = 0
+  let skippedCount = 0
 
   // Process each location
   for (let i = 0; i < LOCATIONS.length; i++) {
@@ -215,31 +289,51 @@ async function main() {
     const result = await generateWithRetry(locationName)
     
     if (result.success && result.result) {
-      const pages = result.result.pages.map((p: { slug: string; locationType: string }) => ({ slug: p.slug, type: p.locationType }))
-      results.push({
-        locationName,
-        success: true,
-        pages,
-        total: result.result.total,
-        successful: result.result.successful,
-        failed: result.result.failed
-      })
-      successCount += result.result.successful
-      failureCount += result.result.failed
+      // Check if location was skipped (multiple matches but no municipality)
+      const isSkipped = result.result.successful === 0 && 
+                       result.result.failed === 0 && 
+                       result.result.total > 0
       
-      if (result.result.successful > 0) {
-        console.log(`✓ Successfully generated ${result.result.successful} page(s):`)
-        pages.forEach((p: { slug: string; type: string }) => {
-          console.log(`   • ${p.slug} (${p.type})`)
+      if (isSkipped) {
+        results.push({
+          locationName,
+          success: true,
+          skipped: true,
+          total: result.result.total,
+          successful: 0,
+          failed: 0
         })
-      }
-      if (result.result.failed > 0) {
-        console.error(`✗ Failed to generate ${result.result.failed} page(s)`)
+        skippedCount++
+        console.log(`⏭️  Skipped: Multiple matches found but no municipality type`)
+      } else {
+        const pages = result.result.pages.map((p: { slug: string; locationType: string }) => ({ slug: p.slug, type: p.locationType }))
+        results.push({
+          locationName,
+          success: true,
+          skipped: false,
+          pages,
+          total: result.result.total,
+          successful: result.result.successful,
+          failed: result.result.failed
+        })
+        successCount += result.result.successful
+        failureCount += result.result.failed
+        
+        if (result.result.successful > 0) {
+          console.log(`✓ Successfully generated ${result.result.successful} page(s):`)
+          pages.forEach((p: { slug: string; type: string }) => {
+            console.log(`   • ${p.slug} (${p.type})`)
+          })
+        }
+        if (result.result.failed > 0) {
+          console.error(`✗ Failed to generate ${result.result.failed} page(s)`)
+        }
       }
     } else {
       results.push({
         locationName,
         success: false,
+        skipped: false,
         error: result.error
       })
       failureCount++
@@ -262,11 +356,12 @@ async function main() {
   console.log(`Total locations: ${LOCATIONS.length}`)
   console.log(`✓ Successful: ${successCount}`)
   console.log(`✗ Failed: ${failureCount}`)
+  console.log(`⏭️  Skipped: ${skippedCount}`)
 
   if (successCount > 0) {
     console.log('\n✅ Successfully generated pages:')
     results
-      .filter(r => r.success && r.pages)
+      .filter(r => r.success && r.pages && r.pages.length > 0)
       .forEach(r => {
         r.pages!.forEach(p => {
           console.log(`   • ${r.locationName} (${p.type}) → /${p.slug}`)
@@ -274,10 +369,19 @@ async function main() {
       })
   }
 
+  if (skippedCount > 0) {
+    console.log('\n⏭️  Skipped locations:')
+    results
+      .filter(r => r.skipped)
+      .forEach(r => {
+        console.log(`   • ${r.locationName} (${r.total} match(es) found, but no municipality type)`)
+      })
+  }
+
   if (failureCount > 0) {
     console.log('\n❌ Failed locations:')
     results
-      .filter(r => !r.success)
+      .filter(r => !r.success && !r.skipped)
       .forEach(r => {
         console.log(`   • ${r.locationName}: ${r.error}`)
       })

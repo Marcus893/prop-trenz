@@ -1,0 +1,86 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-jardines-de-coyoacan",
+  "locationName": "Jardines De Coyoacan",
+  "locationType": "neighborhood",
+  "city": "Ciudad de México",
+  "municipality": "Coyoacán",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Jardines De Coyoacan?",
+    "metaTitle": "Precios Jardines De Coyoacan CDMX 2024 | $36,824/m²",
+    "metaDescription": "¿Pensando en invertir en Jardines de Coyoacán? Descubre el precio promedio por metro cuadrado: $36,824. ¡Encuentra tu hogar ideal en esta joya de Coyoacán!",
+    "introduction": "Jardines de Coyoacán es una colonia que enamora. Con sus calles tranquilas, ambiente familiar y cercanía a puntos clave de la Ciudad de México, no es sorpresa que muchos la tengan en la mira para comprar una propiedad. Si tú eres uno de ellos, te tenemos la información que necesitas: actualmente, el precio promedio por metro cuadrado ronda los $36,824.\n\nEsta colonia, ubicada en el corazón de Coyoacán, ofrece una excelente calidad de vida. Su ambiente relajado, combinado con la cercanía a servicios y la vibrante vida cultural de Coyoacán, la convierten en una opción muy atractiva. Además, los precios en esta zona han mostrado una tendencia al alza en los últimos meses, ¡así que es un buen momento para invertir!",
+    "mustVisitSpots": [
+      {
+        "name": "Parque de la Consolación",
+        "description": "Un oasis de tranquilidad con áreas verdes perfectas para un picnic o una tarde relajada."
+      },
+      {
+        "name": "Restaurantes sobre Canal de Miramontes",
+        "description": "Una gran variedad de opciones gastronómicas, desde cocina tradicional mexicana hasta propuestas internacionales."
+      },
+      {
+        "name": "Centro Comercial Galerías Coapa",
+        "description": "Encuentra tiendas departamentales, cines y restaurantes en este centro comercial cercano."
+      },
+      {
+        "name": "Mercado de Artesanías de Coyoacán",
+        "description": "A pocos minutos, perfecto para encontrar regalos únicos y disfrutar del ambiente bohemio."
+      }
+    ],
+    "priceInsights": "Con un precio promedio de $36,824 por metro cuadrado, Jardines de Coyoacán se posiciona como una opción atractiva dentro del mercado inmobiliario de la Ciudad de México. Si bien puede ser ligeramente superior al promedio de algunas otras colonias, la ubicación privilegiada, la seguridad y la calidad de vida que ofrece justifican la inversión. \n\nEn los últimos cuatro meses hemos observado una tendencia al alza en los precios, lo que indica una creciente demanda por propiedades en esta zona. Factores como la revalorización de la zona, la mejora en la infraestructura y la cada vez mayor popularidad de Coyoacán como destino residencial podrían estar influyendo en este aumento. Si estás considerando comprar, ¡ahora podría ser el momento ideal!",
+    "slug": "cuanto-cuesta-comprar-en-jardines-de-coyoacan"
+  },
+  "locationData": {
+    "name": "Jardines De Coyoacan",
+    "type": "neighborhood",
+    "city": "Ciudad de México",
+    "municipality": "Coyoacán",
+    "neighborhoods": [
+      {
+        "colonia": "Jardines De Coyoacan",
+        "precio": "36824",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Jardines De Coyoacan",
+        "precio": "35769",
+        "mes": "May 2025"
+      },
+      {
+        "colonia": "Jardines De Coyoacan",
+        "precio": "35518",
+        "mes": "April 2025"
+      },
+      {
+        "colonia": "Jardines De Coyoacan",
+        "precio": "34000",
+        "mes": "February 2025"
+      }
+    ],
+    "averagePrice": 36824,
+    "priceHistory": [
+      {
+        "month": "February 2025",
+        "price": 34000,
+        "date": "2025-02-01T06:00:00.000Z"
+      },
+      {
+        "month": "April 2025",
+        "price": 35518,
+        "date": "2025-04-01T06:00:00.000Z"
+      },
+      {
+        "month": "May 2025",
+        "price": 35769,
+        "date": "2025-05-01T06:00:00.000Z"
+      },
+      {
+        "month": "June 2025",
+        "price": 36824,
+        "date": "2025-06-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-24T21:31:56.832Z",
+  "updatedAt": "2025-11-24T21:31:56.832Z"
+}

@@ -1,0 +1,171 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-san-jeronimo-lidice",
+  "locationName": "San Jeronimo Lidice",
+  "locationType": "neighborhood",
+  "city": "Ciudad de México",
+  "municipality": "La Magdalena Contreras",
+  "content": {
+    "title": "Cuánto Cuesta Comprar en San Jeronimo Lidice",
+    "metaTitle": "Precios en San Jeronimo Lidice CDMX | $52,706/m² Actualizado",
+    "metaDescription": "Descubre el precio promedio por metro cuadrado en San Jeronimo Lidice, CDMX: $52,706. ¡Entérate si es el lugar ideal para tu próxima inversión!",
+    "introduction": "¿Estás pensando en comprar casa o departamento en San Jeronimo Lidice? ¡Excelente elección! Esta colonia en la Magdalena Contreras, Ciudad de México, tiene un encanto especial y cada vez más personas la consideran un gran lugar para vivir. Actualmente, el precio promedio está alrededor de $52,706 por metro cuadrado. \n\nSan Jeronimo Lidice goza de una ubicación privilegiada, combinando la tranquilidad de un entorno residencial con fácil acceso a importantes vías y servicios. Además, ¡los precios han estado subiendo en los últimos meses!, así que es un buen momento para echar un vistazo.",
+    "mustVisitSpots": [
+      {
+        "name": "Parque de la Loma",
+        "description": "Un espacio verde ideal para relajarse, hacer ejercicio o disfrutar de un picnic en familia. ¡Perfecto para desconectarte del bullicio de la ciudad!"
+      },
+      {
+        "name": "Mercado de San Jeronimo Lidice",
+        "description": "Un mercado tradicional donde encontrarás productos frescos, comida típica y la calidez de sus comerciantes. ¡Una experiencia local auténtica!"
+      },
+      {
+        "name": "Restaurante La Casa de Toño",
+        "description": "Disfruta de auténtica comida mexicana a precios accesibles. ¡El pozole es imperdible!"
+      },
+      {
+        "name": "Colegio Alexander Bain",
+        "description": "Una institución educativa de renombre en la zona, conocida por su excelencia académica."
+      }
+    ],
+    "priceInsights": "Con un precio promedio de $52,706 por metro cuadrado, San Jeronimo Lidice se posiciona como una opción atractiva dentro del mercado inmobiliario de la Ciudad de México. Si bien puede ser ligeramente superior a otras colonias en la Magdalena Contreras, la ubicación, tranquilidad y plusvalía de la zona lo justifican. \n\nDurante los últimos 12 meses, hemos observado una tendencia al alza en los precios, lo que indica un creciente interés en la colonia. Factores como la demanda, la oferta limitada de propiedades y el desarrollo de nuevos proyectos inmobiliarios podrían seguir impulsando este aumento en el futuro cercano.",
+    "slug": "cuanto-cuesta-comprar-en-san-jeronimo-lidice"
+  },
+  "locationData": {
+    "name": "San Jeronimo Lidice",
+    "type": "neighborhood",
+    "city": "Ciudad de México",
+    "municipality": "La Magdalena Contreras",
+    "neighborhoods": [
+      {
+        "colonia": "San Jeronimo Lidice",
+        "precio": "52690",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "San Jeronimo Lidice",
+        "precio": "52706",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "San Jeronimo Lidice",
+        "precio": "53497",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "San Jeronimo Lidice",
+        "precio": "54147",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "San Jeronimo Lidice",
+        "precio": "54674",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "San Jeronimo Lidice",
+        "precio": "54595",
+        "mes": "May 2025"
+      },
+      {
+        "colonia": "San Jeronimo Lidice",
+        "precio": "55079",
+        "mes": "April 2025"
+      },
+      {
+        "colonia": "San Jeronimo Lidice",
+        "precio": "55607",
+        "mes": "March 2025"
+      },
+      {
+        "colonia": "San Jeronimo Lidice",
+        "precio": "51286",
+        "mes": "February 2025"
+      },
+      {
+        "colonia": "San Jeronimo Lidice",
+        "precio": "46623",
+        "mes": "January 2025"
+      },
+      {
+        "colonia": "San Jeronimo Lidice",
+        "precio": "42031",
+        "mes": "December 2024"
+      },
+      {
+        "colonia": "San Jeronimo Lidice",
+        "precio": "42240",
+        "mes": "November 2024"
+      },
+      {
+        "colonia": "San Jeronimo Lidice",
+        "precio": "42342",
+        "mes": "October 2024"
+      }
+    ],
+    "averagePrice": 52706,
+    "priceHistory": [
+      {
+        "month": "October 2024",
+        "price": 42342,
+        "date": "2024-10-01T06:00:00.000Z"
+      },
+      {
+        "month": "November 2024",
+        "price": 42240,
+        "date": "2024-11-01T06:00:00.000Z"
+      },
+      {
+        "month": "December 2024",
+        "price": 42031,
+        "date": "2024-12-01T06:00:00.000Z"
+      },
+      {
+        "month": "February 2025",
+        "price": 51286,
+        "date": "2025-02-01T06:00:00.000Z"
+      },
+      {
+        "month": "March 2025",
+        "price": 55607,
+        "date": "2025-03-01T06:00:00.000Z"
+      },
+      {
+        "month": "April 2025",
+        "price": 55079,
+        "date": "2025-04-01T06:00:00.000Z"
+      },
+      {
+        "month": "May 2025",
+        "price": 54595,
+        "date": "2025-05-01T06:00:00.000Z"
+      },
+      {
+        "month": "June 2025",
+        "price": 54674,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 54147,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 53497,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 52690,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 52706,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-24T21:38:22.387Z",
+  "updatedAt": "2025-11-24T21:38:22.387Z"
+}

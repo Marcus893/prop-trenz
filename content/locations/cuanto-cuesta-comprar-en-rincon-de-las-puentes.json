@@ -1,0 +1,86 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-rincon-de-las-puentes",
+  "locationName": "Rincon De Las Puentes",
+  "locationType": "neighborhood",
+  "city": "Monterrey",
+  "municipality": "San Nicolás de los Garza",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Rincon De Las Puentes?",
+    "metaTitle": "Precios Rincon De Las Puentes Monterrey | $60,855/m²",
+    "metaDescription": "Descubre el precio promedio en Rincon De Las Puentes, Monterrey: $60,855/m². ¡Entérate si es tu mejor inversión en San Nicolás de los Garza!",
+    "introduction": "¿Estás pensando en comprar casa o departamento en Rincon De Las Puentes? ¡Excelente elección! Esta colonia en San Nicolás de los Garza, Monterrey, es una joyita. Actualmente, el precio promedio anda alrededor de $60,855 por metro cuadrado. Rincon De Las Puentes es conocida por su ambiente familiar, acceso a buenas escuelas y cercanía a centros comerciales, lo que la hace muy atractiva para familias y jóvenes profesionales. Y ojo, ¡los precios están subiendo!",
+    "mustVisitSpots": [
+      {
+        "name": "Parque Las Arboledas",
+        "description": "Ideal para una tarde de picnic en familia o una caminata tranquila. ¡Siempre hay ambiente!"
+      },
+      {
+        "name": "Plaza Citadel",
+        "description": "A unos minutos de Rincon De Las Puentes, encontrarás una gran variedad de tiendas, restaurantes y cines para disfrutar."
+      },
+      {
+        "name": "Restaurantes locales en Av. Universidad",
+        "description": "Prueba la auténtica comida regiomontana en los restaurantes a lo largo de Avenida Universidad. ¡Hay opciones para todos los gustos!"
+      },
+      {
+        "name": "Gimnasios y centros deportivos",
+        "description": "Mantente activo con la variedad de gimnasios y centros deportivos que ofrecen clases y actividades para todas las edades."
+      }
+    ],
+    "priceInsights": "El precio promedio de $60,855 por metro cuadrado en Rincon De Las Puentes es competitivo dentro del mercado de San Nicolás de los Garza y Monterrey en general. Considerando que la tendencia de precios ha ido en aumento durante los últimos 4 meses, ahora podría ser un buen momento para invertir. Factores como la ubicación estratégica de la colonia, su cercanía a servicios y su creciente popularidad entre familias jóvenes están impulsando estos precios. ¡No te quedes atrás y aprovecha esta oportunidad!",
+    "slug": "cuanto-cuesta-comprar-en-rincon-de-las-puentes"
+  },
+  "locationData": {
+    "name": "Rincon De Las Puentes",
+    "type": "neighborhood",
+    "city": "Monterrey",
+    "municipality": "San Nicolás de los Garza",
+    "neighborhoods": [
+      {
+        "colonia": "Rincon De Las Puentes",
+        "precio": "60855",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Rincon De Las Puentes",
+        "precio": "60855",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Rincon De Las Puentes",
+        "precio": "61390",
+        "mes": "May 2025"
+      },
+      {
+        "colonia": "Rincon De Las Puentes",
+        "precio": "58859",
+        "mes": "April 2025"
+      }
+    ],
+    "averagePrice": 60855,
+    "priceHistory": [
+      {
+        "month": "April 2025",
+        "price": 58859,
+        "date": "2025-04-01T06:00:00.000Z"
+      },
+      {
+        "month": "May 2025",
+        "price": 61390,
+        "date": "2025-05-01T06:00:00.000Z"
+      },
+      {
+        "month": "June 2025",
+        "price": 60855,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 60855,
+        "date": "2025-07-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-24T21:24:03.315Z",
+  "updatedAt": "2025-11-24T21:24:03.315Z"
+}

@@ -1,0 +1,171 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-anzures",
+  "locationName": "Anzures",
+  "locationType": "neighborhood",
+  "city": "Ciudad de México",
+  "municipality": "Miguel Hidalgo",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Anzures, CDMX?",
+    "metaTitle": "Precios en Anzures CDMX 2024 | $135,545/m²",
+    "metaDescription": "¿Quieres invertir en Anzures? Descubre el precio promedio por metro cuadrado: $135,545. ¡Infórmate sobre esta colonia vibrante en Miguel Hidalgo!",
+    "introduction": "Anzures, una joya en la alcaldía Miguel Hidalgo de la Ciudad de México, ¡es un lugar genial para echar raíces! Con su ambiente tranquilo pero conectado, sus calles arboladas y su cercanía a Polanco, Anzures tiene un encanto único. Si estás pensando en comprar aquí, te interesa saber que el precio promedio anda alrededor de $135,545 por metro cuadrado. \n\nAhora bien, el mercado siempre cambia, y hemos notado que los precios en Anzures han estado bajando un poquito en los últimos meses. ¡Sigue leyendo para que tengas toda la información y tomes la mejor decisión!",
+    "mustVisitSpots": [
+      {
+        "name": "Parque Mariano Escobedo",
+        "description": "Un oasis verde perfecto para relajarte, pasear a tu perro o simplemente disfrutar del aire fresco."
+      },
+      {
+        "name": "Mercado Anzures",
+        "description": "Un lugar lleno de sabores y colores, ideal para probar la comida local y comprar productos frescos."
+      },
+      {
+        "name": "Restaurantes en la Calle Darwin",
+        "description": "Esta calle está llena de opciones culinarias, desde comida mexicana tradicional hasta propuestas internacionales."
+      },
+      {
+        "name": "Galerías de Arte locales",
+        "description": "Anzures tiene una vibra artística, con varias galerías que exhiben el talento de la zona."
+      }
+    ],
+    "priceInsights": "El precio promedio de $135,545 por metro cuadrado en Anzures te da una idea de lo que puedes esperar. Comparado con otras zonas de la Ciudad de México, Anzures se encuentra en un rango medio-alto, aunque generalmente es más accesible que Polanco o la Roma Norte. Es importante considerar que este es un promedio, y el precio real puede variar dependiendo del tamaño, la ubicación y las condiciones del inmueble. \n\nComo mencionamos antes, la tendencia de precios en Anzures ha estado disminuyendo ligeramente en los últimos 12 meses. Esto podría ser una oportunidad para encontrar buenas ofertas, pero también es importante investigar a fondo y entender las razones detrás de esta tendencia. Factores como las tasas de interés, la economía en general y la oferta y demanda de propiedades en la zona pueden influir en los precios.",
+    "slug": "cuanto-cuesta-comprar-en-anzures"
+  },
+  "locationData": {
+    "name": "Anzures",
+    "type": "neighborhood",
+    "city": "Ciudad de México",
+    "municipality": "Miguel Hidalgo",
+    "neighborhoods": [
+      {
+        "colonia": "Anzures",
+        "precio": "67092",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Anzures",
+        "precio": "135545",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Anzures",
+        "precio": "132236",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Anzures",
+        "precio": "133223",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Anzures",
+        "precio": "135040",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Anzures",
+        "precio": "136206",
+        "mes": "May 2025"
+      },
+      {
+        "colonia": "Anzures",
+        "precio": "134292",
+        "mes": "April 2025"
+      },
+      {
+        "colonia": "Anzures",
+        "precio": "133256",
+        "mes": "March 2025"
+      },
+      {
+        "colonia": "Anzures",
+        "precio": "135691",
+        "mes": "February 2025"
+      },
+      {
+        "colonia": "Anzures",
+        "precio": "138617",
+        "mes": "January 2025"
+      },
+      {
+        "colonia": "Anzures",
+        "precio": "139686",
+        "mes": "December 2024"
+      },
+      {
+        "colonia": "Anzures",
+        "precio": "139535",
+        "mes": "November 2024"
+      },
+      {
+        "colonia": "Anzures",
+        "precio": "139529",
+        "mes": "October 2024"
+      }
+    ],
+    "averagePrice": 135545,
+    "priceHistory": [
+      {
+        "month": "October 2024",
+        "price": 139529,
+        "date": "2024-10-01T06:00:00.000Z"
+      },
+      {
+        "month": "November 2024",
+        "price": 139535,
+        "date": "2024-11-01T06:00:00.000Z"
+      },
+      {
+        "month": "December 2024",
+        "price": 139686,
+        "date": "2024-12-01T06:00:00.000Z"
+      },
+      {
+        "month": "February 2025",
+        "price": 135691,
+        "date": "2025-02-01T06:00:00.000Z"
+      },
+      {
+        "month": "March 2025",
+        "price": 133256,
+        "date": "2025-03-01T06:00:00.000Z"
+      },
+      {
+        "month": "April 2025",
+        "price": 134292,
+        "date": "2025-04-01T06:00:00.000Z"
+      },
+      {
+        "month": "May 2025",
+        "price": 136206,
+        "date": "2025-05-01T06:00:00.000Z"
+      },
+      {
+        "month": "June 2025",
+        "price": 135040,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 133223,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 132236,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 67092,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 135545,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-24T21:39:54.716Z",
+  "updatedAt": "2025-11-24T21:39:54.716Z"
+}

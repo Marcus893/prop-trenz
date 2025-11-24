@@ -1,0 +1,86 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-pueblo-santa-maria-nativitas",
+  "locationName": "Pueblo Santa Maria Nativitas",
+  "locationType": "neighborhood",
+  "city": "Ciudad de México",
+  "municipality": "Xochimilco",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Santa Maria Nativitas?",
+    "metaTitle": "Precios en Santa Maria Nativitas CDMX | $29,750/m²",
+    "metaDescription": "Descubre los precios de propiedades en Santa Maria Nativitas, Xochimilco. ¡Actualmente en $29,750/m²! Inversión segura en un rincón tradicional de la CDMX.",
+    "introduction": "¿Estás pensando en invertir en bienes raíces en Xochimilco? ¡Santa Maria Nativitas es una joya escondida que te encantará! Este pintoresco pueblo, con sus tradiciones y ambiente tranquilo, ofrece una excelente oportunidad para comprar una propiedad. Actualmente, el precio promedio por metro cuadrado aquí ronda los $29,750 pesos. Su ubicación estratégica dentro de Xochimilco lo hace muy atractivo, combinando la cercanía a la naturaleza con fácil acceso a la ciudad.",
+    "mustVisitSpots": [
+      {
+        "name": "Iglesia de Santa María Nativitas",
+        "description": "El corazón del pueblo, con una arquitectura colonial encantadora y un ambiente lleno de fe."
+      },
+      {
+        "name": "Mercado de Santa María Nativitas",
+        "description": "Un lugar vibrante donde encontrarás productos frescos, comida tradicional y la calidez de su gente."
+      },
+      {
+        "name": "Parque Ecológico Xochimilco",
+        "description": "A pocos minutos, ideal para disfrutar de la naturaleza y las trajineras."
+      },
+      {
+        "name": "Restaurantes de comida típica",
+        "description": "Disfruta de la auténtica gastronomía xochimilca en alguno de los restaurantes familiares."
+      }
+    ],
+    "priceInsights": "Con un precio promedio de $29,750 por metro cuadrado, Santa Maria Nativitas se posiciona como una opción accesible dentro del mercado inmobiliario de la Ciudad de México. Si comparamos con otras zonas de la capital, este precio resulta bastante competitivo, especialmente considerando la creciente demanda en Xochimilco. En los últimos cuatro meses, hemos observado una tendencia al alza en los precios, lo que indica un buen momento para invertir. Esta apreciación puede estar influenciada por factores como la creciente popularidad de Xochimilco como destino turístico y residencial, así como la disponibilidad limitada de terrenos.",
+    "slug": "cuanto-cuesta-comprar-en-pueblo-santa-maria-nativitas"
+  },
+  "locationData": {
+    "name": "Pueblo Santa Maria Nativitas",
+    "type": "neighborhood",
+    "city": "Ciudad de México",
+    "municipality": "Xochimilco",
+    "neighborhoods": [
+      {
+        "colonia": "Pueblo Santa Maria Nativitas",
+        "precio": "30599",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Pueblo Santa Maria Nativitas",
+        "precio": "29750",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Pueblo Santa Maria Nativitas",
+        "precio": "29771",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Pueblo Santa Maria Nativitas",
+        "precio": "27880",
+        "mes": "February 2025"
+      }
+    ],
+    "averagePrice": 29750,
+    "priceHistory": [
+      {
+        "month": "February 2025",
+        "price": 27880,
+        "date": "2025-02-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 29771,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 30599,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 29750,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-24T21:44:52.346Z",
+  "updatedAt": "2025-11-24T21:44:52.346Z"
+}

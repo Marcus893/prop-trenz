@@ -1,0 +1,116 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-potrero-anahuac",
+  "locationName": "Potrero Anahuac",
+  "locationType": "neighborhood",
+  "city": "Monterrey",
+  "municipality": "San Nicolás de los Garza",
+  "content": {
+    "title": "¿Cuánto Cuesta Comprar en Potrero Anahuac?",
+    "metaTitle": "Precios Potrero Anahuac Monterrey | $53,416/m²",
+    "metaDescription": "Descubre el precio promedio en Potrero Anahuac, Monterrey: $53,416/m². Analizamos la tendencia y te damos insights para tu inversión. ¡Entérate ahora!",
+    "introduction": "Si estás pensando en invertir en bienes raíces en Monterrey, Potrero Anahuac podría ser justo lo que buscas. Ubicada en el municipio de San Nicolás de los Garza, esta colonia ofrece una mezcla de tranquilidad y acceso a la vibrante vida de la ciudad. Actualmente, el precio promedio por metro cuadrado ronda los $53,416, lo que la convierte en una opción atractiva para diversos presupuestos.\n\nPotrero Anahuac tiene ese encanto de barrio tradicional, con sus calles arboladas y la cercanía a servicios esenciales. Aunque hemos notado una ligera disminución en los precios en los últimos meses, es importante analizar a fondo para tomar la mejor decisión.",
+    "mustVisitSpots": [
+      {
+        "name": "Parque República",
+        "description": "Un excelente lugar para disfrutar de actividades al aire libre, caminar y relajarse en un ambiente familiar."
+      },
+      {
+        "name": "Plaza de San Nicolás",
+        "description": "El corazón del municipio, ideal para eventos culturales, compras y disfrutar de la gastronomía local."
+      },
+      {
+        "name": "Restaurantes de Av. Universidad",
+        "description": "Con una amplia variedad de opciones, desde comida mexicana hasta cortes de carne, esta avenida tiene algo para todos los gustos."
+      },
+      {
+        "name": "Centros comerciales cercanos",
+        "description": "Potrero Anahuac goza de buena ubicación con acceso rápido a centros comerciales importantes para todas tus necesidades."
+      }
+    ],
+    "priceInsights": "El precio promedio de $53,416 por metro cuadrado en Potrero Anahuac es competitivo dentro del mercado de Monterrey. Si lo comparamos con otras zonas, podemos ver que ofrece una buena relación calidad-precio, especialmente considerando su ubicación estratégica en San Nicolás. Es crucial mencionar que, durante los últimos 7 meses, hemos observado una tendencia a la baja en los precios. Factores como la oferta y demanda, las tasas de interés y el desarrollo de nuevos proyectos en la zona pueden estar influyendo en esta fluctuación. Te recomendamos mantenerte al tanto de las novedades del mercado para tomar la mejor decisión de inversión.",
+    "slug": "cuanto-cuesta-comprar-en-potrero-anahuac"
+  },
+  "locationData": {
+    "name": "Potrero Anahuac",
+    "type": "neighborhood",
+    "city": "Monterrey",
+    "municipality": "San Nicolás de los Garza",
+    "neighborhoods": [
+      {
+        "colonia": "Potrero Anahuac",
+        "precio": "52531",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Potrero Anahuac",
+        "precio": "53416",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Potrero Anahuac",
+        "precio": "104320",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Potrero Anahuac",
+        "precio": "105281",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Potrero Anahuac",
+        "precio": "104335",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Potrero Anahuac",
+        "precio": "102751",
+        "mes": "May 2025"
+      },
+      {
+        "colonia": "Potrero Anahuac",
+        "precio": "101364",
+        "mes": "April 2025"
+      }
+    ],
+    "averagePrice": 53416,
+    "priceHistory": [
+      {
+        "month": "April 2025",
+        "price": 101364,
+        "date": "2025-04-01T06:00:00.000Z"
+      },
+      {
+        "month": "May 2025",
+        "price": 102751,
+        "date": "2025-05-01T06:00:00.000Z"
+      },
+      {
+        "month": "June 2025",
+        "price": 104335,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 105281,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 104320,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 52531,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 53416,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-24T21:23:52.186Z",
+  "updatedAt": "2025-11-24T21:23:52.186Z"
+}

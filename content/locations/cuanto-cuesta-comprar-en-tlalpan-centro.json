@@ -1,0 +1,171 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-tlalpan-centro",
+  "locationName": "Tlalpan Centro",
+  "locationType": "neighborhood",
+  "city": "Ciudad de México",
+  "municipality": "Tlalpan",
+  "content": {
+    "title": "Cuánto Cuesta Comprar en Tlalpan Centro",
+    "metaTitle": "Precios en Tlalpan Centro CDMX | $37,349/m² | 2024",
+    "metaDescription": "Descubre los precios de propiedades en Tlalpan Centro. Precio promedio actual: $37,349/m². ¡Encuentra tu hogar ideal en esta joya de la CDMX!",
+    "introduction": "¿Estás pensando en comprar una propiedad en la Ciudad de México? Tlalpan Centro es una colonia con un encanto especial, que combina tradición con modernidad, y podría ser justo lo que estás buscando. Ahora mismo, el precio promedio por metro cuadrado anda alrededor de los $37,349. \n\nTlalpan Centro es un lugar lleno de historia, con sus calles empedradas, su ambiente tranquilo y su cercanía a importantes puntos de interés. Si buscas un lugar con carácter y buena calidad de vida, ¡échale un ojo a Tlalpan!",
+    "mustVisitSpots": [
+      {
+        "name": "Casa de la Cultura de Tlalpan",
+        "description": "Un espacio dedicado a promover el arte y la cultura en la comunidad, con talleres, exposiciones y eventos para todas las edades."
+      },
+      {
+        "name": "Parque de la Bombilla",
+        "description": "Un parque con mucha historia, ideal para un paseo tranquilo, disfrutar de la naturaleza o simplemente relajarte."
+      },
+      {
+        "name": "Mercado de la Paz",
+        "description": "Un mercado tradicional donde puedes encontrar de todo, desde frutas y verduras frescas hasta antojitos mexicanos y artesanías."
+      },
+      {
+        "name": "Restaurante Arroyo",
+        "description": "Un lugar emblemático para degustar la auténtica comida mexicana, famoso por su barbacoa y su ambiente familiar."
+      }
+    ],
+    "priceInsights": "Actualmente, el precio promedio en Tlalpan Centro se ubica en $37,349 pesos por metro cuadrado. Si lo comparamos con otras zonas de la Ciudad de México, podríamos decir que Tlalpan Centro ofrece una buena relación calidad-precio, considerando su ubicación y su ambiente tranquilo. Sin embargo, hemos notado una ligera tendencia a la baja en los precios durante los últimos 12 meses. Esto podría ser una oportunidad para encontrar una buena oferta, pero también es importante considerar factores como la ubicación específica dentro de Tlalpan Centro, el tamaño y las características de la propiedad, y las condiciones del mercado en general. ¡Así que a investigar se ha dicho!",
+    "slug": "cuanto-cuesta-comprar-en-tlalpan-centro"
+  },
+  "locationData": {
+    "name": "Tlalpan Centro",
+    "type": "neighborhood",
+    "city": "Ciudad de México",
+    "municipality": "Tlalpan",
+    "neighborhoods": [
+      {
+        "colonia": "Tlalpan Centro",
+        "precio": "37172",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Tlalpan Centro",
+        "precio": "37349",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Tlalpan Centro",
+        "precio": "36929",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Tlalpan Centro",
+        "precio": "37013",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Tlalpan Centro",
+        "precio": "36856",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Tlalpan Centro",
+        "precio": "36291",
+        "mes": "May 2025"
+      },
+      {
+        "colonia": "Tlalpan Centro",
+        "precio": "36454",
+        "mes": "April 2025"
+      },
+      {
+        "colonia": "Tlalpan Centro",
+        "precio": "37149",
+        "mes": "March 2025"
+      },
+      {
+        "colonia": "Tlalpan Centro",
+        "precio": "37834",
+        "mes": "February 2025"
+      },
+      {
+        "colonia": "Tlalpan Centro",
+        "precio": "37953",
+        "mes": "January 2025"
+      },
+      {
+        "colonia": "Tlalpan Centro",
+        "precio": "37855",
+        "mes": "December 2024"
+      },
+      {
+        "colonia": "Tlalpan Centro",
+        "precio": "38065",
+        "mes": "November 2024"
+      },
+      {
+        "colonia": "Tlalpan Centro",
+        "precio": "37895",
+        "mes": "October 2024"
+      }
+    ],
+    "averagePrice": 37349,
+    "priceHistory": [
+      {
+        "month": "October 2024",
+        "price": 37895,
+        "date": "2024-10-01T06:00:00.000Z"
+      },
+      {
+        "month": "November 2024",
+        "price": 38065,
+        "date": "2024-11-01T06:00:00.000Z"
+      },
+      {
+        "month": "December 2024",
+        "price": 37855,
+        "date": "2024-12-01T06:00:00.000Z"
+      },
+      {
+        "month": "February 2025",
+        "price": 37834,
+        "date": "2025-02-01T06:00:00.000Z"
+      },
+      {
+        "month": "March 2025",
+        "price": 37149,
+        "date": "2025-03-01T06:00:00.000Z"
+      },
+      {
+        "month": "April 2025",
+        "price": 36454,
+        "date": "2025-04-01T06:00:00.000Z"
+      },
+      {
+        "month": "May 2025",
+        "price": 36291,
+        "date": "2025-05-01T06:00:00.000Z"
+      },
+      {
+        "month": "June 2025",
+        "price": 36856,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 37013,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 36929,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 37172,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 37349,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-24T21:42:10.345Z",
+  "updatedAt": "2025-11-24T21:42:10.345Z"
+}

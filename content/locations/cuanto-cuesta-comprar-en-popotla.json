@@ -1,0 +1,171 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-popotla",
+  "locationName": "Popotla",
+  "locationType": "neighborhood",
+  "city": "Ciudad de México",
+  "municipality": "Miguel Hidalgo",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Popotla, CDMX?",
+    "metaTitle": "Precios en Popotla CDMX 2024 | $41,745/m²",
+    "metaDescription": "Descubre el precio promedio por metro cuadrado en Popotla, CDMX: $41,745. ¡Entérate si es el lugar ideal para invertir en bienes raíces! Datos actualizados.",
+    "introduction": "¿Estás pensando en comprar depa o casa en la Ciudad de México? ¡Popotla podría ser una excelente opción! Esta colonia en la alcaldía Miguel Hidalgo tiene un encanto único y una ubicación que te va a encantar. Actualmente, el precio promedio anda alrededor de $41,745 por metro cuadrado, pero, ¿qué significa esto realmente? \n\nPopotla está súper bien ubicada, con acceso a vialidades importantes y un ambiente tranquilo, pero a la vez cerca de todo el movimiento de la ciudad. Además, ¡los precios en Popotla están subiendo! Así que si buscas invertir, este podría ser el momento ideal para echarle un ojo a esta zona.",
+    "mustVisitSpots": [
+      {
+        "name": "Árbol de la Noche Victoriosa (Árbol de la Noche Triste)",
+        "description": "Un emblemático ahuehuete con siglos de historia, testigo de un importante evento en la historia de México."
+      },
+      {
+        "name": "Parque Lira",
+        "description": "Un espacio verde perfecto para relajarte, caminar o hacer ejercicio al aire libre."
+      },
+      {
+        "name": "Mercado Popotla",
+        "description": "Un mercado tradicional donde encontrarás comida deliciosa, productos frescos y un ambiente muy local."
+      },
+      {
+        "name": "Restaurantes locales sobre Calzada México-Tacuba",
+        "description": "Disfruta de la gastronomía mexicana en los diversos restaurantes ubicados sobre esta importante avenida."
+      }
+    ],
+    "priceInsights": "Ahora, hablemos de lana. El precio promedio de $41,745 por metro cuadrado en Popotla es bastante competitivo si lo comparamos con otras zonas de la Miguel Hidalgo y de la CDMX en general. Aunque no es la colonia más barata, ofrece una excelente relación calidad-precio considerando su ubicación y ambiente.  \n\nEn los últimos 12 meses, hemos visto que los precios en Popotla han ido aumentando, lo que indica que la demanda está creciendo. Varios factores pueden estar influyendo en esto, como el desarrollo de nuevos proyectos inmobiliarios en la zona, la mejora de la infraestructura y el creciente interés de la gente por vivir en un lugar tranquilo pero bien conectado. Si sigues de cerca el mercado, ¡podrías encontrar una oportunidad de inversión que valga la pena!",
+    "slug": "cuanto-cuesta-comprar-en-popotla"
+  },
+  "locationData": {
+    "name": "Popotla",
+    "type": "neighborhood",
+    "city": "Ciudad de México",
+    "municipality": "Miguel Hidalgo",
+    "neighborhoods": [
+      {
+        "colonia": "Popotla",
+        "precio": "42479",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Popotla",
+        "precio": "41745",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Popotla",
+        "precio": "39579",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Popotla",
+        "precio": "40481",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Popotla",
+        "precio": "41406",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Popotla",
+        "precio": "42305",
+        "mes": "May 2025"
+      },
+      {
+        "colonia": "Popotla",
+        "precio": "42078",
+        "mes": "April 2025"
+      },
+      {
+        "colonia": "Popotla",
+        "precio": "42308",
+        "mes": "March 2025"
+      },
+      {
+        "colonia": "Popotla",
+        "precio": "41966",
+        "mes": "February 2025"
+      },
+      {
+        "colonia": "Popotla",
+        "precio": "41838",
+        "mes": "January 2025"
+      },
+      {
+        "colonia": "Popotla",
+        "precio": "41433",
+        "mes": "December 2024"
+      },
+      {
+        "colonia": "Popotla",
+        "precio": "41321",
+        "mes": "November 2024"
+      },
+      {
+        "colonia": "Popotla",
+        "precio": "41252",
+        "mes": "October 2024"
+      }
+    ],
+    "averagePrice": 41745,
+    "priceHistory": [
+      {
+        "month": "October 2024",
+        "price": 41252,
+        "date": "2024-10-01T06:00:00.000Z"
+      },
+      {
+        "month": "November 2024",
+        "price": 41321,
+        "date": "2024-11-01T06:00:00.000Z"
+      },
+      {
+        "month": "December 2024",
+        "price": 41433,
+        "date": "2024-12-01T06:00:00.000Z"
+      },
+      {
+        "month": "February 2025",
+        "price": 41966,
+        "date": "2025-02-01T06:00:00.000Z"
+      },
+      {
+        "month": "March 2025",
+        "price": 42308,
+        "date": "2025-03-01T06:00:00.000Z"
+      },
+      {
+        "month": "April 2025",
+        "price": 42078,
+        "date": "2025-04-01T06:00:00.000Z"
+      },
+      {
+        "month": "May 2025",
+        "price": 42305,
+        "date": "2025-05-01T06:00:00.000Z"
+      },
+      {
+        "month": "June 2025",
+        "price": 41406,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 40481,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 39579,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 42479,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 41745,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-24T21:41:45.220Z",
+  "updatedAt": "2025-11-24T21:41:45.220Z"
+}

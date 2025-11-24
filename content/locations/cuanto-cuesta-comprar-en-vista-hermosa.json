@@ -1,0 +1,116 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-vista-hermosa",
+  "locationName": "Vista Hermosa",
+  "locationType": "neighborhood",
+  "city": "Monterrey",
+  "municipality": "Monterrey",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Vista Hermosa?",
+    "metaTitle": "Precios Vista Hermosa Monterrey | $40,016/m² | 2024",
+    "metaDescription": "Descubre el precio promedio en Vista Hermosa, Monterrey: $40,016/m². ¡Entérate de las tendencias y encuentra la propiedad de tus sueños en esta increíble colonia!",
+    "introduction": "¿Pensando en invertir en bienes raíces en Monterrey? ¡Vista Hermosa podría ser tu próximo hogar! Esta colonia, ubicada en el corazón de Monterrey, es conocida por su ambiente familiar y su cercanía a importantes centros comerciales y educativos. Actualmente, el precio promedio para comprar una propiedad aquí ronda los $40,016 por metro cuadrado, pero ¿es una buena inversión?\n\nVivir en Vista Hermosa te ofrece la comodidad de tener todo al alcance de tu mano, desde parques para disfrutar en familia hasta restaurantes con sabores para todos los gustos. ¡Es una excelente opción si buscas un lugar tranquilo pero conectado con la vida urbana! Ojo, los datos que tenemos de los últimos 7 meses apuntan a una ligera disminución en los precios. ¡Vamos a ver qué significa esto para tu bolsillo!",
+    "mustVisitSpots": [
+      {
+        "name": "Parque Vista Hermosa",
+        "description": "Ideal para correr, pasear a tu perro o simplemente relajarte bajo la sombra de los árboles. ¡Siempre hay gente disfrutando del aire libre!"
+      },
+      {
+        "name": "Avenida Alfonso Reyes",
+        "description": "Una de las principales arterias de la zona, llena de restaurantes, cafeterías y tiendas para todos los gustos."
+      },
+      {
+        "name": "Plaza Vista Hermosa",
+        "description": "Un punto de encuentro popular para ir de compras o disfrutar de una comida con amigos y familia."
+      },
+      {
+        "name": "Iglesia de Vista Hermosa",
+        "description": "Un hermoso templo que destaca por su arquitectura y que es un punto de referencia importante en la colonia."
+      }
+    ],
+    "priceInsights": "El precio promedio de $40,016 por metro cuadrado en Vista Hermosa la coloca en un rango medio dentro del mercado inmobiliario de Monterrey. Aunque no es la zona más económica, ofrece una excelente relación calidad-precio considerando su ubicación y amenidades. Comparado con otras colonias cercanas, Vista Hermosa mantiene un atractivo especial para familias y jóvenes profesionales.\n\nOjo a la tendencia: nuestros datos de los últimos 7 meses muestran una ligera disminución en los precios. Esto podría ser una oportunidad para encontrar una ganga, pero también es importante considerar factores como las tasas de interés y la situación económica general que podrían estar influyendo en el mercado. ¡Mantente atento y asesórate con un profesional para tomar la mejor decisión!",
+    "slug": "cuanto-cuesta-comprar-en-vista-hermosa"
+  },
+  "locationData": {
+    "name": "Vista Hermosa",
+    "type": "neighborhood",
+    "city": "Monterrey",
+    "municipality": "Monterrey",
+    "neighborhoods": [
+      {
+        "colonia": "Vista Hermosa",
+        "precio": "38997",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Vista Hermosa",
+        "precio": "40016",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Vista Hermosa",
+        "precio": "77317",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Vista Hermosa",
+        "precio": "77975",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Vista Hermosa",
+        "precio": "79225",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Vista Hermosa",
+        "precio": "79585",
+        "mes": "May 2025"
+      },
+      {
+        "colonia": "Vista Hermosa",
+        "precio": "79599",
+        "mes": "April 2025"
+      }
+    ],
+    "averagePrice": 40016,
+    "priceHistory": [
+      {
+        "month": "April 2025",
+        "price": 79599,
+        "date": "2025-04-01T06:00:00.000Z"
+      },
+      {
+        "month": "May 2025",
+        "price": 79585,
+        "date": "2025-05-01T06:00:00.000Z"
+      },
+      {
+        "month": "June 2025",
+        "price": 79225,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 77975,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 77317,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 38997,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 40016,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-24T21:23:39.920Z",
+  "updatedAt": "2025-11-24T21:23:39.920Z"
+}

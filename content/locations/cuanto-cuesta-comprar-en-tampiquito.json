@@ -1,0 +1,116 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-tampiquito",
+  "locationName": "Tampiquito",
+  "locationType": "neighborhood",
+  "city": "Monterrey",
+  "municipality": "San Pedro Garza García",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Tampiquito, Monterrey?",
+    "metaTitle": "Precios en Tampiquito, Mty | $93,448/m² | 2024",
+    "metaDescription": "¿Pensando en invertir en Tampiquito, Monterrey? Descubre el precio promedio actual por metro cuadrado ($93,448) y la tendencia del mercado. ¡Encuentra la propiedad ideal!",
+    "introduction": "¡Andas buscando depa o casa en San Pedro Garza García? Tampiquito es una colonia que definitivamente debes tener en el radar. Ubicada en uno de los municipios más exclusivos de Monterrey, Tampiquito ofrece una mezcla de tranquilidad, acceso a servicios de primer nivel y, claro, ¡propiedades increíbles! El precio promedio por metro cuadrado anda alrededor de $93,448, así que ya te puedes ir dando una idea de cuánto te costaría hacerte de un rinconcito por acá.\n\nSi bien los precios pueden variar dependiendo de la ubicación exacta dentro de la colonia, el tamaño del terreno y el tipo de propiedad, es bueno saber que, por lo que hemos visto en los últimos 7 meses, la tendencia de precios en Tampiquito parece estar ligeramente a la baja. ¡Así que podría ser un buen momento para empezar a buscar!",
+    "mustVisitSpots": [
+      {
+        "name": "Parque Rufino Tamayo",
+        "description": "Aunque no está *exactamente* en Tampiquito, el Parque Rufino Tamayo está a un brinquito y es perfecto para un paseo relajante, hacer ejercicio al aire libre o disfrutar de un picnic con la familia."
+      },
+      {
+        "name": "Centrito Valle",
+        "description": "Otro lugar cercano que vale la pena explorar. En Centrito Valle encontrarás restaurantes de alta cocina, boutiques exclusivas y un ambiente vibrante."
+      },
+      {
+        "name": "Plaza Fiesta San Agustín",
+        "description": "Para ir de compras o disfrutar de una buena comida, Plaza Fiesta San Agustín está a pocos minutos y ofrece una gran variedad de opciones."
+      },
+      {
+        "name": "Restaurantes locales en Calzada San Pedro",
+        "description": "La Calzada San Pedro, muy cerca de Tampiquito, está llena de restaurantes con propuestas culinarias deliciosas, desde comida mexicana tradicional hasta opciones internacionales."
+      }
+    ],
+    "priceInsights": "Ahora, hablemos de los billetes. Con un precio promedio de $93,448 por metro cuadrado, comprar en Tampiquito no es precisamente barato, ¡pero tampoco es lo más caro de San Pedro! Este precio refleja la exclusividad de la zona, su cercanía a servicios y amenidades, y la calidad de vida que ofrece. Si lo comparamos con otras colonias de Monterrey, Tampiquito se ubica en un rango alto, similar a colonias como Del Valle o Lomas del Valle.\n\nEs importante tener en cuenta que la tendencia a la baja que hemos observado en los últimos meses podría ser una oportunidad para negociar un mejor precio. Factores como la oferta y la demanda, las tasas de interés y las condiciones económicas generales pueden influir en los precios de las propiedades. ¡Así que mantente al tanto de las noticias del mercado inmobiliario!",
+    "slug": "cuanto-cuesta-comprar-en-tampiquito"
+  },
+  "locationData": {
+    "name": "Tampiquito",
+    "type": "neighborhood",
+    "city": "Monterrey",
+    "municipality": "San Pedro Garza García",
+    "neighborhoods": [
+      {
+        "colonia": "Tampiquito",
+        "precio": "87010",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Tampiquito",
+        "precio": "93448",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Tampiquito",
+        "precio": "172465",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Tampiquito",
+        "precio": "158823",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Tampiquito",
+        "precio": "136205",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Tampiquito",
+        "precio": "142969",
+        "mes": "May 2025"
+      },
+      {
+        "colonia": "Tampiquito",
+        "precio": "161874",
+        "mes": "April 2025"
+      }
+    ],
+    "averagePrice": 93448,
+    "priceHistory": [
+      {
+        "month": "April 2025",
+        "price": 161874,
+        "date": "2025-04-01T06:00:00.000Z"
+      },
+      {
+        "month": "May 2025",
+        "price": 142969,
+        "date": "2025-05-01T06:00:00.000Z"
+      },
+      {
+        "month": "June 2025",
+        "price": 136205,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 158823,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 172465,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 87010,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 93448,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-24T21:25:20.147Z",
+  "updatedAt": "2025-11-24T21:25:20.147Z"
+}

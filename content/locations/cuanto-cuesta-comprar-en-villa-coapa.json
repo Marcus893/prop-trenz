@@ -1,0 +1,90 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-villa-coapa",
+  "locationName": "Villa Coapa",
+  "locationType": "neighborhood",
+  "city": "Ciudad de México",
+  "municipality": "Tlalpan",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Villa Coapa?",
+    "metaTitle": "Precios en Villa Coapa CDMX 2024 | $42,551/m²",
+    "metaDescription": "¿Pensando en comprar en Villa Coapa? Descubre los precios actualizados de propiedades y qué hace única a esta colonia en Tlalpan. ¡Entérate ahora!",
+    "introduction": "Si estás buscando un hogar en la Ciudad de México, Villa Coapa es una opción que definitivamente debes considerar. Ubicada en la alcaldía Tlalpan, esta colonia ofrece una combinación de tranquilidad y acceso a todo lo que necesitas. Actualmente, el precio promedio por metro cuadrado en Villa Coapa ronda los $42,551, lo que la convierte en una opción atractiva dentro de la CDMX.\n\nVilla Coapa es conocida por sus áreas verdes, su ambiente familiar y su excelente ubicación. Está cerca de importantes centros comerciales, escuelas de buen nivel y vías de comunicación que te conectan con el resto de la ciudad. Además, los precios en Villa Coapa han mostrado una tendencia al alza en los últimos meses, así que invertir aquí podría ser una excelente decisión.",
+    "mustVisitSpots": [
+      {
+        "name": "Parque de la Consolación",
+        "description": "Un parque tranquilo y arbolado ideal para pasear, hacer ejercicio o simplemente relajarte un rato."
+      },
+      {
+        "name": "Galerías Coapa",
+        "description": "Un centro comercial con tiendas departamentales, boutiques, restaurantes y cines, perfecto para un día de compras y entretenimiento."
+      },
+      {
+        "name": "Restaurantes y fondas locales",
+        "description": "Villa Coapa cuenta con una gran variedad de opciones gastronómicas, desde restaurantes de alta cocina hasta fondas tradicionales con sazón casero."
+      },
+      {
+        "name": "Mercado de Villa Coapa",
+        "description": "Un mercado tradicional donde puedes encontrar productos frescos, comida preparada y artesanías a precios accesibles."
+      },
+      {
+        "name": "Clubes deportivos",
+        "description": "Si te gusta el deporte, en Villa Coapa encontrarás varios clubes deportivos con instalaciones para practicar diversas disciplinas."
+      }
+    ],
+    "priceInsights": "El precio promedio de $42,551 por metro cuadrado en Villa Coapa refleja su creciente popularidad y atractivo. Si lo comparamos con otras zonas de la Ciudad de México, Villa Coapa ofrece una excelente relación calidad-precio, especialmente si buscas un ambiente tranquilo y familiar.\n\nEs importante tener en cuenta que los precios pueden variar dependiendo de la ubicación específica dentro de Villa Coapa, el tamaño del inmueble, su estado de conservación y sus características. Los datos de los últimos 4 meses indican una tendencia al alza, lo que sugiere que la demanda por propiedades en esta colonia está aumentando. Factores como la mejora en la infraestructura local, la apertura de nuevos comercios y la creciente oferta de servicios podrían estar contribuyendo a este aumento en los precios.",
+    "slug": "cuanto-cuesta-comprar-en-villa-coapa"
+  },
+  "locationData": {
+    "name": "Villa Coapa",
+    "type": "neighborhood",
+    "city": "Ciudad de México",
+    "municipality": "Tlalpan",
+    "neighborhoods": [
+      {
+        "colonia": "Villa Coapa",
+        "precio": "42551",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Villa Coapa",
+        "precio": "39295",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Villa Coapa",
+        "precio": "39709",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Villa Coapa",
+        "precio": "38411",
+        "mes": "March 2025"
+      }
+    ],
+    "averagePrice": 42551,
+    "priceHistory": [
+      {
+        "month": "March 2025",
+        "price": 38411,
+        "date": "2025-03-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 39709,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 39295,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 42551,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-24T21:43:12.367Z",
+  "updatedAt": "2025-11-24T21:43:12.367Z"
+}

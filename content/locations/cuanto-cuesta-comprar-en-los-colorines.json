@@ -1,0 +1,116 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-los-colorines",
+  "locationName": "Los Colorines",
+  "locationType": "neighborhood",
+  "city": "Monterrey",
+  "municipality": "San Pedro Garza García",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Los Colorines, Mty?",
+    "metaTitle": "Precios Los Colorines Monterrey 2024 | $51,185/m²",
+    "metaDescription": "Descubre los precios actualizados en Los Colorines, Monterrey. Precio promedio: $51,185/m². ¡Encuentra la propiedad ideal en San Pedro Garza García!",
+    "introduction": "Si estás pensando en invertir en bienes raíces en Monterrey, Los Colorines, en el municipio de San Pedro Garza García, es una colonia que vale la pena considerar. Con un precio promedio actual de $51,185 por metro cuadrado, ofrece opciones interesantes para diferentes presupuestos. \n\nLos Colorines se destaca por su ubicación estratégica y su ambiente tranquilo, combinando la cercanía a servicios y comercios con la privacidad que muchos buscan. Aunque hemos visto una ligera tendencia a la baja en los precios en los últimos 7 meses, ¡no te desanimes! Puede ser una excelente oportunidad para encontrar la casa o el departamento de tus sueños a un precio más accesible.",
+    "mustVisitSpots": [
+      {
+        "name": "Parque Rufino Tamayo",
+        "description": "A unos minutos, este parque es ideal para actividades al aire libre y disfrutar de la naturaleza."
+      },
+      {
+        "name": "Centrito Valle",
+        "description": "Conocido por sus restaurantes de alta cocina, bares y tiendas boutique, perfecto para una tarde de compras o una cena especial."
+      },
+      {
+        "name": "Plaza Fiesta San Agustín",
+        "description": "Un centro comercial con una gran variedad de tiendas, restaurantes y cines, ideal para pasar un día completo."
+      },
+      {
+        "name": "Museo El Centenario",
+        "description": "Un espacio cultural que exhibe arte e historia local, ofreciendo una perspectiva interesante de la región."
+      }
+    ],
+    "priceInsights": "El precio promedio de $51,185 por metro cuadrado en Los Colorines se encuentra en un rango competitivo dentro del mercado inmobiliario de Monterrey, especialmente considerando su ubicación en San Pedro Garza García. Aunque la tendencia actual indica una ligera disminución en los precios, es importante recordar que el mercado inmobiliario es dinámico y factores como la oferta y demanda, la disponibilidad de terrenos y las mejoras en la infraestructura pueden influir en los precios a futuro. ¡Mantente atento a las oportunidades que puedan surgir!",
+    "slug": "cuanto-cuesta-comprar-en-los-colorines"
+  },
+  "locationData": {
+    "name": "Los Colorines",
+    "type": "neighborhood",
+    "city": "Monterrey",
+    "municipality": "San Pedro Garza García",
+    "neighborhoods": [
+      {
+        "colonia": "Los Colorines",
+        "precio": "49041",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Los Colorines",
+        "precio": "51185",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Los Colorines",
+        "precio": "95072",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Los Colorines",
+        "precio": "91102",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Los Colorines",
+        "precio": "86614",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Los Colorines",
+        "precio": "84671",
+        "mes": "May 2025"
+      },
+      {
+        "colonia": "Los Colorines",
+        "precio": "85224",
+        "mes": "April 2025"
+      }
+    ],
+    "averagePrice": 51185,
+    "priceHistory": [
+      {
+        "month": "April 2025",
+        "price": 85224,
+        "date": "2025-04-01T06:00:00.000Z"
+      },
+      {
+        "month": "May 2025",
+        "price": 84671,
+        "date": "2025-05-01T06:00:00.000Z"
+      },
+      {
+        "month": "June 2025",
+        "price": 86614,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 91102,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 95072,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 49041,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 51185,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-24T21:26:35.404Z",
+  "updatedAt": "2025-11-24T21:26:35.404Z"
+}

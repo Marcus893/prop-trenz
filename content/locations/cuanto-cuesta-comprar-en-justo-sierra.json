@@ -1,0 +1,61 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-justo-sierra",
+  "locationName": "Justo Sierra",
+  "locationType": "neighborhood",
+  "city": "Ciudad de México",
+  "municipality": "Iztapalapa",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Justo Sierra?",
+    "metaTitle": "Precios en Justo Sierra CDMX | $40,218/m²",
+    "metaDescription": "Descubre los precios de casas y departamentos en Justo Sierra, Iztapalapa. Precio promedio por metro cuadrado: $40,218. ¡Encuentra tu hogar ideal!",
+    "introduction": "¿Estás pensando en comprar casa o departamento en Iztapalapa? Justo Sierra podría ser tu próximo hogar. Esta colonia ofrece una mezcla de tranquilidad y acceso a todos los servicios que necesitas en la Ciudad de México. Actualmente, el precio promedio por metro cuadrado en Justo Sierra ronda los $40,218, lo que la convierte en una opción interesante dentro de la alcaldía.\n\nJusto Sierra tiene una ubicación estratégica en Iztapalapa, con fácil acceso a vialidades importantes y transporte público. Si buscas un lugar con ambiente familiar y precios accesibles, ¡sigue leyendo para conocer más sobre esta colonia!",
+    "mustVisitSpots": [
+      {
+        "name": "Parque Recreativo Santa Cruz Meyehualco",
+        "description": "Un espacio verde ideal para pasar tiempo en familia, hacer ejercicio o simplemente relajarte al aire libre."
+      },
+      {
+        "name": "Mercado de Santa Cruz Meyehualco",
+        "description": "Encuentra productos frescos, antojitos mexicanos y todo lo que necesitas para tu hogar a precios accesibles."
+      },
+      {
+        "name": "Deportivo Francisco I. Madero",
+        "description": "Un lugar para practicar deportes y actividades físicas, con canchas y áreas para diferentes disciplinas."
+      },
+      {
+        "name": "Calles aledañas al Eje 6 Sur Trabajadoras Sociales",
+        "description": "Donde encontrarás una gran variedad de comercios locales y opciones para comer."
+      }
+    ],
+    "priceInsights": "El precio promedio de $40,218 por metro cuadrado en Justo Sierra refleja su posición como una opción atractiva dentro de Iztapalapa. Si lo comparamos con el promedio general de la Ciudad de México, que suele ser más elevado, Justo Sierra presenta una oportunidad para adquirir propiedades a precios más accesibles. Con los datos que tenemos hasta el momento, los precios se mantienen estables, lo cual es una buena señal para los compradores. Factores como la ubicación, el tamaño de la propiedad y su estado de conservación influyen, sin duda, en el precio final. Considera que la cercanía a servicios, transporte público y áreas verdes puede aumentar el valor de una propiedad en esta colonia.",
+    "slug": "cuanto-cuesta-comprar-en-justo-sierra"
+  },
+  "locationData": {
+    "name": "Justo Sierra",
+    "type": "neighborhood",
+    "city": "Ciudad de México",
+    "municipality": "Iztapalapa",
+    "neighborhoods": [
+      {
+        "colonia": "Justo Sierra",
+        "precio": "36523",
+        "mes": "January 2025"
+      },
+      {
+        "colonia": "Justo Sierra",
+        "precio": "40218",
+        "mes": "December 2024"
+      }
+    ],
+    "averagePrice": 40218,
+    "priceHistory": [
+      {
+        "month": "December 2024",
+        "price": 40218,
+        "date": "2024-12-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-24T21:37:45.218Z",
+  "updatedAt": "2025-11-24T21:37:45.218Z"
+}

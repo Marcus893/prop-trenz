@@ -1,0 +1,175 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-san-angel",
+  "locationName": "San Angel",
+  "locationType": "neighborhood",
+  "city": "Ciudad de México",
+  "municipality": "Álvaro Obregón",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en San Ángel, CDMX?",
+    "metaTitle": "Precios en San Ángel CDMX 2024 | $57,104/m²",
+    "metaDescription": "Descubre el precio por m² en San Ángel, CDMX. ¡Actualmente $57,104! Encuentra las mejores oportunidades inmobiliarias en esta joya de Álvaro Obregón. ¡Entérate ahora!",
+    "introduction": "San Ángel, esa colonia con un encanto que enamora, ¿verdad? Si andas pensando en invertir o mudarte por acá, seguramente te estás preguntando cuánto cuesta el metro cuadrado. Pues bien, actualmente el precio promedio ronda los $57,104 por metro cuadrado. \n\nUbicada en la alcaldía Álvaro Obregón, San Ángel es famosa por sus calles empedradas, sus casas coloniales y ese aire bohemio que la hace única. Es un lugar tranquilo, pero con una vida cultural y gastronómica vibrante. Aunque los precios han estado un poquito a la baja en los últimos meses, sigue siendo una de las zonas más cotizadas de la Ciudad de México.",
+    "mustVisitSpots": [
+      {
+        "name": "Plaza San Jacinto",
+        "description": "Un lugar ideal para relajarte, disfrutar de un café y admirar la arquitectura colonial."
+      },
+      {
+        "name": "Museo Casa Estudio Diego Rivera y Frida Kahlo",
+        "description": "Un imperdible para los amantes del arte y la historia mexicana, donde podrás conocer más sobre la vida y obra de estos dos grandes artistas."
+      },
+      {
+        "name": "Mercado Melchor Múzquiz",
+        "description": "Un mercado tradicional donde encontrarás desde flores y artesanías hasta comida deliciosa y productos frescos."
+      },
+      {
+        "name": "Iglesia del Carmen",
+        "description": "Una joya arquitectónica con una fachada impresionante y un interior lleno de historia."
+      },
+      {
+        "name": "San Ángel Inn",
+        "description": "Un restaurante emblemático con un ambiente elegante y una cocina mexicana de alta calidad."
+      }
+    ],
+    "priceInsights": "Con un precio promedio de $57,104 por metro cuadrado, San Ángel se posiciona como una colonia con precios por encima del promedio de la Ciudad de México. Aunque este dato pueda sonar elevado, es importante considerar el valor que ofrece la zona: seguridad, ubicación privilegiada y un estilo de vida tranquilo pero con acceso a todo lo que necesitas. La ligera tendencia a la baja que hemos observado en los últimos 12 meses podría ser una buena oportunidad para invertir, aunque es fundamental analizar a fondo cada propiedad y considerar factores como la ubicación específica dentro de San Ángel, el estado de conservación del inmueble y las amenidades que ofrece. La plusvalía de San Ángel se mantiene sólida, impulsada por su encanto histórico y su creciente oferta cultural y gastronómica.",
+    "slug": "cuanto-cuesta-comprar-en-san-angel"
+  },
+  "locationData": {
+    "name": "San Angel",
+    "type": "neighborhood",
+    "city": "Ciudad de México",
+    "municipality": "Álvaro Obregón",
+    "neighborhoods": [
+      {
+        "colonia": "San Angel",
+        "precio": "57216",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "San Angel",
+        "precio": "57104",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "San Angel",
+        "precio": "57880",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "San Angel",
+        "precio": "59447",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "San Angel",
+        "precio": "60516",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "San Angel",
+        "precio": "60214",
+        "mes": "May 2025"
+      },
+      {
+        "colonia": "San Angel",
+        "precio": "59790",
+        "mes": "April 2025"
+      },
+      {
+        "colonia": "San Angel",
+        "precio": "59913",
+        "mes": "March 2025"
+      },
+      {
+        "colonia": "San Angel",
+        "precio": "60276",
+        "mes": "February 2025"
+      },
+      {
+        "colonia": "San Angel",
+        "precio": "59991",
+        "mes": "January 2025"
+      },
+      {
+        "colonia": "San Angel",
+        "precio": "59493",
+        "mes": "December 2024"
+      },
+      {
+        "colonia": "San Angel",
+        "precio": "59078",
+        "mes": "November 2024"
+      },
+      {
+        "colonia": "San Angel",
+        "precio": "58901",
+        "mes": "October 2024"
+      }
+    ],
+    "averagePrice": 57104,
+    "priceHistory": [
+      {
+        "month": "October 2024",
+        "price": 58901,
+        "date": "2024-10-01T06:00:00.000Z"
+      },
+      {
+        "month": "November 2024",
+        "price": 59078,
+        "date": "2024-11-01T06:00:00.000Z"
+      },
+      {
+        "month": "December 2024",
+        "price": 59493,
+        "date": "2024-12-01T06:00:00.000Z"
+      },
+      {
+        "month": "February 2025",
+        "price": 60276,
+        "date": "2025-02-01T06:00:00.000Z"
+      },
+      {
+        "month": "March 2025",
+        "price": 59913,
+        "date": "2025-03-01T06:00:00.000Z"
+      },
+      {
+        "month": "April 2025",
+        "price": 59790,
+        "date": "2025-04-01T06:00:00.000Z"
+      },
+      {
+        "month": "May 2025",
+        "price": 60214,
+        "date": "2025-05-01T06:00:00.000Z"
+      },
+      {
+        "month": "June 2025",
+        "price": 60516,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 59447,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 57880,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 57216,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 57104,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-24T21:28:28.585Z",
+  "updatedAt": "2025-11-24T21:28:28.585Z"
+}

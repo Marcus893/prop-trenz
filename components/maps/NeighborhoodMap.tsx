@@ -557,6 +557,8 @@ export function NeighborhoodMap({ data, selectedCity: selectedCityProp }: Neighb
   const [geocodingProgress, setGeocodingProgress] = useState<{ current: number; total: number } | null>(null)
   const [savedCoordsLoaded, setSavedCoordsLoaded] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
+  const [filterPrice, setFilterPrice] = useState<string>('')
+  const [filterType, setFilterType] = useState<'less' | 'greater'>('less')
   const [mapInstance, setMapInstance] = useState<L.Map | null>(null)
   const [isCardCollapsed, setIsCardCollapsed] = useState(false)
   const [selectedNeighborhoodForChart, setSelectedNeighborhoodForChart] = useState<{
@@ -624,6 +626,8 @@ export function NeighborhoodMap({ data, selectedCity: selectedCityProp }: Neighb
     // Then clear municipality state
     setSelectedMunicipality(null)
     setSearchQuery('')
+    setFilterPrice('')
+    setFilterType('less')
     setIsCardCollapsed(false)
     
     // Remove municipality and neighborhood parameters from URL when panel is closed
@@ -681,6 +685,9 @@ export function NeighborhoodMap({ data, selectedCity: selectedCityProp }: Neighb
     setSelectedMunicipality(null)
     setSelectedNeighborhoodForChart(null)
     setSelectedMunicipalityForChart(null)
+    setSearchQuery('')
+    setFilterPrice('')
+    setFilterType('less')
     // Reset restoration refs when city changes
     urlRestoredRef.current = false
     chartRestoredRef.current = false
@@ -1694,7 +1701,7 @@ export function NeighborhoodMap({ data, selectedCity: selectedCityProp }: Neighb
           </div>
           
           {/* Fixed Header */}
-          <div className="flex justify-between items-center p-3 md:p-4 pb-3 border-b bg-white flex-shrink-0">
+          <div className="flex justify-between items-center p-3 md:p-2 border-b bg-white flex-shrink-0">
             <h3 className="font-bold text-base md:text-lg">{selectedData.municipality}</h3>
             <div className="flex items-center gap-2">
               {!isCardCollapsed && selectedData && (
@@ -1746,8 +1753,8 @@ export function NeighborhoodMap({ data, selectedCity: selectedCityProp }: Neighb
           </div>
           
           {/* Fixed Neighborhoods Header and Search */}
-          <div className="px-3 md:px-4 pt-2 md:pt-3 pb-2 border-b bg-white flex-shrink-0">
-            <h4 className="font-semibold text-xs md:text-sm mb-2">{t('map.neighborhoods_label')}</h4>
+          <div className="px-3 md:px-4 pt-2 md:pt-1 pb-2 border-b bg-white flex-shrink-0 min-w-0">
+            <h4 className="font-semibold text-xs md:text-sm mb-1">{t('map.neighborhoods_label')}</h4>
             {/* Search box */}
             <div className="mb-2">
               <input
@@ -1755,7 +1762,28 @@ export function NeighborhoodMap({ data, selectedCity: selectedCityProp }: Neighb
                 placeholder={t('map.search_neighborhoods')}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-2 md:px-3 py-1.5 md:py-2 text-xs md:text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-2 md:px-2 py-1.5 md:py-2 text-xs md:text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
+            </div>
+            {/* Price filter */}
+            <div className="flex gap-1.5 md:gap-2 min-w-0 w-full">
+              <select
+                value={filterType}
+                onChange={(e) => setFilterType(e.target.value as 'less' | 'greater')}
+                className="px-1.5 md:px-2 py-1.5 md:py-2 text-xs border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white flex-shrink-0"
+                style={{ width: 'auto', minWidth: '65px', maxWidth: '75px' }}
+              >
+                <option value="less">{t('map.price_less_than', 'Less than')}</option>
+                <option value="greater">{t('map.price_greater_than', 'Greater than')}</option>
+              </select>
+              <input
+                type="number"
+                placeholder={t('map.price_filter_placeholder', 'Price (MXN/m²)')}
+                value={filterPrice}
+                onChange={(e) => setFilterPrice(e.target.value)}
+                className="flex-1 min-w-0 px-1.5 md:px-2 py-1.5 md:py-2 text-xs border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                min="0"
+                step="1000"
               />
             </div>
           </div>
@@ -1781,10 +1809,31 @@ export function NeighborhoodMap({ data, selectedCity: selectedCityProp }: Neighb
               })
               
               const displayNeighborhoods = Array.from(uniqueColonias.values())
-                .filter(neighborhood => 
-                  searchQuery === '' || 
-                  neighborhood.colonia.toLowerCase().includes(searchQuery.toLowerCase())
-                )
+                .filter(neighborhood => {
+                  // Text search filter
+                  const matchesSearch = searchQuery === '' || 
+                    neighborhood.colonia.toLowerCase().includes(searchQuery.toLowerCase())
+                  
+                  // Price filter
+                  let matchesPrice = true
+                  if (filterPrice && filterPrice.trim() !== '') {
+                    const priceValue = parseFloat(filterPrice)
+                    if (!isNaN(priceValue) && priceValue > 0) {
+                      const neighborhoodPrice = parseFloat(neighborhood.precio)
+                      if (!isNaN(neighborhoodPrice)) {
+                        if (filterType === 'less') {
+                          matchesPrice = neighborhoodPrice < priceValue
+                        } else {
+                          matchesPrice = neighborhoodPrice > priceValue
+                        }
+                      } else {
+                        matchesPrice = false
+                      }
+                    }
+                  }
+                  
+                  return matchesSearch && matchesPrice
+                })
                 .sort((a, b) => parseFloat(b.precio) - parseFloat(a.precio))
               
               return (

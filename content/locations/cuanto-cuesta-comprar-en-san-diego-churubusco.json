@@ -1,0 +1,171 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-san-diego-churubusco",
+  "locationName": "San Diego Churubusco",
+  "locationType": "neighborhood",
+  "city": "Ciudad de México",
+  "municipality": "Coyoacán",
+  "content": {
+    "title": "¿Cuánto Cuesta Comprar en San Diego Churubusco?",
+    "metaTitle": "Precios en San Diego Churubusco CDMX | $52,863/m²",
+    "metaDescription": "Descubre los precios de propiedades en San Diego Churubusco. Precio promedio actual: $52,863/m². ¡Encuentra tu hogar ideal en Coyoacán!",
+    "introduction": "Si estás pensando en comprar casa o departamento en la Ciudad de México, San Diego Churubusco, en la alcaldía Coyoacán, es una opción que vale la pena considerar. Esta colonia combina la tranquilidad de un barrio residencial con la cercanía a importantes vías de acceso y servicios. Actualmente, el precio promedio por metro cuadrado aquí ronda los $52,863 pesos, un dato crucial para planificar tu inversión inmobiliaria.\n\nSan Diego Churubusco es conocida por su ambiente familiar y su ubicación estratégica. ¡Está cerca de todo! Y aunque los precios han mostrado una ligera tendencia a la baja en los últimos meses, sigue siendo una zona atractiva para vivir.",
+    "mustVisitSpots": [
+      {
+        "name": "Parque de la Consolación",
+        "description": "Un parque pequeño pero acogedor, perfecto para dar un paseo tranquilo o llevar a los niños a jugar."
+      },
+      {
+        "name": "Mercado San Diego Churubusco",
+        "description": "Donde encontrarás productos frescos, antojitos deliciosos y el ambiente vibrante de un mercado tradicional mexicano."
+      },
+      {
+        "name": "Cineteca Nacional",
+        "description": "Aunque no está *exactamente* en San Diego Churubusco, está súper cerca y es un punto de referencia cultural imperdible."
+      },
+      {
+        "name": "Restaurantes locales en Av. Escuela Naval Militar",
+        "description": "A lo largo de esta avenida encontrarás una variedad de opciones para comer, desde tacos hasta restaurantes de comida corrida."
+      }
+    ],
+    "priceInsights": "Actualmente, el precio promedio de $52,863 pesos por metro cuadrado en San Diego Churubusco refleja una ligera disminución en los últimos 12 meses. Comparado con otras zonas de la Ciudad de México, este precio es competitivo, especialmente considerando la ubicación privilegiada en Coyoacán. \n\nEs importante tener en cuenta que factores como el tamaño de la propiedad, el estado de conservación, la cercanía a parques y escuelas, así como la accesibilidad al transporte público, pueden influir significativamente en el precio final. La tendencia a la baja podría ser una oportunidad para encontrar buenas ofertas, ¡así que te recomiendo estar atento y buscar con paciencia tu próximo hogar!",
+    "slug": "cuanto-cuesta-comprar-en-san-diego-churubusco"
+  },
+  "locationData": {
+    "name": "San Diego Churubusco",
+    "type": "neighborhood",
+    "city": "Ciudad de México",
+    "municipality": "Coyoacán",
+    "neighborhoods": [
+      {
+        "colonia": "San Diego Churubusco",
+        "precio": "52590",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "San Diego Churubusco",
+        "precio": "52863",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "San Diego Churubusco",
+        "precio": "53550",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "San Diego Churubusco",
+        "precio": "54932",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "San Diego Churubusco",
+        "precio": "57912",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "San Diego Churubusco",
+        "precio": "58670",
+        "mes": "May 2025"
+      },
+      {
+        "colonia": "San Diego Churubusco",
+        "precio": "60006",
+        "mes": "April 2025"
+      },
+      {
+        "colonia": "San Diego Churubusco",
+        "precio": "59382",
+        "mes": "March 2025"
+      },
+      {
+        "colonia": "San Diego Churubusco",
+        "precio": "58694",
+        "mes": "February 2025"
+      },
+      {
+        "colonia": "San Diego Churubusco",
+        "precio": "57784",
+        "mes": "January 2025"
+      },
+      {
+        "colonia": "San Diego Churubusco",
+        "precio": "57840",
+        "mes": "December 2024"
+      },
+      {
+        "colonia": "San Diego Churubusco",
+        "precio": "58038",
+        "mes": "November 2024"
+      },
+      {
+        "colonia": "San Diego Churubusco",
+        "precio": "57790",
+        "mes": "October 2024"
+      }
+    ],
+    "averagePrice": 52863,
+    "priceHistory": [
+      {
+        "month": "October 2024",
+        "price": 57790,
+        "date": "2024-10-01T06:00:00.000Z"
+      },
+      {
+        "month": "November 2024",
+        "price": 58038,
+        "date": "2024-11-01T06:00:00.000Z"
+      },
+      {
+        "month": "December 2024",
+        "price": 57840,
+        "date": "2024-12-01T06:00:00.000Z"
+      },
+      {
+        "month": "February 2025",
+        "price": 58694,
+        "date": "2025-02-01T06:00:00.000Z"
+      },
+      {
+        "month": "March 2025",
+        "price": 59382,
+        "date": "2025-03-01T06:00:00.000Z"
+      },
+      {
+        "month": "April 2025",
+        "price": 60006,
+        "date": "2025-04-01T06:00:00.000Z"
+      },
+      {
+        "month": "May 2025",
+        "price": 58670,
+        "date": "2025-05-01T06:00:00.000Z"
+      },
+      {
+        "month": "June 2025",
+        "price": 57912,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 54932,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 53550,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 52590,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 52863,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-24T21:31:18.445Z",
+  "updatedAt": "2025-11-24T21:31:18.445Z"
+}

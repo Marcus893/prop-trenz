@@ -1,0 +1,171 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-granjas-coapa",
+  "locationName": "Granjas Coapa",
+  "locationType": "neighborhood",
+  "city": "Ciudad de México",
+  "municipality": "Tlalpan",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Granjas Coapa?",
+    "metaTitle": "Precios en Granjas Coapa CDMX | $41,719/m² Actualizado",
+    "metaDescription": "Descubre el precio por m² en Granjas Coapa, CDMX. Datos actualizados: $41,719/m². ¡Invierte en una zona con alta plusvalía en Tlalpan! Checa nuestros insights.",
+    "introduction": "¿Estás pensando en comprar casa o departamento en Granjas Coapa? ¡Excelente elección! Esta colonia en Tlalpan, Ciudad de México, es una joyita con mucho que ofrecer. Actualmente, el precio promedio por metro cuadrado anda alrededor de los $41,719, y te digo algo, la cosa va para arriba. \n\nGranjas Coapa tiene una ubicación estratégica, con acceso a vialidades importantes y rodeada de servicios. Además, su ambiente tranquilo y familiar la hacen ideal para quienes buscan un hogar con buena calidad de vida. ¡Vamos a ver qué te espera por aquí!",
+    "mustVisitSpots": [
+      {
+        "name": "Parque de la Consolación",
+        "description": "Un espacio verde perfecto para relajarse, pasear a tu perro o disfrutar de un picnic en familia."
+      },
+      {
+        "name": "Restaurantes en Canal de Miramontes",
+        "description": "A lo largo de Canal de Miramontes encontrarás una gran variedad de restaurantes para todos los gustos, desde comida mexicana hasta opciones internacionales."
+      },
+      {
+        "name": "Centros comerciales cercanos",
+        "description": "Plaza Galerías Coapa y otros centros comerciales ofrecen tiendas departamentales, cines y entretenimiento para toda la familia, a solo unos minutos de Granjas Coapa."
+      },
+      {
+        "name": "Mercado de Granjas Coapa",
+        "description": "Ideal para encontrar productos frescos, antojitos mexicanos y un ambiente local auténtico. ¡No te lo pierdas!"
+      }
+    ],
+    "priceInsights": "El precio promedio de $41,719 por metro cuadrado en Granjas Coapa la coloca en un rango competitivo dentro de la Ciudad de México. Si lo comparamos con otras colonias en Tlalpan, vemos que está ligeramente por encima del promedio, lo que refleja su atractivo y demanda. Y ojo, que en los últimos 12 meses hemos visto un aumento en los precios, lo que indica que la zona está ganando plusvalía. Esto puede deberse a varios factores, como la mejora en la infraestructura, la construcción de nuevos desarrollos y la creciente popularidad de la colonia entre familias y jóvenes profesionales.",
+    "slug": "cuanto-cuesta-comprar-en-granjas-coapa"
+  },
+  "locationData": {
+    "name": "Granjas Coapa",
+    "type": "neighborhood",
+    "city": "Ciudad de México",
+    "municipality": "Tlalpan",
+    "neighborhoods": [
+      {
+        "colonia": "Granjas Coapa",
+        "precio": "41864",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Granjas Coapa",
+        "precio": "41719",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Granjas Coapa",
+        "precio": "40147",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Granjas Coapa",
+        "precio": "39683",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Granjas Coapa",
+        "precio": "39784",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Granjas Coapa",
+        "precio": "39847",
+        "mes": "May 2025"
+      },
+      {
+        "colonia": "Granjas Coapa",
+        "precio": "39680",
+        "mes": "April 2025"
+      },
+      {
+        "colonia": "Granjas Coapa",
+        "precio": "38855",
+        "mes": "March 2025"
+      },
+      {
+        "colonia": "Granjas Coapa",
+        "precio": "38052",
+        "mes": "February 2025"
+      },
+      {
+        "colonia": "Granjas Coapa",
+        "precio": "38320",
+        "mes": "January 2025"
+      },
+      {
+        "colonia": "Granjas Coapa",
+        "precio": "38569",
+        "mes": "December 2024"
+      },
+      {
+        "colonia": "Granjas Coapa",
+        "precio": "39129",
+        "mes": "November 2024"
+      },
+      {
+        "colonia": "Granjas Coapa",
+        "precio": "38453",
+        "mes": "October 2024"
+      }
+    ],
+    "averagePrice": 41719,
+    "priceHistory": [
+      {
+        "month": "October 2024",
+        "price": 38453,
+        "date": "2024-10-01T06:00:00.000Z"
+      },
+      {
+        "month": "November 2024",
+        "price": 39129,
+        "date": "2024-11-01T06:00:00.000Z"
+      },
+      {
+        "month": "December 2024",
+        "price": 38569,
+        "date": "2024-12-01T06:00:00.000Z"
+      },
+      {
+        "month": "February 2025",
+        "price": 38052,
+        "date": "2025-02-01T06:00:00.000Z"
+      },
+      {
+        "month": "March 2025",
+        "price": 38855,
+        "date": "2025-03-01T06:00:00.000Z"
+      },
+      {
+        "month": "April 2025",
+        "price": 39680,
+        "date": "2025-04-01T06:00:00.000Z"
+      },
+      {
+        "month": "May 2025",
+        "price": 39847,
+        "date": "2025-05-01T06:00:00.000Z"
+      },
+      {
+        "month": "June 2025",
+        "price": 39784,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 39683,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 40147,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 41864,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 41719,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-24T21:43:00.217Z",
+  "updatedAt": "2025-11-24T21:43:00.219Z"
+}

@@ -1,0 +1,136 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-escuadron-201",
+  "locationName": "Escuadron 201",
+  "locationType": "neighborhood",
+  "city": "Ciudad de México",
+  "municipality": "Iztapalapa",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Escuadrón 201?",
+    "metaTitle": "Precios Escuadrón 201 CDMX: ¡Desde $27,604/m²!",
+    "metaDescription": "Descubre los precios actualizados en Escuadrón 201, Iztapalapa. ¿Es el momento ideal para invertir? ¡Precios desde $27,604/m²! Encuentra tu hogar aquí.",
+    "introduction": "Si estás pensando en invertir en bienes raíces en la Ciudad de México, Escuadrón 201, en la alcaldía Iztapalapa, es una colonia que definitivamente debes tener en el radar. Con un precio promedio actual de $27,604 por metro cuadrado, esta zona ofrece una excelente oportunidad para quienes buscan un hogar con buena conectividad y un ambiente vecinal tranquilo. Escuadrón 201 se distingue por su ambiente familiar y acceso a diversos servicios, lo que la convierte en una opción atractiva para familias jóvenes y profesionistas. \n\nLa ubicación estratégica de Escuadrón 201 la hace especialmente interesante. Está bien conectada con importantes vías de acceso y cercana a centros comerciales y educativos. Además, la colonia ha experimentado un desarrollo constante, lo que se refleja en la tendencia al alza de los precios de las propiedades. ¡Sigue leyendo para descubrir más sobre esta joya de Iztapalapa!",
+    "mustVisitSpots": [
+      {
+        "name": "Parque de los Periodistas Ilustres",
+        "description": "Un espacio verde perfecto para relajarse, hacer ejercicio o disfrutar de un rato en familia. Ideal para escapar del bullicio de la ciudad."
+      },
+      {
+        "name": "Mercado de Escuadrón 201",
+        "description": "Encuentra una gran variedad de productos frescos, comida tradicional y antojitos mexicanos a precios accesibles. ¡Una explosión de sabores!"
+      },
+      {
+        "name": "Deportivo Escuadrón 201",
+        "description": "Cuenta con canchas, alberca y áreas verdes para practicar deportes y actividades recreativas. ¡Mantente activo y diviértete!"
+      },
+      {
+        "name": "Las tiendas de la Calzada Ermita Iztapalapa",
+        "description": "A lo largo de la calzada, encontrarás una variedad de tiendas locales, desde ferreterías hasta boutiques, perfectas para encontrar todo lo que necesitas cerca de casa."
+      }
+    ],
+    "priceInsights": "Con un precio promedio de $27,604 por metro cuadrado, Escuadrón 201 se posiciona como una opción accesible en comparación con otras zonas de la Ciudad de México. Si bien este precio puede variar dependiendo del tipo de propiedad, ubicación específica dentro de la colonia y estado de conservación, representa una excelente oportunidad para invertir.  Además, los datos de los últimos 9 meses indican una tendencia al alza en los precios, lo que sugiere que la demanda en la zona está aumentando. Factores como la creciente inversión en infraestructura, la mejora de los servicios públicos y la cercanía a importantes centros de trabajo y estudio podrían estar impulsando esta tendencia. Por lo tanto, si estás considerando comprar una propiedad en Escuadrón 201, ¡ahora podría ser el momento ideal!",
+    "slug": "cuanto-cuesta-comprar-en-escuadron-201"
+  },
+  "locationData": {
+    "name": "Escuadron 201",
+    "type": "neighborhood",
+    "city": "Ciudad de México",
+    "municipality": "Iztapalapa",
+    "neighborhoods": [
+      {
+        "colonia": "Escuadron 201",
+        "precio": "27604",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Escuadron 201",
+        "precio": "28578",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Escuadron 201",
+        "precio": "29498",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Escuadron 201",
+        "precio": "31853",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Escuadron 201",
+        "precio": "31750",
+        "mes": "May 2025"
+      },
+      {
+        "colonia": "Escuadron 201",
+        "precio": "31860",
+        "mes": "April 2025"
+      },
+      {
+        "colonia": "Escuadron 201",
+        "precio": "26351",
+        "mes": "March 2025"
+      },
+      {
+        "colonia": "Escuadron 201",
+        "precio": "25387",
+        "mes": "November 2024"
+      },
+      {
+        "colonia": "Escuadron 201",
+        "precio": "17124",
+        "mes": "October 2024"
+      }
+    ],
+    "averagePrice": 27604,
+    "priceHistory": [
+      {
+        "month": "October 2024",
+        "price": 17124,
+        "date": "2024-10-01T06:00:00.000Z"
+      },
+      {
+        "month": "November 2024",
+        "price": 25387,
+        "date": "2024-11-01T06:00:00.000Z"
+      },
+      {
+        "month": "March 2025",
+        "price": 26351,
+        "date": "2025-03-01T06:00:00.000Z"
+      },
+      {
+        "month": "April 2025",
+        "price": 31860,
+        "date": "2025-04-01T06:00:00.000Z"
+      },
+      {
+        "month": "May 2025",
+        "price": 31750,
+        "date": "2025-05-01T06:00:00.000Z"
+      },
+      {
+        "month": "June 2025",
+        "price": 31853,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 29498,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 28578,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 27604,
+        "date": "2025-09-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-24T21:36:09.576Z",
+  "updatedAt": "2025-11-24T21:36:09.576Z"
+}

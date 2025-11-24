@@ -1,0 +1,171 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-tacuba",
+  "locationName": "Tacuba",
+  "locationType": "neighborhood",
+  "city": "Ciudad de México",
+  "municipality": "Miguel Hidalgo",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Tacuba, CDMX?",
+    "metaTitle": "Precios en Tacuba, CDMX 2024 | $47,305/m²",
+    "metaDescription": "Descubre los precios actuales en Tacuba, Ciudad de México. El precio promedio es de $47,305/m². ¡Invierte en una colonia con historia y plusvalía!",
+    "introduction": "¿Estás pensando en comprar una propiedad en la Ciudad de México? ¡Tacuba es una opción que debes considerar! Esta colonia, ubicada en la alcaldía Miguel Hidalgo, tiene una rica historia y un encanto particular que la hacen atractiva para vivir e invertir. Actualmente, el precio promedio por metro cuadrado en Tacuba ronda los $47,305. ¡Anímate a conocer más sobre esta joya de la CDMX!\n\nTacuba ofrece una mezcla interesante de tradición y modernidad. Su ubicación estratégica la conecta fácilmente con otras zonas importantes de la ciudad, y su ambiente tranquilo la convierte en un oasis en medio del bullicio. Además, los precios en Tacuba están mostrando una tendencia al alza, lo que significa que tu inversión podría generar buenos rendimientos a futuro.",
+    "mustVisitSpots": [
+      {
+        "name": "Parque Cañitas",
+        "description": "Un espacio verde ideal para relajarse, pasear a tu mascota o disfrutar de un picnic familiar."
+      },
+      {
+        "name": "Mercado Tacuba",
+        "description": "Un mercado tradicional donde encontrarás comida deliciosa, productos frescos y artesanías locales."
+      },
+      {
+        "name": "Calzada México-Tacuba",
+        "description": "Una avenida histórica llena de edificios emblemáticos y comercios interesantes."
+      },
+      {
+        "name": "Estación del Metro Tacuba",
+        "description": "Un punto de conexión vital con el resto de la ciudad, fácil acceso a transporte público."
+      }
+    ],
+    "priceInsights": "Con un precio promedio de $47,305 por metro cuadrado, Tacuba se posiciona como una opción accesible dentro del mercado inmobiliario de la Ciudad de México. Si bien los precios en otras zonas más céntricas pueden ser significativamente más altos, Tacuba ofrece una excelente relación calidad-precio, especialmente si buscas un lugar con historia y buena ubicación.\n\nDurante los últimos 12 meses, hemos observado una tendencia al alza en los precios de las propiedades en Tacuba. Esto podría deberse a varios factores, como la creciente demanda por vivir en la zona, las mejoras en la infraestructura y la revalorización de los espacios históricos. ¡Ahora es un buen momento para invertir antes de que los precios sigan subiendo!",
+    "slug": "cuanto-cuesta-comprar-en-tacuba"
+  },
+  "locationData": {
+    "name": "Tacuba",
+    "type": "neighborhood",
+    "city": "Ciudad de México",
+    "municipality": "Miguel Hidalgo",
+    "neighborhoods": [
+      {
+        "colonia": "Tacuba",
+        "precio": "47118",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Tacuba",
+        "precio": "47305",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Tacuba",
+        "precio": "44868",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Tacuba",
+        "precio": "43465",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Tacuba",
+        "precio": "43435",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Tacuba",
+        "precio": "43863",
+        "mes": "May 2025"
+      },
+      {
+        "colonia": "Tacuba",
+        "precio": "43717",
+        "mes": "April 2025"
+      },
+      {
+        "colonia": "Tacuba",
+        "precio": "43092",
+        "mes": "March 2025"
+      },
+      {
+        "colonia": "Tacuba",
+        "precio": "42636",
+        "mes": "February 2025"
+      },
+      {
+        "colonia": "Tacuba",
+        "precio": "42248",
+        "mes": "January 2025"
+      },
+      {
+        "colonia": "Tacuba",
+        "precio": "41769",
+        "mes": "December 2024"
+      },
+      {
+        "colonia": "Tacuba",
+        "precio": "41356",
+        "mes": "November 2024"
+      },
+      {
+        "colonia": "Tacuba",
+        "precio": "40822",
+        "mes": "October 2024"
+      }
+    ],
+    "averagePrice": 47305,
+    "priceHistory": [
+      {
+        "month": "October 2024",
+        "price": 40822,
+        "date": "2024-10-01T06:00:00.000Z"
+      },
+      {
+        "month": "November 2024",
+        "price": 41356,
+        "date": "2024-11-01T06:00:00.000Z"
+      },
+      {
+        "month": "December 2024",
+        "price": 41769,
+        "date": "2024-12-01T06:00:00.000Z"
+      },
+      {
+        "month": "February 2025",
+        "price": 42636,
+        "date": "2025-02-01T06:00:00.000Z"
+      },
+      {
+        "month": "March 2025",
+        "price": 43092,
+        "date": "2025-03-01T06:00:00.000Z"
+      },
+      {
+        "month": "April 2025",
+        "price": 43717,
+        "date": "2025-04-01T06:00:00.000Z"
+      },
+      {
+        "month": "May 2025",
+        "price": 43863,
+        "date": "2025-05-01T06:00:00.000Z"
+      },
+      {
+        "month": "June 2025",
+        "price": 43435,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 43465,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 44868,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 47118,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 47305,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-24T21:40:31.014Z",
+  "updatedAt": "2025-11-24T21:40:31.014Z"
+}

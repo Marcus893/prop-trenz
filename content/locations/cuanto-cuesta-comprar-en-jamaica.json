@@ -1,0 +1,171 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-jamaica",
+  "locationName": "Jamaica",
+  "locationType": "neighborhood",
+  "city": "Ciudad de México",
+  "municipality": "Venustiano Carranza",
+  "content": {
+    "title": "¿Cuánto Cuesta Comprar en Jamaica, CDMX?",
+    "metaTitle": "Precios en Jamaica CDMX 2024 | $40,999/m²",
+    "metaDescription": "¿Quieres invertir en Jamaica, CDMX? Descubre el precio promedio por metro cuadrado, la tendencia actual y qué hace única a esta colonia de Venustiano Carranza. ¡Entérate aquí!",
+    "introduction": "¿Pensando en comprar depa o casa en la Ciudad de México? Jamaica, en la alcaldía Venustiano Carranza, es una opción que definitivamente vale la pena considerar. Con su ambiente vibrante y ubicación céntrica, esta colonia ofrece una mezcla única de tradición y modernidad. Actualmente, el precio promedio por metro cuadrado en Jamaica ronda los $40,999 pesos, pero ojo, ¡los precios han estado bajando en los últimos meses! Así que, si estás buscando una oportunidad, este podría ser el momento ideal.",
+    "mustVisitSpots": [
+      {
+        "name": "Mercado de Jamaica",
+        "description": "¡Obvio! Este mercado icónico es un paraíso de flores, frutas exóticas y comida deliciosa. No te pierdas la oportunidad de probar un auténtico jugo de Jamaica."
+      },
+      {
+        "name": "Parque Jardín Pushkin",
+        "description": "Un espacio verde tranquilo para relajarte, pasear o disfrutar de un café al aire libre. Ideal para escapar del bullicio de la ciudad."
+      },
+      {
+        "name": "Restaurantes de mariscos sobre Congreso de la Unión",
+        "description": "Encontrarás una amplia variedad de restaurantes con mariscos frescos y platillos típicos de la costa. ¡Perfecto para un banquete con amigos o familia!"
+      },
+      {
+        "name": "Tianguis de los jueves",
+        "description": "Si te gusta buscar gangas y artículos únicos, no te pierdas este tianguis que se pone los jueves en la colonia. ¡Seguro encuentras algo interesante!"
+      }
+    ],
+    "priceInsights": "Con un precio promedio de $40,999 pesos por metro cuadrado, Jamaica se posiciona como una opción accesible dentro del mercado inmobiliario de la Ciudad de México. Si lo comparamos con colonias aledañas o zonas más céntricas, podemos ver que Jamaica ofrece una buena relación calidad-precio. Es importante tener en cuenta que la tendencia de precios ha sido a la baja durante los últimos 12 meses, lo que podría indicar una oportunidad para los compradores. Factores como la ubicación, el estado de conservación de las propiedades y la demanda en la zona pueden influir en los precios finales. Así que, ¡ojo! Investiga bien cada propiedad y considera la posibilidad de negociar.",
+    "slug": "cuanto-cuesta-comprar-en-jamaica"
+  },
+  "locationData": {
+    "name": "Jamaica",
+    "type": "neighborhood",
+    "city": "Ciudad de México",
+    "municipality": "Venustiano Carranza",
+    "neighborhoods": [
+      {
+        "colonia": "Jamaica",
+        "precio": "39417",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Jamaica",
+        "precio": "40999",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Jamaica",
+        "precio": "42258",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Jamaica",
+        "precio": "45253",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Jamaica",
+        "precio": "50235",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Jamaica",
+        "precio": "50005",
+        "mes": "May 2025"
+      },
+      {
+        "colonia": "Jamaica",
+        "precio": "48289",
+        "mes": "April 2025"
+      },
+      {
+        "colonia": "Jamaica",
+        "precio": "44367",
+        "mes": "March 2025"
+      },
+      {
+        "colonia": "Jamaica",
+        "precio": "42680",
+        "mes": "February 2025"
+      },
+      {
+        "colonia": "Jamaica",
+        "precio": "41890",
+        "mes": "January 2025"
+      },
+      {
+        "colonia": "Jamaica",
+        "precio": "42141",
+        "mes": "December 2024"
+      },
+      {
+        "colonia": "Jamaica",
+        "precio": "42335",
+        "mes": "November 2024"
+      },
+      {
+        "colonia": "Jamaica",
+        "precio": "41850",
+        "mes": "October 2024"
+      }
+    ],
+    "averagePrice": 40999,
+    "priceHistory": [
+      {
+        "month": "October 2024",
+        "price": 41850,
+        "date": "2024-10-01T06:00:00.000Z"
+      },
+      {
+        "month": "November 2024",
+        "price": 42335,
+        "date": "2024-11-01T06:00:00.000Z"
+      },
+      {
+        "month": "December 2024",
+        "price": 42141,
+        "date": "2024-12-01T06:00:00.000Z"
+      },
+      {
+        "month": "February 2025",
+        "price": 42680,
+        "date": "2025-02-01T06:00:00.000Z"
+      },
+      {
+        "month": "March 2025",
+        "price": 44367,
+        "date": "2025-03-01T06:00:00.000Z"
+      },
+      {
+        "month": "April 2025",
+        "price": 48289,
+        "date": "2025-04-01T06:00:00.000Z"
+      },
+      {
+        "month": "May 2025",
+        "price": 50005,
+        "date": "2025-05-01T06:00:00.000Z"
+      },
+      {
+        "month": "June 2025",
+        "price": 50235,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 45253,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 42258,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 39417,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 40999,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-24T21:43:49.716Z",
+  "updatedAt": "2025-11-24T21:43:49.716Z"
+}

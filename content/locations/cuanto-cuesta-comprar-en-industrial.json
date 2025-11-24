@@ -1,0 +1,171 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-industrial",
+  "locationName": "Industrial",
+  "locationType": "neighborhood",
+  "city": "Ciudad de México",
+  "municipality": "Gustavo A. Madero",
+  "content": {
+    "title": "¿Cuánto cuesta comprar en Industrial, CDMX?",
+    "metaTitle": "Precios en Industrial, CDMX 2024 | $36,748/m²",
+    "metaDescription": "¿Pensando en comprar en Industrial? Descubre el precio promedio actual de $36,748/m², la tendencia al alza y si es la inversión ideal en Gustavo A. Madero, CDMX.",
+    "introduction": "¿Te late la idea de echar raíces en la Industrial, en la Gustavo A. Madero? ¡Buena elección! Esta colonia tiene su encanto y cada vez más gente la está volteando a ver. Actualmente, el precio promedio anda alrededor de los $36,748 pesos por metro cuadrado. \n\nIndustrial se ubica en una zona con buena conectividad y ofrece una mezcla interesante de vida residencial y actividad industrial. Si buscas un lugar con ambiente tranquilo pero con acceso a todo lo que necesitas, ¡Industrial podría ser para ti!",
+    "mustVisitSpots": [
+      {
+        "name": "Parque del Mestizaje",
+        "description": "Un espacio verde ideal para relajarse, hacer ejercicio o pasar un rato en familia."
+      },
+      {
+        "name": "Mercado Río Blanco",
+        "description": "Aquí encuentras de todo: desde frutas y verduras frescas hasta antojitos mexicanos deliciosos."
+      },
+      {
+        "name": "Avenida Insurgentes Norte",
+        "description": "La principal arteria vial de la zona, llena de comercios, restaurantes y servicios."
+      },
+      {
+        "name": "Centros comerciales cercanos",
+        "description": "Varias opciones para ir de compras o disfrutar de un buen rato en el cine."
+      }
+    ],
+    "priceInsights": "Con un precio promedio de $36,748 pesos por metro cuadrado, Industrial se posiciona como una opción interesante dentro del mercado inmobiliario de la Ciudad de México. Si comparamos con otras colonias de la GAM, podríamos decir que está en un rango medio, ofreciendo una buena relación calidad-precio. \n\nAdemás, los datos de los últimos 12 meses nos indican que los precios en Industrial están aumentando, lo que podría significar una buena inversión a futuro. Factores como la ubicación estratégica, la creciente demanda y la mejora de la infraestructura podrían estar influyendo en este incremento. ¡Ojo, que la cosa se pone buena!",
+    "slug": "cuanto-cuesta-comprar-en-industrial"
+  },
+  "locationData": {
+    "name": "Industrial",
+    "type": "neighborhood",
+    "city": "Ciudad de México",
+    "municipality": "Gustavo A. Madero",
+    "neighborhoods": [
+      {
+        "colonia": "Industrial",
+        "precio": "36388",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "Industrial",
+        "precio": "36748",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "Industrial",
+        "precio": "38488",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "Industrial",
+        "precio": "38192",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "Industrial",
+        "precio": "37406",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "Industrial",
+        "precio": "36898",
+        "mes": "May 2025"
+      },
+      {
+        "colonia": "Industrial",
+        "precio": "38093",
+        "mes": "April 2025"
+      },
+      {
+        "colonia": "Industrial",
+        "precio": "39311",
+        "mes": "March 2025"
+      },
+      {
+        "colonia": "Industrial",
+        "precio": "39369",
+        "mes": "February 2025"
+      },
+      {
+        "colonia": "Industrial",
+        "precio": "37875",
+        "mes": "January 2025"
+      },
+      {
+        "colonia": "Industrial",
+        "precio": "35156",
+        "mes": "December 2024"
+      },
+      {
+        "colonia": "Industrial",
+        "precio": "34428",
+        "mes": "November 2024"
+      },
+      {
+        "colonia": "Industrial",
+        "precio": "32851",
+        "mes": "October 2024"
+      }
+    ],
+    "averagePrice": 36748,
+    "priceHistory": [
+      {
+        "month": "October 2024",
+        "price": 32851,
+        "date": "2024-10-01T06:00:00.000Z"
+      },
+      {
+        "month": "November 2024",
+        "price": 34428,
+        "date": "2024-11-01T06:00:00.000Z"
+      },
+      {
+        "month": "December 2024",
+        "price": 35156,
+        "date": "2024-12-01T06:00:00.000Z"
+      },
+      {
+        "month": "February 2025",
+        "price": 39369,
+        "date": "2025-02-01T06:00:00.000Z"
+      },
+      {
+        "month": "March 2025",
+        "price": 39311,
+        "date": "2025-03-01T06:00:00.000Z"
+      },
+      {
+        "month": "April 2025",
+        "price": 38093,
+        "date": "2025-04-01T06:00:00.000Z"
+      },
+      {
+        "month": "May 2025",
+        "price": 36898,
+        "date": "2025-05-01T06:00:00.000Z"
+      },
+      {
+        "month": "June 2025",
+        "price": 37406,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 38192,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 38488,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 36388,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 36748,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-24T21:34:23.999Z",
+  "updatedAt": "2025-11-24T21:34:23.999Z"
+}

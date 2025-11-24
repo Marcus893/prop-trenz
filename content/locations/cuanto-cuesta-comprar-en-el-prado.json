@@ -1,0 +1,171 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-el-prado",
+  "locationName": "El Prado",
+  "locationType": "neighborhood",
+  "city": "Ciudad de México",
+  "municipality": "Iztapalapa",
+  "content": {
+    "title": "¿Cuánto cuesta comprar casa en El Prado?",
+    "metaTitle": "Precios en El Prado CDMX 2024 | $36,211/m²",
+    "metaDescription": "Descubre el precio por metro cuadrado en El Prado, Iztapalapa. ¡Precios actualizados a $36,211/m²! ¿Es tu momento de invertir en CDMX?",
+    "introduction": "¿Estás pensando en comprar casa en la Ciudad de México? La colonia El Prado, en Iztapalapa, podría ser justo lo que buscas. Con un precio promedio de $36,211 pesos por metro cuadrado, esta zona ofrece una mezcla de tranquilidad y acceso a las comodidades de la gran ciudad. \n\nEl Prado es una colonia que ha sabido mantener su encanto tradicional, con calles arboladas y un ambiente familiar. Su ubicación en Iztapalapa la hace accesible a diferentes puntos de la ciudad, además de contar con servicios y comercios cercanos. Si buscas un lugar donde vivir con un buen equilibrio entre precio y calidad de vida, ¡El Prado es una excelente opción!",
+    "mustVisitSpots": [
+      {
+        "name": "Parque El Prado",
+        "description": "Un espacio verde ideal para pasear, hacer ejercicio o simplemente relajarse bajo la sombra de los árboles."
+      },
+      {
+        "name": "Mercado de El Prado",
+        "description": "Encuentra productos frescos, antojitos mexicanos y artículos para el hogar a precios accesibles."
+      },
+      {
+        "name": "Deportivo Francisco I. Madero",
+        "description": "Un lugar perfecto para practicar deportes, con canchas de fútbol, básquetbol y áreas verdes."
+      },
+      {
+        "name": "Parroquia de San Lorenzo Mártir",
+        "description": "Una iglesia emblemática del barrio, con una arquitectura tradicional y un ambiente de fe."
+      }
+    ],
+    "priceInsights": "El precio promedio de $36,211 pesos por metro cuadrado en El Prado refleja su creciente popularidad como zona residencial en la Ciudad de México. Si lo comparamos con otras colonias de Iztapalapa, El Prado se encuentra en un rango medio-alto, lo que indica una demanda constante y una buena inversión a futuro. \n\nEs importante tener en cuenta que los precios en El Prado han mostrado una tendencia al alza en los últimos 12 meses, lo que sugiere que la plusvalía de las propiedades en esta zona podría seguir aumentando. Factores como la mejora en la infraestructura, la cercanía a servicios y la tranquilidad del entorno contribuyen a este incremento. Si estás pensando en comprar, ¡ahora podría ser el momento!",
+    "slug": "cuanto-cuesta-comprar-en-el-prado"
+  },
+  "locationData": {
+    "name": "El Prado",
+    "type": "neighborhood",
+    "city": "Ciudad de México",
+    "municipality": "Iztapalapa",
+    "neighborhoods": [
+      {
+        "colonia": "El Prado",
+        "precio": "36013",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "El Prado",
+        "precio": "36211",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "El Prado",
+        "precio": "36507",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "El Prado",
+        "precio": "38727",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "El Prado",
+        "precio": "41840",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "El Prado",
+        "precio": "41895",
+        "mes": "May 2025"
+      },
+      {
+        "colonia": "El Prado",
+        "precio": "41362",
+        "mes": "April 2025"
+      },
+      {
+        "colonia": "El Prado",
+        "precio": "39559",
+        "mes": "March 2025"
+      },
+      {
+        "colonia": "El Prado",
+        "precio": "38311",
+        "mes": "February 2025"
+      },
+      {
+        "colonia": "El Prado",
+        "precio": "37239",
+        "mes": "January 2025"
+      },
+      {
+        "colonia": "El Prado",
+        "precio": "36298",
+        "mes": "December 2024"
+      },
+      {
+        "colonia": "El Prado",
+        "precio": "36276",
+        "mes": "November 2024"
+      },
+      {
+        "colonia": "El Prado",
+        "precio": "34713",
+        "mes": "October 2024"
+      }
+    ],
+    "averagePrice": 36211,
+    "priceHistory": [
+      {
+        "month": "October 2024",
+        "price": 34713,
+        "date": "2024-10-01T06:00:00.000Z"
+      },
+      {
+        "month": "November 2024",
+        "price": 36276,
+        "date": "2024-11-01T06:00:00.000Z"
+      },
+      {
+        "month": "December 2024",
+        "price": 36298,
+        "date": "2024-12-01T06:00:00.000Z"
+      },
+      {
+        "month": "February 2025",
+        "price": 38311,
+        "date": "2025-02-01T06:00:00.000Z"
+      },
+      {
+        "month": "March 2025",
+        "price": 39559,
+        "date": "2025-03-01T06:00:00.000Z"
+      },
+      {
+        "month": "April 2025",
+        "price": 41362,
+        "date": "2025-04-01T06:00:00.000Z"
+      },
+      {
+        "month": "May 2025",
+        "price": 41895,
+        "date": "2025-05-01T06:00:00.000Z"
+      },
+      {
+        "month": "June 2025",
+        "price": 41840,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 38727,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 36507,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 36013,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 36211,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-24T21:37:22.195Z",
+  "updatedAt": "2025-11-24T21:37:22.195Z"
+}

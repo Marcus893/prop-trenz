@@ -1,0 +1,116 @@
+{
+  "slug": "cuanto-cuesta-comprar-en-san-agustin",
+  "locationName": "San Agustin",
+  "locationType": "neighborhood",
+  "city": "Monterrey",
+  "municipality": "San Pedro Garza García",
+  "content": {
+    "title": "Cuánto Cuesta Comprar en San Agustín, Monterrey",
+    "metaTitle": "Precios en San Agustín Mty | $59,500/m² | 2024",
+    "metaDescription": "¿Pensando en invertir en San Agustín? Descubre el precio promedio actual de $59,500/m² y la tendencia del mercado. ¡Encuentra tu hogar ideal en Monterrey!",
+    "introduction": "San Agustín, en el municipio de San Pedro Garza García, Monterrey, es una colonia súper cotizada. ¿Y cómo no? Su ubicación estratégica, rodeada de centros comerciales, restaurantes de primer nivel y fácil acceso a las principales avenidas, la hacen una excelente opción para vivir e invertir. Actualmente, el precio promedio por metro cuadrado ronda los $59,500. ¡Vamos a echarle un ojo a qué onda con los precios y por qué San Agustín sigue siendo tan atractivo!",
+    "mustVisitSpots": [
+      {
+        "name": "Fashion Drive",
+        "description": "Un centro comercial con marcas de lujo, restaurantes gourmet y un ambiente vibrante, perfecto para un día de compras o una cena elegante."
+      },
+      {
+        "name": "Parque Rufino Tamayo",
+        "description": "Un espacio verde ideal para relajarte, hacer ejercicio al aire libre o disfrutar de un picnic con la familia. ¡Un oasis en medio de la ciudad!"
+      },
+      {
+        "name": "Plaza Fiesta San Agustín",
+        "description": "Un centro comercial con una gran variedad de tiendas, restaurantes y entretenimiento para todas las edades. ¡Siempre hay algo nuevo por descubrir!"
+      },
+      {
+        "name": "Restaurantes de la Avenida Real San Agustín",
+        "description": "Desde cocina italiana hasta cortes de carne de primera, la Avenida Real San Agustín ofrece una amplia selección de restaurantes para satisfacer todos los paladares."
+      }
+    ],
+    "priceInsights": "Actualmente, el precio promedio de $59,500 por metro cuadrado en San Agustín refleja su estatus como una zona premium en Monterrey. Si lo comparamos con otras colonias de la ciudad, San Agustín tiende a estar en el rango superior, lo cual no es sorprendente dada su ubicación y amenidades. Ojo, los datos de los últimos 7 meses indican una ligera tendencia a la baja en los precios. Esto podría ser una oportunidad para encontrar buenas ofertas, pero también hay que considerar factores como la oferta y demanda, las tasas de interés y el desarrollo de nuevos proyectos en la zona, que influyen directamente en el valor de las propiedades.",
+    "slug": "cuanto-cuesta-comprar-en-san-agustin"
+  },
+  "locationData": {
+    "name": "San Agustin",
+    "type": "neighborhood",
+    "city": "Monterrey",
+    "municipality": "San Pedro Garza García",
+    "neighborhoods": [
+      {
+        "colonia": "San Agustin",
+        "precio": "57505",
+        "mes": "September 2025"
+      },
+      {
+        "colonia": "San Agustin",
+        "precio": "59500",
+        "mes": "October 2025"
+      },
+      {
+        "colonia": "San Agustin",
+        "precio": "112439",
+        "mes": "August 2025"
+      },
+      {
+        "colonia": "San Agustin",
+        "precio": "122769",
+        "mes": "July 2025"
+      },
+      {
+        "colonia": "San Agustin",
+        "precio": "144363",
+        "mes": "June 2025"
+      },
+      {
+        "colonia": "San Agustin",
+        "precio": "143051",
+        "mes": "May 2025"
+      },
+      {
+        "colonia": "San Agustin",
+        "precio": "138301",
+        "mes": "April 2025"
+      }
+    ],
+    "averagePrice": 59500,
+    "priceHistory": [
+      {
+        "month": "April 2025",
+        "price": 138301,
+        "date": "2025-04-01T06:00:00.000Z"
+      },
+      {
+        "month": "May 2025",
+        "price": 143051,
+        "date": "2025-05-01T06:00:00.000Z"
+      },
+      {
+        "month": "June 2025",
+        "price": 144363,
+        "date": "2025-06-01T06:00:00.000Z"
+      },
+      {
+        "month": "July 2025",
+        "price": 122769,
+        "date": "2025-07-01T06:00:00.000Z"
+      },
+      {
+        "month": "August 2025",
+        "price": 112439,
+        "date": "2025-08-01T06:00:00.000Z"
+      },
+      {
+        "month": "September 2025",
+        "price": 57505,
+        "date": "2025-09-01T06:00:00.000Z"
+      },
+      {
+        "month": "October 2025",
+        "price": 59500,
+        "date": "2025-10-01T06:00:00.000Z"
+      }
+    ]
+  },
+  "createdAt": "2025-11-24T21:26:23.233Z",
+  "updatedAt": "2025-11-24T21:26:23.233Z"
+}
