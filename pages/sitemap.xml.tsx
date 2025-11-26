@@ -16,6 +16,7 @@ function generateSiteMap(
     { url: '/calculators/closing-cost', changefreq: 'monthly', priority: '0.8' },
     { url: '/calculators/ownership-cost', changefreq: 'monthly', priority: '0.8' },
     { url: '/calculators/seller-cost', changefreq: 'monthly', priority: '0.8' },
+    { url: '/calculators/roi', changefreq: 'monthly', priority: '0.8' },
     { url: '/guides', changefreq: 'weekly', priority: '0.9' }
   ]
 

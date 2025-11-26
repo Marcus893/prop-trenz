@@ -21,6 +21,11 @@ const calculatorLinks = [
     titleKey: 'calculators_page.seller_cost_title',
     descriptionKey: 'calculators_page.seller_cost_description',
   },
+  {
+    href: '/calculators/roi',
+    titleKey: 'calculators_page.roi_title',
+    descriptionKey: 'calculators_page.roi_description',
+  },
 ]
 
 export default function CalculatorsOverviewPage() {
