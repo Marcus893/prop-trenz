@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef, useEffect, useMemo } from 'react'
 import { cn } from '@/lib/utils'
 import { ChevronDown } from 'lucide-react'
 
@@ -13,6 +13,55 @@ interface SelectProps {
 export function Select({ value, onValueChange, children }: SelectProps) {
   const [isOpen, setIsOpen] = useState(false)
   const selectRef = useRef<HTMLDivElement>(null)
+
+  // Extract all SelectItems to create a value-to-text mapping
+  const valueToTextMap = useMemo(() => {
+    const map = new Map<string, string>()
+    const extractItems = (node: React.ReactNode): void => {
+      React.Children.forEach(node, child => {
+        if (React.isValidElement(child)) {
+          if (child.type === SelectContent) {
+            extractItems(child.props.children)
+          } else if (child.type === SelectItem) {
+            const itemValue = child.props.value
+            // Get text from children - handle both string and React nodes
+            let itemText = ''
+            const children = child.props.children
+            
+            // Helper function to recursively extract text from React nodes
+            const extractText = (node: React.ReactNode): string => {
+              if (typeof node === 'string') {
+                return node
+              }
+              if (typeof node === 'number') {
+                return String(node)
+              }
+              if (Array.isArray(node)) {
+                return node.map(extractText).join('')
+              }
+              if (React.isValidElement(node)) {
+                if (node.props?.children) {
+                  return extractText(node.props.children)
+                }
+                return ''
+              }
+              return ''
+            }
+            
+            itemText = extractText(children).trim()
+            
+            if (itemValue && itemText) {
+              map.set(itemValue, itemText)
+            }
+          } else if (child.props?.children) {
+            extractItems(child.props.children)
+          }
+        }
+      })
+    }
+    extractItems(children)
+    return map
+  }, [children])
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -30,23 +79,31 @@ export function Select({ value, onValueChange, children }: SelectProps) {
       {React.Children.map(children, child => {
         if (React.isValidElement(child)) {
           if (child.type === SelectTrigger) {
-            // Only pass visual/control props; avoid forwarding handlers/values to DOM
+            // Pass value, isOpen, and valueToTextMap to trigger
             return React.cloneElement(child, {
               onClick: () => setIsOpen(!isOpen),
-              isOpen
+              isOpen,
+              currentValue: value,
+              valueToTextMap
             })
           }
-          if (child.type === SelectContent && isOpen) {
-            return React.cloneElement(child, {
-              onSelect: (value: string) => {
-                onValueChange(value)
-                setIsOpen(false)
-              },
-              currentValue: value
-            })
+          if (child.type === SelectContent) {
+            // Only render SelectContent when open
+            if (isOpen) {
+              return React.cloneElement(child, {
+                onSelect: (value: string) => {
+                  onValueChange(value)
+                  setIsOpen(false)
+                },
+                currentValue: value
+              })
+            }
+            // Don't render SelectContent when closed
+            return null
           }
         }
-        return null
+        // Render other children as-is (like SelectValue inside SelectTrigger)
+        return child
       })}
     </div>
   )
@@ -58,9 +115,11 @@ interface SelectTriggerProps extends React.HTMLAttributes<HTMLDivElement> {
   isOpen?: boolean
   onValueChange?: (value: string) => void
   value?: string
+  currentValue?: string
+  valueToTextMap?: Map<string, string>
 }
 
-export function SelectTrigger({ children, className, onClick, isOpen, ...props }: SelectTriggerProps) {
+export function SelectTrigger({ children, className, onClick, isOpen, currentValue, valueToTextMap, ...props }: SelectTriggerProps) {
   return (
     <div
       className={cn(
@@ -70,7 +129,15 @@ export function SelectTrigger({ children, className, onClick, isOpen, ...props }
       onClick={onClick}
       {...props}
     >
-      {children}
+      {React.Children.map(children, child => {
+        if (React.isValidElement(child) && child.type === SelectValue) {
+          return React.cloneElement(child, {
+            currentValue,
+            valueToTextMap
+          })
+        }
+        return child
+      })}
       <ChevronDown className={cn("h-4 w-4 transition-transform", isOpen && "rotate-180")} />
     </div>
   )
@@ -84,7 +151,7 @@ interface SelectContentProps {
 
 export function SelectContent({ children, onSelect, currentValue }: SelectContentProps) {
   return (
-    <div className="absolute z-50 w-full top-full mt-1 min-w-[8rem] overflow-hidden rounded-md border border-gray-200 bg-white shadow-md">
+    <div className="absolute z-[100] w-full top-full mt-1 min-w-[8rem] overflow-hidden rounded-md border border-gray-200 bg-white shadow-lg">
       {React.Children.map(children, child => {
         if (React.isValidElement(child) && child.type === SelectItem) {
           return React.cloneElement(child, {
@@ -121,7 +188,20 @@ export function SelectItem({ children, value, onSelect, isSelected, className, .
   )
 }
 
-export function SelectValue({ placeholder }: { placeholder?: string }) {
+interface SelectValueProps {
+  placeholder?: string
+  currentValue?: string
+  valueToTextMap?: Map<string, string>
+  children?: React.ReactNode
+}
+
+export function SelectValue({ placeholder, currentValue, valueToTextMap }: SelectValueProps) {
+  // If we have a current value and a map, look up the display text
+  if (currentValue && valueToTextMap && valueToTextMap.has(currentValue)) {
+    const displayText = valueToTextMap.get(currentValue)
+    return <span className="text-gray-900">{displayText}</span>
+  }
+  
   return <span className="text-gray-500">{placeholder}</span>
 }
 

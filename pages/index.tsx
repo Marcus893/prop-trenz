@@ -242,7 +242,7 @@ export default function HomePage() {
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="h-5 w-5 text-green-300" />
-                    <span>{t('home.no_credit_card', 'No Credit Card Required')}</span>
+                    <span>{t('home.completely_free', 'Completely Free')}</span>
                   </div>
                 </div>
               </div>
@@ -350,7 +350,7 @@ export default function HomePage() {
                     {t('home.pain_point_3_title', 'Hidden Costs Everywhere')}
                   </h3>
                   <p className="text-gray-600 leading-relaxed">
-                    {t('home.pain_point_3_desc', 'Closing costs, notary fees, taxes, maintenance fees. The real price is 20-30% higher than the listing. Nobody tells you until it\'s too late.')}
+                    {t('home.pain_point_3_desc', 'Closing costs, notary fees, taxes. The total price is much higher than the sell price. Nobody tells you until it\'s too late.')}
                   </p>
                 </Card>
               </div>

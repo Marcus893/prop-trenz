@@ -1,3 +1,6 @@
+'use client'
+
+import { useState, useMemo } from 'react'
 import Head from 'next/head'
 import type { GetStaticPaths, GetStaticProps } from 'next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
@@ -9,7 +12,7 @@ import Link from 'next/link'
 import { useTranslation } from 'next-i18next'
 import { useRouter } from 'next/router'
 import { TrendingUp, TrendingDown } from 'lucide-react'
-import { useMemo } from 'react'
+import { LocationPageCTA } from '@/components/leads/LocationPageCTA'
 
 interface LocationPageProps {
   page: LocationPage
@@ -545,6 +548,15 @@ export default function LocationPageComponent({ page, canonicalUrl }: LocationPa
             </Card>
           )}
 
+          {/* CTA Section */}
+          <LocationPageCTA
+            city={locationData.city}
+            municipality={locationData.municipality}
+            neighborhood={locationData.type === 'neighborhood' ? locationData.name : undefined}
+            locationName={locationData.name}
+            averagePrice={locationData.averagePrice}
+          />
+
           {/* Price Insights */}
           {content.priceInsights && (
             <Card className="p-6 mb-12">
@@ -582,7 +594,6 @@ export default function LocationPageComponent({ page, canonicalUrl }: LocationPa
             </div>
           </Card>
         </main>
-
       </div>
     </>
   )

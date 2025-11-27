@@ -12,6 +12,7 @@ import { Badge } from '@/components/ui/badge'
 import { ArrowRight } from 'lucide-react'
 import { parseTextWithReferences } from '@/lib/pseo/parseDataReferences'
 import { Accordion } from '@/components/ui/accordion'
+import { LeadCTA } from '@/components/leads/LeadCTA'
 
 interface RelatedGuide {
   slug: string
@@ -295,6 +296,19 @@ export default function GuidePage({ guide, canonicalUrl, hreflangUrls, isFallbac
                 )}
               </section>
             ))}
+
+            {/* CTA Section */}
+            <LeadCTA
+              source="guide"
+              context={{
+                guideTitle: guide.title,
+                guideSlug: guide.slug,
+              }}
+              titleKey="leads.guide_cta_title"
+              descriptionKey="leads.guide_cta_description"
+              titleDefault="Want to invest in Mexican real estate?"
+              descriptionDefault="Connect with a vetted real estate professional who can help you every step of the way."
+            />
 
             {guide.faq && guide.faq.length > 0 && (
               <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">

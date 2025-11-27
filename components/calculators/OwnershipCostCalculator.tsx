@@ -3,6 +3,9 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'next-i18next'
 import { InfoIcon } from '@/components/ui/tooltip'
+import { LeadForm } from '@/components/leads/LeadForm'
+import { Button } from '@/components/ui/button'
+import { MessageCircle } from 'lucide-react'
 
 type PercentageBase = 'propertyValue' | 'rentalIncome'
 
@@ -120,6 +123,7 @@ type FormState = {
 
 export function OwnershipCostCalculator() {
   const { t } = useTranslation('common')
+  const [showLeadForm, setShowLeadForm] = useState(false)
   const [state, setState] = useState<FormState>(() => ({
     propertyValue: '',
     annualRentalIncome: '',
@@ -534,6 +538,37 @@ export function OwnershipCostCalculator() {
           )}
         </p>
       </section>
+
+      {/* CTA Section */}
+      <div className="mt-8 rounded-lg bg-blue-50 border border-blue-100 p-6">
+        <div className="flex items-start gap-4">
+          <MessageCircle className="h-6 w-6 text-blue-600 flex-shrink-0 mt-0.5" />
+          <div className="flex-1">
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              {t('leads.ownership_cost_cta_title', 'Need help managing your property?')}
+            </h3>
+            <p className="text-gray-600 mb-4">
+              {t('leads.ownership_cost_cta_description', 'Get personalized advice from local real estate experts on optimizing your property expenses and maximizing your investment returns.')}
+            </p>
+            <Button
+              onClick={() => setShowLeadForm(true)}
+              className="bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              {t('leads.cta_button', 'Get Expert Help')}
+            </Button>
+          </div>
+        </div>
+      </div>
+
+      <LeadForm
+        isOpen={showLeadForm}
+        onClose={() => setShowLeadForm(false)}
+        source="ownership_cost_calculator"
+        context={{
+          propertyValue: state.propertyValue,
+          annualOwnershipCost: totals?.total || 0,
+        }}
+      />
     </div>
   )
 }

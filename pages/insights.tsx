@@ -54,7 +54,7 @@ export default function InsightsPage({ nationalSnapshot, nationalTrend = [], top
         <meta name="description" content={t('insights.page_description', 'Explore real estate market insights, top movers, and national trends in Mexico.')} />
       </Head>
       <Layout hideHeader>
-        <div className="min-h-screen bg-gray-50 relative -my-6 lg:-mr-8 lg:ml-0 lg:pr-8">
+        <div className="bg-gray-50 relative -my-6 lg:-mr-8 lg:ml-0 lg:pr-8">
           {/* Header */}
           <section className="relative bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-800 text-white py-12 md:py-16">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:pr-8">

@@ -3,6 +3,9 @@
 import { useMemo, useState } from 'react'
 import { useTranslation } from 'next-i18next'
 import { InfoIcon } from '@/components/ui/tooltip'
+import { LeadForm } from '@/components/leads/LeadForm'
+import { Button } from '@/components/ui/button'
+import { MessageCircle } from 'lucide-react'
 
 type RoiFormState = {
   purchasePrice: string
@@ -37,6 +40,7 @@ const clampPercentage = (value: number) => {
 
 export function ROICalculator() {
   const { t } = useTranslation('common')
+  const [showLeadForm, setShowLeadForm] = useState(false)
   const [state, setState] = useState<RoiFormState>({
     purchasePrice: '',
     closingCostPercent: '',
@@ -614,7 +618,40 @@ export function ROICalculator() {
             'Outputs are estimates only. Actual rent, vacancies, expenses, and financing terms will vary by market and lender.'
           )}
         </p>
+
+        {/* CTA Section */}
+        <div className="mt-8 rounded-lg bg-blue-50 border border-blue-100 p-6">
+          <div className="flex items-start gap-4">
+            <MessageCircle className="h-6 w-6 text-blue-600 flex-shrink-0 mt-0.5" />
+            <div className="flex-1">
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                {t('leads.cta_title', 'Need help with this deal?')}
+              </h3>
+              <p className="text-gray-600 mb-4">
+                {t('leads.cta_description', 'Connect with a vetted real estate expert who can help you analyze this property and find similar opportunities.')}
+              </p>
+              <Button
+                onClick={() => setShowLeadForm(true)}
+                className="bg-blue-600 hover:bg-blue-700 text-white"
+              >
+                {t('leads.cta_button', 'Get Expert Help')}
+              </Button>
+            </div>
+          </div>
+        </div>
       </section>
+
+      <LeadForm
+        isOpen={showLeadForm}
+        onClose={() => setShowLeadForm(false)}
+        source="roi_calculator"
+        context={{
+          purchasePrice: state.purchasePrice,
+          monthlyRent: state.monthlyRent,
+          cashOnCash: metrics.cashOnCash,
+          capRate: metrics.capRate,
+        }}
+      />
     </div>
   )
 }

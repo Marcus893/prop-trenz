@@ -3,6 +3,9 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'next-i18next'
 import { InfoIcon } from '@/components/ui/tooltip'
+import { LeadForm } from '@/components/leads/LeadForm'
+import { Button } from '@/components/ui/button'
+import { MessageCircle } from 'lucide-react'
 
 const DEFAULT_PRIMARY_RESIDENCE_EXEMPTION = '5500000'
 
@@ -25,6 +28,7 @@ type FormState = {
 
 export function SellerCostCalculator() {
   const { t } = useTranslation('common')
+  const [showLeadForm, setShowLeadForm] = useState(false)
   const [state, setState] = useState<FormState>(() => ({
     residencyStatus: 'resident',
     salePrice: '',
@@ -674,6 +678,37 @@ export function SellerCostCalculator() {
           )}
         </p>
       </section>
+
+      {/* CTA Section */}
+      <div className="mt-8 rounded-lg bg-blue-50 border border-blue-100 p-6">
+        <div className="flex items-start gap-4">
+          <MessageCircle className="h-6 w-6 text-blue-600 flex-shrink-0 mt-0.5" />
+          <div className="flex-1">
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              {t('leads.seller_cost_cta_title', 'Ready to sell? Get expert guidance')}
+            </h3>
+            <p className="text-gray-600 mb-4">
+              {t('leads.seller_cost_cta_description', 'Connect with experienced real estate professionals who can help you understand all selling costs, maximize your profit, and navigate the sales process smoothly.')}
+            </p>
+            <Button
+              onClick={() => setShowLeadForm(true)}
+              className="bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              {t('leads.cta_button', 'Get Expert Help')}
+            </Button>
+          </div>
+        </div>
+      </div>
+
+      <LeadForm
+        isOpen={showLeadForm}
+        onClose={() => setShowLeadForm(false)}
+        source="seller_cost_calculator"
+        context={{
+          salePrice: state.salePrice,
+          totalCosts: totalEstimatedCosts,
+        }}
+      />
     </div>
   )
 }

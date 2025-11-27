@@ -50,25 +50,36 @@ export function parseDataReferences(text: string): Array<{
   // Also support: {{data:type:city:location:label}} for city-specific references
   // Supports formats like:
   // - {{data:municipality:San Pedro Garza García:Nuevo León:Explore San Pedro Garza García}}
-  // - {{data:neighborhood:Polanco:Cuauhtémoc:Ciudad de México:View Polanco prices}}
-  // - {{data:neighborhood:Polanco:label}}
-  const regex = /\{\{data:([^:]+):([^:]+)(?::([^:]+))?(?::([^}]+))?\}\}/g
+  // - {{data:neighborhood:Polanco:Miguel Hidalgo:Ciudad de México:View Polanco prices}} (5 parts)
+  // - {{data:neighborhood:Polanco:Cuauhtémoc:Ciudad de México:Explore Roma Norte}} (5 parts)
+  // - {{data:neighborhood:Polanco:label}} (3 parts)
+  // Use non-greedy matching and ensure we stop at the closing }}
+  const regex = /\{\{data:([^:]+):([^:]+)(?::([^:}]+))?(?::([^:}]+))?(?::([^}]+))?\}\}/g
   let match
   
   while ((match = regex.exec(text)) !== null) {
     const type = match[1] as DataReferenceType
     const location = match[2]
     const optional1 = match[3] // could be city, municipality, or label
-    const optional2 = match[4] // could be label
+    const optional2 = match[4] // could be city, municipality, or label
+    const optional3 = match[5] // could be label
     
     let reference: DataReference = { type, location }
     
     // Determine structure based on type and number of parts
     if (type === 'neighborhood' || type === 'municipality') {
       // Format for municipality: {{data:municipality:San Pedro Garza García:Nuevo León:Explore San Pedro Garza García}}
-      // Format for neighborhood: {{data:neighborhood:Polanco:Cuauhtémoc:Ciudad de México:View Polanco prices}}
-      // Or simpler: {{data:neighborhood:Polanco:label}}
-      if (optional2) {
+      // Format for neighborhood: {{data:neighborhood:Polanco:Miguel Hidalgo:Ciudad de México:View Polanco prices}} (5 parts)
+      // Format for neighborhood: {{data:neighborhood:Roma Norte:Cuauhtémoc:Ciudad de México:Explore Roma Norte}} (5 parts)
+      // Or simpler: {{data:neighborhood:Polanco:label}} (3 parts)
+      if (optional3) {
+        // Has 5 parts: type:location:optional1:optional2:optional3
+        // Format: {{data:neighborhood:Polanco:Miguel Hidalgo:Ciudad de México:View Polanco prices}}
+        // location = neighborhood, optional1 = municipality, optional2 = city, optional3 = label
+        reference.municipality = optional1
+        reference.city = optional2
+        reference.label = optional3
+      } else if (optional2) {
         // Has 4 parts: type:location:optional1:optional2
         if (type === 'municipality') {
           // Format: {{data:municipality:San Pedro Garza García:Nuevo León:Explore...}}
@@ -77,9 +88,7 @@ export function parseDataReferences(text: string): Array<{
           reference.label = optional2
         } else {
           // For neighborhood with 4 parts, check if optional1 looks like municipality
-          // Format could be: {{data:neighborhood:Polanco:Cuauhtémoc:Ciudad de México:label}}
-          // But we only capture 4 groups, so if optional1 has spaces/capitals, it's likely municipality
-          // For now, assume: neighborhood:municipality:label (we'll need city from context)
+          // Format could be: {{data:neighborhood:Polanco:Cuauhtémoc:label}}
           if (optional1.includes(' ') && optional1.match(/^[A-Z]/)) {
             reference.municipality = optional1
             reference.label = optional2

@@ -4,10 +4,11 @@ import React, { useState, useRef } from 'react'
 import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { Upload, FileText, CheckCircle, XCircle, Clock, AlertCircle } from 'lucide-react'
+import { Upload, FileText, CheckCircle, XCircle, Clock, AlertCircle, Users } from 'lucide-react'
 import { processSHFCSV } from '@/lib/data-processor'
 import { db, getAuthenticatedClient } from '@/lib/supabase'
 import { useTranslation } from 'next-i18next'
+import { useRouter } from 'next/router'
 
 interface UploadLog {
   id: string
@@ -24,6 +25,7 @@ interface AdminPanelProps {
 
 export function AdminPanel({ className }: AdminPanelProps) {
   const { t } = useTranslation('admin')
+  const router = useRouter()
   const [selectedFile, setSelectedFile] = useState<File | null>(null)
   const [uploading, setUploading] = useState(false)
   const [uploadLogs, setUploadLogs] = useState<UploadLog[]>([])
@@ -121,6 +123,26 @@ export function AdminPanel({ className }: AdminPanelProps) {
 
   return (
     <div className={`space-y-6 ${className}`}>
+      {/* Admin Navigation */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <Card className="p-6 hover:shadow-md transition-shadow">
+          <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
+            <Users className="h-5 w-5" />
+            Leads Management
+          </h2>
+          <p className="text-gray-600 mb-4">
+            View and manage leads from PropTrenz users who want to connect with real estate agents.
+          </p>
+          <Button
+            onClick={() => router.push('/admin/leads')}
+            className="w-full"
+          >
+            <Users className="h-4 w-4 mr-2" />
+            View Leads Dashboard
+          </Button>
+        </Card>
+      </div>
+
       {/* File Upload Section */}
       <Card className="p-6">
         <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">

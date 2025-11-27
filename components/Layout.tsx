@@ -246,7 +246,7 @@ export function Layout({ children, title, subtitle, hideHeader = false }: Layout
       </div>
 
       {/* Main content */}
-      <div className="flex-1 flex flex-col min-h-screen">
+      <div className="flex-1 flex flex-col">
         <div className="sticky top-0 z-10 lg:hidden pl-1 pt-1 sm:pl-3 sm:pt-3 bg-gray-50">
           <button
             type="button"
@@ -258,7 +258,7 @@ export function Layout({ children, title, subtitle, hideHeader = false }: Layout
           </button>
         </div>
 
-        <main className="flex-1 overflow-x-hidden">
+        <main className="flex-1">
           <div className={hideHeader ? "" : "py-6"}>
             <div className={hideHeader ? "" : "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"}>
               {/* Header */}

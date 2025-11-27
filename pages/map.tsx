@@ -3,12 +3,14 @@ import Head from 'next/head'
 import { Layout } from '@/components/Layout'
 import { Card } from '@/components/ui/card'
 import { Select, SelectTrigger, SelectContent, SelectItem, SelectValue } from '@/components/ui/select'
-import { MapPin, Loader2, Share2, Check } from 'lucide-react'
+import { MapPin, Loader2, Share2, Check, MessageCircle } from 'lucide-react'
 import { GetServerSideProps } from 'next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
 import { useRouter } from 'next/router'
 import dynamic from 'next/dynamic'
+import { LeadForm } from '@/components/leads/LeadForm'
+import { Button } from '@/components/ui/button'
 
 // Dynamically import the map component (client-side only)
 const NeighborhoodMap = dynamic(
@@ -126,6 +128,7 @@ export default function MapPage({ initialMetaTags }: MapPageProps) {
   const [selectedCity, setSelectedCity] = useState<string>('Ciudad de México')
   const cityRestoredRef = useRef(false)
   const [shareCopied, setShareCopied] = useState(false)
+  const [showLeadForm, setShowLeadForm] = useState(false)
   
   // Helper function to create URL-friendly slug from city name
   const cityToSlug = (city: string): string => {
@@ -478,6 +481,29 @@ export default function MapPage({ initialMetaTags }: MapPageProps) {
                       )}
                     </button>
                   </div>
+
+                  {/* Lead Form CTA - Show when neighborhood is selected */}
+                  {router.query.neighborhood && (
+                    <div className="mb-6 rounded-lg bg-blue-50 border border-blue-100 p-6">
+                      <div className="flex items-start gap-4">
+                        <MessageCircle className="h-6 w-6 text-blue-600 flex-shrink-0 mt-0.5" />
+                        <div className="flex-1">
+                          <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                            {t('leads.map_cta_title', 'Need help finding your perfect property?')}
+                          </h3>
+                          <p className="text-gray-600 mb-4">
+                            {t('leads.map_cta_description', 'Connect with a vetted real estate expert who can find you great opportunities.')}
+                          </p>
+                          <Button
+                            onClick={() => setShowLeadForm(true)}
+                            className="bg-blue-600 hover:bg-blue-700 text-white"
+                          >
+                            {t('leads.cta_button', 'Get Expert Help')}
+                          </Button>
+                        </div>
+                      </div>
+                    </div>
+                  )}
                   
                   {data[selectedCity] && (
                     <NeighborhoodMap 
@@ -490,6 +516,38 @@ export default function MapPage({ initialMetaTags }: MapPageProps) {
               )}
           </Card>
         </div>
+
+        <LeadForm
+          isOpen={showLeadForm}
+          onClose={() => setShowLeadForm(false)}
+          source="map"
+          context={{
+            city: router.query.city ? (() => {
+              const encoded = router.query.city as string
+              try {
+                return decodeURIComponent(encoded).replace(/-/g, ' ')
+              } catch {
+                return encoded.replace(/-/g, ' ')
+              }
+            })() : selectedCity,
+            municipality: router.query.municipality ? (() => {
+              const encoded = router.query.municipality as string
+              try {
+                return decodeURIComponent(encoded).replace(/-/g, ' ')
+              } catch {
+                return encoded.replace(/-/g, ' ')
+              }
+            })() : undefined,
+            neighborhood: router.query.neighborhood ? (() => {
+              const encoded = router.query.neighborhood as string
+              try {
+                return decodeURIComponent(encoded).replace(/-/g, ' ')
+              } catch {
+                return encoded.replace(/-/g, ' ')
+              }
+            })() : undefined,
+          }}
+        />
       </Layout>
     </>
   )
