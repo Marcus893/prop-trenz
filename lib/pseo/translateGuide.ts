@@ -3,7 +3,7 @@ import { saveGuideDraft, loadGuide } from './storage'
 import { generateMainImage, generateSectionImage } from './imageGeneration'
 import { GoogleGenerativeAI } from '@google/generative-ai'
 
-const MODEL = process.env.GEMINI_MODEL || 'gemini-2.0-flash'
+const MODEL = process.env.GEMINI_MODEL || 'gemini-2.5-pro'
 
 const SUPPORTED_LOCALES = ['en', 'es', 'zh']
 const LOCALE_NAMES: Record<string, string> = {

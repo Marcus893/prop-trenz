@@ -175,7 +175,7 @@ Each page includes:
 
 Required:
 - `GEMINI_API_KEY`: Your Google Gemini API key
-- `GEMINI_MODEL`: Model to use (default: `gemini-2.0-flash`)
+- `GEMINI_MODEL`: Model to use (default: `gemini-2.5-flash`)
 
 ## Example Output
 

@@ -1,14 +1,14 @@
 import { GoogleGenerativeAI } from '@google/generative-ai'
 import type { GenerateGuideParams, GuideSection, GuideFAQItem } from './types'
 
-const MODEL = process.env.GEMINI_MODEL || 'gemini-2.0-flash'
+const MODEL = process.env.GEMINI_MODEL || 'gemini-3-pro-preview'
 
 function buildPrompt(params: GenerateGuideParams): string {
   const dataPoints = params.dataPoints
     ?.map((item) => `${item.label}: ${item.value}`)
     .join('\n')
 
-  return `You are a real estate professional in Mexico writing from your actual experience. This is NOT an AI article - you're a real person sharing real knowledge. Write like you're talking to a friend who asked for your help. Use "I" constantly. Use "you" constantly. Be conversational. Be real. Be human.
+  return `You are a real estate professional in Mexico writing from your actual experience. This is NOT an AI article - you're a real person sharing real knowledge. Write like you're talking to a friend who asked for your help. Use "I" and use "you". Be conversational.
 
 Topic: ${params.topic}
 Locale: ${params.locale}
@@ -18,7 +18,7 @@ Structured data provided:
 ${dataPoints || 'None'}
 
 **CRITICAL DATA REFERENCE REQUIREMENT:**
-If this guide mentions specific neighborhoods, municipalities, or cities (like "hottest neighborhoods", "best areas", etc.), you MUST include data references for EVERY location mentioned. For example, if you mention "Polanco", you must include {{data:neighborhood:Polanco:Miguel Hidalgo:Ciudad de México:View Polanco prices}} in that same paragraph. This is MANDATORY and non-negotiable.
+If this guide mentions specific neighborhoods, municipalities, or cities (like "hottest neighborhoods", "best areas", etc.), you MUST include data references for locations mentioned. For example, if you mention "Polanco", you must include {{data:neighborhood:Polanco:Miguel Hidalgo:Ciudad de México:View Polanco prices}} in that same paragraph. This is MANDATORY.
 
 CRITICAL: Output ONLY valid JSON. Do not wrap the response in markdown code blocks, do not add any explanation text, and do not use triple backticks. Return pure JSON that can be parsed directly.
 
@@ -44,12 +44,11 @@ Output a JSON object with this exact schema:
 }
 
 Note: 
-- Include "mainImagePrompt" describing a professional header image for the article. For sections that would benefit from visual content (tax explanations, processes, checklists), include an "imagePrompt" field describing an educational infographic-style illustration.
+- Include "mainImagePrompt" describing a professional header image for the article. For sections that would benefit from visual content, include an "imagePrompt" field describing an educational infographic-style illustration.
 - Include "tags" array with 2-4 specific, relevant tags based on the actual content. Tags should be:
   * Specific to the topic
   * Use kebab-case (lowercase with hyphens)
   * Reflect the main themes and subtopics covered in the guide
-  * Avoid generic tags like "mexico-real-estate" or "market-intelligence" unless they're truly central to the content
   * Examples for different topics:
     - Rental guide: ["rental-market", "tenant-rights", "property-search", "rental-agreements"]
     - Buying guide: ["buying", "closing-costs", "notary", "isai-tax"]
@@ -67,38 +66,34 @@ CRITICAL CONTENT QUALITY REQUIREMENTS:
    - Minimum 2,000 words total (aim for 2,500-3,500 words for comprehensive coverage)
    - Each section must be substantial (300-500 words minimum per section)
    - No surface-level content - dive deep into each topic
-   - Provide actionable, specific information that readers cannot easily find elsewhere
+   - Provide actionable, specific information that readers can't easily find elsewhere
+   - NO OVERLAPPING CONTENT AMONG SECTIONS
 
 2. SECTION STRUCTURE:
-   - Minimum 7-10 sections (not 5) with descriptive H2 headings that include target keywords naturally
+   - Minimum 6-9 sections with descriptive H2 headings that include target keywords naturally
    - Each section must cover a distinct aspect of the topic in depth
    - Sections should build upon each other logically (introduction → background → processes → considerations → advanced topics → conclusion)
-   - Include sections on: context/background, step-by-step processes, common challenges, best practices, regional variations, legal/regulatory aspects, financial considerations, and actionable next steps
+   - Include sections on: context/background, step-by-step processes, common challenges, best practices, variations, legal/regulatory aspects, financial considerations, and actionable next steps
 
 3. PARAGRAPH QUALITY & FORMATTING:
    - Each paragraph: 1-3 sentences maximum - keep it short and punchy
    - Vary sentence length EXTREMELY: mix very short (3-8 words) with medium (12-18 words) and occasional longer (20-25 words)
    - Break up long sections with shorter paragraphs (1-2 sentences each) for better visual flow
-   - Each paragraph must provide unique value - no filler or repetition
+   - Each paragraph must provide unique value - NO FILLER OR REPETITION
    - Include specific examples, case studies, real-world scenarios, personal anecdotes, and concrete data
-   - Reference specific Mexican regulations, SAT rules, state laws, and notary practices with context
+   - Reference specific Mexican regulations, SAT rules, state laws, notary practices, etc. with context
    - Use white space effectively - don't create walls of text. Mix paragraph lengths for visual variety
    - Start paragraphs with varied openings: "Here's what I've learned...", "The thing is...", "Now, if you're...", "What most people don't realize..."
 
 4. HUMANIZATION & ANTI-AI SLOP:
    - Say what you mean directly. use specific details instead of broad contrasts.
-
    - Vary your rhythm. sometimes use two things. sometimes four. sometimes just one damn thing.
-
    - If you wouldn't say it in real conversation, don't write it.
-
-   - Use simple, active verbs. "show" not "highlighting." "help" not "facilitating.", avoid corporate speak.
-
+   - Use simple, active verbs. "show" not "highlighting." "help" not "facilitating.".
    - State your opinion. Skip the diplomatic warm-up.
-
-   - Break up long sentences - humans don't write 30-word sentences. Keep most under 18 words
-   - Use "you" constantly to connect: "You'll find...", "If you're looking...", "What you need to know...", "You might be wondering...", "Here's what you should do...", "You're probably thinking..."
-   - Include personal observations and real-world examples: "I've noticed that...", "In practice, what happens is...", "I've seen this happen dozens of times...", "Most people I work with..."
+   - Break up long sentences - humans don't write 30-word sentences. Keep most under 18 words.
+   - Use "you" to connect: "You'll find...", "If you're looking...", "What you need to know...", "You might be wondering...", "Here's what you should do..."
+   - Include personal observations and real-world examples modestly: "In practice, what happens is...", "I've seen this happen dozens of times...", "Most people I work with..."
    - Vary vocabulary aggressively - never use the same word twice in a paragraph. Use synonyms, different phrasings, alternate expressions.
    - Be direct and conversational - cut corporate speak. Say "It's expensive" not "It represents a significant financial investment". Say "You'll pay around 15,000 pesos" not "The approximate cost is 15,000 pesos"
    - Include imperfect, natural phrasing - don't make every sentence perfect. Humans write with slight variations, occasional redundancy, and natural flow
@@ -148,7 +143,6 @@ CRITICAL CONTENT QUALITY REQUIREMENTS:
      * "Coyoacán is historic. {{data:municipality:Coyoacán:Ciudad de México:Explore Coyoacán}} for more details."
    
    - **MANDATORY RULES:**
-     * If your guide is about "hottest neighborhoods" or "best areas", EVERY single neighborhood you mention MUST have a data reference
      * Include at least ONE data reference per paragraph that mentions a location
      * Use chart references when discussing price trends or market analysis
      * Use neighborhood references for specific areas
@@ -177,7 +171,7 @@ CRITICAL CONTENT QUALITY REQUIREMENTS:
     - Ensure the content demonstrates expertise and builds authority
     - **MANDATORY DATA REFERENCE CHECK:** Count every neighborhood, municipality, and city you mentioned. Every single one MUST have at least one data reference. If you mentioned "Polanco", "Roma", "Condesa", "Juárez", "Coyoacán", etc., each must have a data reference. This is not optional - guides without proper data references will be rejected.
 
-CRITICAL REMINDER: This is NOT an AI article. This is a real expert sharing real knowledge. Write it like you're having a conversation with a friend who asked for your advice. Use "I" and "you" liberally. Include your actual thoughts and observations. Make it sound like a human wrote it after living through these experiences, not like an AI compiled information. If an AI detector reads this, it should think a real person wrote it. Be conversational, be real, be human.`
+CRITICAL REMINDER: This is NOT an AI article. This is a real expert sharing real knowledge. Write it like you're having a conversation with a friend who asked for your advice. Use "I" and "you" liberally. Include your actual thoughts and observations. Make it sound like a human wrote it after living through these experiences, not like an AI compiled information. If an AI detector reads this, it should think a real person wrote it.`
 }
 
 interface GuideDraft {

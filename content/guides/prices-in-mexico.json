@@ -1,0 +1,253 @@
+{
+  "slug": "prices-in-mexico",
+  "locale": "en",
+  "status": "published",
+  "accessLevel": "public",
+  "tags": [
+    "lifestyle",
+    "moving-to-mexico",
+    "travel",
+    "personal-finance",
+    "digital-nomad"
+  ],
+  "updatedAt": "2025-11-27T18:34:55.188Z",
+  "metaDescription": "Wondering about the true cost of living in Mexico? I'll break down real prices for housing, food, transport & more based on 5+ years of experience. Plan your budget now!",
+  "metaTitle": "Prices in Mexico: A Real Cost of Living Breakdown",
+  "title": "What Do Prices in Mexico Look Like? An Insider's Guide",
+  "excerpt": "Forget the myths—here's the real, on-the-ground cost of living in Mexico from someone who actually lives here.",
+  "heroKicker": "Mexico Cost Breakdown",
+  "mainImageUrl": "/blogs/prices-in-mexico.jpeg",
+  "mainImageAlt": "What Do Prices in Mexico Look Like? An Insider's Guide",
+  "sections": [
+    {
+      "heading": "Are You Wondering: Is Mexico Actually CHEAP?",
+      "paragraphs": [
+        "Let's get this out of the way first. I hear it constantly from clients, friends, and people on forums: 'I want to move to Mexico because it's so cheap!' And every time, I have to smile and give them the real answer: It's not like what you think!",
+        "Yes, your money can go a lot further here, but the idea that you can live like a king on a few hundred dollars a month is a fantasy from a bygone era. The truth about prices in Mexico is that it's a country of contrasts. You can find a delicious, filling lunch for 70 pesos ($4 USD), or you can drop 5,000 pesos ($300 USD) on a tasting menu in a world-class restaurant. Both exist, often just a few blocks from each other. 😉",
+        "For over 5 years, I've been helping people navigate the real estate market here, which means I've had a front-row seat to their budgets, their financial surprises, and their successes. What I've learned is that the affordability of living in Mexico depends entirely on two things: where you choose to live and the lifestyle you want to maintain. If you want to live like you did back home—same brands, same car, same type of apartment in a trendy area—you might be surprised that your costs aren't that much lower. But if you're willing to adapt and embrace the local way of life? That's when you unlock the real value.",
+        "This guide isn't about selling you a dream. It's about giving you the numbers, the real-world context I've gathered over the years, so you can build a budget that actually works. We're going to break down everything from housing and food to those sneaky hidden costs most people never see coming."
+      ],
+      "bullets": [
+        "**Your Home Currency Matters:** A strong dollar, euro, or pound makes Mexico more affordable. A weak one does the opposite. Always factor in exchange rate fluctuations.",
+        "**'Gringo Pricing' is Real:** While not malicious, sometimes you'll be quoted a higher price as a foreigner. Learning some basic Spanish and knowing local prices is your best defense.",
+        "**Inflation is a Factor:** Like everywhere else, prices in Mexico have been rising, particularly for groceries and gas. Don't rely on cost-of-living blogs from five years ago.",
+        "**Digital Nomad Hotspots are More Expensive:** Cities popular with remote workers like Mexico City, Tulum, and Playa del Carmen have seen prices, especially for rent, skyrocket in recent years.",
+        "**Define 'Cheap':** What are you comparing it to? San Francisco or rural Kansas? Your baseline perception of cost will dramatically color your experience of prices here.",
+        "**Local vs. Imported:** This is the golden rule. Anything produced locally (produce, beer, furniture) is a bargain. Anything imported (electronics, foreign cars, specific food brands) is expensive."
+      ]
+    },
+    {
+      "heading": "The Biggest Expense: A Deep Dive into Housing Prices in Mexico",
+      "paragraphs": [
+        "Alright, let's talk about the biggest line item in anyone's budget: housing. This is where you'll see the most dramatic variation in prices across the country, and it's where a little research goes a very long way. Your housing cost will single-handedly determine the feasibility of your budget.",
+        "When it comes to renting, the options are endless. In a hyper-exclusive neighborhood like Polanco in Mexico City {{data:neighborhood:Polanco V Seccion:Miguel Hidalgo:Ciudad de México:View Polanco prices}}, a modern two-bedroom apartment can easily run you $2,500-$4,000 USD per month. Just a few kilometers away, in a more traditional, but still lovely, neighborhood, you could find a similar-sized place for half that. It's all about location. In trendy, walkable areas like Condesa {{data:neighborhood:Condesa:Cuauhtémoc:Ciudad de México:Explore Condesa}} or Roma Norte {{data:neighborhood:Roma Norte:Cuauhtémoc:Ciudad de México:View Roma Norte prices}}, you're paying a premium for the lifestyle—the cafes, the parks, the vibe.",
+        "Now, head out of the capital. In a beautiful colonial city like Mérida, you can rent a whole house, sometimes even with a small pool, for what a tiny studio costs in CDMX. I've seen clients find wonderful two-bedroom homes there for under $1,000 USD. On the flip side, in a booming beach town like Tulum, rental prices are astronomical due to tourist demand. A simple one-bedroom apartment can be $1,500 USD or more, often with fewer amenities than you'd expect for that price. It's a market driven by short-term vacation rentals, which pushes long-term prices up.",
+        "And don't forget utilities! This is a huge surprise for many. Electricity, managed by CFE, is subsidized up to a certain point. But if you go over that limit—say, by running your A/C 24/7 in the summer—you get hit with the dreaded DAC tariff (*tarifa de alto consumo*). I've seen people's bills jump from 500 pesos to 5,000 pesos overnight. It's a shock. You also have gas (usually delivered by a truck to a tank on your roof), water, and internet, which all together can add another $100-$200 USD to your monthly housing cost."
+      ],
+      "dataPoints": [
+        {
+          "label": "2-BR Rent in Polanco (CDMX)",
+          "value": "$2,500 - $4,500+ USD/month"
+        },
+        {
+          "label": "2-BR Rent in Roma/Condesa (CDMX)",
+          "value": "$1,500 - $2,800 USD/month"
+        },
+        {
+          "label": "2-BR Rent in Tulum (Beach)",
+          "value": "$1,400 - $2,500 USD/month"
+        },
+        {
+          "label": "2-BR House Rent in Mérida (Colonial)",
+          "value": "$800 - $1,500 USD/month"
+        },
+        {
+          "label": "Average Monthly Utilities (Gas, Water, Internet)",
+          "value": "$100 - $200 USD/month"
+        },
+        {
+          "label": "CFE Electricity (Moderate Use)",
+          "value": "$25 - $75 USD/month"
+        },
+        {
+          "label": "CFE Electricity (High Use/DAC Tariff)",
+          "value": "$200 - $500+ USD/month"
+        }
+      ],
+      "imagePrompt": "An infographic-style illustration comparing the average monthly rent for a 2-bedroom apartment in Mexico City, a beach town like Tulum, and a colonial city like Mérida, with icons representing each location and clear price ranges in USD.",
+      "imageUrl": "/blogs/mexico-houses.jpeg",
+      "imageAlt": "Houses in Mexico"
+    },
+    {
+      "heading": "Your Daily Bread: A Realistic Look at Food Prices",
+      "paragraphs": [
+        "After rent, food is your next biggest variable. And honestly, it's one of the best parts about living in Mexico. The quality and affordability of fresh food here is incredible, as long as you know where to shop. This is where you can really save money and live well.",
+        "Your first choice is the local *mercado* or a weekly *tianguis* (street market). This is where I do most of my shopping. The produce is fresh, seasonal, and ridiculously cheap. You can fill a giant bag with fresh fruits and vegetables—avocados, limes, mangoes, tomatoes, onions—for maybe 200-300 pesos ($12-$18 USD). It's a completely different experience from a sterile supermarket.",
+        "Then you have the big national supermarket chains like Soriana, Chedraui, and La Comer. They're great for pantry staples, household goods, and meat. Prices are very reasonable, comparable to a mid-range grocery store in the US, but with a much wider selection of Mexican products. A full week's worth of groceries for two people from one of these stores might run you 1,500-2,000 pesos ($90-$120 USD) if you're cooking most of your meals.",
+        "Finally, there are the high-end stores like City Market or Palacio de Hierro's food hall. These are where you go for imported cheeses, fancy olive oils, and American snack foods. It's a treat, but shopping here regularly will blow your budget. A basket of goods can easily cost double what it would at Chedraui.",
+        "Eating out offers the same spectrum. You can grab three amazing *al pastor* tacos on the street for 45 pesos ($2.50 USD). The institution of *comida corrida*—a set lunch menu with soup, a main course, a side, and an *agua fresca*—is a lifesaver for a cheap, hearty meal, usually costing 70-100 pesos ($4-$6 USD). A nice sit-down dinner for two at a mid-range restaurant with a drink each might be 800-1,200 pesos ($48-$72 USD). It's the flexibility that makes it so manageable. You can eat incredibly well here without spending a fortune."
+      ],
+      "dataPoints": [
+        {
+          "label": "1 Kilo of Avocados (at mercado)",
+          "value": "40-80 MXN"
+        },
+        {
+          "label": "1 Kilo of Chicken Breast",
+          "value": "120-150 MXN"
+        },
+        {
+          "label": "A 6-pack of Corona Beer",
+          "value": "80-100 MXN"
+        },
+        {
+          "label": "Street Tacos (each)",
+          "value": "12-25 MXN"
+        },
+        {
+          "label": "Comida Corrida (Set Lunch)",
+          "value": "70-100 MXN"
+        },
+        {
+          "label": "Dinner for Two (Mid-Range Restaurant)",
+          "value": "800-1,200 MXN"
+        },
+        {
+          "label": "Weekly Groceries for Two (Cooking at Home)",
+          "value": "1,500-2,000 MXN"
+        }
+      ],
+      "imageUrl": "/blogs/tianguis.jpeg",
+      "imageAlt": "Tianguis"
+    },
+    {
+      "heading": "Getting Around: Transportation Costs Explained",
+      "paragraphs": [
+        "How you move around has a huge impact on your budget and your daily experience. In a massive metropolis like Mexico City, you can live a full life without ever owning a car, which is a massive saving. The Metro is unbelievably cheap—a flat fare of 5 pesos (about $0.30 USD) will get you almost anywhere in the city. It's crowded, for sure, but it's efficient. The Metrobús system is similar, running in dedicated lanes and costing 6 pesos.",
+        "Ridesharing is everywhere. Uber and Didi are the main players, and they are generally safe, reliable, and much more affordable than in the US or Europe. A 20-30 minute Uber ride across the city might cost you 100-180 pesos ($6-$11 USD), depending on traffic and demand. For many people I know, a combination of public transit and occasional Ubers is the perfect, cost-effective solution.",
+        "Now, let's talk about owning a car. This is a major expense, and you need to go in with your eyes open. First, cars themselves are often 15-25% more expensive here than in the US due to taxes. Second, gasoline (*gasolina*) is not cheap; it's priced more like it is in Europe than in the States. As of right now, you're looking at around 23-25 pesos per liter. Filling up a tank can easily be 1,000 pesos ($60 USD) or more.",
+        "On top of that, you have mandatory car insurance, which can be pricey, and the annual vehicle tax. Depending on the state and the value of your car, you'll pay either *tenencia* (a tax based on the car's value) or a smaller fee called *refrendo*. It's a significant yearly cost that many newcomers forget to factor in. Unless you live in a remote area or need to shuttle kids around, I always advise clients to try living without a car first.",
+        "For traveling between cities, Mexico has a fantastic luxury bus system. Companies like ADO offer comfortable, safe, and affordable travel. A four-hour trip on a first-class bus might cost 500-800 pesos ($30-$48 USD). For longer distances, budget airlines like Volaris and Viva Aerobus have made domestic air travel incredibly accessible."
+      ],
+      "bullets": [
+        "**Mexico City Metro Fare:** A flat 5 MXN, one of the cheapest subway rides in the world.",
+        "**Didi vs. Uber:** Didi is often slightly cheaper than Uber, so it's worth having both apps on your phone to compare prices.",
+        "**Taxis:** Always use official *sitio* taxis or have your hotel/restaurant call one. Avoid hailing random street taxis, especially in large cities, for safety reasons.",
+        "**Toll Roads (*Cuotas*):** Mexico has an extensive network of high-quality toll highways. They are expensive but are generally much safer and faster than the free roads (*libres*).",
+        "**Car Maintenance:** Finding a good, trustworthy mechanic is key. Labor is cheap, but parts, especially for foreign cars, can be expensive and hard to find.",
+        "**Driver's License:** You can typically drive on your foreign license for a while, but getting a Mexican license is a relatively simple process and is recommended for long-term residents."
+      ],
+      "imageUrl": "/blogs/mexico-city-metro.jpeg",
+      "imageAlt": "Mexico City Metro"
+    },
+    {
+      "heading": "Staying Healthy: A Practical Guide to Healthcare Prices",
+      "paragraphs": [
+        "Healthcare is one of the biggest concerns for anyone moving to a new country, and the good news is that Mexico offers excellent, affordable options. The key is understanding the difference between the public and private systems.",
+        "Most temporary and permanent residents are eligible to join the public healthcare system, IMSS. It's very low-cost, but it can also involve long waits, bureaucracy, and crowded facilities. While it's a great safety net, the majority of expats I work with opt for the private system, either paying out-of-pocket for routine care or carrying private health insurance.",
+        "And paying out-of-pocket is surprisingly manageable for many things. A visit to a general doctor might cost between 400-800 pesos ($24-$48 USD). A consultation with a highly-trained specialist in a top-tier hospital could be 800-1,500 pesos ($48-$90 USD). Think about that. You can see a specialist for under $100. A professional dental cleaning is often in the 600-900 peso range ($36-$54 USD).",
+        "Pharmacies are also a different world here. You can walk into almost any pharmacy and get a consultation with an on-site doctor for a nominal fee (sometimes free), which is perfect for minor ailments. Medications are also significantly cheaper. Many drugs that require a prescription in the US or Canada are available over-the-counter here, and the prices for both generic and brand-name drugs are a fraction of what you'd pay up north.",
+        "For anything serious, though, you'll want private health insurance. The cost varies dramatically based on your age, deductible, and coverage level. A healthy 40-year-old might pay $1,200-$2,000 USD per year for a solid policy. For someone in their 60s, that could be $3,000-$5,000 USD or more. It's a significant expense, but it provides peace of mind and access to the best hospitals and doctors in the country without worrying about a massive bill."
+      ],
+      "bullets": [
+        "**Hospital Angeles & ABC Medical Center:** These are examples of top-tier private hospital chains with facilities across Mexico, known for their high standards of care.",
+        "**Farmacias Similares:** This chain is famous for its low-cost generic medications and on-site doctor consultations, which typically cost around 50 pesos.",
+        "**Medical Tourism:** Mexico is a major hub for medical and dental tourism because the quality is high and the prices are low. Many people come specifically for dental work, cosmetic procedures, or other treatments.",
+        "**Deductibles and Co-pays:** When buying insurance, pay close attention to the deductible (*deducible*) and co-insurance (*coaseguro*). A lower premium often means a much higher out-of-pocket cost when you actually need care.",
+        "**Pre-existing Conditions:** Be aware that most Mexican insurance policies will have waiting periods or may not cover pre-existing conditions, so it's crucial to read the fine print.",
+        "**Emergency Care:** Even without insurance, emergency room care at a private hospital is accessible. You will be required to pay a hefty deposit upon admission, usually via credit card."
+      ]
+    },
+    {
+      "heading": "The Fun Stuff: Budgeting for Lifestyle and Entertainment",
+      "paragraphs": [
+        "This is the part of your budget that's all about quality of life. The cost of living in Mexico isn't just about survival; it's about enjoying yourself. And luckily, you can have a very rich social and cultural life here without breaking the bank.",
+        "Let's start with simple pleasures. A coffee at a local cafe will set you back 40-60 pesos ($2.40-$3.60). A domestic beer at a casual bar is usually around 35-50 pesos ($2-$3). A craft cocktail at a trendy rooftop bar in Roma Norte {{data:neighborhood:Roma Norte:Cuauhtémoc:Ciudad de México:Explore Roma Norte}}, however, could easily be 200-300 pesos ($12-$18), so you see the range.",
+        "Entertainment is generally very affordable. Movie tickets are a fraction of the price in the US; you can see a new release at a modern Cinépolis theater for about 80-120 pesos ($5-$7). Museums in Mexico City are often state-subsidized and cost very little, maybe 70-90 pesos for entry, and many are free to residents on Sundays. A monthly membership at a decent gym can range from 600 pesos for a basic spot to over 2,000 pesos for a high-end club.",
+        "One of the areas where you'll notice the biggest difference is the cost of services. This is a game-changer for many people's lifestyles. A haircut for a man might be 150-300 pesos. A manicure/pedicure can be had for 300-500 pesos. Hiring a cleaning service for your home is very common and affordable; you might pay 400-600 pesos for a half-day of cleaning. These are luxuries that are out of reach for many in other countries but are a regular part of life for many expats and middle-class Mexicans here."
+      ],
+      "bullets": [
+        "**Live Music & Events:** Check local listings for free concerts and cultural events, which are very common in public squares and parks, especially on weekends.",
+        "**Cell Phone Plans:** A prepaid plan with Telcel or AT&T is very cheap. You can get a month's worth of data, calls, and social media for around 200-400 pesos.",
+        "**Streaming Services:** Netflix, Spotify, and other streaming services are available and are often priced lower in Mexican pesos than their USD equivalents.",
+        "**Travel Within Mexico:** Don't forget to budget for weekend trips! Exploring the country is one of the best perks of living here, and as mentioned, buses and budget flights make it accessible.",
+        "**Shopping for Clothes:** Local department stores like Liverpool or Palacio de Hierro carry international brands, which are often expensive. For bargains, explore local boutiques or the giant stores of the Spanish brand Zara.",
+        "**Spanish Lessons:** Investing in private Spanish lessons is a great way to improve your experience. Group classes can be very cheap, while one-on-one tutors might charge 200-400 pesos per hour."
+      ],
+      "imageUrl": "/blogs/lucha-libre.jpeg",
+      "imageAlt": "Lucha Libre"
+    },
+    {
+      "heading": "The Hidden Costs: What Most People Forget to Budget For",
+      "paragraphs": [
+        "Okay, this is the section that could save you a lot of headaches. I've seen it happen dozens of times: people create a perfect monthly budget but get completely blindsided by the one-time, annual, or just plain unexpected costs. These are the things that separate a realistic plan from a fantasy.",
+        "First up: immigration. The process of getting and then renewing your temporary or permanent residency visa isn't free. You have government fees for the application, and if you use an immigration lawyer or facilitator (which I highly recommend), their fees can be anywhere from $500 to $1,500 USD per person. This is a significant upfront cost.",
+        "Next, let's talk about imported goods. I mentioned this before, but it's worth repeating. If you are attached to a specific brand of peanut butter, your favorite electronics from Apple, or high-end kitchen appliances, be prepared to pay a premium. Import taxes and logistics mean that a MacBook or an iPhone can be 20-30% more expensive here than in the United States. Many new arrivals get a shock when they go to replace a laptop and see the price tag.",
+        "Tipping, or *propina*, is another thing. It's a fundamental part of the culture for services. You tip restaurant staff (10-15%), bartenders, barbers, and the person who bags your groceries at the supermarket (*el cerillo*). You also tip the guys who help you park your car on the street and the attendants at the gas station. It's not a lot each time, but it adds up to a real, tangible monthly expense.",
+        "Finally, there are the setup and maintenance costs. You'll need to pay first month's rent and a security deposit (usually one month's rent) when you move in. Furnishing an apartment can be costly if you want new, modern furniture. And home maintenance, especially in older buildings or in humid coastal climates, can bring surprises. Things break, and you need a fund for the unexpected."
+      ],
+      "bullets": [
+        "**Bank Transfer Fees:** Moving money from your home country to a Mexican bank account almost always involves fees. Services like Wise (formerly TransferWise) can help minimize these, but it's still a cost.",
+        "**Annual Bank Fees:** Some Mexican banks charge a small annual fee for credit cards or even for certain types of debit accounts.",
+        "**Notary Fees:** If you buy property, the notary's role is much larger and more expensive than in other countries. Their fees can be a significant percentage of the closing costs.",
+        "**Professional Services:** Hiring an accountant (*contador*) is essential if you're earning income in Mexico. Their fees are reasonable but are another line item for your business budget.",
+        "**Fluctuating Property Taxes:** Your annual property tax (*predial*) is generally very low, but the assessed value of your home can be re-evaluated, leading to unexpected increases.",
+        "**Vehicle Repair Surprises:** Potholes (*baches*) are a fact of life on many Mexican roads. Budget for extra wear and tear on your tires and suspension if you plan on driving a lot."
+      ]
+    },
+    {
+      "heading": "Putting It All Together: Sample Monthly Budgets",
+      "paragraphs": [
+        "So, what does this all look like in practice? To give you a better idea, I've sketched out a few sample monthly budgets. These are just estimates, of course—your mileage will vary wildly based on your spending habits, your location, and your luck. But they provide a realistic starting point for the cost of living in Mexico.",
+        "Our first profile is the 'Frugal Single'. This person is living in a mid-sized, affordable city like Querétaro or Puebla. They rent a simple one-bedroom apartment, rely on public transport and walking, cook most meals at home using ingredients from the local *mercado*, and enjoy free or low-cost entertainment. Their focus is on experiencing Mexico authentically on a tight budget.",
+        "Next, we have the 'Comfortable Couple'. They've chosen to live in a desirable neighborhood like Condesa {{data:neighborhood:Condesa:Cuauhtémoc:Ciudad de México:View Condesa prices}} or maybe a nice part of Guadalajara. They have a modern two-bedroom apartment, share one car for weekend trips, eat out a few times a week at mid-range restaurants, have a gym membership, and travel within Mexico every couple of months. They're not extravagant, but they value comfort and convenience.",
+        "Finally, there's the 'Expat Family'. This family of four lives in a larger home in a suburban area like Santa Fe in Mexico City {{data:neighborhood:Santa Fe:Cuajimalpa de Morelos:Ciudad de México:Explore Santa Fe}} or near Lake Chapala. Their biggest expenses are private school tuition for two children and the costs associated with running two cars. They shop at high-end grocery stores, employ a part-time housekeeper, and have a budget that includes frequent entertainment, travel, and extracurricular activities for the kids. This lifestyle comes at a cost that is much closer to what you might find in many parts of the US or Europe."
+      ],
+      "dataPoints": [
+        {
+          "label": "The Frugal Single (Monthly)",
+          "value": "$900 - $1,400 USD"
+        },
+        {
+          "label": "The Comfortable Couple (Monthly)",
+          "value": "$2,200 - $3,500 USD"
+        },
+        {
+          "label": "The Expat Family (Monthly)",
+          "value": "$4,500 - $7,000+ USD"
+        }
+      ],
+      "imagePrompt": "A visually appealing infographic showing three different monthly budget breakdowns (Frugal Single, Comfortable Couple, Expat Family) using pie charts and icons for categories like housing, food, transport, education, and entertainment."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can I really live in Mexico on $1,000 USD a month?",
+      "answer": "Honestly, it's extremely difficult nowadays. It might be possible if you're single, live in a very small, non-touristy town, live like a local, rent a very basic room, and rarely eat out or travel. For most people, especially in any major city or popular expat area, a more realistic minimum budget for a single person would be closer to $1,500 USD per month to live comfortably and safely."
+    },
+    {
+      "question": "Are electronics like laptops and phones more expensive in Mexico?",
+      "answer": "Yes, almost always. Due to import taxes (IVA) and other duties, electronics are typically 20-30% more expensive than in the United States. I always advise clients to buy new laptops, cameras, or phones before they move. The price difference is significant, and it's one of the most common financial surprises for new residents."
+    },
+    {
+      "question": "How much should a family budget for private school tuition?",
+      "answer": "The range is enormous. A local, modest private school might cost $300-$500 USD per child per month. A top-tier international school in Mexico City, like the American School Foundation, can have tuition fees that exceed $1,500-$2,000 USD per child per month, plus registration fees, books, and uniforms. It's a massive part of a family's budget."
+    },
+    {
+      "question": "Is it cheaper to live in a beach town or a colonial city?",
+      "answer": "It completely depends on which towns you're comparing. A super-trendy beach town like Tulum is far more expensive than a less-touristy colonial city like Puebla. However, a major colonial destination like San Miguel de Allende can be just as pricey as a mid-range beach town like Puerto Vallarta. Generally, your money goes further in inland colonial cities than in the prime coastal hotspots."
+    },
+    {
+      "question": "Do I need to speak Spanish to get fair prices?",
+      "answer": "You don't need to be fluent, but it helps immensely. In tourist zones, you can get by with English, but in local markets, with repairmen, or in taxis, speaking some Spanish shows respect and makes it less likely you'll be quoted an inflated 'gringo price'. Knowing the numbers and a few key phrases will absolutely save you money and earn you a lot of goodwill."
+    },
+    {
+      "question": "What's the biggest financial mistake new expats make?",
+      "answer": "The biggest mistake I see is underestimating the one-time setup costs. People budget for their monthly rent and food, but they forget about the security deposit, immigration lawyer fees, furnishing an entire apartment, buying a car if needed, and setting up utilities. These initial costs can easily run into several thousand dollars and can wipe out your savings if you're not prepared."
+    },
+    {
+      "question": "How much does a residency visa actually cost to get?",
+      "answer": "The costs are two-fold: government fees and professional fees. The government fees for the application and the card itself might be a few hundred dollars. The real cost comes from hiring an immigration facilitator or lawyer, which is highly recommended. Their services can range from $500 to over $1,500 USD per person."
+    }
+  ]
+}
