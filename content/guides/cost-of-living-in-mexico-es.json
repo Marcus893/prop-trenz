@@ -1,22 +1,22 @@
 {
-  "slug": "prices-in-mexico-es",
+  "slug": "cost-of-living-in-mexico-es",
   "locale": "es",
   "status": "published",
   "accessLevel": "public",
   "tags": [
-    "calidad-de-vida",
+    "finanzas-personales",
     "mudarse-a-mexico",
-    "nómada-digital",
+    "calidad-de-vida",
     "viajes",
-    "finanzas-personales"
+    "nómada-digital"
   ],
   "updatedAt": "2025-11-27T21:57:39.014Z",
   "title": "¿Cómo Son los Precios en México? Una Guía de un Experto",
   "metaTitle": "Precios en México: Un Desglose Real del Costo de Vida",
-  "metaDescription": "¿Te preguntas sobre el verdadero costo de vida en México? Desglosaré precios reales de vivienda, comida, transporte y más, basado en más de 5 años de experiencia. ¡Planifica tu presupuesto ahora!",
-  "excerpt": "Olvida los mitos: este es el costo de vida real y tangible en México, contado por alguien que de verdad vive aquí.",
+  "metaDescription": "¿Te preguntas sobre el verdadero costo de vida en México? Desglosaré precios reales de vivienda, comida, transporte y más, basado en años de experiencia. ¡Planifica tu presupuesto ahora!",
+  "excerpt": "Olvida los mitos! Este es el costo de vida real y tangible en México, contado por alguien que de verdad vive aquí.",
   "heroKicker": "Desglose de Costos en México",
-  "mainImageUrl": "/blogs/prices-in-mexico.jpeg",
+  "mainImageUrl": "/blogs/cost-of-living-in-mexico/cost-of-living-in-mexico.jpeg",
   "mainImageAlt": "¿Cómo Son los Precios en México? Una Guía de un Experto",
   "sections": [
     {
@@ -75,7 +75,7 @@
           "value": "$200 - $500+ USD/mes"
         }
       ],
-      "imageUrl": "/blogs/mexico-houses.jpeg",
+      "imageUrl": "/blogs/cost-of-living-in-mexico/mexico-houses.jpeg",
       "imageAlt": "El Gasto Más Grande: Un Análisis Profundo de los Precios de Vivienda en México"
     },
     {
@@ -117,7 +117,7 @@
           "value": "1,500-2,000 MXN"
         }
       ],
-      "imageUrl": "/blogs/tianguis.jpeg",
+      "imageUrl": "/blogs/cost-of-living-in-mexico/tianguis.jpeg",
       "imageAlt": "El Pan de Cada Día: Una Mirada Realista a los Precios de los Alimentos"
     },
     {
@@ -137,7 +137,7 @@
         "**Mantenimiento del auto:** Encontrar un mecánico bueno y de confianza es clave. La mano de obra es barata, pero las piezas, especialmente para coches extranjeros, pueden ser caras y difíciles de encontrar.",
         "**Licencia de conducir:** Normalmente puedes conducir con tu licencia extranjera por un tiempo, pero obtener una licencia mexicana es un proceso relativamente simple y se recomienda para residentes a largo plazo."
       ],
-      "imageUrl": "/blogs/mexico-city-metro.jpeg",
+      "imageUrl": "/blogs/cost-of-living-in-mexico/mexico-city-metro.jpeg",
       "imageAlt": "Cómo Moverse: Explicación de los Costos de Transporte"
     },
     {
@@ -157,7 +157,8 @@
         "**Condiciones preexistentes:** Ten en cuenta que la mayoría de las pólizas de seguro mexicanas tendrán períodos de espera o pueden no cubrir condiciones preexistentes, por lo que es crucial leer la letra pequeña.",
         "**Atención de emergencias:** Incluso sin seguro, la atención en la sala de emergencias de un hospital privado es accesible. Se te pedirá que pagues un depósito considerable al ser admitido, generalmente con tarjeta de crédito."
       ],
-      "imageAlt": "Mantenerse Saludable: Guía Práctica de Precios de Servicios Médicos"
+      "imageUrl": "/blogs/cost-of-living-in-mexico/imss.png",
+      "imageAlt": "Mantenerse Saludable: Precios de Servicios Médicos en México"
     },
     {
       "heading": "La Parte Divertida: Presupuestando para Estilo de Vida y Entretenimiento",
@@ -175,7 +176,7 @@
         "**Comprar ropa:** Las tiendas departamentales locales como Liverpool o Palacio de Hierro tienen marcas internacionales, que a menudo son caras. Para ofertas, explora boutiques locales o las gigantescas tiendas de la marca española Zara.",
         "**Clases de español:** Invertir en clases particulares de español es una excelente manera de mejorar tu experiencia. Las clases grupales pueden ser muy baratas, mientras que los tutores privados pueden cobrar entre 200 y 400 pesos por hora."
       ],
-      "imageUrl": "/blogs/lucha-libre.jpeg",
+      "imageUrl": "/blogs/cost-of-living-in-mexico/lucha-libre.jpeg",
       "imageAlt": "La Parte Divertida: Presupuestando para Estilo de Vida y Entretenimiento"
     },
     {

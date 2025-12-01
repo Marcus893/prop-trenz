@@ -687,14 +687,17 @@ export function SellerCostCalculator() {
             <h3 className="text-lg font-semibold text-gray-900 mb-2">
               {t('leads.seller_cost_cta_title', 'Ready to sell? Get expert guidance')}
             </h3>
-            <p className="text-gray-600 mb-4">
+            <p className="text-gray-600 mb-2">
               {t('leads.seller_cost_cta_description', 'Connect with experienced real estate professionals who can help you understand all selling costs, maximize your profit, and navigate the sales process smoothly.')}
+            </p>
+            <p className="text-sm text-gray-600 italic mb-1">
+              {t('leads.cta_social_proof', '47 investors got connected last month 🤝')}
             </p>
             <Button
               onClick={() => setShowLeadForm(true)}
               className="bg-blue-600 hover:bg-blue-700 text-white"
             >
-              {t('leads.cta_button', 'Get Expert Help')}
+              {t('leads.cta_button', 'Get Expert Help >')}
             </Button>
           </div>
         </div>

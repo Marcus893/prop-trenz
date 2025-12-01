@@ -1,22 +1,22 @@
 {
-  "slug": "prices-in-mexico-zh",
+  "slug": "cost-of-living-in-mexico-zh",
   "locale": "zh",
   "status": "published",
   "accessLevel": "public",
   "tags": [
+    "个人理财",
     "生活质量",
     "移居墨西哥",
-    "数字游民",
     "旅行",
-    "个人理财"
+    "数字游民"
   ],
   "updatedAt": "2025-11-27T21:59:05.755Z",
   "title": "墨西哥物价内参：真实价格水平揭秘",
   "metaTitle": "墨西哥物价：真实生活成本解析",
-  "metaDescription": "想知道在墨西哥生活的真实成本吗？我将根据5年多的经验，为您详细解析住房、食品、交通等方面的真实价格。立即规划您的预算！",
-  "excerpt": "忘掉那些传言吧——这才是由真正生活在这里的人为您揭示的墨西哥当地真实生活成本。",
+  "metaDescription": "想知道在墨西哥生活的真实成本吗？我将根据多年的经验，为您详细解析住房、食品、交通等方面的真实价格。立即规划您的预算！",
+  "excerpt": "忘掉那些传言吧! 这才是由真正生活在这里的人为您揭示的墨西哥当地真实生活成本。",
   "heroKicker": "墨西哥成本解析",
-  "mainImageUrl": "/blogs/prices-in-mexico.jpeg",
+  "mainImageUrl": "/blogs/cost-of-living-in-mexico/cost-of-living-in-mexico.jpeg",
   "mainImageAlt": "墨西哥物价内参：真实价格水平揭秘",
   "sections": [
     {
@@ -73,7 +73,7 @@
           "value": "每月 200 - 500+ 美元"
         }
       ],
-      "imageUrl": "/blogs/mexico-houses.jpeg",
+      "imageUrl": "/blogs/cost-of-living-in-mexico/mexico-houses.jpeg",
       "imageAlt": "最大开销：深入了解墨西哥的住房价格"
     },
     {
@@ -115,7 +115,7 @@
           "value": "1,500-2,000 墨西哥比索"
         }
       ],
-      "imageUrl": "/blogs/tianguis.jpeg",
+      "imageUrl": "/blogs/cost-of-living-in-mexico/tianguis.jpeg",
       "imageAlt": "您的日常饮食：食品价格的真实情况"
     },
     {
@@ -135,7 +135,7 @@
         "**汽车保养：**找到一个优秀、值得信赖的技工至关重要。人工费便宜，但零件，特别是外国汽车的零件，可能昂贵且难以找到。",
         "**驾照：**通常您可以用外国驾照驾驶一段时间，但获取墨西哥驾照是一个相对简单的过程，建议长期居民办理。"
       ],
-      "imageUrl": "/blogs/mexico-city-metro.jpeg",
+      "imageUrl": "/blogs/cost-of-living-in-mexico/mexico-city-metro.jpeg",
       "imageAlt": "出行方式：交通成本详解"
     },
     {
@@ -155,6 +155,7 @@
         "**既往病史：**请注意，大多数墨西哥保险单都会有等待期，或者可能不承保既往病史，因此仔细阅读细则至关重要。",
         "**紧急护理：**即使没有保险，也可以在私立医院获得急诊室护理。入院时您需要支付一笔高额押金，通常通过信用卡支付。"
       ],
+      "imageUrl": "/blogs/cost-of-living-in-mexico/imss.png",
       "imageAlt": "保持健康：医疗保健价格实用指南"
     },
     {
@@ -173,7 +174,7 @@
         "**购买衣物：**像Liverpool或Palacio de Hierro这样的本地百货公司销售国际品牌，这些品牌通常很贵。要淘便宜货，可以逛逛本地精品店或西班牙品牌Zara的大型门店。",
         "**西班牙语课程：**投资私人西班牙语课程是改善您体验的好方法。集体课程可能非常便宜，而一对一的辅导老师每小时可能收费200-400比索。"
       ],
-      "imageUrl": "/blogs/lucha-libre.jpeg",
+      "imageUrl": "/blogs/cost-of-living-in-mexico/lucha-libre.jpeg",
       "imageAlt": "休闲娱乐：生活方式与娱乐预算"
     },
     {

@@ -1,22 +1,22 @@
 {
-  "slug": "prices-in-mexico",
+  "slug": "cost-of-living-in-mexico",
   "locale": "en",
   "status": "published",
   "accessLevel": "public",
   "tags": [
-    "lifestyle",
-    "moving-to-mexico",
-    "travel",
     "personal-finance",
-    "digital-nomad"
+    "moving-to-mexico",
+    "lifestyle",
+    "digital-nomad",
+    "travel"
   ],
   "updatedAt": "2025-11-27T18:34:55.188Z",
-  "metaDescription": "Wondering about the true cost of living in Mexico? I'll break down real prices for housing, food, transport & more based on 5+ years of experience. Plan your budget now!",
+  "metaDescription": "Wondering about the true cost of living in Mexico? I'll break down real prices for housing, food, transportation & more based on my years of experience. Plan your budget now!",
   "metaTitle": "Prices in Mexico: A Real Cost of Living Breakdown",
   "title": "What Do Prices in Mexico Look Like? An Insider's Guide",
-  "excerpt": "Forget the myths—here's the real, on-the-ground cost of living in Mexico from someone who actually lives here.",
+  "excerpt": "Forget about the myths! here's the real, on-the-ground cost of living in Mexico from someone who actually lives here.",
   "heroKicker": "Mexico Cost Breakdown",
-  "mainImageUrl": "/blogs/prices-in-mexico.jpeg",
+  "mainImageUrl": "/blogs/cost-of-living-in-mexico/cost-of-living-in-mexico.jpeg",
   "mainImageAlt": "What Do Prices in Mexico Look Like? An Insider's Guide",
   "sections": [
     {
@@ -75,7 +75,7 @@
         }
       ],
       "imagePrompt": "An infographic-style illustration comparing the average monthly rent for a 2-bedroom apartment in Mexico City, a beach town like Tulum, and a colonial city like Mérida, with icons representing each location and clear price ranges in USD.",
-      "imageUrl": "/blogs/mexico-houses.jpeg",
+      "imageUrl": "/blogs/cost-of-living-in-mexico/mexico-houses.jpeg",
       "imageAlt": "Houses in Mexico"
     },
     {
@@ -117,7 +117,7 @@
           "value": "1,500-2,000 MXN"
         }
       ],
-      "imageUrl": "/blogs/tianguis.jpeg",
+      "imageUrl": "/blogs/cost-of-living-in-mexico/tianguis.jpeg",
       "imageAlt": "Tianguis"
     },
     {
@@ -137,7 +137,7 @@
         "**Car Maintenance:** Finding a good, trustworthy mechanic is key. Labor is cheap, but parts, especially for foreign cars, can be expensive and hard to find.",
         "**Driver's License:** You can typically drive on your foreign license for a while, but getting a Mexican license is a relatively simple process and is recommended for long-term residents."
       ],
-      "imageUrl": "/blogs/mexico-city-metro.jpeg",
+      "imageUrl": "/blogs/cost-of-living-in-mexico/mexico-city-metro.jpeg",
       "imageAlt": "Mexico City Metro"
     },
     {
@@ -156,7 +156,9 @@
         "**Deductibles and Co-pays:** When buying insurance, pay close attention to the deductible (*deducible*) and co-insurance (*coaseguro*). A lower premium often means a much higher out-of-pocket cost when you actually need care.",
         "**Pre-existing Conditions:** Be aware that most Mexican insurance policies will have waiting periods or may not cover pre-existing conditions, so it's crucial to read the fine print.",
         "**Emergency Care:** Even without insurance, emergency room care at a private hospital is accessible. You will be required to pay a hefty deposit upon admission, usually via credit card."
-      ]
+      ],
+      "imageUrl": "/blogs/cost-of-living-in-mexico/imss.png",
+      "imageAlt": "Mexican Health Care"
     },
     {
       "heading": "The Fun Stuff: Budgeting for Lifestyle and Entertainment",
@@ -174,7 +176,7 @@
         "**Shopping for Clothes:** Local department stores like Liverpool or Palacio de Hierro carry international brands, which are often expensive. For bargains, explore local boutiques or the giant stores of the Spanish brand Zara.",
         "**Spanish Lessons:** Investing in private Spanish lessons is a great way to improve your experience. Group classes can be very cheap, while one-on-one tutors might charge 200-400 pesos per hour."
       ],
-      "imageUrl": "/blogs/lucha-libre.jpeg",
+      "imageUrl": "/blogs/cost-of-living-in-mexico/lucha-libre.jpeg",
       "imageAlt": "Lucha Libre"
     },
     {

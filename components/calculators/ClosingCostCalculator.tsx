@@ -741,14 +741,17 @@ export function ClosingCostCalculator() {
             <h3 className="text-lg font-semibold text-gray-900 mb-2">
               {t('leads.cta_title', 'Need help with this deal?')}
             </h3>
-            <p className="text-gray-600 mb-4">
+            <p className="text-gray-600 mb-2">
               {t('leads.cta_description', 'Connect with a vetted real estate expert who can help you analyze this property and find similar opportunities.')}
+            </p>
+            <p className="text-sm text-gray-600 italic mb-1">
+              {t('leads.cta_social_proof', '47 investors got connected last month 🤝')}
             </p>
             <Button
               onClick={() => setShowLeadForm(true)}
               className="bg-blue-600 hover:bg-blue-700 text-white"
             >
-              {t('leads.cta_button', 'Get Expert Help')}
+              {t('leads.cta_button', 'Get Expert Help >')}
             </Button>
           </div>
         </div>

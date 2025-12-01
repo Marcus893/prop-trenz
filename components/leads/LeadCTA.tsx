@@ -35,14 +35,17 @@ export function LeadCTA({
             <h3 className="text-lg font-semibold text-gray-900 mb-2">
               {t(titleKey, titleDefault)}
             </h3>
-            <p className="text-gray-600 mb-4">
+            <p className="text-gray-600 mb-2">
               {t(descriptionKey, descriptionDefault)}
+            </p>
+            <p className="text-sm text-gray-600 italic mb-1">
+              {t('leads.cta_social_proof', '47 investors got connected last month 🤝')}
             </p>
             <Button
               onClick={() => setShowLeadForm(true)}
               className="bg-blue-600 hover:bg-blue-700 text-white"
             >
-              {t('leads.cta_button', 'Get Expert Help')}
+              {t('leads.cta_button', 'Get Expert Help >')}
             </Button>
           </div>
         </div>
@@ -57,4 +60,5 @@ export function LeadCTA({
     </>
   )
 }
+
 

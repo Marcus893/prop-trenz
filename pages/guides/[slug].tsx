@@ -253,7 +253,7 @@ export default function GuidePage({ guide, canonicalUrl, hreflangUrls, isFallbac
                 <div>
                   <h2 className="text-2xl font-semibold text-gray-900">{section.heading}</h2>
                   {section.imageUrl && (
-                    <div className="relative mt-4 h-64 w-full overflow-hidden rounded-xl bg-gray-100 md:h-80">
+                    <div className="relative mt-4 h-96 w-full overflow-hidden rounded-xl bg-gray-100 md:h-96">
                       {section.imageUrl.startsWith('data:') ? (
                         <img
                           src={section.imageUrl}

@@ -5,7 +5,7 @@ export default function Document() {
     <Html>
       <Head>
         {/* Favicon - using the logo icon */}
-        <link rel="icon" type="image/svg+xml" href="/logo-icon.svg" />
+        <link rel="icon" href="/favicon.png" />
         <link rel="alternate icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />

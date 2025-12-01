@@ -80,7 +80,6 @@ export function LeadForm({ isOpen, onClose, source, context = {} }: LeadFormProp
         'leads.city_label': 'Ciudad',
         'leads.city_placeholder': 'Selecciona ciudad',
         'leads.municipality_label': 'Municipio',
-        'leads.municipality_placeholder': 'Cuauhtémoc',
         'leads.budget_label': 'Rango de Presupuesto',
         'leads.budget_placeholder': 'Selecciona el rango de presupuesto',
         'leads.budget_under_2m': 'Menos de $2M MXN',
@@ -458,7 +457,6 @@ export function LeadForm({ isOpen, onClose, source, context = {} }: LeadFormProp
                         required
                         value={formData.municipality}
                         onChange={(e) => setFormData({ ...formData, municipality: e.target.value })}
-                        placeholder={t2('leads.municipality_placeholder', 'Cuauhtémoc')}
                       />
                     </div>
                   </div>

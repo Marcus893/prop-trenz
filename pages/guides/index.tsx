@@ -169,7 +169,7 @@ export default function GuidesIndex({ guides, allTags }: GuidesIndexProps) {
               className="group flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-md"
             >
               {guide.mainImageUrl && guide.mainImageUrl !== null && (
-                <div className="relative h-48 w-full overflow-hidden bg-gray-100">
+                <div className="relative h-64 w-full overflow-hidden bg-gray-100">
                   {guide.mainImageUrl.startsWith('data:') ? (
                     <img
                       src={guide.mainImageUrl}
@@ -219,9 +219,6 @@ export default function GuidesIndex({ guides, allTags }: GuidesIndexProps) {
                     ))}
                   </div>
                 )}
-                <span className="mt-auto pt-4 text-sm font-medium text-blue-600">
-                  {t('guides_page.cta_label', 'Read the guide')}
-                </span>
               </div>
             </Link>
           ))}

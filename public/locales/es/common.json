@@ -621,7 +621,6 @@
     "title": "Guías del mercado inmobiliario mexicano",
     "subtitle": "Artículos basados en datos que explican impuestos, regulaciones y dinámica del mercado en cada etapa del ciclo inmobiliario.",
     "intro_banner": "PropTrenz recopila manuales basados en datos para comprar, poseer y vender propiedades en México. Son documentos vivos con tasas impositivas, referencias regulatorias y listas de verificación tomadas de circulares del SAT, datos de la SHF y notarios locales.",
-    "cta_label": "Leer la guía",
     "filter_by_tags": "Filtrar por categoría",
     "clear_filters": "Limpiar filtros"
   },
@@ -652,7 +651,6 @@
     "city_label": "Ciudad",
     "city_placeholder": "Selecciona ciudad",
     "municipality_label": "Municipio",
-    "municipality_placeholder": "Cuauhtémoc",
     "budget_label": "Rango de Presupuesto",
     "budget_placeholder": "Selecciona rango de presupuesto",
     "budget_under_2m": "Menos de $2M MXN",
@@ -675,6 +673,7 @@
     "optional": "opcional",
     "cta_title": "¿Necesitas ayuda con esta propiedad?",
     "cta_description": "Conéctate con un experto inmobiliario verificado que puede ayudarte a analizar esta propiedad y encontrar oportunidades similares.",
+    "cta_social_proof": "47 inversores se conectaron el mes pasado 🤝",
     "cta_button": "Obtener Ayuda de un Experto",
     "ownership_cost_cta_title": "¿Necesitas ayuda gestionando tu propiedad?",
     "ownership_cost_cta_description": "Obtén asesoría personalizada de expertos inmobiliarios locales sobre cómo optimizar los gastos de tu propiedad y maximizar el retorno de tu inversión.",

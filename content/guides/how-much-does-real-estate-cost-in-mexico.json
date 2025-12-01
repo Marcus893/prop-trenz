@@ -10,13 +10,13 @@
     "real-estate-financing"
   ],
   "updatedAt": "2025-11-27T20:54:12.617Z",
-  "metaDescription": "Stop guessing about property prices. A 15-year veteran breaks down real estate costs in Mexico, from Polanco condos to Tulum villas. Get the real numbers here.",
-  "metaTitle": "Real Estate Price Mexico: Cost Guide by an Expert",
-  "title": "How Much Does Real Estate Cost in Mexico? A Local's Honest Price Guide",
+  "metaDescription": "Stop guessing about property prices. A veteran breaks down real estate costs in Mexico, from Polanco condos to Tulum villas. Get the real numbers here.",
+  "metaTitle": "Mexico Real Estate Prices 2025: Costs by Region & Hidden Fees",
+  "title": "Mexico Real Estate Prices 2025: Costs by Region & Hidden Fees",
   "excerpt": "I break down actual property costs across Mexico's hottest markets, stripping away the hype to show you what you'll really pay.",
   "heroKicker": "Market Analysis & Pricing Guide",
-  "mainImageUrl": "/blogs/how-much-does-real-estate-cost-in-mexico.jpeg",
-  "mainImageAlt": "How Much Does Real Estate Cost in Mexico? A Local's Honest Price Guide",
+  "mainImageUrl": "/blogs/how-much-does-real-estate-cost-in-mexico/how-much-does-real-estate-cost-in-mexico.jpeg",
+  "mainImageAlt": "Mexico Real Estate Prices 2025: Costs by Region & Hidden Fees",
   "sections": [
     {
       "heading": "The Million Dollar Question (That Sometimes Costs $100k)",
@@ -65,8 +65,8 @@
         "Pre-sale (preventa) discounts in CDMX are shrinking; developers are offering less financing flexibility than they did five years ago."
       ],
       "imagePrompt": "A comparative bar chart illustration showing price per square meter in Polanco, Condesa, Roma, and Narvarte, with stylized icons of the neighborhood vibes.",
-      "imageUrl": "/blogs/polanco-real-estate.jpeg",
-      "imageAlt": "Polanco Real Estate"
+      "imageUrl": "/blogs/how-much-does-real-estate-cost-in-mexico/polanco-real-estate.jpeg",
+      "imageAlt": "Luxury Condo in Polanco"
     },
     {
       "heading": "The Beach Premium: Riviera Maya and Pacific Coast",
@@ -85,8 +85,8 @@
         "Resale of condos in saturated markets like Tulum can take 12+ months; liquidity is much lower than in major cities."
       ],
       "imagePrompt": "An infographic showing the cost difference between 'Beachfront', 'Walk to Beach', and 'Drive to Beach' properties.",
-      "imageUrl": "/blogs/tulum-villa.jpeg",
-      "imageAlt": "Tulum Villa"
+      "imageUrl": "/blogs/how-much-does-real-estate-cost-in-mexico/tulum-villa.jpeg",
+      "imageAlt": "A Bohemian Tulum Villa Deep in the Jungle"
     },
     {
       "heading": "The Colonial Highlands: Where Expats Actually Live",
@@ -104,8 +104,8 @@
         "Title issues are common in older colonial properties; ensure you have a 'Notario' run a full lien search going back 10 years."
       ],
       "imagePrompt": "Illustration of a colonial street in San Miguel de Allende with price tags attached to different styles of homes (fixer-upper vs. restored).",
-      "imageUrl": "/blogs/san-miguel-real-estate.jpeg",
-      "imageAlt": "San Miguel de Allende Real Estate"
+      "imageUrl": "/blogs/how-much-does-real-estate-cost-in-mexico/san-miguel-real-estate.jpeg",
+      "imageAlt": "A Colonial Style Mansion in San Miguel de Allende"
     },
     {
       "heading": "The Hidden Costs Nobody Tells You About",

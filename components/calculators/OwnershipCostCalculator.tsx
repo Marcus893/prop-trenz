@@ -547,14 +547,17 @@ export function OwnershipCostCalculator() {
             <h3 className="text-lg font-semibold text-gray-900 mb-2">
               {t('leads.ownership_cost_cta_title', 'Need help managing your property?')}
             </h3>
-            <p className="text-gray-600 mb-4">
+            <p className="text-gray-600 mb-2">
               {t('leads.ownership_cost_cta_description', 'Get personalized advice from local real estate experts on optimizing your property expenses and maximizing your investment returns.')}
+            </p>
+            <p className="text-sm text-gray-600 italic mb-1">
+              {t('leads.cta_social_proof', '47 investors got connected last month 🤝')}
             </p>
             <Button
               onClick={() => setShowLeadForm(true)}
               className="bg-blue-600 hover:bg-blue-700 text-white"
             >
-              {t('leads.cta_button', 'Get Expert Help')}
+              {t('leads.cta_button', 'Get Expert Help >')}
             </Button>
           </div>
         </div>
