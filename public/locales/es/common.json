@@ -37,7 +37,7 @@
     "no_location_help": "Elige una ubicación desde la navegación para ver tendencias y análisis de precios",
     "time_periods": {
       "1y": "1A",
-      "2y": "2A", 
+      "2y": "2A",
       "5y": "5A",
       "10y": "10A",
       "max": "Máx"
@@ -71,7 +71,8 @@
     "home": "Inicio",
     "insights": "Perspectivas",
     "charts": "Gráficos",
-    "map": "Mapa",
+    "purchase_price_map": "Mapa de Precios de Compra",
+    "rent_price_map": "Mapa de Precios de Renta",
     "guides": "Guías",
     "calculators": "Calculadoras",
     "menu": "Menú",
@@ -686,5 +687,42 @@
     "guide_cta_title": "¿Quieres invertir en bienes raíces mexicanos?",
     "guide_cta_description": "Conéctate con un profesional inmobiliario verificado que puede ayudarte en cada paso del camino.",
     "phone_hint": "Formato: +52 (México), +1 (EE.UU./Canadá), o 10 dígitos"
+  },
+  "rent_map": {
+    "meta": {
+      "title": "Mapa de Renta - PropTrenz",
+      "description": "Explora rentas promedio por colonia y tipo de propiedad."
+    },
+    "title": "Mapa de Rentas",
+    "subtitle": "Rentas promedio por colonia",
+    "city": "Ciudad",
+    "select_city": "Seleccionar ciudad",
+    "loading_rent_data": "Cargando datos de renta…",
+    "error_loading_data": "Error cargando datos de renta",
+    "neighborhoods_label": "Colonias",
+    "search_neighborhoods": "Buscar colonias...",
+    "less_than": "Menor que",
+    "greater_than": "Mayor que",
+    "price_label": "Precio ($)",
+    "average_rent": "Renta promedio:",
+    "normalized_to_70m2": "normalizado a 70m²",
+    "month": "mes",
+    "average": "Promedio",
+    "neighborhoods_count": "colonias",
+    "br": "Rec",
+    "legend_title": "Renta",
+    "averages_by_type": "Promedio por tipo:",
+    "room": "Cuarto",    "studio_apt": "Estudio",    "apt_1br": "Depto (1 Rec)",
+    "apt_2br": "Depto (2 Rec)",
+    "apt_2plus_br": "Depto (2+ Rec)",
+    "house": "Casa",
+    "price_per_m2": "Precio por m²",
+    "price_legend": {
+      "under_8k": "< $8 mil",
+      "8k_12k": "$8 mil - $12 mil",
+      "12k_18k": "$12 mil - $18 mil",
+      "18k_26k": "$18 mil - $26 mil",
+      "over_26k": "> $26 mil"
+    }
   }
 }

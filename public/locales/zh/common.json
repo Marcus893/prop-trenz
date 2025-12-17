@@ -37,7 +37,7 @@
     "no_location_help": "从左侧导航选择一个位置以查看价格趋势和分析",
     "time_periods": {
       "1y": "1年",
-      "2y": "2年", 
+      "2y": "2年",
       "5y": "5年",
       "10y": "10年",
       "max": "最大"
@@ -71,7 +71,8 @@
     "home": "首页",
     "insights": "市场洞察",
     "charts": "图表",
-    "map": "地图",
+    "purchase_price_map": "购买价格地图",
+    "rent_price_map": "租金价格地图",
     "guides": "指南",
     "calculators": "计算工具",
     "menu": "菜单",
@@ -685,5 +686,44 @@
     "guide_cta_title": "想投资墨西哥房地产吗？",
     "guide_cta_description": "与经过验证的房地产专业人士联系，他们可以在每一步为您提供帮助。",
     "phone_hint": "格式：+52（墨西哥），+1（美国/加拿大），或10位数字"
+  },
+  "rent_map": {
+    "meta": {
+      "title": "租金地图 - PropTrenz",
+      "description": "按社区和房屋类型查看平均租金。"
+    },
+    "title": "租金地图",
+    "subtitle": "按社区的平均租金",
+    "city": "城市",
+    "select_city": "选择城市",
+    "loading_rent_data": "正在加载租金数据…",
+    "error_loading_data": "加载租金数据出错",
+    "neighborhoods_label": "社区",
+    "search_neighborhoods": "搜索社区...",
+    "less_than": "少于",
+    "greater_than": "多于",
+    "price_label": "价格（$）",
+    "average_rent": "平均租金：",
+    "normalized_to_70m2": "归一化为 70m²",
+    "month": "月",
+    "average": "平均",
+    "neighborhoods_count": "个社区",
+    "br": "室",
+    "legend_title": "租金",
+    "averages_by_type": "按类型计算平均值：",
+    "room": "房间",
+    "studio_apt": "单间公寓",
+    "apt_1br": "公寓（1 间卧室）",
+    "apt_2br": "公寓（2 间卧室）",
+    "apt_2plus_br": "公寓（2+ 间卧室）",
+    "house": "房子",
+    "price_per_m2": "每平方米价格",
+    "price_legend": {
+      "under_8k": "< $8千",
+      "8k_12k": "$8千 - $12千",
+      "12k_18k": "$12千 - $18千",
+      "18k_26k": "$18千 - $26千",
+      "over_26k": "> $26千"
+    }
   }
 }

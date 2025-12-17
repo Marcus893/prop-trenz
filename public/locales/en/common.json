@@ -71,7 +71,8 @@
     "home": "Home",
     "insights": "Insights",
     "charts": "Charts",
-    "map": "Map",
+    "purchase_price_map": "Purchase Price Map",
+    "rent_price_map": "Rent Price Map",
     "guides": "Guides",
     "calculators": "Calculators",
     "menu": "Menu",
@@ -688,5 +689,44 @@
     "guide_cta_title": "Want to invest in Mexican real estate?",
     "guide_cta_description": "Connect with a vetted real estate professional who can help you every step of the way.",
     "phone_hint": "Format: +52 (Mexico), +1 (US/Canada), or 10 digits"
+  },
+  "rent_map": {
+    "meta": {
+      "title": "Rent Map - PropTrenz",
+      "description": "Explore average rents by neighborhood and property type."
+    },
+    "title": "Rent Map",
+    "subtitle": "Average rents by neighborhood",
+    "city": "City",
+    "select_city": "Select city",
+    "loading_rent_data": "Loading rent data…",
+    "error_loading_data": "Error loading rent data",
+    "neighborhoods_label": "Neighborhoods",
+    "search_neighborhoods": "Search neighborhoods...",
+    "less_than": "Less than",
+    "greater_than": "Greater than",
+    "price_label": "Price ($)",
+    "average_rent": "Average rent:",
+    "normalized_to_70m2": "normalized to 70m²",
+    "month": "month",
+    "average": "Average",
+    "neighborhoods_count": "neighborhoods",
+    "br": "BR",
+    "legend_title": "Rent",
+    "averages_by_type": "Averages by type:",
+    "room": "Room",
+    "studio_apt": "Studio",
+    "apt_1br": "Apt (1BR)",
+    "apt_2br": "Apt (2BR)",
+    "apt_2plus_br": "Apt (More Than 2BR)",
+    "house": "House",
+    "price_per_m2": "Price per m²",
+    "price_legend": {
+      "under_8k": "< $8k",
+      "8k_12k": "$8k - $12k",
+      "12k_18k": "$12k - $18k",
+      "18k_26k": "$18k - $26k",
+      "over_26k": "> $26k"
+    }
   }
 }

@@ -1,15 +1,15 @@
-'use client'
+"use client";
 
-import { useState, useEffect, useRef, ReactNode } from 'react'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-import { Button } from '@/components/ui/button'
-import { LanguageSwitcher } from '@/components/ui/LanguageSwitcher'
-import { AuthForm } from '@/components/auth/AuthForm'
-import { useAuth } from '@/lib/auth'
-import { useTranslation } from 'next-i18next'
-import { useTracking } from '@/lib/useTracking'
-import { LogoSVG } from '@/components/ui/Logo'
+import { useState, useEffect, useRef, ReactNode } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { Button } from "@/components/ui/button";
+import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
+import { AuthForm } from "@/components/auth/AuthForm";
+import { useAuth } from "@/lib/auth";
+import { useTranslation } from "next-i18next";
+import { useTracking } from "@/lib/useTracking";
+import { LogoSVG } from "@/components/ui/Logo";
 import {
   Home,
   BarChart3,
@@ -20,118 +20,152 @@ import {
   X,
   Calculator,
   BookOpen,
-  TrendingUp
-} from 'lucide-react'
+  TrendingUp,
+} from "lucide-react";
 
 interface LayoutProps {
-  children: ReactNode
-  title?: string
-  subtitle?: string
-  hideHeader?: boolean
+  children: ReactNode;
+  title?: string;
+  subtitle?: string;
+  hideHeader?: boolean;
 }
 
-export function Layout({ children, title, subtitle, hideHeader = false }: LayoutProps) {
-  const { t } = useTranslation('common')
-  const { user, signOut } = useAuth()
-  const router = useRouter()
-  const { track } = useTracking()
-  const [sidebarOpen, setSidebarOpen] = useState(false)
-  const [authMode, setAuthMode] = useState<'signin' | 'signup'>('signin')
-  const [showAuth, setShowAuth] = useState(false)
-  const sidebarRef = useRef<HTMLDivElement>(null)
-  
+export function Layout({
+  children,
+  title,
+  subtitle,
+  hideHeader = false,
+}: LayoutProps) {
+  const { t } = useTranslation("common");
+  const { user, signOut } = useAuth();
+  const router = useRouter();
+  const { track } = useTracking();
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [authMode, setAuthMode] = useState<"signin" | "signup">("signin");
+  const [showAuth, setShowAuth] = useState(false);
+  const sidebarRef = useRef<HTMLDivElement>(null);
+
   // Update sidebar height to match document height
   useEffect(() => {
     const updateSidebarHeight = () => {
       if (sidebarRef.current && window.innerWidth >= 1024) {
         requestAnimationFrame(() => {
           if (sidebarRef.current) {
-            sidebarRef.current.style.height = 'auto'
+            sidebarRef.current.style.height = "auto";
             const documentHeight = Math.max(
               document.body.scrollHeight,
               document.body.offsetHeight,
               document.documentElement.clientHeight,
               document.documentElement.scrollHeight,
               document.documentElement.offsetHeight
-            )
-            sidebarRef.current.style.height = `${documentHeight}px`
+            );
+            sidebarRef.current.style.height = `${documentHeight}px`;
           }
-        })
+        });
       }
-    }
-    
+    };
+
     // Initial update
-    updateSidebarHeight()
-    
+    updateSidebarHeight();
+
     // Update on resize
-    window.addEventListener('resize', updateSidebarHeight)
-    
+    window.addEventListener("resize", updateSidebarHeight);
+
     // Update on scroll (for dynamic content)
-    window.addEventListener('scroll', updateSidebarHeight)
-    
+    window.addEventListener("scroll", updateSidebarHeight);
+
     // Update on content changes
-    const observer = new MutationObserver(updateSidebarHeight)
-    observer.observe(document.body, { childList: true, subtree: true, attributes: true })
-    
+    const observer = new MutationObserver(updateSidebarHeight);
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+      attributes: true,
+    });
+
     return () => {
-      window.removeEventListener('resize', updateSidebarHeight)
-      window.removeEventListener('scroll', updateSidebarHeight)
-      observer.disconnect()
-    }
-  }, [children])
+      window.removeEventListener("resize", updateSidebarHeight);
+      window.removeEventListener("scroll", updateSidebarHeight);
+      observer.disconnect();
+    };
+  }, [children]);
 
   // List of authorized admin emails
-  const ADMIN_EMAILS = [
-    '43uy75@gmail.com',
-    'marcusding1@gmail.com'
-  ]
+  const ADMIN_EMAILS = ["43uy75@gmail.com", "marcusding1@gmail.com"];
 
   const navigation = [
-    { name: t('common.home', 'Home'), href: '/', icon: Home },
-    { name: t('common.insights', 'Insights'), href: '/insights', icon: TrendingUp },
-    { name: t('common.charts', 'Charts'), href: '/charts', icon: BarChart3 },
-    { name: t('common.map', 'Map'), href: '/map', icon: Map },
-    { name: t('common.calculators', 'Calculators'), href: '/calculators', icon: Calculator },
-    { name: t('common.guides', 'Guides'), href: '/guides', icon: BookOpen },
-  ]
+    { name: t("common.home", "Home"), href: "/", icon: Home },
+    {
+      name: t("common.insights", "Insights"),
+      href: "/insights",
+      icon: TrendingUp,
+    },
+    { name: t("common.charts", "Charts"), href: "/charts", icon: BarChart3 },
+    {
+      name: t("common.rent_price_map", "Rent Price Map"),
+      href: "/rent-map",
+      icon: Map,
+    },
+    {
+      name: t("common.purchase_price_map", "Purchase Price Map"),
+      href: "/map",
+      icon: Map,
+    },
+    {
+      name: t("common.calculators", "Calculators"),
+      href: "/calculators",
+      icon: Calculator,
+    },
+    { name: t("common.guides", "Guides"), href: "/guides", icon: BookOpen },
+  ];
 
   // Add profile link for signed-in users
   if (user) {
-    navigation.push({ name: t('common.profile', 'Profile'), href: '/profile', icon: User })
+    navigation.push({
+      name: t("common.profile", "Profile"),
+      href: "/profile",
+      icon: User,
+    });
   }
 
   // Only show admin link for authorized users
-  if (user && ADMIN_EMAILS.includes(user.email?.toLowerCase() || '')) {
-    navigation.push({ name: t('common.admin', 'Admin'), href: '/admin', icon: Settings })
+  if (user && ADMIN_EMAILS.includes(user.email?.toLowerCase() || "")) {
+    navigation.push({
+      name: t("common.admin", "Admin"),
+      href: "/admin",
+      icon: Settings,
+    });
   }
 
   const handleSignOut = async () => {
     try {
-      console.log('[Layout] Sign out button clicked')
-      track('user_signed_out')
-      
+      console.log("[Layout] Sign out button clicked");
+      track("user_signed_out");
+
       // Close sidebar first
-      setSidebarOpen(false)
-      
-      await signOut()
-      
-      console.log('[Layout] Sign out completed, redirecting to home...')
-      
+      setSidebarOpen(false);
+
+      await signOut();
+
+      console.log("[Layout] Sign out completed, redirecting to home...");
+
       // Use window.location for full page reload to ensure clean state
-      window.location.href = '/'
+      window.location.href = "/";
     } catch (error) {
-      console.error('[Layout] Error signing out:', error)
+      console.error("[Layout] Error signing out:", error);
       // Even on error, try to redirect with full page reload
-      window.location.href = '/'
+      window.location.href = "/";
     }
-  }
+  };
 
   return (
     <div className="min-h-screen bg-gray-50 flex">
       {/* Mobile sidebar */}
       {sidebarOpen && (
         <div className="fixed inset-0 z-50 lg:hidden">
-          <div className="fixed inset-0 bg-gray-600 bg-opacity-75" onClick={() => setSidebarOpen(false)} />
+          <div
+            className="fixed inset-0 bg-gray-600 bg-opacity-75"
+            onClick={() => setSidebarOpen(false)}
+          />
           <div className="relative flex-1 flex flex-col max-w-xs w-full bg-white h-full">
             <div className="absolute top-0 right-0 -mr-12 pt-2">
               <button
@@ -144,14 +178,23 @@ export function Layout({ children, title, subtitle, hideHeader = false }: Layout
             </div>
             <div className="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
               <div className="flex-shrink-0 flex items-center px-2">
-                <Link href="/" className="flex items-center gap-1.5 w-full px-2">
-                  <LogoSVG showText={false} size="md" className="flex-shrink-0" />
-                  <span className="text-xl font-bold text-blue-600 whitespace-nowrap">PropTrenz</span>
+                <Link
+                  href="/"
+                  className="flex items-center gap-1.5 w-full px-2"
+                >
+                  <LogoSVG
+                    showText={false}
+                    size="md"
+                    className="flex-shrink-0"
+                  />
+                  <span className="text-xl font-bold text-blue-600 whitespace-nowrap">
+                    PropTrenz
+                  </span>
                 </Link>
               </div>
               <nav className="mt-5 px-2 space-y-1">
                 {navigation.map((item) => {
-                  const Icon = item.icon
+                  const Icon = item.icon;
                   return (
                     <Link
                       key={item.name}
@@ -161,7 +204,7 @@ export function Layout({ children, title, subtitle, hideHeader = false }: Layout
                       <Icon className="mr-4 h-6 w-6" />
                       {item.name}
                     </Link>
-                  )
+                  );
                 })}
               </nav>
             </div>
@@ -172,18 +215,20 @@ export function Layout({ children, title, subtitle, hideHeader = false }: Layout
                     <User className="h-8 w-8 text-gray-400" />
                   </div>
                   <div className="ml-3">
-                    <p className="text-base font-medium text-gray-700">{user.email}</p>
+                    <p className="text-base font-medium text-gray-700">
+                      {user.email}
+                    </p>
                     <button
                       onClick={handleSignOut}
                       className="text-sm font-medium text-gray-500 hover:text-gray-700"
                     >
-                      {t('common.sign_out', 'Sign Out')}
+                      {t("common.sign_out", "Sign Out")}
                     </button>
                   </div>
                 </div>
               ) : (
                 <Button onClick={() => setShowAuth(true)} className="w-full">
-                  {t('common.sign_in', 'Sign In')}
+                  {t("common.sign_in", "Sign In")}
                 </Button>
               )}
             </div>
@@ -194,28 +239,46 @@ export function Layout({ children, title, subtitle, hideHeader = false }: Layout
       {/* Desktop sidebar */}
       <div className="hidden lg:flex lg:flex-shrink-0 lg:flex-col lg:self-stretch lg:z-10">
         <div className="flex flex-col w-64 flex-1">
-          <div ref={sidebarRef} className="flex flex-col border-r border-gray-200 bg-white sticky top-0" style={{ minHeight: '100vh' }}>
+          <div
+            ref={sidebarRef}
+            className="flex flex-col border-r border-gray-200 bg-white sticky top-0"
+            style={{ minHeight: "100vh" }}
+          >
             <div className="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
               <div className="flex items-center flex-shrink-0 px-2">
-                <Link href="/" className="flex items-center gap-1.5 w-full px-2">
-                  <LogoSVG showText={false} size="md" className="flex-shrink-0" />
-                  <span className="text-xl font-bold text-blue-600 whitespace-nowrap">PropTrenz</span>
+                <Link
+                  href="/"
+                  className="flex items-center gap-1.5 w-full px-2"
+                >
+                  <LogoSVG
+                    showText={false}
+                    size="md"
+                    className="flex-shrink-0"
+                  />
+                  <span className="text-xl font-bold text-blue-600 whitespace-nowrap">
+                    PropTrenz
+                  </span>
                 </Link>
               </div>
               <nav className="mt-5 flex-1 px-2 space-y-1">
                 {navigation.map((item) => {
-                  const Icon = item.icon
+                  const Icon = item.icon;
                   return (
                     <Link
                       key={item.name}
                       href={item.href}
-                      onClick={() => track('navigation_clicked', { page: item.name, href: item.href })}
+                      onClick={() =>
+                        track("navigation_clicked", {
+                          page: item.name,
+                          href: item.href,
+                        })
+                      }
                       className="group flex items-center px-2 py-2 text-sm font-medium rounded-md text-gray-600 hover:bg-gray-50 hover:text-gray-900"
                     >
                       <Icon className="mr-3 h-5 w-5" />
                       {item.name}
                     </Link>
-                  )
+                  );
                 })}
               </nav>
             </div>
@@ -226,18 +289,20 @@ export function Layout({ children, title, subtitle, hideHeader = false }: Layout
                     <User className="h-8 w-8 text-gray-400" />
                   </div>
                   <div className="ml-3 flex-1">
-                    <p className="text-sm font-medium text-gray-700">{user.email}</p>
+                    <p className="text-sm font-medium text-gray-700">
+                      {user.email}
+                    </p>
                     <button
                       onClick={handleSignOut}
                       className="text-xs font-medium text-gray-500 hover:text-gray-700"
                     >
-                      {t('common.sign_out', 'Sign Out')}
+                      {t("common.sign_out", "Sign Out")}
                     </button>
                   </div>
                 </div>
               ) : (
                 <Button onClick={() => setShowAuth(true)} className="w-full">
-                  {t('common.sign_in', 'Sign In')}
+                  {t("common.sign_in", "Sign In")}
                 </Button>
               )}
             </div>
@@ -254,19 +319,25 @@ export function Layout({ children, title, subtitle, hideHeader = false }: Layout
             onClick={() => setSidebarOpen(true)}
           >
             <Menu className="h-8 w-8" />
-            <span>{t('common.menu', 'Menu')}</span>
+            <span>{t("common.menu", "Menu")}</span>
           </button>
         </div>
 
         <main className="flex-1">
           <div className={hideHeader ? "" : "py-6"}>
-            <div className={hideHeader ? "" : "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"}>
+            <div
+              className={
+                hideHeader ? "" : "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+              }
+            >
               {/* Header */}
               {!hideHeader && (
                 <div className="flex items-center justify-between mb-6">
                   <div>
-                    <h1 className="text-2xl font-bold text-gray-900">{title || ' '}</h1>
-                    <p className="text-gray-600">{subtitle || ' '}</p>
+                    <h1 className="text-2xl font-bold text-gray-900">
+                      {title || " "}
+                    </h1>
+                    <p className="text-gray-600">{subtitle || " "}</p>
                   </div>
                   <LanguageSwitcher />
                 </div>
@@ -282,10 +353,13 @@ export function Layout({ children, title, subtitle, hideHeader = false }: Layout
       {showAuth && (
         <div className="fixed inset-0 z-50 overflow-y-auto">
           <div className="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
-            <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" onClick={() => setShowAuth(false)} />
+            <div
+              className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
+              onClick={() => setShowAuth(false)}
+            />
             <div className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-md sm:w-full">
-              <AuthForm 
-                mode={authMode} 
+              <AuthForm
+                mode={authMode}
                 onModeChange={setAuthMode}
                 onClose={() => setShowAuth(false)}
                 className="border-0"
@@ -295,7 +369,7 @@ export function Layout({ children, title, subtitle, hideHeader = false }: Layout
         </div>
       )}
     </div>
-  )
+  );
 }
 
-export default Layout
+export default Layout;
