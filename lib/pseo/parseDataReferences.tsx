@@ -71,7 +71,8 @@ export function parseTextWithReferences(text: string): React.ReactNode[] {
   ].sort((a, b) => a.startIndex - b.startIndex)
   
   if (allMatches.length === 0) {
-    return [text]
+    // No links or data refs, but still parse markdown formatting
+    return parseMarkdownFormatting(text, 0)
   }
   
   const parts: React.ReactNode[] = []
@@ -115,6 +116,62 @@ export function parseTextWithReferences(text: string): React.ReactNode[] {
     
     lastIndex = match.endIndex
   })
+  
+  // Add remaining text
+  if (lastIndex < text.length) {
+    parts.push(text.substring(lastIndex))
+  }
+  
+  // Now parse markdown formatting (bold and italic) in text parts
+  const formattedParts = parts.map((part, partIndex) => {
+    if (typeof part !== 'string') {
+      return part
+    }
+    return parseMarkdownFormatting(part, partIndex)
+  })
+  
+  return formattedParts.length > 0 ? formattedParts.flat() : [text]
+}
+
+/**
+ * Parse markdown bold (**text**) and italic (*text*) formatting
+ */
+function parseMarkdownFormatting(text: string, keyPrefix: number | string = 0): React.ReactNode[] {
+  // Use a single regex that captures bold (**text**) first, then italic (*text*)
+  // Bold: **content** - must come first
+  // Italic: *content* - single asterisks
+  const regex = /(\*\*(.+?)\*\*)|(\*(.+?)\*)/g
+  
+  const parts: React.ReactNode[] = []
+  let lastIndex = 0
+  let match
+  let matchIndex = 0
+  
+  while ((match = regex.exec(text)) !== null) {
+    // Add text before the match
+    if (match.index > lastIndex) {
+      parts.push(text.substring(lastIndex, match.index))
+    }
+    
+    if (match[1]) {
+      // Bold match (**text**)
+      parts.push(
+        <strong key={`${keyPrefix}-bold-${matchIndex}`} className="font-bold">
+          {match[2]}
+        </strong>
+      )
+    } else if (match[3]) {
+      // Italic match (*text*)
+      parts.push(
+        <em key={`${keyPrefix}-italic-${matchIndex}`} className="italic">
+          {match[4]}
+        </em>
+      )
+    }
+    
+    lastIndex = match.index + match[0].length
+    matchIndex++
+  }
   
   // Add remaining text
   if (lastIndex < text.length) {

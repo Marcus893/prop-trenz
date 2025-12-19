@@ -1,4 +1,5 @@
 import React from 'react'
+import Head from 'next/head'
 import { Layout } from '@/components/Layout'
 import { UserProfile } from '@/components/auth/UserProfile'
 import { useAuth } from '@/lib/auth'
@@ -21,33 +22,51 @@ export default function ProfilePage() {
 
   if (loading) {
     return (
-      <Layout title={t('profile.title')} subtitle={t('profile.subtitle')}>
-        <div className="flex items-center justify-center h-64">
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-        </div>
-      </Layout>
+      <>
+        <Head>
+          <title>{t('profile.meta_title', 'My Profile - PropTrenz')}</title>
+          <meta name="robots" content="noindex, nofollow" />
+        </Head>
+        <Layout title={t('profile.title')} subtitle={t('profile.subtitle')}>
+          <div className="flex items-center justify-center h-64">
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+          </div>
+        </Layout>
+      </>
     )
   }
 
   if (!user) {
     return (
-      <Layout title={t('profile.title')} subtitle={t('profile.subtitle')}>
-        <div className="flex items-center justify-center h-64">
-          <div className="text-center">
-            <h2 className="text-xl font-semibold text-gray-900 mb-2">Access Denied</h2>
-            <p className="text-gray-600">Please sign in to access your profile.</p>
+      <>
+        <Head>
+          <title>{t('profile.meta_title', 'My Profile - PropTrenz')}</title>
+          <meta name="robots" content="noindex, nofollow" />
+        </Head>
+        <Layout title={t('profile.title')} subtitle={t('profile.subtitle')}>
+          <div className="flex items-center justify-center h-64">
+            <div className="text-center">
+              <h2 className="text-xl font-semibold text-gray-900 mb-2">Access Denied</h2>
+              <p className="text-gray-600">Please sign in to access your profile.</p>
+            </div>
           </div>
-        </div>
-      </Layout>
+        </Layout>
+      </>
     )
   }
 
   return (
-    <Layout title={t('profile.title')} subtitle={t('profile.subtitle')}>
-      <div className="max-w-4xl mx-auto">
-        <UserProfile />
-      </div>
-    </Layout>
+    <>
+      <Head>
+        <title>{t('profile.meta_title', 'My Profile - PropTrenz')}</title>
+        <meta name="robots" content="noindex, nofollow" />
+      </Head>
+      <Layout title={t('profile.title')} subtitle={t('profile.subtitle')}>
+        <div className="max-w-4xl mx-auto">
+          <UserProfile />
+        </div>
+      </Layout>
+    </>
   )
 }
 

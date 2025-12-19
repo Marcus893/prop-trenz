@@ -12,8 +12,7 @@ interface DataReferenceLinkProps {
 }
 
 export function DataReferenceLink({ reference, className = '' }: DataReferenceLinkProps) {
-  const baseUrl = typeof window !== 'undefined' ? window.location.origin : ''
-  const url = getDataReferenceUrl(reference, baseUrl)
+  const url = getDataReferenceUrl(reference, '')
   const label = getDataReferenceLabel(reference)
   
   // Determine icon based on reference type

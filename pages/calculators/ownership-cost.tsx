@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { Layout } from '@/components/Layout'
 import { OwnershipCostCalculator } from '@/components/calculators/OwnershipCostCalculator'
 import { GetStaticProps } from 'next'
@@ -8,15 +9,21 @@ export default function OwnershipCostPage() {
   const { t } = useTranslation('common')
 
   return (
-    <Layout
-      title={t('calculators.ownership_cost.page_title', 'Ownership Cost Calculator')}
-      subtitle={t(
-        'calculators.ownership_cost.page_subtitle',
-        'Estimate annual holding costs across taxes, maintenance, and services.'
-      )}
-    >
-      <OwnershipCostCalculator />
-    </Layout>
+    <>
+      <Head>
+        <title>{t('calculators.ownership_cost.meta_title', 'Ownership Cost Calculator - PropTrenz')}</title>
+        <meta name="description" content={t('calculators.ownership_cost.meta_description', 'Calculate annual property ownership costs in Mexico. Estimate taxes, maintenance, HOA fees, and utilities for your real estate investment.')} />
+      </Head>
+      <Layout
+        title={t('calculators.ownership_cost.page_title', 'Ownership Cost Calculator')}
+        subtitle={t(
+          'calculators.ownership_cost.page_subtitle',
+          'Estimate annual holding costs across taxes, maintenance, and services.'
+        )}
+      >
+        <OwnershipCostCalculator />
+      </Layout>
+    </>
   )
 }
 

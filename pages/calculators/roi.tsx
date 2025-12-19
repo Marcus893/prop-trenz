@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { Layout } from '@/components/Layout'
 import { ROICalculator } from '@/components/calculators/ROICalculator'
 import { GetStaticProps } from 'next'
@@ -8,15 +9,21 @@ export default function ROICalculatorPage() {
   const { t } = useTranslation('common')
 
   return (
-    <Layout
-      title={t('calculators.roi.page_title', 'Rental ROI Calculator')}
-      subtitle={t(
-        'calculators.roi.page_subtitle',
-        'Model cash flow, cap rates, and cash-on-cash returns for Mexican rental properties.'
-      )}
-    >
-      <ROICalculator />
-    </Layout>
+    <>
+      <Head>
+        <title>{t('calculators.roi.meta_title', 'Rental ROI Calculator - PropTrenz')}</title>
+        <meta name="description" content={t('calculators.roi.meta_description', 'Calculate rental property ROI in Mexico. Model cash flow, cap rates, and cash-on-cash returns for your real estate investment.')} />
+      </Head>
+      <Layout
+        title={t('calculators.roi.page_title', 'Rental ROI Calculator')}
+        subtitle={t(
+          'calculators.roi.page_subtitle',
+          'Model cash flow, cap rates, and cash-on-cash returns for Mexican rental properties.'
+        )}
+      >
+        <ROICalculator />
+      </Layout>
+    </>
   )
 }
 
@@ -42,6 +49,7 @@ export const getStaticProps: GetStaticProps = async ({ locale, defaultLocale }) 
     }
   }
 }
+
 
 
 

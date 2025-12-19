@@ -688,7 +688,17 @@
     "location_page_cta_description": "Connect with a vetted real estate expert who can find you great opportunities.",
     "guide_cta_title": "Want to invest in Mexican real estate?",
     "guide_cta_description": "Connect with a vetted real estate professional who can help you every step of the way.",
-    "phone_hint": "Format: +52 (Mexico), +1 (US/Canada), or 10 digits"
+    "phone_hint": "Format: +52 (Mexico), +1 (US/Canada), or 10 digits",
+    "trust_section_title": "Why Choose PropTrenz?",
+    "trust_vetted_title": "Vetted Professionals",
+    "trust_vetted_desc": "All our partners are licensed and verified real estate experts with proven track records.",
+    "trust_local_title": "Local Market Expertise",
+    "trust_local_desc": "Deep knowledge of Mexican real estate markets, regulations, and local insights you won't find elsewhere.",
+    "trust_data_title": "Data-Driven Insights",
+    "trust_data_desc": "Access to comprehensive market data, analytics, and pricing intelligence for making informed decisions.",
+    "trust_support_title": "End-to-End Support",
+    "trust_support_desc": "From property search to closing, we're with you every step of the way with personalized guidance.",
+    "trust_social_proof": "Thousands have already used PropTrenz to find their perfect rental/home/investment. Join them today!"
   },
   "rent_map": {
     "meta": {

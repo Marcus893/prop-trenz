@@ -685,7 +685,17 @@
     "location_page_cta_description": "与经过验证的房地产专家联系，他们可以为您找到绝佳的机会。",
     "guide_cta_title": "想投资墨西哥房地产吗？",
     "guide_cta_description": "与经过验证的房地产专业人士联系，他们可以在每一步为您提供帮助。",
-    "phone_hint": "格式：+52（墨西哥），+1（美国/加拿大），或10位数字"
+    "phone_hint": "格式：+52（墨西哥），+1（美国/加拿大），或10位数字",
+    "trust_section_title": "为什么选择 PropTrenz？",
+    "trust_vetted_title": "经过验证的专业人士",
+    "trust_vetted_desc": "我们所有的合作伙伴都是经过许可和验证的房地产专家，拥有良好的业绩记录。",
+    "trust_local_title": "本地市场专业知识",
+    "trust_local_desc": "深入了解墨西哥房地产市场、法规和您在其他地方找不到的本地见解。",
+    "trust_data_title": "数据驱动的洞察",
+    "trust_data_desc": "获取全面的市场数据、分析和定价情报，帮助您做出明智的决策。",
+    "trust_support_title": "全程支持",
+    "trust_support_desc": "从房产搜索到交易完成，我们将为您提供个性化的指导，陪伴您的每一步。",
+    "trust_social_proof": "已有数千人使用 PropTrenz 找到了他们理想的租房/住房/投资。今天就加入他们吧！"
   },
   "rent_map": {
     "meta": {

@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Head from 'next/head'
 import { Layout } from '@/components/Layout'
 import { GetStaticProps } from 'next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
@@ -32,14 +33,19 @@ export default function CalculatorsOverviewPage() {
   const { t } = useTranslation('common')
 
   return (
-    <Layout
-      title={t('calculators_page.title', 'Real Estate Calculators')}
-      subtitle={t(
-        'calculators_page.subtitle',
-        'Quickly estimate the costs involved in buying, owning, and selling property in Mexico.'
-      )}
-    >
-      <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+    <>
+      <Head>
+        <title>{t('calculators_page.meta_title', 'Real Estate Calculators - PropTrenz')}</title>
+        <meta name="description" content={t('calculators_page.meta_description', 'Free real estate calculators for Mexico. Estimate closing costs, ownership expenses, selling costs, and ROI for your property investment.')} />
+      </Head>
+      <Layout
+        title={t('calculators_page.title', 'Real Estate Calculators')}
+        subtitle={t(
+          'calculators_page.subtitle',
+          'Quickly estimate the costs involved in buying, owning, and selling property in Mexico.'
+        )}
+      >
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
         {calculatorLinks.map((calculator) => (
           <Link
             key={calculator.href}
@@ -63,8 +69,9 @@ export default function CalculatorsOverviewPage() {
             </p>
           </Link>
         ))}
-      </div>
-    </Layout>
+        </div>
+      </Layout>
+    </>
   )
 }
 

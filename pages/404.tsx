@@ -1,9 +1,15 @@
 import { GetStaticProps } from 'next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import Head from 'next/head'
 
 export default function Custom404() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <>
+      <Head>
+        <title>Page Not Found - PropTrenz</title>
+        <meta name="robots" content="noindex, nofollow" />
+      </Head>
+      <div className="min-h-screen flex items-center justify-center bg-gray-50">
       <div className="text-center">
         <h1 className="text-6xl font-bold text-gray-900 mb-4">404</h1>
         <p className="text-xl text-gray-600 mb-8">Page not found</p>
@@ -15,6 +21,7 @@ export default function Custom404() {
         </a>
       </div>
     </div>
+    </>
   )
 }
 

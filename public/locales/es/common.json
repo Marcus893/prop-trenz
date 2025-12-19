@@ -686,7 +686,17 @@
     "location_page_cta_description": "Conéctate con un experto inmobiliario verificado que puede encontrarte excelentes oportunidades.",
     "guide_cta_title": "¿Quieres invertir en bienes raíces mexicanos?",
     "guide_cta_description": "Conéctate con un profesional inmobiliario verificado que puede ayudarte en cada paso del camino.",
-    "phone_hint": "Formato: +52 (México), +1 (EE.UU./Canadá), o 10 dígitos"
+    "phone_hint": "Formato: +52 (México), +1 (EE.UU./Canadá), o 10 dígitos",
+    "trust_section_title": "¿Por qué elegir PropTrenz?",
+    "trust_vetted_title": "Profesionales Verificados",
+    "trust_vetted_desc": "Todos nuestros socios son expertos inmobiliarios licenciados y verificados con historial comprobado.",
+    "trust_local_title": "Experiencia en el Mercado Local",
+    "trust_local_desc": "Conocimiento profundo de los mercados inmobiliarios mexicanos, regulaciones e información local que no encontrarás en otro lugar.",
+    "trust_data_title": "Información Basada en Datos",
+    "trust_data_desc": "Acceso a datos de mercado completos, análisis e inteligencia de precios para tomar decisiones informadas.",
+    "trust_support_title": "Soporte de Principio a Fin",
+    "trust_support_desc": "Desde la búsqueda de propiedades hasta el cierre, estamos contigo en cada paso con orientación personalizada.",
+    "trust_social_proof": "Miles de personas ya han usado PropTrenz para encontrar su alquiler/hogar/inversión perfecta. ¡Únete a ellos hoy!"
   },
   "rent_map": {
     "meta": {

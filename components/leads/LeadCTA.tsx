@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useTranslation } from 'next-i18next'
 import { MessageCircle } from 'lucide-react'
 import { LeadForm } from '@/components/leads/LeadForm'
@@ -13,6 +13,7 @@ interface LeadCTAProps {
   descriptionKey?: string
   titleDefault?: string
   descriptionDefault?: string
+  autoShow?: boolean
 }
 
 export function LeadCTA({ 
@@ -21,10 +22,18 @@ export function LeadCTA({
   titleKey = 'leads.cta_title',
   descriptionKey = 'leads.cta_description',
   titleDefault = 'Need help with this deal?',
-  descriptionDefault = 'Connect with a vetted real estate expert who can help you analyze this property and find similar opportunities.'
+  descriptionDefault = 'Connect with a vetted real estate expert who can help you analyze this property and find similar opportunities.',
+  autoShow = false
 }: LeadCTAProps) {
   const { t } = useTranslation('common')
   const [showLeadForm, setShowLeadForm] = useState(false)
+
+  // Update showLeadForm when autoShow changes
+  useEffect(() => {
+    if (autoShow) {
+      setShowLeadForm(true)
+    }
+  }, [autoShow])
 
   return (
     <>
@@ -56,10 +65,12 @@ export function LeadCTA({
         onClose={() => setShowLeadForm(false)}
         source={source}
         context={context}
+        autoShow={autoShow}
       />
     </>
   )
 }
+
 
 
 
