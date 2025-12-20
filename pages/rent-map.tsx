@@ -45,9 +45,9 @@ export default function RentMapPage() {
   const [selectedMunicipality, setSelectedMunicipality] = useState<
     string | null
   >(null);
-  const [initialNeighborhood, setInitialNeighborhood] = useState<
-    string | null
-  >(null);
+  const [initialNeighborhood, setInitialNeighborhood] = useState<string | null>(
+    null
+  );
   const [shareCopied, setShareCopied] = useState(false);
 
   // Map URL slug to display city name
@@ -56,21 +56,39 @@ export default function RentMapPage() {
     guadalajara: "Guadalajara",
     monterrey: "Monterrey",
     "puerto-vallarta": "Puerto Vallarta",
+    "los-cabos": "Los Cabos",
+    tijuana: "Tijuana",
+    merida: "Mérida",
+    "benito-juarez-cancun": "Benito Juárez(Cancún)",
+    solidaridad: "Solidaridad",
+    tulum: "Tulum",
   };
 
   // Map display city name back to URL slug
   const cityNameToSlug: { [key: string]: string } = {
     "Ciudad de México": "ciudad-de-mexico",
-    "Guadalajara": "guadalajara",
-    "Monterrey": "monterrey",
+    Guadalajara: "guadalajara",
+    Monterrey: "monterrey",
     "Puerto Vallarta": "puerto-vallarta",
+    "Los Cabos": "los-cabos",
+    Tijuana: "tijuana",
+    Mérida: "merida",
+    "Benito Juárez(Cancún)": "benito-juarez-cancun",
+    Solidaridad: "solidaridad",
+    Tulum: "tulum",
   };
 
   // Handle neighborhood selection - update URL
-  const handleNeighborhoodSelect = (neighborhood: string, municipality: string) => {
-    const citySlug = selectedCity ? cityNameToSlug[selectedCity] || selectedCity.toLowerCase().replace(/\s+/g, '-') : 'ciudad-de-mexico';
-    const neighborhoodSlug = neighborhood.toLowerCase().replace(/\s+/g, '-');
-    
+  const handleNeighborhoodSelect = (
+    neighborhood: string,
+    municipality: string
+  ) => {
+    const citySlug = selectedCity
+      ? cityNameToSlug[selectedCity] ||
+        selectedCity.toLowerCase().replace(/\s+/g, "-")
+      : "ciudad-de-mexico";
+    const neighborhoodSlug = neighborhood.toLowerCase().replace(/\s+/g, "-");
+
     router.replace(
       {
         pathname: router.pathname,
@@ -87,11 +105,18 @@ export default function RentMapPage() {
   // Wrapper to clear URL params when closing the panel
   const handleSetSelectedMunicipality = (municipality: string | null) => {
     setSelectedMunicipality(municipality);
-    
+
     // If closing the panel (municipality is null), clear the URL params
-    if (municipality === null && (router.query.neighborhood || router.query.municipality)) {
+    if (
+      municipality === null &&
+      (router.query.neighborhood || router.query.municipality)
+    ) {
       // Clear neighborhood and municipality params from URL
-      const { neighborhood, municipality: muniParam, ...restQuery } = router.query;
+      const {
+        neighborhood,
+        municipality: muniParam,
+        ...restQuery
+      } = router.query;
       router.replace(
         { pathname: router.pathname, query: restQuery },
         undefined,
@@ -107,7 +132,7 @@ export default function RentMapPage() {
     if (router.isReady) {
       const cityParam = router.query.city as string | undefined;
       const neighborhoodParam = router.query.neighborhood as string | undefined;
-      
+
       if (cityParam) {
         const cityName = slugToCityName[cityParam.toLowerCase()] || cityParam;
         setSelectedCity(cityName);
@@ -115,7 +140,7 @@ export default function RentMapPage() {
         // Default to Ciudad de México if no city param
         setSelectedCity("Ciudad de México");
       }
-      
+
       if (neighborhoodParam) {
         setInitialNeighborhood(neighborhoodParam);
       }
@@ -174,10 +199,22 @@ export default function RentMapPage() {
       "Guadalupe",
     ];
     const puertoVallarta = ["Puerto Vallarta"];
+    const losCabos = ["Los Cabos"];
+    const tijuana = ["Tijuana"];
+    const merida = ["Mérida"];
+    const cancun = ["Benito Juárez"];
+    const solidaridad = ["Solidaridad"];
+    const tulum = ["Tulum"];
     if (cdmx.includes(m)) return "Ciudad de México";
     if (guadalajara.includes(m)) return "Guadalajara";
     if (monterrey.includes(m)) return "Monterrey";
     if (puertoVallarta.includes(m)) return "Puerto Vallarta";
+    if (losCabos.includes(m)) return "Los Cabos";
+    if (tijuana.includes(m)) return "Tijuana";
+    if (merida.includes(m)) return "Mérida";
+    if (cancun.includes(m)) return "Benito Juárez(Cancún)";
+    if (solidaridad.includes(m)) return "Solidaridad";
+    if (tulum.includes(m)) return "Tulum";
     return "Ciudad de México"; // default fallback
   }
 
@@ -191,6 +228,12 @@ export default function RentMapPage() {
     "Guadalajara",
     "Monterrey",
     "Puerto Vallarta",
+    "Los Cabos",
+    "Tijuana",
+    "Mérida",
+    "Benito Juárez(Cancún)",
+    "Solidaridad",
+    "Tulum",
   ];
   const cities = rentData
     ? Array.from(new Set([...citiesFromData, ...allPossibleCities])).sort()
@@ -201,7 +244,12 @@ export default function RentMapPage() {
       <Head>
         <title>{t("rent_map.meta.title")}</title>
         <meta name="description" content={t("rent_map.meta.description")} />
-        <link rel="canonical" href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://proptrenz.com'}${router.locale === 'en' ? '' : `/${router.locale}`}/rent-map`} />
+        <link
+          rel="canonical"
+          href={`${
+            process.env.NEXT_PUBLIC_SITE_URL || "https://proptrenz.com"
+          }${router.locale === "en" ? "" : `/${router.locale}`}/rent-map`}
+        />
       </Head>
       <Layout title={t("rent_map.title")} subtitle={t("rent_map.subtitle")}>
         <div className="space-y-6">
@@ -239,7 +287,9 @@ export default function RentMapPage() {
                           handleSetSelectedMunicipality(null);
                           // Update URL with new city
                           if (val) {
-                            const citySlug = cityNameToSlug[val] || val.toLowerCase().replace(/\s+/g, '-');
+                            const citySlug =
+                              cityNameToSlug[val] ||
+                              val.toLowerCase().replace(/\s+/g, "-");
                             router.replace(
                               {
                                 pathname: router.pathname,
@@ -253,7 +303,9 @@ export default function RentMapPage() {
                         value={selectedCity || ""}
                       >
                         <SelectTrigger className="w-[220px]">
-                          <span>{selectedCity || t("rent_map.select_city")}</span>
+                          <span>
+                            {selectedCity || t("rent_map.select_city")}
+                          </span>
                         </SelectTrigger>
                         <SelectContent>
                           {cities.map((city) => (
@@ -269,37 +321,48 @@ export default function RentMapPage() {
                   {/* Share Button */}
                   <button
                     onClick={async () => {
-                      const baseUrl = typeof window !== 'undefined' ? window.location.origin : '';
-                      const currentPath = router.asPath.split('?')[0];
-                      const shareableUrl = `${baseUrl}${currentPath}?${new URLSearchParams(router.query as Record<string, string>).toString()}`;
+                      const baseUrl =
+                        typeof window !== "undefined"
+                          ? window.location.origin
+                          : "";
+                      const currentPath = router.asPath.split("?")[0];
+                      const shareableUrl = `${baseUrl}${currentPath}?${new URLSearchParams(
+                        router.query as Record<string, string>
+                      ).toString()}`;
                       try {
                         await navigator.clipboard.writeText(shareableUrl);
                         setShareCopied(true);
                         setTimeout(() => setShareCopied(false), 2000);
                       } catch (err) {
-                        console.error('Failed to copy URL:', err);
-                        const input = document.createElement('input');
+                        console.error("Failed to copy URL:", err);
+                        const input = document.createElement("input");
                         input.value = shareableUrl;
                         document.body.appendChild(input);
                         input.select();
-                        document.execCommand('copy');
+                        document.execCommand("copy");
                         document.body.removeChild(input);
                         setShareCopied(true);
                         setTimeout(() => setShareCopied(false), 2000);
                       }
                     }}
                     className="bg-white hover:bg-gray-50 px-3 py-2 rounded-lg shadow-sm flex items-center gap-2 text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors border border-gray-200"
-                    title={shareCopied ? t('map.link_copied', 'Link copied!') : t('map.share_map', 'Share map')}
+                    title={
+                      shareCopied
+                        ? t("map.link_copied", "Link copied!")
+                        : t("map.share_map", "Share map")
+                    }
                   >
                     {shareCopied ? (
                       <>
                         <Check className="h-4 w-4 text-green-600" />
-                        <span className="text-green-600">{t('map.copied', 'Copied!')}</span>
+                        <span className="text-green-600">
+                          {t("map.copied", "Copied!")}
+                        </span>
                       </>
                     ) : (
                       <>
                         <Share2 className="h-4 w-4" />
-                        <span>{t('map.share', 'Share')}</span>
+                        <span>{t("map.share", "Share")}</span>
                       </>
                     )}
                   </button>

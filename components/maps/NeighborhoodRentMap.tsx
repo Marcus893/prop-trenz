@@ -26,6 +26,12 @@ const CITY_CENTER_COORDS: { [key: string]: [number, number] } = {
   Guadalajara: [20.6597, -103.3496],
   Monterrey: [25.6866, -100.3161],
   "Puerto Vallarta": [20.6218, -105.2439],
+  "Los Cabos": [22.8905, -109.9167],
+  Tijuana: [32.5149, -117.0382],
+  Mérida: [20.9674, -89.5926],
+  "Benito Juárez(Cancún)": [21.1619, -86.8515],
+  Solidaridad: [20.6296, -87.0739],
+  Tulum: [20.2114, -87.4654],
 };
 
 // Municipality center coordinates (same names expected in rent data keys)
@@ -60,6 +66,20 @@ const MUNICIPALITY_COORDS: { [key: string]: [number, number] } = {
 
   // Puerto Vallarta Municipality
   "Puerto Vallarta": [20.6218, -105.2439],
+
+  // Los Cabos Municipalities (Baja California Sur)
+  "Los Cabos": [22.8905, -109.9167],
+
+  // Tijuana Municipality (Baja California)
+  Tijuana: [32.5149, -117.0382],
+
+  // Mérida Municipality (Yucatán)
+  Mérida: [20.9674, -89.5926],
+
+  // Riviera Maya / Quintana Roo Municipalities
+  "Benito Juárez (Cancún)": [21.1619, -86.8515], // Cancún
+  Solidaridad: [20.6296, -87.0739], // Playa del Carmen
+  Tulum: [20.2114, -87.4654],
 };
 
 function moneyFormat(n: number | undefined | null) {
@@ -143,10 +163,22 @@ export default function NeighborhoodRentMap({
       "Guadalupe",
     ];
     const puertoVallarta = ["Puerto Vallarta"];
+    const losCabos = ["Los Cabos"];
+    const tijuana = ["Tijuana"];
+    const merida = ["Mérida"];
+    const cancun = ["Benito Juárez (Cancún)"];
+    const solidaridad = ["Solidaridad"];
+    const tulum = ["Tulum"];
     if (cdmx.includes(m)) return "Ciudad de México";
     if (guadalajara.includes(m)) return "Guadalajara";
     if (monterrey.includes(m)) return "Monterrey";
     if (puertoVallarta.includes(m)) return "Puerto Vallarta";
+    if (losCabos.includes(m)) return "Los Cabos";
+    if (tijuana.includes(m)) return "Tijuana";
+    if (merida.includes(m)) return "Mérida";
+    if (cancun.includes(m)) return "Benito Juárez(Cancún)";
+    if (solidaridad.includes(m)) return "Solidaridad";
+    if (tulum.includes(m)) return "Tulum";
   }
 
   // Photon geocoding (lightweight reuse of existing logic)
@@ -184,6 +216,24 @@ export default function NeighborhoodRentMap({
               return [lat, lon];
           } else if (city === "Puerto Vallarta") {
             if (lat >= 20.5 && lat <= 20.8 && lon >= -105.4 && lon <= -105.0)
+              return [lat, lon];
+          } else if (city === "Los Cabos") {
+            if (lat >= 22.8 && lat <= 23.2 && lon >= -110.0 && lon <= -109.5)
+              return [lat, lon];
+          } else if (city === "Tijuana") {
+            if (lat >= 32.3 && lat <= 32.7 && lon >= -117.2 && lon <= -116.8)
+              return [lat, lon];
+          } else if (city === "Mérida") {
+            if (lat >= 20.8 && lat <= 21.1 && lon >= -89.8 && lon <= -89.4)
+              return [lat, lon];
+          } else if (city === "Benito Juárez(Cancún)") {
+            if (lat >= 21.0 && lat <= 21.3 && lon >= -87.0 && lon <= -86.7)
+              return [lat, lon];
+          } else if (city === "Solidaridad") {
+            if (lat >= 20.4 && lat <= 20.8 && lon >= -87.2 && lon <= -86.9)
+              return [lat, lon];
+          } else if (city === "Tulum") {
+            if (lat >= 20.1 && lat <= 20.4 && lon >= -87.6 && lon <= -87.3)
               return [lat, lon];
           }
         }
@@ -267,9 +317,30 @@ export default function NeighborhoodRentMap({
     } else if (city === "Puerto Vallarta") {
       cityState = "Jalisco";
       cityName = "Puerto Vallarta";
-    } else {
+    } else if (city === "Monterrey") {
       cityState = "Nuevo León";
       cityName = "Monterrey";
+    } else if (city === "Los Cabos") {
+      cityState = "Baja California Sur";
+      cityName = "Los Cabos";
+    } else if (city === "Tijuana") {
+      cityState = "Baja California";
+      cityName = "Tijuana";
+    } else if (city === "Mérida") {
+      cityState = "Yucatán";
+      cityName = "Mérida";
+    } else if (city === "Benito Juárez(Cancún)") {
+      cityState = "Quintana Roo";
+      cityName = "Cancún";
+    } else if (city === "Solidaridad") {
+      cityState = "Quintana Roo";
+      cityName = "Playa del Carmen";
+    } else if (city === "Tulum") {
+      cityState = "Quintana Roo";
+      cityName = "Tulum";
+    } else {
+      cityState = "Ciudad de México";
+      cityName = "Ciudad de México";
     }
 
     // Build queries
@@ -445,10 +516,22 @@ export default function NeighborhoodRentMap({
             "Guadalupe",
           ];
           const puertoVallarta = ["Puerto Vallarta"];
+          const losCabos = ["Los Cabos"];
+          const tijuana = ["Tijuana"];
+          const merida = ["Mérida"];
+          const cancun = ["Benito Juárez (Cancún)"];
+          const solidaridad = ["Solidaridad"];
+          const tulum = ["Tulum"];
           if (cdmx.includes(m)) return "Ciudad de México";
           if (guadalajara.includes(m)) return "Guadalajara";
           if (monterrey.includes(m)) return "Monterrey";
           if (puertoVallarta.includes(m)) return "Puerto Vallarta";
+          if (losCabos.includes(m)) return "Los Cabos";
+          if (tijuana.includes(m)) return "Tijuana";
+          if (merida.includes(m)) return "Mérida";
+          if (cancun.includes(m)) return "Benito Juárez(Cancún)";
+          if (solidaridad.includes(m)) return "Solidaridad";
+          if (tulum.includes(m)) return "Tulum";
           return null;
         })(municipality);
         if (cityForMun !== selectedCity) continue;
@@ -546,6 +629,12 @@ export default function NeighborhoodRentMap({
           "Guadalupe",
         ];
         const puertoVallarta = ["Puerto Vallarta"];
+        const losCabos = ["Los Cabos"];
+        const tijuana = ["Tijuana"];
+        const merida = ["Mérida"];
+        const cancun = ["Benito Juárez (Cancún)"];
+        const solidaridad = ["Solidaridad"];
+        const tulum = ["Tulum"];
         const cityForMun = cdmx.includes(mun)
           ? "Ciudad de México"
           : guadalajara.includes(mun)
@@ -554,6 +643,18 @@ export default function NeighborhoodRentMap({
           ? "Monterrey"
           : puertoVallarta.includes(mun)
           ? "Puerto Vallarta"
+          : losCabos.includes(mun)
+          ? "Los Cabos"
+          : tijuana.includes(mun)
+          ? "Tijuana"
+          : merida.includes(mun)
+          ? "Mérida"
+          : cancun.includes(mun)
+          ? "Benito Juárez(Cancún)"
+          : solidaridad.includes(mun)
+          ? "Solidaridad"
+          : tulum.includes(mun)
+          ? "Tulum"
           : null;
         if (cityForMun === selectedCity && MUNICIPALITY_COORDS[mun]) {
           return MUNICIPALITY_COORDS[mun];
@@ -673,8 +774,8 @@ export default function NeighborhoodRentMap({
         // Check if map is still valid
         if (!mapInstance.getContainer()) return;
 
-        // Pan to the neighborhood location with higher zoom
-        mapInstance.setView(coords, 15, { animate: true, duration: 0.5 });
+        // Center the map on the neighborhood marker
+        mapInstance.setView(coords, 15, { animate: true, duration: 0.3 });
 
         // Find and open the marker popup
         const marker = markerRefs.current.get(key);
@@ -688,7 +789,7 @@ export default function NeighborhoodRentMap({
             } catch (e) {
               console.warn("Error opening marker popup:", e);
             }
-          }, 500);
+          }, 350);
         }
       } catch (e) {
         console.warn("Error zooming to neighborhood:", e);
@@ -697,34 +798,49 @@ export default function NeighborhoodRentMap({
   };
 
   // Auto-zoom to initial neighborhood from URL
-  const [hasProcessedInitialNeighborhood, setHasProcessedInitialNeighborhood] = useState(false);
-  const [pendingNeighborhoodPopup, setPendingNeighborhoodPopup] = useState<string | null>(null);
-  
+  const [hasProcessedInitialNeighborhood, setHasProcessedInitialNeighborhood] =
+    useState(false);
+  const [pendingNeighborhoodPopup, setPendingNeighborhoodPopup] = useState<
+    string | null
+  >(null);
+
   useEffect(() => {
-    if (!initialNeighborhood || !mapInstance || !coordsMap || !rentData || hasProcessedInitialNeighborhood) return;
+    if (
+      !initialNeighborhood ||
+      !mapInstance ||
+      !coordsMap ||
+      !rentData ||
+      hasProcessedInitialNeighborhood
+    )
+      return;
 
     // Find which municipality contains this neighborhood
     // The neighborhood slug from URL is lowercase with dashes
-    const neighborhoodSlug = initialNeighborhood.toLowerCase().replace(/\s+/g, '-');
-    
+    const neighborhoodSlug = initialNeighborhood
+      .toLowerCase()
+      .replace(/\s+/g, "-");
+
     for (const [municipality, neighborhoods] of Object.entries(rentData)) {
       // Check if this municipality is in the selected city
       const muniCity = municipalityCity(municipality);
       if (selectedCity && muniCity !== selectedCity) continue;
-      
+
       for (const neighborhoodName of Object.keys(neighborhoods)) {
-        const nameSlug = neighborhoodName.toLowerCase().replace(/\s+/g, '-');
-        if (nameSlug === neighborhoodSlug || decodeURIComponent(neighborhoodSlug) === nameSlug) {
+        const nameSlug = neighborhoodName.toLowerCase().replace(/\s+/g, "-");
+        if (
+          nameSlug === neighborhoodSlug ||
+          decodeURIComponent(neighborhoodSlug) === nameSlug
+        ) {
           // Mark as processed so we don't keep reopening
           setHasProcessedInitialNeighborhood(true);
-          
+
           // Found the neighborhood! Select the municipality first
           setSelectedMunicipality(municipality);
-          
+
           // Store the key for pending popup - will be opened after markers render
           const key = `${municipality}-${neighborhoodName}`;
           setPendingNeighborhoodPopup(key);
-          
+
           // Zoom to the neighborhood
           const coords = coordsMap[key];
           if (coords && mapInstance && mapInstance.getContainer()) {
@@ -738,12 +854,19 @@ export default function NeighborhoodRentMap({
         }
       }
     }
-  }, [initialNeighborhood, mapInstance, coordsMap, rentData, selectedCity, hasProcessedInitialNeighborhood]);
+  }, [
+    initialNeighborhood,
+    mapInstance,
+    coordsMap,
+    rentData,
+    selectedCity,
+    hasProcessedInitialNeighborhood,
+  ]);
 
   // Handle opening the pending neighborhood popup after markers are rendered
   useEffect(() => {
     if (!pendingNeighborhoodPopup || !mapInstance) return;
-    
+
     // Wait for the neighborhood markers to render after municipality is selected
     const tryOpenPopup = () => {
       const marker = markerRefs.current.get(pendingNeighborhoodPopup);
@@ -760,14 +883,14 @@ export default function NeighborhoodRentMap({
       }
       return false;
     };
-    
+
     // Try immediately first
     if (tryOpenPopup()) return;
-    
+
     // If not found, retry with delays to allow for render
     const timeouts = [100, 300, 500, 1000];
     const cleanups: NodeJS.Timeout[] = [];
-    
+
     for (const delay of timeouts) {
       const timeout = setTimeout(() => {
         if (pendingNeighborhoodPopup) {
@@ -776,7 +899,7 @@ export default function NeighborhoodRentMap({
       }, delay);
       cleanups.push(timeout);
     }
-    
+
     return () => {
       cleanups.forEach(clearTimeout);
     };
@@ -803,7 +926,13 @@ export default function NeighborhoodRentMap({
         }
       }, 300);
     }
-  }, [selectedMunicipality, mapInstance, initialNeighborhood, hasProcessedInitialNeighborhood, pendingNeighborhoodPopup]);
+  }, [
+    selectedMunicipality,
+    mapInstance,
+    initialNeighborhood,
+    hasProcessedInitialNeighborhood,
+    pendingNeighborhoodPopup,
+  ]);
 
   // Zoom out when panel closes
   useEffect(() => {
@@ -996,12 +1125,20 @@ export default function NeighborhoodRentMap({
               eventHandlers={{
                 click: () => {
                   setSelectedMunicipality(m.municipality);
+                  // Center the map on the clicked marker
+                  if (mapInstance) {
+                    mapInstance.setView(m.position, mapInstance.getZoom(), {
+                      animate: true,
+                    });
+                  }
                 },
               }}
             >
-              <Popup>
-                <div style={{ minWidth: 200 }}>
-                  <h3 style={{ fontWeight: 700 }}>{m.municipality}</h3>
+              <Popup autoPan={true} autoPanPadding={[50, 50]} keepInView={true}>
+                <div style={{ minWidth: 180, maxWidth: 250 }}>
+                  <h3 style={{ fontWeight: 700, fontSize: 14 }}>
+                    {m.municipality}
+                  </h3>
                   <div style={{ marginTop: 6 }}>
                     {moneyFormat(m.avg)}/{t("rent_map.month")} (
                     {t("rent_map.average")})
@@ -1069,12 +1206,24 @@ export default function NeighborhoodRentMap({
                     if (onNeighborhoodSelect && selectedMunicipality) {
                       onNeighborhoodSelect(n.name, selectedMunicipality);
                     }
+                    // Center the map on the clicked marker
+                    if (mapInstance) {
+                      mapInstance.setView(
+                        n.coords,
+                        Math.max(mapInstance.getZoom(), 14),
+                        { animate: true }
+                      );
+                    }
                   },
                 }}
               >
-                <Popup>
-                  <div style={{ minWidth: 220 }}>
-                    <h3 style={{ fontWeight: 700 }}>{n.name}</h3>
+                <Popup
+                  autoPan={true}
+                  autoPanPadding={[50, 50]}
+                  keepInView={true}
+                >
+                  <div style={{ minWidth: 180, maxWidth: 280 }}>
+                    <h3 style={{ fontWeight: 700, fontSize: 14 }}>{n.name}</h3>
                     <div style={{ marginTop: 6 }}>
                       <div
                         style={{ fontSize: 13, color: "#111", marginBottom: 4 }}

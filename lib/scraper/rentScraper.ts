@@ -38,7 +38,25 @@ const MUNICIPALITIES_TO_SCRAPE = [
   // "zapopan",
 
   // Puerto Vallarta
-  "puerto-vallarta",
+  // "puerto-vallarta",
+
+  // Los Cabos
+  // "los-cabos",
+
+  // Tijuana
+  // "tijuana",
+
+  // Mérida
+  // "merida",
+
+  // Cancún
+  // "benito-juarez-quintana-roo",
+
+  // Playa del Carmen
+  // "solidaridad",
+
+  // Tulum
+  "tulum",
 ];
 
 const MAX_PAGES = 20; // Change this to scrape more pages (e.g., 10 or 20)
@@ -72,12 +90,12 @@ function isValidRentalPrice(
 ): boolean {
   // Reasonable monthly rent ranges in MXN for Mexico
   const priceRanges: { [key: string]: [number, number] } = {
-    CUARTO: [2000, 30000], // Room: $2k - $30k
+    CUARTO: [1500, 30000], // Room: $1.5k - $30k
     DEPARTAMENTO_STUDIO: [2500, 80000], // Studio: $2.5k - $80k
-    DEPARTAMENTO_1BR: [3000, 140000], // 1BR: $3k - $140k
-    DEPARTAMENTO_2BR: [5000, 180000], // 2BR: $5k - $180k
-    DEPARTAMENTO_3PLUS: [7000, 300000], // 3+BR: $7k - $300k
-    CASA: [10000, 500000], // House: $10k - $500k
+    DEPARTAMENTO_1BR: [2500, 140000], // 1BR: $2.5k - $140k
+    DEPARTAMENTO_2BR: [4000, 180000], // 2BR: $4k - $180k
+    DEPARTAMENTO_3PLUS: [6000, 300000], // 3+BR: $6k - $300k
+    CASA: [7000, 500000], // House: $7k - $500k
   };
 
   const upperType = propertyType.toUpperCase();
@@ -108,10 +126,10 @@ function isValidRentalPrice(
   }
 
   // Additional check: price per m² should be reasonable (MXN)
-  // Typical rent is $60-$1500 per m² per month in Mexico
+  // Typical rent is $50-$1500 per m² per month in Mexico
   if (area > 0) {
     const pricePerM2 = price / area;
-    if (pricePerM2 < 60 || pricePerM2 > 1500) {
+    if (pricePerM2 < 50 || pricePerM2 > 1500) {
       return false;
     }
   }
@@ -220,7 +238,56 @@ function saveToJson(data: Property[], filename: string) {
   }
 }
 
+/**
+ * Fetches the current USD to MXN exchange rate from open.er-api.com
+ */
+async function fetchExchangeRate(): Promise<number> {
+  try {
+    const response = await fetch("https://open.er-api.com/v6/latest/USD");
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+    const data = await response.json();
+    const rate = data?.rates?.MXN;
+    if (typeof rate === "number" && rate > 0) {
+      console.log(`✅ Fetched USD/MXN exchange rate: ${rate.toFixed(4)}`);
+      return rate;
+    }
+    throw new Error("Invalid response payload");
+  } catch (error) {
+    console.error(
+      "⚠️ Failed to fetch exchange rate, using fallback 20.0:",
+      error
+    );
+    return 20.0; // Fallback exchange rate
+  }
+}
+
+/**
+ * Converts USD price to MXN and updates the price string
+ */
+function convertUsdToMxn(
+  priceString: string,
+  exchangeRate: number
+): { price: string; wasUsd: boolean } {
+  if (/USD/i.test(priceString)) {
+    const numericValue = parseFloat(priceString.replace(/[^\d.]/g, ""));
+    if (!isNaN(numericValue) && numericValue > 0) {
+      const mxnValue = Math.round(numericValue * exchangeRate);
+      return {
+        price: `$${mxnValue.toLocaleString("es-MX")} MXN`,
+        wasUsd: true,
+      };
+    }
+  }
+  return { price: priceString, wasUsd: false };
+}
+
 async function scrapeRents() {
+  // Fetch exchange rate before starting
+  const usdToMxnRate = await fetchExchangeRate();
+  let usdConvertedCount = 0;
+
   // Keeping headless: false for quick verification, but switch to true for production
   const browser = await firefox.launch({ headless: false });
   const context = await browser.newContext({
@@ -378,7 +445,18 @@ async function scrapeRents() {
           });
 
           const filteredProcessed = processedProperties.filter((p) => {
-            if (/USD/.test(p.price)) return false;
+            // Convert USD prices to MXN instead of filtering them out
+            const { price: convertedPrice, wasUsd } = convertUsdToMxn(
+              p.price,
+              usdToMxnRate
+            );
+            if (wasUsd) {
+              p.price = convertedPrice;
+              usdConvertedCount++;
+              console.log(
+                `💱 Converted USD to MXN: ${p.address} -> ${convertedPrice}`
+              );
+            }
 
             // Basic check (value exists and is not zero)
             if (!p.area_m2 || p.area_m2.length === 0 || p.area_m2 === "0") {
@@ -435,6 +513,10 @@ async function scrapeRents() {
       }
     }
     // --- PHASE 3: MERGE AND SAVE ALL RESULTS ---
+    console.log(`\n📊 Scraping Summary:`);
+    console.log(`   Total properties scraped: ${allProperties.length}`);
+    console.log(`   USD prices converted to MXN: ${usdConvertedCount}`);
+
     const finalMergedData = mergeData(allProperties, OUTPUT_FILENAME);
     saveToJson(finalMergedData, OUTPUT_FILENAME);
   } catch (error) {

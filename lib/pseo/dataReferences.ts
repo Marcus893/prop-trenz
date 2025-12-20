@@ -73,10 +73,12 @@ export function parseDataReferences(text: string): Array<{
 
     // Determine structure based on type and number of parts
     // Handle both regular types and rent- prefixed types
-    const isNeighborhoodType = type === "neighborhood" || type === "rent-neighborhood";
-    const isMunicipalityType = type === "municipality" || type === "rent-municipality";
+    const isNeighborhoodType =
+      type === "neighborhood" || type === "rent-neighborhood";
+    const isMunicipalityType =
+      type === "municipality" || type === "rent-municipality";
     const isCityType = type === "city" || type === "rent-city";
-    
+
     if (isNeighborhoodType || isMunicipalityType) {
       // Format for municipality: {{data:municipality:San Pedro Garza García:Nuevo León:Explore San Pedro Garza García}}
       // Format for neighborhood: {{data:neighborhood:Polanco:Miguel Hidalgo:Ciudad de México:View Polanco prices}} (5 parts)
@@ -229,6 +231,28 @@ function inferCityFromMunicipality(
     tonala: "Guadalajara",
     // Puerto Vallarta
     "puerto vallarta": "Puerto Vallarta",
+    // Los Cabos
+    "los cabos": "Los Cabos",
+    // Tijuana
+    tijuana: "Tijuana",
+
+    // Mérida
+    mérida: "Mérida",
+    merida: "Mérida",
+
+    // Cancún
+    "benito juárez (cancún)": "Cancún",
+    "benito juarez (cancún)": "Cancún",
+    "benito juárez (cancun)": "Cancún",
+    "benito juarez (cancun)": "Cancún",
+    cancún: "Cancún",
+    cancun: "Cancún",
+
+    // Playa del Carmen
+    solidaridad: "Playa del Carmen",
+
+    // Tulum
+    tulum: "Tulum",
   };
 
   const normalized = municipality.toLowerCase().trim();

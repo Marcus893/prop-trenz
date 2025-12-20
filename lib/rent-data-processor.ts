@@ -65,6 +65,15 @@ export function processRentData() {
   const rentData: MunicipalityRentData = {};
   const NATIONAL_AVG_PROPERTY_SIZE = 70; // Standard size for normalized average
 
+  // Helper function to get unique municipality key
+  // Handles case where "Benito Juárez" exists in both CDMX and Quintana Roo
+  function getMunicipalityKey(municipality: string, state: string): string {
+    if (municipality === "Benito Juárez" && state === "Quintana Roo") {
+      return "Benito Juárez (Cancún)";
+    }
+    return municipality;
+  }
+
   // First pass: collect data and track prices/areas for each neighborhood
   const neighborhoodPricesPerM2: {
     [municipality: string]: { [neighborhood: string]: number[] };
@@ -75,29 +84,30 @@ export function processRentData() {
       continue;
     }
 
+    const municipalityKey = getMunicipalityKey(listing.municipality, listing.state);
     const price = parsePrice(listing.price);
     const area = parseArea(listing.area_m2);
 
-    if (!neighborhoodPricesPerM2[listing.municipality]) {
-      neighborhoodPricesPerM2[listing.municipality] = {};
+    if (!neighborhoodPricesPerM2[municipalityKey]) {
+      neighborhoodPricesPerM2[municipalityKey] = {};
     }
-    if (!neighborhoodPricesPerM2[listing.municipality][listing.neighborhood]) {
-      neighborhoodPricesPerM2[listing.municipality][listing.neighborhood] = [];
+    if (!neighborhoodPricesPerM2[municipalityKey][listing.neighborhood]) {
+      neighborhoodPricesPerM2[municipalityKey][listing.neighborhood] = [];
     }
 
     // Collect price per m² for all valid listings
     if (area > 0) {
-      neighborhoodPricesPerM2[listing.municipality][listing.neighborhood].push(
+      neighborhoodPricesPerM2[municipalityKey][listing.neighborhood].push(
         price / area
       );
     }
 
-    if (!rentData[listing.municipality]) {
-      rentData[listing.municipality] = {};
+    if (!rentData[municipalityKey]) {
+      rentData[municipalityKey] = {};
     }
 
-    if (!rentData[listing.municipality][listing.neighborhood]) {
-      rentData[listing.municipality][listing.neighborhood] = {
+    if (!rentData[municipalityKey][listing.neighborhood]) {
+      rentData[municipalityKey][listing.neighborhood] = {
         room_avg_price: undefined,
         studio_apt_avg_price: undefined,
         one_bed_apt_avg_price: undefined,
@@ -122,7 +132,7 @@ export function processRentData() {
     }
 
     const neighborhoodStats =
-      rentData[listing.municipality][listing.neighborhood];
+      rentData[municipalityKey][listing.neighborhood];
 
     if (listing.property_type.toUpperCase() === "CUARTO") {
       neighborhoodStats.room_avg_price =
