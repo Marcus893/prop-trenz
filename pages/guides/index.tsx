@@ -62,6 +62,10 @@ export default function GuidesIndex({ guides, allTags }: GuidesIndexProps) {
   return (
     <>
       <Head>
+        <title>{t('guides_page.meta_title', 'Mexican Real Estate Guides | Expert Insights - PropTrenz')}</title>
+        <meta name="description" content={t('guides_page.meta_description', 'Comprehensive guides on buying property in Mexico. Learn about taxes, regulations, market dynamics, and investment strategies for every stage of the property lifecycle.')} />
+        <link rel="canonical" href={hreflangUrls.en} />
+        
         {/* Hreflang tags for multilingual SEO */}
         <link rel="alternate" hrefLang="en" href={hreflangUrls.en} />
         <link rel="alternate" hrefLang="es" href={hreflangUrls.es} />

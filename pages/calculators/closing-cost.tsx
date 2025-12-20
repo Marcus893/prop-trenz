@@ -13,6 +13,7 @@ export default function ClosingCostPage() {
       <Head>
         <title>{t('calculators.closing_cost.meta_title', 'Closing Cost Calculator - PropTrenz')}</title>
         <meta name="description" content={t('calculators.closing_cost.meta_description', 'Calculate buyer closing costs for Mexican real estate. Estimate notary fees, taxes, and other expenses when purchasing property in Mexico.')} />
+        <link rel="canonical" href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://proptrenz.com'}/calculators/closing-cost`} />
       </Head>
       <Layout
         title={t('calculators.closing_cost.page_title', 'Buyer Closing Cost Calculator')}

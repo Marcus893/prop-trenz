@@ -52,6 +52,7 @@ export default function InsightsPage({ nationalSnapshot, nationalTrend = [], top
       <Head>
         <title>{t('insights.page_title', 'Market Insights - PropTrenz')}</title>
         <meta name="description" content={t('insights.page_description', 'Explore real estate market insights, top movers, and national trends in Mexico.')} />
+        <link rel="canonical" href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://proptrenz.com'}/insights`} />
       </Head>
       <Layout hideHeader>
         <div className="bg-gray-50 relative -my-6 lg:-mr-8 lg:ml-0 lg:pr-8">

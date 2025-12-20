@@ -702,10 +702,10 @@
   },
   "rent_map": {
     "meta": {
-      "title": "Rent Map - PropTrenz",
+      "title": "Rent Price Map - PropTrenz",
       "description": "Explore average rents by neighborhood and property type."
     },
-    "title": "Rent Map",
+    "title": "Rent Price Map",
     "subtitle": "Average rents by neighborhood",
     "city": "City",
     "select_city": "Select city",

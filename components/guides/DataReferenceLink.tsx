@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
-import { BarChart3, MapPin, TrendingUp, ExternalLink, ArrowRight } from 'lucide-react'
+import { BarChart3, MapPin, TrendingUp, ExternalLink, ArrowRight, Home } from 'lucide-react'
 import type { DataReference } from '@/lib/pseo/dataReferences'
 import { getDataReferenceUrl, getDataReferenceLabel } from '@/lib/pseo/dataReferences'
 
@@ -25,6 +25,11 @@ export function DataReferenceLink({ reference, className = '' }: DataReferenceLi
       case 'growth':
       case 'price':
         return <TrendingUp className="h-3.5 w-3.5" />
+      case 'rent-neighborhood':
+      case 'rent-municipality':
+      case 'rent-city':
+      case 'rent-map':
+        return <Home className="h-3.5 w-3.5" />
       default:
         return <ExternalLink className="h-3.5 w-3.5" />
     }
@@ -48,6 +53,14 @@ export function DataReferenceLink({ reference, className = '' }: DataReferenceLi
         return {
           text: 'text-purple-700 hover:text-purple-800',
           icon: 'text-purple-600'
+        }
+      case 'rent-neighborhood':
+      case 'rent-municipality':
+      case 'rent-city':
+      case 'rent-map':
+        return {
+          text: 'text-orange-700 hover:text-orange-800',
+          icon: 'text-orange-600'
         }
       default:
         return {

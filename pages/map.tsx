@@ -342,6 +342,7 @@ export default function MapPage({ initialMetaTags }: MapPageProps) {
         <title>{metaTags.title}</title>
         <meta name="title" content={metaTags.title} />
         <meta name="description" content={metaTags.description} />
+        <link rel="canonical" href={`${baseUrl}/map`} />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />

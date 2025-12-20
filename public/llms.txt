@@ -1,0 +1,55 @@
+# PropTrenz - Mexican Real Estate Market Intelligence
+
+> PropTrenz is a data-driven platform for tracking real estate prices and market trends across Mexico. We provide interactive price maps, market insights, calculators, and comprehensive guides to help renters, buyers, investors make smarter real estate decisions.
+
+## About PropTrenz
+
+PropTrenz offers real estate market intelligence for Mexico, including:
+- Interactive neighborhood price maps for major cities (Mexico City, Monterrey, Guadalajara)
+- Rent price tracking and analysis
+- Market insights and trends
+- Real estate calculators (closing costs, ROI, ownership costs, seller costs)
+- Comprehensive guides for renters, home buyers, investors in Mexico
+
+## Main Pages
+
+- Homepage: https://proptrenz.com
+- Purchase Price Map: https://proptrenz.com/map
+- Rent Price Map: https://proptrenz.com/rent-map
+- Market Insights: https://proptrenz.com/insights
+- Guides: https://proptrenz.com/guides
+- Calculators: https://proptrenz.com/calculators
+
+## Calculators
+
+- Closing Cost Calculator: https://proptrenz.com/calculators/closing-cost
+- ROI Calculator: https://proptrenz.com/calculators/roi
+- Ownership Cost Calculator: https://proptrenz.com/calculators/ownership-cost
+- Seller Cost Calculator: https://proptrenz.com/calculators/seller-cost
+
+## Popular Guides
+
+- Can Foreigners Buy Property in Mexico: https://proptrenz.com/guides/can-foreigners-buy-property-in-mexico
+- How to Buy Property Safely in Mexico: https://proptrenz.com/guides/how-to-buy-property-safely-in-mexico
+- Cost of Living in Mexico: https://proptrenz.com/guides/cost-of-living-in-mexico
+- Mexico Relocation Guide: https://proptrenz.com/guides/mexico-relocation-guide
+- Best Areas for Airbnb Investing: https://proptrenz.com/guides/best-areas-in-mexico-for-airbnb-investing
+
+## Data Sources
+
+Our real estate data is sourced from:
+- Banorte (Mexican bank mortgage data)
+- SAT (Mexican tax authority)
+- SHF (Sociedad Hipotecaria Federal)
+- Local notaries and real estate professionals
+
+## Languages
+
+PropTrenz is available in:
+- English (default)
+- Spanish (Español)
+- Chinese (中文)
+
+## Contact
+
+For more information, visit https://proptrenz.com

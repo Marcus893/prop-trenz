@@ -89,11 +89,15 @@ export default function NeighborhoodRentMap({
   selectedMunicipality,
   setSelectedMunicipality,
   selectedCity,
+  initialNeighborhood,
+  onNeighborhoodSelect,
 }: {
   rentData: Record<string, Record<string, any>>;
   selectedMunicipality: string | null;
   setSelectedMunicipality: (m: string | null) => void;
   selectedCity?: string | null;
+  initialNeighborhood?: string | null;
+  onNeighborhoodSelect?: (neighborhood: string, municipality: string) => void;
 }) {
   const { t } = useTranslation("common");
   const [coordsMap, setCoordsMap] = useState<Record<
@@ -659,6 +663,11 @@ export default function NeighborhoodRentMap({
     const key = `${selectedMunicipality}-${neighborhoodName}`;
     const coords = coordsMap[key];
 
+    // Notify parent about neighborhood selection for URL update
+    if (onNeighborhoodSelect) {
+      onNeighborhoodSelect(neighborhoodName, selectedMunicipality);
+    }
+
     if (coords) {
       try {
         // Check if map is still valid
@@ -687,8 +696,98 @@ export default function NeighborhoodRentMap({
     }
   };
 
-  // Open municipality popup when municipality is selected
+  // Auto-zoom to initial neighborhood from URL
+  const [hasProcessedInitialNeighborhood, setHasProcessedInitialNeighborhood] = useState(false);
+  const [pendingNeighborhoodPopup, setPendingNeighborhoodPopup] = useState<string | null>(null);
+  
   useEffect(() => {
+    if (!initialNeighborhood || !mapInstance || !coordsMap || !rentData || hasProcessedInitialNeighborhood) return;
+
+    // Find which municipality contains this neighborhood
+    // The neighborhood slug from URL is lowercase with dashes
+    const neighborhoodSlug = initialNeighborhood.toLowerCase().replace(/\s+/g, '-');
+    
+    for (const [municipality, neighborhoods] of Object.entries(rentData)) {
+      // Check if this municipality is in the selected city
+      const muniCity = municipalityCity(municipality);
+      if (selectedCity && muniCity !== selectedCity) continue;
+      
+      for (const neighborhoodName of Object.keys(neighborhoods)) {
+        const nameSlug = neighborhoodName.toLowerCase().replace(/\s+/g, '-');
+        if (nameSlug === neighborhoodSlug || decodeURIComponent(neighborhoodSlug) === nameSlug) {
+          // Mark as processed so we don't keep reopening
+          setHasProcessedInitialNeighborhood(true);
+          
+          // Found the neighborhood! Select the municipality first
+          setSelectedMunicipality(municipality);
+          
+          // Store the key for pending popup - will be opened after markers render
+          const key = `${municipality}-${neighborhoodName}`;
+          setPendingNeighborhoodPopup(key);
+          
+          // Zoom to the neighborhood
+          const coords = coordsMap[key];
+          if (coords && mapInstance && mapInstance.getContainer()) {
+            try {
+              mapInstance.setView(coords, 15, { animate: false });
+            } catch (e) {
+              console.warn("Error zooming to initial neighborhood:", e);
+            }
+          }
+          return;
+        }
+      }
+    }
+  }, [initialNeighborhood, mapInstance, coordsMap, rentData, selectedCity, hasProcessedInitialNeighborhood]);
+
+  // Handle opening the pending neighborhood popup after markers are rendered
+  useEffect(() => {
+    if (!pendingNeighborhoodPopup || !mapInstance) return;
+    
+    // Wait for the neighborhood markers to render after municipality is selected
+    const tryOpenPopup = () => {
+      const marker = markerRefs.current.get(pendingNeighborhoodPopup);
+      if (marker) {
+        try {
+          if (mapInstance.getContainer()) {
+            marker.openPopup();
+          }
+        } catch (e) {
+          console.warn("Error opening neighborhood popup:", e);
+        }
+        setPendingNeighborhoodPopup(null);
+        return true;
+      }
+      return false;
+    };
+    
+    // Try immediately first
+    if (tryOpenPopup()) return;
+    
+    // If not found, retry with delays to allow for render
+    const timeouts = [100, 300, 500, 1000];
+    const cleanups: NodeJS.Timeout[] = [];
+    
+    for (const delay of timeouts) {
+      const timeout = setTimeout(() => {
+        if (pendingNeighborhoodPopup) {
+          tryOpenPopup();
+        }
+      }, delay);
+      cleanups.push(timeout);
+    }
+    
+    return () => {
+      cleanups.forEach(clearTimeout);
+    };
+  }, [pendingNeighborhoodPopup, mapInstance, selectedMunicipality]);
+
+  // Open municipality popup when municipality is selected (but not when opening from neighborhood URL)
+  useEffect(() => {
+    // Skip if we're opening from an initial neighborhood - let the neighborhood popup show instead
+    if (initialNeighborhood && hasProcessedInitialNeighborhood) return;
+    // Skip if there's a pending neighborhood popup
+    if (pendingNeighborhoodPopup) return;
     if (!selectedMunicipality || !mapInstance) return;
 
     const marker = municipalityMarkerRefs.current.get(selectedMunicipality);
@@ -704,7 +803,7 @@ export default function NeighborhoodRentMap({
         }
       }, 300);
     }
-  }, [selectedMunicipality, mapInstance]);
+  }, [selectedMunicipality, mapInstance, initialNeighborhood, hasProcessedInitialNeighborhood, pendingNeighborhoodPopup]);
 
   // Zoom out when panel closes
   useEffect(() => {
@@ -963,6 +1062,14 @@ export default function NeighborhoodRentMap({
                   if (marker) {
                     markerRefs.current.set(n.key, marker);
                   }
+                }}
+                eventHandlers={{
+                  click: () => {
+                    // Update URL when marker is clicked
+                    if (onNeighborhoodSelect && selectedMunicipality) {
+                      onNeighborhoodSelect(n.name, selectedMunicipality);
+                    }
+                  },
                 }}
               >
                 <Popup>

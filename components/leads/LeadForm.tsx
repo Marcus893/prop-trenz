@@ -757,10 +757,17 @@ export function LeadForm({
                         <div className="w-3 h-3 bg-blue-600 rounded-full mt-1.5 flex-shrink-0 shadow-sm"></div>
                         <div>
                           <h4 className="font-semibold text-gray-900 text-sm">
-                            🏆 {t2("leads.trust_vetted_title", "Vetted Professionals")}
+                            🏆{" "}
+                            {t2(
+                              "leads.trust_vetted_title",
+                              "Vetted Professionals"
+                            )}
                           </h4>
                           <p className="text-sm text-gray-600 mt-1">
-                            {t2("leads.trust_vetted_desc", "All our partners are licensed and verified real estate experts with proven track records.")}
+                            {t2(
+                              "leads.trust_vetted_desc",
+                              "All our partners are licensed and verified real estate experts with proven track records."
+                            )}
                           </p>
                         </div>
                       </div>
@@ -768,10 +775,17 @@ export function LeadForm({
                         <div className="w-3 h-3 bg-blue-600 rounded-full mt-1.5 flex-shrink-0 shadow-sm"></div>
                         <div>
                           <h4 className="font-semibold text-gray-900 text-sm">
-                            🗺️ {t2("leads.trust_local_title", "Local Market Expertise")}
+                            🗺️{" "}
+                            {t2(
+                              "leads.trust_local_title",
+                              "Local Market Expertise"
+                            )}
                           </h4>
                           <p className="text-sm text-gray-600 mt-1">
-                            {t2("leads.trust_local_desc", "Deep knowledge of Mexican real estate markets, regulations, and local insights you won't find elsewhere.")}
+                            {t2(
+                              "leads.trust_local_desc",
+                              "Deep knowledge of Mexican real estate markets, regulations, and local insights you won't find elsewhere."
+                            )}
                           </p>
                         </div>
                       </div>
@@ -779,10 +793,17 @@ export function LeadForm({
                         <div className="w-3 h-3 bg-blue-600 rounded-full mt-1.5 flex-shrink-0 shadow-sm"></div>
                         <div>
                           <h4 className="font-semibold text-gray-900 text-sm">
-                            📊 {t2("leads.trust_data_title", "Data-Driven Insights")}
+                            📊{" "}
+                            {t2(
+                              "leads.trust_data_title",
+                              "Data-Driven Insights"
+                            )}
                           </h4>
                           <p className="text-sm text-gray-600 mt-1">
-                            {t2("leads.trust_data_desc", "Access to comprehensive market data, analytics, and pricing intelligence for making informed decisions.")}
+                            {t2(
+                              "leads.trust_data_desc",
+                              "Access to comprehensive market data, analytics, and pricing intelligence for making informed decisions."
+                            )}
                           </p>
                         </div>
                       </div>
@@ -790,10 +811,17 @@ export function LeadForm({
                         <div className="w-3 h-3 bg-blue-600 rounded-full mt-1.5 flex-shrink-0 shadow-sm"></div>
                         <div>
                           <h4 className="font-semibold text-gray-900 text-sm">
-                            🤝 {t2("leads.trust_support_title", "End-to-End Support")}
+                            🤝{" "}
+                            {t2(
+                              "leads.trust_support_title",
+                              "End-to-End Support"
+                            )}
                           </h4>
                           <p className="text-sm text-gray-600 mt-1">
-                            {t2("leads.trust_support_desc", "From property search to closing, we're with you every step of the way with personalized guidance.")}
+                            {t2(
+                              "leads.trust_support_desc",
+                              "From property search to closing, we're with you every step of the way with personalized guidance."
+                            )}
                           </p>
                         </div>
                       </div>
@@ -801,7 +829,11 @@ export function LeadForm({
                   </div>
                   <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-2 sm:p-3 md:p-4 rounded-lg text-white">
                     <p className="text-sm font-medium text-center">
-                      🚀 {t2("leads.trust_social_proof", "Thousands have already used PropTrenz to find their perfect rental/home/investment. Join them today!")}
+                      ✅{" "}
+                      {t2(
+                        "leads.trust_social_proof",
+                        "Thousands have already used PropTrenz to find their perfect rental/home/investment. Join them today!"
+                      )}
                     </p>
                   </div>
                 </div>

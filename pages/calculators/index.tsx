@@ -37,6 +37,7 @@ export default function CalculatorsOverviewPage() {
       <Head>
         <title>{t('calculators_page.meta_title', 'Real Estate Calculators - PropTrenz')}</title>
         <meta name="description" content={t('calculators_page.meta_description', 'Free real estate calculators for Mexico. Estimate closing costs, ownership expenses, selling costs, and ROI for your property investment.')} />
+        <link rel="canonical" href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://proptrenz.com'}/calculators`} />
       </Head>
       <Layout
         title={t('calculators_page.title', 'Real Estate Calculators')}

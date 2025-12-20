@@ -13,6 +13,7 @@ export default function ROICalculatorPage() {
       <Head>
         <title>{t('calculators.roi.meta_title', 'Rental ROI Calculator - PropTrenz')}</title>
         <meta name="description" content={t('calculators.roi.meta_description', 'Calculate rental property ROI in Mexico. Model cash flow, cap rates, and cash-on-cash returns for your real estate investment.')} />
+        <link rel="canonical" href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://proptrenz.com'}/calculators/roi`} />
       </Head>
       <Layout
         title={t('calculators.roi.page_title', 'Rental ROI Calculator')}

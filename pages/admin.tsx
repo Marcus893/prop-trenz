@@ -1,4 +1,5 @@
 import React from 'react'
+import Head from 'next/head'
 import { Layout } from '@/components/Layout'
 import { AdminPanel } from '@/components/admin/AdminPanel'
 import { useAuth } from '@/lib/auth'
@@ -49,21 +50,31 @@ export default function AdminPage() {
 
   if (!user || !isAuthorized) {
     return (
-      <Layout>
-        <div className="flex items-center justify-center h-64">
-          <div className="text-center">
-            <h2 className="text-xl font-semibold text-gray-900 mb-2">Access Denied</h2>
-            <p className="text-gray-600">You don't have permission to access the admin panel.</p>
+      <>
+        <Head>
+          <title>Access Denied - PropTrenz</title>
+        </Head>
+        <Layout>
+          <div className="flex items-center justify-center h-64">
+            <div className="text-center">
+              <h2 className="text-xl font-semibold text-gray-900 mb-2">Access Denied</h2>
+              <p className="text-gray-600">You don't have permission to access the admin panel.</p>
+            </div>
           </div>
-        </div>
-      </Layout>
+        </Layout>
+      </>
     )
   }
 
   return (
-    <Layout>
-      <AdminPanel />
-    </Layout>
+    <>
+      <Head>
+        <title>Admin Panel - PropTrenz</title>
+      </Head>
+      <Layout>
+        <AdminPanel />
+      </Layout>
+    </>
   )
 }
 

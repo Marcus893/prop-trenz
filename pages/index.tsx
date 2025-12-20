@@ -138,11 +138,11 @@ export default function HomePage() {
     <>
       <Head>
         <title>
-          PropTrenz - Mexican Real Estate Market Intelligence & Price Analytics
+          PropTrenz | Track Real Estate Prices & Market Data in Mexico - Make Smarter Decisions
         </title>
         <meta
           name="description"
-          content="Explore Mexican real estate prices with data-driven insights. Interactive charts, neighborhood prices, and market trends throughout Mexico."
+          content="Track real estate prices across Mexico with PropTrenz. Explore interactive price maps, market insights, neighborhood trends, and data-driven analytics to make smarter property decisions."
         />
         <link rel="canonical" href={baseUrl} />
         <link rel="alternate" hrefLang="en" href={hreflangUrls.en} />

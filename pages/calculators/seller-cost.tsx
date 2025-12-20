@@ -13,6 +13,7 @@ export default function SellerCostPage() {
       <Head>
         <title>{t('calculators.seller_cost.meta_title', 'Seller Cost Calculator - PropTrenz')}</title>
         <meta name="description" content={t('calculators.seller_cost.meta_description', 'Calculate selling costs for Mexican real estate. Estimate capital gains tax, agent commissions, and fideicomiso cancellation fees.')} />
+        <link rel="canonical" href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://proptrenz.com'}/calculators/seller-cost`} />
       </Head>
       <Layout
         title={t('calculators.seller_cost.page_title', 'Seller Cost Calculator')}

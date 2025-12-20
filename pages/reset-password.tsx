@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef, useCallback } from 'react'
+import Head from 'next/head'
 import { Layout } from '@/components/Layout'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -197,7 +198,11 @@ export default function ResetPasswordPage() {
   }
 
   return (
-    <Layout title={tr('auth.reset_password', 'Reset Password')} subtitle={''}>
+    <>
+      <Head>
+        <title>{tr('auth.reset_password', 'Reset Password')} - PropTrenz</title>
+      </Head>
+      <Layout title={tr('auth.reset_password', 'Reset Password')} subtitle={''}>
       <div className="max-w-md mx-auto">
         {!checked ? null : !allowed ? (
           <div className="bg-white p-6 rounded-lg shadow text-center">
@@ -235,6 +240,7 @@ export default function ResetPasswordPage() {
         )}
       </div>
     </Layout>
+    </>
   )
 }
 

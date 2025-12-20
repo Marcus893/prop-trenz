@@ -1,21 +1,21 @@
-import { GoogleGenerativeAI } from '@google/generative-ai'
-import type { GenerateGuideParams, GuideSection, GuideFAQItem } from './types'
+import { GoogleGenerativeAI } from "@google/generative-ai";
+import type { GenerateGuideParams, GuideSection, GuideFAQItem } from "./types";
 
-const MODEL = process.env.GEMINI_MODEL || 'gemini-3-pro-preview'
+const MODEL = process.env.GEMINI_MODEL || "gemini-3-pro-preview";
 
 function buildPrompt(params: GenerateGuideParams): string {
   const dataPoints = params.dataPoints
     ?.map((item) => `${item.label}: ${item.value}`)
-    .join('\n')
+    .join("\n");
 
   return `You are a real estate professional in Mexico writing from your actual experience. This is NOT an AI article - you're a real person sharing real knowledge. Write like you're talking to a friend who asked for your help. Use "I" and use "you". Be conversational.
 
 Topic: ${params.topic}
 Locale: ${params.locale}
-Primary keywords: ${params.keywords.join(', ')}
+Primary keywords: ${params.keywords.join(", ")}
 
 Structured data provided:
-${dataPoints || 'None'}
+${dataPoints || "None"}
 
 **CRITICAL DATA REFERENCE REQUIREMENT:**
 If this guide mentions specific neighborhoods, municipalities, or cities (like "hottest neighborhoods", "best areas", etc.), you MUST include data references for locations mentioned. For example, if you mention "Polanco", you must include {{data:neighborhood:Polanco:Miguel Hidalgo:Ciudad de México:View Polanco prices}} in that same paragraph. This is MANDATORY.
@@ -134,7 +134,7 @@ CRITICAL CONTENT QUALITY REQUIREMENTS:
    - Format: {{data:type:location:label}} or {{data:type:municipality:city:label}}
    - IMPORTANT: Data references are plain text strings - include them exactly as shown in your JSON string values
    
-   - **Examples of CORRECT usage (copy these patterns exactly):**
+   - **Examples of CORRECT usage for PURCHASE PRICES (link to purchase price map):**
      * "Polanco is expensive. {{data:neighborhood:Polanco:Miguel Hidalgo:Ciudad de México:View Polanco prices}} to see current listings."
      * "Roma Norte and Roma Sur are trendy. {{data:neighborhood:Roma Norte:Cuauhtémoc:Ciudad de México:Explore Roma Norte}} and {{data:neighborhood:Roma Sur:Cuauhtémoc:Ciudad de México:Explore Roma Sur}} are both worth checking out."
      * "Condesa has great parks. {{data:chart:neighborhood:Condesa:Cuauhtémoc:Ciudad de México:View Condesa price trends}} to see how prices have changed."
@@ -142,12 +142,21 @@ CRITICAL CONTENT QUALITY REQUIREMENTS:
      * "Juárez is up-and-coming. {{data:neighborhood:Juárez:Cuauhtémoc:Ciudad de México:View Juárez prices}} to explore the area."
      * "Coyoacán is historic. {{data:municipality:Coyoacán:Ciudad de México:Explore Coyoacán}} for more details."
    
+   - **Examples of CORRECT usage for RENTAL PRICES (link to rental price map):**
+     * "Rent in Polanco averages $35,000 MXN/month. {{data:rent-neighborhood:Polanco:Miguel Hidalgo:Ciudad de México:View Polanco rent prices}} for current rates."
+     * "Roma Norte has affordable rentals. {{data:rent-neighborhood:Roma Norte:Cuauhtémoc:Ciudad de México:Explore Roma Norte rent prices}} for more details."
+     * "Rental prices in Condesa are higher. {{data:rent-municipality:Cuauhtémoc:Ciudad de México:View Cuauhtémoc rental market}} to compare neighborhoods."
+     * "To see all rental prices in Mexico City, {{data:rent-city:Ciudad de México:Explore CDMX rental map}}."
+   
    - **MANDATORY RULES:**
      * Include at least ONE data reference per paragraph that mentions a location
-     * Use chart references when discussing price trends or market analysis
-     * Use neighborhood references for specific areas
-     * Use municipality references for broader areas
+     * Use chart references when discussing purchase price trends or market analysis
+     * Use neighborhood references for specific areas (purchase data)
+     * Use rent-neighborhood references when mentioning rental prices for specific neighborhoods
+     * Use rent-city or rent-municipality for broader rental market discussions
+     * Use municipality references for broader areas (purchase data)
      * **If you mention a neighborhood in a heading, include a data reference in the first paragraph of that section**
+     * **When discussing rental costs/rent prices, ALWAYS use rent- prefix data references (rent-neighborhood, rent-municipality, rent-city)**
    
    - CRITICAL: When including data references in JSON strings, they are part of the string value - do not try to escape the curly braces, just include them as regular text within the string
    - **QUALITY CHECK:** Before finalizing, count how many neighborhoods you mentioned. Every single one MUST have at least one data reference. If you mentioned 10 neighborhoods but only have 2 data references, you've failed this requirement. Go back and add data references for EVERY neighborhood you mentioned.
@@ -171,25 +180,25 @@ CRITICAL CONTENT QUALITY REQUIREMENTS:
     - Ensure the content demonstrates expertise and builds authority
     - **MANDATORY DATA REFERENCE CHECK:** Count every neighborhood, municipality, and city you mentioned. Every single one MUST have at least one data reference. If you mentioned "Polanco", "Roma", "Condesa", "Juárez", "Coyoacán", etc., each must have a data reference. This is not optional - guides without proper data references will be rejected.
 
-CRITICAL REMINDER: This is NOT an AI article. This is a real expert sharing real knowledge. Write it like you're having a conversation with a friend who asked for your advice. Use "I" and "you" liberally. Include your actual thoughts and observations. Make it sound like a human wrote it after living through these experiences, not like an AI compiled information. If an AI detector reads this, it should think a real person wrote it.`
+CRITICAL REMINDER: This is NOT an AI article. This is a real expert sharing real knowledge. Write it like you're having a conversation with a friend who asked for your advice. Use "I" and "you" liberally. Include your actual thoughts and observations. Make it sound like a human wrote it after living through these experiences, not like an AI compiled information. If an AI detector reads this, it should think a real person wrote it.`;
 }
 
 interface GuideDraft {
-  title: string
-  metaTitle: string
-  metaDescription: string
-  excerpt: string
-  heroKicker: string
-  mainImagePrompt?: string
-  tags?: string[]
+  title: string;
+  metaTitle: string;
+  metaDescription: string;
+  excerpt: string;
+  heroKicker: string;
+  mainImagePrompt?: string;
+  tags?: string[];
   sections: Array<{
-    heading: string
-    paragraphs: string[]
-    bullets?: string[]
-    dataPoints?: Array<{ label: string; value: string }>
-    imagePrompt?: string
-  }>
-  faq?: GuideFAQItem[]
+    heading: string;
+    paragraphs: string[];
+    bullets?: string[];
+    dataPoints?: Array<{ label: string; value: string }>;
+    imagePrompt?: string;
+  }>;
+  faq?: GuideFAQItem[];
 }
 
 /**
@@ -197,209 +206,234 @@ interface GuideDraft {
  */
 function cleanAndParseJSON(content: string): any {
   // Remove markdown code blocks (```json ... ``` or ``` ... ```)
-  let cleaned = content.trim()
-  
-  const jsonBlockMatch = cleaned.match(/```(?:json)?\s*([\s\S]*?)\s*```/)
+  let cleaned = content.trim();
+
+  const jsonBlockMatch = cleaned.match(/```(?:json)?\s*([\s\S]*?)\s*```/);
   if (jsonBlockMatch && jsonBlockMatch[1]) {
-    cleaned = jsonBlockMatch[1].trim()
+    cleaned = jsonBlockMatch[1].trim();
   }
-  
+
   // Remove any leading/trailing markdown formatting
-  cleaned = cleaned.replace(/^```json\s*/i, '').replace(/\s*```$/i, '').trim()
-  
+  cleaned = cleaned
+    .replace(/^```json\s*/i, "")
+    .replace(/\s*```$/i, "")
+    .trim();
+
   // Try to find the JSON object boundaries if there's extra text
-  const jsonStart = cleaned.indexOf('{')
-  const jsonEnd = cleaned.lastIndexOf('}')
+  const jsonStart = cleaned.indexOf("{");
+  const jsonEnd = cleaned.lastIndexOf("}");
   if (jsonStart !== -1 && jsonEnd !== -1 && jsonEnd > jsonStart) {
-    cleaned = cleaned.substring(jsonStart, jsonEnd + 1)
+    cleaned = cleaned.substring(jsonStart, jsonEnd + 1);
   }
-  
+
   // Handle control characters and escape issues within string values
-  let jsonText = ''
-  let inString = false
-  let escapeNext = false
-  let inDataReference = false
-  let dataRefDepth = 0
-  
+  let jsonText = "";
+  let inString = false;
+  let escapeNext = false;
+  let inDataReference = false;
+  let dataRefDepth = 0;
+
   for (let i = 0; i < cleaned.length; i++) {
-    const char = cleaned[i]
-    const nextChar = i + 1 < cleaned.length ? cleaned[i + 1] : ''
-    const prevChar = i > 0 ? cleaned[i - 1] : ''
-    
+    const char = cleaned[i];
+    const nextChar = i + 1 < cleaned.length ? cleaned[i + 1] : "";
+    const prevChar = i > 0 ? cleaned[i - 1] : "";
+
     // Track data reference boundaries {{...}}
-    if (char === '{' && nextChar === '{' && !inString) {
-      inDataReference = true
-      dataRefDepth = 0
-      jsonText += char
-      continue
+    if (char === "{" && nextChar === "{" && !inString) {
+      inDataReference = true;
+      dataRefDepth = 0;
+      jsonText += char;
+      continue;
     }
     if (inDataReference) {
-      if (char === '{') dataRefDepth++
-      if (char === '}') {
-        dataRefDepth--
-        if (dataRefDepth === 0 && nextChar === '}') {
-          inDataReference = false
-          jsonText += char
-          continue
+      if (char === "{") dataRefDepth++;
+      if (char === "}") {
+        dataRefDepth--;
+        if (dataRefDepth === 0 && nextChar === "}") {
+          inDataReference = false;
+          jsonText += char;
+          continue;
         }
       }
       // Inside data reference, don't escape - just pass through
-      jsonText += char
-      continue
+      jsonText += char;
+      continue;
     }
-    
+
     if (escapeNext) {
-      jsonText += char
-      escapeNext = false
-      continue
+      jsonText += char;
+      escapeNext = false;
+      continue;
     }
-    
-    if (char === '\\') {
-      jsonText += char
-      escapeNext = true
-      continue
+
+    if (char === "\\") {
+      jsonText += char;
+      escapeNext = true;
+      continue;
     }
-    
+
     if (char === '"') {
-      inString = !inString
-      jsonText += char
-      continue
+      inString = !inString;
+      jsonText += char;
+      continue;
     }
-    
+
     if (inString) {
       // Within a string, handle special cases
-      if (char === '\n') {
-        jsonText += '\\n'
-      } else if (char === '\r') {
-        jsonText += '\\r'
-      } else if (char === '\t') {
-        jsonText += '\\t'
-      } else if (char === '\b') {
-        jsonText += '\\b'
-      } else if (char === '\f') {
-        jsonText += '\\f'
-      } else if (char.charCodeAt(0) < 32 && char !== ' ') {
+      if (char === "\n") {
+        jsonText += "\\n";
+      } else if (char === "\r") {
+        jsonText += "\\r";
+      } else if (char === "\t") {
+        jsonText += "\\t";
+      } else if (char === "\b") {
+        jsonText += "\\b";
+      } else if (char === "\f") {
+        jsonText += "\\f";
+      } else if (char.charCodeAt(0) < 32 && char !== " ") {
         // Skip other control characters
-        continue
-      } else if (char === '"' && prevChar !== '\\') {
+        continue;
+      } else if (char === '"' && prevChar !== "\\") {
         // Unescaped quote inside string - escape it
-        jsonText += '\\"'
+        jsonText += '\\"';
       } else {
-        jsonText += char
+        jsonText += char;
       }
     } else {
       // Outside strings, clean up whitespace issues
-      if (char === '\n' || char === '\r') {
+      if (char === "\n" || char === "\r") {
         // Replace newlines with space if they're not part of structure
-        if (prevChar !== ',' && prevChar !== ':' && prevChar !== '[' && prevChar !== '{') {
-          jsonText += ' '
+        if (
+          prevChar !== "," &&
+          prevChar !== ":" &&
+          prevChar !== "[" &&
+          prevChar !== "{"
+        ) {
+          jsonText += " ";
         }
-      } else if (char.charCodeAt(0) < 32 && char !== ' ' && char !== '\t') {
+      } else if (char.charCodeAt(0) < 32 && char !== " " && char !== "\t") {
         // Skip other control characters outside strings
-        continue
+        continue;
       } else {
-        jsonText += char
+        jsonText += char;
       }
     }
   }
-  
+
   // Try to fix common JSON issues
   // Fix trailing commas
-  jsonText = jsonText.replace(/,(\s*[}\]])/g, '$1')
-  
+  jsonText = jsonText.replace(/,(\s*[}\]])/g, "$1");
+
   // Fix double quotes before property names (e.g., ""answer" -> "answer")
-  jsonText = jsonText.replace(/""([a-zA-Z_$][a-zA-Z0-9_$]*)"\s*:/g, '"$1":')
-  
+  jsonText = jsonText.replace(/""([a-zA-Z_$][a-zA-Z0-9_$]*)"\s*:/g, '"$1":');
+
   // Fix double quotes in property names that might have been escaped incorrectly
-  jsonText = jsonText.replace(/\\?""([a-zA-Z_$][a-zA-Z0-9_$]*)"\s*:/g, '"$1":')
-  
+  jsonText = jsonText.replace(/\\?""([a-zA-Z_$][a-zA-Z0-9_$]*)"\s*:/g, '"$1":');
+
   // Try parsing
   try {
-    return JSON.parse(jsonText)
+    return JSON.parse(jsonText);
   } catch (error) {
     // If parsing fails, try to extract just the JSON object more aggressively
-    const errorMessage = error instanceof Error ? error.message : String(error)
-    console.error('[pSEO] JSON parse error, attempting recovery...')
-    console.error('[pSEO] Error:', errorMessage)
-    
+    const errorMessage = error instanceof Error ? error.message : String(error);
+    console.error("[pSEO] JSON parse error, attempting recovery...");
+    console.error("[pSEO] Error:", errorMessage);
+
     // Try to extract position from error message
-    const positionMatch = errorMessage.match(/position (\d+)/)
+    const positionMatch = errorMessage.match(/position (\d+)/);
     if (positionMatch) {
-      const position = parseInt(positionMatch[1])
-      const start = Math.max(0, position - 100)
-      const end = Math.min(jsonText.length, position + 100)
-      console.error('[pSEO] Context around error:')
-      console.error(jsonText.substring(start, end))
+      const position = parseInt(positionMatch[1]);
+      const start = Math.max(0, position - 100);
+      const end = Math.min(jsonText.length, position + 100);
+      console.error("[pSEO] Context around error:");
+      console.error(jsonText.substring(start, end));
     }
-    
+
     // Try to find and extract the main JSON object
-    const objMatch = jsonText.match(/\{[\s\S]*\}/)
+    const objMatch = jsonText.match(/\{[\s\S]*\}/);
     if (objMatch) {
       try {
         // Try to fix common issues in the extracted JSON
-        let fixedJson = objMatch[0]
+        let fixedJson = objMatch[0];
         // Remove trailing commas
-        fixedJson = fixedJson.replace(/,(\s*[}\]])/g, '$1')
+        fixedJson = fixedJson.replace(/,(\s*[}\]])/g, "$1");
         // Fix double quotes before property names (e.g., ""answer" -> "answer")
-        fixedJson = fixedJson.replace(/""([a-zA-Z_$][a-zA-Z0-9_$]*)"\s*:/g, '"$1":')
+        fixedJson = fixedJson.replace(
+          /""([a-zA-Z_$][a-zA-Z0-9_$]*)"\s*:/g,
+          '"$1":'
+        );
         // Fix double quotes in property names that might have been escaped incorrectly
-        fixedJson = fixedJson.replace(/\\?""([a-zA-Z_$][a-zA-Z0-9_$]*)"\s*:/g, '"$1":')
+        fixedJson = fixedJson.replace(
+          /\\?""([a-zA-Z_$][a-zA-Z0-9_$]*)"\s*:/g,
+          '"$1":'
+        );
         // Try to fix unclosed strings by finding the last complete object
-        return JSON.parse(fixedJson)
+        return JSON.parse(fixedJson);
       } catch (e) {
-        console.error('[pSEO] Recovery attempt failed:', e instanceof Error ? e.message : String(e))
+        console.error(
+          "[pSEO] Recovery attempt failed:",
+          e instanceof Error ? e.message : String(e)
+        );
         // Log a sample of the problematic JSON for debugging
-        console.error('[pSEO] First 500 chars of JSON:', jsonText.substring(0, 500))
-        throw error
+        console.error(
+          "[pSEO] First 500 chars of JSON:",
+          jsonText.substring(0, 500)
+        );
+        throw error;
       }
     }
-    
-    throw error
+
+    throw error;
   }
 }
 
-export async function generateGuideDraft(params: GenerateGuideParams): Promise<GuideDraft> {
-  const apiKey = process.env.GEMINI_API_KEY
+export async function generateGuideDraft(
+  params: GenerateGuideParams
+): Promise<GuideDraft> {
+  const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) {
-    throw new Error('GEMINI_API_KEY is not configured')
+    throw new Error("GEMINI_API_KEY is not configured");
   }
 
-  const genAI = new GoogleGenerativeAI(apiKey)
-  const model = genAI.getGenerativeModel({ 
+  const genAI = new GoogleGenerativeAI(apiKey);
+  const model = genAI.getGenerativeModel({
     model: MODEL,
     generationConfig: {
       temperature: 0.8, // High temperature for maximum creativity and human-like variation
       topP: 0.95,
       topK: 40,
-    }
-  })
+    },
+  });
 
-  const systemInstruction = 'You are a real estate professional in Mexico with 15+ years of hands-on experience. You write guides based on your actual experience, not as an AI generating content. Write in first person, use contractions, vary sentence structure dramatically, include personal observations, and write conversationally as if explaining to a friend. The goal is to sound 100% human - like a real person sharing real knowledge, not an AI article.'
+  const systemInstruction =
+    "You are a real estate professional in Mexico with 15+ years of hands-on experience. You write guides based on your actual experience, not as an AI generating content. Write in first person, use contractions, vary sentence structure dramatically, include personal observations, and write conversationally as if explaining to a friend. The goal is to sound 100% human - like a real person sharing real knowledge, not an AI article.";
 
-  const prompt = buildPrompt(params)
-  const fullPrompt = `${systemInstruction}\n\n${prompt}`
+  const prompt = buildPrompt(params);
+  const fullPrompt = `${systemInstruction}\n\n${prompt}`;
 
   try {
-    const result = await model.generateContent(fullPrompt)
-    const response = await result.response
-    let content = response.text()
+    const result = await model.generateContent(fullPrompt);
+    const response = await result.response;
+    let content = response.text();
 
     if (!content) {
-      throw new Error('Gemini returned an empty response')
+      throw new Error("Gemini returned an empty response");
     }
 
     // Clean and parse JSON
-    const parsed = cleanAndParseJSON(content)
-    
-    const sections: GuideSection[] = (parsed.sections || []).map((section: any) => ({
-      heading: section.heading,
-      paragraphs: section.paragraphs || [],
-      bullets: section.bullets,
-      dataPoints: section.dataPoints,
-      // imagePrompt will be used later to generate images
-      imagePrompt: section.imagePrompt
-    }))
-    const faq: GuideFAQItem[] | undefined = parsed.faq
+    const parsed = cleanAndParseJSON(content);
+
+    const sections: GuideSection[] = (parsed.sections || []).map(
+      (section: any) => ({
+        heading: section.heading,
+        paragraphs: section.paragraphs || [],
+        bullets: section.bullets,
+        dataPoints: section.dataPoints,
+        // imagePrompt will be used later to generate images
+        imagePrompt: section.imagePrompt,
+      })
+    );
+    const faq: GuideFAQItem[] | undefined = parsed.faq;
 
     return {
       title: parsed.title,
@@ -410,22 +444,28 @@ export async function generateGuideDraft(params: GenerateGuideParams): Promise<G
       mainImagePrompt: parsed.mainImagePrompt,
       tags: parsed.tags || [], // AI-generated tags based on content
       sections,
-      faq
-    }
+      faq,
+    };
   } catch (error) {
-    console.error('[pSEO] Failed to parse Gemini response', error)
-    if (error instanceof Error && error.message.includes('JSON')) {
+    console.error("[pSEO] Failed to parse Gemini response", error);
+    if (error instanceof Error && error.message.includes("JSON")) {
       // Try to log the raw content for debugging
       try {
-        const result = await model.generateContent(fullPrompt)
-        const response = await result.response
-        const rawContent = response.text()
-        console.error('[pSEO] Raw content received:', rawContent?.substring(0, 500))
+        const result = await model.generateContent(fullPrompt);
+        const response = await result.response;
+        const rawContent = response.text();
+        console.error(
+          "[pSEO] Raw content received:",
+          rawContent?.substring(0, 500)
+        );
       } catch (logError) {
         // Ignore logging errors
       }
     }
-    throw new Error(`Gemini response was not valid JSON: ${error instanceof Error ? error.message : String(error)}. Raw content preview logged above.`)
+    throw new Error(
+      `Gemini response was not valid JSON: ${
+        error instanceof Error ? error.message : String(error)
+      }. Raw content preview logged above.`
+    );
   }
 }
-
