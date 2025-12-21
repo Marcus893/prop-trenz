@@ -30,7 +30,7 @@ const CITY_CENTER_COORDS: { [key: string]: [number, number] } = {
   Tijuana: [32.5149, -117.0382],
   Mérida: [20.9674, -89.5926],
   "Benito Juárez(Cancún)": [21.1619, -86.8515],
-  Solidaridad: [20.6296, -87.0739],
+  "Playa del Carmen": [20.6296, -87.0739],
   Tulum: [20.2114, -87.4654],
 };
 
@@ -177,7 +177,7 @@ export default function NeighborhoodRentMap({
     if (tijuana.includes(m)) return "Tijuana";
     if (merida.includes(m)) return "Mérida";
     if (cancun.includes(m)) return "Benito Juárez(Cancún)";
-    if (solidaridad.includes(m)) return "Solidaridad";
+    if (solidaridad.includes(m)) return "Playa del Carmen";
     if (tulum.includes(m)) return "Tulum";
   }
 
@@ -229,7 +229,7 @@ export default function NeighborhoodRentMap({
           } else if (city === "Benito Juárez(Cancún)") {
             if (lat >= 21.0 && lat <= 21.3 && lon >= -87.0 && lon <= -86.7)
               return [lat, lon];
-          } else if (city === "Solidaridad") {
+          } else if (city === "Playa del Carmen") {
             if (lat >= 20.4 && lat <= 20.8 && lon >= -87.2 && lon <= -86.9)
               return [lat, lon];
           } else if (city === "Tulum") {
@@ -332,7 +332,7 @@ export default function NeighborhoodRentMap({
     } else if (city === "Benito Juárez(Cancún)") {
       cityState = "Quintana Roo";
       cityName = "Cancún";
-    } else if (city === "Solidaridad") {
+    } else if (city === "Playa del Carmen") {
       cityState = "Quintana Roo";
       cityName = "Playa del Carmen";
     } else if (city === "Tulum") {
@@ -530,7 +530,7 @@ export default function NeighborhoodRentMap({
           if (tijuana.includes(m)) return "Tijuana";
           if (merida.includes(m)) return "Mérida";
           if (cancun.includes(m)) return "Benito Juárez(Cancún)";
-          if (solidaridad.includes(m)) return "Solidaridad";
+          if (solidaridad.includes(m)) return "Playa del Carmen";
           if (tulum.includes(m)) return "Tulum";
           return null;
         })(municipality);
@@ -652,7 +652,7 @@ export default function NeighborhoodRentMap({
           : cancun.includes(mun)
           ? "Benito Juárez(Cancún)"
           : solidaridad.includes(mun)
-          ? "Solidaridad"
+          ? "Playa del Carmen"
           : tulum.includes(mun)
           ? "Tulum"
           : null;

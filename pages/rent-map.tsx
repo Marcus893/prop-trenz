@@ -60,7 +60,7 @@ export default function RentMapPage() {
     tijuana: "Tijuana",
     merida: "Mérida",
     "benito-juarez-cancun": "Benito Juárez(Cancún)",
-    solidaridad: "Solidaridad",
+    solidaridad: "Playa del Carmen",
     tulum: "Tulum",
   };
 
@@ -74,7 +74,7 @@ export default function RentMapPage() {
     Tijuana: "tijuana",
     Mérida: "merida",
     "Benito Juárez(Cancún)": "benito-juarez-cancun",
-    Solidaridad: "solidaridad",
+    "Playa del Carmen": "solidaridad",
     Tulum: "tulum",
   };
 
@@ -132,6 +132,7 @@ export default function RentMapPage() {
     if (router.isReady) {
       const cityParam = router.query.city as string | undefined;
       const neighborhoodParam = router.query.neighborhood as string | undefined;
+      const municipalityParam = router.query.municipality as string | undefined;
 
       if (cityParam) {
         const cityName = slugToCityName[cityParam.toLowerCase()] || cityParam;
@@ -144,8 +145,24 @@ export default function RentMapPage() {
       if (neighborhoodParam) {
         setInitialNeighborhood(neighborhoodParam);
       }
+
+      // Handle municipality param - need to find the matching municipality name
+      if (municipalityParam && rentData) {
+        // Decode and normalize the municipality slug
+        const decodedSlug = decodeURIComponent(municipalityParam).toLowerCase();
+        
+        // Find matching municipality in rentData
+        const matchingMunicipality = Object.keys(rentData).find((m) => {
+          const municipalitySlug = m.toLowerCase().replace(/\s+/g, '-');
+          return municipalitySlug === decodedSlug || m.toLowerCase() === decodedSlug;
+        });
+        
+        if (matchingMunicipality) {
+          setSelectedMunicipality(matchingMunicipality);
+        }
+      }
     }
-  }, [router.isReady, router.query.city, router.query.neighborhood]);
+  }, [router.isReady, router.query.city, router.query.neighborhood, router.query.municipality, rentData]);
 
   useEffect(() => {
     const loadRentData = async () => {
@@ -213,7 +230,7 @@ export default function RentMapPage() {
     if (tijuana.includes(m)) return "Tijuana";
     if (merida.includes(m)) return "Mérida";
     if (cancun.includes(m)) return "Benito Juárez(Cancún)";
-    if (solidaridad.includes(m)) return "Solidaridad";
+    if (solidaridad.includes(m)) return "Playa del Carmen";
     if (tulum.includes(m)) return "Tulum";
     return "Ciudad de México"; // default fallback
   }
@@ -232,7 +249,7 @@ export default function RentMapPage() {
     "Tijuana",
     "Mérida",
     "Benito Juárez(Cancún)",
-    "Solidaridad",
+    "Playa del Carmen",
     "Tulum",
   ];
   const cities = rentData
