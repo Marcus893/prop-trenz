@@ -93,13 +93,12 @@ export function Layout({
   const ADMIN_EMAILS = ["43uy75@gmail.com", "marcusding1@gmail.com"];
 
   const navigation = [
-    { name: t("common.home", "Home"), href: "/", icon: Home },
     {
       name: t("common.insights", "Insights"),
       href: "/insights",
       icon: TrendingUp,
     },
-    { name: t("common.charts", "Charts"), href: "/charts", icon: BarChart3 },
+    { name: t("common.price_trends", "Price Trends"), href: "/charts", icon: BarChart3 },
     {
       name: t("common.rent_price_map", "Rent Price Map"),
       href: "/rent-map",

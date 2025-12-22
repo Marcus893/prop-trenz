@@ -73,13 +73,13 @@ export default function ChartsPage() {
     <>
       <Head>
         <title>
-          {t("charts.meta_title", "Real Estate Price Charts - PropTrenz")}
+          {t("charts.meta_title", "Real Estate Price Trends - PropTrenz")}
         </title>
         <meta
           name="description"
           content={t(
             "charts.meta_description",
-            "Interactive real estate price charts and trends for Mexican states and municipalities. Explore historical price data for Mexico."
+            "Track historical real estate price trends across Mexican states and municipalities. See how property values have changed over time."
           )}
         />
         <link rel="canonical" href={hreflangUrls.en} />
@@ -125,7 +125,7 @@ export default function ChartsPage() {
         <link rel="alternate" hrefLang="zh-TW" href={hreflangUrls.zh} />
         <link rel="alternate" hrefLang="zh-HK" href={hreflangUrls.zh} />
       </Head>
-      <Layout title={t("charts.title")} subtitle={t("charts.subtitle")}>
+      <Layout title={t("charts.title", "Price Trends")} subtitle={t("charts.subtitle", "Select a location from the navigation panel to view detailed price trends and analysis")}>
         <div className="space-y-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <GeographicNavigator

@@ -116,7 +116,7 @@ export default function LandingPage() {
   const navLinks = [
     { href: "/rent-map", label: t("nav.rent_map", "Rent Prices") },
     { href: "/map", label: t("nav.purchase_map", "Purchase Prices") },
-    { href: "/charts", label: t("nav.charts", "Charts") },
+    { href: "/charts", label: t("nav.price_trends", "Price Trends") },
     { href: "/calculators", label: t("nav.calculators", "Calculators") },
     { href: "/guides", label: t("nav.guides", "Guides") },
   ];
@@ -336,18 +336,18 @@ export default function LandingPage() {
                     <div className="p-6">
                       <div className="flex items-center justify-between mb-6">
                         <div>
-                          <p className="text-gray-500 text-sm">Average Price</p>
+                          <p className="text-gray-500 text-sm">{t("home.mockup_avg_price", "Average Price")}</p>
                           <p className="text-3xl font-bold text-gray-900">
                             $4,250,000
                           </p>
                           <p className="text-green-600 text-sm flex items-center">
                             <TrendingUp className="h-4 w-4 mr-1" />
-                            +12.3% YoY
+                            +12.3% {t("home.yoy", "YoY")}
                           </p>
                         </div>
                         <div className="text-right">
                           <p className="text-gray-500 text-sm">
-                            Properties Analyzed
+                            {t("home.mockup_properties_analyzed", "Properties Analyzed")}
                           </p>
                           <p className="text-2xl font-bold text-blue-600">
                             10,847
@@ -380,7 +380,7 @@ export default function LandingPage() {
                     </div>
                     <div>
                       <p className="text-2xl font-bold text-gray-900">500+</p>
-                      <p className="text-gray-500 text-sm">Neighborhoods</p>
+                      <p className="text-gray-500 text-sm">{t("home.neighborhoods", "Neighborhoods")}</p>
                     </div>
                   </div>
                 </div>
@@ -393,7 +393,7 @@ export default function LandingPage() {
                     </div>
                     <div>
                       <p className="text-2xl font-bold text-gray-900">10K+</p>
-                      <p className="text-gray-500 text-sm">Data Points</p>
+                      <p className="text-gray-500 text-sm">{t("home.data_points", "Data Points")}</p>
                     </div>
                   </div>
                 </div>
@@ -563,13 +563,13 @@ export default function LandingPage() {
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                   {t(
                     "home.feature1_title",
-                    "Streamline your workflow to save time and money"
+                    "See exactly what you'll pay — neighborhood by neighborhood"
                   )}
                 </h2>
                 <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                   {t(
                     "home.feature1_desc",
-                    "Gain an edge on your competition by putting the power of the most comprehensive and accurate residential real estate data and analytics in the industry at your team's fingertips. Use AI-driven algorithms to understand every step of the analysis value chain to generate meaningful insights to help your team be more efficient, ultimately saving time and money."
+                    "Stop guessing about rent or purchase prices in Mexico. Our interactive maps show you real rates across 500+ neighborhoods in major cities like CDMX, Guadalajara, Monterrey and more—broken down by size, property type, and price per square meter. Instantly spot where you're overpaying or find hidden-gem neighborhoods that fit your budget."
                   )}
                 </p>
                 <ul className="space-y-4 mb-8">
@@ -578,7 +578,7 @@ export default function LandingPage() {
                     <span className="text-gray-700">
                       {t(
                         "home.feature1_point1",
-                        "Interactive neighborhood-level price maps"
+                        "Color-coded price maps—click any neighborhood for detailed stats"
                       )}
                     </span>
                   </li>
@@ -587,7 +587,7 @@ export default function LandingPage() {
                     <span className="text-gray-700">
                       {t(
                         "home.feature1_point2",
-                        "Compare rent vs. buy economics instantly"
+                        "Filter by price to match your exact budget"
                       )}
                     </span>
                   </li>
@@ -596,7 +596,7 @@ export default function LandingPage() {
                     <span className="text-gray-700">
                       {t(
                         "home.feature1_point3",
-                        "Filter by property type, price range, and more"
+                        "See average price/m² to compare value across areas"
                       )}
                     </span>
                   </li>
@@ -612,25 +612,133 @@ export default function LandingPage() {
               </div>
 
               <div className="relative">
-                <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-8 shadow-xl">
+                <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-6 shadow-xl">
                   <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-                    <div className="h-64 md:h-80 bg-gradient-to-br from-green-100 to-blue-100 flex items-center justify-center">
-                      <div className="text-center">
-                        <MapPin className="h-16 w-16 text-blue-500 mx-auto mb-4" />
-                        <p className="text-gray-600 font-medium">
-                          Interactive Price Map
-                        </p>
-                        <p className="text-sm text-gray-500">
-                          500+ neighborhoods
-                        </p>
+                    {/* Mock Map Interface */}
+                    <div className="relative h-72 md:h-96 bg-gradient-to-br from-emerald-50 via-blue-50 to-cyan-50">
+                      {/* Map Grid Lines */}
+                      <div className="absolute inset-0 opacity-20">
+                        <div
+                          className="h-full w-full"
+                          style={{
+                            backgroundImage:
+                              "linear-gradient(#cbd5e1 1px, transparent 1px), linear-gradient(90deg, #cbd5e1 1px, transparent 1px)",
+                            backgroundSize: "40px 40px",
+                          }}
+                        ></div>
+                      </div>
+
+                      {/* Neighborhood Zones */}
+                      <div className="absolute top-8 left-8 w-20 h-16 bg-green-400/40 rounded-lg border-2 border-green-500/60 flex items-center justify-center">
+                        <span className="text-xs font-bold text-green-800">
+                          $8k
+                        </span>
+                      </div>
+                      <div className="absolute top-6 left-32 w-24 h-20 bg-emerald-400/50 rounded-lg border-2 border-emerald-500/60 flex items-center justify-center">
+                        <span className="text-xs font-bold text-emerald-800">
+                          $12k
+                        </span>
+                      </div>
+                      <div className="absolute top-16 right-12 w-28 h-24 bg-blue-400/50 rounded-lg border-2 border-blue-500/60 flex items-center justify-center">
+                        <span className="text-xs font-bold text-blue-800">
+                          $18k
+                        </span>
+                      </div>
+                      <div className="absolute top-32 left-12 w-32 h-20 bg-yellow-400/40 rounded-lg border-2 border-yellow-500/60 flex items-center justify-center">
+                        <span className="text-xs font-bold text-yellow-800">
+                          $15k
+                        </span>
+                      </div>
+                      <div className="absolute bottom-20 left-24 w-24 h-24 bg-orange-400/50 rounded-lg border-2 border-orange-500/60 flex items-center justify-center">
+                        <span className="text-xs font-bold text-orange-800">
+                          $22k
+                        </span>
+                      </div>
+                      <div className="absolute bottom-12 right-16 w-20 h-16 bg-red-400/40 rounded-lg border-2 border-red-500/60 flex items-center justify-center">
+                        <span className="text-xs font-bold text-red-800">
+                          $35k
+                        </span>
+                      </div>
+                      <div className="absolute bottom-28 right-8 w-16 h-14 bg-purple-400/40 rounded-lg border-2 border-purple-500/60 flex items-center justify-center">
+                        <span className="text-xs font-bold text-purple-800">
+                          $28k
+                        </span>
+                      </div>
+
+                      {/* Selected Neighborhood Popup */}
+                      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                        <div className="bg-white rounded-xl shadow-2xl p-4 border border-gray-200 min-w-[180px]">
+                          <div className="flex items-center gap-2 mb-2">
+                            <MapPin className="h-4 w-4 text-blue-600" />
+                            <span className="font-semibold text-gray-900 text-sm">
+                              Roma Norte
+                            </span>
+                          </div>
+                          <div className="space-y-1 text-xs">
+                            <div className="flex justify-between">
+                              <span className="text-gray-500">{t("home.mockup_avg_rent", "Avg Rent:")} </span>
+                              <span className="font-medium text-gray-900">
+                                $31,519/{t("home.mockup_month_abbr", "mo")}
+                              </span>
+                            </div>
+                            <div className="flex justify-between">
+                              <span className="text-gray-500">{t("home.mockup_price_m2", "Price/m²:")} </span>
+                              <span className="font-medium text-gray-900">
+                                $81,100
+                              </span>
+                            </div>
+                            <div className="flex justify-between">
+                              <span className="text-gray-500">{t("home.mockup_listings", "Listings:")} </span>
+                              <span className="font-medium text-gray-900">
+                                107 {t("home.mockup_available", "available")}
+                              </span>
+                            </div>
+                          </div>
+                          <div className="mt-2 pt-2 border-t border-gray-100">
+                            <div className="flex items-center gap-1">
+                              <div className="w-2 h-2 rounded-full bg-red-500"></div>
+                              <span className="text-xs text-red-600 font-medium">
+                                {t("home.mockup_expensive_area", "Expensive area")}
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="w-3 h-3 bg-white border-r border-b border-gray-200 transform rotate-45 mx-auto -mt-1.5"></div>
+                      </div>
+                    </div>
+
+                    {/* Map Controls Bar */}
+                    <div className="bg-gray-50 border-t border-gray-100 px-4 py-3 flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <span className="text-xs text-gray-500">{t("home.mockup_filter", "Filter:")} </span>
+                        <span className="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full font-medium">
+                          2BR
+                        </span>
+                        <span className="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">
+                          {t("home.mockup_all_prices", "All prices")}
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="flex items-center gap-1">
+                          <div className="w-3 h-3 rounded bg-green-400"></div>
+                          <span className="text-xs text-gray-500">$8-15k</span>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <div className="w-3 h-3 rounded bg-orange-400"></div>
+                          <span className="text-xs text-gray-500">$15-25k</span>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <div className="w-3 h-3 rounded bg-red-400"></div>
+                          <span className="text-xs text-gray-500">$25k+</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 {/* Floating Badge */}
-                <div className="absolute -bottom-4 -right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg">
-                  <p className="font-bold">$425,000</p>
-                  <p className="text-xs opacity-80">Avg. price/m²</p>
+                <div className="absolute -bottom-4 -right-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-5 py-3 rounded-xl shadow-lg">
+                  <p className="font-bold text-lg">500+</p>
+                  <p className="text-xs opacity-90">{t("home.neighborhoods", "Neighborhoods")}</p>
                 </div>
               </div>
             </div>
@@ -645,7 +753,7 @@ export default function LandingPage() {
                 <div className="bg-gradient-to-br from-purple-50 to-pink-100 rounded-2xl p-8 shadow-xl">
                   <div className="bg-white rounded-xl shadow-lg p-6">
                     <p className="text-gray-500 text-sm mb-2">
-                      Historical Price Trend
+                      {t("home.mockup_historical_trend", "Historical Price Trend")}
                     </p>
                     <div className="flex items-end justify-between h-48">
                       {[40, 55, 45, 60, 75, 65, 80, 90, 85, 95, 100, 110].map(
@@ -667,24 +775,24 @@ export default function LandingPage() {
                 {/* Floating Stats */}
                 <div className="absolute -top-4 -left-4 bg-white rounded-lg p-3 shadow-lg border">
                   <p className="text-green-600 font-bold">+156%</p>
-                  <p className="text-xs text-gray-500">10yr growth</p>
+                  <p className="text-xs text-gray-500">{t("home.mockup_10yr_growth", "10yr growth")}</p>
                 </div>
               </div>
 
               <div className="order-1 lg:order-2">
                 <p className="text-purple-600 font-semibold mb-3 uppercase tracking-wide text-sm">
-                  {t("home.feature2_label", "Data & Analytics")}
+                  {t("home.feature2_label", "Price Trends")}
                 </p>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                   {t(
                     "home.feature2_title",
-                    "We curate and normalize data from thousands of sources"
+                    "Track how property prices have changed over 20+ years"
                   )}
                 </h2>
                 <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                   {t(
                     "home.feature2_desc",
-                    "Our data goes through a rigorous quality control process to ensure accuracy. Our analytical algorithms harness the power of machine learning and artificial intelligence to synthesize meaningful insights, while our smart visualization helps you understand complex market dynamics."
+                    "Wondering if now is the right time to buy? Our price trend charts show you exactly how real estate values have moved across every state and municipality in Mexico—going back over two decades. See the big picture before making your biggest purchase."
                   )}
                 </p>
                 <ul className="space-y-4 mb-8">
@@ -693,7 +801,7 @@ export default function LandingPage() {
                     <span className="text-gray-700">
                       {t(
                         "home.feature2_point1",
-                        "20+ years of historical price data"
+                        "Historical data from 2005 to present—see the full market cycle"
                       )}
                     </span>
                   </li>
@@ -702,7 +810,7 @@ export default function LandingPage() {
                     <span className="text-gray-700">
                       {t(
                         "home.feature2_point2",
-                        "Quarter-over-quarter and year-over-year trends"
+                        "Across all levels: national, state, municipality, metro zone & more"
                       )}
                     </span>
                   </li>
@@ -711,7 +819,7 @@ export default function LandingPage() {
                     <span className="text-gray-700">
                       {t(
                         "home.feature2_point3",
-                        "Compare neighborhoods and municipalities"
+                        "Filter to see any time frame: 1yr, 5yr, 10yr, or custom ranges"
                       )}
                     </span>
                   </li>
@@ -721,9 +829,133 @@ export default function LandingPage() {
                   size="lg"
                   className="bg-purple-600 hover:bg-purple-700"
                 >
-                  {t("home.view_charts", "View Price Charts")}
+                  {t("home.view_charts", "View Price Trends")}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Social Proof Section */}
+        <section className="py-16 md:py-20 bg-white border-b border-gray-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Testimonials */}
+            <div className="mb-16">
+              <p className="text-center text-sm font-semibold text-gray-400 uppercase tracking-widest mb-10">
+                {t(
+                  "home.social_proof_title",
+                  "Trusted by investors, expats, and professionals across the world"
+                )}
+              </p>
+              <div className="grid md:grid-cols-3 gap-8">
+                {/* Testimonial 1 */}
+                <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                  <div className="flex items-center gap-1 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <svg
+                        key={i}
+                        className="w-5 h-5 text-yellow-400 fill-current"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <p className="text-gray-700 mb-6 leading-relaxed">
+                    "
+                    {t(
+                      "home.testimonial_1",
+                      "PropTrenz helped me find undervalued neighborhoods in Mexico City before I even arrived. The rent data was spot-on — I knew exactly what to budget for."
+                    )}
+                    "
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white font-semibold text-sm">
+                      SK
+                    </div>
+                    <div>
+                      <p className="font-semibold text-gray-900 text-sm">
+                        Sarah K.
+                      </p>
+                      <p className="text-xs text-gray-500">
+                        {t("home.testimonial_1_role", "Digital Nomad from Austin, TX")}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Testimonial 2 */}
+                <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                  <div className="flex items-center gap-1 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <svg
+                        key={i}
+                        className="w-5 h-5 text-yellow-400 fill-current"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <p className="text-gray-700 mb-6 leading-relaxed">
+                    "
+                    {t(
+                      "home.testimonial_2",
+                      "As a real estate investor, I need accurate data. The price maps helped me see the full picture before buying my second property in Monterrey."
+                    )}
+                    "
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-white font-semibold text-sm">
+                      MR
+                    </div>
+                    <div>
+                      <p className="font-semibold text-gray-900 text-sm">
+                        Miguel R.
+                      </p>
+                      <p className="text-xs text-gray-500">
+                        {t("home.testimonial_2_role", "Real Estate Investor, Monterrey")}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Testimonial 3 */}
+                <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                  <div className="flex items-center gap-1 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <svg
+                        key={i}
+                        className="w-5 h-5 text-yellow-400 fill-current"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <p className="text-gray-700 mb-6 leading-relaxed">
+                    "
+                    {t(
+                      "home.testimonial_3",
+                      "The ROI calculator saved me hours of spreadsheet work. I could instantly compare different scenarios and financing options before making an offer."
+                    )}
+                    "
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center text-white font-semibold text-sm">
+                      JL
+                    </div>
+                    <div>
+                      <p className="font-semibold text-gray-900 text-sm">
+                        Jennifer L.
+                      </p>
+                      <p className="text-xs text-gray-500">
+                        {t("home.testimonial_3_role", "Expat Relocating to CDMX")}
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -869,7 +1101,7 @@ export default function LandingPage() {
                 />
                 <p className="text-sm leading-relaxed">
                   {t(
-                    "footer.tagline",
+                    "footer.description",
                     "The most comprehensive real estate data platform for Mexico. Make smarter property decisions."
                   )}
                 </p>
@@ -902,7 +1134,7 @@ export default function LandingPage() {
                       href="/charts"
                       className="hover:text-white transition-colors"
                     >
-                      {t("nav.charts", "Price Charts")}
+                      {t("nav.price_trends", "Price Trends")}
                     </Link>
                   </li>
                   <li>
@@ -941,18 +1173,26 @@ export default function LandingPage() {
                 </ul>
               </div>
 
-              {/* Company */}
+              {/* Legal */}
               <div>
                 <h4 className="text-white font-semibold mb-4">
-                  {t("footer.company", "Company")}
+                  {t("footer.legal", "Legal")}
                 </h4>
                 <ul className="space-y-3 text-sm">
                   <li>
                     <Link
-                      href="/profile"
+                      href="/privacy"
                       className="hover:text-white transition-colors"
                     >
-                      {t("footer.account", "My Account")}
+                      {t("footer.privacy", "Privacy Policy")}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/terms"
+                      className="hover:text-white transition-colors"
+                    >
+                      {t("footer.terms", "Terms of Service")}
                     </Link>
                   </li>
                 </ul>
