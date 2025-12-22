@@ -72,7 +72,7 @@
     "reset": "Restablecer",
     "home": "Inicio",
     "insights": "Perspectivas",
-    "charts": "Gráficos",
+    "price_trends": "Tendencias de Precios",
     "purchase_price_map": "Mapa de Precios de Compra",
     "rent_price_map": "Mapa de Precios de Renta",
     "guides": "Guías",
@@ -90,6 +90,8 @@
     "or": "o"
   },
   "home": {
+    "meta_title": "PropTrenz | Plataforma de Datos y Análisis Inmobiliario en México",
+    "meta_description": "Sigue los precios de bienes raíces en todo México con PropTrenz. Explora mapas de precios interactivos, análisis del mercado, tendencias por colonia y análisis basado en datos para tomar decisiones inmobiliarias más inteligentes.",
     "hero_title": "Decisiones inmobiliarias más inteligentes comienzan con información instantánea",
     "hero_subtitle": "Obtén acceso instantáneo a datos precisos de propiedades, valoraciones y análisis de mercado en todo México. Toma decisiones con confianza con inteligencia inmobiliaria integral.",
     "hero_description": "Explora Tendencias de Precios, Calcula Costos y Toma Decisiones Informadas",
@@ -225,8 +227,7 @@
     "mockup_filter": "Filtrar:",
     "mockup_all_prices": "Todos los precios",
     "mockup_historical_trend": "Tendencia Histórica de Precios",
-    "mockup_10yr_growth": "Crecimiento 10 años",
-    "yoy": "A/A"
+    "mockup_10yr_growth": "Crecimiento 10 años"
   },
   "nav": {
     "rent_map": "Precios de Renta",
@@ -528,6 +529,8 @@
       }
     },
     "roi": {
+      "meta_title": "Calculadora de ROI de Renta - PropTrenz",
+      "meta_description": "Calcula el ROI de propiedades en renta en México. Modela flujo de efectivo, cap rate y retornos cash-on-cash para tu inversión inmobiliaria.",
       "page_title": "Calculadora de ROI de Renta",
       "page_subtitle": "Modela flujo de efectivo, cap rate y cash-on-cash para propiedades en renta en México.",
       "property_section_title": "Compra y remodelación",
@@ -604,6 +607,8 @@
     }
   },
   "calculators_page": {
+    "meta_title": "Calculadoras Inmobiliarias - PropTrenz",
+    "meta_description": "Calculadoras gratuitas para comprar, mantener y vender propiedades en México. Estima costos de cierre, gastos de propiedad, costos de venta y ROI de renta.",
     "title": "Calculadoras Inmobiliarias",
     "subtitle": "Calcula rápidamente los costos de comprar, mantener y vender propiedades en México.",
     "closing_cost_title": "Costos de Cierre para Compradores",
@@ -617,6 +622,8 @@
     "learn_more": "Abrir calculadora"
   },
   "profile": {
+    "meta_title": "Mi Perfil - PropTrenz",
+    "meta_description": "Administra la configuración y preferencias de tu cuenta PropTrenz.",
     "title": "Perfil",
     "subtitle": "Administra la configuración de tu cuenta"
   },
@@ -700,6 +707,8 @@
     }
   },
   "guides_page": {
+    "meta_title": "Guías de Bienes Raíces en México | Perspectivas de Expertos - PropTrenz",
+    "meta_description": "Guías completas sobre comprar, mantener y vender propiedades en México. Perspectivas de expertos sobre impuestos, regulaciones y dinámica del mercado.",
     "title": "Guías del mercado inmobiliario mexicano",
     "subtitle": "Artículos basados en datos que explican impuestos, regulaciones y dinámica del mercado en cada etapa del ciclo inmobiliario.",
     "intro_banner": "PropTrenz recopila manuales basados en datos para comprar, poseer y vender propiedades en México. Son documentos vivos con tasas impositivas, referencias regulatorias y listas de verificación tomadas de circulares del SAT, datos de la SHF y notarios locales.",

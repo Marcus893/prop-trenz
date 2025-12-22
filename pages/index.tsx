@@ -125,11 +125,11 @@ export default function LandingPage() {
     <>
       <Head>
         <title>
-          PropTrenz | Mexico Real Estate Data &amp; Analytics Platform
+          {t('home.meta_title', 'PropTrenz | Mexico Real Estate Data & Analytics Platform')}
         </title>
         <meta
           name="description"
-          content="Track real estate prices across Mexico with PropTrenz. Explore interactive price maps, market insights, neighborhood trends, and data-driven analytics to make smarter property decisions."
+          content={t('home.meta_description', 'Track real estate prices across Mexico with PropTrenz. Explore interactive price maps, market insights, neighborhood trends, and data-driven analytics to make smarter property decisions.')}
         />
         <link rel="canonical" href={baseUrl} />
         <link rel="alternate" hrefLang="en" href={hreflangUrls.en} />

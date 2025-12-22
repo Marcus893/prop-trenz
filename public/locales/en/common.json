@@ -72,7 +72,7 @@
     "reset": "Reset",
     "home": "Home",
     "insights": "Insights",
-    "charts": "Charts",
+    "price_trends": "Price Trends",
     "purchase_price_map": "Purchase Price Map",
     "rent_price_map": "Rent Price Map",
     "guides": "Guides",
@@ -90,6 +90,8 @@
     "or": "or"
   },
   "home": {
+    "meta_title": "PropTrenz | Mexico Real Estate Data & Analytics Platform",
+    "meta_description": "Track real estate prices across Mexico with PropTrenz. Explore interactive price maps, market insights, neighborhood trends, and data-driven analytics to make smarter property decisions.",
     "hero_title": "Smarter real estate decisions start with instant insights",
     "hero_subtitle": "Get instant access to accurate property data, valuations, and market analytics across Mexico. Make confident decisions with comprehensive real estate intelligence.",
     "hero_description": "Explore Price Trends, Calculate Costs, and Make Informed Decisions",
@@ -225,8 +227,7 @@
     "mockup_filter": "Filter:",
     "mockup_all_prices": "All prices",
     "mockup_historical_trend": "Historical Price Trend",
-    "mockup_10yr_growth": "10yr growth",
-    "yoy": "YoY"
+    "mockup_10yr_growth": "10yr growth"
   },
   "nav": {
     "rent_map": "Rent Prices",
@@ -527,6 +528,8 @@
       }
     },
     "roi": {
+      "meta_title": "Rental ROI Calculator - PropTrenz",
+      "meta_description": "Calculate rental property ROI in Mexico. Model cash flow, cap rates, and cash-on-cash returns for your real estate investment.",
       "page_title": "Rental ROI Calculator",
       "page_subtitle": "Model cash flow, cap rates, and cash-on-cash returns for Mexican rental properties.",
       "property_section_title": "Purchase & renovation",
@@ -603,6 +606,8 @@
     }
   },
   "calculators_page": {
+    "meta_title": "Real Estate Calculators - PropTrenz",
+    "meta_description": "Free real estate calculators for buying, owning, and selling property in Mexico. Estimate closing costs, ownership expenses, seller costs, and rental ROI.",
     "title": "Real Estate Calculators",
     "subtitle": "Quickly estimate the costs involved in buying, owning, and selling property in Mexico.",
     "closing_cost_title": "Buyer Closing Cost",
@@ -616,6 +621,8 @@
     "learn_more": "Open calculator"
   },
   "profile": {
+    "meta_title": "My Profile - PropTrenz",
+    "meta_description": "Manage your PropTrenz account settings and preferences.",
     "title": "Profile",
     "subtitle": "Manage your account settings"
   },
@@ -701,6 +708,8 @@
     }
   },
   "guides_page": {
+    "meta_title": "Mexican Real Estate Guides | Expert Insights - PropTrenz",
+    "meta_description": "Comprehensive guides on buying, owning, and selling property in Mexico. Expert insights on taxes, regulations, and market dynamics.",
     "title": "Mexican Real Estate Guides",
     "subtitle": "Data-backed articles that explain taxes, regulations, and market dynamics for every stage of the property lifecycle.",
     "intro_banner": "PropTrenz curates data-backed playbooks for buying, owning, and selling property in Mexico. These living documents include tax rates, regulator references, and actionable checklists sourced from SAT circulars, SHF data, and local notaries.",

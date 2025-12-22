@@ -72,7 +72,7 @@
     "reset": "重置",
     "home": "首页",
     "insights": "市场洞察",
-    "charts": "图表",
+    "price_trends": "价格趋势",
     "purchase_price_map": "购买价格地图",
     "rent_price_map": "租金价格地图",
     "guides": "指南",
@@ -90,6 +90,8 @@
     "or": "或"
   },
   "home": {
+    "meta_title": "PropTrenz | 墨西哥房地产数据与分析平台",
+    "meta_description": "使用PropTrenz追踪墨西哥各地的房地产价格。探索互动式价格地图、市场洞察、社区趋势和数据驱动分析，做出更明智的房产决策。",
     "hero_title": "更智能的房地产决策从即时洞察开始",
     "hero_subtitle": "即时获取墨西哥准确的房产数据、估值和市场分析。通过全面的房地产情报自信地做出决策。",
     "hero_description": "探索价格趋势，计算成本，做出明智决策",
@@ -225,8 +227,7 @@
     "mockup_filter": "筛选:",
     "mockup_all_prices": "所有价格",
     "mockup_historical_trend": "历史价格趋势",
-    "mockup_10yr_growth": "10年增长",
-    "yoy": "同比"
+    "mockup_10yr_growth": "10年增长"
   },
   "nav": {
     "rent_map": "租金价格",
@@ -527,6 +528,8 @@
       }
     },
     "roi": {
+      "meta_title": "租赁投资回报计算器 - PropTrenz",
+      "meta_description": "计算墨西哥租赁房产的投资回报率。评估现金流、资本化率和现金回报率。",
       "page_title": "租赁投资回报计算器",
       "page_subtitle": "评估墨西哥出租房的现金流、资本化率以及现金回报率。",
       "property_section_title": "购置与装修",
@@ -603,6 +606,8 @@
     }
   },
   "calculators_page": {
+    "meta_title": "房地产计算工具 - PropTrenz",
+    "meta_description": "免费的墨西哥房地产计算工具。估算过户成本、持有费用、出售成本和租赁投资回报率。",
     "title": "房地产计算工具",
     "subtitle": "快速估算在墨西哥买房、持有与出售涉及的各项费用。",
     "closing_cost_title": "买方过户成本",
@@ -616,6 +621,8 @@
     "learn_more": "打开计算工具"
   },
   "profile": {
+    "meta_title": "我的个人资料 - PropTrenz",
+    "meta_description": "管理您的 PropTrenz 账户设置和偏好。",
     "title": "个人资料",
     "subtitle": "管理您的账户设置"
   },
@@ -699,6 +706,8 @@
     }
   },
   "guides_page": {
+    "meta_title": "墨西哥房地产指南 | 专家见解 - PropTrenz",
+    "meta_description": "关于在墨西哥购买、持有和出售房产的全面指南。税费、法规和市场动态的专家见解。",
     "title": "墨西哥房地产指南",
     "subtitle": "以数据为依据的文章，解释购房全周期涉及的税费、法规与市场动态。",
     "intro_banner": "PropTrenz 汇整面向墨西哥买房、持有与出售阶段的实务手册。这些常更新的内容引用 SAT 公文、SHF 数据与当地公证人信息，提供可执行的检查清单。",
