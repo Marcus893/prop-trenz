@@ -4,7 +4,7 @@ import React from 'react'
 import { cn } from '@/lib/utils'
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'ghost' | 'destructive'
+  variant?: 'primary' | 'secondary' | 'ghost' | 'destructive' | 'outline'
   size?: 'sm' | 'md' | 'lg'
   children: React.ReactNode
 }
@@ -14,16 +14,18 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     children, 
     variant = 'primary', 
     size = 'md', 
-    className, 
+    className,
+    disabled,
     ...props 
   }, ref) => {
-    const baseClasses = 'inline-flex items-center justify-center font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2'
+    const baseClasses = 'inline-flex items-center justify-center font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:pointer-events-none'
     
     const variantClasses = {
       primary: 'bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-500',
       secondary: 'bg-gray-200 hover:bg-gray-300 text-gray-800 focus:ring-gray-500',
       ghost: 'bg-transparent hover:bg-gray-100 text-gray-700 focus:ring-gray-500',
-      destructive: 'bg-red-600 hover:bg-red-700 text-white focus:ring-red-500'
+      destructive: 'bg-red-600 hover:bg-red-700 text-white focus:ring-red-500',
+      outline: 'bg-transparent border border-gray-300 hover:bg-gray-50 text-gray-700 focus:ring-gray-500'
     }
     
     const sizeClasses = {
@@ -35,6 +37,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <button
         ref={ref}
+        disabled={disabled}
         className={cn(
           baseClasses,
           variantClasses[variant],

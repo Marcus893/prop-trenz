@@ -4,8 +4,9 @@ import { useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'next-i18next'
 import { InfoIcon } from '@/components/ui/tooltip'
 import { LeadForm } from '@/components/leads/LeadForm'
+import { CalculatorReportModal } from './CalculatorReportModal'
 import { Button } from '@/components/ui/button'
-import { MessageCircle } from 'lucide-react'
+import { MessageCircle, FileText } from 'lucide-react'
 
 const DEFAULT_PRIMARY_RESIDENCE_EXEMPTION = '5500000'
 
@@ -29,6 +30,7 @@ type FormState = {
 export function SellerCostCalculator() {
   const { t } = useTranslation('common')
   const [showLeadForm, setShowLeadForm] = useState(false)
+  const [showReportModal, setShowReportModal] = useState(false)
   const [state, setState] = useState<FormState>(() => ({
     residencyStatus: 'resident',
     salePrice: '',
@@ -628,9 +630,20 @@ export function SellerCostCalculator() {
       </section>
 
       <section className="bg-white shadow-lg rounded-lg border border-blue-100 p-6">
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">
-          {t('calculators.seller_cost.summary_title', 'Seller cost summary')}
-        </h3>
+        <div className="flex items-center justify-between mb-4">
+          <h3 className="text-lg font-semibold text-gray-900">
+            {t('calculators.seller_cost.summary_title', 'Seller cost summary')}
+          </h3>
+          <Button
+            onClick={() => setShowReportModal(true)}
+            variant="outline"
+            className="border-blue-200 text-blue-600 hover:bg-blue-50"
+            disabled={!hasSalePrice}
+          >
+            <FileText className="h-4 w-4 mr-2" />
+            {t('report.get_report', 'Get PDF Report')}
+          </Button>
+        </div>
         <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
           <div className="rounded-lg bg-gray-50 p-3">
             <p className="text-xs uppercase tracking-wide text-gray-500">
@@ -711,6 +724,35 @@ export function SellerCostCalculator() {
           salePrice: state.salePrice,
           totalCosts: totalEstimatedCosts,
         }}
+      />
+
+      <CalculatorReportModal
+        isOpen={showReportModal}
+        onClose={() => setShowReportModal(false)}
+        calculatorType="seller-cost"
+        inputs={{
+          salePrice,
+          adjustedBasis: parseFloat(state.adjustedBasis) || 0,
+          improvements: parseFloat(state.improvements) || 0,
+          deductibleCosts: parseFloat(state.deductibleCosts) || 0,
+          residencyStatus: state.residencyStatus,
+          primaryResidence: state.primaryResidence,
+          currency: 'MXN $',
+        }}
+        results={{
+          capitalGainsTax,
+          agentCommission,
+          fideicomisoCancellation: parseFloat(state.fideicomisoCancellation) || 0,
+          attorneyFee: parseFloat(state.attorneyFee) || 0,
+          totalCosts: totalEstimatedCosts,
+          netProceeds: salePrice - totalEstimatedCosts,
+        }}
+        summaryItems={[
+          { label: t('calculators.seller_cost.capital_gains_due', 'Estimated ISR due'), value: formatCurrencyMaybe(capitalGainsTax) },
+          { label: t('calculators.seller_cost.agent_commission_estimate', 'Estimated commission'), value: formatCurrencyMXN(agentCommission) },
+          { label: t('calculators.seller_cost.total_costs', 'Estimated total costs'), value: formatCurrencyMXN(totalEstimatedCosts) },
+          { label: t('calculators.seller_cost.net_proceeds', 'Estimated net proceeds'), value: formatCurrencyMXN(salePrice - totalEstimatedCosts) },
+        ]}
       />
     </div>
   )

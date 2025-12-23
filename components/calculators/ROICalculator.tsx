@@ -4,8 +4,9 @@ import { useMemo, useState } from 'react'
 import { useTranslation } from 'next-i18next'
 import { InfoIcon } from '@/components/ui/tooltip'
 import { LeadForm } from '@/components/leads/LeadForm'
+import { CalculatorReportModal } from '@/components/calculators/CalculatorReportModal'
 import { Button } from '@/components/ui/button'
-import { MessageCircle } from 'lucide-react'
+import { MessageCircle, FileText } from 'lucide-react'
 
 type RoiFormState = {
   purchasePrice: string
@@ -41,6 +42,7 @@ const clampPercentage = (value: number) => {
 export function ROICalculator() {
   const { t } = useTranslation('common')
   const [showLeadForm, setShowLeadForm] = useState(false)
+  const [showReportModal, setShowReportModal] = useState(false)
   const [state, setState] = useState<RoiFormState>({
     purchasePrice: '',
     closingCostPercent: '',
@@ -454,9 +456,20 @@ export function ROICalculator() {
       </section>
 
       <section className="bg-white shadow-lg rounded-lg border border-blue-100 p-6 space-y-6">
-        <h3 className="text-lg font-semibold text-gray-900">
-          {t('calculators.roi.summary_title', 'ROI summary')}
-        </h3>
+        <div className="flex items-center justify-between">
+          <h3 className="text-lg font-semibold text-gray-900">
+            {t('calculators.roi.summary_title', 'ROI summary')}
+          </h3>
+          <Button
+            onClick={() => setShowReportModal(true)}
+            variant="outline"
+            className="border-blue-200 text-blue-600 hover:bg-blue-50"
+            disabled={!hasPurchasePrice}
+          >
+            <FileText className="h-4 w-4 mr-2" />
+            {t('report.get_report', 'Get PDF Report')}
+          </Button>
+        </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           <div className="rounded-lg bg-gray-50 p-4">
             <div className="text-xs uppercase tracking-wide text-gray-500 flex items-center gap-2">
@@ -654,6 +667,37 @@ export function ROICalculator() {
           cashOnCash: metrics.cashOnCash,
           capRate: metrics.capRate,
         }}
+      />
+
+      <CalculatorReportModal
+        isOpen={showReportModal}
+        onClose={() => setShowReportModal(false)}
+        calculatorType="roi"
+        inputs={{
+          purchasePrice: state.purchasePrice,
+          closingCostPercent: state.closingCostPercent,
+          renovationCosts: state.renovationCosts,
+          downPaymentPercent: state.downPaymentPercent,
+          interestRate: state.interestRate,
+          loanTermYears: state.loanTermYears,
+          monthlyRent: state.monthlyRent,
+          otherMonthlyIncome: state.otherMonthlyIncome,
+          occupancyRate: state.occupancyRate,
+          operatingExpensePercent: state.operatingExpensePercent,
+          managementPercent: state.managementPercent,
+          annualTaxes: state.annualTaxes,
+          annualInsurance: state.annualInsurance,
+          annualOtherExpenses: state.annualOtherExpenses,
+          appreciationRate: state.appreciationRate,
+        }}
+        results={metrics}
+        summaryItems={[
+          { label: t('calculators.roi.total_cash_label', 'Total Cash Invested'), value: formatCurrency(metrics.totalCashInvested) },
+          { label: t('calculators.roi.cash_flow_label', 'Annual Cash Flow'), value: formatCurrency(metrics.annualCashFlow) },
+          { label: t('calculators.roi.cap_rate_label', 'Cap Rate'), value: formatPercentage(metrics.capRate) },
+          { label: t('calculators.roi.cash_on_cash_label', 'Cash-on-Cash ROI'), value: formatPercentage(metrics.cashOnCash) },
+          { label: t('calculators.roi.total_roi_label', 'Total ROI'), value: formatPercentage(metrics.totalRoi) },
+        ]}
       />
     </div>
   )

@@ -4,8 +4,9 @@ import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'next-i18next'
 import { InfoIcon } from '@/components/ui/tooltip'
 import { LeadForm } from '@/components/leads/LeadForm'
+import { CalculatorReportModal } from '@/components/calculators/CalculatorReportModal'
 import { Button } from '@/components/ui/button'
-import { MessageCircle } from 'lucide-react'
+import { MessageCircle, FileText } from 'lucide-react'
 
 type PercentageBase = 'transaction' | 'custom'
 
@@ -178,6 +179,7 @@ type FormState = {
 export function ClosingCostCalculator() {
   const { t } = useTranslation('common')
   const [showLeadForm, setShowLeadForm] = useState(false)
+  const [showReportModal, setShowReportModal] = useState(false)
   const [state, setState] = useState<FormState>(() => ({
     transactionPrice: '',
     percentageValues: COST_ITEMS.filter((item): item is PercentageCostItem => item.type === 'percentage')
@@ -564,17 +566,6 @@ export function ClosingCostCalculator() {
                       </span>
                     )}
                   </div>
-                  {!item.required && (!isFideicomisoItem || state.needsFideicomiso) && (
-                    <label className="inline-flex items-center gap-2 text-sm text-gray-600 md:self-start md:ml-auto md:-mt-8 md:relative md:left-0 md:right-0 md:justify-end">
-                      <input
-                        type="checkbox"
-                        checked={isIncluded}
-                        onChange={() => toggleIncluded(item.id)}
-                        className="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-                      />
-                      {t('calculators.closing_cost.include_item', 'Include in calculation')}
-                    </label>
-                  )}
                   <p className="text-sm text-gray-600">
                     {t(item.helperKey, item.helperDefault)}
                   </p>
@@ -671,9 +662,20 @@ export function ClosingCostCalculator() {
       </section>
 
       <section className="bg-white shadow-lg rounded-lg border border-blue-100 p-6">
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">
-          {t('calculators.closing_cost.summary_title', 'Closing Cost Summary')}
-        </h3>
+        <div className="flex items-center justify-between mb-4">
+          <h3 className="text-lg font-semibold text-gray-900">
+            {t('calculators.closing_cost.summary_title', 'Closing Cost Summary')}
+          </h3>
+          <Button
+            onClick={() => setShowReportModal(true)}
+            variant="outline"
+            className="border-blue-200 text-blue-600 hover:bg-blue-50"
+            disabled={transactionPrice <= 0}
+          >
+            <FileText className="h-4 w-4 mr-2" />
+            {t('report.get_report', 'Get PDF Report')}
+          </Button>
+        </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           <div className="rounded-lg bg-gray-50 p-4">
             <p className="text-xs uppercase tracking-wide text-gray-500">
@@ -765,6 +767,25 @@ export function ClosingCostCalculator() {
           purchasePrice: transactionPrice,
           totalClosingCosts: totals.total,
         }}
+      />
+
+      <CalculatorReportModal
+        isOpen={showReportModal}
+        onClose={() => setShowReportModal(false)}
+        calculatorType="closing-cost"
+        inputs={{
+          purchasePrice: transactionPrice,
+          currency: 'MXN $',
+        }}
+        results={totals}
+        summaryItems={[
+          { label: t('calculators.closing_cost.items.isai.label', 'Property Acquisition Tax (ISAI)'), value: formatCurrencyMXN(totals.breakdown?.isai || 0) },
+          { label: t('calculators.closing_cost.items.notaryFees.label', 'Notary Fees'), value: formatCurrencyMXN(totals.breakdown?.notaryFees || 0) },
+          { label: t('calculators.closing_cost.items.registrationFees.label', 'Registration Fees'), value: formatCurrencyMXN(totals.breakdown?.registrationFees || 0) },
+          { label: t('calculators.closing_cost.mandatory_total', 'Mandatory fees'), value: formatCurrencyMXN(totals.required || 0) },
+          { label: t('calculators.closing_cost.optional_total', 'Optional fees'), value: formatCurrencyMXN(totals.optional || 0) },
+          { label: t('calculators.closing_cost.total', 'Total Closing Costs'), value: formatCurrencyMXN(totals.total || 0) },
+        ]}
       />
     </div>
   )

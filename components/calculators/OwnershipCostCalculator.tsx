@@ -4,8 +4,9 @@ import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'next-i18next'
 import { InfoIcon } from '@/components/ui/tooltip'
 import { LeadForm } from '@/components/leads/LeadForm'
+import { CalculatorReportModal } from './CalculatorReportModal'
 import { Button } from '@/components/ui/button'
-import { MessageCircle } from 'lucide-react'
+import { MessageCircle, FileText } from 'lucide-react'
 
 type PercentageBase = 'propertyValue' | 'rentalIncome'
 
@@ -124,6 +125,7 @@ type FormState = {
 export function OwnershipCostCalculator() {
   const { t } = useTranslation('common')
   const [showLeadForm, setShowLeadForm] = useState(false)
+  const [showReportModal, setShowReportModal] = useState(false)
   const [state, setState] = useState<FormState>(() => ({
     propertyValue: '',
     annualRentalIncome: '',
@@ -498,9 +500,20 @@ export function OwnershipCostCalculator() {
       </section>
 
       <section className="bg-white shadow-lg rounded-lg border border-blue-100 p-6">
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">
-          {t('calculators.ownership_cost.summary_title', 'Ownership Cost Summary')}
-        </h3>
+        <div className="flex items-center justify-between mb-4">
+          <h3 className="text-lg font-semibold text-gray-900">
+            {t('calculators.ownership_cost.summary_title', 'Ownership Cost Summary')}
+          </h3>
+          <Button
+            onClick={() => setShowReportModal(true)}
+            variant="outline"
+            className="border-blue-200 text-blue-600 hover:bg-blue-50"
+            disabled={!state.propertyValue}
+          >
+            <FileText className="h-4 w-4 mr-2" />
+            {t('report.get_report', 'Get PDF Report')}
+          </Button>
+        </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           <div className="rounded-lg bg-gray-50 p-4">
             <p className="text-xs uppercase tracking-wide text-gray-500">
@@ -571,6 +584,24 @@ export function OwnershipCostCalculator() {
           propertyValue: state.propertyValue,
           annualOwnershipCost: totals?.total || 0,
         }}
+      />
+
+      <CalculatorReportModal
+        isOpen={showReportModal}
+        onClose={() => setShowReportModal(false)}
+        calculatorType="ownership-cost"
+        inputs={{
+          propertyValue: parseFloat(state.propertyValue.replace(/,/g, '')) || 0,
+          annualRentalIncome: parseFloat(state.annualRentalIncome.replace(/,/g, '')) || 0,
+          currency: 'MXN $',
+        }}
+        results={totals}
+        summaryItems={[
+          { label: t('calculators.ownership_cost.mandatory_total', 'Mandatory costs'), value: formatCurrencyMXN(totals.required) },
+          { label: t('calculators.ownership_cost.optional_total', 'Optional costs'), value: formatCurrencyMXN(totals.optional) },
+          { label: t('calculators.ownership_cost.total_annual_cost', 'Total annual ownership cost'), value: formatCurrencyMXN(totals.total) },
+          { label: t('calculators.ownership_cost.monthly_average', 'Monthly average'), value: formatCurrencyMXN(totals.total / 12) },
+        ]}
       />
     </div>
   )
