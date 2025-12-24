@@ -1,0 +1,165 @@
+// Transaction Card component for list view
+import React from 'react';
+
+import { useTranslation } from 'next-i18next';
+import { TransactionWithProgress, TransactionStage } from '@/lib/transactions/types';
+import { ProgressBar } from './ProgressBar';
+import { MapPin, Calendar, DollarSign, MoreVertical, Trash2, Pause, Play } from 'lucide-react';
+import { formatDistanceToNow } from 'date-fns';
+import { es, zhCN, enUS } from 'date-fns/locale';
+import { useRouter } from 'next/router';
+
+interface TransactionCardProps {
+  transaction: TransactionWithProgress;
+  onDelete?: (id: string) => void;
+  onStatusChange?: (id: string, status: string) => void;
+}
+
+const STAGE_LABELS: Record<TransactionStage, string> = {
+  search: 'Search',
+  analysis: 'Analysis',
+  offer: 'Offer',
+  due_diligence: 'Due Diligence',
+  financing: 'Financing',
+  closing: 'Closing',
+  post_closing: 'Post-Closing',
+};
+
+const STATUS_COLORS: Record<string, string> = {
+  active: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300',
+  completed: 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300',
+  cancelled: 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300',
+  on_hold: 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300',
+};
+
+export function TransactionCard({ transaction, onDelete, onStatusChange }: TransactionCardProps) {
+  const { t } = useTranslation('transactions');
+  const router = useRouter();
+  const [showMenu, setShowMenu] = React.useState(false);
+
+  const locale = router.locale === 'es' ? es : router.locale === 'zh' ? zhCN : enUS;
+
+  const formatPrice = (price?: number) => {
+    if (!price) return null;
+    return new Intl.NumberFormat(router.locale, {
+      style: 'currency',
+      currency: 'MXN',
+      maximumFractionDigits: 0,
+    }).format(price);
+  };
+
+  const displayPrice = transaction.accepted_price || transaction.offer_price || transaction.listing_price;
+  const displayAddress = transaction.property_address || t('untitled_property');
+  const displayLocation = [transaction.neighborhood, transaction.city].filter(Boolean).join(', ');
+
+  const goToDetail = () => router.push(`/transactions/${transaction.id}`);
+
+  return (
+    <div
+      role="button"
+      tabIndex={0}
+      onClick={goToDetail}
+      onKeyDown={(e) => { if (e.key === 'Enter') goToDetail(); }}
+      className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-4 hover:shadow-md transition-shadow cursor-pointer"
+    >
+      <div className="flex justify-between items-start mb-3">
+        <div className="flex-1 min-w-0">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white truncate">
+              {displayAddress}
+            </h3>
+          {displayLocation && (
+            <p className="flex items-center text-sm text-gray-500 dark:text-gray-400 mt-1">
+              <MapPin className="w-4 h-4 mr-1" />
+              {displayLocation}
+            </p>
+          )}
+        </div>
+
+        <div className="flex items-center gap-2 ml-2">
+          <span className={`px-2 py-1 rounded-full text-xs font-medium ${STATUS_COLORS[transaction.status]}`}>
+            {t(`status.${transaction.status}`, transaction.status)}
+          </span>
+
+          <div className="relative">
+            <button
+              onClick={(e) => { e.stopPropagation(); setShowMenu(!showMenu); }}
+              className="p-1 rounded hover:bg-gray-100 dark:hover:bg-gray-700"
+            >
+              <MoreVertical className="w-5 h-5 text-gray-500" />
+            </button>
+
+            {showMenu && (
+              <>
+                <div
+                  className="fixed inset-0 z-10"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setShowMenu(false);
+                  }}
+                />
+                <div className="absolute right-0 mt-1 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 z-20">
+                  {transaction.status === 'active' && onStatusChange && (
+                    <button
+                      onClick={(e) => { e.stopPropagation(); onStatusChange(transaction.id, 'on_hold'); setShowMenu(false); }}
+                      className="flex items-center w-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+                    >
+                      <Pause className="w-4 h-4 mr-2" />
+                      {t('actions.pause')}
+                    </button>
+                  )}
+                  {transaction.status === 'on_hold' && onStatusChange && (
+                    <button
+                      onClick={(e) => { e.stopPropagation(); onStatusChange(transaction.id, 'active'); setShowMenu(false); }}
+                      className="flex items-center w-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+                    >
+                      <Play className="w-4 h-4 mr-2" />
+                      {t('actions.resume')}
+                    </button>
+                  )}
+                  {onDelete && (
+                    <button
+                      onClick={(e) => { e.stopPropagation(); if (confirm(t('confirm_delete'))) { onDelete(transaction.id); } setShowMenu(false); }}
+                      className="flex items-center w-full px-4 py-2 text-sm text-red-600 dark:text-red-400 hover:bg-gray-100 dark:hover:bg-gray-700"
+                    >
+                      <Trash2 className="w-4 h-4 mr-2" />
+                      {t('actions.delete')}
+                    </button>
+                  )}
+                </div>
+              </>
+            )}
+          </div>
+        </div>
+      </div>
+
+      {/* Progress Bar */}
+      <ProgressBar
+        completed={transaction.completed_checklist_items}
+        total={transaction.total_checklist_items}
+        size="sm"
+        className="mb-3"
+      />
+
+      {/* Stage and Price */}
+      <div className="flex justify-between items-center text-sm">
+        <div className="flex items-center text-gray-600 dark:text-gray-400">
+          <span className="font-medium">{t(`stages.${transaction.current_stage}.name`, STAGE_LABELS[transaction.current_stage])}</span>
+        </div>
+        {displayPrice && (
+          <div className="flex items-center text-gray-900 dark:text-white font-semibold">
+            <DollarSign className="w-4 h-4 mr-1" />
+            {formatPrice(displayPrice)}
+          </div>
+        )}
+      </div>
+
+      {/* Updated time */}
+      <div className="flex items-center text-xs text-gray-400 mt-2">
+        <Calendar className="w-3 h-3 mr-1" />
+        {t('updated')} {formatDistanceToNow(new Date(transaction.updated_at), { addSuffix: true, locale })}
+      </div>
+    </div>
+  );
+}
+
+export default TransactionCard;

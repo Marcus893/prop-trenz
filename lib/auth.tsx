@@ -1,7 +1,7 @@
 'use client'
 
 import React, { createContext, useContext, useEffect, useState } from 'react'
-import { User } from '@supabase/supabase-js'
+import { User, Session } from '@supabase/supabase-js'
 import { supabase } from '@/lib/supabase'
 import { useTranslation } from 'next-i18next'
 import { useRouter } from 'next/router'
@@ -13,6 +13,7 @@ interface UserProfileData {
 
 interface AuthContextType {
   user: User | null
+  session: Session | null
   loading: boolean
   profile: UserProfileData | null
   signIn: (email: string, password: string) => Promise<{ error: any }>
@@ -28,6 +29,7 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined)
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null)
+  const [session, setSession] = useState<Session | null>(null)
   const [loading, setLoading] = useState(true)
   const [profile, setProfile] = useState<UserProfileData | null>(null)
   const { i18n } = useTranslation('common')
@@ -153,12 +155,14 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
         if (session) {
           setUser(session.user)
+          setSession(session)
           const profileData = await fetchUserProfile(session.user.id)
           if (!profileData) {
             applyUserLanguage(session.user.user_metadata?.language as string | undefined)
           }
         } else {
           setUser(null)
+          setSession(null)
           setProfile(null)
         }
       } catch (error) {
@@ -185,6 +189,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       }
 
       setUser(session?.user ?? null)
+      setSession(session)
       let profileData: UserProfileData | null = null
       if (session?.user) {
         profileData = await fetchUserProfile(session.user.id)
@@ -535,6 +540,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const value: AuthContextType = {
     user,
+    session,
     loading,
     profile,
     signIn,

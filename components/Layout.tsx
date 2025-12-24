@@ -21,6 +21,7 @@ import {
   Calculator,
   BookOpen,
   TrendingUp,
+  Briefcase,
 } from "lucide-react";
 
 interface LayoutProps {
@@ -115,6 +116,11 @@ export function Layout({
       icon: Calculator,
     },
     { name: t("common.guides", "Guides"), href: "/guides", icon: BookOpen },
+    {
+      name: t("common.transactions", "My Transactions"),
+      href: "/transactions",
+      icon: Briefcase,
+    },
   ];
 
   // Add profile link for signed-in users
