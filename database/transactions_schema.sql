@@ -12,7 +12,9 @@ CREATE TYPE transaction_stage AS ENUM (
   'due_diligence',    -- Legal/inspection
   'financing',        -- Mortgage process
   'closing',          -- Notary & signing
-  'post_closing'      -- Move-in & registration
+  'post_closing',     -- Move-in & registration
+  'listing',          -- For sales: listing the property
+  'gather_required_documents' -- For sales: gathering documents
 );
 
 -- Main property transaction table
@@ -71,8 +73,7 @@ CREATE TABLE transaction_stages (
   name_key TEXT NOT NULL,           -- i18n key: 'stages.search.name'
   description_key TEXT NOT NULL,    -- i18n key: 'stages.search.description'
   typical_duration_days INTEGER,
-  
-  UNIQUE(stage)
+  transaction_type TEXT DEFAULT 'purchase', -- 'purchase', 'sale', etc.
 );
 
 -- Stage-specific checklist templates
@@ -84,6 +85,7 @@ CREATE TABLE stage_checklist_templates (
   description_key TEXT,
   is_required BOOLEAN DEFAULT false,
   category TEXT,                     -- 'legal', 'financial', 'inspection', etc.
+  transaction_type TEXT DEFAULT 'purchase', -- 'purchase', 'sale', etc.
   
   created_at TIMESTAMPTZ DEFAULT NOW()
 );
@@ -153,6 +155,7 @@ CREATE TABLE stage_cost_templates (
   typical_amount DECIMAL(15,2),      -- If fixed amount
   is_required BOOLEAN DEFAULT false,
   paid_to TEXT,                      -- 'notary', 'bank', 'government', etc.
+  transaction_type TEXT DEFAULT 'purchase', -- 'purchase', 'sale', etc.
   
   created_at TIMESTAMPTZ DEFAULT NOW()
 );
@@ -374,3 +377,8 @@ CREATE INDEX IF NOT EXISTS idx_checklist_transaction_order ON transaction_checkl
 
 -- Backfill/migration: allow users to opt out of Financing stage
 ALTER TABLE user_transactions ADD COLUMN IF NOT EXISTS skip_financing BOOLEAN DEFAULT false;
+
+-- Backfill/migration: add transaction_type to checklist and cost templates so templates can be specific to purchases or sales
+ALTER TABLE stage_checklist_templates ADD COLUMN IF NOT EXISTS transaction_type TEXT DEFAULT 'purchase';
+ALTER TABLE stage_cost_templates ADD COLUMN IF NOT EXISTS transaction_type TEXT DEFAULT 'purchase';
+ALTER TABLE transaction_stages ADD COLUMN IF NOT EXISTS transaction_type TEXT DEFAULT 'purchase';

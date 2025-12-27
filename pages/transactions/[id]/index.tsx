@@ -526,14 +526,16 @@ export default function TransactionDetailPage() {
   };
 
   const advanceStage = async () => {
-    const nextStage = getNextStage(currentStage);
+    const stagesList = transaction?.stages?.map((s) => s.stage) || undefined;
+    const nextStage = getNextStage(currentStage, stagesList);
     if (nextStage) {
       await updateTransaction({ current_stage: nextStage });
     }
   };
 
   const goBackStage = async () => {
-    const prevStage = getPreviousStage(currentStage);
+    const stagesList = transaction?.stages?.map((s) => s.stage) || undefined;
+    const prevStage = getPreviousStage(currentStage, stagesList);
     if (prevStage) {
       await updateTransaction({ current_stage: prevStage });
     }
@@ -687,7 +689,11 @@ export default function TransactionDetailPage() {
 
         {/* Stage Progress */}
         <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-4 mb-6">
-          <StageProgress currentStage={currentStage} onStageClick={(stage) => updateTransaction({ current_stage: stage })} />
+          <StageProgress
+            currentStage={currentStage}
+            stages={transaction?.stages?.map((s) => s.stage)}
+            onStageClick={(stage) => updateTransaction({ current_stage: stage })}
+          />
         </div>
 
         {/* Current Stage Header */}
@@ -776,7 +782,7 @@ export default function TransactionDetailPage() {
           </div>
 
           <div className="flex gap-2">
-            {getPreviousStage(currentStage) && (
+            {getPreviousStage(currentStage, transaction?.stages?.map((s) => s.stage)) && (
               <button
                 onClick={goBackStage}
                 className="flex items-center gap-1 px-3 py-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white border border-gray-300 dark:border-gray-600 rounded-lg text-sm"
@@ -785,7 +791,7 @@ export default function TransactionDetailPage() {
                 {t('previous_stage')}
               </button>
             )}
-            {getNextStage(currentStage) && (
+            {getNextStage(currentStage, transaction?.stages?.map((s) => s.stage)) && (
               <button
                 onClick={advanceStage}
                 className="flex items-center gap-1 px-3 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700"

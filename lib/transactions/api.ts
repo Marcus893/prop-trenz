@@ -15,6 +15,7 @@ import {
   DocumentTemplate,
   CostTemplate,
   TransactionStage,
+  TransactionType,
   STAGE_ORDER,
 } from './types';
 
@@ -77,7 +78,12 @@ export async function getTransaction(id: string): Promise<TransactionFullData | 
     notesResult,
     historyResult,
   ] = await Promise.all([
-    supabase.from('transaction_stages').select('*').order('stage_order'),
+    // Fetch only stages relevant to the transaction's type (purchase, sale, etc.)
+    supabase
+      .from('transaction_stages')
+      .select('*')
+      .eq('transaction_type', transaction.transaction_type)
+      .order('stage_order'),
     supabase
       .from('transaction_checklist')
       .select('*, template:stage_checklist_templates(*)')
@@ -145,16 +151,39 @@ export async function createTransaction(
 
   if (error) throw error;
 
-  // Initialize checklist items from templates for all stages
-  await initializeTransactionChecklist(transaction.id);
-  
-  // Initialize costs from templates for all stages
-  await initializeTransactionCosts(transaction.id, data.listing_price);
+  const txType: string = transaction.transaction_type || 'purchase';
 
-  // Record initial stage
+  // Determine initial stage for this transaction type (first by stage_order)
+  const { data: firstStage } = await supabase
+    .from('transaction_stages')
+    .select('stage')
+    .eq('transaction_type', txType)
+    .order('stage_order')
+    .limit(1)
+    .single();
+
+  const initialStage = firstStage?.stage || 'search';
+
+  // Update transaction to set its current_stage to the initial stage (if different)
+  if (initialStage && initialStage !== transaction.current_stage) {
+    const { error: updateErr } = await supabase
+      .from('user_transactions')
+      .update({ current_stage: initialStage })
+      .eq('id', transaction.id);
+    if (updateErr) throw updateErr;
+    transaction.current_stage = initialStage;
+  }
+
+  // Initialize checklist items from templates for the transaction type
+  await initializeTransactionChecklist(transaction.id, txType);
+  
+  // Initialize costs from templates for the transaction type
+  await initializeTransactionCosts(transaction.id, txType, data.listing_price);
+
+  // Record initial stage in history
   await supabase.from('transaction_stage_history').insert({
     transaction_id: transaction.id,
-    to_stage: 'search',
+    to_stage: initialStage,
   });
 
   return transaction;
@@ -205,13 +234,16 @@ export async function deleteTransaction(id: string): Promise<void> {
 // CHECKLIST
 // ============================================================================
 
-async function initializeTransactionChecklist(transactionId: string): Promise<void> {
-  // Get all checklist templates
-  const { data: templates } = await supabase
-    .from('stage_checklist_templates')
-    .select('*')
-    .order('item_order');
+async function initializeTransactionChecklist(transactionId: string, transactionType?: string): Promise<void> {
+  // Get checklist templates filtered by transaction type (allow 'both')
+  let query = supabase.from('stage_checklist_templates').select('*');
+  if (transactionType) {
+    // Filter templates to the exact transaction type selected (no 'both' value exists)
+    query = query.eq('transaction_type', transactionType);
+  }
+  const { data: templates, error } = await query.order('item_order');
 
+  if (error) throw error;
   if (!templates || templates.length === 0) return;
 
   // Create checklist items for each template, preserving template order
@@ -419,19 +451,36 @@ export async function deleteDocument(id: string, fileUrl: string): Promise<void>
 
 async function initializeTransactionCosts(
   transactionId: string,
-  listingPrice?: number
+  transactionTypeOrListingPrice?: string | number,
+  listingPriceArg?: number
 ): Promise<void> {
-  // Get all cost templates
-  const { data: templates } = await supabase
-    .from('stage_cost_templates')
-    .select('*');
+  // Backwards-compat: function may be called as (transactionId, listingPrice)
+  let transactionType: string | undefined
+  let listingPrice: number | undefined
 
+  if (typeof transactionTypeOrListingPrice === 'string') {
+    transactionType = transactionTypeOrListingPrice
+    listingPrice = listingPriceArg
+  } else {
+    listingPrice = transactionTypeOrListingPrice as number | undefined
+  }
+
+  // Get cost templates filtered by transaction type (allow 'both')
+  let query = supabase.from('stage_cost_templates').select('*')
+  if (transactionType) {
+    // Filter cost templates to the exact transaction type (no 'both')
+    query = query.eq('transaction_type', transactionType)
+  }
+
+  const { data: templates, error } = await query
+
+  if (error) throw error;
   if (!templates || templates.length === 0) return;
 
   // Create cost items for each template
   const items = templates.map((template) => {
     let estimatedAmount = template.typical_amount;
-    
+
     // Calculate percentage-based costs if we have a listing price
     if (template.typical_percentage && listingPrice) {
       estimatedAmount = Math.round(listingPrice * template.typical_percentage);
@@ -591,23 +640,29 @@ export async function deleteNote(id: string): Promise<void> {
 // TEMPLATES (for reference data)
 // ============================================================================
 
-export async function getStages(): Promise<StageDefinition[]> {
-  const { data, error } = await supabase
-    .from('transaction_stages')
-    .select('*')
-    .order('stage_order');
+export async function getStages(transactionType?: string): Promise<StageDefinition[]> {
+  let query = supabase.from('transaction_stages').select('*')
+  if (transactionType) {
+    query = query.eq('transaction_type', transactionType)
+  }
+  const { data, error } = await query.order('stage_order');
 
   if (error) throw error;
   return data || [];
 }
 
 export async function getChecklistTemplates(
-  stage?: TransactionStage
+  stage?: TransactionStage,
+  transactionType?: TransactionType
 ): Promise<ChecklistTemplate[]> {
   let query = supabase.from('stage_checklist_templates').select('*');
   
   if (stage) {
     query = query.eq('stage', stage);
+  }
+
+  if (transactionType) {
+    query = query.eq('transaction_type', transactionType);
   }
 
   const { data, error } = await query.order('item_order');
@@ -617,12 +672,17 @@ export async function getChecklistTemplates(
 }
 
 export async function getCostTemplates(
-  stage?: TransactionStage
+  stage?: TransactionStage,
+  transactionType?: TransactionType
 ): Promise<CostTemplate[]> {
   let query = supabase.from('stage_cost_templates').select('*');
   
   if (stage) {
     query = query.eq('stage', stage);
+  }
+
+  if (transactionType) {
+    query = query.in('transaction_type', [transactionType, 'both']);
   }
 
   const { data, error } = await query;

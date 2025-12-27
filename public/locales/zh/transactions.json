@@ -1,6 +1,9 @@
 {
   "page_title": "我的交易",
   "page_subtitle": "管理您的房产购买流程",
+  "filters": {
+    "all": "全部"
+  },
   "new_transaction": "新交易",
   "overall_progress": "进度",
   "progress": { "items_complete": "已完成 {{completed}} / {{total}} 项" },
@@ -9,7 +12,7 @@
   "empty_description": "开始追踪您的第一笔房产购买,在整个购买过程中保持井井有条。",
   "start_first_transaction": "开始您的第一笔交易",
   "login_required_title": "登录以访问您的交易",
-  "login_required_description": "创建账户以使用清单、文档和成本跟踪功能追踪您的房产购买。",
+  "login_required_description": "创建账户以使用清单、文档、成本跟踪等功能来管理您的房产交易。",
   "untitled_property": "未命名房产",
   "updated": "更新于",
   "back_to_list": "返回交易列表",
@@ -27,7 +30,12 @@
     "cancelled": "已取消",
     "on_hold": "暂停中"
   },
-
+  "types": {
+    "purchase": "购买",
+    "sale": "出售",
+    "rent": "出租",
+    "other": "其他"
+  },
   "actions": {
     "pause": "暂停交易",
     "resume": "恢复交易",
@@ -60,6 +68,16 @@
       "short_name": "融资",
       "description": "获取抵押贷款和融资"
     },
+    "listing": {
+      "name": "挂牌",
+      "short_name": "挂牌",
+      "description": "准备并推广您的房产以进行出售"
+    },
+    "gather_required_documents": {
+      "name": "收集所需文件",
+      "short_name": "收集文件",
+      "description": "收集产权证明、身份证明、缴费凭证和结清证明以供过户使用"
+    },
     "closing": {
       "name": "交割",
       "short_name": "交割",
@@ -90,6 +108,14 @@
 
     "step2_title": "房产类型是什么?",
     "step2_description": "选择您感兴趣的房产类型。",
+
+    "sale": {
+      "step2_title": "您要出售的是哪种类型的房产？",
+      "step2_description": "选择您正在出售的房产类型。",
+      "step3_title": "房产详情（售卖，可选）",
+      "step3_description": "添加关于您要出售的房产的详情——地址、状况和挂牌价，以便跟踪出售进程。"
+    },
+
     "property_house": "别墅",
     "property_apartment": "公寓",
     "property_land": "土地",
@@ -115,7 +141,51 @@
     "add_custom": "添加自定义项目",
     "add_placeholder": "输入任务描述...",
     "add_description_placeholder": "输入详细信息（可选）",
-    "add_button": "添加"
+    "add_button": "添加",
+
+    "listing.prepare_for_sale": "准备房产出售",
+    "listing.prepare_for_sale_desc": "清洁、布置、拍照，并进行必要的维修以提升展示效果",
+    "listing.hire_listing_agent": "聘请挂牌经纪人",
+    "listing.hire_listing_agent_desc": "寻找并委托经纪人负责挂牌与推广",
+    "listing.list_property": "发布房源",
+    "listing.list_property_desc": "在平台上发布房源并分发到主要渠道",
+    "listing.schedule_showings": "安排看房",
+    "listing.schedule_showings_desc": "协调潜在买家或经纪人的看房时间",
+
+    "gather_required_documents.title_deed": "产权证（escritura）",
+    "gather_required_documents.title_deed_desc": "获取产权证及其复印件以供买方和公证人使用",
+    "gather_required_documents.identification": "所有人身份证明",
+    "gather_required_documents.identification_desc": "提供所有产权人的有效身份证件（护照/身份证等）",
+    "gather_required_documents.paid_predial_receipt": "已缴房产税收据",
+    "gather_required_documents.paid_predial_receipt_desc": "获取房产税已缴清的凭证",
+    "gather_required_documents.paid_utilities_receipts": "已缴水电煤账单",
+    "gather_required_documents.paid_utilities_receipts_desc": "收集水、电、燃气等已缴费凭证",
+    "gather_required_documents.hoa_no_debt_cert": "物业无欠费证明",
+    "gather_required_documents.hoa_no_debt_cert_desc": "获得物业管理处出具的费用已结清证明",
+    "gather_required_documents.cert_of_no_liens": "无抵押/无债务证明",
+    "gather_required_documents.cert_of_no_liens_desc": "获取官方证明表明该房产无抵押或法律索赔",
+
+    "closing.provide_documents": "提供过户文件",
+    "closing.provide_documents_desc": "向公证人或买方提供产权证、身份证、凭证及其他所需文件",
+    "closing.receive_final_payment": "接收最终付款",
+    "closing.receive_final_payment_desc": "确认收到约定的最终款项并结清余款",
+    "closing.sign_the_deed": "签署产权证",
+    "closing.sign_the_deed_desc": "签署转移所有权的公证产权证（escritura）",
+    "closing.pay_real_estate_agent_commission": "支付经纪人佣金",
+    "closing.pay_real_estate_agent_commission_desc": "在交割时支付约定的经纪人佣金",
+    "closing.pay_capital_gains_tax": "缴纳资本利得税",
+    "closing.pay_capital_gains_tax_desc": "缴纳适用于此次出售的资本利得税",
+
+    "post_closing.move_furnitures": "搬运家具",
+    "post_closing.move_furnitures_desc": "安排搬家并交接房产",
+    "post_closing.deliver_keys": "交付钥匙给买方",
+    "post_closing.deliver_keys_desc": "将所有钥匙与遥控器交给买方",
+    "post_closing.transfer_utility": "转移公用事业合同",
+    "post_closing.transfer_utility_desc": "根据需要转移或关闭水电气等账户",
+    "post_closing.notify_hoa_change_of_ownership": "通知物业所有权变更",
+    "post_closing.notify_hoa_change_of_ownership_desc": "向物业管理处提交所有权变更所需的文件",
+    "post_closing.keep_sale_records": "保留销售记录",
+    "post_closing.keep_sale_records_desc": "保存所有交割文件和收据以备税务和法律使用"
   },
 
   "costs": {
@@ -134,7 +204,17 @@
     "add_name_placeholder": "费用名称...",
     "add_amount_placeholder": "金额",
     "add_button": "添加",
-    "paid_to": {      "select": "支付给...",      "escrow": "托管",
+
+    "seller_prep_costs": "卖方准备费用",
+    "cert_of_no_liens": "无抵押证明",
+    "hoa_no_debt_letter": "物业无欠费证明",
+    "bank_trust_cancellation_fee": "银行托管取消费用",
+    "agent_commission": "经纪人佣金",
+    "capital_gains_tax": "资本利得税",
+
+    "paid_to": {
+      "select": "支付给...",
+      "escrow": "托管",
       "notary": "公证处",
       "government": "政府",
       "bank": "银行",
@@ -218,11 +298,18 @@
   "checklist.offer.submit_offer_desc": "通过您的经纪人向卖家提交报价。",
   "checklist.offer.negotiate_terms": "协商条款",
   "checklist.offer.negotiate_terms_desc": "回应还价并协商最终价格和条件。",
-  "checklist.offer.sign_promesa": "签署购房预约合同",
-  "checklist.offer.sign_promesa_desc": "签署包含所有商定条款的预购协议。",
+  "checklist.offer.negotiate_offers": "协商报价",
+  "checklist.offer.negotiate_offers_desc": "与潜在买家协商交易条款、附带条件和时间安排。",
+  "checklist.offer.receive_deposit": "接收定金",
+  "checklist.offer.receive_deposit_desc": "确认收到定金并出具收据或确认函。",
   "checklist.offer.pay_deposit": "支付定金",
   "checklist.offer.pay_deposit_desc": "转账约定的定金以确保房产。",
-
+  "checklist.offer.review_offers": "审查报价",
+  "checklist.offer.review_offers_desc": "评估并比较收到的报价及其附带条件。",
+  "checklist.offer.accept_offer": "接受要约",
+  "checklist.offer.accept_offer_desc": "正式接受最优要约并进入尽职调查阶段。",
+  "checklist.offer.sign_promesa": "签署购房预合同",
+  "checklist.offer.sign_promesa_desc": "与买方签署初步购房协议，确认所有已达成的条款。",
   "checklist.due_diligence.title_search": "完成产权调查",
   "checklist.due_diligence.title_search_desc": "从公共登记处获取无抵押证明。",
   "checklist.due_diligence.verify_no_liens": "确认无抵押或债务",
@@ -300,6 +387,7 @@
   "costs.credit_check_fee": "信用查询费",
   "costs.mortgage_insurance": "贷款保险",
   "costs.notary_fees": "公证费",
+  "costs.attorney_fees": "律师费用",
   "costs.acquisition_tax_isai": "契税",
   "costs.registration_fee": "登记费",
   "costs.home_insurance_annual": "房屋保险(年)",

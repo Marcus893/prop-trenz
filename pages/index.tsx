@@ -8,6 +8,7 @@ import { AuthForm } from "@/components/auth/AuthForm";
 import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
+import { useAuth } from "@/lib/auth";
 import {
   TrendingUp,
   MapPin,
@@ -30,6 +31,7 @@ export default function LandingPage() {
   const { t } = useTranslation("common");
   const router = useRouter();
   const { track } = useTracking();
+  const { user, signOut } = useAuth();
   const [showAuth, setShowAuth] = useState(false);
   const [authMode, setAuthMode] = useState<"signin" | "signup">("signup");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -181,23 +183,53 @@ export default function LandingPage() {
                 <div className="hidden sm:block">
                   <LanguageSwitcher />
                 </div>
-                <Button
-                  onClick={handleSignIn}
-                  variant="ghost"
-                  className={`hidden md:inline-flex ${
-                    scrolled
-                      ? "text-gray-700 hover:text-blue-600"
-                      : "text-white hover:bg-white/10"
-                  }`}
-                >
-                  {t("auth.sign_in", "Log In")}
-                </Button>
-                <Button
-                  onClick={handleGetStarted}
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 font-semibold shadow-lg hover:shadow-xl transition-all"
-                >
-                  {t("home.get_started", "Get Started")}
-                </Button>
+                {user ? (
+                  <>
+                    <Button
+                      onClick={async () => {
+                        track('user_signed_out', { source: 'landing_page' })
+                        await signOut()
+                        window.location.href = '/'
+                      }}
+                      variant="ghost"
+                      className={`hidden md:inline-flex ${
+                        scrolled
+                          ? "text-gray-700 hover:text-blue-600"
+                          : "text-white hover:bg-white/10"
+                      }`}
+                    >
+                      {t('common.sign_out', 'Sign Out')}
+                    </Button>
+                    <Link
+                      href="/transactions"
+                      className={`hidden md:inline-flex px-3 py-2 rounded-md font-medium ${
+                        scrolled ? 'text-gray-700' : 'text-white'
+                      }`}
+                    >
+                      {t('common.transactions', 'My Transactions')}
+                    </Link>
+                  </>
+                ) : (
+                  <>
+                    <Button
+                      onClick={handleSignIn}
+                      variant="ghost"
+                      className={`hidden md:inline-flex ${
+                        scrolled
+                          ? "text-gray-700 hover:text-blue-600"
+                          : "text-white hover:bg-white/10"
+                      }`}
+                    >
+                      {t("auth.sign_in", "Log In")}
+                    </Button>
+                    <Button
+                      onClick={handleGetStarted}
+                      className="bg-blue-600 hover:bg-blue-700 text-white px-6 font-semibold shadow-lg hover:shadow-xl transition-all"
+                    >
+                      {t("home.get_started", "Get Started")}
+                    </Button>
+                  </>
+                )}
 
                 {/* Mobile Menu Button */}
                 <button

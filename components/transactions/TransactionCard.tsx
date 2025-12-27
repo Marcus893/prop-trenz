@@ -23,6 +23,8 @@ const STAGE_LABELS: Record<TransactionStage, string> = {
   financing: 'Financing',
   closing: 'Closing',
   post_closing: 'Post-Closing',
+  listing: 'Listing',
+  gather_required_documents: 'Gather Documents',
 };
 
 const STATUS_COLORS: Record<string, string> = {
@@ -30,6 +32,14 @@ const STATUS_COLORS: Record<string, string> = {
   completed: 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300',
   cancelled: 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300',
   on_hold: 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300',
+};
+
+// Badge colors for transaction types
+const TYPE_COLORS: Record<string, string> = {
+  purchase: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300',
+  sale: 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300',
+  rent: 'bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-300',
+  other: 'bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300',
 };
 
 export function TransactionCard({ transaction, onDelete, onStatusChange }: TransactionCardProps) {
@@ -76,6 +86,11 @@ export function TransactionCard({ transaction, onDelete, onStatusChange }: Trans
         </div>
 
         <div className="flex items-center gap-2 ml-2">
+          {/* Transaction type badge */}
+          <span className={`px-2 py-1 rounded-full text-xs font-semibold ${TYPE_COLORS[transaction.transaction_type || 'other']}`}>
+            {t(`types.${transaction.transaction_type}`, transaction.transaction_type || 'Other')}
+          </span>
+
           <span className={`px-2 py-1 rounded-full text-xs font-medium ${STATUS_COLORS[transaction.status]}`}>
             {t(`status.${transaction.status}`, transaction.status)}
           </span>

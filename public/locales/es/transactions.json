@@ -1,15 +1,20 @@
 {
   "page_title": "Mis Transacciones",
   "page_subtitle": "Gestiona tu proceso de compra de propiedad",
+  "filters": {
+    "all": "Todas"
+  },
   "new_transaction": "Nueva Transacción",
   "overall_progress": "PROGRESO",
-  "progress": { "items_complete": "{{completed}} de {{total}} elementos completos" },
+  "progress": {
+    "items_complete": "{{completed}} de {{total}} elementos completos"
+  },
   "loading": "Cargando...",
   "empty_title": "Sin transacciones aún",
   "empty_description": "Comienza a rastrear tu primera compra de propiedad para mantenerte organizado durante todo el proceso.",
   "start_first_transaction": "Inicia Tu Primera Transacción",
   "login_required_title": "Inicia sesión para acceder a tus transacciones",
-  "login_required_description": "Crea una cuenta para rastrear tus compras de propiedades con listas de verificación, documentos y seguimiento de costos.",
+  "login_required_description": "Crea una cuenta para rastrear tus transacciones de propiedades con listas de verificación, documentos, seguimiento de costos y mucho más.",
   "untitled_property": "Propiedad Sin Título",
   "updated": "Actualizado",
   "back_to_list": "Volver a transacciones",
@@ -26,6 +31,13 @@
     "completed": "Completada",
     "cancelled": "Cancelada",
     "on_hold": "En Pausa"
+  },
+
+  "types": {
+    "purchase": "Compra",
+    "sale": "Venta",
+    "rent": "Renta",
+    "other": "Otro"
   },
 
   "actions": {
@@ -60,6 +72,16 @@
       "short_name": "Financ.",
       "description": "Asegura hipoteca y financiamiento"
     },
+    "listing": {
+      "name": "Publicación",
+      "short_name": "Publicar",
+      "description": "Prepara y promociona tu propiedad para la venta"
+    },
+    "gather_required_documents": {
+      "name": "Reunir Documentos Requeridos",
+      "short_name": "Documentos",
+      "description": "Reúne la escritura, identificaciones, recibos y certificados necesarios para el cierre"
+    },
     "closing": {
       "name": "Cierre",
       "short_name": "Cierre",
@@ -90,6 +112,14 @@
 
     "step2_title": "¿Qué tipo de propiedad?",
     "step2_description": "Selecciona el tipo de propiedad que te interesa.",
+
+    "sale": {
+      "step2_title": "¿Qué tipo de propiedad estás vendiendo?",
+      "step2_description": "Selecciona el tipo de propiedad que estás vendiendo.",
+      "step3_title": "Detalles de la propiedad para venta (opcional)",
+      "step3_description": "Agrega detalles sobre la propiedad que estás vendiendo: dirección, estado y precio de lista para seguir el proceso de venta."
+    },
+
     "property_house": "Casa",
     "property_apartment": "Departamento",
     "property_land": "Terreno",
@@ -115,7 +145,51 @@
     "add_custom": "Agregar elemento personalizado",
     "add_placeholder": "Describe la tarea...",
     "add_description_placeholder": "Ingrese detalles (opcional)",
-    "add_button": "Agregar"
+    "add_button": "Agregar",
+
+    "listing.prepare_for_sale": "Preparar la propiedad para la venta",
+    "listing.prepare_for_sale_desc": "Limpiar, acondicionar, tomar fotos y hacer reparaciones menores para presentar la propiedad",
+    "listing.hire_listing_agent": "Contratar a un agente de venta",
+    "listing.hire_listing_agent_desc": "Encuentra y contrata a un agente para listar y comercializar tu propiedad",
+    "listing.list_property": "Publicar la propiedad",
+    "listing.list_property_desc": "Crear el anuncio en portales y canales de venta",
+    "listing.schedule_showings": "Programar visitas",
+    "listing.schedule_showings_desc": "Coordinar visitas con posibles compradores y agentes",
+
+    "gather_required_documents.title_deed": "Escritura pública",
+    "gather_required_documents.title_deed_desc": "Obtén la escritura y copias para el comprador y el notario",
+    "gather_required_documents.identification": "Identificación del propietario",
+    "gather_required_documents.identification_desc": "Proporciona ID oficial para todos los propietarios (pasaporte, INE, etc.)",
+    "gather_required_documents.paid_predial_receipt": "Recibo de predial pagado",
+    "gather_required_documents.paid_predial_receipt_desc": "Obtén el comprobante de pago del impuesto predial actualizado",
+    "gather_required_documents.paid_utilities_receipts": "Recibos de servicios pagados",
+    "gather_required_documents.paid_utilities_receipts_desc": "Reúne recibos que muestren agua, luz y gas al corriente",
+    "gather_required_documents.hoa_no_debt_cert": "Constancia de no adeudo de la HOA",
+    "gather_required_documents.hoa_no_debt_cert_desc": "Obtén una constancia que demuestre que las cuotas de la HOA están al corriente",
+    "gather_required_documents.cert_of_no_liens": "Certificado de no gravámenes",
+    "gather_required_documents.cert_of_no_liens_desc": "Obtén un certificado oficial que indique que no hay gravámenes ni embargos",
+
+    "closing.provide_documents": "Proporcionar documentos para cierre",
+    "closing.provide_documents_desc": "Proporciona la escritura, identificaciones, recibos y cualquier documento solicitado por el notario o el comprador",
+    "closing.receive_final_payment": "Recibir pago final",
+    "closing.receive_final_payment_desc": "Confirma la recepción del pago final acordado y liquida los saldos",
+    "closing.sign_the_deed": "Firmar la escritura",
+    "closing.sign_the_deed_desc": "Firma la escritura pública (escritura) que transfiere la propiedad",
+    "closing.pay_real_estate_agent_commission": "Pagar comisión al agente inmobiliario",
+    "closing.pay_real_estate_agent_commission_desc": "Paga al agente la comisión acordada en el cierre",
+    "closing.pay_capital_gains_tax": "Pagar impuesto sobre ganancia de capital",
+    "closing.pay_capital_gains_tax_desc": "Paga cualquier impuesto sobre ganancias de capital aplicable a la venta",
+
+    "post_closing.move_furnitures": "Mover muebles",
+    "post_closing.move_furnitures_desc": "Organiza la mudanza y entrega de la propiedad",
+    "post_closing.deliver_keys": "Entregar llaves al comprador",
+    "post_closing.deliver_keys_desc": "Entrega todas las llaves y mandos al comprador",
+    "post_closing.transfer_utility": "Transferir contratos de servicios",
+    "post_closing.transfer_utility_desc": "Transfiere o cancela las cuentas de servicios según sea necesario",
+    "post_closing.notify_hoa_change_of_ownership": "Notificar a la HOA el cambio de propietario",
+    "post_closing.notify_hoa_change_of_ownership_desc": "Presenta la documentación requerida a la asociación de propietarios",
+    "post_closing.keep_sale_records": "Conservar registros de la venta",
+    "post_closing.keep_sale_records_desc": "Guarda todos los documentos y recibos del cierre para impuestos y registros legales"
   },
 
   "costs": {
@@ -134,7 +208,17 @@
     "add_name_placeholder": "Nombre del costo...",
     "add_amount_placeholder": "Monto",
     "add_button": "Agregar",
-    "paid_to": {      "select": "Pagado a...",      "escrow": "Fideicomiso",
+
+    "seller_prep_costs": "Costos de preparación del vendedor",
+    "cert_of_no_liens": "Certificado de no gravámenes",
+    "hoa_no_debt_letter": "Carta de no adeudo HOA",
+    "bank_trust_cancellation_fee": "Cargo por cancelación de fideicomiso bancario",
+    "agent_commission": "Comisión del agente",
+    "capital_gains_tax": "Impuesto a ganancias de capital",
+
+    "paid_to": {
+      "select": "Pagado a...",
+      "escrow": "Fideicomiso",
       "notary": "Notario",
       "government": "Gobierno",
       "bank": "Banco",
@@ -218,11 +302,18 @@
   "checklist.offer.submit_offer_desc": "Presenta tu oferta al vendedor a través de tu agente.",
   "checklist.offer.negotiate_terms": "Negocia términos",
   "checklist.offer.negotiate_terms_desc": "Responde a contraofertas y negocia precio y condiciones finales.",
-  "checklist.offer.sign_promesa": "Firma promesa de compraventa",
-  "checklist.offer.sign_promesa_desc": "Firma el contrato preliminar con todos los términos acordados.",
+  "checklist.offer.negotiate_offers": "Negocia ofertas",
+  "checklist.offer.negotiate_offers_desc": "Trabaja con compradores potenciales para negociar términos, contingencias y plazos.",
+  "checklist.offer.receive_deposit": "Recibe depósito",
+  "checklist.offer.receive_deposit_desc": "Confirma la recepción de los fondos del depósito y emite un recibo o acuse de recibo.",
   "checklist.offer.pay_deposit": "Paga el depósito",
   "checklist.offer.pay_deposit_desc": "Transfiere el depósito acordado para asegurar la propiedad.",
-
+  "checklist.offer.review_offers": "Revisa ofertas",
+  "checklist.offer.review_offers_desc": "Evalúa y compara las ofertas entrantes y sus contingencias.",
+  "checklist.offer.accept_offer": "Acepta oferta",
+  "checklist.offer.accept_offer_desc": "Acepta formalmente la mejor oferta y procede al due diligence.",
+  "checklist.offer.sign_promesa": "Firma promesa de compraventa",
+  "checklist.offer.sign_promesa_desc": "Firma la promesa de compraventa con todos los términos acordados.",
   "checklist.due_diligence.title_search": "Completa búsqueda de título",
   "checklist.due_diligence.title_search_desc": "Obtén un certificado de libertad de gravamen del registro público.",
   "checklist.due_diligence.verify_no_liens": "Verifica que no haya gravámenes",
@@ -300,6 +391,7 @@
   "costs.credit_check_fee": "Consulta de Buró",
   "costs.mortgage_insurance": "Seguro de Hipoteca",
   "costs.notary_fees": "Honorarios Notariales",
+  "costs.attorney_fees": "Honorarios de abogado",
   "costs.acquisition_tax_isai": "Impuesto de Adquisición (ISAI)",
   "costs.registration_fee": "Derechos de Registro",
   "costs.home_insurance_annual": "Seguro de Hogar (Anual)",

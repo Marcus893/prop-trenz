@@ -2,14 +2,23 @@
 -- Mexico-specific checklists, documents, and costs for each stage
 
 -- Insert stage definitions
-INSERT INTO transaction_stages (stage, stage_order, name_key, description_key, typical_duration_days) VALUES
-  ('search', 1, 'stages.search.name', 'stages.search.description', 21),
-  ('analysis', 2, 'stages.analysis.name', 'stages.analysis.description', 3),
-  ('offer', 3, 'stages.offer.name', 'stages.offer.description', 5),
-  ('due_diligence', 4, 'stages.due_diligence.name', 'stages.due_diligence.description', 5),
-  ('financing', 5, 'stages.financing.name', 'stages.financing.description', 30),
-  ('closing', 6, 'stages.closing.name', 'stages.closing.description', 10),
-  ('post_closing', 7, 'stages.post_closing.name', 'stages.post_closing.description', 30);
+-- Purchase-specific stages
+INSERT INTO transaction_stages (stage, stage_order, name_key, description_key, typical_duration_days, transaction_type) VALUES
+  ('search', 1, 'stages.search.name', 'stages.search.description', 21, 'purchase'),
+  ('analysis', 2, 'stages.analysis.name', 'stages.analysis.description', 3, 'purchase'),
+  ('offer', 3, 'stages.offer.name', 'stages.offer.description', 5, 'purchase'),
+  ('due_diligence', 4, 'stages.due_diligence.name', 'stages.due_diligence.description', 5, 'purchase'),
+  ('financing', 5, 'stages.financing.name', 'stages.financing.description', 30, 'purchase'),
+  ('closing', 6, 'stages.closing.name', 'stages.closing.description', 10, 'purchase'),
+  ('post_closing', 7, 'stages.post_closing.name', 'stages.post_closing.description', 30, 'purchase');
+
+-- Sale-specific stages
+INSERT INTO transaction_stages (stage, stage_order, name_key, description_key, typical_duration_days, transaction_type) VALUES
+  ('listing', 1, 'stages.listing.name', 'stages.listing.description', 14, 'sale'),
+  ('offer', 2, 'stages.offer.name', 'stages.offer.description', 5, 'sale'),
+  ('gather_required_documents', 3, 'stages.gather_required_documents.name', 'stages.gather_required_documents.description', 7, 'sale'),
+  ('closing', 4, 'stages.closing.name', 'stages.closing.description', 10, 'sale'),
+  ('post_closing', 5, 'stages.post_closing.name', 'stages.post_closing.description', 30, 'sale');
 
 -- ============================================================================
 -- CHECKLIST TEMPLATES BY STAGE
@@ -184,3 +193,55 @@ INSERT INTO stage_cost_templates (stage, cost_type, name_key, typical_percentage
   ('post_closing', 'home_insurance_annual', 'costs.home_insurance_annual', 0.003, NULL, false, 'insurance'),
   ('post_closing', 'moving_costs', 'costs.moving_costs', NULL, 15000, false, 'moving_company'),
   ('post_closing', 'utility_contract_update', 'costs.utility_contract_update', NULL, 1000, false, 'utilities');
+
+-- ============================================================================
+-- SELLER-SPECIFIC CHECKLIST TEMPLATES (transaction_type = 'sale')
+-- These templates are applied only when creating a 'sale' transaction.
+-- ============================================================================
+INSERT INTO stage_checklist_templates (stage, item_order, title_key, description_key, category, is_required, transaction_type) VALUES
+  ('listing', 1, 'checklist.listing.prepare_for_sale', 'checklist.listing.prepare_for_sale_desc', 'marketing', true, 'sale'),
+  ('listing', 2, 'checklist.listing.hire_listing_agent', 'checklist.listing.hire_listing_agent_desc', 'marketing', false, 'sale'),
+  ('listing', 3, 'checklist.listing.list_property', 'checklist.listing.list_property_desc', 'marketing', true, 'sale'),
+  ('listing', 4, 'checklist.listing.schedule_showings', 'checklist.listing.schedule_showings_desc', 'marketing', true, 'sale');
+
+INSERT INTO stage_checklist_templates (stage, item_order, title_key, description_key, category, is_required, transaction_type) VALUES
+  ('offer', 1, 'checklist.offer.review_offers', 'checklist.offer.review_offers_desc', 'due diligence', true, 'sale'),
+  ('offer', 2, 'checklist.offer.negotiate_offers', 'checklist.offer.negotiate_offers_desc', 'due diligence', true, 'sale'),
+  ('offer', 3, 'checklist.offer.accept_offer', 'checklist.offer.accept_offer_desc', 'due diligence', true, 'sale'),
+  ('offer', 4, 'checklist.offer.sign_promesa', 'checklist.offer.sign_promesa_desc', 'legal', true, 'sale'),
+  ('offer', 5, 'checklist.offer.receive_deposit', 'checklist.offer.receive_deposit_desc', 'financial', true, 'sale');
+
+INSERT INTO stage_checklist_templates (stage, item_order, title_key, description_key, category, is_required, transaction_type) VALUES
+  ('gather_required_documents', 1, 'checklist.gather_required_documents.title_deed', 'checklist.gather_required_documents.title_deed_desc', 'legal', true, 'sale'),
+  ('gather_required_documents', 2, 'checklist.gather_required_documents.identification', 'checklist.gather_required_documents.identification_desc', 'legal', true, 'sale'),
+  ('gather_required_documents', 3, 'checklist.gather_required_documents.paid_predial_receipt', 'checklist.gather_required_documents.paid_predial_receipt_desc', 'legal', true, 'sale'),
+  ('gather_required_documents', 4, 'checklist.gather_required_documents.paid_utilities_receipts', 'checklist.gather_required_documents.paid_utilities_receipts_desc', 'legal', true, 'sale'),
+  ('gather_required_documents', 5, 'checklist.gather_required_documents.hoa_no_debt_cert', 'checklist.gather_required_documents.hoa_no_debt_cert_desc', 'legal', true, 'sale'),
+  ('gather_required_documents', 6, 'checklist.gather_required_documents.cert_of_no_liens', 'checklist.gather_required_documents.cert_of_no_liens_desc', 'legal', true, 'sale');
+
+INSERT INTO stage_checklist_templates (stage, item_order, title_key, description_key, category, is_required, transaction_type) VALUES
+  ('closing', 1, 'checklist.closing.provide_documents', 'checklist.closing.provide_documents_desc', 'legal', true, 'sale'),
+  ('closing', 2, 'checklist.closing.receive_final_payment', 'checklist.closing.receive_final_payment_desc', 'financial', true, 'sale'),
+  ('closing', 3, 'checklist.closing.sign_the_deed', 'checklist.closing.sign_the_deed_desc', 'legal', true, 'sale'),
+  ('closing', 4, 'checklist.closing.pay_real_estate_agent_commission', 'checklist.closing.pay_real_estate_agent_commission_desc', 'financial', false, 'sale'),
+  ('closing', 5, 'checklist.closing.pay_capital_gains_tax', 'checklist.closing.pay_capital_gains_tax_desc', 'financial', true, 'sale');
+
+INSERT INTO stage_checklist_templates (stage, item_order, title_key, description_key, category, is_required, transaction_type) VALUES
+  ('post_closing', 1, 'checklist.post_closing.move_furnitures', 'checklist.post_closing.move_furnitures_desc', 'legal', true, 'sale'),
+  ('post_closing', 2, 'checklist.post_closing.deliver_keys', 'checklist.post_closing.deliver_keys_desc', 'legal', true, 'sale'),
+  ('post_closing', 3, 'checklist.post_closing.transfer_utility', 'checklist.post_closing.transfer_utility_desc', 'legal', false, 'sale'),
+  ('post_closing', 4, 'checklist.post_closing.notify_hoa_change_of_ownership', 'checklist.post_closing.notify_hoa_change_of_ownership_desc', 'legal', true, 'sale'),
+  ('post_closing', 5, 'checklist.post_closing.keep_sale_records', 'checklist.post_closing.keep_sale_records_desc', 'legal', true, 'sale');
+
+-- ============================================================================
+-- SELLER-SPECIFIC COST TEMPLATES (transaction_type = 'sale')
+-- ============================================================================
+
+INSERT INTO stage_cost_templates (stage, cost_type, name_key, typical_percentage, typical_amount, is_required, paid_to, transaction_type) VALUES
+  ('listing', 'seller_prep_costs', 'costs.seller_prep_costs', NULL, 20000, true, 'contractor', 'sale'),
+  ('gather_required_documents', 'cert_of_no_liens', 'costs.cert_of_no_liens', NULL, 1000, true, 'government', 'sale'),
+  ('gather_required_documents', 'hoa_no_debt_letter', 'costs.hoa_no_debt_letter', NULL, 1000, true, 'hoa', 'sale'),
+  ('closing', 'bank_trust_cancellation_fee', 'costs.bank_trust_cancellation_fee', NULL, 20000, false, 'bank', 'sale'),
+  ('closing', 'agent_commission', 'costs.agent_commission', 0.05, NULL, false, 'agent', 'sale'),
+  ('closing', 'capital_gains_tax', 'costs.capital_gains_tax', NULL, NULL, true, 'government', 'sale'),
+  ('post_closing', 'moving_costs', 'costs.moving_costs', NULL, 15000, false, 'moving_company', 'sale');

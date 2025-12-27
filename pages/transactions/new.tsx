@@ -88,6 +88,27 @@ export default function NewTransactionPage() {
     }
   };
 
+  // Localized step titles/descriptions that vary by transaction type
+  const step2Title =
+    transactionType === 'sale'
+      ? t('new.sale.step2_title', 'What type of property are you selling?')
+      : t('new.step2_title');
+  const step2Description =
+    transactionType === 'sale'
+      ? t('new.sale.step2_description', 'Select the property type you are selling.')
+      : t('new.step2_description');
+  const step3Title =
+    transactionType === 'sale'
+      ? t('new.sale.step3_title', 'Property details for sellers (optional)')
+      : t('new.step3_title');
+  const step3Description =
+    transactionType === 'sale'
+      ? t(
+          'new.sale.step3_description',
+          "Add details about the property you're selling — address, condition, and listing price to help track the sale process."
+        )
+      : t('new.step3_description');
+
   return (
     <Layout title={t('new.page_title')}>
       <div className="max-w-2xl mx-auto px-4 py-8">
@@ -163,10 +184,10 @@ export default function NewTransactionPage() {
         {step === 2 && (
           <div>
             <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-              {t('new.step2_title')}
+              {step2Title}
             </h1>
             <p className="text-gray-600 dark:text-gray-400 mb-6">
-              {t('new.step2_description')}
+              {step2Description}
             </p>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
@@ -198,10 +219,10 @@ export default function NewTransactionPage() {
         {step === 3 && (
           <div>
             <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-              {t('new.step3_title')}
+              {step3Title}
             </h1>
             <p className="text-gray-600 dark:text-gray-400 mb-6">
-              {t('new.step3_description')}
+              {step3Description}
             </p>
 
             <div className="space-y-4">

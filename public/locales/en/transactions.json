@@ -1,6 +1,9 @@
 {
   "page_title": "My Transactions",
   "page_subtitle": "Manage your property purchase journey",
+  "filters": {
+    "all": "All"
+  },
   "new_transaction": "New Transaction",
   "overall_progress": "PROGRESS",
   "progress": { "items_complete": "{{completed}} of {{total}} items complete" },
@@ -9,7 +12,7 @@
   "empty_description": "Start tracking your first property purchase to stay organized throughout the buying process.",
   "start_first_transaction": "Start Your First Transaction",
   "login_required_title": "Sign in to access your transactions",
-  "login_required_description": "Create an account to track your property purchases with checklists, documents, and cost tracking.",
+  "login_required_description": "Create an account to track your property transactions with checklists, documents, cost tracking, and much more.",
   "untitled_property": "Untitled Property",
   "updated": "Updated",
   "back_to_list": "Back to transactions",
@@ -26,6 +29,13 @@
     "completed": "Completed",
     "cancelled": "Cancelled",
     "on_hold": "On Hold"
+  },
+
+  "types": {
+    "purchase": "Purchase",
+    "sale": "Sale",
+    "rent": "Rent",
+    "other": "Other"
   },
 
   "actions": {
@@ -60,6 +70,16 @@
       "short_name": "Financing",
       "description": "Secure mortgage and financing"
     },
+    "listing": {
+      "name": "Listing",
+      "short_name": "Listing",
+      "description": "Prepare and market your property for sale"
+    },
+    "gather_required_documents": {
+      "name": "Gather Required Documents",
+      "short_name": "Gather Docs",
+      "description": "Collect title, ID, receipts, and certificates required for closing"
+    },
     "closing": {
       "name": "Closing",
       "short_name": "Closing",
@@ -90,6 +110,14 @@
 
     "step2_title": "What type of property?",
     "step2_description": "Select the type of property you're interested in.",
+
+    "sale": {
+      "step2_title": "What type of property are you selling?",
+      "step2_description": "Select the property type you are selling.",
+      "step3_title": "Property details for sellers (optional)",
+      "step3_description": "Add details about the property you're selling — address, condition, and listing price to help track the sale process."
+    },
+
     "property_house": "House",
     "property_apartment": "Apartment",
     "property_land": "Land",
@@ -115,7 +143,51 @@
     "add_custom": "Add custom item",
     "add_placeholder": "Enter task description...",
     "add_description_placeholder": "Enter details (optional)",
-    "add_button": "Add"
+    "add_button": "Add",
+
+    "listing.prepare_for_sale": "Prepare property for sale",
+    "listing.prepare_for_sale_desc": "Clean, stage, take photos, and make minor repairs to present the property",
+    "listing.hire_listing_agent": "Hire a listing agent",
+    "listing.hire_listing_agent_desc": "Find and retain an agent to list and market your property",
+    "listing.list_property": "List property",
+    "listing.list_property_desc": "Create listing on marketplaces and syndicate to portals",
+    "listing.schedule_showings": "Schedule showings",
+    "listing.schedule_showings_desc": "Coordinate visits with prospective buyers and agents",
+
+    "gather_required_documents.title_deed": "Title deed (escritura)",
+    "gather_required_documents.title_deed_desc": "Obtain the official title deed and copies for the buyer and notary",
+    "gather_required_documents.identification": "Owner identification",
+    "gather_required_documents.identification_desc": "Provide official ID for all property owners (passport, INE, etc.)",
+    "gather_required_documents.paid_predial_receipt": "Paid predial receipt",
+    "gather_required_documents.paid_predial_receipt_desc": "Obtain comprobante de pago del impuesto predial up to date",
+    "gather_required_documents.paid_utilities_receipts": "Paid utilities receipts",
+    "gather_required_documents.paid_utilities_receipts_desc": "Collect receipts showing water, electricity, and gas are paid",
+    "gather_required_documents.hoa_no_debt_cert": "HOA no-debt certificate",
+    "gather_required_documents.hoa_no_debt_cert_desc": "Obtain a certificate showing homeowner association fees are current",
+    "gather_required_documents.cert_of_no_liens": "Certificate of no liens",
+    "gather_required_documents.cert_of_no_liens_desc": "Obtain an official certificate stating there are no liens or encumbrances",
+
+    "closing.provide_documents": "Provide closing documents",
+    "closing.provide_documents_desc": "Provide the title deed, IDs, receipts and any documents requested by the notary or buyer",
+    "closing.receive_final_payment": "Receive final payment",
+    "closing.receive_final_payment_desc": "Confirm receipt of the agreed final payment and settle balances",
+    "closing.sign_the_deed": "Sign the deed",
+    "closing.sign_the_deed_desc": "Sign the public deed (escritura) transferring ownership",
+    "closing.pay_real_estate_agent_commission": "Pay real estate agent commission",
+    "closing.pay_real_estate_agent_commission_desc": "Pay the agent their agreed commission at closing",
+    "closing.pay_capital_gains_tax": "Pay capital gains tax",
+    "closing.pay_capital_gains_tax_desc": "Pay any applicable capital gains tax due on the sale",
+
+    "post_closing.move_furnitures": "Move furniture",
+    "post_closing.move_furnitures_desc": "Arrange moving out and hand over the property",
+    "post_closing.deliver_keys": "Deliver keys to buyer",
+    "post_closing.deliver_keys_desc": "Hand over all keys and remote controls to the buyer",
+    "post_closing.transfer_utility": "Transfer utility contracts",
+    "post_closing.transfer_utility_desc": "Transfer or close utility accounts as required",
+    "post_closing.notify_hoa_change_of_ownership": "Notify HOA of ownership change",
+    "post_closing.notify_hoa_change_of_ownership_desc": "Submit required paperwork to the homeowners association",
+    "post_closing.keep_sale_records": "Keep sale records",
+    "post_closing.keep_sale_records_desc": "Save all closing documents and receipts for tax and legal records"
   },
 
   "costs": {
@@ -134,6 +206,14 @@
     "add_name_placeholder": "Cost name...",
     "add_amount_placeholder": "Amount",
     "add_button": "Add",
+
+    "seller_prep_costs": "Seller prep costs",
+    "cert_of_no_liens": "Certificate of no liens",
+    "hoa_no_debt_letter": "HOA no-debt letter",
+    "bank_trust_cancellation_fee": "Bank trust cancellation fee",
+    "agent_commission": "Agent commission",
+    "capital_gains_tax": "Capital gains tax",
+
     "paid_to": {
       "select": "Paid to...",
       "escrow": "Escrow",
@@ -220,6 +300,10 @@
   "checklist.offer.submit_offer_desc": "Present your offer to the seller through your agent.",
   "checklist.offer.negotiate_terms": "Negotiate terms",
   "checklist.offer.negotiate_terms_desc": "Respond to counter-offers and negotiate final price and conditions.",
+  "checklist.offer.negotiate_offers": "Negotiate offers",
+  "checklist.offer.negotiate_offers_desc": "Work with potential buyers to negotiate terms, contingencies, and timelines.",
+  "checklist.offer.receive_deposit": "Receive deposit",
+  "checklist.offer.receive_deposit_desc": "Confirm receipt of deposit funds and issue a receipt or acknowledgement.",
   "checklist.offer.sign_promesa": "Sign promesa de compraventa",
   "checklist.offer.sign_promesa_desc": "Sign the preliminary purchase agreement with all agreed terms.",
   "checklist.offer.pay_deposit": "Pay earnest deposit",
@@ -257,10 +341,11 @@
   "checklist.financing.sign_mortgage_contract": "Sign mortgage contract",
   "checklist.financing.sign_mortgage_contract_desc": "Sign the final mortgage agreement with the bank.",
 
-    "skip_financing": "Skip Financing",
-    "skip_financing_help": "I do not need a mortgage for this purchase; exclude financing items from my progress",
-    "skip_financing_undo": "Undo skip",
-    "skipped_label": "Skipped",
+  "skip_financing": "Skip Financing",
+  "skip_financing_help": "I do not need a mortgage for this purchase; exclude financing items from my progress",
+  "skip_financing_undo": "Undo skip",
+  "skipped_label": "Skipped",
+  "checklist.closing.select_notary": "Select notary",
   "checklist.closing.select_notary_desc": "Choose a notary public to handle the transaction.",
   "checklist.closing.review_escritura": "Review escritura draft",
   "checklist.closing.review_escritura_desc": "Carefully review the deed draft prepared by the notary.",
@@ -300,6 +385,7 @@
   "costs.credit_check_fee": "Credit Check Fee",
   "costs.mortgage_insurance": "Mortgage Insurance",
   "costs.notary_fees": "Notary Fees",
+  "costs.attorney_fees": "Attorney Fees",
   "costs.acquisition_tax_isai": "Acquisition Tax (ISAI)",
   "costs.registration_fee": "Registration Fee",
   "costs.home_insurance_annual": "Home Insurance (Annual)",
@@ -307,5 +393,39 @@
   "costs.buyer_agent_retainer": "Buyer Agent Retainer",
   "costs.bank_trust_fees": "Bank Trust Fees",
   "costs.final_payment": "Final Payment to Seller",
-  "costs.utility_contract_update": "Utility Contract Update"
+  "costs.utility_contract_update": "Utility Contract Update",
+
+  "checklist.search.prepare_for_sale": "Prepare property for sale",
+  "checklist.search.prepare_for_sale_desc": "Declutter, repair, and stage the property so it's market-ready.",
+  "checklist.search.set_list_price": "Set list price",
+  "checklist.search.set_list_price_desc": "Determine a competitive listing price with your agent.",
+  "checklist.search.hire_listing_agent": "Hire a listing agent",
+  "checklist.search.hire_listing_agent_desc": "Find an agent experienced in your neighborhood to list and market your property.",
+
+  "checklist.offer.review_offers": "Review offers",
+  "checklist.offer.review_offers_desc": "Evaluate and compare incoming offers and contingencies.",
+  "checklist.offer.accept_offer": "Accept offer",
+  "checklist.offer.accept_offer_desc": "Formally accept the best offer and proceed to due diligence.",
+
+  "checklist.due_diligence.prepare_documents_for_buyer": "Prepare documents for the buyer",
+  "checklist.due_diligence.prepare_documents_for_buyer_desc": "Gather title certificates, receipts, and required disclosures for the buyer.",
+  "checklist.due_diligence.clear_liens": "Clear liens and encumbrances",
+  "checklist.due_diligence.clear_liens_desc": "Resolve any outstanding liens that could block the sale.",
+
+  "checklist.closing.prepare_payoff": "Prepare mortgage payoff (if applicable)",
+  "checklist.closing.prepare_payoff_desc": "Request a formal payoff statement and arrange the transfer of funds to close mortgages.",
+  "checklist.closing.sign_transfer": "Sign transfer documents",
+  "checklist.closing.sign_transfer_desc": "Sign the deed and any transfer documents required by the notary.",
+  "checklist.closing.transfer_keys": "Transfer keys to buyer",
+  "checklist.closing.transfer_keys_desc": "Hand over keys and confirm possession transfer with the buyer.",
+
+  "checklist.post_closing.notify_utilities": "Notify utilities",
+  "checklist.post_closing.notify_utilities_desc": "Inform utility companies and cancel/transfer accounts as needed.",
+  "checklist.post_closing.file_tax_documents": "File tax-related documents",
+  "checklist.post_closing.file_tax_documents_desc": "Complete any seller tax filings and retain records.",
+
+  "costs.seller_prep_costs": "Seller prep costs",
+  "costs.agent_commission": "Agent commission",
+  "costs.seller_closing_fees": "Seller closing fees",
+  "costs.capital_gains_tax_estimate": "Capital gains tax (estimate)"
 }

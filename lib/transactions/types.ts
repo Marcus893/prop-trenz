@@ -7,7 +7,9 @@ export type TransactionStage =
   | 'due_diligence'
   | 'financing'
   | 'closing'
-  | 'post_closing';
+  | 'post_closing'
+  | 'listing'
+  | 'gather_required_documents';
 
 export type TransactionStatus = 'active' | 'completed' | 'cancelled' | 'on_hold';
 
@@ -88,6 +90,8 @@ export interface ChecklistTemplate {
   description_key?: string;
   is_required: boolean;
   category?: string;
+  // 'purchase' | 'sale' | 'both' - optional, template-specific
+  transaction_type?: string;
 }
 
 export interface ChecklistItem {
@@ -143,6 +147,8 @@ export interface CostTemplate {
   typical_amount?: number;
   is_required: boolean;
   paid_to?: string;
+  // 'purchase' | 'sale' | 'both' - optional, template-specific
+  transaction_type?: string;
 }
 
 export interface TransactionCost {
@@ -259,25 +265,26 @@ export const STAGE_ORDER: TransactionStage[] = [
   'post_closing'
 ];
 
-export const getStageIndex = (stage: TransactionStage): number => {
-  return STAGE_ORDER.indexOf(stage);
+export const getStageIndex = (stage: TransactionStage, stages: TransactionStage[] = STAGE_ORDER): number => {
+  return stages.indexOf(stage);
 };
 
-export const getNextStage = (stage: TransactionStage): TransactionStage | null => {
-  const index = getStageIndex(stage);
-  return index < STAGE_ORDER.length - 1 ? STAGE_ORDER[index + 1] : null;
+export const getNextStage = (stage: TransactionStage, stages: TransactionStage[] = STAGE_ORDER): TransactionStage | null => {
+  const index = getStageIndex(stage, stages);
+  return index >= 0 && index < stages.length - 1 ? stages[index + 1] : null;
 };
 
-export const getPreviousStage = (stage: TransactionStage): TransactionStage | null => {
-  const index = getStageIndex(stage);
-  return index > 0 ? STAGE_ORDER[index - 1] : null;
+export const getPreviousStage = (stage: TransactionStage, stages: TransactionStage[] = STAGE_ORDER): TransactionStage | null => {
+  const index = getStageIndex(stage, stages);
+  return index > 0 ? stages[index - 1] : null;
 };
 
 export const isStageCompleted = (
   currentStage: TransactionStage, 
-  checkStage: TransactionStage
+  checkStage: TransactionStage,
+  stages: TransactionStage[] = STAGE_ORDER
 ): boolean => {
-  return getStageIndex(checkStage) < getStageIndex(currentStage);
+  return getStageIndex(checkStage, stages) < getStageIndex(currentStage, stages);
 };
 
 export const isCurrentStage = (

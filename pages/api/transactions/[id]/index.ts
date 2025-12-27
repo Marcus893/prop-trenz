@@ -74,6 +74,8 @@ async function handleGet(
   transaction: any
 ) {
   // Get all related data in parallel
+  const txType = transaction.transaction_type || 'purchase';
+
   const [
     stagesResult,
     checklistResult,
@@ -82,7 +84,12 @@ async function handleGet(
     notesResult,
     historyResult,
   ] = await Promise.all([
-    supabase.from('transaction_stages').select('*').order('stage_order'),
+    // Fetch only stages relevant to the transaction type
+    supabase
+      .from('transaction_stages')
+      .select('*')
+      .eq('transaction_type', txType)
+      .order('stage_order'),
     supabase
       .from('transaction_checklist')
       .select('*, template:stage_checklist_templates(*)')

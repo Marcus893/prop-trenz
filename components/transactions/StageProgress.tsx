@@ -6,6 +6,7 @@ import { CheckCircle } from 'lucide-react';
 
 interface StageProgressProps {
   currentStage: TransactionStage;
+  stages?: TransactionStage[]; // optional override for stage order (dynamic per transaction type)
   onStageClick?: (stage: TransactionStage) => void;
   compact?: boolean;
 }
@@ -18,17 +19,21 @@ const STAGE_ICONS: Record<TransactionStage, string> = {
   financing: '🏦',
   closing: '🔑',
   post_closing: '🏠',
+  listing: '📢',
+  gather_required_documents: '📄',
 };
 
-export function StageProgress({ currentStage, onStageClick, compact = false }: StageProgressProps) {
+export function StageProgress({ currentStage, stages, onStageClick, compact = false }: StageProgressProps) {
   const { t } = useTranslation('transactions');
+
+  const stagesList = stages && stages.length > 0 ? stages : STAGE_ORDER;
 
   return (
     <div className="w-full">
       {/* Desktop view */}
       <div className={`hidden ${compact ? 'md:flex' : 'sm:flex'} items-center justify-between`}>
-        {STAGE_ORDER.map((stage, index) => {
-          const isCompleted = isStageCompleted(currentStage, stage);
+        {stagesList.map((stage, index) => {
+          const isCompleted = isStageCompleted(currentStage, stage, stagesList);
           const isCurrent = isCurrentStage(currentStage, stage);
           // Make stages clickable whenever an onStageClick handler exists (allow jumping to any stage)
           const isClickable = Boolean(onStageClick);
@@ -72,11 +77,11 @@ export function StageProgress({ currentStage, onStageClick, compact = false }: S
               </button>
 
               {/* Connector line */}
-              {index < STAGE_ORDER.length - 1 && (
+              {index < stagesList.length - 1 && (
                 <div
                   className={`
                     flex-1 h-0.5 mx-1
-                    ${isStageCompleted(currentStage, STAGE_ORDER[index + 1]) || isCurrentStage(currentStage, STAGE_ORDER[index + 1])
+                    ${isStageCompleted(currentStage, stagesList[index + 1]) || isCurrentStage(currentStage, stagesList[index + 1])
                       ? 'bg-green-400'
                       : 'bg-gray-300 dark:bg-gray-600'
                     }
@@ -98,12 +103,12 @@ export function StageProgress({ currentStage, onStageClick, compact = false }: S
                 {t(`stages.${currentStage}.name`, currentStage)}
               </p>
               <p className="text-xs text-gray-500 dark:text-gray-400">
-                {t('stage_progress', { current: STAGE_ORDER.indexOf(currentStage) + 1, total: STAGE_ORDER.length })}
+                {t('stage_progress', { current: stagesList.indexOf(currentStage) + 1, total: stagesList.length })}
               </p>
             </div>
           </div>
           <div className="flex gap-1">
-            {STAGE_ORDER.map((stage, index) => {
+            {stagesList.map((stage, index) => {
               const isCompleted = isStageCompleted(currentStage, stage);
               const isCurrent = isCurrentStage(currentStage, stage);
               const clickable = Boolean(onStageClick);

@@ -54,12 +54,21 @@ async function handleGet(
   supabase: any,
   userId: string
 ) {
-  // Get all transactions for the user with progress
-  const { data: transactions, error } = await supabase
+  // Support filtering by transaction type via ?type=purchase|sale|rent|other
+  const type = typeof req.query.type === 'string' ? req.query.type : null;
+
+  // Build base query
+  let query = supabase
     .from('user_transactions')
     .select('*')
     .eq('user_id', userId)
-    .order('updated_at', { ascending: false });
+    .order('updated_at', { ascending: false }) as any;
+
+  if (type) {
+    query = query.eq('transaction_type', type);
+  }
+
+  const { data: transactions, error } = await query;
 
   if (error) throw error;
 
@@ -126,10 +135,11 @@ async function handlePost(
 
   if (txError) throw txError;
 
-  // Initialize checklist from templates
+  // Initialize checklist from templates specific to the transaction type
   const { data: checklistTemplates } = await supabase
     .from('stage_checklist_templates')
-    .select('*');
+    .select('*')
+    .eq('transaction_type', transaction_type);
 
   if (checklistTemplates && checklistTemplates.length > 0) {
     const checklistItems = checklistTemplates.map((template: any) => ({
@@ -142,10 +152,11 @@ async function handlePost(
     await supabase.from('transaction_checklist').insert(checklistItems);
   }
 
-  // Initialize costs from templates
+  // Initialize costs from templates specific to the transaction type
   const { data: costTemplates } = await supabase
     .from('stage_cost_templates')
-    .select('*');
+    .select('*')
+    .eq('transaction_type', transaction_type);
 
   if (costTemplates && costTemplates.length > 0) {
     const costItems = costTemplates.map((template: any) => {
@@ -167,10 +178,28 @@ async function handlePost(
     await supabase.from('transaction_costs').insert(costItems);
   }
 
+  // Determine initial stage for this transaction type and update transaction current_stage
+  const { data: firstStage } = await supabase
+    .from('transaction_stages')
+    .select('stage')
+    .eq('transaction_type', transaction_type)
+    .order('stage_order')
+    .limit(1)
+    .single();
+
+  const initialStage = firstStage?.stage || 'search';
+
+  if (initialStage && initialStage !== transaction.current_stage) {
+    await supabase
+      .from('user_transactions')
+      .update({ current_stage: initialStage })
+      .eq('id', transaction.id);
+  }
+
   // Record initial stage history
   await supabase.from('transaction_stage_history').insert({
     transaction_id: transaction.id,
-    to_stage: 'search',
+    to_stage: initialStage,
   });
 
   return res.status(201).json(transaction);
