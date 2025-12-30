@@ -143,7 +143,7 @@ export async function findRelatedGuides(
       const excerpt = item.guide.excerpt || item.guide.metaDescription
       
       return {
-        slug: baseSlug,
+        slug: item.guide.slug,
         title: item.guide.title,
         excerpt, // Always a string (falls back to metaDescription which is required)
         mainImageUrl: item.guide.mainImageUrl,

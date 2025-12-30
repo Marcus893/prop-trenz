@@ -74,6 +74,7 @@ export async function generateGuide(params: GenerateGuideParams): Promise<GuideA
     status: 'draft',
     accessLevel,
     tags,
+    keywords: draft.keywords && draft.keywords.length > 0 ? draft.keywords : (params.keywords && params.keywords.length > 0 ? params.keywords : undefined),
     updatedAt: new Date().toISOString(),
     metaDescription: draft.metaDescription,
     metaTitle: draft.metaTitle,

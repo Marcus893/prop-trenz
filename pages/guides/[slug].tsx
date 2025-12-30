@@ -37,6 +37,7 @@ interface GuidePageProps {
   };
   isFallbackLocale?: boolean;
   relatedGuides?: RelatedGuide[];
+  translationsMap?: Record<string, string>; // locale -> localized slug
 }
 
 export default function GuidePage({
@@ -136,7 +137,7 @@ export default function GuidePage({
       "@id": canonicalUrl,
     },
     articleSection: guide.tags?.[0] || "Real Estate",
-    keywords: guide.tags.join(", "),
+    keywords: (guide.keywords ?? guide.tags).join(", "),
     inLanguage:
       guide.locale === "en"
         ? "en-US"
@@ -183,7 +184,7 @@ export default function GuidePage({
           name="robots"
           content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
         />
-        <meta name="keywords" content={guide.tags.join(", ")} />
+        <meta name="keywords" content={(guide.keywords ?? guide.tags).join(", ")} />
 
         {/* Hreflang tags for multilingual SEO - tells Google which language version to show */}
         {/* Only include hreflang tags for versions that actually exist */}
@@ -501,27 +502,20 @@ export default function GuidePage({
 }
 
 export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
+  // Build paths only for the actual localized guide slugs we have in `content/guides`
   const files = await listGuideFiles();
   const paths: Array<{ params: { slug: string }; locale?: string }> = [];
 
-  // Extract unique base slugs (remove locale suffixes)
-  const baseSlugs = new Set<string>();
-  files.forEach((file) => {
-    const slug = file.replace(/\.json$/, "");
-    const baseSlug = slug.replace(/-en$|-es$|-zh$/, "");
-    baseSlugs.add(baseSlug);
-  });
+  for (const file of files) {
+    const slugFile = file.replace(/\.json$/, "");
+    // Try to load the guide directly to get its locale and slug
+    const guide = await loadGuide(slugFile);
+    if (!guide) continue;
+    if (guide.status !== 'published') continue;
 
-  // Generate paths for each locale
-  const supportedLocales = locales || ["en", "es", "zh"];
-  baseSlugs.forEach((baseSlug) => {
-    supportedLocales.forEach((locale) => {
-      paths.push({
-        params: { slug: baseSlug },
-        locale,
-      });
-    });
-  });
+    // Push the actual slug and its locale
+    paths.push({ params: { slug: guide.slug }, locale: guide.locale });
+  }
 
   return {
     paths,
@@ -541,22 +535,27 @@ export const getStaticProps: GetStaticProps<GuidePageProps> = async ({
 
   const validLocale = locale || defaultLocale || "en";
 
-  // Extract base slug (remove locale suffix if present)
-  const baseSlug = slug.replace(/-en$|-es$|-zh$/, "");
+  // Use the requested slug from the route
+  const requestedSlug = slug;
 
-  // Try to load locale-specific version first
-  let guide = await loadGuide(baseSlug, validLocale);
+  // Try to load the guide using the requested slug and locale
+  let guide = await loadGuide(requestedSlug, validLocale);
 
-  // If guide doesn't exist in requested locale, try to fallback to English
-  if (!guide && validLocale !== "en") {
-    guide = await loadGuide(baseSlug, "en");
+  // If not found for this locale, try to load without forcing locale (allow file to match by name)
+  if (!guide) {
+    guide = await loadGuide(requestedSlug);
+  }
+
+  // If still not found, try to fallback to English explicitly
+  if (!guide && validLocale !== 'en') {
+    guide = await loadGuide(requestedSlug, 'en');
   }
 
   if (!guide) {
     return { notFound: true };
   }
 
-  if (guide.status !== "published") {
+  if (guide.status !== 'published') {
     return { notFound: true };
   }
 
@@ -566,41 +565,41 @@ export const getStaticProps: GetStaticProps<GuidePageProps> = async ({
   // but note that it's in a different language
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://proptrenz.com";
 
-  // Build canonical URL - self-referential (points to itself) for proper SEO
-  // This ensures each language version is treated as its own canonical page
-  // Next.js i18n routing: default locale (en) has no prefix, others have /locale prefix
-  const currentUrl =
+  // Canonical should point to the current page (use the actual localized slug)
+  const canonicalUrl =
     validLocale === "en"
-      ? `${baseUrl}/guides/${baseSlug}`
-      : `${baseUrl}/${validLocale}/guides/${baseSlug}`;
+      ? `${baseUrl}/guides/${guide.slug}`
+      : `${baseUrl}/${validLocale}/guides/${guide.slug}`;
 
-  // Canonical should point to the current page (self-referential)
-  // This is the correct approach for multilingual content
-  const canonicalUrl = currentUrl;
+  // Grouping helper: prefer mainImageUrl-derived key for cross-locale matching
+  const getGroupKey = (g: any) => {
+    if (g.mainImageUrl) {
+      const m = String(g.mainImageUrl).match(/\/blogs\/([^\/\.]*)/);
+      if (m && m[1]) return m[1];
+    }
+    return String(g.slug).replace(/-en$|-es$|-zh$/i, "");
+  };
 
-  // Check which language versions actually exist for this guide
-  const availableLocales = ["en", "es", "zh"];
-  const existingVersions: string[] = [];
+  const currentGroupKey = getGroupKey(guide);
 
-  for (const loc of availableLocales) {
-    const versionGuide = await loadGuide(baseSlug, loc);
-    if (versionGuide && versionGuide.status === "published") {
-      existingVersions.push(loc);
+  // Build a mapping of available locales -> localized slugs for this group
+  const allFiles = await listGuideFiles();
+  const localeSlugMap: Record<string, { slug: string; updatedAt: string }> = {};
+
+  for (const file of allFiles) {
+    const fileSlug = file.replace(/\.json$/, "");
+    const g = await loadGuide(fileSlug);
+    if (!g || g.status !== 'published') continue;
+    const key = getGroupKey(g);
+    if (key === currentGroupKey) {
+      localeSlugMap[g.locale] = { slug: g.slug, updatedAt: g.updatedAt };
     }
   }
 
-  // Build hreflang URLs only for versions that actually exist
-  // These should match the actual URLs that Next.js generates
   const hreflangUrls: { en?: string; es?: string; zh?: string } = {};
-  if (existingVersions.includes("en")) {
-    hreflangUrls.en = `${baseUrl}/guides/${baseSlug}`;
-  }
-  if (existingVersions.includes("es")) {
-    hreflangUrls.es = `${baseUrl}/es/guides/${baseSlug}`;
-  }
-  if (existingVersions.includes("zh")) {
-    hreflangUrls.zh = `${baseUrl}/zh/guides/${baseSlug}`;
-  }
+  if (localeSlugMap.en) hreflangUrls.en = `${baseUrl}/guides/${localeSlugMap.en.slug}`;
+  if (localeSlugMap.es) hreflangUrls.es = `${baseUrl}/es/guides/${localeSlugMap.es.slug}`;
+  if (localeSlugMap.zh) hreflangUrls.zh = `${baseUrl}/zh/guides/${localeSlugMap.zh.slug}`;
 
   // Find related guides based on shared tags
   const relatedGuides = await findRelatedGuides(guide, 3);
@@ -614,6 +613,11 @@ export const getStaticProps: GetStaticProps<GuidePageProps> = async ({
     mainImageAlt: related.mainImageAlt ?? null,
   }));
 
+  const translationsMap: Record<string, string> = {}
+  for (const [loc, entry] of Object.entries(localeSlugMap)) {
+    translationsMap[loc] = entry.slug
+  }
+
   return {
     props: {
       ...translations,
@@ -622,6 +626,7 @@ export const getStaticProps: GetStaticProps<GuidePageProps> = async ({
       hreflangUrls,
       isFallbackLocale: guide.locale !== validLocale,
       relatedGuides: serializedRelatedGuides,
+      translationsMap
     },
     revalidate: 60 * 60,
   };

@@ -27,6 +27,7 @@ export interface GuideArticle {
   status: GuideStatus
   accessLevel: GuideAccessLevel
   tags: string[]
+  keywords?: string[]
   updatedAt: string
   mainImageUrl?: string
   mainImageAlt?: string

@@ -207,6 +207,7 @@ interface TranslationResponse {
   metaDescription: string
   excerpt: string
   heroKicker: string
+  keywords?: string[]
   sections: Array<{
     heading: string
     paragraphs: string[]
@@ -215,6 +216,8 @@ interface TranslationResponse {
   }>
   faq?: Array<{ question: string; answer: string }>
 }
+
+// NOTE: The translator will also return a "keywords" array containing locale-optimized short keyword phrases (if available). If the source guide did not include keywords, the translator should suggest relevant keywords in the target locale.
 
 async function translateContent(sourceGuide: GuideArticle, targetLocale: string): Promise<TranslationResponse> {
   const apiKey = process.env.GEMINI_API_KEY
@@ -264,6 +267,7 @@ Output a JSON object with this exact schema:
   "metaDescription": string,
   "excerpt": string,
   "heroKicker": string,
+  "keywords": string[]?,
   "sections": [
     {
       "heading": string,
@@ -276,6 +280,7 @@ Output a JSON object with this exact schema:
 }
 
 Requirements:
+- Return a "keywords" array (if applicable) containing 4-8 short, locale-optimized keyword phrases or long-tail variations. If the source guide included keywords, translate them; if not, suggest relevant localized keywords. These should be short phrases (no commas), useful for meta tags and on-page SEO.
 - Translate all text naturally and accurately
 - Keep all numbers, percentages, currency amounts, and dates exactly as they appear
 - Maintain third-person voice throughout
@@ -522,6 +527,7 @@ export async function translateGuideToLocale(
     status: sourceGuide.status === 'published' ? 'published' : 'draft',
     accessLevel: sourceGuide.accessLevel,
     tags: translatedTags, // Use consistent tag mapping
+    keywords: translated.keywords ? translated.keywords : undefined,
     updatedAt: new Date().toISOString(),
     title: translated.title,
     metaTitle: translated.metaTitle,

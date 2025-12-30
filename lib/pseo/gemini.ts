@@ -31,6 +31,7 @@ Output a JSON object with this exact schema:
   "heroKicker": string,
   "mainImagePrompt": string,
   "tags": string[],
+  "keywords": string[]?,
   "sections": [
     {
       "heading": string,
@@ -191,6 +192,7 @@ interface GuideDraft {
   heroKicker: string;
   mainImagePrompt?: string;
   tags?: string[];
+  keywords?: string[];
   sections: Array<{
     heading: string;
     paragraphs: string[];

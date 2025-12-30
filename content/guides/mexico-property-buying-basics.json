@@ -8,7 +8,11 @@
   "heroKicker": "Buyer Playbook",
   "status": "published",
   "accessLevel": "public",
-  "tags": ["mexico-real-estate", "buying", "notary"],
+  "tags": [
+    "mexico-real-estate",
+    "buying",
+    "notary"
+  ],
   "updatedAt": "2025-11-10T12:00:00.000Z",
   "sections": [
     {
@@ -18,7 +22,10 @@
         "Because the notary is responsible for tax collection and lien verification, investors should involve one early. A notary will typically review the draft purchase agreement, confirm seller title with the Public Registry, and prepare the escritura for signing."
       ],
       "dataPoints": [
-        { "label": "Notary fee reference", "value": "MXN 15,000 – 30,000 for MXN 3M transactions" }
+        {
+          "label": "Notary fee reference",
+          "value": "MXN 15,000 – 30,000 for MXN 3M transactions"
+        }
       ]
     },
     {
@@ -39,7 +46,10 @@
         "The Ministry of Foreign Affairs (SRE) issues a permit for each fideicomiso. Banks charge an initial setup fee (MXN 15,000 – 25,000) and annual administration averages MXN 10,000 – 20,000."
       ],
       "dataPoints": [
-        { "label": "Restricted zone distance", "value": "50 km coastline / 100 km international border" }
+        {
+          "label": "Restricted zone distance",
+          "value": "50 km coastline / 100 km international border"
+        }
       ]
     },
     {
@@ -52,7 +62,7 @@
         "Cadastral certificate (certificado catastral) dated within 90 days.",
         "Non-lien certificate (certificado de libertad de gravamen).",
         "Property tax receipts covering the current year.",
-        "HOA constancia showing no outstanding fees." 
+        "HOA constancia showing no outstanding fees."
       ]
     },
     {
@@ -66,7 +76,7 @@
   "faq": [
     {
       "question": "How long does a residential closing take in Mexico?",
-      "answer": "An arms-length residential transaction typically closes 30–45 days after offer acceptance. The schedule depends on how quickly the notary receives tax certificates, HOA clearances, and—for foreign buyers—the SRE permit." 
+      "answer": "An arms-length residential transaction typically closes 30–45 days after offer acceptance. The schedule depends on how quickly the notary receives tax certificates, HOA clearances, and—for foreign buyers—the SRE permit."
     },
     {
       "question": "Are notary fees negotiable?",
@@ -78,5 +88,14 @@
     }
   ],
   "mainImageUrl": "/blogs/mexico-property-buying-basics.jpeg",
-  "mainImageAlt": "An overview of the notary-driven closing process in Mexico, including ISAI transfer taxes, escrow considerations, and foreign ownership rules."
+  "mainImageAlt": "An overview of the notary-driven closing process in Mexico, including ISAI transfer taxes, escrow considerations, and foreign ownership rules.",
+  "keywords": [
+    "buying property in mexico",
+    "mexico real estate process",
+    "mexican property taxes",
+    "escritura mexico",
+    "mexico notary public",
+    "property acquisition mexico",
+    "buying home in mexico"
+  ]
 }

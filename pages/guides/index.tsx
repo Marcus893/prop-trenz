@@ -240,10 +240,9 @@ export const getStaticProps: GetStaticProps<GuidesIndexProps> = async ({ locale,
   const guides = await listPublishedGuides(validLocale)
 
   const trimmedGuides = guides.map((guide) => {
-    // Extract base slug (remove locale suffix if present) for routing
-    const baseSlug = guide.slug.replace(/-en$|-es$|-zh$/, '')
+    // Use the locale-specific slug for routing so links point to the correct localized URL
     return {
-      slug: baseSlug, // Use base slug for routing
+      slug: guide.slug,
       title: guide.title,
       excerpt: guide.excerpt || guide.metaDescription,
       updatedAt: guide.updatedAt,

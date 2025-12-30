@@ -1,5 +1,5 @@
 import { GetServerSideProps } from 'next'
-import { listPublishedGuides } from '@/lib/pseo/storage'
+import { listGuideFiles, loadGuide } from '@/lib/pseo/storage'
 import { listLocationPages, loadLocationPage } from '@/lib/locations/storage'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://proptrenz.com'
@@ -24,14 +24,28 @@ function generateHreflangLinks(path: string, availableLocales: string[]): string
   return links.join('\n           ')
 }
 
-interface GuideWithLocales {
-  slug: string
+// Helper to generate hreflang links for a guide group (uses per-locale slugs)
+function generateHreflangLinksForGroup(localesMap: Record<string, string>): string {
+  const locales = Object.keys(localesMap)
+  const links = locales.map((locale) => {
+    const slug = localesMap[locale]
+    return `<xhtml:link rel=\"alternate\" hreflang=\"${locale}\" href=\"${getLocalizedUrl(`/guides/${slug}`, locale)}\" />`
+  })
+  // Add x-default pointing to English (or first available)
+  const defaultLocale = locales.includes('en') ? 'en' : locales[0]
+  const defaultSlug = localesMap[defaultLocale]
+  links.push(`<xhtml:link rel=\"alternate\" hreflang=\"x-default\" href=\"${getLocalizedUrl(`/guides/${defaultSlug}`, defaultLocale)}\" />`)
+  return links.join('\n           ')
+}
+
+interface GuideGroup {
+  groupKey: string
   updatedAt: string
-  availableLocales: string[]
+  locales: Record<string, string> // locale -> localized slug
 }
 
 function generateSiteMap(
-  guides: GuideWithLocales[],
+  groups: GuideGroup[],
   locationPages: Array<{ slug: string; updatedAt: string }>
 ) {
   const staticPages = [
@@ -59,16 +73,21 @@ function generateSiteMap(
        </url>`)
   })
 
-  // Generate guide entries - one entry per locale version with proper hreflang
-  const guideEntries = guides.flatMap((guide) => {
-    return guide.availableLocales.map((locale) => `
+  // Generate guide entries - one entry per localized slug with proper hreflang across the group's locales
+  const guideEntries = groups.flatMap((group) => {
+    // Build the list of locales present in this group
+    const availableLocales = Object.keys(group.locales)
+    return availableLocales.map((locale) => {
+      const slug = group.locales[locale]
+      return `
        <url>
-           <loc>${getLocalizedUrl(`/guides/${guide.slug}`, locale)}</loc>
-           <lastmod>${new Date(guide.updatedAt).toISOString()}</lastmod>
+           <loc>${getLocalizedUrl(`/guides/${slug}`, locale)}</loc>
+           <lastmod>${new Date(group.updatedAt).toISOString()}</lastmod>
            <changefreq>monthly</changefreq>
            <priority>0.7</priority>
-           ${generateHreflangLinks(`/guides/${guide.slug}`, guide.availableLocales)}
-       </url>`)
+           ${generateHreflangLinksForGroup(group.locales)}
+       </url>`
+    })
   })
 
   // Generate location page entries (these may not have translations)
@@ -97,60 +116,37 @@ function SiteMap() {
 }
 
 export const getServerSideProps: GetServerSideProps = async ({ res }) => {
-  // Fetch all published guides for each locale
-  const enGuides = await listPublishedGuides('en')
-  const esGuides = await listPublishedGuides('es')
-  const zhGuides = await listPublishedGuides('zh')
+  // Read all guide files and group them by a stable group key derived from mainImageUrl or slug
+  const files = await listGuideFiles()
 
-  // Build a map of unique guide slugs with their available locales
-  const guideMap = new Map<string, { slug: string; updatedAt: string; availableLocales: string[] }>()
+  const groupMap = new Map<string, { groupKey: string; updatedAt: string; locales: Record<string, string> }>()
 
-  // Process English guides
-  for (const g of enGuides) {
-    guideMap.set(g.slug, {
-      slug: g.slug,
-      updatedAt: g.updatedAt,
-      availableLocales: ['en']
-    })
+  const getGroupKey = (g: any) => {
+    if (g.mainImageUrl) {
+      const m = String(g.mainImageUrl).match(/\/blogs\/([^\/\.]*)/)
+      if (m && m[1]) return m[1]
+    }
+    return String(g.slug).replace(/-en$|-es$|-zh$/i, '')
   }
 
-  // Process Spanish guides
-  for (const g of esGuides) {
-    const existing = guideMap.get(g.slug)
+  for (const file of files) {
+    const fileSlug = file.replace(/\.json$/, '')
+    const g = await loadGuide(fileSlug)
+    if (!g || g.status !== 'published') continue
+
+    const key = getGroupKey(g)
+    const existing = groupMap.get(key)
     if (existing) {
-      existing.availableLocales.push('es')
-      // Use most recent updatedAt
+      existing.locales[g.locale] = g.slug
       if (new Date(g.updatedAt) > new Date(existing.updatedAt)) {
         existing.updatedAt = g.updatedAt
       }
     } else {
-      guideMap.set(g.slug, {
-        slug: g.slug,
-        updatedAt: g.updatedAt,
-        availableLocales: ['es']
-      })
+      groupMap.set(key, { groupKey: key, updatedAt: g.updatedAt, locales: { [g.locale]: g.slug } })
     }
   }
 
-  // Process Chinese guides
-  for (const g of zhGuides) {
-    const existing = guideMap.get(g.slug)
-    if (existing) {
-      existing.availableLocales.push('zh')
-      // Use most recent updatedAt
-      if (new Date(g.updatedAt) > new Date(existing.updatedAt)) {
-        existing.updatedAt = g.updatedAt
-      }
-    } else {
-      guideMap.set(g.slug, {
-        slug: g.slug,
-        updatedAt: g.updatedAt,
-        availableLocales: ['zh']
-      })
-    }
-  }
-
-  const allGuides = Array.from(guideMap.values())
+  const allGuides = Array.from(groupMap.values())
 
   // Fetch all location pages
   const locationSlugs = listLocationPages()
