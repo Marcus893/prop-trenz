@@ -1,6 +1,7 @@
 // API route: /api/transactions/[id]
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { createClient } from '@supabase/supabase-js';
+import { canAccessTransaction } from '@/lib/transactions/access-control';
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY!;
@@ -46,6 +47,18 @@ export default async function handler(
 
   if (fetchError || !transaction) {
     return res.status(404).json({ error: 'Transaction not found' });
+  }
+
+  // Check subscription access for non-first transactions
+  const accessCheck = await canAccessTransaction(supabase, user.id, id);
+
+  // If no access, deny
+  if (!accessCheck.canAccess) {
+    return res.status(403).json({ 
+      error: 'Transaction locked',
+      code: 'SUBSCRIPTION_REQUIRED',
+      message: accessCheck.reason || 'Your subscription has expired. Only your first transaction is accessible. Please renew to access all transactions.',
+    });
   }
 
   try {

@@ -4,10 +4,11 @@ import React from 'react';
 import { useTranslation } from 'next-i18next';
 import { TransactionWithProgress, TransactionStage } from '@/lib/transactions/types';
 import { ProgressBar } from './ProgressBar';
-import { MapPin, Calendar, DollarSign, MoreVertical, Trash2, Pause, Play } from 'lucide-react';
+import { MapPin, Calendar, DollarSign, MoreVertical, Trash2, Pause, Play, Lock, Crown } from 'lucide-react';
 import { formatDistanceToNow } from 'date-fns';
 import { es, zhCN, enUS } from 'date-fns/locale';
 import { useRouter } from 'next/router';
+import { useSubscription } from '@/lib/subscription';
 
 interface TransactionCardProps {
   transaction: TransactionWithProgress;
@@ -46,8 +47,10 @@ export function TransactionCard({ transaction, onDelete, onStatusChange }: Trans
   const { t } = useTranslation('transactions');
   const router = useRouter();
   const [showMenu, setShowMenu] = React.useState(false);
+  const { openUpgradeModal } = useSubscription();
 
   const locale = router.locale === 'es' ? es : router.locale === 'zh' ? zhCN : enUS;
+  const isLocked = transaction.is_locked ?? false;
 
   const formatPrice = (price?: number) => {
     if (!price) return null;
@@ -62,7 +65,13 @@ export function TransactionCard({ transaction, onDelete, onStatusChange }: Trans
   const displayAddress = transaction.property_address || t('untitled_property');
   const displayLocation = [transaction.neighborhood, transaction.city].filter(Boolean).join(', ');
 
-  const goToDetail = () => router.push(`/transactions/${transaction.id}`);
+  const goToDetail = () => {
+    if (isLocked) {
+      openUpgradeModal();
+    } else {
+      router.push(`/transactions/${transaction.id}`);
+    }
+  };
 
   return (
     <div
@@ -70,8 +79,30 @@ export function TransactionCard({ transaction, onDelete, onStatusChange }: Trans
       tabIndex={0}
       onClick={goToDetail}
       onKeyDown={(e) => { if (e.key === 'Enter') goToDetail(); }}
-      className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-4 hover:shadow-md transition-shadow cursor-pointer"
+      className={`bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-4 hover:shadow-md transition-shadow cursor-pointer relative ${
+        isLocked ? 'opacity-75' : ''
+      }`}
     >
+      {/* Locked overlay */}
+      {isLocked && (
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-100/80 to-gray-200/80 dark:from-gray-700/80 dark:to-gray-800/80 rounded-lg flex items-center justify-center z-10">
+          <div className="text-center p-4">
+            <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-amber-100 dark:bg-amber-900/50 mb-2">
+              <Lock className="w-6 h-6 text-amber-600 dark:text-amber-400" />
+            </div>
+            <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              {t('transaction_locked', 'Transaction Locked')}
+            </p>
+            <button
+              onClick={(e) => { e.stopPropagation(); openUpgradeModal(); }}
+              className="inline-flex items-center gap-1 px-3 py-1.5 bg-gradient-to-r from-amber-500 to-orange-500 text-white text-sm font-medium rounded-lg hover:from-amber-600 hover:to-orange-600 transition-colors"
+            >
+              <Crown className="w-4 h-4" />
+              {t('unlock_now', 'Unlock Now')}
+            </button>
+          </div>
+        </div>
+      )}
       <div className="flex justify-between items-start mb-3">
         <div className="flex-1 min-w-0">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white truncate">

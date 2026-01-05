@@ -5,6 +5,18 @@
     "all": "Todas"
   },
   "new_transaction": "Nueva Transacción",
+  "free_tier_limit_reached": "Has usado tu transacción gratuita",
+  "upgrade_to_unlock": "Actualiza para rastrear compras y ventas de propiedades ilimitadas",
+  "upgrade_now": "Actualizar Ahora",
+  "renew_now": "Renovar Ahora",
+  "subscription_expiring_title": "Tu suscripción está por vencer",
+  "subscription_expiring_description": "Tu acceso expira en {{days}} días. Renueva ahora para seguir rastreando tus transacciones.",
+  "subscription_expired_title": "Tu suscripción ha expirado",
+  "subscription_expired_description": "Solo puedes acceder a tu primera transacción. Renueva para desbloquear todas tus transacciones.",
+  "renew_subscription": "Renovar Suscripción",
+  "transaction_locked": "Transacción Bloqueada",
+  "unlock_now": "Desbloquear Ahora",
+  "upgrade_to_add_more": "Actualizar para Agregar Más",
   "overall_progress": "PROGRESO",
   "progress": {
     "items_complete": "{{completed}} de {{total}} elementos completos"

@@ -1,13 +1,14 @@
 // New transaction page
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { GetServerSideProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import { Layout } from '@/components/Layout';
 import { useAuth } from '@/lib/auth';
+import { useSubscription } from '@/lib/subscription';
 import { PropertyType, TransactionType } from '@/lib/transactions/types';
-import { Home, Building, TreePine, Store, HelpCircle, ArrowLeft } from 'lucide-react';
+import { Home, Building, TreePine, Store, HelpCircle, ArrowLeft, Crown, Lock } from 'lucide-react';
 import Link from 'next/link';
 
 const PROPERTY_TYPES: { value: PropertyType; icon: React.ReactNode }[] = [
@@ -21,6 +22,7 @@ const PROPERTY_TYPES: { value: PropertyType; icon: React.ReactNode }[] = [
 export default function NewTransactionPage() {
   const { t } = useTranslation('transactions');
   const { session } = useAuth();
+  const { subscription, loading: subscriptionLoading, openUpgradeModal } = useSubscription();
   const router = useRouter();
   
   const [step, setStep] = useState(1);
@@ -34,6 +36,50 @@ export default function NewTransactionPage() {
   const [neighborhood, setNeighborhood] = useState('');
   const [city, setCity] = useState('');
   const [listingPrice, setListingPrice] = useState('');
+
+  // Check subscription limits
+  const canCreateTransaction = subscription?.canCreateTransaction ?? true;
+
+  // Redirect to transactions page if limit reached
+  useEffect(() => {
+    if (!subscriptionLoading && !canCreateTransaction) {
+      // Don't redirect, show upgrade UI instead
+    }
+  }, [subscriptionLoading, canCreateTransaction]);
+
+  // Show upgrade prompt if user can't create transaction
+  if (!subscriptionLoading && !canCreateTransaction) {
+    return (
+      <Layout title={t('new.page_title')}>
+        <div className="max-w-2xl mx-auto px-4 py-16 text-center">
+          <div className="p-4 bg-amber-100 dark:bg-amber-900/30 rounded-full w-20 h-20 mx-auto mb-6 flex items-center justify-center">
+            <Lock className="w-10 h-10 text-amber-600 dark:text-amber-400" />
+          </div>
+          <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
+            {t('limit_reached_title', 'Transaction Limit Reached')}
+          </h1>
+          <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-md mx-auto">
+            {t('limit_reached_description', "You've used your free transaction. Upgrade to Pro to track unlimited property purchases and sales with detailed checklists, cost tracking, and document management.")}
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button
+              onClick={openUpgradeModal}
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-lg font-medium hover:from-amber-600 hover:to-orange-600 transition-colors"
+            >
+              <Crown className="w-5 h-5" />
+              {t('upgrade_now', 'Upgrade Now')}
+            </button>
+            <Link href="/transactions">
+              <button className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg font-medium hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                <ArrowLeft className="w-5 h-5" />
+                {t('back_to_list', 'Back to Transactions')}
+              </button>
+            </Link>
+          </div>
+        </div>
+      </Layout>
+    );
+  }
 
   const handleSubmit = async () => {
     if (!session?.access_token) {

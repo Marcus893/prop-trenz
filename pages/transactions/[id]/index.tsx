@@ -70,7 +70,15 @@ export default function TransactionDetailPage() {
       });
 
       if (!response.ok) {
-        throw new Error('Failed to fetch transaction');
+        const errorData = await response.json().catch(() => ({}));
+        
+        // Handle subscription required error - redirect to transactions list
+        if (response.status === 403 && errorData.code === 'SUBSCRIPTION_REQUIRED') {
+          router.push('/transactions');
+          return;
+        }
+        
+        throw new Error(errorData.message || 'Failed to fetch transaction');
       }
 
       const data = await response.json();
@@ -80,7 +88,7 @@ export default function TransactionDetailPage() {
     } finally {
       setIsLoading(false);
     }
-  }, [session?.access_token, id]);
+  }, [session?.access_token, id, router]);
 
   // Lightweight costs refresh to sync recalculated estimates without re-fetching the whole transaction
   const fetchCosts = useCallback(async () => {

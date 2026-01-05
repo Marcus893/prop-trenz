@@ -71,6 +71,8 @@ export interface TransactionWithProgress extends Transaction {
   total_checklist_items: number;
   completed_checklist_items: number;
   progress_percentage: number;
+  is_locked?: boolean;
+  is_first_transaction?: boolean;
 }
 
 export interface StageDefinition {

@@ -8,21 +8,55 @@ import { Layout } from "@/components/Layout";
 import { TransactionCard } from "@/components/transactions";
 import { TransactionWithProgress } from "@/lib/transactions/types";
 import { useAuth } from "@/lib/auth";
-import { Plus, FolderOpen } from "lucide-react";
+import { useSubscription } from "@/lib/subscription";
+import { Plus, FolderOpen, Lock, Crown, AlertTriangle } from "lucide-react";
 import Link from "next/link";
 
 export default function TransactionsPage() {
   const { t } = useTranslation("transactions");
   const { user, session } = useAuth();
+  const { subscription, loading: subscriptionLoading, openUpgradeModal, refresh: refreshSubscription } = useSubscription();
   const router = useRouter();
   const [transactions, setTransactions] = useState<TransactionWithProgress[]>(
     []
   );
+  const [subscriptionAccess, setSubscriptionAccess] = useState<{
+    hasFullAccess: boolean;
+    isExpiringSoon: boolean;
+    expiresAt: string | null;
+  } | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   // Filter by transaction type (purchase, sale, rent, other)
   const [filterType, setFilterType] = useState<string | null>(null);
+
+  // Check if user can create more transactions
+  const canCreateTransaction = subscription?.canCreateTransaction ?? true;
+  const isFreeTier = subscription?.tier === 'free' || !subscription?.tier;
+  const isPaidActive = subscription?.tier && subscription.tier !== 'free' && subscription.status === 'active';
+  const isCancelled = subscription?.status === 'cancelled';
+  
+  // Check if subscription is expiring soon (from API response)
+  const isExpiringSoon = subscriptionAccess?.isExpiringSoon ?? false;
+  
+  // Check if subscription expires within 7 days (fallback to original logic)
+  const expiresWithin7Days = isExpiringSoon || (() => {
+    if (!isCancelled || !subscription?.currentPeriodEnd) return false;
+    const expiryDate = new Date(subscription.currentPeriodEnd);
+    const now = new Date();
+    const daysUntilExpiry = Math.ceil((expiryDate.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
+    return daysUntilExpiry > 0 && daysUntilExpiry <= 7;
+  })();
+  
+  // Check if subscription has expired (user has locked transactions)
+  const hasLockedTransactions = transactions.some(tx => tx.is_locked);
+  
+  const daysUntilExpiry = subscriptionAccess?.expiresAt 
+    ? Math.ceil((new Date(subscriptionAccess.expiresAt).getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24))
+    : subscription?.currentPeriodEnd 
+    ? Math.ceil((new Date(subscription.currentPeriodEnd).getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24))
+    : 0;
 
   const fetchTransactions = useCallback(
     async (type?: string | null) => {
@@ -44,7 +78,14 @@ export default function TransactionsPage() {
         }
 
         const data = await response.json();
-        setTransactions(data);
+        // Handle new response format: { transactions: [...], subscription: {...} }
+        if (data.transactions && Array.isArray(data.transactions)) {
+          setTransactions(data.transactions);
+          setSubscriptionAccess(data.subscription || null);
+        } else if (Array.isArray(data)) {
+          // Backward compatibility for old format
+          setTransactions(data);
+        }
       } catch (err: any) {
         setError(err.message);
       } finally {
@@ -62,6 +103,8 @@ export default function TransactionsPage() {
 
     if (session?.access_token) {
       fetchTransactions(typeFromQuery);
+      // Refresh subscription status to ensure it's up to date
+      refreshSubscription();
     } else {
       setIsLoading(false);
     }
@@ -98,6 +141,8 @@ export default function TransactionsPage() {
 
       if (response.ok) {
         setTransactions((prev) => prev.filter((tx) => tx.id !== id));
+        // Refresh subscription status to update canCreateTransaction
+        refreshSubscription();
       }
     } catch (err) {
       console.error("Failed to delete transaction:", err);
@@ -157,6 +202,90 @@ export default function TransactionsPage() {
   return (
     <Layout title={t("page_title")} subtitle={t("page_subtitle")}>
       <div className="max-w-6xl mx-auto px-4 py-8">
+        {/* Subscription expired banner - show when has locked transactions */}
+        {!subscriptionLoading && hasLockedTransactions && (
+          <div className="mb-6 p-4 bg-gradient-to-r from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 border border-red-200 dark:border-red-700 rounded-lg">
+            <div className="flex items-center justify-between flex-wrap gap-4">
+              <div className="flex items-center gap-3">
+                <div className="p-2 bg-red-100 dark:bg-red-800 rounded-lg">
+                  <Lock className="w-5 h-5 text-red-600 dark:text-red-400" />
+                </div>
+                <div>
+                  <p className="font-medium text-red-800 dark:text-red-200">
+                    {t("subscription_expired_title", "Your subscription has expired")}
+                  </p>
+                  <p className="text-sm text-red-600 dark:text-red-400">
+                    {t("subscription_expired_description", "You can only access your first transaction. Renew to unlock all your transactions.")}
+                  </p>
+                </div>
+              </div>
+              <button
+                onClick={openUpgradeModal}
+                className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-red-500 to-orange-500 text-white rounded-lg font-medium hover:from-red-600 hover:to-orange-600 transition-colors"
+              >
+                <Crown className="w-4 h-4" />
+                {t("renew_subscription", "Renew Subscription")}
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* Expiring subscription banner - show when cancelled and expires within 7 days */}
+        {!subscriptionLoading && !hasLockedTransactions && isCancelled && expiresWithin7Days && (
+          <div className="mb-6 p-4 bg-gradient-to-r from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 border border-red-200 dark:border-red-700 rounded-lg">
+            <div className="flex items-center justify-between flex-wrap gap-4">
+              <div className="flex items-center gap-3">
+                <div className="p-2 bg-red-100 dark:bg-red-800 rounded-lg">
+                  <AlertTriangle className="w-5 h-5 text-red-600 dark:text-red-400" />
+                </div>
+                <div>
+                  <p className="font-medium text-red-800 dark:text-red-200">
+                    {t("subscription_expiring_title", "Your subscription is expiring soon")}
+                  </p>
+                  <p className="text-sm text-red-600 dark:text-red-400">
+                    {t("subscription_expiring_description", "Your access expires in {{days}} days. Renew now to keep tracking your transactions.", { days: daysUntilExpiry })}
+                  </p>
+                </div>
+              </div>
+              <button
+                onClick={openUpgradeModal}
+                className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-red-500 to-orange-500 text-white rounded-lg font-medium hover:from-red-600 hover:to-orange-600 transition-colors"
+              >
+                <Crown className="w-4 h-4" />
+                {t("renew_now", "Renew Now")}
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* Subscription status banner for free tier */}
+        {!subscriptionLoading && isFreeTier && transactions.length > 0 && (
+          <div className="mb-6 p-4 bg-gradient-to-r from-amber-50 to-orange-50 dark:from-amber-900/20 dark:to-orange-900/20 border border-amber-200 dark:border-amber-700 rounded-lg">
+            <div className="flex items-center justify-between flex-wrap gap-4">
+              <div className="flex items-center gap-3">
+                <div className="p-2 bg-amber-100 dark:bg-amber-800 rounded-lg">
+                  <Lock className="w-5 h-5 text-amber-600 dark:text-amber-400" />
+                </div>
+                <div>
+                  <p className="font-medium text-amber-800 dark:text-amber-200">
+                    {t("free_tier_limit_reached", "You've used your free transaction")}
+                  </p>
+                  <p className="text-sm text-amber-600 dark:text-amber-400">
+                    {t("upgrade_to_unlock", "Upgrade to track unlimited property purchases and sales")}
+                  </p>
+                </div>
+              </div>
+              <button
+                onClick={openUpgradeModal}
+                className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-lg font-medium hover:from-amber-600 hover:to-orange-600 transition-colors"
+              >
+                <Crown className="w-4 h-4" />
+                {t("upgrade_now", "Upgrade Now")}
+              </button>
+            </div>
+          </div>
+        )}
+
         {/* Header */}
         <div className="flex items-center justify-between gap-4 mb-6">
           <div className="flex items-center gap-2">
@@ -194,12 +323,22 @@ export default function TransactionsPage() {
           </div>
 
           <div>
-            <Link href="/transactions/new">
-              <button className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors">
-                <Plus className="w-5 h-5" />
-                {t("new_transaction")}
+            {canCreateTransaction ? (
+              <Link href="/transactions/new">
+                <button className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors">
+                  <Plus className="w-5 h-5" />
+                  {t("new_transaction")}
+                </button>
+              </Link>
+            ) : (
+              <button
+                onClick={openUpgradeModal}
+                className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-lg font-medium hover:from-amber-600 hover:to-orange-600 transition-colors"
+              >
+                <Crown className="w-5 h-5" />
+                {t("upgrade_to_add_more", "Upgrade to Add More")}
               </button>
-            </Link>
+            )}
           </div>
         </div>
 
@@ -228,12 +367,22 @@ export default function TransactionsPage() {
             <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-md mx-auto">
               {t("empty_description")}
             </p>
-            <Link href="/transactions/new">
-              <button className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700">
-                <Plus className="w-5 h-5" />
-                {t("start_first_transaction")}
+            {canCreateTransaction ? (
+              <Link href="/transactions/new">
+                <button className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700">
+                  <Plus className="w-5 h-5" />
+                  {t("start_first_transaction")}
+                </button>
+              </Link>
+            ) : (
+              <button
+                onClick={openUpgradeModal}
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-lg font-medium hover:from-amber-600 hover:to-orange-600"
+              >
+                <Crown className="w-5 h-5" />
+                {t("upgrade_to_add_more", "Upgrade to Add More")}
               </button>
-            </Link>
+            )}
           </div>
         )}
 

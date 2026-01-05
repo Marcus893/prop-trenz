@@ -9,6 +9,7 @@ import { supabase } from '@/lib/supabase'
 import { useTranslation } from 'next-i18next'
 import { User, Trash2, AlertTriangle } from 'lucide-react'
 import { useRouter } from 'next/router'
+import { BillingSettings } from '@/components/subscription/BillingSettings'
 
 export function UserProfile() {
   const { t } = useTranslation('common')
@@ -209,7 +210,7 @@ export function UserProfile() {
   }
 
   return (
-    <div className="max-w-md mx-auto">
+    <div className="max-w-2xl mx-auto">
       <Card className="p-6">
         <div className="text-center mb-6">
           <div className="mx-auto w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
@@ -313,6 +314,11 @@ export function UserProfile() {
                 </Button>
               </div>
             </div>
+          </div>
+
+          {/* Billing & Subscription */}
+          <div className="pt-4 border-t border-gray-200">
+            <BillingSettings />
           </div>
 
           <div className="pt-4 border-t border-gray-200">

@@ -1,9 +1,80 @@
 // API route: /api/transactions
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { createClient } from '@supabase/supabase-js';
+import Stripe from 'stripe';
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY!;
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
+  apiVersion: '2024-06-20' as any,
+});
+
+// Helper to check if subscription is truly active (not cancelled/expired)
+async function getSubscriptionAccessStatus(supabase: any, userId: string): Promise<{
+  hasFullAccess: boolean;
+  isExpiringSoon: boolean;
+  expiresAt: string | null;
+}> {
+  const { data: subscription } = await supabase
+    .from('user_subscriptions')
+    .select('tier, status, stripe_subscription_id, current_period_end')
+    .eq('user_id', userId)
+    .single();
+
+  // No subscription = free tier (only first transaction accessible)
+  if (!subscription) {
+    return { hasFullAccess: false, isExpiringSoon: false, expiresAt: null };
+  }
+
+  const tier = subscription.tier || 'free';
+  const status = subscription.status || 'inactive';
+
+  // Lifetime users always have full access
+  if (tier === 'lifetime' && status === 'active') {
+    return { hasFullAccess: true, isExpiringSoon: false, expiresAt: null };
+  }
+
+  // Check Stripe for real-time subscription status
+  if (subscription.stripe_subscription_id) {
+    try {
+      const stripeSubscription = await stripe.subscriptions.retrieve(
+        subscription.stripe_subscription_id
+      );
+
+      const now = Date.now() / 1000;
+      const periodEnd = stripeSubscription.current_period_end;
+      const isActive = stripeSubscription.status === 'active';
+      const isCancelling = stripeSubscription.cancel_at_period_end;
+      const isPastPeriodEnd = now > periodEnd;
+
+      // Subscription is expired if:
+      // 1. Status is not active, OR
+      // 2. It was cancelled and current period has ended
+      if (!isActive || (isCancelling && isPastPeriodEnd)) {
+        return { 
+          hasFullAccess: false, 
+          isExpiringSoon: false, 
+          expiresAt: new Date(periodEnd * 1000).toISOString() 
+        };
+      }
+
+      // Still within paid period (even if cancelling)
+      const daysUntilExpiry = (periodEnd - now) / (60 * 60 * 24);
+      return { 
+        hasFullAccess: true, 
+        isExpiringSoon: isCancelling && daysUntilExpiry <= 7,
+        expiresAt: isCancelling ? new Date(periodEnd * 1000).toISOString() : null
+      };
+    } catch (error) {
+      console.error('Error checking Stripe subscription:', error);
+      // Fall back to database status
+    }
+  }
+
+  // No Stripe subscription - use database status
+  const hasFullAccess = (tier === 'monthly' || tier === 'yearly' || tier === 'lifetime') && status === 'active';
+  return { hasFullAccess, isExpiringSoon: false, expiresAt: null };
+}
 
 export default async function handler(
   req: NextApiRequest,
@@ -57,12 +128,15 @@ async function handleGet(
   // Support filtering by transaction type via ?type=purchase|sale|rent|other
   const type = typeof req.query.type === 'string' ? req.query.type : null;
 
-  // Build base query
+  // Check subscription access status
+  const accessStatus = await getSubscriptionAccessStatus(supabase, userId);
+
+  // Build base query - order by created_at to determine first transaction
   let query = supabase
     .from('user_transactions')
     .select('*')
     .eq('user_id', userId)
-    .order('updated_at', { ascending: false }) as any;
+    .order('created_at', { ascending: true }) as any;
 
   if (type) {
     query = query.eq('transaction_type', type);
@@ -72,9 +146,12 @@ async function handleGet(
 
   if (error) throw error;
 
-  // Get progress for each transaction
+  // Determine which transaction is the first (always accessible)
+  const firstTransactionId = transactions && transactions.length > 0 ? transactions[0].id : null;
+
+  // Get progress for each transaction and mark locked status
   const transactionsWithProgress = await Promise.all(
-    (transactions || []).map(async (tx: any) => {
+    (transactions || []).map(async (tx: any, index: number) => {
       // Respect user's skip_financing preference when calculating progress
       let checklistQuery = supabase
         .from('transaction_checklist')
@@ -91,16 +168,35 @@ async function handleGet(
       const total = checklist?.length || 0;
       const completed = checklist?.filter((item: any) => item.is_completed).length || 0;
 
+      // First transaction (index 0) is always accessible
+      // Other transactions require active subscription
+      const isFirstTransaction = index === 0;
+      const isLocked = !accessStatus.hasFullAccess && !isFirstTransaction;
+
       return {
         ...tx,
         total_checklist_items: total,
         completed_checklist_items: completed,
         progress_percentage: total > 0 ? Math.round((completed / total) * 100) : 0,
+        is_locked: isLocked,
+        is_first_transaction: isFirstTransaction,
       };
     })
   );
 
-  return res.status(200).json(transactionsWithProgress);
+  // Sort by updated_at descending for display (but locked status is based on created_at order)
+  transactionsWithProgress.sort((a, b) => 
+    new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime()
+  );
+
+  return res.status(200).json({
+    transactions: transactionsWithProgress,
+    subscription: {
+      hasFullAccess: accessStatus.hasFullAccess,
+      isExpiringSoon: accessStatus.isExpiringSoon,
+      expiresAt: accessStatus.expiresAt,
+    }
+  });
 }
 
 async function handlePost(
@@ -109,6 +205,46 @@ async function handlePost(
   supabase: any,
   userId: string
 ) {
+  // Check subscription status using real-time Stripe check
+  const accessStatus = await getSubscriptionAccessStatus(supabase, userId);
+
+  // Get subscription tier for the response
+  const { data: subscription } = await supabase
+    .from('user_subscriptions')
+    .select('tier, status')
+    .eq('user_id', userId)
+    .single();
+
+  const tier = subscription?.tier || 'free';
+  const status = subscription?.status || 'inactive';
+
+  // Check if user can create more transactions
+  let canCreate = false;
+  
+  if (accessStatus.hasFullAccess) {
+    // User has full subscription access (active or within paid period)
+    canCreate = true;
+  } else {
+    // Free tier or expired subscription: check transaction count
+    const { count: transactionCount } = await supabase
+      .from('user_transactions')
+      .select('*', { count: 'exact', head: true })
+      .eq('user_id', userId);
+
+    // Free tier gets 1 transaction
+    canCreate = (transactionCount || 0) < 1;
+  }
+
+  if (!canCreate) {
+    return res.status(403).json({ 
+      error: 'Transaction limit reached',
+      code: 'SUBSCRIPTION_REQUIRED',
+      message: 'You have reached the free tier limit of 1 transaction. Please upgrade to create more transactions.',
+      currentTier: tier,
+      status: status,
+    });
+  }
+
   const {
     property_address,
     property_type,
