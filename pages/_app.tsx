@@ -1,4 +1,5 @@
 import { AppProps } from 'next/app'
+import Head from 'next/head'
 import { appWithTranslation } from 'next-i18next'
 import { AuthProvider } from '@/lib/auth'
 import { PostHogProviderWrapper } from '@/lib/posthog'
@@ -9,15 +10,20 @@ import '@/styles/globals.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <AuthProvider>
-      <PostHogProviderWrapper>
-        <SubscriptionProvider>
-          <Component {...pageProps} />
-          <ContactWidget />
-          <UpgradeModalWithContext />
-        </SubscriptionProvider>
-      </PostHogProviderWrapper>
-    </AuthProvider>
+    <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+      </Head>
+      <AuthProvider>
+        <PostHogProviderWrapper>
+          <SubscriptionProvider>
+            <Component {...pageProps} />
+            <ContactWidget />
+            <UpgradeModalWithContext />
+          </SubscriptionProvider>
+        </PostHogProviderWrapper>
+      </AuthProvider>
+    </>
   )
 }
 

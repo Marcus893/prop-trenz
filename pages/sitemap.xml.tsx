@@ -59,7 +59,9 @@ function generateSiteMap(
     { url: '/calculators/seller-cost', changefreq: 'monthly', priority: '0.8' },
     { url: '/calculators/roi', changefreq: 'monthly', priority: '0.8' },
     { url: '/guides', changefreq: 'weekly', priority: '0.9' },
-    { url: '/insights', changefreq: 'weekly', priority: '0.7' }
+    { url: '/insights', changefreq: 'weekly', priority: '0.7' },
+    { url: '/privacy', changefreq: 'yearly', priority: '0.3' },
+    { url: '/terms', changefreq: 'yearly', priority: '0.3' }
   ]
 
   // Generate static page entries for all locales with proper hreflang

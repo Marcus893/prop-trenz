@@ -2352,7 +2352,7 @@ export function NeighborhoodMap({
         </div>
 
         {/* Legend */}
-        <div className="absolute top-4 right-4 bg-white p-2 md:p-3 rounded-lg shadow-lg z-[1000] text-xs">
+        <div className="absolute top-4 right-4 bg-white p-2 md:p-3 rounded-lg shadow-lg z-[40] text-xs">
           <div className="font-bold mb-2">{t("map.price_per_m2")}</div>
           <div className="space-y-1">
             <div className="flex items-center gap-2">
@@ -2380,7 +2380,7 @@ export function NeighborhoodMap({
 
         {/* Geocoding progress indicator */}
         {geocodingProgress && (
-          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white p-3 rounded-lg shadow-lg z-[1000] flex items-center gap-3">
+          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white p-3 rounded-lg shadow-lg z-[40] flex items-center gap-3">
             <Loader2 className="h-4 w-4 animate-spin text-blue-600" />
             <span className="text-sm text-gray-700">
               {t("map.loading_neighborhoods")} ({geocodingProgress.current}/
@@ -2392,7 +2392,7 @@ export function NeighborhoodMap({
         {/* Historical Price Chart Modal - Neighborhood */}
         {selectedNeighborhoodForChart && (
           <div
-            className="absolute inset-0 bg-black bg-opacity-50 z-[100000] flex items-center justify-center p-4"
+            className="absolute inset-0 bg-black bg-opacity-50 z-[48] flex items-center justify-center p-4"
             onClick={() => setSelectedNeighborhoodForChart(null)}
           >
             <div
@@ -2413,7 +2413,7 @@ export function NeighborhoodMap({
         {/* Historical Price Chart Modal - Municipality */}
         {selectedMunicipalityForChart && (
           <div
-            className="absolute inset-0 bg-black bg-opacity-50 z-[100000] flex items-center justify-center p-4"
+            className="absolute inset-0 bg-black bg-opacity-50 z-[48] flex items-center justify-center p-4"
             onClick={() => setSelectedMunicipalityForChart(null)}
           >
             <div

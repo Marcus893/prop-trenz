@@ -151,7 +151,7 @@ interface SelectContentProps {
 
 export function SelectContent({ children, onSelect, currentValue }: SelectContentProps) {
   return (
-    <div className="absolute z-[100] w-full top-full mt-1 min-w-[8rem] overflow-hidden rounded-md border border-gray-200 bg-white shadow-lg">
+    <div className="absolute z-[45] w-full top-full mt-1 min-w-[8rem] overflow-hidden rounded-md border border-gray-200 bg-white shadow-lg">
       {React.Children.map(children, child => {
         if (React.isValidElement(child) && child.type === SelectItem) {
           return React.cloneElement(child, {

@@ -269,8 +269,8 @@ export default function RentMapPage() {
         />
       </Head>
       <Layout title={t("rent_map.title")} subtitle={t("rent_map.subtitle")}>
-        <div className="space-y-6">
-          <Card className="p-6">
+        <div className="space-y-4 sm:space-y-6">
+          <Card className="p-3 sm:p-6">
             {loading && (
               <div className="flex items-center justify-center h-[600px] bg-gray-50 rounded-lg">
                 <div className="text-center">
@@ -292,12 +292,12 @@ export default function RentMapPage() {
 
             {rentData && !loading && (
               <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-4">
-                    <label className="text-sm font-medium">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                  <div className="flex items-center gap-2 sm:gap-4">
+                    <label className="text-sm font-medium whitespace-nowrap">
                       {t("rent_map.city")}:
                     </label>
-                    <div style={{ zIndex: 1200 }}>
+                    <div className="flex-1 sm:flex-none">
                       <Select
                         onValueChange={(val: string) => {
                           setSelectedCity(val || null);
@@ -319,7 +319,7 @@ export default function RentMapPage() {
                         }}
                         value={selectedCity || ""}
                       >
-                        <SelectTrigger className="w-[220px]">
+                        <SelectTrigger className="w-full sm:w-[200px]">
                           <span>
                             {selectedCity || t("rent_map.select_city")}
                           </span>

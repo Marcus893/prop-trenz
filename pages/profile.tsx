@@ -13,6 +13,17 @@ export default function ProfilePage() {
   const { user, loading } = useAuth()
   const router = useRouter()
   const { t } = useTranslation('common')
+  const [loadingTimeout, setLoadingTimeout] = React.useState(false)
+
+  // Timeout to prevent infinite loading spinner
+  useEffect(() => {
+    if (loading) {
+      const timeoutId = setTimeout(() => {
+        setLoadingTimeout(true)
+      }, 5000) // 5 second timeout
+      return () => clearTimeout(timeoutId)
+    }
+  }, [loading])
 
   useEffect(() => {
     if (!loading && !user) {
@@ -20,7 +31,7 @@ export default function ProfilePage() {
     }
   }, [user, loading, router])
 
-  if (loading) {
+  if (loading && !loadingTimeout) {
     return (
       <>
         <Head>
@@ -30,6 +41,31 @@ export default function ProfilePage() {
         <Layout title={t('profile.title')} subtitle={t('profile.subtitle')}>
           <div className="flex items-center justify-center h-64">
             <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+          </div>
+        </Layout>
+      </>
+    )
+  }
+
+  // Loading timed out - show retry option
+  if (loading && loadingTimeout) {
+    return (
+      <>
+        <Head>
+          <title>{t('profile.meta_title', 'My Profile - PropTrenz')}</title>
+          <meta name="robots" content="noindex, nofollow" />
+        </Head>
+        <Layout title={t('profile.title')} subtitle={t('profile.subtitle')}>
+          <div className="flex items-center justify-center h-64">
+            <div className="text-center">
+              <p className="text-gray-600 mb-4">{t('common.loading_slow', 'Loading is taking longer than expected...')}</p>
+              <button
+                onClick={() => window.location.reload()}
+                className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+              >
+                {t('common.retry', 'Retry')}
+              </button>
+            </div>
           </div>
         </Layout>
       </>

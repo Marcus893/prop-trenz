@@ -5,9 +5,16 @@ import Stripe from 'stripe';
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY!;
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: '2024-06-20' as any,
-});
+
+// Initialize Stripe lazily to handle missing env vars in some environments
+function getStripe(): Stripe | null {
+  const key = process.env.STRIPE_SECRET_KEY;
+  if (!key) {
+    console.error('[Transactions API] Missing STRIPE_SECRET_KEY');
+    return null;
+  }
+  return new Stripe(key, { apiVersion: '2024-06-20' as any });
+}
 
 // Helper to check if subscription is truly active (not cancelled/expired)
 async function getSubscriptionAccessStatus(supabase: any, userId: string): Promise<{
@@ -37,6 +44,13 @@ async function getSubscriptionAccessStatus(supabase: any, userId: string): Promi
   // Check Stripe for real-time subscription status
   if (subscription.stripe_subscription_id) {
     try {
+      const stripe = getStripe();
+      if (!stripe) {
+        // Stripe not available, fall back to database status
+        const hasFullAccess = (tier === 'monthly' || tier === 'yearly' || tier === 'lifetime') && status === 'active';
+        return { hasFullAccess, isExpiringSoon: false, expiresAt: null };
+      }
+      
       const stripeSubscription = await stripe.subscriptions.retrieve(
         subscription.stripe_subscription_id
       );

@@ -401,8 +401,8 @@ export default function MapPage({ initialMetaTags }: MapPageProps) {
         <link rel="alternate" hrefLang="zh-HK" href={hreflangUrls.zh} />
       </Head>
       <Layout title={t('map.title')} subtitle={t('map.subtitle')}>
-        <div className="space-y-6">
-          <Card className="p-6">
+        <div className="space-y-4 sm:space-y-6">
+          <Card className="p-3 sm:p-6">
               {loading && (
                 <div className="flex items-center justify-center h-[600px] bg-gray-50 rounded-lg">
                   <div className="text-center">
@@ -426,21 +426,23 @@ export default function MapPage({ initialMetaTags }: MapPageProps) {
 
               {data && !loading && (
                 <div className="space-y-4">
-                  <div className="flex items-center gap-4 justify-between">
-                    <div className="flex items-center gap-4">
-                      <label className="text-sm font-medium">{t('map.city')}:</label>
-                      <Select value={selectedCity} onValueChange={setSelectedCity}>
-                        <SelectTrigger className="w-[200px]">
-                          <span>{selectedCity}</span>
-                        </SelectTrigger>
-                        <SelectContent>
-                          {Object.keys(data).map(city => (
-                            <SelectItem key={city} value={city}>
-                              {city}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-3 justify-between">
+                    <div className="flex items-center gap-2 sm:gap-4">
+                      <label className="text-sm font-medium whitespace-nowrap">{t('map.city')}:</label>
+                      <div className="flex-1 sm:flex-none">
+                        <Select value={selectedCity} onValueChange={setSelectedCity}>
+                          <SelectTrigger className="w-full sm:w-[200px]">
+                            <span>{selectedCity}</span>
+                          </SelectTrigger>
+                          <SelectContent>
+                            {Object.keys(data).map(city => (
+                              <SelectItem key={city} value={city}>
+                                {city}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+                      </div>
                     </div>
                     
                     {/* Share Button */}

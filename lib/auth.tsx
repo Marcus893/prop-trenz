@@ -112,13 +112,23 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   }
 
-  const fetchUserProfile = async (userId: string) => {
+  const fetchUserProfile = async (userId: string): Promise<UserProfileData | null> => {
     try {
-      const { data, error } = await supabase
+      // Create a timeout promise to prevent stuck queries
+      const timeoutPromise = new Promise<{ data: null; error: { message: string } }>((resolve) => {
+        setTimeout(() => {
+          resolve({ data: null, error: { message: 'Profile fetch timeout' } })
+        }, 5000) // 5 second timeout
+      })
+
+      // Race between the actual query and the timeout
+      const queryPromise = supabase
         .from('users')
         .select('name, language')
         .eq('id', userId)
         .single()
+
+      const { data, error } = await Promise.race([queryPromise, timeoutPromise])
 
       if (error) {
         console.warn('Failed to load user profile from users table', error)

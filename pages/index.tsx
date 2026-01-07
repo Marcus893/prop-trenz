@@ -22,6 +22,9 @@ import {
   X,
   ChevronRight,
   Zap,
+  ClipboardList,
+  FileCheck,
+  Shield,
 } from "lucide-react";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -36,6 +39,7 @@ export default function LandingPage() {
   const [authMode, setAuthMode] = useState<"signin" | "signup">("signup");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [testimonialPage, setTestimonialPage] = useState(0);
 
   // Scroll effect for sticky header
   useEffect(() => {
@@ -118,7 +122,6 @@ export default function LandingPage() {
   const navLinks = [
     { href: "/rent-map", label: t("nav.rent_map", "Rent Prices") },
     { href: "/map", label: t("nav.purchase_map", "Purchase Prices") },
-    { href: "/charts", label: t("nav.price_trends", "Price Trends") },
     { href: "/calculators", label: t("nav.calculators", "Calculators") },
     { href: "/guides", label: t("nav.guides", "Guides") },
   ];
@@ -127,11 +130,17 @@ export default function LandingPage() {
     <>
       <Head>
         <title>
-          {t('home.meta_title', 'PropTrenz | Mexico Real Estate Data & Analytics Platform')}
+          {t(
+            "home.meta_title",
+            "PropTrenz | Mexico Real Estate Data & Analytics Platform"
+          )}
         </title>
         <meta
           name="description"
-          content={t('home.meta_description', 'Track real estate prices across Mexico with PropTrenz. Explore interactive price maps, market insights, neighborhood trends, and data-driven analytics to make smarter property decisions.')}
+          content={t(
+            "home.meta_description",
+            "Track real estate prices across Mexico with PropTrenz. Explore interactive price maps, market insights, neighborhood trends, and data-driven analytics to make smarter property decisions."
+          )}
         />
         <link rel="canonical" href={baseUrl} />
         <link rel="alternate" hrefLang="en" href={hreflangUrls.en} />
@@ -187,9 +196,9 @@ export default function LandingPage() {
                   <>
                     <Button
                       onClick={async () => {
-                        track('user_signed_out', { source: 'landing_page' })
-                        await signOut()
-                        window.location.href = '/'
+                        track("user_signed_out", { source: "landing_page" });
+                        await signOut();
+                        window.location.href = "/";
                       }}
                       variant="ghost"
                       className={`hidden md:inline-flex ${
@@ -198,15 +207,15 @@ export default function LandingPage() {
                           : "text-white hover:bg-white/10"
                       }`}
                     >
-                      {t('common.sign_out', 'Sign Out')}
+                      {t("common.sign_out", "Sign Out")}
                     </Button>
                     <Link
                       href="/transactions"
                       className={`hidden md:inline-flex px-3 py-2 rounded-md font-medium ${
-                        scrolled ? 'text-gray-700' : 'text-white'
+                        scrolled ? "text-gray-700" : "text-white"
                       }`}
                     >
-                      {t('common.transactions', 'My Transactions')}
+                      {t("common.transactions", "My Transactions")}
                     </Link>
                   </>
                 ) : (
@@ -297,20 +306,23 @@ export default function LandingPage() {
               <div className="text-center lg:text-left">
                 <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-blue-100 text-sm font-medium mb-6">
                   <Zap className="h-4 w-4 mr-2" />
-                  {t("home.badge", "The #1 Mexico Real Estate Data Platform")}
+                  {t(
+                    "home.badge",
+                    "Your Complete Real Estate Transaction Platform"
+                  )}
                 </div>
 
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
                   {t(
                     "home.hero_title",
-                    "Smarter real estate decisions start with instant insights"
+                    "Manage your property transaction from search to closing"
                   )}
                 </h1>
 
                 <p className="text-lg md:text-xl text-blue-100 mb-8 max-w-xl mx-auto lg:mx-0">
                   {t(
                     "home.hero_subtitle",
-                    "Get instant access to accurate property data, valuations, and market analytics across Mexico. Make confident decisions with comprehensive real estate intelligence."
+                    "Track every step of your property purchase or sale with our guided workflow. Stay organized with checklists, documents, costs, and timeline—all in one place."
                   )}
                 </p>
 
@@ -344,13 +356,16 @@ export default function LandingPage() {
                   </div>
                   <div className="flex items-center gap-2">
                     <Check className="h-5 w-5 text-green-300" />
-                    <span>{t("home.easy_to_use", "Easy to Use")}</span>
+                    <span>
+                      {t(
+                        "home.manage_transactions",
+                        "Manage Your Transactions"
+                      )}
+                    </span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Check className="h-5 w-5 text-green-300" />
-                    <span>
-                      {t("home.data_updated_monthly", "Data Updated Monthly")}
-                    </span>
+                    <span>{t("home.hero_support", "24/7 Support")}</span>
                   </div>
                 </div>
               </div>
@@ -368,7 +383,9 @@ export default function LandingPage() {
                     <div className="p-6">
                       <div className="flex items-center justify-between mb-6">
                         <div>
-                          <p className="text-gray-500 text-sm">{t("home.mockup_avg_price", "Average Price")}</p>
+                          <p className="text-gray-500 text-sm">
+                            {t("home.mockup_avg_price", "Average Price")}
+                          </p>
                           <p className="text-3xl font-bold text-gray-900">
                             $4,250,000
                           </p>
@@ -379,7 +396,10 @@ export default function LandingPage() {
                         </div>
                         <div className="text-right">
                           <p className="text-gray-500 text-sm">
-                            {t("home.mockup_properties_analyzed", "Properties Analyzed")}
+                            {t(
+                              "home.mockup_properties_analyzed",
+                              "Properties Analyzed"
+                            )}
                           </p>
                           <p className="text-2xl font-bold text-blue-600">
                             10,847
@@ -412,7 +432,9 @@ export default function LandingPage() {
                     </div>
                     <div>
                       <p className="text-2xl font-bold text-gray-900">500+</p>
-                      <p className="text-gray-500 text-sm">{t("home.neighborhoods", "Neighborhoods")}</p>
+                      <p className="text-gray-500 text-sm">
+                        {t("home.neighborhoods", "Neighborhoods")}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -425,7 +447,9 @@ export default function LandingPage() {
                     </div>
                     <div>
                       <p className="text-2xl font-bold text-gray-900">10K+</p>
-                      <p className="text-gray-500 text-sm">{t("home.data_points", "Data Points")}</p>
+                      <p className="text-gray-500 text-sm">
+                        {t("home.data_points", "Data Points")}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -500,34 +524,34 @@ export default function LandingPage() {
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
                 {t(
                   "home.solutions_title",
-                  "Turn real estate data into opportunities with a solution designed to fit your needs"
+                  "Everything you need to buy or sell property in Mexico"
                 )}
               </h2>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
-              {/* Solution 1 */}
-              <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all border border-gray-100 group">
-                <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
-                  <BarChart3 className="h-7 w-7 text-blue-600 group-hover:text-white transition-colors" />
+              {/* Solution 1 - Transaction Manager (Primary) */}
+              <div className="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all border border-blue-500 group relative overflow-hidden">
+                <div className="absolute top-4 right-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full">
+                  {t("home.pro_feature", "PRO")}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  {t(
-                    "home.solution1_title",
-                    "Explore Data, Analytics & Visualization"
-                  )}
+                <div className="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center mb-6">
+                  <ClipboardList className="h-7 w-7 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">
+                  {t("home.solution1_title", "Transaction Manager")}
                 </h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <p className="text-blue-100 mb-6 leading-relaxed">
                   {t(
                     "home.solution1_desc",
-                    "Power your decisions with the gold standard of real estate data across all Mexican states and municipalities with more than 20 years of price history."
+                    "Track your entire property transaction from search to closing. Checklists, documents, costs, contacts, and timeline—all organized in one place."
                   )}
                 </p>
                 <Link
-                  href="/charts"
-                  className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700"
+                  href="/transactions"
+                  className="inline-flex items-center text-white font-semibold hover:text-blue-100"
                 >
-                  {t("home.explore_analytics", "Explore Data & Analytics")}
+                  {t("home.get_started_free", "Get Started Free")}
                   <ChevronRight className="h-4 w-4 ml-1" />
                 </Link>
               </div>
@@ -538,15 +562,12 @@ export default function LandingPage() {
                   <MapPin className="h-7 w-7 text-green-600 group-hover:text-white transition-colors" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  {t(
-                    "home.solution2_title",
-                    "Identify & Evaluate Investment Opportunities"
-                  )}
+                  {t("home.solution2_title", "Price Maps & Market Data")}
                 </h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   {t(
                     "home.solution2_desc",
-                    "Quickly pinpoint, analyze, and take action in top areas with our comprehensive price data maps."
+                    "Explore rent and purchase prices across 500+ neighborhoods. Make data-driven decisions with real market intelligence."
                   )}
                 </p>
                 <Link
@@ -564,12 +585,12 @@ export default function LandingPage() {
                   <Calculator className="h-7 w-7 text-purple-600 group-hover:text-white transition-colors" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  {t("home.solution3_title", "Calculate Your True Costs")}
+                  {t("home.solution3_title", "Cost Calculators")}
                 </h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   {t(
                     "home.solution3_desc",
-                    "Estimate closing costs, ownership expenses, and investment returns with our suite of calculators. Make informed financial decisions before you commit."
+                    "Estimate closing costs, ownership expenses, and investment returns. Know your true costs before you commit."
                   )}
                 </p>
                 <Link
@@ -584,8 +605,248 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* Feature Section 1 - Left Text, Right Visual */}
+        {/* Transaction Manager Feature Section - Primary Paid Feature */}
         <section className="py-20 md:py-28 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+              <div>
+                <div className="inline-flex items-center px-3 py-1.5 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-4">
+                  <Shield className="h-4 w-4 mr-1.5" />
+                  {t("home.transaction_feature_badge", "Pro Feature")}
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                  {t(
+                    "home.transaction_feature_title",
+                    "Never miss a step in your property transaction"
+                  )}
+                </h2>
+                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                  {t(
+                    "home.transaction_feature_desc",
+                    "Buying or selling property in Mexico involves dozens of steps, documents, and deadlines. Our Transaction Manager guides you through the entire process with a proven 7-stage workflow used by real estate professionals."
+                  )}
+                </p>
+                <ul className="space-y-4 mb-8">
+                  <li className="flex items-start gap-3">
+                    <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="text-white text-xs font-bold">1</span>
+                    </div>
+                    <div>
+                      <span className="font-semibold text-gray-900">
+                        {t("home.stage_search", "Search")}
+                      </span>
+                      <span className="text-gray-600">
+                        {" "}
+                        —{" "}
+                        {t(
+                          "home.stage_search_desc",
+                          "Find and compare properties"
+                        )}
+                      </span>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="text-white text-xs font-bold">2</span>
+                    </div>
+                    <div>
+                      <span className="font-semibold text-gray-900">
+                        {t("home.stage_analysis", "Analysis")}
+                      </span>
+                      <span className="text-gray-600">
+                        {" "}
+                        —{" "}
+                        {t(
+                          "home.stage_analysis_desc",
+                          "Research and valuation"
+                        )}
+                      </span>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="text-white text-xs font-bold">3</span>
+                    </div>
+                    <div>
+                      <span className="font-semibold text-gray-900">
+                        {t("home.stage_offer", "Offer")}
+                      </span>
+                      <span className="text-gray-600">
+                        {" "}
+                        —{" "}
+                        {t(
+                          "home.stage_offer_desc",
+                          "Negotiate and secure the deal"
+                        )}
+                      </span>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="text-white text-xs font-bold">4</span>
+                    </div>
+                    <div>
+                      <span className="font-semibold text-gray-900">
+                        {t("home.stage_due_diligence", "Due Diligence")}
+                      </span>
+                      <span className="text-gray-600">
+                        {" "}
+                        —{" "}
+                        {t(
+                          "home.stage_due_diligence_desc",
+                          "Legal review and inspections"
+                        )}
+                      </span>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="text-gray-600 text-xs font-bold">
+                        5-7
+                      </span>
+                    </div>
+                    <div>
+                      <span className="text-gray-600">
+                        {t(
+                          "home.stage_more",
+                          "Financing → Closing → Post-Closing"
+                        )}
+                      </span>
+                    </div>
+                  </li>
+                </ul>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button
+                    onClick={handleGetStarted}
+                    size="lg"
+                    className="bg-blue-600 hover:bg-blue-700"
+                  >
+                    {t("home.start_free_trial", "Start Free Trial")}
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                  <Button
+                    onClick={() => router.push("/pricing")}
+                    size="lg"
+                    variant="outline"
+                  >
+                    {t("home.view_pricing", "View Pricing")}
+                  </Button>
+                </div>
+              </div>
+
+              <div className="relative">
+                <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-6 shadow-xl">
+                  <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+                    {/* Mock Transaction Dashboard */}
+                    <div className="bg-gray-50 border-b px-4 py-3 flex items-center justify-between">
+                      <span className="font-semibold text-gray-900 text-sm">
+                        {t("home.mockup_my_transaction", "My Transaction")}
+                      </span>
+                      <span className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full font-medium">
+                        {t("home.mockup_active", "Active")}
+                      </span>
+                    </div>
+                    <div className="p-5 space-y-4">
+                      {/* Property Info */}
+                      <div className="flex items-center gap-3 pb-4 border-b">
+                        <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                          <MapPin className="h-6 w-6 text-blue-600" />
+                        </div>
+                        <div>
+                          <p className="font-semibold text-gray-900">
+                            Roma Norte, CDMX
+                          </p>
+                          <p className="text-sm text-gray-500">
+                            2BR Apartment • $4,200,000 MXN
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Progress */}
+                      <div>
+                        <div className="flex justify-between text-sm mb-2">
+                          <span className="text-gray-600">
+                            {t("home.mockup_progress", "Progress")}
+                          </span>
+                          <span className="font-semibold text-blue-600">
+                            57%
+                          </span>
+                        </div>
+                        <div className="w-full bg-gray-200 rounded-full h-2">
+                          <div
+                            className="bg-blue-600 h-2 rounded-full"
+                            style={{ width: "57%" }}
+                          ></div>
+                        </div>
+                      </div>
+
+                      {/* Current Stage */}
+                      <div className="bg-blue-50 rounded-lg p-3">
+                        <p className="text-xs text-blue-600 font-medium mb-1">
+                          {t("home.mockup_current_stage", "Current Stage")}
+                        </p>
+                        <p className="font-semibold text-gray-900">
+                          {t("home.mockup_due_diligence", "Due Diligence")}
+                        </p>
+                      </div>
+
+                      {/* Checklist Preview */}
+                      <div className="space-y-2">
+                        <p className="text-xs text-gray-500 font-medium">
+                          {t("home.mockup_next_steps", "Next Steps")}
+                        </p>
+                        <div className="flex items-center gap-2">
+                          <div className="w-4 h-4 border-2 border-green-500 bg-green-500 rounded flex items-center justify-center">
+                            <Check className="h-3 w-3 text-white" />
+                          </div>
+                          <span className="text-sm text-gray-600 line-through">
+                            {t("home.mockup_task_title_search", "Title search")}
+                          </span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="w-4 h-4 border-2 border-blue-500 rounded"></div>
+                          <span className="text-sm text-gray-900">
+                            {t(
+                              "home.mockup_task_inspection",
+                              "Property inspection"
+                            )}
+                          </span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="w-4 h-4 border-2 border-gray-300 rounded"></div>
+                          <span className="text-sm text-gray-600">
+                            {t(
+                              "home.mockup_task_appraisal",
+                              "Appraisal report"
+                            )}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Floating Cost Card */}
+                <div className="absolute -bottom-6 -left-6 bg-white rounded-xl p-4 shadow-xl border">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                      <FileCheck className="h-5 w-5 text-green-600" />
+                    </div>
+                    <div>
+                      <p className="text-xs text-gray-500">
+                        {t("home.mockup_costs_tracked", "Costs Tracked")}
+                      </p>
+                      <p className="font-bold text-gray-900">$485,000</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Feature Section 1 - Left Text, Right Visual */}
+        <section className="py-12 md:py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
               <div>
@@ -708,19 +969,25 @@ export default function LandingPage() {
                           </div>
                           <div className="space-y-1 text-xs">
                             <div className="flex justify-between">
-                              <span className="text-gray-500">{t("home.mockup_avg_rent", "Avg Rent:")} </span>
+                              <span className="text-gray-500">
+                                {t("home.mockup_avg_rent", "Avg Rent:")}{" "}
+                              </span>
                               <span className="font-medium text-gray-900">
                                 $31,519/{t("home.mockup_month_abbr", "mo")}
                               </span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-gray-500">{t("home.mockup_price_m2", "Price/m²:")} </span>
+                              <span className="text-gray-500">
+                                {t("home.mockup_price_m2", "Price/m²:")}{" "}
+                              </span>
                               <span className="font-medium text-gray-900">
                                 $81,100
                               </span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-gray-500">{t("home.mockup_listings", "Listings:")} </span>
+                              <span className="text-gray-500">
+                                {t("home.mockup_listings", "Listings:")}{" "}
+                              </span>
                               <span className="font-medium text-gray-900">
                                 107 {t("home.mockup_available", "available")}
                               </span>
@@ -730,7 +997,10 @@ export default function LandingPage() {
                             <div className="flex items-center gap-1">
                               <div className="w-2 h-2 rounded-full bg-red-500"></div>
                               <span className="text-xs text-red-600 font-medium">
-                                {t("home.mockup_expensive_area", "Expensive area")}
+                                {t(
+                                  "home.mockup_expensive_area",
+                                  "Expensive area"
+                                )}
                               </span>
                             </div>
                           </div>
@@ -742,7 +1012,9 @@ export default function LandingPage() {
                     {/* Map Controls Bar */}
                     <div className="bg-gray-50 border-t border-gray-100 px-4 py-3 flex items-center justify-between">
                       <div className="flex items-center gap-2">
-                        <span className="text-xs text-gray-500">{t("home.mockup_filter", "Filter:")} </span>
+                        <span className="text-xs text-gray-500">
+                          {t("home.mockup_filter", "Filter:")}{" "}
+                        </span>
                         <span className="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full font-medium">
                           2BR
                         </span>
@@ -770,7 +1042,9 @@ export default function LandingPage() {
                 {/* Floating Badge */}
                 <div className="absolute -bottom-4 -right-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-5 py-3 rounded-xl shadow-lg">
                   <p className="font-bold text-lg">500+</p>
-                  <p className="text-xs opacity-90">{t("home.neighborhoods", "Neighborhoods")}</p>
+                  <p className="text-xs opacity-90">
+                    {t("home.neighborhoods", "Neighborhoods")}
+                  </p>
                 </div>
               </div>
             </div>
@@ -785,7 +1059,10 @@ export default function LandingPage() {
                 <div className="bg-gradient-to-br from-purple-50 to-pink-100 rounded-2xl p-8 shadow-xl">
                   <div className="bg-white rounded-xl shadow-lg p-6">
                     <p className="text-gray-500 text-sm mb-2">
-                      {t("home.mockup_historical_trend", "Historical Price Trend")}
+                      {t(
+                        "home.mockup_historical_trend",
+                        "Historical Price Trend"
+                      )}
                     </p>
                     <div className="flex items-end justify-between h-48">
                       {[40, 55, 45, 60, 75, 65, 80, 90, 85, 95, 100, 110].map(
@@ -807,7 +1084,9 @@ export default function LandingPage() {
                 {/* Floating Stats */}
                 <div className="absolute -top-4 -left-4 bg-white rounded-lg p-3 shadow-lg border">
                   <p className="text-green-600 font-bold">+156%</p>
-                  <p className="text-xs text-gray-500">{t("home.mockup_10yr_growth", "10yr growth")}</p>
+                  <p className="text-xs text-gray-500">
+                    {t("home.mockup_10yr_growth", "10yr growth")}
+                  </p>
                 </div>
               </div>
 
@@ -869,38 +1148,92 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* Social Proof Section */}
-        <section className="py-16 md:py-20 bg-white border-b border-gray-100">
+        {/* Social Proof Section - What Our Clients Say */}
+        <section className="py-16 md:py-24 bg-gradient-to-br from-indigo-50 via-purple-50 to-blue-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Testimonials */}
-            <div className="mb-16">
-              <p className="text-center text-sm font-semibold text-gray-400 uppercase tracking-widest mb-10">
-                {t(
-                  "home.social_proof_title",
-                  "Trusted by investors, expats, and professionals across the world"
-                )}
-              </p>
-              <div className="grid md:grid-cols-3 gap-8">
-                {/* Testimonial 1 */}
-                <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+            {/* Header */}
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-12">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+                  {t("home.testimonials_title_prefix", "What")}{" "}
+                  <span className="text-blue-600">
+                    {t("home.testimonials_title_highlight", "People")}
+                  </span>{" "}
+                  {t("home.testimonials_title_suffix", "Say About Us")}
+                </h2>
+                <p className="text-gray-600">
+                  {t(
+                    "home.testimonials_subtitle",
+                    "Hear Directly From Our Users"
+                  )}
+                </p>
+              </div>
+            </div>
+
+            {/* Page 1 Testimonials */}
+            {testimonialPage === 0 && (
+              <div className="grid md:grid-cols-3 gap-6">
+                {/* Marcus Chen */}
+                <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow border border-gray-100">
+                  <div className="text-blue-500 text-4xl font-serif mb-4">
+                    "
+                  </div>
                   <div className="flex items-center gap-1 mb-4">
                     {[...Array(5)].map((_, i) => (
                       <svg
                         key={i}
-                        className="w-5 h-5 text-yellow-400 fill-current"
+                        className="w-4 h-4 text-yellow-400 fill-current"
                         viewBox="0 0 20 20"
                       >
                         <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
                       </svg>
                     ))}
                   </div>
-                  <p className="text-gray-700 mb-6 leading-relaxed">
+                  <p className="text-gray-700 mb-6 leading-relaxed text-sm">
+                    {t(
+                      "home.testimonial_tx_1",
+                      "Buying property in Mexico felt overwhelming until I found PropTrenz. I could finally see all my documents, deadlines, and costs in one place instead of scattered across emails and WhatsApp messages."
+                    )}
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white font-semibold text-sm">
+                      MC
+                    </div>
+                    <div>
+                      <p className="font-semibold text-gray-900 text-sm">
+                        Marcus Chen
+                      </p>
+                      <p className="text-xs text-gray-500">
+                        {t(
+                          "home.testimonial_tx_1_role",
+                          "First-time buyer, relocated from San Francisco"
+                        )}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Sarah K. */}
+                <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow border border-gray-100">
+                  <div className="text-blue-500 text-4xl font-serif mb-4">
                     "
+                  </div>
+                  <div className="flex items-center gap-1 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <svg
+                        key={i}
+                        className="w-4 h-4 text-yellow-400 fill-current"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <p className="text-gray-700 mb-6 leading-relaxed text-sm">
                     {t(
                       "home.testimonial_1",
                       "PropTrenz helped me find undervalued neighborhoods in Mexico City before I even arrived. The rent data was spot-on — I knew exactly what to budget for."
                     )}
-                    "
                   </p>
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white font-semibold text-sm">
@@ -911,32 +1244,81 @@ export default function LandingPage() {
                         Sarah K.
                       </p>
                       <p className="text-xs text-gray-500">
-                        {t("home.testimonial_1_role", "Digital Nomad from Austin, TX")}
+                        {t(
+                          "home.testimonial_1_role",
+                          "Digital nomad from Austin, TX"
+                        )}
                       </p>
                     </div>
                   </div>
                 </div>
 
-                {/* Testimonial 2 */}
-                <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                {/* Roberto Vega */}
+                <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow border border-gray-100">
+                  <div className="text-blue-500 text-4xl font-serif mb-4">
+                    "
+                  </div>
                   <div className="flex items-center gap-1 mb-4">
                     {[...Array(5)].map((_, i) => (
                       <svg
                         key={i}
-                        className="w-5 h-5 text-yellow-400 fill-current"
+                        className="w-4 h-4 text-yellow-400 fill-current"
                         viewBox="0 0 20 20"
                       >
                         <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
                       </svg>
                     ))}
                   </div>
-                  <p className="text-gray-700 mb-6 leading-relaxed">
+                  <p className="text-gray-700 mb-6 leading-relaxed text-sm">
+                    {t(
+                      "home.testimonial_tx_2",
+                      "My wife and I were constantly asking each other 'did we send that document?' The transaction tracker solved that headache. We could both see exactly where we were in the process at any time."
+                    )}
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-white font-semibold text-sm">
+                      RV
+                    </div>
+                    <div>
+                      <p className="font-semibold text-gray-900 text-sm">
+                        Roberto Vega
+                      </p>
+                      <p className="text-xs text-gray-500">
+                        {t(
+                          "home.testimonial_tx_2_role",
+                          "Bought a vacation home in Puerto Vallarta"
+                        )}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Page 2 Testimonials */}
+            {testimonialPage === 1 && (
+              <div className="grid md:grid-cols-3 gap-6">
+                {/* Miguel R. */}
+                <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow border border-gray-100">
+                  <div className="text-blue-500 text-4xl font-serif mb-4">
                     "
+                  </div>
+                  <div className="flex items-center gap-1 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <svg
+                        key={i}
+                        className="w-4 h-4 text-yellow-400 fill-current"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <p className="text-gray-700 mb-6 leading-relaxed text-sm">
                     {t(
                       "home.testimonial_2",
                       "As a real estate investor, I need accurate data. The price maps helped me see the full picture before buying my second property in Monterrey."
                     )}
-                    "
                   </p>
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-white font-semibold text-sm">
@@ -947,32 +1329,76 @@ export default function LandingPage() {
                         Miguel R.
                       </p>
                       <p className="text-xs text-gray-500">
-                        {t("home.testimonial_2_role", "Real Estate Investor, Monterrey")}
+                        {t(
+                          "home.testimonial_2_role",
+                          "Property investor, Monterrey"
+                        )}
                       </p>
                     </div>
                   </div>
                 </div>
 
-                {/* Testimonial 3 */}
-                <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                {/* Amanda Torres */}
+                <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow border border-gray-100">
+                  <div className="text-blue-500 text-4xl font-serif mb-4">
+                    "
+                  </div>
                   <div className="flex items-center gap-1 mb-4">
                     {[...Array(5)].map((_, i) => (
                       <svg
                         key={i}
-                        className="w-5 h-5 text-yellow-400 fill-current"
+                        className="w-4 h-4 text-yellow-400 fill-current"
                         viewBox="0 0 20 20"
                       >
                         <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
                       </svg>
                     ))}
                   </div>
-                  <p className="text-gray-700 mb-6 leading-relaxed">
+                  <p className="text-gray-700 mb-6 leading-relaxed text-sm">
+                    {t(
+                      "home.testimonial_tx_3",
+                      "The step-by-step checklist was a lifesaver. I had no idea how many things needed to happen before closing. PropTrenz made sure I didn't forget anything important."
+                    )}
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center text-white font-semibold text-sm">
+                      AT
+                    </div>
+                    <div>
+                      <p className="font-semibold text-gray-900 text-sm">
+                        Amanda Torres
+                      </p>
+                      <p className="text-xs text-gray-500">
+                        {t(
+                          "home.testimonial_tx_3_role",
+                          "Bought her first condo in Condesa"
+                        )}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Jennifer L. */}
+                <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow border border-gray-100">
+                  <div className="text-blue-500 text-4xl font-serif mb-4">
                     "
+                  </div>
+                  <div className="flex items-center gap-1 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <svg
+                        key={i}
+                        className="w-4 h-4 text-yellow-400 fill-current"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <p className="text-gray-700 mb-6 leading-relaxed text-sm">
                     {t(
                       "home.testimonial_3",
                       "The ROI calculator saved me hours of spreadsheet work. I could instantly compare different scenarios and financing options before making an offer."
                     )}
-                    "
                   </p>
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center text-white font-semibold text-sm">
@@ -983,12 +1409,37 @@ export default function LandingPage() {
                         Jennifer L.
                       </p>
                       <p className="text-xs text-gray-500">
-                        {t("home.testimonial_3_role", "Expat Relocating to CDMX")}
+                        {t(
+                          "home.testimonial_3_role",
+                          "Expat relocating to CDMX"
+                        )}
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
+            )}
+
+            {/* Pagination dots */}
+            <div className="flex justify-center gap-2 mt-8">
+              <button
+                onClick={() => setTestimonialPage(0)}
+                className={`w-2 h-2 rounded-full transition-colors ${
+                  testimonialPage === 0
+                    ? "bg-blue-600"
+                    : "bg-gray-300 hover:bg-gray-400"
+                }`}
+                aria-label="Page 1"
+              />
+              <button
+                onClick={() => setTestimonialPage(1)}
+                className={`w-2 h-2 rounded-full transition-colors ${
+                  testimonialPage === 1
+                    ? "bg-blue-600"
+                    : "bg-gray-300 hover:bg-gray-400"
+                }`}
+                aria-label="Page 2"
+              />
             </div>
           </div>
         </section>
@@ -999,13 +1450,13 @@ export default function LandingPage() {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8">
               {t(
                 "home.trust_title",
-                "We are the most trusted and reliable data & analytics platform for residential real estate in Mexico"
+                "The complete platform for buying or selling property in Mexico"
               )}
             </h2>
             <p className="text-xl text-blue-100 mb-12 max-w-3xl mx-auto">
               {t(
                 "home.trust_subtitle",
-                "Our difference is in our data. We provide comprehensive, accurate, and up-to-date real estate intelligence to help you make smarter investment decisions."
+                "From market research to closing day, we help you stay organized, track every cost, and never miss a critical step in your transaction."
               )}
             </p>
             <Button
@@ -1089,13 +1540,13 @@ export default function LandingPage() {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
               {t(
                 "home.final_cta_title",
-                "Ready to make smarter real estate decisions?"
+                "Ready to start your property transaction?"
               )}
             </h2>
             <p className="text-xl text-gray-300 mb-10">
               {t(
                 "home.final_cta_subtitle",
-                "Join thousands of investors and homebuyers using PropTrenz to navigate the Mexican real estate market with confidence."
+                "Create your free account and start managing your property purchase or sale today. Upgrade anytime to unlock unlimited transactions."
               )}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -1108,12 +1559,12 @@ export default function LandingPage() {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button
-                onClick={() => router.push("/map")}
+                onClick={() => router.push("/pricing")}
                 size="lg"
                 variant="ghost"
                 className="border-2 border-white text-white hover:bg-white/10 px-10 py-6 text-lg font-semibold bg-transparent"
               >
-                {t("home.explore_platform", "Explore Platform")}
+                {t("home.view_pricing", "View Pricing")}
               </Button>
             </div>
           </div>
@@ -1134,7 +1585,7 @@ export default function LandingPage() {
                 <p className="text-sm leading-relaxed">
                   {t(
                     "footer.description",
-                    "The most comprehensive real estate data platform for Mexico. Make smarter property decisions."
+                    "Your complete platform for buying and selling property in Mexico. Track every step from search to closing."
                   )}
                 </p>
               </div>
@@ -1147,10 +1598,18 @@ export default function LandingPage() {
                 <ul className="space-y-3 text-sm">
                   <li>
                     <Link
+                      href="/transactions"
+                      className="hover:text-white transition-colors"
+                    >
+                      {t("footer.transaction_manager", "Transaction Manager")}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
                       href="/rent-map"
                       className="hover:text-white transition-colors"
                     >
-                      {t("nav.rent_map", "Rent Price Map")}
+                      {t("footer.rent_map", "Rent Prices Map")}
                     </Link>
                   </li>
                   <li>
@@ -1158,15 +1617,7 @@ export default function LandingPage() {
                       href="/map"
                       className="hover:text-white transition-colors"
                     >
-                      {t("nav.purchase_map", "Purchase Price Map")}
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/charts"
-                      className="hover:text-white transition-colors"
-                    >
-                      {t("nav.price_trends", "Price Trends")}
+                      {t("footer.purchase_map", "Purchase Prices Map")}
                     </Link>
                   </li>
                   <li>
@@ -1174,7 +1625,7 @@ export default function LandingPage() {
                       href="/calculators"
                       className="hover:text-white transition-colors"
                     >
-                      {t("nav.calculators", "Calculators")}
+                      {t("footer.calculators", "Real Estate Calculators")}
                     </Link>
                   </li>
                 </ul>
@@ -1236,9 +1687,6 @@ export default function LandingPage() {
                 © {new Date().getFullYear()} PropTrenz.{" "}
                 {t("footer.rights", "All rights reserved.")}
               </p>
-              <div className="flex items-center space-x-4 mt-4 md:mt-0">
-                <LanguageSwitcher />
-              </div>
             </div>
           </div>
         </footer>

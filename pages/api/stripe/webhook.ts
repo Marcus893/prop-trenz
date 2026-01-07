@@ -15,10 +15,15 @@ const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY!
 const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET!
 
-// Initialize Stripe
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: '2023-10-16',
-})
+// Initialize Stripe lazily to handle missing env vars
+function getStripe(): Stripe | null {
+  const key = process.env.STRIPE_SECRET_KEY;
+  if (!key) {
+    console.error('[Stripe Webhook] Missing STRIPE_SECRET_KEY');
+    return null;
+  }
+  return new Stripe(key, { apiVersion: '2023-10-16' });
+}
 
 // Map Stripe price IDs to plan types
 function getPlanFromPriceId(priceId: string): 'monthly' | 'yearly' | 'lifetime' | null {
@@ -155,6 +160,12 @@ async function handleCheckoutCompleted(
     const customerId = session.customer as string
     
     try {
+      const stripe = getStripe()
+      if (!stripe) {
+        console.error('[Stripe Webhook] Stripe not initialized')
+        return
+      }
+      
       // Cancel any existing subscriptions for this customer (except the new one)
       const existingSubscriptions = await stripe.subscriptions.list({
         customer: customerId,

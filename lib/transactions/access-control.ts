@@ -1,9 +1,15 @@
 // Transaction access control utilities
 import Stripe from 'stripe';
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: '2024-06-20' as any,
-});
+// Initialize Stripe lazily to handle missing env vars in some environments
+function getStripe(): Stripe | null {
+  const key = process.env.STRIPE_SECRET_KEY;
+  if (!key) {
+    console.error('[Access Control] Missing STRIPE_SECRET_KEY');
+    return null;
+  }
+  return new Stripe(key, { apiVersion: '2024-06-20' as any });
+}
 
 /**
  * Check if user has full subscription access (active paid subscription)
@@ -29,6 +35,12 @@ export async function hasFullSubscriptionAccess(
   // Check Stripe for real-time subscription status
   if (subscription.stripe_subscription_id) {
     try {
+      const stripe = getStripe();
+      if (!stripe) {
+        // Stripe not available, fall back to database status
+        return (tier === 'monthly' || tier === 'yearly' || tier === 'lifetime') && status === 'active';
+      }
+      
       const stripeSubscription = await stripe.subscriptions.retrieve(
         subscription.stripe_subscription_id
       );

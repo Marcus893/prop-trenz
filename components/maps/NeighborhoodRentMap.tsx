@@ -983,7 +983,7 @@ export default function NeighborhoodRentMap({
     <div className="w-full flex flex-col md:flex-row gap-4 z-0">
       {/* Left sidebar - neighborhoods panel */}
       {selectedMunicipalityData && (
-        <div className="w-full max-h-[400px] md:max-h-[600px] md:w-60 md:flex-shrink-0 bg-white border-b md:border-b-0 md:border-r border-gray-200 flex flex-col overflow-hidden rounded-lg md:rounded-l-lg md:rounded-r-none shadow-sm z-[1100]">
+        <div className="w-full max-h-[400px] md:max-h-[600px] md:w-60 md:flex-shrink-0 bg-white border-b md:border-b-0 md:border-r border-gray-200 flex flex-col overflow-hidden rounded-lg md:rounded-l-lg md:rounded-r-none shadow-sm z-[40]">
           {/* Header */}
           <div className="flex justify-between items-center p-1 md:p-2 border-b bg-white flex-shrink-0">
             <h3 className="font-bold text-base md:text-lg">
@@ -1225,15 +1225,13 @@ export default function NeighborhoodRentMap({
                   <div style={{ minWidth: 180, maxWidth: 280 }}>
                     <h3 style={{ fontWeight: 700, fontSize: 14 }}>{n.name}</h3>
                     <div style={{ marginTop: 6 }}>
-                      <div
-                        style={{ fontSize: 13, color: "#111", marginBottom: 4 }}
-                      >
+                      <div style={{ fontSize: 13, color: "#111" }}>
                         {t("rent_map.average_rent")}{" "}
                         <strong>
                           {moneyFormat(n.stats.neighborhood_avg_price)}{" "}
                         </strong>
-                        ({t("rent_map.normalized_to_70m2")})
                       </div>
+                      <div>({t("rent_map.normalized_to_70m2")})</div>
                       <hr
                         style={{
                           margin: "6px 0",
