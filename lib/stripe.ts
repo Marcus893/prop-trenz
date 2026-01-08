@@ -1,9 +1,10 @@
 import Stripe from "stripe";
 
-// Initialize Stripe client
+// Initialize Stripe client (server-side only)
 const stripeSecretKey = process.env.STRIPE_SECRET_KEY;
 
-if (!stripeSecretKey && process.env.NODE_ENV === "production") {
+// Only warn on server-side in production (not in browser where env vars aren't available)
+if (!stripeSecretKey && process.env.NODE_ENV === "production" && typeof window === "undefined") {
   console.error("[Stripe] Missing STRIPE_SECRET_KEY in production!");
 }
 
@@ -15,35 +16,36 @@ export const stripe = stripeSecretKey
   : null;
 
 // Subscription pricing configuration
+// Price IDs differ between test and live mode - use env vars for live mode
 export const SUBSCRIPTION_PRICES = {
   // MXN prices (primary - Mexico focused platform)
   MXN: {
     monthly: {
       amount: 25900, // 259.00 MXN
-      priceId: "price_1SlzfeLVTnHYBNNDnd8GJ04L",
+      priceId: process.env.STRIPE_PRICE_MXN_MONTHLY || "price_1SlzfeLVTnHYBNNDnd8GJ04L",
     },
     yearly: {
       amount: 199900, // 1,999.00 MXN (equivalent to ~7.7 months, 2 months free)
-      priceId: "price_1SlzfeLVTnHYBNNDXCMi7D8B",
+      priceId: process.env.STRIPE_PRICE_MXN_YEARLY || "price_1SlzfeLVTnHYBNNDXCMi7D8B",
     },
     lifetime: {
       amount: 499900, // 4,999.00 MXN
-      priceId: "price_1SlzfeLVTnHYBNNDfTCfuLpd",
+      priceId: process.env.STRIPE_PRICE_MXN_LIFETIME || "price_1SlzfeLVTnHYBNNDfTCfuLpd",
     },
   },
   // USD prices (for US expats)
   USD: {
     monthly: {
       amount: 1299, // $12.99 USD
-      priceId: "price_1SlzfeLVTnHYBNND3WFXXfKT",
+      priceId: process.env.STRIPE_PRICE_USD_MONTHLY || "price_1SlzfeLVTnHYBNND3WFXXfKT",
     },
     yearly: {
       amount: 9900, // $99 USD (~2 months free)
-      priceId: "price_1SlzffLVTnHYBNND4IrKU1oY",
+      priceId: process.env.STRIPE_PRICE_USD_YEARLY || "price_1SlzffLVTnHYBNND4IrKU1oY",
     },
     lifetime: {
       amount: 24900, // $249 USD
-      priceId: "price_1SlzffLVTnHYBNNDa6B7jlXE",
+      priceId: process.env.STRIPE_PRICE_USD_LIFETIME || "price_1SlzffLVTnHYBNNDa6B7jlXE",
     },
   },
 } as const;
