@@ -171,15 +171,19 @@ export function UserProfile() {
 
   const handleDeleteAccount = async () => {
     setDeleting(true)
+    console.log('[UserProfile] Starting account deletion...')
     try {
-      // Add a timeout to prevent infinite hanging (35 seconds total - 30s for fetch + 5s buffer)
+      // Add a timeout to prevent infinite hanging (65 seconds total - 60s for fetch + 5s buffer)
       const timeoutId = setTimeout(() => {
+        console.log('[UserProfile] Local timeout triggered')
         setDeleting(false)
         setShowDeleteConfirm(false)
         alert('Deletion is taking longer than expected. Please check your connection and try again.')
-      }, 35000)
+      }, 65000)
 
+      console.log('[UserProfile] Calling deleteAccount...')
       const { error } = await deleteAccount()
+      console.log('[UserProfile] deleteAccount returned, error:', error)
       
       clearTimeout(timeoutId)
       

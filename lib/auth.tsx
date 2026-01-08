@@ -470,22 +470,35 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         return { error: { message: 'Supabase URL not configured' } }
       }
 
-      // Create a timeout promise (30 seconds)
+      // Create a timeout promise (60 seconds - edge functions can be slow on cold start)
       const timeoutPromise = new Promise<never>((_, reject) => {
-        setTimeout(() => reject(new Error('Request timeout - deletion took too long')), 30000)
+        setTimeout(() => reject(new Error('Request timeout - deletion took too long')), 60000)
       })
 
+      const edgeFunctionUrl = `${supabaseUrl}/functions/v1/delete-user`
+      console.log('[DeleteAccount] Calling edge function:', edgeFunctionUrl)
+
       // Create the fetch request
-      const fetchPromise = fetch(`${supabaseUrl}/functions/v1/delete-user`, {
+      const fetchPromise = fetch(edgeFunctionUrl, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${session.access_token}`,
           'Content-Type': 'application/json',
         },
+      }).catch((fetchError) => {
+        console.error('[DeleteAccount] Fetch failed:', fetchError)
+        throw new Error(`Network error: ${fetchError.message || 'Failed to connect to server'}`)
       })
 
       // Race between fetch and timeout
-      const response = await Promise.race([fetchPromise, timeoutPromise])
+      let response: Response
+      try {
+        response = await Promise.race([fetchPromise, timeoutPromise])
+        console.log('[DeleteAccount] Response status:', response.status)
+      } catch (raceError) {
+        console.error('[DeleteAccount] Race error:', raceError)
+        throw raceError
+      }
 
       // Check if response is ok
       if (!response.ok && response.status !== 200) {

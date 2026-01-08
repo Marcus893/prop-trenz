@@ -10,16 +10,41 @@ SECURITY DEFINER
 SET search_path = public
 AS $$
 BEGIN
-  -- 1. Delete all user watchlists (cascade handles this, but explicit for clarity)
+  -- 1. Delete all user watchlists
   DELETE FROM user_watchlists WHERE user_watchlists.user_id = delete_user_completely.user_id;
   
-  -- 2. Anonymize data upload logs (set uploaded_by to NULL to preserve audit history)
-  -- Alternative: DELETE FROM data_upload_logs WHERE uploaded_by = delete_user_completely.user_id;
+  -- 2. Delete user subscriptions
+  DELETE FROM user_subscriptions WHERE user_subscriptions.user_id = delete_user_completely.user_id;
+  
+  -- 3. Delete subscription events (if any)
+  DELETE FROM subscription_events WHERE subscription_events.user_id = delete_user_completely.user_id;
+  
+  -- 4. Delete user transactions and all related data
+  -- First delete child tables that reference user_transactions
+  DELETE FROM transaction_checklist 
+  WHERE transaction_id IN (SELECT id FROM user_transactions WHERE user_transactions.user_id = delete_user_completely.user_id);
+  
+  DELETE FROM transaction_costs 
+  WHERE transaction_id IN (SELECT id FROM user_transactions WHERE user_transactions.user_id = delete_user_completely.user_id);
+  
+  DELETE FROM transaction_documents 
+  WHERE transaction_id IN (SELECT id FROM user_transactions WHERE user_transactions.user_id = delete_user_completely.user_id);
+  
+  DELETE FROM transaction_notes 
+  WHERE transaction_id IN (SELECT id FROM user_transactions WHERE user_transactions.user_id = delete_user_completely.user_id);
+  
+  DELETE FROM transaction_stage_history 
+  WHERE transaction_id IN (SELECT id FROM user_transactions WHERE user_transactions.user_id = delete_user_completely.user_id);
+  
+  -- Now delete the transactions themselves
+  DELETE FROM user_transactions WHERE user_transactions.user_id = delete_user_completely.user_id;
+  
+  -- 5. Anonymize data upload logs (set uploaded_by to NULL to preserve audit history)
   UPDATE data_upload_logs 
   SET uploaded_by = NULL 
   WHERE uploaded_by = delete_user_completely.user_id;
   
-  -- 3. Delete user from users table
+  -- 6. Delete user from users table
   DELETE FROM users WHERE users.id = delete_user_completely.user_id;
   
   -- Note: Deletion from auth.users is done by the edge function using Admin API
