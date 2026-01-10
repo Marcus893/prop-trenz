@@ -845,7 +845,10 @@
     "intro_banner": "PropTrenz curates data-backed playbooks for buying, owning, and selling property in Mexico. These living documents include tax rates, regulator references, and actionable checklists sourced from SAT circulars, SHF data, and local notaries.",
     "filter_by_tags": "Filter by category",
     "clear_filters": "Clear filters",
-    "no_guides": "No guides available in this language yet. Check back soon!"
+    "no_guides": "No guides available in this language yet. Check back soon!",
+    "showing_results": "Showing {{start}}-{{end}} of {{total}} guides",
+    "previous": "Previous",
+    "next": "Next"
   },
   "guides": {
     "signup_required_title": "Create a free account to unlock this guide",

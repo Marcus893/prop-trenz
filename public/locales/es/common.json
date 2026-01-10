@@ -853,7 +853,10 @@
     "subtitle": "Artículos basados en datos que explican impuestos, regulaciones y dinámica del mercado en cada etapa del ciclo inmobiliario.",
     "intro_banner": "PropTrenz recopila manuales basados en datos para comprar, poseer y vender propiedades en México. Son documentos vivos con tasas impositivas, referencias regulatorias y listas de verificación tomadas de circulares del SAT, datos de la SHF y notarios locales.",
     "filter_by_tags": "Filtrar por categoría",
-    "clear_filters": "Limpiar filtros"
+    "clear_filters": "Limpiar filtros",
+    "showing_results": "Mostrando {{start}}-{{end}} de {{total}} guías",
+    "previous": "Anterior",
+    "next": "Siguiente"
   },
   "guides": {
     "signup_required_title": "Crea una cuenta gratuita para desbloquear esta guía",

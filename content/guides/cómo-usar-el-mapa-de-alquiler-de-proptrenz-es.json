@@ -1,0 +1,294 @@
+{
+  "slug": "cómo-usar-el-mapa-de-alquiler-de-proptrenz",
+  "locale": "es",
+  "status": "published",
+  "accessLevel": "public",
+  "tags": ["inteligencia-de-mercado", "inmuebles-mexico", "guia-de-renta"],
+  "keywords": [
+    "precios de renta en méxico",
+    "mapa de rentas cdmx",
+    "colonias baratas para rentar",
+    "alquileres en guadalajara",
+    "renta promedio en monterrey",
+    "cómo encontrar renta barata",
+    "propiedades en renta méxico"
+  ],
+  "updatedAt": "2026-01-10T20:02:48.329Z",
+  "title": "Cómo Usar el Mapa de Precios de Renta de PropTrenz para Encontrar Colonias Asequibles en México",
+  "metaTitle": "Guía del Mapa de Rentas PropTrenz: Encuentra Precios de Renta Reales en +500 Colonias Mexicanas",
+  "metaDescription": "Aprende a usar el mapa interactivo de precios de renta de PropTrenz para comparar costos de alquiler en Ciudad de México, Guadalajara, Monterrey, Cancún y más. Encuentra tu colonia perfecta.",
+  "excerpt": "Domina el mapa de rentas de PropTrenz para comparar precios de alquiler en más de 500 colonias y encontrar la mejor opción para tu presupuesto en México.",
+  "heroKicker": "Guía de la Plataforma",
+  "mainImageUrl": "/blogs/how-to-use-proptrenz-rent-map.jpeg",
+  "mainImageAlt": "Cómo Usar el Mapa de Precios de Renta de PropTrenz para Encontrar Colonias Asequibles en México",
+  "sections": [
+    {
+      "heading": "Por Qué Necesitas Investigar el Mercado Antes de Firmar un Contrato de Arrendamiento en México",
+      "paragraphs": [
+        "Permíteme contarte lo que veo suceder todo el tiempo. Alguien se muda a México, encuentra un lindo departamento en una colonia de moda y firma un contrato de arrendamiento. Tres meses después, descubre que está pagando un 40% más que el promedio de la colonia o, peor aún, se da cuenta de que una zona igualmente agradable a dos kilómetros de distancia cuesta la mitad.",
+        "El mercado de rentas en México es opaco. No existe un MLS. Los listados están dispersos en Inmuebles24, Segundamano, grupos de Facebook y de boca en boca. Los precios varían enormemente incluso dentro de la misma colonia.",
+        "Esa es exactamente la razón por la que construí el mapa de precios de renta. Agrega datos de listados reales de más de 500 colonias en las principales ciudades de México. Un vistazo te dice qué zonas se ajustan a tu presupuesto y cuáles están sobrevaloradas.",
+        "{{data:rent-city:Ciudad de México:Explora el Mapa de Rentas de CDMX}} para verlo en acción."
+      ],
+      "bullets": [
+        "Consulta los precios de renta promedio para más de 500 colonias en 10 de las principales ciudades mexicanas.",
+        "Los puntos codificados por colores muestran instantáneamente las zonas caras (rojo) frente a las asequibles (verde).",
+        "Haz clic en cualquier colonia para ver estadísticas detalladas por número de recámaras.",
+        "Filtra por precio para encontrar todas las colonias dentro de tu presupuesto.",
+        "Comparte colonias específicas con compañeros de piso o consultores de reubicación."
+      ],
+      "imageAlt": "Por Qué Necesitas Investigar el Mercado Antes de Firmar un Contrato de Arrendamiento en México"
+    },
+    {
+      "heading": "Ciudades Cubiertas Actualmente por el Mapa de Rentas",
+      "paragraphs": [
+        "El mapa de rentas cubre las ciudades donde la mayoría de los expatriados, nómadas digitales y profesionales mexicanos buscan alquilar.",
+        "En el menú desplegable de la parte superior, encontrarás: Ciudad de México (CDMX), Guadalajara, Monterrey, Puerto Vallarta, Los Cabos, Tijuana, Mérida, Cancún, Playa del Carmen, Tulum y más por venir.",
+        "Cada ciudad está desglosada por municipio (alcaldía en CDMX) y luego por colonia o barrio individual. Solo la Ciudad de México tiene más de 200 colonias mapeadas. {{data:rent-city:Guadalajara:Consulta los precios de renta en Guadalajara}} o {{data:rent-city:Monterrey:Consulta los precios de renta en Monterrey}} para explorar otras metrópolis."
+      ],
+      "dataPoints": [
+        {
+          "label": "Total de colonias mapeadas",
+          "value": "500+"
+        },
+        {
+          "label": "Ciudades cubiertas",
+          "value": "10 principales metrópolis"
+        },
+        {
+          "label": "Frecuencia de actualización de datos",
+          "value": "Mensual"
+        }
+      ],
+      "imageAlt": "Ciudades Cubiertas Actualmente por el Mapa de Rentas"
+    },
+    {
+      "heading": "Interpretando el Mapa: Qué Significan los Colores",
+      "paragraphs": [
+        "Cada punto en el mapa representa una colonia con datos de renta. El color te indica de un vistazo qué tan cara es.",
+        "Los puntos verdes son las colonias más asequibles, con rentas promedio por debajo de $8,000 MXN al mes. A menudo son colonias de clase trabajadora o zonas más alejadas de los centros urbanos.",
+        "El verde amarillento significa $8,000–$12,000 MXN. Todavía asequible para la mayoría de los presupuestos.",
+        "El amarillo indica $12,000–$18,000 MXN. Este es un territorio de rango medio: colonias decentes con buenas amenidades.",
+        "El naranja significa $18,000–$26,000 MXN. Estas son zonas premium, como Condesa, Roma Norte o San Pedro Garza García.",
+        "Los puntos rojos son los más caros, con un promedio de $26,000+ MXN. Lugares como Polanco, Lomas de Chapultepec o zonas frente al mar en ciudades turísticas."
+      ],
+      "bullets": [
+        "Verde: Menos de $8,000 MXN/mes (más asequible)",
+        "Verde amarillento: $8,000–$12,000 MXN/mes",
+        "Amarillo: $12,000–$18,000 MXN/mes (rango medio)",
+        "Naranja: $18,000–$26,000 MXN/mes (premium)",
+        "Rojo: $26,000+ MXN/mes (zonas de lujo/expatriados)"
+      ],
+      "imageAlt": "Interpretando el Mapa: Qué Significan los Colores"
+    },
+    {
+      "heading": "Navegando en la Vista por Municipio",
+      "paragraphs": [
+        "Cuando cargas el mapa por primera vez, verás puntos a nivel de municipio. Cada punto representa un municipio completo con su renta promedio calculada a partir de todas sus colonias.",
+        "Haz clic en cualquier punto de municipio para hacer zoom y ver las colonias individuales. En la Ciudad de México, por ejemplo, al hacer clic en {{data:rent-municipality:Cuauhtémoc:Ciudad de México:Cuauhtémoc}} se revelan colonias como Roma Norte, Roma Sur, Condesa, Juárez y Centro Histórico.",
+        "Esta navegación de dos niveles te ayuda a identificar rápidamente qué municipios se ajustan a tu presupuesto antes de profundizar en colonias específicas.",
+        "El panel de la derecha muestra el nombre del municipio, la renta promedio y una lista clasificada de sus colonias de la más cara a la más económica. Esta clasificación es increíblemente útil para encontrar joyas ocultas: las colonias asequibles dentro de municipios que de otro modo serían caros."
+      ],
+      "imageAlt": "Navegando en la Vista por Municipio"
+    },
+    {
+      "heading": "Profundizando en los Detalles de la Colonia",
+      "paragraphs": [
+        "Haz clic en cualquier punto de colonia (o en el nombre de una colonia en la barra lateral) para ver estadísticas detalladas de alquiler.",
+        "Verás el promedio de la colonia, además de desgloses por número de recámaras: estudios, 1 recámara, 2 recámaras, 3 recámaras y departamentos de 4+ recámaras. Esto es importante porque un 'promedio de 2 recámaras' de $18,000 podría significar que la colonia también tiene estudios por $10,000.",
+        "Las estadísticas también muestran el precio por metro cuadrado ($/m²). Esta es la forma más precisa de comparar el valor entre colonias porque los tamaños de los departamentos varían mucho. Un departamento de $20,000/mes en una colonia podría ser de 100m², mientras que otro cobra lo mismo por 60m².",
+        "Por ejemplo, los {{data:rent-neighborhood:Roma Norte:Cuauhtémoc:Ciudad de México:datos de renta de la Roma Norte}} muestran estadísticas detalladas de una de las colonias de expatriados más populares de la CDMX."
+      ],
+      "dataPoints": [
+        {
+          "label": "Tipos de alquiler rastreados",
+          "value": "Habitación, Estudio, 1 Recámara, 2 Recámaras, 2+ Recámaras, Casa"
+        },
+        {
+          "label": "Métrica clave para la comparación",
+          "value": "Precio por metro cuadrado ($/m²)"
+        }
+      ],
+      "imageAlt": "Profundizando en los Detalles de la Colonia"
+    },
+    {
+      "heading": "Usando las Funciones de Búsqueda y Filtro",
+      "paragraphs": [
+        "El mapa incluye una barra de búsqueda y un filtro de precios: úsalos.",
+        "Si conoces el nombre de la colonia, simplemente escríbelo. La búsqueda es flexible, por lo que escribir 'cond' encontrará Condesa, y 'roma' encontrará Roma Norte, Roma Sur y otras variantes de Roma.",
+        "El filtro de precios es aún más potente. Ajústalo para mostrar solo colonias por debajo de un cierto umbral de precio. Si tu presupuesto máximo es de $15,000/mes, filtra por esa cantidad y ve al instante qué colonias califican.",
+        "Consejo profesional: A menudo establezco el filtro en mi presupuesto máximo y luego busco puntos verdes o amarillos dentro de esa vista filtrada. Esas son las colonias con la mejor relación calidad-precio que se ajustan a mis requisitos."
+      ],
+      "bullets": [
+        "Busca por nombre de colonia con coincidencias flexibles.",
+        "Filtra por 'menor que' o 'mayor que' un precio específico.",
+        "Combina búsqueda y filtro para encontrar zonas asequibles en un municipio específico.",
+        "Borra los filtros en cualquier momento usando el botón X."
+      ],
+      "imageAlt": "Usando las Funciones de Búsqueda y Filtro"
+    },
+    {
+      "heading": "Compartiendo Colonias con Otros",
+      "paragraphs": [
+        "¿Encontraste una colonia genial? Puedes compartirla directamente.",
+        "Cuando haces clic en una colonia, la URL se actualiza para incluir esa ubicación específica. Copia la URL de tu navegador o haz clic en el botón Compartir para copiar un enlace compartible.",
+        "Esto es perfecto para enviar opciones a compañeros de piso, parejas o especialistas en reubicación. En lugar de describir 'esa colonia cerca del parque en Cuauhtémoc', envías un enlace directo que abre el mapa con el zoom en esa colonia exacta y todas sus estadísticas visibles.",
+        "Los enlaces para compartir incluyen los parámetros de ciudad, municipio y colonia, para que los destinatarios vean exactamente lo que tú viste."
+      ],
+      "imageAlt": "Compartiendo Colonias con Otros"
+    },
+    {
+      "heading": "Caso de Estudio: Encontrar un Departamento de 2 Recámaras por Menos de $20,000 en la Ciudad de México",
+      "paragraphs": [
+        "Permíteme guiarte a través de un escenario de búsqueda real.",
+        "Quieres un departamento de 2 recámaras en la Ciudad de México por menos de $20,000 MXN al mes. Quieres una colonia decente —segura, con cafés y restaurantes cercanos— pero no necesitas estar en el lugar más de moda.",
+        "Paso 1: Selecciona Ciudad de México en el menú desplegable de ciudades. El mapa muestra todas las alcaldías de la CDMX.",
+        "Paso 2: Descarto inmediatamente {{data:rent-municipality:Miguel Hidalgo:Ciudad de México:Miguel Hidalgo}}; ese es territorio de Polanco, muy por encima del presupuesto. {{data:rent-municipality:Benito Juárez:Ciudad de México:Benito Juárez}} está en el límite; algunas colonias podrían funcionar.",
+        "Paso 3: Hago clic en {{data:rent-municipality:Cuauhtémoc:Ciudad de México:Cuauhtémoc}}. La barra lateral muestra las colonias clasificadas por precio. Condesa y Roma Norte están en la parte superior, demasiado caras. Pero si te desplazas hacia abajo, encontrarás Juárez, San Rafael y Santa María la Ribera en el rango de $17,000–$25,000.",
+        "Paso 4: Hago clic en {{data:rent-neighborhood:San Rafael:Cuauhtémoc:Ciudad de México:San Rafael}} para verificar específicamente los precios de 2 recámaras. Si el promedio de 2 recámaras está por debajo de $20,000, he encontrado un ganador.",
+        "Todo este proceso toma unos 3 minutos. Sin el mapa, pasarías horas revisando listados individuales en múltiples sitios web."
+      ],
+      "imageAlt": "Caso de Estudio: Encontrar un Departamento de 2 Recámaras por Menos de $20,000 en la Ciudad de México"
+    },
+    {
+      "heading": "Comparando Colonias Adyacentes para Obtener el Mejor Valor",
+      "paragraphs": [
+        "Una de las formas más inteligentes de ahorrar dinero en la renta es buscar justo fuera de las colonias 'de moda'.",
+        "Toma la Roma Norte en la Ciudad de México. Es moderna, caminable, llena de restaurantes... y cara. Pero camina 10 minutos hacia el norte y estarás en la {{data:rent-neighborhood:Juárez:Cuauhtémoc:Ciudad de México:Colonia Juárez}}, que tiene un ambiente similar con rentas un 20-30% más bajas.",
+        "El mismo patrón se repite en todas partes. En Guadalajara, {{data:rent-neighborhood:providencia 1a secc:Guadalajara:Providencia}} es costosa, pero la cercana {{data:rent-neighborhood:Americana:Guadalajara:Americana}} ofrece una calidad comparable por menos.",
+        "En Monterrey, {{data:rent-municipality:San Pedro Garza García:Monterrey:San Pedro Garza García}} es el estándar de lujo, pero el {{data:rent-municipality:Monterrey:Monterrey:centro de Monterrey}} tiene excelentes opciones a la mitad de precio.",
+        "Usa el mapa para identificar estas oportunidades de 'arbitraje de adyacencia'. Haz clic en la colonia cara, anota su ubicación y luego revisa los puntos que la rodean inmediatamente."
+      ],
+      "imageAlt": "Comparando Colonias Adyacentes para Obtener el Mejor Valor"
+    },
+    {
+      "heading": "Entendiendo el Precio por Metro Cuadrado: La Verdadera Métrica de Valor",
+      "paragraphs": [
+        "El precio de la renta mensual por sí solo es engañoso. Un departamento de $25,000/mes podría ser un pequeño espacio de 50m² o uno espacioso de 120m².",
+        "Es por eso que cada panel de detalles de la colonia muestra el precio por metro cuadrado. Esto normaliza la comparación entre diferentes tamaños de departamento.",
+        "En la Ciudad de México, espera pagar aproximadamente $200–$400 MXN por m² en colonias de rango medio. Zonas premium como Polanco o Condesa cuestan entre $400–$600 por m². Las colonias económicas podrían estar entre $150–$200 por m².",
+        "Al comparar dos colonias, mira tanto la renta absoluta como el precio por m². una colonia con una renta promedio de $18,000 a $300/m² es una mejor oferta que una con un promedio de $16,000 a $350/m²; obtienes más espacio por un poco más de dinero."
+      ],
+      "dataPoints": [
+        {
+          "label": "Zonas económicas",
+          "value": "$150–$200 MXN/m²"
+        },
+        {
+          "label": "Zonas de rango medio",
+          "value": "$200–$400 MXN/m²"
+        },
+        {
+          "label": "Zonas premium",
+          "value": "$400–$600 MXN/m²"
+        }
+      ],
+      "imageAlt": "Entendiendo el Precio por Metro Cuadrado: La Verdadera Métrica de Valor"
+    },
+    {
+      "heading": "Ciudades de Playa: Cancún, Playa del Carmen, Tulum, Puerto Vallarta, Los Cabos",
+      "paragraphs": [
+        "El mapa de rentas cubre los principales destinos de playa y turísticos de México. Estos mercados son muy diferentes a los de las grandes ciudades.",
+        "{{data:rent-city:benito juarez cancun:Consulta los precios de renta en Cancún}} muestra la Zona Hotelera y las áreas del centro. Espera precios más altos que en la CDMX para departamentos comparables; la economía del turismo eleva todo.",
+        "{{data:rent-city:solidaridad:Consulta los precios de renta en Playa del Carmen}}, que se ha convertido en un centro para nómadas digitales. El Centro y Playacar tienen precios muy diferentes; el mapa revela exactamente cuánto.",
+        "{{data:rent-city:Tulum:Consulta los precios de renta en Tulum}}, que es notoriamente caro para lo que obtienes. El mapa te ayuda a ver si los alquileres en el centro de la ciudad ofrecen un mejor valor que las zonas adyacentes a la playa.",
+        "{{data:rent-city:Puerto Vallarta:Consulta los precios de renta en Puerto Vallarta}} y {{data:rent-city:Los Cabos:Consulta los precios de renta en Los Cabos}} completan las opciones de la costa del Pacífico."
+      ],
+      "bullets": [
+        "Las ciudades de playa generalmente cuestan más que las ciudades interiores equivalentes.",
+        "La temporada alta (nov–abr) a menudo tiene rentas más altas; los datos reflejan promedios anuales.",
+        "Las Zonas Hoteleras/áreas turísticas son más caras que las colonias locales.",
+        "Considera los descuentos por alquiler a largo plazo que no se reflejan en los precios de los listados."
+      ],
+      "imageAlt": "Ciudades de Playa: Cancún, Playa del Carmen, Tulum, Puerto Vallarta, Los Cabos"
+    },
+    {
+      "heading": "Cómo se Recopilan los Datos de Renta",
+      "paragraphs": [
+        "Quizás te preguntes de dónde provienen estos datos. Es una pregunta justa.",
+        "Agregamos mensualmente datos de listados de las principales plataformas de alquiler mexicanas. Los datos se limpian, se normalizan por tamaño de propiedad y número de recámaras, y se geocodifican a colonias específicas.",
+        "Debido a que usamos precios de listados reales (no tratos cerrados), los promedios pueden estar ligeramente sesgados al alza; los propietarios publican con optimismo. En la práctica, a menudo puedes negociar un 5-10% por debajo del precio solicitado.",
+        "También eliminamos valores atípicos evidentes, como el 'penthouse de lujo' de $5,000/mes que es claramente una estafa, o la ultra-villa de $100,000/mes que distorsiona los promedios.",
+        "El resultado son los datos de renta a nivel de colonia más precisos disponibles para México. Son los mismos datos que uso para mis propias decisiones de alquiler."
+      ],
+      "imageAlt": "Cómo se Recopilan los Datos de Renta"
+    },
+    {
+      "heading": "Combinando Datos de Renta con Tendencias de Precios de Compra",
+      "paragraphs": [
+        "Si eres un inversionista, el mapa de rentas se vuelve aún más poderoso cuando se combina con datos de precios de compra.",
+        "PropTrenz también ofrece {{data:city:Ciudad de México:mapas de precios de compra}} y [tendencias históricas de precios](https://proptrenz.com/charts). La referencia cruzada de estas herramientas te permite calcular los rendimientos por alquiler.",
+        "Por ejemplo, si una colonia tiene rentas promedio de $20,000/mes y precios de compra promedio de $3,000,000, eso es un rendimiento bruto anual del 8% ($240,000 de renta / $3M de compra). Eso es sólido.",
+        "Algunas colonias tienen excelentes rentas pero precios de compra por las nubes (bajo rendimiento). Otras tienen precios de compra deprimidos pero una fuerte demanda de alquiler (oportunidad de alto rendimiento). La combinación de ambos mapas revela estas dinámicas."
+      ],
+      "bullets": [
+        "Calcula el rendimiento bruto: (Renta Anual ÷ Precio de Compra) × 100",
+        "Un rendimiento de alquiler saludable en México: 5-8% bruto anual.",
+        "Compara el crecimiento de la renta con el crecimiento del precio para detectar tendencias.",
+        "Las zonas de alto rendimiento pueden indicar una futura apreciación de los precios."
+      ],
+      "imageAlt": "Combinando Datos de Renta con Tendencias de Precios de Compra"
+    },
+    {
+      "heading": "Errores Comunes al Usar el Mapa de Rentas",
+      "paragraphs": [
+        "Algunas cosas a tener en cuenta para evitar malinterpretar los datos.",
+        "Primero, los promedios ocultan el rango. Una colonia con un promedio de $15,000 puede tener estudios por $8,000 y departamentos de 3 recámaras por $25,000. Siempre haz clic para ver el desglose por recámaras.",
+        "Segundo, la ubicación dentro de una colonia importa. Una colonia puede ser enorme. El promedio de $12,000 puede reflejar edificios más antiguos en un extremo, mientras que los rascacielos más nuevos en el otro cobran $20,000. El mapa te da el punto de partida; aún necesitas visitar.",
+        "Tercero, las amenidades no se capturan. Dos departamentos de $18,000 en la misma colonia pueden diferir enormemente en calidad, mobiliario, estacionamiento o amenidades del edificio. Usa el mapa para decisiones a nivel de colonia, luego evalúa los listados individuales.",
+        "Cuarto, los datos reflejan listados, no tratos cerrados. Las rentas reales pagadas suelen ser un 5-15% más bajas que los precios publicados después de la negociación."
+      ],
+      "bullets": [
+        "Haz clic para ver los desgloses por recámaras; no te fíes solo de los promedios de la colonia.",
+        "Reconoce que la ubicación dentro de una colonia varía significativamente.",
+        "Las amenidades y la calidad del departamento no se reflejan en los promedios de precios.",
+        "Espera negociar un 5-15% por debajo de los precios de los listados."
+      ],
+      "imageAlt": "Errores Comunes al Usar el Mapa de Rentas"
+    },
+    {
+      "heading": "Tu Flujo de Trabajo para la Búsqueda de Colonia",
+      "paragraphs": [
+        "Este es el proceso exacto que recomiendo para usar el mapa de rentas de manera efectiva.",
+        "Paso 1: Comienza con tu presupuesto. ¿Cuál es el máximo que puedes pagar mensualmente? Establece el filtro de precios en consecuencia.",
+        "Paso 2: Selecciona tu ciudad objetivo. Si eres flexible entre ciudades, revisa varias para comparar los niveles de precios generales.",
+        "Paso 3: Identifica los municipios que coinciden con tu estilo de vida. ¿Quieres vida nocturna? Cuauhtémoc. ¿Familias? Coyoacán o Benito Juárez. ¿Corporativo? Miguel Hidalgo.",
+        "Paso 4: Profundiza en colonias específicas dentro de esos municipios. Clasifícalas por precio y verifica el desglose de recámaras que se ajusta a tus necesidades.",
+        "Paso 5: Anota de 3 a 5 colonias objetivo. Estas se convierten en tus zonas de búsqueda en Inmuebles24, Segundamano o grupos de Facebook.",
+        "Paso 6: Visita en persona antes de firmar cualquier cosa. El mapa te dice dónde buscar; tus ojos te dicen si debes comprometerte.",
+        "Este flujo de trabajo reduce tu búsqueda de departamento de semanas a días. Eliminas el 80% de la ciudad de inmediato y enfocas tu energía en áreas que realmente se ajustan."
+      ],
+      "imageAlt": "Tu Flujo de Trabajo para la Búsqueda de Colonia"
+    }
+  ],
+  "faq": [
+    {
+      "question": "¿Con qué frecuencia se actualizan los datos del mapa de rentas?",
+      "answer": "Actualizamos los datos de renta mensualmente agregando nuevos listados de las principales plataformas de alquiler mexicanas. Esto asegura que estés viendo los precios actuales del mercado, no datos obsoletos de hace años. Después de cada actualización, recalculamos los promedios de las colonias y los desgloses específicos por recámara."
+    },
+    {
+      "question": "¿Por qué mi colonia no aparece en el mapa?",
+      "answer": "Solo mostramos colonias con suficientes datos de listados para calcular promedios confiables. Es posible que no aparezcan colonias muy pequeñas, desarrollos completamente nuevos o áreas con pocos alquileres formales. Si buscas una colonia específica, intenta buscar primero por municipio; la colonia podría estar agrupada en un área más grande."
+    },
+    {
+      "question": "¿Los precios están en MXN o USD?",
+      "answer": "Todos los precios en el mapa de rentas están en pesos mexicanos (MXN). Esto refleja cómo opera el mercado local: la mayoría de los propietarios fijan los precios en pesos, incluso para departamentos amueblados para expatriados. Para convertir a USD, divide por el tipo de cambio actual (aproximadamente 17-18 MXN por USD a partir de 2026)."
+    },
+    {
+      "question": "¿Los precios de renta incluyen departamentos amueblados?",
+      "answer": "Los promedios incluyen tanto listados amueblados como sin amueblar. Los departamentos amueblados suelen costar entre un 20% y un 40% más que los sin amueblar en la misma colonia. Cuando veas el promedio, ten en cuenta que las opciones sin amueblar generalmente estarán por debajo de ese número, y las unidades completamente amuebladas por encima."
+    },
+    {
+      "question": "¿Puedo confiar en estos precios para la negociación?",
+      "answer": "Absolutamente. Los promedios de la colonia te dan una poderosa palanca de negociación. Si un propietario pide $22,000 por un departamento de 2 recámaras en una colonia donde el promedio para 2 recámaras es de $18,000, tienes datos para contraofertar. Los propietarios responden a inquilinos informados; demostrar que has investigado a menudo desbloquea mejores tratos."
+    },
+    {
+      "question": "¿Por qué las rentas en las ciudades de playa son tan altas en comparación con la Ciudad de México?",
+      "answer": "Las ciudades de playa y turísticas tienen dinámicas de mercado únicas. Gran parte de la oferta de alquiler se dirige a alquileres vacacionales a corto plazo (Airbnb), que pagan más por noche. La oferta de alquiler a largo plazo es limitada, lo que eleva los precios. Además, muchos residentes de ciudades de playa son extranjeros que ganan en USD, lo que eleva las expectativas de precios."
+    },
+    {
+      "question": "¿Cómo puedo ver alquileres en un rango de precios específico?",
+      "answer": "Usa el filtro de precios en la parte superior del mapa. Selecciona 'menor que' e ingresa tu presupuesto máximo. El mapa resaltará inmediatamente solo las colonias con rentas promedio por debajo de ese umbral. También puedes usar 'mayor que' para encontrar colonias premium si buscas opciones de lujo."
+    }
+  ]
+}

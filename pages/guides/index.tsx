@@ -9,8 +9,10 @@ import { useRouter } from 'next/router'
 import { listPublishedGuides } from '@/lib/pseo/storage'
 import type { GuideArticle } from '@/lib/pseo/types'
 import { Badge } from '@/components/ui/badge'
-import { CalendarDays, Lock, X } from 'lucide-react'
+import { CalendarDays, Lock, X, ChevronLeft, ChevronRight } from 'lucide-react'
 import Image from 'next/image'
+
+const GUIDES_PER_PAGE = 6
 
 interface GuidesIndexProps {
   guides: Array<Pick<GuideArticle, 'slug' | 'title' | 'excerpt' | 'updatedAt' | 'accessLevel' | 'tags'> & {
@@ -24,10 +26,12 @@ export default function GuidesIndex({ guides, allTags }: GuidesIndexProps) {
   const { t } = useTranslation('common')
   const router = useRouter()
   const [selectedTags, setSelectedTags] = useState<string[]>([])
+  const [currentPage, setCurrentPage] = useState(1)
 
-  // Clear tag filters when switching language so users see results immediately
+  // Clear tag filters and reset page when switching language so users see results immediately
   useEffect(() => {
     setSelectedTags([])
+    setCurrentPage(1)
   }, [router.locale])
 
   const filteredGuides = useMemo(() => {
@@ -36,6 +40,23 @@ export default function GuidesIndex({ guides, allTags }: GuidesIndexProps) {
     }
     return guides.filter((guide) => selectedTags.every((tag) => guide.tags.includes(tag)))
   }, [guides, selectedTags])
+
+  // Reset to page 1 when filters change
+  useEffect(() => {
+    setCurrentPage(1)
+  }, [selectedTags])
+
+  // Pagination calculations
+  const totalPages = Math.ceil(filteredGuides.length / GUIDES_PER_PAGE)
+  const startIndex = (currentPage - 1) * GUIDES_PER_PAGE
+  const endIndex = startIndex + GUIDES_PER_PAGE
+  const paginatedGuides = filteredGuides.slice(startIndex, endIndex)
+
+  const goToPage = (page: number) => {
+    setCurrentPage(page)
+    // Scroll to top of guides section
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
 
   const toggleTag = (tag: string) => {
     setSelectedTags((prev) => (prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]))
@@ -165,68 +186,144 @@ export default function GuidesIndex({ guides, allTags }: GuidesIndexProps) {
             </p>
           </div>
         ) : (
-          <div className="grid gap-6 lg:grid-cols-2">
-            {filteredGuides.map((guide) => (
-            <Link
-              key={guide.slug}
-              href={`/guides/${guide.slug}`}
-              className="group flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-md"
-            >
-              {guide.mainImageUrl && guide.mainImageUrl !== null && (
-                <div className="relative h-64 w-full overflow-hidden bg-gray-100">
-                  {guide.mainImageUrl.startsWith('data:') ? (
-                    <img
-                      src={guide.mainImageUrl}
-                      alt={guide.mainImageAlt || guide.title}
-                      className="h-full w-full object-cover transition-transform group-hover:scale-105"
-                    />
-                  ) : (
-                    <Image
-                      src={guide.mainImageUrl}
-                      alt={guide.mainImageAlt || guide.title}
-                      fill
-                      className="object-cover transition-transform group-hover:scale-105"
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                    />
-                  )}
-                </div>
-              )}
-              <div className="flex flex-1 flex-col p-6">
-                <div className="flex items-center justify-between text-xs uppercase tracking-wide text-gray-500">
-                  <span className="flex items-center gap-1 text-gray-600">
-                    <CalendarDays className="h-3.5 w-3.5" />
-                    {new Intl.DateTimeFormat(undefined, { dateStyle: 'medium' }).format(new Date(guide.updatedAt))}
-                  </span>
-                  {guide.accessLevel !== 'public' && (
-                    <Badge variant="outline" className="flex items-center gap-1 border-blue-200 text-blue-700">
-                      <Lock className="h-3 w-3" />
-                      {t('guides.signup_required_badge', 'Create a free account')}
-                    </Badge>
-                  )}
-                </div>
-                <h3 className="mt-4 text-xl font-semibold text-gray-900 group-hover:text-blue-700">
-                  {guide.title}
-                </h3>
-                <p className="mt-3 text-sm leading-relaxed text-gray-600">
-                  {guide.excerpt}
-                </p>
-                {guide.tags && guide.tags.length > 0 && (
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {guide.tags.slice(0, 3).map((tag) => (
-                      <Badge
-                        key={tag}
-                        variant="outline"
-                        className="text-xs border-gray-200 text-gray-600"
-                      >
-                        {tag.replace(/-/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase())}
-                      </Badge>
-                    ))}
+          <>
+            {/* Results count */}
+            {filteredGuides.length > GUIDES_PER_PAGE && (
+              <div className="text-sm text-gray-600">
+                {t('guides_page.showing_results', 'Showing {{start}}-{{end}} of {{total}} guides', {
+                  start: startIndex + 1,
+                  end: Math.min(endIndex, filteredGuides.length),
+                  total: filteredGuides.length
+                })}
+              </div>
+            )}
+
+            <div className="grid gap-6 lg:grid-cols-2">
+              {paginatedGuides.map((guide) => (
+              <Link
+                key={guide.slug}
+                href={`/guides/${guide.slug}`}
+                className="group flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-md"
+              >
+                {guide.mainImageUrl && guide.mainImageUrl !== null && (
+                  <div className="relative h-64 w-full overflow-hidden bg-gray-100">
+                    {guide.mainImageUrl.startsWith('data:') ? (
+                      <img
+                        src={guide.mainImageUrl}
+                        alt={guide.mainImageAlt || guide.title}
+                        className="h-full w-full object-cover transition-transform group-hover:scale-105"
+                      />
+                    ) : (
+                      <Image
+                        src={guide.mainImageUrl}
+                        alt={guide.mainImageAlt || guide.title}
+                        fill
+                        className="object-cover transition-transform group-hover:scale-105"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                      />
+                    )}
                   </div>
                 )}
+                <div className="flex flex-1 flex-col p-6">
+                  <div className="flex items-center justify-between text-xs uppercase tracking-wide text-gray-500">
+                    <span className="flex items-center gap-1 text-gray-600">
+                      <CalendarDays className="h-3.5 w-3.5" />
+                      {new Intl.DateTimeFormat(undefined, { dateStyle: 'medium' }).format(new Date(guide.updatedAt))}
+                    </span>
+                    {guide.accessLevel !== 'public' && (
+                      <Badge variant="outline" className="flex items-center gap-1 border-blue-200 text-blue-700">
+                        <Lock className="h-3 w-3" />
+                        {t('guides.signup_required_badge', 'Create a free account')}
+                      </Badge>
+                    )}
+                  </div>
+                  <h3 className="mt-4 text-xl font-semibold text-gray-900 group-hover:text-blue-700">
+                    {guide.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-gray-600">
+                    {guide.excerpt}
+                  </p>
+                  {guide.tags && guide.tags.length > 0 && (
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {guide.tags.slice(0, 3).map((tag) => (
+                        <Badge
+                          key={tag}
+                          variant="outline"
+                          className="text-xs border-gray-200 text-gray-600"
+                        >
+                          {tag.replace(/-/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase())}
+                        </Badge>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </Link>
+            ))}
+            </div>
+
+            {/* Pagination Controls */}
+            {totalPages > 1 && (
+              <div className="flex items-center justify-center gap-2 pt-8">
+                {/* Previous button */}
+                <button
+                  onClick={() => goToPage(currentPage - 1)}
+                  disabled={currentPage === 1}
+                  className="flex items-center gap-1 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium text-gray-700 transition hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-white"
+                >
+                  <ChevronLeft className="h-4 w-4" />
+                  {t('guides_page.previous', 'Previous')}
+                </button>
+
+                {/* Page numbers */}
+                <div className="flex items-center gap-1">
+                  {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => {
+                    // Show first page, last page, current page, and pages around current
+                    const showPage = page === 1 || 
+                                     page === totalPages || 
+                                     Math.abs(page - currentPage) <= 1
+
+                    // Show ellipsis
+                    const showEllipsisBefore = page === currentPage - 2 && currentPage > 3
+                    const showEllipsisAfter = page === currentPage + 2 && currentPage < totalPages - 2
+
+                    if (showEllipsisBefore || showEllipsisAfter) {
+                      return (
+                        <span key={page} className="px-2 text-gray-400">
+                          ...
+                        </span>
+                      )
+                    }
+
+                    if (!showPage) return null
+
+                    return (
+                      <button
+                        key={page}
+                        onClick={() => goToPage(page)}
+                        className={`min-w-[40px] rounded-lg px-3 py-2 text-sm font-medium transition ${
+                          currentPage === page
+                            ? 'bg-blue-600 text-white'
+                            : 'border border-gray-300 bg-white text-gray-700 hover:bg-gray-50'
+                        }`}
+                      >
+                        {page}
+                      </button>
+                    )
+                  })}
+                </div>
+
+                {/* Next button */}
+                <button
+                  onClick={() => goToPage(currentPage + 1)}
+                  disabled={currentPage === totalPages}
+                  className="flex items-center gap-1 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium text-gray-700 transition hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-white"
+                >
+                  {t('guides_page.next', 'Next')}
+                  <ChevronRight className="h-4 w-4" />
+                </button>
               </div>
-            </Link>
-          ))}
-          </div>
+            )}
+          </>
         )}
       </section>
       </Layout>

@@ -1,0 +1,293 @@
+{
+  "slug": "cómo-usar-el-mapa-de-precios-de-compra-de-proptrenz",
+  "locale": "es",
+  "status": "published",
+  "accessLevel": "public",
+  "tags": ["compra", "inteligencia-de-mercado", "inmuebles-mexico"],
+  "keywords": [
+    "valor de propiedades en México",
+    "precios de bienes raíces CDMX",
+    "mapa de precios de inmuebles",
+    "precio por metro cuadrado México",
+    "mercado inmobiliario mexicano",
+    "análisis de mercado inmobiliario",
+    "comprar casa en México",
+    "valuación de propiedades"
+  ],
+  "updatedAt": "2026-01-10T21:07:09.367Z",
+  "title": "Cómo Usar el Mapa de Precios de Compra de PropTrenz para Encontrar el Valor de Propiedades en México",
+  "metaTitle": "Guía del Mapa de Precios de Compra de PropTrenz: Valores Inmobiliarios en más de 500 Colonias Mexicanas",
+  "metaDescription": "Aprenda a usar el mapa interactivo de precios de compra de PropTrenz para comparar el valor de propiedades por metro cuadrado en la Ciudad de México, Guadalajara, Monterrey y más.",
+  "excerpt": "Domine el mapa de precios de compra de PropTrenz para comparar valores inmobiliarios en más de 500 colonias y encontrar propiedades infravaloradas antes que otros compradores.",
+  "heroKicker": "Guía de la Plataforma",
+  "mainImageUrl": "/blogs/how-to-use-proptrenz-purchase-price-map.jpeg",
+  "mainImageAlt": "Cómo Usar el Mapa de Precios de Compra de PropTrenz para Encontrar el Valor de Propiedades en México",
+  "sections": [
+    {
+      "heading": "Por Qué Necesita Hacer una Investigación de Mercado Profunda Antes de Comprar en México",
+      "paragraphs": [
+        "Este es el problema que enfrenta todo comprador de propiedades en México. Encuentra un buen departamento o casa, el agente le da un precio y no tiene la menor idea de si es justo. ¿Es razonable pagar $3,500,000 MXN por un departamento de 80m² en la Roma Norte? ¿Es demasiado caro? ¿Una ganga?",
+        "Sin datos de precios a nivel de colonia, está negociando a ciegas. Los agentes lo saben. Los vendedores lo saben. Y fijan los precios en consecuencia.",
+        "Precisamente por eso construí el mapa de precios de compra. Muestra los valores reales de las propiedades —precio por metro cuadrado— en más de 500 colonias de las principales ciudades de México. Antes de visitar una sola propiedad, sabrá exactamente cuál es el precio del mercado.",
+        "{{data:city:Ciudad de México:Explore el Mapa de Precios de Compra de CDMX}} para verlo en acción."
+      ],
+      "bullets": [
+        "Vea el precio promedio por m² en más de 500 colonias de 3 de las principales áreas metropolitanas",
+        "Puntos codificados por colores que muestran al instante las zonas caras (rojo) frente a las asequibles (verde)",
+        "Haga clic en cualquier colonia para ver las tendencias históricas de precios",
+        "Filtre por precio para encontrar todas las colonias dentro de su presupuesto",
+        "Comparta datos específicos de colonias con socios, abogados o agentes inmobiliarios"
+      ],
+      "imageAlt": "Por Qué Necesita Hacer una Investigación de Mercado Profunda Antes de Comprar en México"
+    },
+    {
+      "heading": "Ciudades Cubiertas Actualmente por el Mapa de Precios de Compra",
+      "paragraphs": [
+        "El mapa de precios de compra cubre los tres mercados inmobiliarios más grandes de México, donde ocurre la gran mayoría de las transacciones.",
+        "En el menú desplegable de la parte superior, encontrará: Ciudad de México (CDMX), Jalisco (zona metropolitana de Guadalajara) y Nuevo León (zona metropolitana de Monterrey).",
+        "Cada ciudad está desglosada por municipio (alcaldía en CDMX) y luego por colonia individual. Solo la Ciudad de México tiene más de 200 colonias con datos de precios. {{data:city:Jalisco:Vea los precios de Guadalajara}} o {{data:city:Monterrey:Vea los precios de Monterrey}} para explorar otras áreas metropolitanas."
+      ],
+      "dataPoints": [
+        {
+          "label": "Total de colonias mapeadas",
+          "value": "500+"
+        },
+        {
+          "label": "Frecuencia de actualización de datos",
+          "value": "Mensual"
+        }
+      ],
+      "imageAlt": "Ciudades Cubiertas Actualmente por el Mapa de Precios de Compra"
+    },
+    {
+      "heading": "Leyendo el Mapa: Qué Significan los Colores",
+      "paragraphs": [
+        "Cada punto en el mapa representa una colonia con datos de precios de compra. El color le indica el nivel de precio relativo de un vistazo.",
+        "Los puntos verdes son las colonias más asequibles, con precios promedio por debajo de $30,000 MXN por metro cuadrado. Suelen ser colonias de clase trabajadora o zonas más alejadas de los centros urbanos.",
+        "El verde lima significa $30,000–$50,000 MXN/m². Zonas de clase media sólida con buena infraestructura.",
+        "El amarillo indica $50,000–$70,000 MXN/m². Territorio de clase media-alta: colonias establecidas con buenos servicios.",
+        "El naranja significa $70,000–$90,000 MXN/m². Son zonas premium, como la Roma, Condesa o Valle en Monterrey.",
+        "Los puntos rojos son los más caros: $90,000+ MXN/m². Lugares como Polanco, Lomas de Chapultepec o San Pedro Garza García."
+      ],
+      "bullets": [
+        "Verde: Menos de $30,000 MXN/m² (más asequible)",
+        "Verde lima: $30,000–$50,000 MXN/m²",
+        "Amarillo: $50,000–$70,000 MXN/m² (clase media-alta)",
+        "Naranja: $70,000–$90,000 MXN/m² (premium)",
+        "Rojo: $90,000+ MXN/m² (zonas de lujo)"
+      ],
+      "imageAlt": "Leyendo el Mapa: Qué Significan los Colores"
+    },
+    {
+      "heading": "Navegando la Vista por Municipio",
+      "paragraphs": [
+        "Cuando carga el mapa por primera vez, verá puntos a nivel de municipio. Cada punto representa un municipio completo con su precio promedio calculado a partir de todas sus colonias.",
+        "Haga clic en el punto de cualquier municipio para hacer zoom y ver las colonias individuales. En la Ciudad de México, por ejemplo, al hacer clic en {{data:municipality:Cuauhtémoc:Ciudad de México:Cuauhtémoc}} se revelan colonias como Roma Norte, Roma Sur, Condesa, Juárez y Centro Histórico.",
+        "Esta navegación de dos niveles le ayuda a identificar rápidamente qué municipios se ajustan a su presupuesto antes de profundizar en colonias específicas.",
+        "El panel de la derecha muestra el nombre del municipio, el precio promedio por m² y una lista clasificada de sus colonias de la más cara a la más barata. Esta clasificación le ayuda a encontrar los focos asequibles dentro de municipios que, de otro modo, serían caros."
+      ],
+      "imageAlt": "Navegando la Vista por Municipio"
+    },
+    {
+      "heading": "Profundizando en los Detalles y el Historial de Precios de las Colonias",
+      "paragraphs": [
+        "Haga clic en el punto de cualquier colonia (o en el nombre de una colonia en la barra lateral) para ver información detallada de precios.",
+        "Verá el precio promedio actual por metro cuadrado para esa colonia. Pero aquí es donde se vuelve potente: haga clic en el botón 'Gráfica' para ver la tendencia histórica de precios.",
+        "La gráfica de precios muestra cómo han cambiado los valores en esa colonia a lo largo del tiempo. Esta es información crucial. Una colonia a $50,000/m² que ha estado subiendo un 15% anualmente es muy diferente de una que ha estado estancada o en declive.",
+        "Por ejemplo, los {{data:neighborhood:Roma Norte:Cuauhtémoc:Ciudad de México:datos de precios de la Roma Norte}} muestran tanto el nivel de precios actual como su evolución, un contexto esencial para cualquier decisión de compra."
+      ],
+      "dataPoints": [
+        {
+          "label": "Métrica principal",
+          "value": "Precio por metro cuadrado (MXN/m²)"
+        },
+        {
+          "label": "Profundidad de datos históricos",
+          "value": "12-24+ meses de tendencias"
+        }
+      ],
+      "imageAlt": "Profundizando en los Detalles y el Historial de Precios de las Colonias"
+    },
+    {
+      "heading": "Entendiendo el Precio por Metro Cuadrado",
+      "paragraphs": [
+        "El precio por metro cuadrado es LA métrica para comparar el valor de las propiedades en México. Lo normaliza todo.",
+        "Un departamento de $5,000,000 MXN suena caro. Pero si tiene 150m² en una colonia de $40,000/m², en realidad está por debajo del precio de mercado. Un departamento de $3,000,000 suena más barato, pero si solo tiene 40m² en la misma zona, está pagando $75,000/m², muy por encima del promedio.",
+        "Siempre haga este cálculo rápido: Precio Total ÷ m² Totales = Precio por m². Luego compárelo con el promedio de la colonia en el mapa.",
+        "En las zonas premium de la Ciudad de México, espere pagar entre $60,000 y $120,000 MXN/m². Las colonias de clase media oscilan entre $30,000 y $60,000/m². Las colonias económicas pueden estar entre $15,000 y $30,000/m². Monterrey y Guadalajara suelen estar entre un 10% y un 30% por debajo de los precios de CDMX para colonias equivalentes."
+      ],
+      "dataPoints": [
+        {
+          "label": "Zonas económicas de CDMX",
+          "value": "$15,000–$30,000 MXN/m²"
+        },
+        {
+          "label": "Zonas de rango medio de CDMX",
+          "value": "$30,000–$60,000 MXN/m²"
+        },
+        {
+          "label": "Zonas premium de CDMX",
+          "value": "$60,000–$120,000+ MXN/m²"
+        }
+      ],
+      "imageAlt": "Entendiendo el Precio por Metro Cuadrado"
+    },
+    {
+      "heading": "Usando las Funciones de Búsqueda y Filtro",
+      "paragraphs": [
+        "El mapa incluye herramientas de búsqueda y filtro de precios. Úselas para acotar su enfoque rápidamente.",
+        "Si conoce el nombre de la colonia, escríbalo en el cuadro de búsqueda. La búsqueda es flexible: escribir 'cond' encontrará Condesa, 'roma' encontrará todas las variantes de Roma, y 'garza' encontrará San Pedro Garza García.",
+        "El filtro de precios es extremadamente potente. Establezca un precio máximo por m² para ver solo las colonias por debajo de ese umbral. Si su presupuesto se traduce en aproximadamente $45,000/m², filtre a esa cantidad y vea al instante qué colonias califican.",
+        "Consejo profesional: establezca el filtro en su máximo de $/m², luego busque los puntos verdes o lima. Esos son los mejores valores dentro de su rango de precios: colonias donde obtiene más espacio por su dinero."
+      ],
+      "bullets": [
+        "Busque por nombre de colonia con coincidencias flexibles",
+        "Filtre por precio para mostrar solo las colonias por debajo de su máximo de $/m²",
+        "Combine la búsqueda y el filtro para encontrar lugares asequibles en áreas específicas",
+        "Borre los filtros en cualquier momento para restablecer la vista"
+      ],
+      "imageAlt": "Usando las Funciones de Búsqueda y Filtro"
+    },
+    {
+      "heading": "Caso de Estudio: Encontrando una Propiedad de $5M en la Ciudad de México",
+      "paragraphs": [
+        "Permítame guiarlo a través de un escenario de búsqueda real.",
+        "Tiene un presupuesto de $5,000,000 MXN para un departamento en la Ciudad de México. Quiere al menos 70m² en una colonia segura y caminable con restaurantes y servicios cercanos.",
+        "Paso 1: $5,000,000 ÷ 70m² = $71,400/m² como máximo. Filtraré el mapa para mostrar colonias por debajo de $75,000/m² para dejar margen de negociación.",
+        "Paso 2: Selecciono Ciudad de México. El mapa muestra todas las alcaldías de CDMX con puntos.",
+        "Paso 3: {{data:municipality:Miguel Hidalgo:Ciudad de México:Miguel Hidalgo}} es mayormente roja/naranja, demasiado cara para mi presupuesto. {{data:municipality:Benito Juárez:Ciudad de México:Benito Juárez}} tiene algunas zonas amarillas que podrían funcionar.",
+        "Paso 4: Hago clic en {{data:municipality:Cuauhtémoc:Ciudad de México:Cuauhtémoc}}. La barra lateral muestra las colonias clasificadas por precio. Condesa y Roma Norte están en la parte superior, al límite. Pero {{data:neighborhood:San Rafael:Cuauhtémoc:Ciudad de México:San Rafael}} está muy dentro del presupuesto.",
+        "Paso 5: Hago clic en el botón 'Gráfica' de San Rafael para ver las tendencias de precios. Los precios han subido un 9.7% en el último año, una fuerte apreciación. Este es un candidato sólido.",
+        "Este proceso toma 5 minutos. Sin el mapa, pasaría días visitando propiedades sobrevaloradas antes de tropezar con áreas que realmente se ajustan a su presupuesto."
+      ],
+      "imageAlt": "Caso de Estudio: Encontrando una Propiedad de $5M en la Ciudad de México"
+    },
+    {
+      "heading": "Detectando Colonias Infravaloradas",
+      "paragraphs": [
+        "El mapa de precios de compra revela oportunidades de arbitraje de precios que la mayoría de los compradores pasan por alto.",
+        "Las colonias adyacentes a menudo tienen niveles de precios drásticamente diferentes. Roma Norte podría estar en $85,000/m² mientras que {{data:neighborhood:Roma Sur:Cuauhtémoc:Ciudad de México:Roma Sur}} está en $65,000/m², un descuento del 23% por caminar 10 minutos hacia el sur.",
+        "El mismo patrón se repite en todas las ciudades. En Guadalajara, {{data:neighborhood:Providencia:Guadalajara:Jalisco:Providencia}} es premium, pero {{data:neighborhood:Americana:Guadalajara:Jalisco:Americana}} al lado ofrece un ambiente similar a precios más bajos.",
+        "En Monterrey, todo el mundo quiere {{data:municipality:San Pedro Garza García:Monterrey:San Pedro Garza García}}. Pero mire el mapa: algunas colonias en {{data:municipality:Monterrey:Monterrey:el centro de Monterrey}} ofrecen un excelente valor a la mitad del precio.",
+        "Use la codificación por colores para identificar estas jugadas de adyacencia: un punto caro junto a uno más barato = oportunidad potencial."
+      ],
+      "imageAlt": "Detectando Colonias Infravaloradas"
+    },
+    {
+      "heading": "Leyendo las Tendencias de Precios: La Función de Gráfica",
+      "paragraphs": [
+        "Hacer clic en el botón 'Gráfica' en cualquier colonia o municipio revela las tendencias históricas de precios. Este es un contexto esencial para cualquier compra.",
+        "Tendencia ascendente con crecimiento constante: La colonia se está apreciando. Comprar ahora significa que su propiedad debería valer más en unos años. Bueno para inversores a largo plazo o compradores de vivienda principal que buscan crecimiento de capital.",
+        "Tendencia plana o volátil: Los precios no se mueven mucho. Está bien si compra para vivir, pero el potencial de plusvalía es limitado si invierte para obtener apreciación.",
+        "Tendencia a la baja: Los precios están disminuyendo. Podría ser una oportunidad de compra si cree en una recuperación, o una señal de advertencia de problemas fundamentales. Investigue antes de comprometerse.",
+        "La gráfica también le muestra patrones estacionales. El mercado inmobiliario en México a menudo tiene períodos más lentos (temporada de lluvias, días festivos) cuando los vendedores motivados podrían aceptar ofertas más bajas."
+      ],
+      "bullets": [
+        "Tendencia al alza + crecimiento anual del 10% = colonia con fuerte apreciación",
+        "Tendencia plana = estable pero con plusvalía limitada",
+        "Tendencia a la baja = investigue las causas antes de comprar",
+        "Compare la tendencia con el promedio de la ciudad para tener contexto"
+      ],
+      "imageAlt": "Leyendo las Tendencias de Precios: La Función de Gráfica"
+    },
+    {
+      "heading": "Comparando Precios de Compra con Rendimientos por Renta",
+      "paragraphs": [
+        "Si es un inversor, el mapa de precios de compra se vuelve aún más poderoso cuando se combina con datos de rentas.",
+        "PropTrenz también ofrece un {{data:rent-city:Ciudad de México:mapa de precios de renta}}. Cruce ambas herramientas para calcular los rendimientos por renta e identificar las mejores oportunidades de inversión.",
+        "Aquí está el cálculo rápido: si una colonia tiene precios de compra de $50,000/m² y rentas mensuales de $300/m², el rendimiento bruto anual es del 7.2% ([300 × 12] ÷ 50,000 × 100). Eso es sólido.",
+        "Algunas colonias tienen precios de compra altos pero rentas relativamente bajas (bajo rendimiento). Otras tienen precios deprimidos pero una fuerte demanda de alquiler (oportunidad de alto rendimiento). La combinación de ambos mapas revela estas dinámicas.",
+        "Una colonia con precios de compra al alza Y rentas al alza es el santo grial: un activo que se aprecia con un flujo de caja creciente."
+      ],
+      "bullets": [
+        "Calcular rendimiento bruto: (Renta Mensual × 12 ÷ Precio de Compra) × 100",
+        "Rendimiento por renta saludable en México: 5-8% bruto anual",
+        "Compare el rendimiento entre colonias para encontrar las mejores oportunidades de inversión",
+        "Alto rendimiento + precios al alza = perfil de inversión óptimo"
+      ],
+      "imageAlt": "Comparando Precios de Compra con Rendimientos por Renta"
+    },
+    {
+      "heading": "Compartiendo Datos de Colonias con su Equipo",
+      "paragraphs": [
+        "¿Encontró una colonia prometedora? Comparta la vista exacta con su equipo.",
+        "Cuando hace clic en una colonia y abre su gráfica, la URL se actualiza para incluir todos los parámetros. Copie esa URL de su navegador o haga clic en el botón Compartir para copiar un enlace compartible.",
+        "Esto es invaluable cuando trabaja con socios, abogados o agentes inmobiliarios. En lugar de describir 'esa colonia que nos gustó en Cuauhtémoc', envíe un enlace directo que abre el mapa con el zoom en esa colonia exacta, con todas sus estadísticas e historial de precios visibles.",
+        "Los enlaces para compartir funcionan en todos los dispositivos. Su socio en otro país ve exactamente lo que usted vio: la misma colonia, los mismos datos, el mismo contexto."
+      ],
+      "imageAlt": "Compartiendo Datos de Colonias con su Equipo"
+    },
+    {
+      "heading": "Cómo se Recopilan los Datos de Precios de Compra",
+      "paragraphs": [
+        "Los datos de precios de compra provienen de uno de los mayores prestamistas hipotecarios de México. Rastrean los precios de transacción reales, es decir, el precio por el que realmente se vendieron las propiedades, no solo los precios de lista.",
+        "Esto importa enormemente. Los precios de lista en México a menudo son aspiracionales. Los precios de transacción reales cuentan la verdadera historia.",
+        "Los datos se agregan por colonia y se reportan como precio promedio por metro cuadrado. Actualizamos mensualmente para reflejar las últimas condiciones del mercado.",
+        "Debido a que estos son datos hipotecarios, reflejan principalmente transacciones de gama media a alta (propiedades financiadas a través de bancos tradicionales). Las transacciones en efectivo en los extremos muy bajo o muy alto del mercado pueden no estar completamente representadas. Aun así, son los datos de precios a nivel de colonia más confiables disponibles para México."
+      ],
+      "imageAlt": "Cómo se Recopilan los Datos de Precios de Compra"
+    },
+    {
+      "heading": "Errores Comunes al Usar el Mapa",
+      "paragraphs": [
+        "Algunas cosas a tener en cuenta para evitar malinterpretar los datos.",
+        "Primero, los promedios ocultan la variación. Una colonia con un promedio de $50,000/m² podría tener edificios más antiguos a $35,000/m² y desarrollos nuevos a $70,000/m². Haga clic en la gráfica para ver si los precios están agrupados o dispersos.",
+        "Segundo, las micro-ubicaciones importan. Una colonia puede ser grande. Una cuadra podría estar junto a un parque con vistas impresionantes; otra podría dar a una avenida concurrida. El mapa le da datos a nivel de colonia, pero aún necesita visitar y evaluar edificios específicos.",
+        "Tercero, los nuevos desarrollos pueden sesgar los promedios. Una torre de lujo en una colonia por lo demás modesta elevará el promedio. Del mismo modo, la vivienda de interés social puede reducir los promedios. Use los datos de tendencias para ver si el promedio es estable o está influenciado por proyectos puntuales.",
+        "Cuarto, los datos reflejan transacciones cerradas, que tienen un rezago de 1 a 3 meses con respecto al mercado. En un mercado que se mueve rápidamente, los precios de venta actuales pueden ser más altos de lo que muestran los datos."
+      ],
+      "bullets": [
+        "Use la gráfica para entender la variación de precios dentro de una colonia",
+        "Visite las propiedades en persona para evaluar la micro-ubicación",
+        "Esté atento a nuevos desarrollos que sesguen los promedios de la colonia",
+        "Asuma que los precios actuales pueden ser un 5-10% más altos que los datos del mes pasado en mercados en alza"
+      ],
+      "imageAlt": "Errores Comunes al Usar el Mapa"
+    },
+    {
+      "heading": "Su Flujo de Trabajo para la Búsqueda de Propiedades",
+      "paragraphs": [
+        "Este es el proceso exacto que recomiendo para usar el mapa de precios de compra de manera efectiva.",
+        "Paso 1: Calcule su máximo de $/m². Tome su presupuesto y divídalo por el tamaño mínimo aceptable. Presupuesto de $4M ÷ mínimo de 60m² = $66,667/m² como máximo.",
+        "Paso 2: Establezca el filtro de precios en su máximo de $/m². Esto le muestra inmediatamente qué colonias son realistas.",
+        "Paso 3: Seleccione su ciudad objetivo. Observe los puntos de los municipios para comprender la distribución general de precios.",
+        "Paso 4: Haga clic en los municipios que se muestran en verde/amarillo (dentro del presupuesto). Revise la lista de colonias en la barra lateral, ordenada por precio.",
+        "Paso 5: Haga clic en colonias individuales para ver sus gráficas de historial de precios. Priorice aquellas con tendencias positivas.",
+        "Paso 6: Anote de 3 a 5 colonias objetivo. Cuando busque en [Inmuebles24](https://www.inmuebles24.com), Segundamano, o con un agente, concéntrese ÚNICAMENTE en estas áreas.",
+        "Paso 7: Para cualquier propiedad que considere, calcule su $/m² y compárelo con el promedio de la colonia. Si está significativamente por encima del promedio, negocie con firmeza o descarte la opción.",
+        "Este flujo de trabajo asegura que nunca pierda tiempo en propiedades que no puede pagar, y que nunca pague de más por las que sí puede."
+      ],
+      "imageAlt": "Su Flujo de Trabajo para la Búsqueda de Propiedades"
+    }
+  ],
+  "faq": [
+    {
+      "question": "¿Con qué frecuencia se actualizan los datos del mapa de precios de compra?",
+      "answer": "Actualizamos los datos de precios de compra mensualmente con base en los últimos datos de transacciones de Banorte. Esto significa que está viendo precios de transacciones que se cerraron en los últimos 30-60 días, lo que le da una visión casi en tiempo real de las condiciones del mercado."
+    },
+    {
+      "question": "¿Los precios son precios de venta reales o precios de lista?",
+      "answer": "Estos son precios de transacción reales de los datos hipotecarios de Banorte, es decir, el precio por el que realmente se vendieron las propiedades, no el precio al que se anunciaron. Esto es mucho más confiable que los datos de listados, que tienden a estar inflados. Espere una diferencia de aproximadamente 5-15% entre los precios de lista y los precios de venta reales en la mayoría de los mercados."
+    },
+    {
+      "question": "¿Por qué no veo ciudades de playa como Cancún o Puerto Vallarta?",
+      "answer": "El mapa de precios de compra actualmente cubre las tres principales áreas metropolitanas (CDMX, Jalisco, Monterrey) porque es donde tenemos datos de transacciones confiables. Las ciudades de playa tienen dinámicas de mercado diferentes, con más transacciones en efectivo y compradores internacionales, lo que dificulta la agregación de datos exhaustivos. Estamos trabajando para ampliar la cobertura."
+    },
+    {
+      "question": "¿Qué tan precisas son las cifras de precio por m²?",
+      "answer": "Las cifras de $/m² se basan en datos de transacciones reales, lo que las hace muy precisas para los tipos de propiedades que típicamente se financian a través de hipotecas tradicionales. Sin embargo, las propiedades de lujo (a menudo transacciones en efectivo) y las propiedades muy económicas pueden no estar completamente representadas. Los promedios son confiables para más del 80% del mercado."
+    },
+    {
+      "question": "¿Puedo usar estos datos para negociar un mejor precio?",
+      "answer": "Absolutamente. Si un vendedor pide $55,000/m² en una colonia donde el promedio es de $45,000/m², tiene datos para rebatir. Imprima la gráfica de la colonia, muestre los promedios históricos y argumente a favor de una reducción de precio. Los compradores informados obtienen mejores tratos."
+    },
+    {
+      "question": "¿Cuál es la diferencia entre el mapa de compra y la página de tendencias de precios?",
+      "answer": "El mapa de precios de compra muestra los precios promedio actuales por colonia en un mapa interactivo, ideal para comparar zonas. La página de tendencias de precios (Gráficas) muestra datos históricos más profundos a lo largo de muchos años y le permite comparar varias ciudades o colonias en la misma gráfica. Use el mapa para la exploración de colonias, use las gráficas para el análisis de tendencias a largo plazo."
+    },
+    {
+      "question": "¿Por qué faltan algunas colonias en el mapa?",
+      "answer": "Una colonia solo aparece si tenemos suficientes datos de transacciones para calcular un promedio confiable. Es posible que no aparezcan colonias muy pequeñas, desarrollos completamente nuevos o áreas con pocas ventas formales. Si no ve su colonia objetivo, verifique el promedio del municipio como un proxy, o busque colonias adyacentes."
+    }
+  ]
+}

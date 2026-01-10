@@ -714,7 +714,10 @@
     "subtitle": "以数据为依据的文章，解释购房全周期涉及的税费、法规与市场动态。",
     "intro_banner": "PropTrenz 汇整面向墨西哥买房、持有与出售阶段的实务手册。这些常更新的内容引用 SAT 公文、SHF 数据与当地公证人信息，提供可执行的检查清单。",
     "filter_by_tags": "按类别筛选",
-    "clear_filters": "清除筛选"
+    "clear_filters": "清除筛选",
+    "showing_results": "显示 {{start}}-{{end}} 共 {{total}} 个指南",
+    "previous": "上一页",
+    "next": "下一页"
   },
   "guides": {
     "signup_required_title": "注册免费账户以解锁本指南",

@@ -1,0 +1,278 @@
+{
+  "slug": "how-to-use-proptrenz-purchase-price-map",
+  "locale": "en",
+  "title": "How to Use the PropTrenz Purchase Price Map to Find Property Values Across Mexico",
+  "metaTitle": "PropTrenz Purchase Price Map Guide: Real Estate Values for 500+ Mexican Neighborhoods",
+  "metaDescription": "Learn how to use PropTrenz's interactive purchase price map to compare property values per square meter across Mexico City, Guadalajara, Monterrey, and more.",
+  "excerpt": "Master PropTrenz's purchase price map to compare real estate values across 500+ neighborhoods and find undervalued properties before other buyers.",
+  "heroKicker": "Platform Guide",
+  "status": "published",
+  "accessLevel": "public",
+  "tags": ["buying", "market-intelligence", "mexico-real-estate"],
+  "updatedAt": "2026-01-10T12:00:00.000Z",
+  "mainImageUrl": "/blogs/how-to-use-proptrenz-purchase-price-map.jpeg",
+  "mainImageAlt": "PropTrenz interactive purchase price map showing property values across Mexican neighborhoods",
+  "keywords": [
+    "mexico property prices",
+    "real estate prices mexico city",
+    "house prices mexico",
+    "price per square meter mexico",
+    "cdmx property values",
+    "buy property mexico",
+    "mexico neighborhood prices",
+    "where to buy in mexico"
+  ],
+  "sections": [
+    {
+      "heading": "Why You Need to Do Deep Market Research Before Buying in Mexico",
+      "paragraphs": [
+        "Here's the problem every property buyer in Mexico faces. You find a nice apartment or house, the agent quotes a price, and you have absolutely no idea if it's fair. Is $3,500,000 MXN for an 80m² apartment in Roma Norte reasonable? Overpriced? A steal?",
+        "Without neighborhood-level price data, you're negotiating blind. Agents know this. Sellers know this. And they price accordingly.",
+        "That's exactly why I built the purchase price map. It shows real property values—price per square meter—across 500+ neighborhoods in Mexico's major cities. Before you view a single property, you know exactly what the market rate is.",
+        "{{data:city:Ciudad de México:Explore the CDMX Purchase Price Map}} to see it in action."
+      ],
+      "bullets": [
+        "See average price per m² for 500+ neighborhoods across 3 major metro areas",
+        "Color-coded dots instantly show expensive (red) vs affordable (green) areas",
+        "Click any neighborhood to view historical price trends",
+        "Filter by price to find all neighborhoods within your budget",
+        "Share specific neighborhood data with partners, lawyers, or brokers"
+      ]
+    },
+    {
+      "heading": "Cities Currently Covered by the Purchase Price Map",
+      "paragraphs": [
+        "The purchase price map covers Mexico's three largest real estate markets—where the vast majority of transactions happen.",
+        "In the dropdown at the top, you'll find: Ciudad de México (CDMX), Jalisco (Guadalajara metro), and Nuevo León (Monterrey metro).",
+        "Each city is broken down by municipality (alcaldía in CDMX) and then by individual colonia(neighborhood). Mexico City alone has over 200 neighborhoods with price data. {{data:city:Jalisco:View Guadalajara prices}} or {{data:city:Monterrey:View Monterrey prices}} to explore other metros."
+      ],
+      "dataPoints": [
+        {
+          "label": "Total neighborhoods mapped",
+          "value": "500+"
+        },
+        {
+          "label": "Data update frequency",
+          "value": "Monthly"
+        }
+      ]
+    },
+    {
+      "heading": "Reading the Map: What the Colors Mean",
+      "paragraphs": [
+        "Each dot on the map represents a neighborhood with purchase price data. The color tells you the relative price level at a glance.",
+        "Green dots are the most affordable neighborhoods—average prices under $30,000 MXN per square meter. These are typically working-class colonias or areas further from city centers.",
+        "Lime-green means $30,000–$50,000 MXN/m². Solid middle-class areas with decent infrastructure.",
+        "Yellow indicates $50,000–$70,000 MXN/m². Upper-middle territory—established neighborhoods with good amenities.",
+        "Orange means $70,000–$90,000 MXN/m². These are premium areas—think Roma, Condesa, or Valle in Monterrey.",
+        "Red dots are the most expensive—$90,000+ MXN/m². Places like Polanco, Lomas de Chapultepec, or San Pedro Garza García."
+      ],
+      "bullets": [
+        "Green: Under $30,000 MXN/m² (most affordable)",
+        "Lime-green: $30,000–$50,000 MXN/m²",
+        "Yellow: $50,000–$70,000 MXN/m² (upper-middle)",
+        "Orange: $70,000–$90,000 MXN/m² (premium)",
+        "Red: $90,000+ MXN/m² (luxury areas)"
+      ]
+    },
+    {
+      "heading": "Navigating the Municipality View",
+      "paragraphs": [
+        "When you first load the map, you'll see municipality-level dots. Each dot represents an entire municipality with its average price calculated across all neighborhoods.",
+        "Click any municipality dot to zoom in and see individual neighborhoods. In Mexico City, for example, clicking on {{data:municipality:Cuauhtémoc:Ciudad de México:Cuauhtémoc}} reveals neighborhoods like Roma Norte, Roma Sur, Condesa, Juárez, and Centro Histórico.",
+        "This two-level navigation helps you quickly identify which municipalities match your budget before drilling into specific colonias.",
+        "The panel on the right shows the municipality name, average price per m², and a ranked list of its neighborhoods from most to least expensive. This ranking helps you find the affordable pockets within otherwise pricey municipalities."
+      ]
+    },
+    {
+      "heading": "Drilling Into Neighborhood Details and Price History",
+      "paragraphs": [
+        "Click on any neighborhood dot (or click a neighborhood name in the sidebar) to see detailed pricing information.",
+        "You'll see the current average price per square meter for that colonia. But here's where it gets powerful: click the 'Chart' button to see the historical price trend.",
+        "The price chart shows how values in that neighborhood have changed over time. This is critical information. A neighborhood at $50,000/m² that's been rising 15% annually is very different from one that's been flat or declining.",
+        "For example, {{data:neighborhood:Roma Norte:Cuauhtémoc:Ciudad de México:Roma Norte price data}} shows both the current price level and how it's evolved—essential context for any purchase decision."
+      ],
+      "dataPoints": [
+        {
+          "label": "Primary metric",
+          "value": "Price per square meter (MXN/m²)"
+        },
+        {
+          "label": "Historical data depth",
+          "value": "12-24+ months of trends"
+        }
+      ]
+    },
+    {
+      "heading": "Understanding Price Per Square Meter",
+      "paragraphs": [
+        "Price per square meter is THE metric for comparing property values across Mexico. It normalizes everything.",
+        "A $5,000,000 MXN apartment sounds expensive. But if it's 150m² in a $40,000/m² neighborhood, it's actually priced below market. A $3,000,000 apartment sounds cheaper—but if it's only 40m² in the same area, you're paying $75,000/m², well above the average.",
+        "Always do this quick math: Total Price ÷ Total m² = Price per m². Then compare against the neighborhood average on the map.",
+        "In Mexico City's prime areas, expect $60,000–$120,000 MXN/m². Middle-class neighborhoods run $30,000–$60,000/m². Budget colonias might be $15,000–$30,000/m². Monterrey and Guadalajara generally run 10-30% below CDMX prices for equivalent neighborhoods."
+      ],
+      "dataPoints": [
+        {
+          "label": "CDMX budget areas",
+          "value": "$15,000–$30,000 MXN/m²"
+        },
+        {
+          "label": "CDMX mid-range areas",
+          "value": "$30,000–$60,000 MXN/m²"
+        },
+        {
+          "label": "CDMX premium areas",
+          "value": "$60,000–$120,000+ MXN/m²"
+        }
+      ]
+    },
+    {
+      "heading": "Using the Search and Filter Features",
+      "paragraphs": [
+        "The map includes search and price filter tools. Use them to narrow your focus quickly.",
+        "If you know the neighborhood name, type it in the search box. The search is fuzzy—typing 'cond' will find Condesa, 'roma' will find all Roma variants, and 'garza' will find San Pedro Garza García.",
+        "The price filter is extremely powerful. Set a maximum price per m² to see only neighborhoods below that threshold. If your budget translates to roughly $45,000/m², filter to that and instantly see which colonias qualify.",
+        "Pro tip: Set the filter to your maximum $/m², then scan for green or lime dots. Those are the best values within your price range—neighborhoods where you get more space for your money."
+      ],
+      "bullets": [
+        "Search by neighborhood name with fuzzy matching",
+        "Filter by price to show only neighborhoods below your max $/m²",
+        "Combine search and filter to find affordable spots in specific areas",
+        "Clear filters anytime to reset the view"
+      ]
+    },
+    {
+      "heading": "Case Study: Finding a $5M Property in Mexico City",
+      "paragraphs": [
+        "Let me walk through a real search scenario.",
+        "You have a budget of $5,000,000 MXN for an apartment in Mexico City. You want at least 70m² in a safe, walkable neighborhood with restaurants and services nearby.",
+        "Step 1: $5,000,000 ÷ 70m² = $71,400/m² maximum. I'll filter the map to show neighborhoods under $75,000/m² to leave room for negotiation.",
+        "Step 2: I select Ciudad de México. The map shows all CDMX municipalities with dots.",
+        "Step 3: {{data:municipality:Miguel Hidalgo:Ciudad de México:Miguel Hidalgo}} is mostly red/orange—too expensive for my budget. {{data:municipality:Benito Juárez:Ciudad de México:Benito Juárez}} has some yellow areas that might work.",
+        "Step 4: I click on {{data:municipality:Cuauhtémoc:Ciudad de México:Cuauhtémoc}}. The sidebar shows neighborhoods ranked by price. Condesa and Roma Norte are at the top—borderline. But {{data:neighborhood:San Rafael:Cuauhtémoc:Ciudad de México:San Rafael}} is well within budget.",
+        "Step 5: I click the 'Chart' button on San Rafael to see price trends. Prices have risen 9.7% in the last year—strong appreciation. This is a solid candidate.",
+        "This process takes 5 minutes. Without the map, you'd spend days touring overpriced properties before stumbling onto areas that actually fit your budget."
+      ]
+    },
+    {
+      "heading": "Spotting Undervalued Neighborhoods",
+      "paragraphs": [
+        "The purchase price map reveals pricing arbitrage opportunities that most buyers miss.",
+        "Adjacent neighborhoods often have dramatically different price levels. Roma Norte might be $85,000/m² while {{data:neighborhood:Roma Sur:Cuauhtémoc:Ciudad de México:Roma Sur}} is $65,000/m²—a 23% discount for walking 10 minutes south.",
+        "Same pattern in every city. In Guadalajara, {{data:neighborhood:Providencia:Guadalajara:Jalisco:Providencia}} is premium, but {{data:neighborhood:Americana:Guadalajara:Jalisco:Americana}} next door offers similar vibes at lower prices.",
+        "In Monterrey, everyone wants {{data:municipality:San Pedro Garza García:Monterrey:San Pedro Garza García}}. But look at the map—some neighborhoods in {{data:municipality:Monterrey:Monterrey:central Monterrey}} offer excellent value at half the price.",
+        "Use the color coding to identify these adjacency plays: expensive dot next to a cheaper one = potential opportunity."
+      ]
+    },
+    {
+      "heading": "Reading Price Trends: The Chart Feature",
+      "paragraphs": [
+        "Clicking the 'Chart' button on any neighborhood or municipality reveals historical price trends. This is essential context for any purchase.",
+        "Upward trend with consistent growth: The neighborhood is appreciating. Buying now means your property should be worth more in a few years. Good for long-term investors or primary residence buyers who want equity growth.",
+        "Flat or volatile trend: Prices aren't moving much. Fine if you're buying to live, but limited upside if you're investing for appreciation.",
+        "Downward trend: Prices are declining. Could be a buying opportunity if you believe in a turnaround, or a warning sign of fundamental issues. Investigate before committing.",
+        "The chart also shows you seasonal patterns. Real estate in Mexico often has slower periods (rainy season, holidays) when motivated sellers might accept lower offers."
+      ],
+      "bullets": [
+        "Rising trend + 10%+ annual growth = strong appreciation neighborhood",
+        "Flat trend = stable but limited upside",
+        "Declining trend = investigate causes before buying",
+        "Compare trend to city-wide average for context"
+      ]
+    },
+    {
+      "heading": "Comparing Purchase Prices to Rental Yields",
+      "paragraphs": [
+        "If you're an investor, the purchase price map becomes even more powerful when paired with rent data.",
+        "PropTrenz also offers a {{data:rent-city:Ciudad de México:rent price map}}. Cross-reference both tools to calculate rental yields and identify the best investment opportunities.",
+        "Here's the quick math: If a neighborhood has $50,000/m² purchase prices and $300/m² monthly rent, the annual gross yield is 7.2% ([300 × 12] ÷ 50,000 × 100). That's solid.",
+        "Some neighborhoods have high purchase prices but relatively low rents (low yield). Others have depressed prices but strong rental demand (high yield opportunity). The combination of both maps reveals these dynamics.",
+        "A neighborhood with rising purchase prices AND rising rents is the holy grail—appreciating asset with growing cash flow."
+      ],
+      "bullets": [
+        "Calculate gross yield: (Monthly Rent × 12 ÷ Purchase Price) × 100",
+        "Healthy rental yield in Mexico: 5-8% gross annually",
+        "Compare yield across neighborhoods to find best investment opportunities",
+        "High yield + rising prices = optimal investment profile"
+      ]
+    },
+    {
+      "heading": "Sharing Neighborhood Data with Your Team",
+      "paragraphs": [
+        "Found a promising neighborhood? Share the exact view with your team.",
+        "When you click a neighborhood and open its chart, the URL updates to include all the parameters. Copy that URL from your browser, or click the Share button to copy a shareable link.",
+        "This is invaluable when working with partners, lawyers, or brokers. Instead of describing 'that neighborhood we liked in Cuauhtémoc,' send a direct link that opens the map zoomed to that exact colonia with all its stats and price history visible.",
+        "The share links work across devices. Your partner in another country sees exactly what you saw—same neighborhood, same data, same context."
+      ]
+    },
+    {
+      "heading": "How the Purchase Price Data Is Collected",
+      "paragraphs": [
+        "The purchase price data comes from one of Mexico's largest mortgage lenders. They track actual transaction prices—what properties actually sold for, not just listing prices.",
+        "This matters enormously. Listing prices in Mexico are often aspirational. Actual transaction prices tell the real story.",
+        "The data is aggregated by neighborhood and reported as average price per square meter. We update monthly to reflect the latest market conditions.",
+        "Because this is mortgage data, it primarily reflects mid-to-high-end transactions (properties financed through traditional banks). Cash deals at the very low or very high end may not be fully represented. Still, it's the most reliable neighborhood-level price data available for Mexico."
+      ]
+    },
+    {
+      "heading": "Common Mistakes When Using the Map",
+      "paragraphs": [
+        "A few things to keep in mind to avoid misinterpreting the data.",
+        "First, averages hide variation. A neighborhood with $50,000/m² average might have older buildings at $35,000/m² and new developments at $70,000/m². Click through to the chart to see if prices are clustered or spread out.",
+        "Second, micro-locations matter. A colonia might be large. One block could be next to a park with stunning views; another could back onto a busy avenue. The map gives you neighborhood-level data—you still need to visit and evaluate specific buildings.",
+        "Third, new developments can skew averages. A luxury tower in an otherwise modest neighborhood will pull the average up. Similarly, social housing can pull averages down. Use the trend data to see if the average is stable or influenced by one-off projects.",
+        "Fourth, the data reflects closed transactions, which lag the market by 1-3 months. In a rapidly moving market, current asking prices may be higher than the data shows."
+      ],
+      "bullets": [
+        "Use the chart to understand price variation within a neighborhood",
+        "Visit properties in person to evaluate micro-location",
+        "Watch for new developments skewing neighborhood averages",
+        "Assume current prices may be 5-10% higher than last month's data in rising markets"
+      ]
+    },
+    {
+      "heading": "Your Property Search Workflow",
+      "paragraphs": [
+        "Here's the exact process I recommend for using the purchase price map effectively.",
+        "Step 1: Calculate your maximum $/m². Take your budget and divide by your minimum acceptable size. $4M budget ÷ 60m² minimum = $66,667/m² maximum.",
+        "Step 2: Set the price filter to your maximum $/m². This immediately shows you which neighborhoods are realistic.",
+        "Step 3: Select your target city. Look at the municipality dots to understand the overall price distribution.",
+        "Step 4: Click municipalities that show green/yellow (within budget). Review the neighborhood list in the sidebar, sorted by price.",
+        "Step 5: Click individual neighborhoods to see their price history charts. Prioritize those with positive trends.",
+        "Step 6: Note 3-5 target colonias. When you search on Inmuebles24, Segundamano, or with a broker, focus ONLY on these areas.",
+        "Step 7: For any property you consider, calculate its $/m² and compare to the neighborhood average. If it's significantly above average, negotiate hard or walk away.",
+        "This workflow ensures you never waste time on properties you can't afford, and you never overpay for properties you can."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "How often is the purchase price map data updated?",
+      "answer": "We update the purchase price data monthly based on the latest transaction data from Banorte. This means you're seeing prices from transactions that closed in the previous 30-60 days, giving you a near-real-time view of market conditions."
+    },
+    {
+      "question": "Are the prices actual sale prices or listing prices?",
+      "answer": "These are actual transaction prices from Banorte mortgage data—what properties actually sold for, not what they were listed at. This is far more reliable than listing data, which tends to be inflated. Expect about 5-15% difference between listing prices and actual sale prices in most markets."
+    },
+    {
+      "question": "Why don't I see beach towns like Cancún or Puerto Vallarta?",
+      "answer": "The purchase price map currently covers the three major metros (CDMX, Jalisco, Monterrey) because that's where we have reliable transaction data. Beach towns have different market dynamics with more cash transactions and international buyers, making comprehensive data harder to aggregate. We're working on expanding coverage."
+    },
+    {
+      "question": "How accurate are the price per m² figures?",
+      "answer": "The $/m² figures are based on real transaction data, making them highly accurate for the types of properties typically financed through traditional mortgages. However, luxury properties (often cash deals) and very budget properties may not be fully represented. The averages are reliable for 80%+ of the market."
+    },
+    {
+      "question": "Can I use this data to negotiate a better price?",
+      "answer": "Absolutely. If a seller is asking $55,000/m² in a neighborhood where the average is $45,000/m², you have data to push back. Print the neighborhood chart, show the historical averages, and make a case for a price reduction. Informed buyers get better deals."
+    },
+    {
+      "question": "What's the difference between the purchase map and the price trends page?",
+      "answer": "The purchase price map shows current average prices per neighborhood on an interactive map—great for comparing areas. The price trends page (Charts) shows deeper historical data over many years and lets you compare multiple cities or neighborhoods on the same graph. Use the map for neighborhood exploration, use charts for long-term trend analysis."
+    },
+    {
+      "question": "Why are some neighborhoods missing from the map?",
+      "answer": "A neighborhood only appears if we have sufficient transaction data to calculate a reliable average. Very small colonias, brand-new developments, or areas with few formal sales may not appear. If you don't see your target neighborhood, check the municipality average as a proxy, or search for adjacent neighborhoods."
+    }
+  ]
+}

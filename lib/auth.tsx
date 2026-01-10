@@ -454,11 +454,34 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
 
     try {
-      // Get the current session token
-      const { data: { session } } = await supabase.auth.getSession()
-      if (!session) {
+      console.log('[DeleteAccount] Getting session...')
+      
+      // Get the current session token with a timeout
+      const sessionPromise = supabase.auth.getSession()
+      const sessionTimeoutPromise = new Promise<never>((_, reject) => {
+        setTimeout(() => reject(new Error('Session fetch timeout')), 10000)
+      })
+      
+      let sessionResult
+      try {
+        sessionResult = await Promise.race([sessionPromise, sessionTimeoutPromise])
+      } catch (sessionError) {
+        console.error('[DeleteAccount] Session fetch failed:', sessionError)
+        // Try to use the existing session from context instead
+        if (session?.access_token) {
+          console.log('[DeleteAccount] Using existing session from context')
+          sessionResult = { data: { session } }
+        } else {
+          return { error: { message: 'Failed to get session. Please refresh the page and try again.' } }
+        }
+      }
+      
+      const currentSession = sessionResult?.data?.session
+      if (!currentSession) {
         return { error: { message: 'No active session' } }
       }
+      
+      console.log('[DeleteAccount] Session obtained')
 
       // Call the edge function which handles complete deletion:
       // 1. Deletes from user_watchlists
@@ -482,7 +505,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       const fetchPromise = fetch(edgeFunctionUrl, {
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${session.access_token}`,
+          'Authorization': `Bearer ${currentSession.access_token}`,
           'Content-Type': 'application/json',
         },
       }).catch((fetchError) => {
