@@ -6,6 +6,8 @@ import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { Loader2 } from "lucide-react";
 import { useTranslation } from "next-i18next";
+import { useSubscription } from "@/lib/subscription";
+import { LockedDataPlaceholder } from "./LockedDataPlaceholder";
 
 // Fix default icon paths for Next.js
 if (typeof window !== "undefined") {
@@ -120,6 +122,8 @@ export default function NeighborhoodRentMap({
   onNeighborhoodSelect?: (neighborhood: string, municipality: string) => void;
 }) {
   const { t } = useTranslation("common");
+  const { subscription, openUpgradeModal } = useSubscription();
+  const hasFullAccess = subscription?.tier !== 'free' && subscription?.status === 'active';
   const [coordsMap, setCoordsMap] = useState<Record<
     string,
     [number, number]
@@ -1070,12 +1074,18 @@ export default function NeighborhoodRentMap({
                     <div className="text-gray-600 font-semibold">
                       {moneyFormat(avgPrice)}/{t("rent_map.month")}
                     </div>
-                    <div className="text-gray-500 text-xs mt-1">
-                      1{t("rent_map.br")}:{" "}
-                      {moneyFormat(stats.one_bed_apt_avg_price)} | 2
-                      {t("rent_map.br")}:{" "}
-                      {moneyFormat(stats.two_bed_apt_avg_price)}
-                    </div>
+                    {hasFullAccess ? (
+                      <div className="text-gray-500 text-xs mt-1">
+                        1{t("rent_map.br")}:{" "}
+                        {moneyFormat(stats.one_bed_apt_avg_price)} | 2
+                        {t("rent_map.br")}:{" "}
+                        {moneyFormat(stats.two_bed_apt_avg_price)}
+                      </div>
+                    ) : (
+                      <div className="text-gray-400 text-xs mt-1 flex items-center gap-1">
+                        <span className="blur-[3px] select-none">1{t("rent_map.br")}: $XX,XXX | 2{t("rent_map.br")}: $XX,XXX</span>
+                      </div>
+                    )}
                   </div>
                 );
               })
@@ -1239,168 +1249,177 @@ export default function NeighborhoodRentMap({
                           borderTop: "1px solid #ddd",
                         }}
                       />
-                      <div
-                        style={{ fontSize: 13, color: "#111", marginBottom: 6 }}
-                      >
-                        {t("rent_map.averages_by_type")}
-                      </div>
-                      <div
-                        style={{
-                          display: "flex",
-                          justifyContent: "space-between",
-                          fontSize: 13,
-                        }}
-                      >
-                        <div>{t("rent_map.room")}</div>
-                        <div
-                          style={{
-                            display: "flex",
-                          }}
-                        >
-                          <div className="pr-1">
-                            {moneyFormat(n.stats.room_avg_price)}{" "}
-                            <span style={{ color: "#666" }}>
-                              ({n.stats.room_count || 0})
-                            </span>
+                      {hasFullAccess ? (
+                        <>
+                          <div
+                            style={{ fontSize: 13, color: "#111", marginBottom: 6 }}
+                          >
+                            {t("rent_map.averages_by_type")}
                           </div>
-                          {n.stats.room_avg_area && (
-                            <div style={{ color: "#666" }}>
-                              {Math.round(n.stats.room_avg_area)}m²
-                            </div>
-                          )}
-                        </div>
-                      </div>
-                      <div
-                        style={{
-                          display: "flex",
-                          justifyContent: "space-between",
-                          fontSize: 13,
-                        }}
-                      >
-                        <div>{t("rent_map.studio_apt")}</div>
-                        <div
-                          style={{
-                            display: "flex",
-                          }}
-                        >
-                          <div className="pr-1">
-                            {moneyFormat(n.stats.studio_apt_avg_price)}{" "}
-                            <span style={{ color: "#666" }}>
-                              ({n.stats.studio_apt_count || 0})
-                            </span>
-                          </div>
-                          {n.stats.studio_apt_avg_area && (
-                            <div style={{ color: "#666" }}>
-                              {Math.round(n.stats.studio_apt_avg_area)}m²
-                            </div>
-                          )}
-                        </div>
-                      </div>
-                      <div
-                        style={{
-                          display: "flex",
-                          justifyContent: "space-between",
-                          fontSize: 13,
-                        }}
-                      >
-                        <div>{t("rent_map.apt_1br")}</div>
-                        <div
-                          style={{
-                            display: "flex",
-                          }}
-                        >
-                          <div className="pr-1">
-                            {moneyFormat(n.stats.one_bed_apt_avg_price)}{" "}
-                            <span style={{ color: "#666" }}>
-                              ({n.stats.one_bed_apt_count || 0})
-                            </span>
-                          </div>
-                          {n.stats.one_bed_apt_avg_area && (
-                            <div style={{ color: "#666" }}>
-                              {Math.round(n.stats.one_bed_apt_avg_area)}m²
-                            </div>
-                          )}
-                        </div>
-                      </div>
-                      <div
-                        style={{
-                          display: "flex",
-                          justifyContent: "space-between",
-                          fontSize: 13,
-                        }}
-                      >
-                        <div>{t("rent_map.apt_2br")}</div>
-                        <div
-                          style={{
-                            display: "flex",
-                          }}
-                        >
-                          <div className="pr-1">
-                            {moneyFormat(n.stats.two_bed_apt_avg_price)}{" "}
-                            <span style={{ color: "#666" }}>
-                              ({n.stats.two_bed_apt_count || 0})
-                            </span>
-                          </div>
-                          {n.stats.two_bed_apt_avg_area && (
-                            <div style={{ color: "#666" }}>
-                              {Math.round(n.stats.two_bed_apt_avg_area)}m²
-                            </div>
-                          )}
-                        </div>
-                      </div>
-                      <div
-                        style={{
-                          display: "flex",
-                          justifyContent: "space-between",
-                          fontSize: 13,
-                        }}
-                      >
-                        <div>{t("rent_map.apt_2plus_br")}</div>
-                        <div
-                          style={{
-                            display: "flex",
-                          }}
-                        >
-                          <div className="pr-1">
-                            {moneyFormat(
-                              n.stats.more_than_two_bed_apt_avg_price
-                            )}{" "}
-                            <span style={{ color: "#666" }}>
-                              ({n.stats.more_than_two_bed_apt_count || 0})
-                            </span>
-                          </div>
-                          {n.stats.more_than_two_bed_apt_avg_area && (
-                            <div style={{ color: "#666" }}>
-                              {Math.round(
-                                n.stats.more_than_two_bed_apt_avg_area
+                          <div
+                            style={{
+                              display: "flex",
+                              justifyContent: "space-between",
+                              fontSize: 13,
+                            }}
+                          >
+                            <div>{t("rent_map.room")}</div>
+                            <div
+                              style={{
+                                display: "flex",
+                              }}
+                            >
+                              <div className="pr-1">
+                                {moneyFormat(n.stats.room_avg_price)}{" "}
+                                <span style={{ color: "#666" }}>
+                                  ({n.stats.room_count || 0})
+                                </span>
+                              </div>
+                              {n.stats.room_avg_area && (
+                                <div style={{ color: "#666" }}>
+                                  {Math.round(n.stats.room_avg_area)}m²
+                                </div>
                               )}
-                              m²
                             </div>
-                          )}
-                        </div>
-                      </div>
-                      <div
-                        style={{
-                          display: "flex",
-                          justifyContent: "space-between",
-                          fontSize: 13,
-                        }}
-                      >
-                        <div>{t("rent_map.house")}</div>
-                        <div style={{ display: "flex" }}>
-                          <div className="pr-1">
-                            {moneyFormat(n.stats.house_avg_price)}{" "}
-                            <span style={{ color: "#666" }}>
-                              ({n.stats.house_count || 0})
-                            </span>
                           </div>
-                          {n.stats.house_avg_area && (
-                            <div style={{ color: "#666" }}>
-                              {Math.round(n.stats.house_avg_area)}m²
+                          <div
+                            style={{
+                              display: "flex",
+                              justifyContent: "space-between",
+                              fontSize: 13,
+                            }}
+                          >
+                            <div>{t("rent_map.studio_apt")}</div>
+                            <div
+                              style={{
+                                display: "flex",
+                              }}
+                            >
+                              <div className="pr-1">
+                                {moneyFormat(n.stats.studio_apt_avg_price)}{" "}
+                                <span style={{ color: "#666" }}>
+                                  ({n.stats.studio_apt_count || 0})
+                                </span>
+                              </div>
+                              {n.stats.studio_apt_avg_area && (
+                                <div style={{ color: "#666" }}>
+                                  {Math.round(n.stats.studio_apt_avg_area)}m²
+                                </div>
+                              )}
                             </div>
-                          )}
-                        </div>
-                      </div>
+                          </div>
+                          <div
+                            style={{
+                              display: "flex",
+                              justifyContent: "space-between",
+                              fontSize: 13,
+                            }}
+                          >
+                            <div>{t("rent_map.apt_1br")}</div>
+                            <div
+                              style={{
+                                display: "flex",
+                              }}
+                            >
+                              <div className="pr-1">
+                                {moneyFormat(n.stats.one_bed_apt_avg_price)}{" "}
+                                <span style={{ color: "#666" }}>
+                                  ({n.stats.one_bed_apt_count || 0})
+                                </span>
+                              </div>
+                              {n.stats.one_bed_apt_avg_area && (
+                                <div style={{ color: "#666" }}>
+                                  {Math.round(n.stats.one_bed_apt_avg_area)}m²
+                                </div>
+                              )}
+                            </div>
+                          </div>
+                          <div
+                            style={{
+                              display: "flex",
+                              justifyContent: "space-between",
+                              fontSize: 13,
+                            }}
+                          >
+                            <div>{t("rent_map.apt_2br")}</div>
+                            <div
+                              style={{
+                                display: "flex",
+                              }}
+                            >
+                              <div className="pr-1">
+                                {moneyFormat(n.stats.two_bed_apt_avg_price)}{" "}
+                                <span style={{ color: "#666" }}>
+                                  ({n.stats.two_bed_apt_count || 0})
+                                </span>
+                              </div>
+                              {n.stats.two_bed_apt_avg_area && (
+                                <div style={{ color: "#666" }}>
+                                  {Math.round(n.stats.two_bed_apt_avg_area)}m²
+                                </div>
+                              )}
+                            </div>
+                          </div>
+                          <div
+                            style={{
+                              display: "flex",
+                              justifyContent: "space-between",
+                              fontSize: 13,
+                            }}
+                          >
+                            <div>{t("rent_map.apt_2plus_br")}</div>
+                            <div
+                              style={{
+                                display: "flex",
+                              }}
+                            >
+                              <div className="pr-1">
+                                {moneyFormat(
+                                  n.stats.more_than_two_bed_apt_avg_price
+                                )}{" "}
+                                <span style={{ color: "#666" }}>
+                                  ({n.stats.more_than_two_bed_apt_count || 0})
+                                </span>
+                              </div>
+                              {n.stats.more_than_two_bed_apt_avg_area && (
+                                <div style={{ color: "#666" }}>
+                                  {Math.round(
+                                    n.stats.more_than_two_bed_apt_avg_area
+                                  )}
+                                  m²
+                                </div>
+                              )}
+                            </div>
+                          </div>
+                          <div
+                            style={{
+                              display: "flex",
+                              justifyContent: "space-between",
+                              fontSize: 13,
+                            }}
+                          >
+                            <div>{t("rent_map.house")}</div>
+                            <div style={{ display: "flex" }}>
+                              <div className="pr-1">
+                                {moneyFormat(n.stats.house_avg_price)}{" "}
+                                <span style={{ color: "#666" }}>
+                                  ({n.stats.house_count || 0})
+                                </span>
+                              </div>
+                              {n.stats.house_avg_area && (
+                                <div style={{ color: "#666" }}>
+                                  {Math.round(n.stats.house_avg_area)}m²
+                                </div>
+                              )}
+                            </div>
+                          </div>
+                        </>
+                      ) : (
+                        <LockedDataPlaceholder
+                          variant="rent-breakdown"
+                          onUpgrade={openUpgradeModal}
+                        />
+                      )}
                     </div>
                   </div>
                 </Popup>

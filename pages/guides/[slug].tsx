@@ -257,12 +257,12 @@ export default function GuidePage({
       <article
         itemScope
         itemType="https://schema.org/Article"
-        className="space-y-8"
+        className="space-y-8 overflow-hidden max-w-full"
       >
         <header>
           {/* Breadcrumb Navigation */}
-          <nav aria-label="Breadcrumb" className="mb-4">
-            <ol className="flex items-center space-x-2 text-sm text-gray-500">
+          <nav aria-label="Breadcrumb" className="mb-4 overflow-hidden">
+            <ol className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-gray-500">
               <li>
                 <Link
                   href="/"

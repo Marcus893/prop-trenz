@@ -41,9 +41,10 @@ export default async function handler(
   }
 
   try {
-    const { plan, currency = "MXN" } = req.body as {
+    const { plan, currency = "MXN", returnUrl } = req.body as {
       plan: PlanType;
       currency?: Currency;
+      returnUrl?: string;
     };
 
     if (!plan || !["monthly", "yearly", "lifetime"].includes(plan)) {
@@ -99,12 +100,14 @@ export default async function handler(
       : process.env.NEXT_PUBLIC_SITE_URL || `${protocol}://${host}`;
 
     // Create checkout session
+    // Use returnUrl for cancel, fallback to transactions page
+    const cancelPath = returnUrl || '/transactions';
     const session = await createCheckoutSession({
       customerId: customer.id,
       priceId: priceConfig.priceId,
       plan,
       successUrl: `${baseUrl}/transactions?checkout=success&plan=${plan}`,
-      cancelUrl: `${baseUrl}/transactions?checkout=cancelled`,
+      cancelUrl: `${baseUrl}${cancelPath}${cancelPath.includes('?') ? '&' : '?'}checkout=cancelled`,
       userId: user.id,
       currency,
     });

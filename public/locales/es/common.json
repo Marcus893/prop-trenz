@@ -1029,6 +1029,9 @@
     "processing": "Procesando...",
     "loading": "Cargando...",
     "refresh": "Actualizar",
+    "feature_neighborhood_data": "Datos completos a nivel colonia",
+    "feature_price_trends": "Tendencias históricas de precios y gráficos",
+    "feature_rent_breakdown": "Desglose detallado de rentas por tipo",
     "feature_unlimited": "Transacciones ilimitadas",
     "feature_checklists": "Listas de verificación y seguimiento por etapa",
     "feature_costs": "Seguimiento y estimación de costos",
@@ -1038,7 +1041,7 @@
     "feature_lifetime_updates": "Actualizaciones de por vida",
     "feature_early_access": "Acceso anticipado a nuevas funciones",
     "upgrade_title": "Mejora Tu Plan",
-    "limit_reached_message": "Has alcanzado el límite del plan gratuito de 1 transacción. Mejora para dar seguimiento a transacciones ilimitadas.",
+    "limit_reached_message": "Mejora para dar seguimiento a transacciones ilimitadas. Desbloquea datos premium y aprovecha al máximo nuestra plataforma.",
     "feature_locked_message": "Esta función requiere una suscripción de pago. Mejora para desbloquear todas las funciones.",
     "upgrade_message": "Mejora tu plan para desbloquear transacciones ilimitadas y funciones premium.",
     "secure_payment": "Pago seguro con Stripe. Cancela cuando quieras.",
@@ -1093,5 +1096,12 @@
     "faq_free_a": "El plan gratuito te permite dar seguimiento a 1 transacción con acceso completo a todas las funciones. Perfecto para compradores primerizos.",
     "faq_switch_q": "¿Puedo cambiar de plan?",
     "faq_switch_a": "Sí, puedes mejorar o reducir tu plan en cualquier momento a través del portal de facturación."
+  },
+  "paywall": {
+    "locked_title": "Función Premium",
+    "price_chart_description": "Desbloquea las tendencias históricas de precios y análisis detallados para esta colonia con una suscripción premium.",
+    "rent_breakdown_description": "Obtén desgloses detallados de renta por tipo de propiedad (Cuarto, Estudio, 1 Rec, 2 Rec, 2+ Rec, Casa) con una suscripción premium.",
+    "unlock_chart": "Desbloquear Tendencias de Precios",
+    "unlock_details": "Desbloquear Detalles Completos"
   }
 }

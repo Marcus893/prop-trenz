@@ -277,15 +277,19 @@ export function BillingSettings() {
           <ul className="space-y-2 text-sm text-gray-600 mb-4">
             <li className="flex items-center gap-2">
               <CheckCircle2 className="h-4 w-4 text-green-500" />
+              {t('subscription.feature_neighborhood_data', 'Full neighborhood-level data')}
+            </li>
+            <li className="flex items-center gap-2">
+              <CheckCircle2 className="h-4 w-4 text-green-500" />
+              {t('subscription.feature_price_trends', 'Historical price trends & charts')}
+            </li>
+            <li className="flex items-center gap-2">
+              <CheckCircle2 className="h-4 w-4 text-green-500" />
+              {t('subscription.feature_rent_breakdown', 'Detailed rent breakdowns by type')}
+            </li>
+            <li className="flex items-center gap-2">
+              <CheckCircle2 className="h-4 w-4 text-green-500" />
               {t('subscription.feature_unlimited', 'Unlimited transactions')}
-            </li>
-            <li className="flex items-center gap-2">
-              <CheckCircle2 className="h-4 w-4 text-green-500" />
-              {t('subscription.feature_checklists', 'Stage checklists & tracking')}
-            </li>
-            <li className="flex items-center gap-2">
-              <CheckCircle2 className="h-4 w-4 text-green-500" />
-              {t('subscription.feature_priority', 'Priority email support')}
             </li>
           </ul>
           <Button

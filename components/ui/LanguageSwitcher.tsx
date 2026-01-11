@@ -46,9 +46,26 @@ export function LanguageSwitcher({ className }: LanguageSwitcherProps) {
       requestAnimationFrame(() => {
         if (buttonRef.current) {
           const rect = buttonRef.current.getBoundingClientRect()
+          const dropdownWidth = 192 // w-48 = 12rem = 192px
+          const viewportWidth = window.innerWidth
+          
+          // Calculate right position, but ensure dropdown stays within viewport
+          let rightPos = viewportWidth - rect.right
+          
+          // If dropdown would overflow left edge, adjust to stay in viewport
+          if (rect.right - dropdownWidth < 8) {
+            // Align to left edge with small margin
+            rightPos = viewportWidth - dropdownWidth - 8
+          }
+          
+          // If dropdown would overflow right edge, adjust
+          if (rightPos < 8) {
+            rightPos = 8
+          }
+          
           setDropdownPosition({
             top: rect.bottom + 8, // Always open downward, 8px below button
-            right: window.innerWidth - rect.right
+            right: rightPos
           })
         }
       })

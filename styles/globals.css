@@ -12,6 +12,12 @@
     overflow-x: hidden;
     max-width: 100vw;
   }
+  
+  /* Ensure text wraps properly on mobile */
+  * {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
 }
 
 @layer components {

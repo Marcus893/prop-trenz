@@ -1021,6 +1021,9 @@
     "processing": "Processing...",
     "loading": "Loading...",
     "refresh": "Refresh",
+    "feature_neighborhood_data": "Full neighborhood-level data",
+    "feature_price_trends": "Historical price trends & charts",
+    "feature_rent_breakdown": "Detailed rent breakdowns by type",
     "feature_unlimited": "Unlimited transactions",
     "feature_checklists": "Stage checklists & tracking",
     "feature_costs": "Cost tracking & estimates",
@@ -1030,7 +1033,7 @@
     "feature_lifetime_updates": "Lifetime updates",
     "feature_early_access": "Early access to new features",
     "upgrade_title": "Upgrade Your Plan",
-    "limit_reached_message": "You've reached the free tier limit of 1 transaction. Upgrade to track unlimited transactions.",
+    "limit_reached_message": "Upgrade to track unlimited transactions. Unlock premium data and get the most out of our platform.",
     "feature_locked_message": "This feature requires a paid subscription. Upgrade to unlock all features.",
     "upgrade_message": "Upgrade your plan to unlock unlimited transactions and premium features.",
     "secure_payment": "Secure payment powered by Stripe. Cancel anytime.",
@@ -1085,5 +1088,12 @@
     "faq_free_a": "The free tier allows you to track 1 transaction with full access to all features. Perfect for first-time buyers.",
     "faq_switch_q": "Can I switch plans?",
     "faq_switch_a": "Yes, you can upgrade or downgrade your plan at any time through the billing portal."
+  },
+  "paywall": {
+    "locked_title": "Premium Feature",
+    "price_chart_description": "Unlock historical price trends and detailed analytics for this neighborhood with a premium subscription.",
+    "rent_breakdown_description": "Get detailed rent breakdowns by property type (Room, Studio, 1BR, 2BR, 2BR+, House) with a premium subscription.",
+    "unlock_chart": "Unlock Price Trends",
+    "unlock_details": "Unlock Full Details"
   }
 }

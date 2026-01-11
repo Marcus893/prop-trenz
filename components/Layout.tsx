@@ -163,7 +163,7 @@ export function Layout({
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex">
+    <div className="min-h-screen bg-gray-50 flex overflow-x-hidden w-full max-w-full">
       {/* Mobile sidebar */}
       {sidebarOpen && (
         <div className="fixed inset-0 z-50 lg:hidden">
@@ -316,7 +316,7 @@ export function Layout({
       </div>
 
       {/* Main content */}
-      <div className="flex-1 flex flex-col">
+      <div className="flex-1 flex flex-col min-w-0 w-full">
         <div className="sticky top-0 z-10 lg:hidden pl-1 pt-1 sm:pl-3 sm:pt-3 bg-gray-50">
           <button
             type="button"
@@ -328,23 +328,25 @@ export function Layout({
           </button>
         </div>
 
-        <main className="flex-1">
+        <main className="flex-1 overflow-x-hidden max-w-full">
           <div className={hideHeader ? "" : "py-6"}>
             <div
               className={
-                hideHeader ? "" : "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+                hideHeader ? "" : "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden"
               }
             >
               {/* Header */}
               {!hideHeader && (
-                <div className="flex items-center justify-between mb-6">
-                  <div>
-                    <h1 className="text-2xl font-bold text-gray-900">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
+                  <div className="min-w-0 flex-1">
+                    <h1 className="text-2xl font-bold text-gray-900 break-words">
                       {title || " "}
                     </h1>
-                    <p className="text-gray-600">{subtitle || " "}</p>
+                    <p className="text-gray-600 break-words">{subtitle || " "}</p>
                   </div>
-                  <LanguageSwitcher />
+                  <div className="flex-shrink-0 self-end sm:self-auto">
+                    <LanguageSwitcher />
+                  </div>
                 </div>
               )}
 

@@ -8,6 +8,8 @@ import { Loader2 } from "lucide-react";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
 import { NeighborhoodPriceChart } from "./NeighborhoodPriceChart";
+import { useSubscription } from "@/lib/subscription";
+import { LockedDataPlaceholder } from "./LockedDataPlaceholder";
 
 // Fix for Leaflet default marker icons in Next.js
 if (typeof window !== "undefined") {
@@ -610,6 +612,8 @@ export function NeighborhoodMap({
 }: NeighborhoodMapProps) {
   const { t } = useTranslation("common");
   const router = useRouter();
+  const { subscription, openUpgradeModal } = useSubscription();
+  const hasFullAccess = subscription?.tier !== 'free' && subscription?.status === 'active';
   const [selectedMunicipality, setSelectedMunicipality] = useState<
     string | null
   >(null);
@@ -2399,13 +2403,31 @@ export function NeighborhoodMap({
               className="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
-              <NeighborhoodPriceChart
-                neighborhoodName={selectedNeighborhoodForChart.name}
-                municipality={selectedNeighborhoodForChart.municipality}
-                data={selectedNeighborhoodForChart.data}
-                onClose={() => setSelectedNeighborhoodForChart(null)}
-                translateDate={translateDateFn}
-              />
+              {hasFullAccess ? (
+                <NeighborhoodPriceChart
+                  neighborhoodName={selectedNeighborhoodForChart.name}
+                  municipality={selectedNeighborhoodForChart.municipality}
+                  data={selectedNeighborhoodForChart.data}
+                  onClose={() => setSelectedNeighborhoodForChart(null)}
+                  translateDate={translateDateFn}
+                />
+              ) : (
+                <div className="relative">
+                  <div className="flex justify-between items-center p-4 border-b">
+                    <h3 className="text-lg font-semibold">{selectedNeighborhoodForChart.name}</h3>
+                    <button
+                      onClick={() => setSelectedNeighborhoodForChart(null)}
+                      className="text-gray-500 hover:text-gray-700"
+                    >
+                      ✕
+                    </button>
+                  </div>
+                  <LockedDataPlaceholder
+                    variant="price-chart"
+                    onUpgrade={openUpgradeModal}
+                  />
+                </div>
+              )}
             </div>
           </div>
         )}
@@ -2420,13 +2442,31 @@ export function NeighborhoodMap({
               className="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
-              <NeighborhoodPriceChart
-                neighborhoodName={selectedMunicipalityForChart.name}
-                municipality=""
-                data={selectedMunicipalityForChart.data}
-                onClose={() => setSelectedMunicipalityForChart(null)}
-                translateDate={translateDateFn}
-              />
+              {hasFullAccess ? (
+                <NeighborhoodPriceChart
+                  neighborhoodName={selectedMunicipalityForChart.name}
+                  municipality=""
+                  data={selectedMunicipalityForChart.data}
+                  onClose={() => setSelectedMunicipalityForChart(null)}
+                  translateDate={translateDateFn}
+                />
+              ) : (
+                <div className="relative">
+                  <div className="flex justify-between items-center p-4 border-b">
+                    <h3 className="text-lg font-semibold">{selectedMunicipalityForChart.name}</h3>
+                    <button
+                      onClick={() => setSelectedMunicipalityForChart(null)}
+                      className="text-gray-500 hover:text-gray-700"
+                    >
+                      ✕
+                    </button>
+                  </div>
+                  <LockedDataPlaceholder
+                    variant="price-chart"
+                    onUpgrade={openUpgradeModal}
+                  />
+                </div>
+              )}
             </div>
           </div>
         )}

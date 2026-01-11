@@ -149,7 +149,7 @@ export default function LandingPage() {
         <link rel="alternate" hrefLang="x-default" href={hreflangUrls.en} />
       </Head>
 
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-white overflow-x-hidden">
         {/* Sticky Navigation Header */}
         <header
           className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -1010,8 +1010,8 @@ export default function LandingPage() {
                     </div>
 
                     {/* Map Controls Bar */}
-                    <div className="bg-gray-50 border-t border-gray-100 px-4 py-3 flex items-center justify-between">
-                      <div className="flex items-center gap-2">
+                    <div className="bg-gray-50 border-t border-gray-100 px-3 md:px-4 py-2 md:py-3 flex flex-wrap items-center justify-between gap-2">
+                      <div className="flex items-center gap-1 md:gap-2">
                         <span className="text-xs text-gray-500">
                           {t("home.mockup_filter", "Filter:")}{" "}
                         </span>
@@ -1022,26 +1022,26 @@ export default function LandingPage() {
                           {t("home.mockup_all_prices", "All prices")}
                         </span>
                       </div>
-                      <div className="flex items-center gap-3">
+                      <div className="flex items-center gap-2 md:gap-3">
                         <div className="flex items-center gap-1">
-                          <div className="w-3 h-3 rounded bg-green-400"></div>
+                          <div className="w-2 h-2 md:w-3 md:h-3 rounded bg-green-400"></div>
                           <span className="text-xs text-gray-500">$8-15k</span>
                         </div>
                         <div className="flex items-center gap-1">
-                          <div className="w-3 h-3 rounded bg-orange-400"></div>
+                          <div className="w-2 h-2 md:w-3 md:h-3 rounded bg-orange-400"></div>
                           <span className="text-xs text-gray-500">$15-25k</span>
                         </div>
                         <div className="flex items-center gap-1">
-                          <div className="w-3 h-3 rounded bg-red-400"></div>
+                          <div className="w-2 h-2 md:w-3 md:h-3 rounded bg-red-400"></div>
                           <span className="text-xs text-gray-500">$25k+</span>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                {/* Floating Badge */}
-                <div className="absolute -bottom-4 -right-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-5 py-3 rounded-xl shadow-lg">
-                  <p className="font-bold text-lg">500+</p>
+                {/* Floating Badge - responsive positioning */}
+                <div className="absolute -bottom-3 right-2 md:-bottom-4 md:-right-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-4 py-2 md:px-5 md:py-3 rounded-xl shadow-lg z-10">
+                  <p className="font-bold text-base md:text-lg">500+</p>
                   <p className="text-xs opacity-90">
                     {t("home.neighborhoods", "Neighborhoods")}
                   </p>

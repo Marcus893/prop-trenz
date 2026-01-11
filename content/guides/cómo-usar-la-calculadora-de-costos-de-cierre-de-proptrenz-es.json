@@ -1,0 +1,323 @@
+{
+  "slug": "cómo-usar-la-calculadora-de-costos-de-cierre-de-proptrenz",
+  "locale": "es",
+  "status": "published",
+  "accessLevel": "public",
+  "tags": ["compra", "impuestos", "inmuebles-mexico", "finanzas-personales"],
+  "keywords": [
+    "calculadora gastos de cierre méxico",
+    "impuesto isai méxico",
+    "costos de notaría compraventa",
+    "gastos de escrituración",
+    "fideicomiso para extranjeros",
+    "precio real propiedad méxico",
+    "cuánto cuesta escriturar una casa"
+  ],
+  "updatedAt": "2026-01-11T01:39:16.963Z",
+  "title": "Cómo usar la Calculadora de Gastos de Cierre de PropTrenz para estimar el precio real de compra en México",
+  "metaTitle": "Calculadora de Gastos de Cierre en México: Estime honorarios notariales, impuesto ISAI y costos ocultos del comprador",
+  "metaDescription": "Calcule el costo real de comprar una propiedad en México. Estime el impuesto ISAI, los honorarios notariales, los costos del fideicomiso y todos los gastos de cierre antes de firmar.",
+  "excerpt": "Sepa exactamente lo que pagará más allá del precio de compra. Estime los honorarios notariales, los impuestos de adquisición, los costos del fideicomiso y más antes de comprometerse con una propiedad.",
+  "heroKicker": "Guía de la Plataforma",
+  "mainImageUrl": "/blogs/how-to-use-proptrenz-closing-cost-calculator.jpeg",
+  "mainImageAlt": "Cómo usar la Calculadora de Gastos de Cierre de PropTrenz para estimar el precio real de compra en México",
+  "sections": [
+    {
+      "heading": "El impacto del precio que nadie le advierte",
+      "paragraphs": [
+        "Este es el escenario que veo constantemente. Alguien se enamora de un departamento de $3,000,000 MXN en la Ciudad de México. Ha ahorrado exactamente esa cantidad. Hace una oferta, el vendedor la acepta y todos celebran.",
+        "Luego, el notario envía el estado de cuenta del cierre. Total a pagar: $3,250,000 MXN. ¿De dónde salieron los $250,000 adicionales? Impuesto de adquisición, honorarios notariales, costos de registro, servicios legales. El comprador se apresura a conseguir el dinero, el cierre se retrasa y lo que debería ser emocionante se vuelve estresante.",
+        "El precio de lista nunca es el precio final en México. Los gastos de cierre suelen añadir entre un 5% y un 10% adicional, a veces más para compradores extranjeros que necesitan un fideicomiso.",
+        "Es exactamente por eso que creé la calculadora de gastos de cierre. Ingrese el precio de compra, responda algunas preguntas y obtenga una estimación detallada de cada cargo que enfrentará. Sin sorpresas en la notaría."
+      ],
+      "bullets": [
+        "Los gastos de cierre en México suelen oscilar entre el 5% y el 10% del precio de compra",
+        "Los compradores extranjeros en zonas restringidas enfrentan costos adicionales por el fideicomiso",
+        "La calculadora desglosa cada partida de costo con rangos típicos",
+        "Obtenga estimaciones tanto en MXN como en USD con tipos de cambio en tiempo real",
+        "Descargue un informe en PDF para compartirlo con su abogado o banco"
+      ],
+      "dataPoints": null,
+      "imageAlt": "El impacto del precio que nadie le advierte"
+    },
+    {
+      "heading": "Los principales gastos de cierre que todo comprador enfrenta",
+      "paragraphs": [
+        "Antes de adentrarnos en la calculadora, entendamos por qué está pagando realmente. Hay tres categorías: impuestos gubernamentales obligatorios, honorarios profesionales obligatorios y protecciones opcionales.",
+        "El costo más grande suele ser el ISAI (Impuesto Sobre Adquisición de Inmuebles). Este es un impuesto a nivel estatal que varía del 2% al 4.5% dependiendo de dónde compre. La Ciudad de México cobra alrededor del 5.25%, mientras que Jalisco cobra alrededor del 3%. Solo esto puede representar más de $100,000 MXN en una propiedad modesta.",
+        "Luego viene el notario. En México, todas las transacciones inmobiliarias deben ser certificadas por un notario público designado por el gobierno. Sus honorarios suelen oscilar entre el 0.5% y el 2% del valor de la propiedad, además de que recaudan y pagan los impuestos en nombre del gobierno.",
+        "Después están los derechos de registro para inscribir la escritura en el Registro Público (del 0.5% al 1%), los honorarios legales si contrata a un abogado para la debida diligencia y, potencialmente, los costos del fideicomiso si es un extranjero que compra en zonas restringidas."
+      ],
+      "dataPoints": [
+        {
+          "label": "ISAI (Impuesto sobre Adquisición de Inmuebles):",
+          "value": "2%–5.25% del valor de la propiedad"
+        },
+        {
+          "label": "Honorarios Notariales:",
+          "value": "0.5%–2% del valor de la propiedad"
+        },
+        {
+          "label": "Derechos de Registro:",
+          "value": "0.5%–1% del valor de la propiedad"
+        }
+      ],
+      "imageAlt": "Los principales gastos de cierre que todo comprador enfrenta"
+    },
+    {
+      "heading": "Paso 1: Ingrese el precio de la transacción",
+      "paragraphs": [
+        "Abra la [Calculadora de Gastos de Cierre](https://proptrenz.com/calculators/closing-cost) y comience con el precio de compra acordado.",
+        "Ingrese el monto en pesos mexicanos (MXN). Este es el precio que ha negociado con el vendedor, el que aparecerá en la escritura.",
+        "La calculadora utiliza este monto como base para todos los honorarios basados en porcentajes. Una propiedad de $5,000,000 MXN tendrá costos absolutos diferentes a los de una propiedad de $2,000,000 MXN, aunque los porcentajes sean los mismos.",
+        "Consejo profesional: Si todavía está negociando, ejecute la calculadora con varios precios. Conocer el costo total a $4,800,000 frente a $5,000,000 podría influir en su estrategia de negociación. Esos $200,000 adicionales en el precio de compra suman aproximadamente entre $10,000 y $20,000 en gastos de cierre."
+      ],
+      "dataPoints": null,
+      "imageAlt": "Paso 1: Ingrese el precio de la transacción"
+    },
+    {
+      "heading": "Paso 2: Establezca el tipo de cambio para referencia en USD",
+      "paragraphs": [
+        "La calculadora obtiene automáticamente el tipo de cambio actual de USD a MXN. Esto le permite ver todos los costos en ambas monedas, lo cual es útil si piensa en dólares.",
+        "Puede ajustar el tipo de cambio manualmente si lo prefiere. Algunos compradores usan un tipo de cambio ligeramente peor para fines de planificación (creando un colchón), mientras que otros tienen un tipo de cambio fijo de su servicio de transferencias internacionales.",
+        "El tipo de cambio no afecta los montos reales en pesos: los gastos de cierre en México siempre se calculan y se pagan en MXN. Las cifras en USD son puramente para su referencia.",
+        "Haga clic en 'Actualizar tipo de cambio' en cualquier momento para obtener la última tasa del mercado desde nuestra API de tipos de cambio."
+      ],
+      "dataPoints": null,
+      "imageAlt": "Paso 2: Establezca el tipo de cambio para referencia en USD"
+    },
+    {
+      "heading": "Paso 3: Indique si necesita un fideicomiso",
+      "paragraphs": [
+        "Esta es la pregunta crítica para los compradores extranjeros: ¿Es usted un ciudadano no mexicano que compra en una zona restringida?",
+        "Las zonas restringidas se definen como aquellas ubicadas a menos de 100 kilómetros de las fronteras internacionales o a 50 kilómetros de las costas. Esto incluye prácticamente todos los destinos de playa (Cancún, Playa del Carmen, Puerto Vallarta, Los Cabos, etc.) y ciudades fronterizas (Tijuana, Ciudad Juárez, etc.).",
+        "Si compra en una zona restringida como extranjero, la ley mexicana exige un fideicomiso, un contrato en el que un banco mexicano mantiene el título de propiedad en su nombre. Usted tiene plenos derechos de beneficiario sobre la propiedad, pero la estructura legal agrega costos.",
+        "Marque la casilla si esto aplica en su caso. La calculadora agregará automáticamente los costos de constitución del fideicomiso (~$35,000 MXN / $1,500-2,000 USD por única vez) y el permiso de la Secretaría de Relaciones Exteriores (~$7,500 MXN).",
+        "Nota: Si compra en una zona no restringida (como Ciudad de México, Guadalajara, San Miguel de Allende), los extranjeros pueden tener el título de propiedad directamente y omitir el fideicomiso."
+      ],
+      "bullets": [
+        "Zonas restringidas: A 50 km de las costas o 100 km de las fronteras",
+        "Todos los principales destinos de playa requieren fideicomiso para extranjeros",
+        "Constitución de fideicomiso: ~$35,000 MXN ($1,500-2,000 USD) pago único",
+        "Permiso de Relaciones Exteriores: ~$7,500 MXN",
+        "Mantenimiento anual del fideicomiso: ~$500-800 USD/año (no incluido en los gastos de cierre)"
+      ],
+      "dataPoints": null,
+      "imageAlt": "Paso 3: Indique si necesita un fideicomiso"
+    },
+    {
+      "heading": "Entendiendo cada partida de costo",
+      "paragraphs": [
+        "La calculadora muestra cada partida de costo con tres datos clave: qué es, el rango típico y por qué lo paga.",
+        "Para los costos basados en porcentajes (ISAI, honorarios notariales, registro, seguro de título), puede ajustar el porcentaje si conoce la tasa específica de su estado. Los valores predeterminados son estimaciones razonables de rango medio, pero las tasas varían según la ubicación.",
+        "Para los costos de monto fijo (constitución de fideicomiso, honorarios legales, avalúo, depósito en garantía o escrow), puede ingresar la cotización específica que haya recibido. Si aún no ha obtenido cotizaciones, los valores predeterminados reflejan las tarifas típicas del mercado.",
+        "Cada elemento tiene un ícono de información (i). Haga clic en él para leer una explicación detallada de lo que cubre el cargo, a quién se le paga y cuándo se paga."
+      ],
+      "dataPoints": null,
+      "imageAlt": "Entendiendo cada partida de costo"
+    },
+    {
+      "heading": "ISAI: El Impuesto sobre Adquisición de Inmuebles",
+      "paragraphs": [
+        "El ISAI (Impuesto Sobre Adquisición de Inmuebles) es el mayor costo de cierre individual para la mayoría de los compradores. Es un impuesto de traslado de dominio que se paga al gobierno estatal cuando una propiedad cambia de manos.",
+        "Las tasas varían drásticamente según el estado. La Ciudad de México cobra alrededor del 5.25%. Jalisco (Guadalajara) está alrededor del 3%. Quintana Roo (Cancún, Playa del Carmen) está alrededor del 3%. Baja California Sur (Los Cabos) está alrededor del 2%.",
+        "La calculadora utiliza por defecto un 3%, que es una estimación media razonable. Pero DEBE verificar la tasa específica de su estado; este único número puede cambiar sus costos en decenas de miles de pesos.",
+        "Algunos estados ofrecen tasas reducidas para compradores primerizos o para propiedades por debajo de ciertos umbrales de valor. Pregúntele a su notario si se aplica alguna exención a su situación."
+      ],
+      "dataPoints": [
+        {
+          "label": "Ciudad de México (CDMX):",
+          "value": "~5.25%"
+        },
+        {
+          "label": "Jalisco (Guadalajara):",
+          "value": "~3%"
+        },
+        {
+          "label": "Quintana Roo (Cancún):",
+          "value": "~3%"
+        },
+        {
+          "label": "Nuevo León (Monterrey):",
+          "value": "~3%"
+        }
+      ],
+      "imageAlt": "ISAI: El Impuesto sobre Adquisición de Inmuebles"
+    },
+    {
+      "heading": "Honorarios notariales: Más que solo una firma",
+      "paragraphs": [
+        "En México, el notario no es solo alguien que sella documentos. El notario público es un profesional del derecho designado por el gobierno que certifica que la transacción es lícita, que el título de propiedad está en regla y que se pagan todos los impuestos.",
+        "Los honorarios notariales suelen oscilar entre el 0.5% y el 2% del valor de la propiedad. El porcentaje a menudo disminuye para propiedades de mayor valor (una propiedad de $10M no paga 10 veces lo que paga una propiedad de $1M).",
+        "El notario también recauda el ISAI y los derechos de registro en su nombre y los remite al gobierno. Así que cuando le paga al notario en el cierre, está pagando sus honorarios MÁS los impuestos del gobierno.",
+        "La calculadora mantiene estos conceptos separados para que pueda ver exactamente cuánto va al notario frente a lo que va al gobierno."
+      ],
+      "dataPoints": null,
+      "imageAlt": "Honorarios notariales: Más que solo una firma"
+    },
+    {
+      "heading": "Costos opcionales: ¿Qué vale la pena incluir?",
+      "paragraphs": [
+        "Varias partidas de costo están marcadas como 'Opcional' en la calculadora. Estos son costos reales en los que muchos compradores incurren, pero no son legalmente obligatorios.",
+        "Servicios legales/de abogado (~$30,000 MXN): Altamente recomendados, especialmente para compradores primerizos en México. Un buen abogado inmobiliario realizará búsquedas de títulos, revisará contratos, detectará señales de alerta y lo guiará a través del proceso. Muchos expatriados consideran esto esencial, no opcional.",
+        "Seguro de título (~0.75% del valor de la propiedad): Protege contra futuras reclamaciones sobre la propiedad. Común en las transacciones de EE. UU., menos común en México, pero está disponible y es cada vez más popular entre los compradores extranjeros que desean seguridad adicional.",
+        "Honorarios de avalúo (~$7,000 MXN): Una evaluación independiente del valor de la propiedad. Obligatorio si va a obtener una hipoteca, opcional para compradores de contado pero útil para la negociación.",
+        "Cargos de depósito en garantía (escrow) (~$10,000 MXN): Un tercero neutral retiene los fondos durante la transacción. Es común en ventas que involucran a extranjeros o cuando el comprador y el vendedor no confían plenamente el uno en el otro.",
+        "Active o desactive cada elemento según su situación. La calculadora actualiza los totales en tiempo real."
+      ],
+      "bullets": [
+        "Honorarios legales: Altamente recomendados para compradores primerizos (~$30,000 MXN)",
+        "Seguro de título: Seguridad adicional contra disputas de título (~0.75%)",
+        "Avalúo: Requerido para hipotecas, opcional para pago de contado (~$7,000 MXN)",
+        "Depósito en garantía (escrow): Recomendado cuando las partes no se conocen (~$10,000 MXN)"
+      ],
+      "dataPoints": null,
+      "imageAlt": "Costos opcionales: ¿Qué vale la pena incluir?"
+    },
+    {
+      "heading": "El IVA sobre los servicios profesionales",
+      "paragraphs": [
+        "Un costo oculto que sorprende a la gente: el IVA (Impuesto al Valor Agregado de México) se aplica a los servicios profesionales. Eso incluye los honorarios notariales y los honorarios legales.",
+        "La tasa de IVA es del 16%, y se calcula sobre los honorarios de los servicios, no sobre el valor de la propiedad.",
+        "La calculadora aplica automáticamente el IVA a los honorarios notariales y legales y lo muestra como una partida separada. Esto es importante porque si un notario le cotiza '1%', en realidad pagará el 1% más el 16% de ese 1% en IVA (efectivamente un 1.16% del valor de la propiedad).",
+        "Este es uno de los costos 'ocultos' que sorprende a los compradores que presupuestan basándose en porcentajes cotizados sin tener en cuenta el impuesto."
+      ],
+      "dataPoints": null,
+      "imageAlt": "El IVA sobre los servicios profesionales"
+    },
+    {
+      "heading": "Lectura del resumen",
+      "paragraphs": [
+        "Una vez que haya ingresado toda su información, la sección de Resumen le muestra todo lo que necesita saber.",
+        "Costos obligatorios: Los costos que no puede evitar: ISAI, notario, registro y costos de fideicomiso si corresponde. Este es su piso.",
+        "Costos opcionales: Legales, seguro de título, avalúo, depósito en garantía; costos que ha decidido incluir. Puede reducir este total desactivando elementos.",
+        "Costos totales de cierre: La suma de los costos obligatorios y opcionales. Esto es lo que pagará más allá del precio de compra.",
+        "Porcentaje del precio de compra: Muestra los gastos de cierre como un porcentaje. Si es superior al 8-10%, verifique dos veces sus entradas; podría estar en un estado con un ISAI inusualmente alto o haber incluido todos los elementos opcionales.",
+        "El resumen también muestra los equivalentes en USD utilizando el tipo de cambio que especificó."
+      ],
+      "dataPoints": [
+        {
+          "label": "Total típico (compradores mexicanos):",
+          "value": "5%–7% del precio de compra"
+        },
+        {
+          "label": "Total típico (compradores extranjeros, zona restringida):",
+          "value": "7%–10% del precio de compra"
+        }
+      ],
+      "imageAlt": "Lectura del resumen"
+    },
+    {
+      "heading": "Descargando su informe en PDF",
+      "paragraphs": [
+        "Una vez que haya finalizado su estimación, haga clic en 'Obtener informe en PDF' para descargar un resumen profesional.",
+        "El PDF incluye todas sus entradas, cada partida de costo con su monto calculado y el resumen total. Está formateado para compartirlo fácilmente.",
+        "Casos de uso: Compártalo con su abogado para verificar que las estimaciones sean realistas. Envíelo a su banco para mostrar los fondos totales necesarios. Envíelo por correo electrónico a su socio o coinversor para su revisión. Adjúntelo a su carpeta de transacciones como referencia en el cierre.",
+        "El informe tiene fecha y hora e incluye el tipo de cambio utilizado, por lo que tiene un registro de las suposiciones en el momento de la planificación."
+      ],
+      "dataPoints": null,
+      "imageAlt": "Descargando su informe en PDF"
+    },
+    {
+      "heading": "Caso de estudio: Departamento de $5,000,000 MXN en la Ciudad de México",
+      "paragraphs": [
+        "Permítame mostrarle un ejemplo real. Usted es un ciudadano mexicano que compra un departamento de $5,000,000 MXN en la Colonia Roma, Ciudad de México. No se necesita fideicomiso.",
+        "El ISAI en la CDMX es de aproximadamente 5.25%, por lo tanto: $262,500 MXN. Honorarios notariales al 1%: $50,000 MXN. Registro al 0.75%: $37,500 MXN. IVA sobre los honorarios notariales (16% de $50,000): $8,000 MXN.",
+        "Total obligatorio: ~$358,000 MXN. Eso es aproximadamente el 7.2% del precio de compra.",
+        "Agregue los honorarios legales ($30,000) y el avalúo ($7,000) para la debida diligencia: $37,000 más. Gran total: ~$395,000 MXN.",
+        "Su costo real para adquirir esta propiedad: $5,395,000 MXN. Si solo presupuestó $5,000,000, le faltan casi $400,000. La calculadora evita esta sorpresa."
+      ],
+      "dataPoints": null,
+      "imageAlt": "Caso de estudio: Departamento de $5,000,000 MXN en la Ciudad de México"
+    },
+    {
+      "heading": "Caso de estudio: Condominio de $4,000,000 MXN en Playa del Carmen (Comprador extranjero)",
+      "paragraphs": [
+        "Ahora veamos un escenario de comprador extranjero. Usted es estadounidense y compra un condominio de $4,000,000 MXN en Playa del Carmen. Esto es la costa de Quintana Roo, una zona restringida, por lo que se requiere un fideicomiso.",
+        "El ISAI en Quintana Roo es de aproximadamente 3%: $120,000 MXN. Notario al 1%: $40,000 MXN. Registro al 0.75%: $30,000 MXN. IVA sobre los honorarios notariales: $6,400 MXN. Constitución del fideicomiso: $35,000 MXN. Permiso de Relaciones Exteriores: $7,500 MXN.",
+        "Total obligatorio: ~$238,900 MXN. Eso es aproximadamente el 6% del precio de compra.",
+        "Agregue elementos recomendados para compradores extranjeros: honorarios legales ($30,000), seguro de título ($30,000 al 0.75%), depósito en garantía (escrow) ($10,000), avalúo ($7,000). Total opcional: ~$77,000 MXN.",
+        "Gran total: ~$315,900 MXN, o aproximadamente el 7.9% del precio de compra. Además, tendrá cuotas anuales de fideicomiso (~$10,000 MXN/año) de forma continua.",
+        "Su costo real de adquisición: $4,315,900 MXN. Planifique en consecuencia."
+      ],
+      "dataPoints": null,
+      "imageAlt": "Caso de estudio: Condominio de $4,000,000 MXN en Playa del Carmen (Comprador extranjero)"
+    },
+    {
+      "heading": "Errores comunes que debe evitar",
+      "paragraphs": [
+        "Varios errores pueden desviar sus estimaciones de gastos de cierre. A continuación, le indicamos cómo evitarlos.",
+        "Tasa de ISAI incorrecta: Esta es la variable más grande. El 3% predeterminado podría estar bien para Jalisco, pero muy lejos de la realidad para la Ciudad de México (5.25%). Siempre verifique la tasa de su estado específico.",
+        "Olvidar los costos del fideicomiso: Si es un extranjero en una zona restringida y no marca esa casilla, subestimará sus costos en más de $40,000 MXN.",
+        "Ignorar el IVA en los servicios: Presupuestar '1% para el notario' sin agregar el 16% de IVA significa que le faltará un 16% en esa partida.",
+        "Excluir los honorarios legales: Muchos compradores extranjeros consideran que la representación legal es opcional. Técnicamente es cierto, pero omitirla es ser tacaño y poco previsor. Presupueste para ello.",
+        "Usar tipos de cambio antiguos: Si está convirtiendo a USD para planificar, use tasas actuales o incorpore un colchón. La moneda puede moverse un 5-10% durante el cronograma de una transacción."
+      ],
+      "bullets": [
+        "Verifique la tasa de ISAI para su estado específico; no confíe en los valores predeterminados",
+        "Marque la casilla de fideicomiso si es un extranjero en una zona restringida",
+        "Recuerde que el IVA (16%) se aplica sobre los honorarios notariales y legales",
+        "Presupueste para la representación legal aunque sea 'opcional'",
+        "Use tipos de cambio actuales o agregue un colchón del 5-10%"
+      ],
+      "dataPoints": null,
+      "imageAlt": "Errores comunes que debe evitar"
+    },
+    {
+      "heading": "Integración con su presupuesto total de compra",
+      "paragraphs": [
+        "Los gastos de cierre son solo una parte de su presupuesto total de adquisición. El enfoque inteligente es planificar todo por adelantado.",
+        "Fondos totales necesarios = Precio de compra + Gastos de cierre + Presupuesto de renovación + Mobiliario + Reserva.",
+        "Si va a financiar, su pago inicial suele ser del 10-30% del precio de compra, además necesita el 100% de los gastos de cierre en efectivo (estos no se incluyen en el préstamo).",
+        "PropTrenz también ofrece una [Calculadora de ROI](https://proptrenz.com/calculators/roi) que tiene en cuenta los gastos de cierre al calcular los rendimientos de la inversión. Y la [Calculadora de Costos de Propiedad](https://proptrenz.com/calculators/ownership-cost) le ayuda a planificar los gastos continuos después del cierre.",
+        "Use las tres herramientas juntas para comprender tanto los costos iniciales como el panorama financiero a largo plazo."
+      ],
+      "dataPoints": null,
+      "imageAlt": "Integración con su presupuesto total de compra"
+    },
+    {
+      "heading": "Su lista de verificación previa a la compra",
+      "paragraphs": [
+        "Este es el flujo de trabajo que recomiendo para usar la calculadora de gastos de cierre en su proceso de compra.",
+        "Paso 1: Antes de hacer una oferta, ejecute la calculadora con el precio objetivo. Conozca su costo total.",
+        "Paso 2: Una vez que tenga una oferta aceptada, ejecútela de nuevo con el precio exacto. Ajuste el ISAI a la tasa de su estado si la conoce.",
+        "Paso 3: Obtenga cotizaciones de notarios y abogados. Actualice la calculadora con los montos cotizados reales en lugar de los predeterminados.",
+        "Paso 4: Descargue el informe en PDF y compártalo con su notario. Pídale que confirme o corrija las estimaciones.",
+        "Paso 5: Asegúrese de tener los Costos Totales de Cierre + un colchón del 10% en su cuenta antes de programar la fecha de cierre.",
+        "Este proceso garantiza que nunca lo tomen por sorpresa en la notaría. Conocerá su costo real desde el primer día."
+      ],
+      "dataPoints": null,
+      "imageAlt": "Su lista de verificación previa a la compra"
+    }
+  ],
+  "faq": [
+    {
+      "question": "¿Qué porcentaje del precio de compra debo presupuestar para los gastos de cierre?",
+      "answer": "Para ciudadanos mexicanos o extranjeros que compran en zonas no restringidas, presupueste entre el 5% y el 7% del precio de compra. Para extranjeros que compran en zonas restringidas (zonas de playa o fronterizas) que necesitan un fideicomiso, presupueste entre el 7% y el 10%. La Ciudad de México tiene tasas de ISAI más altas, por lo que las compras en la CDMX tienden a estar en el extremo superior de estos rangos."
+    },
+    {
+      "question": "¿Pago los gastos de cierre además del precio de compra?",
+      "answer": "Sí. Los gastos de cierre son independientes y adicionales al precio de compra. Si acuerda comprar una propiedad por $3,000,000 MXN, pagará $3,000,000 al vendedor más otros $150,000-300,000 en gastos de cierre pagados al notario, al gobierno y a los proveedores de servicios. Planifique su presupuesto en consecuencia."
+    },
+    {
+      "question": "¿Puedo financiar los gastos de cierre con una hipoteca?",
+      "answer": "Generalmente no. Las instituciones hipotecarias mexicanas requieren que los gastos de cierre se paguen en efectivo al momento del cierre. No se incluyen en el préstamo. Si está financiando el 80% del precio de compra, aún necesita el 20% de pago inicial MÁS el 100% de los gastos de cierre en efectivo. Esto toma a muchos compradores por sorpresa."
+    },
+    {
+      "question": "¿Qué es el ISAI y por qué es tan alto?",
+      "answer": "El ISAI (Impuesto Sobre Adquisición de Inmuebles) es el impuesto de adquisición de propiedades que cobran los gobiernos estatales cuando un bien inmueble cambia de manos. Es similar a un impuesto de transferencia o timbre fiscal en otros países. Las tasas varían del 2% al 5.25% dependiendo del estado. Generalmente es el mayor costo de cierre individual y es inevitable; no hay forma de reducirlo o diferirlo."
+    },
+    {
+      "question": "¿Qué es un fideicomiso y necesito uno?",
+      "answer": "Un fideicomiso es un contrato bancario requerido cuando los extranjeros compran propiedades en zonas restringidas (a 50 km de las costas o 100 km de las fronteras internacionales). Un banco mexicano mantiene el título legal mientras usted conserva todos los derechos de beneficiario: puede vivir, alquilar, vender o heredar la propiedad. Si no es mexicano y compra en cualquier ciudad de playa o fronteriza, necesita uno. La constitución cuesta alrededor de $35,000 MXN más un mantenimiento anual de ~$10,000 MXN."
+    },
+    {
+      "question": "¿Son realmente necesarios los honorarios legales?",
+      "answer": "Legalmente, no; puede cerrar sin su propio abogado. En la práctica, contratar a un abogado inmobiliario es muy recomendable, especialmente para compradores extranjeros o primerizos en México. Realizan búsquedas de títulos, revisan contratos, identifican señales de alerta y protegen sus intereses. El honorario de $30,000 MXN es menor en comparación con el costo de comprar una propiedad con problemas de título o gravámenes ocultos. Considérenlo un seguro."
+    },
+    {
+      "question": "¿Por qué la calculadora muestra el IVA en los honorarios notariales y legales?",
+      "answer": "El IVA (Impuesto al Valor Agregado) es el impuesto al valor agregado del 16% de México, similar al VAT en Europa o el GST en otros países. Se aplica a los servicios profesionales, incluidos los honorarios notariales y legales. Por lo tanto, si un notario cotiza '1% del valor de la propiedad', en realidad pagará el 1% más el 16% de esa cantidad en IVA. La calculadora lo separa para mostrar el costo real de cada servicio."
+    }
+  ]
+}

@@ -135,8 +135,8 @@ export default function GuidesIndex({ guides, allTags }: GuidesIndexProps) {
         'Data-backed articles that explain taxes, regulations, and market dynamics for every stage of the property lifecycle.'
       )}
     >
-      <section className="space-y-6">
-        <div className="rounded-2xl border border-blue-100 bg-blue-50 p-6 text-sm text-blue-800">
+      <section className="space-y-6 overflow-hidden max-w-full">
+        <div className="rounded-2xl border border-blue-100 bg-blue-50 p-6 text-sm text-blue-800 break-words">
           {t(
             'guides_page.intro_banner',
             'PropTrenz curates data-backed playbooks for buying, owning, and selling property in Mexico. These living documents include tax rates, regulator references, and actionable checklists sourced from SAT circulars, SHF data, and local notaries.'

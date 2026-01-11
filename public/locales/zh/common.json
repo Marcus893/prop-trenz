@@ -890,6 +890,9 @@
     "processing": "处理中...",
     "loading": "加载中...",
     "refresh": "刷新",
+    "feature_neighborhood_data": "完整社区级数据",
+    "feature_price_trends": "历史价格趋势和图表",
+    "feature_rent_breakdown": "按类型详细租金分析",
     "feature_unlimited": "无限交易跟踪",
     "feature_checklists": "阶段清单和进度跟踪",
     "feature_costs": "费用跟踪和估算",
@@ -899,7 +902,7 @@
     "feature_lifetime_updates": "终身更新",
     "feature_early_access": "新功能抢先体验",
     "upgrade_title": "升级您的计划",
-    "limit_reached_message": "您已达到免费版1笔交易的限制。升级以跟踪无限交易。",
+    "limit_reached_message": "升级以跟踪无限交易。解锁高级数据，充分利用我们的平台。",
     "feature_locked_message": "此功能需要付费订阅。升级以解锁所有功能。",
     "upgrade_message": "升级您的计划以解锁无限交易和高级功能。",
     "secure_payment": "Stripe安全支付。随时可取消。",
@@ -1051,5 +1054,12 @@
       "contact_title": "联系我们",
       "contact_text": "如需解决有关本网站的投诉或获取有关本网站使用的更多信息，请通过以下方式与我们联系："
     }
+  },
+  "paywall": {
+    "locked_title": "高级功能",
+    "price_chart_description": "升级到高级订阅，解锁此社区的历史价格趋势和详细分析。",
+    "rent_breakdown_description": "升级到高级订阅，获取按房产类型（单间、开间、一居室、两居室、两居室以上、别墅）的详细租金分析。",
+    "unlock_chart": "解锁价格趋势",
+    "unlock_details": "解锁完整详情"
   }
 }

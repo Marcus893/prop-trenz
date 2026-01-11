@@ -28,6 +28,9 @@ interface SubscriptionContextType {
   isUpgradeModalOpen: boolean
   openUpgradeModal: () => void
   closeUpgradeModal: () => void
+  isAuthModalOpen: boolean
+  openAuthModal: () => void
+  closeAuthModal: () => void
 }
 
 const defaultSubscription: SubscriptionStatus = {
@@ -52,6 +55,7 @@ export function SubscriptionProvider({ children }: { children: ReactNode }) {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [isUpgradeModalOpen, setIsUpgradeModalOpen] = useState(false)
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false)
 
   const fetchSubscriptionStatus = useCallback(async () => {
     if (!session?.access_token) {
@@ -152,13 +156,16 @@ export function SubscriptionProvider({ children }: { children: ReactNode }) {
     }
 
     try {
+      // Get the current page URL for cancel redirect
+      const returnUrl = window.location.pathname + window.location.search
+      
       const response = await fetch('/api/stripe/checkout', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${session.access_token}`,
         },
-        body: JSON.stringify({ plan, currency }),
+        body: JSON.stringify({ plan, currency, returnUrl }),
       })
 
       if (!response.ok) {
@@ -206,6 +213,8 @@ export function SubscriptionProvider({ children }: { children: ReactNode }) {
 
   const openUpgradeModal = () => setIsUpgradeModalOpen(true)
   const closeUpgradeModal = () => setIsUpgradeModalOpen(false)
+  const openAuthModal = () => setIsAuthModalOpen(true)
+  const closeAuthModal = () => setIsAuthModalOpen(false)
 
   return (
     <SubscriptionContext.Provider
@@ -219,6 +228,9 @@ export function SubscriptionProvider({ children }: { children: ReactNode }) {
         isUpgradeModalOpen,
         openUpgradeModal,
         closeUpgradeModal,
+        isAuthModalOpen,
+        openAuthModal,
+        closeAuthModal,
       }}
     >
       {children}

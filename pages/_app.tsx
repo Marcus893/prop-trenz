@@ -5,7 +5,7 @@ import { AuthProvider } from '@/lib/auth'
 import { PostHogProviderWrapper } from '@/lib/posthog'
 import { SubscriptionProvider } from '@/lib/subscription'
 import { ContactWidget } from '@/components/support/ContactWidget'
-import { UpgradeModalWithContext } from '@/components/subscription'
+import { UpgradeModalWithContext, AuthModalWithContext } from '@/components/subscription'
 import '@/styles/globals.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -20,6 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             <Component {...pageProps} />
             <ContactWidget />
             <UpgradeModalWithContext />
+            <AuthModalWithContext />
           </SubscriptionProvider>
         </PostHogProviderWrapper>
       </AuthProvider>
