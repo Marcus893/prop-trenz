@@ -740,7 +740,7 @@ export function SellerCostCalculator() {
           currency: 'MXN $',
         }}
         results={{
-          capitalGainsTax,
+          capitalGainsTax: capitalGainsTax ?? 0,
           agentCommission,
           fideicomisoCancellation: parseFloat(state.fideicomisoCancellation) || 0,
           attorneyFee: parseFloat(state.attorneyFee) || 0,

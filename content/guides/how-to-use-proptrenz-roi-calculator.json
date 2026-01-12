@@ -1,0 +1,322 @@
+{
+  "slug": "how-to-use-proptrenz-roi-calculator",
+  "locale": "en",
+  "title": "How to Use the PropTrenz ROI Calculator to Analyze Rental Property Investments in Mexico",
+  "metaTitle": "Mexico Rental ROI Calculator: Cap Rate, Cash-on-Cash & Cash Flow Analysis",
+  "metaDescription": "Calculate rental property ROI before you buy in Mexico. Model cash flow, cap rates, cash-on-cash returns, and total ROI including appreciation for any investment property.",
+  "excerpt": "Will this rental property actually make money? Use the ROI Calculator to model cash flow, compare financing scenarios, and see real returns before you commit to a Mexican real estate investment.",
+  "heroKicker": "Platform Guide",
+  "status": "published",
+  "accessLevel": "public",
+  "tags": ["rental-guide", "personal-finance", "platform-guide"],
+  "updatedAt": "2026-01-11T12:00:00.000Z",
+  "mainImageUrl": "/blogs/how-to-use-proptrenz-roi-calculator.jpeg",
+  "mainImageAlt": "PropTrenz ROI calculator showing cash flow and investment returns for Mexican rental property",
+  "keywords": [
+    "mexico rental property roi",
+    "cap rate calculator mexico",
+    "cash-on-cash return calculator",
+    "rental property cash flow mexico",
+    "investment property calculator mexico",
+    "real estate roi calculator",
+    "mexico rental investment analysis",
+    "property investment returns mexico",
+    "rental yield calculator mexico"
+  ],
+  "sections": [
+    {
+      "heading": "The $3,000,000 Question: Will This Property Make Money?",
+      "paragraphs": [
+        "Here's a story I hear constantly. An investor finds a beautiful $3,500,000 MXN condo in Playa del Carmen. The listing says 'Great rental potential!' The investor does some quick math—$30,000/month rent times 12 equals $360,000 per year. That's over 10% return! They buy immediately.",
+        "Six months later, reality hits. After property management fees, maintenance, taxes, insurance, and three weeks of vacancy, their 'guaranteed' $360,000 has shrunk to $180,000. Add in the $450,000 they spent on closing costs and furnishing, and their actual cash-on-cash return is barely 4%. They could have done better in a savings account.",
+        "The problem wasn't the property—it was the analysis. 'Gross rent' is meaningless. What matters is cash flow after all expenses, and ROI relative to what you actually invested. Without proper analysis, you're gambling, not investing.",
+        "That's exactly why I built the ROI Calculator. Input your purchase details, financing terms, expected rent, and operating expenses, and you'll see the numbers that actually matter: Net Operating Income, Annual Cash Flow, Cap Rate, Cash-on-Cash Return, and Total ROI including appreciation. No spreadsheets required."
+      ],
+      "bullets": [
+        "See true cash flow after ALL expenses, not just gross rent",
+        "Compare cash purchase vs. financing scenarios instantly",
+        "Calculate professional metrics: Cap Rate, Cash-on-Cash, Total ROI",
+        "Model different rent levels, occupancy rates, and expense assumptions",
+        "Download PDF reports to compare multiple properties"
+      ]
+    },
+    {
+      "heading": "The Five Numbers Every Investor Must Know",
+      "paragraphs": [
+        "Before diving into the calculator, let's understand the metrics it produces. These aren't arbitrary—they're the same metrics professional real estate investors use worldwide.",
+        "Net Operating Income (NOI): Your annual rental income minus all operating expenses (not including mortgage payments). This tells you how much the property earns from operations alone. It's the foundation for every other calculation.",
+        "Cap Rate (Capitalization Rate): NOI divided by the purchase price. This measures the property's income-generating power regardless of how you finance it. A 6% cap rate means the property generates 6% of its purchase price in operating income each year. Higher cap rates = better income potential, but often come with more risk.",
+        "Cash-on-Cash Return: Annual cash flow divided by the total cash you invested. Unlike cap rate, this accounts for financing. A leveraged purchase with 30% down might have a higher cash-on-cash return than a cash purchase, because you're earning returns on borrowed money.",
+        "Total ROI: Combines cash flow returns with property appreciation. Even a property with negative cash flow might have positive total ROI if it appreciates significantly. This gives the complete picture.",
+        "Annual Cash Flow: The actual money hitting your bank account each year after all expenses AND debt service. This is what you can spend or reinvest. Negative cash flow means you're subsidizing the property from your pocket."
+      ],
+      "dataPoints": [
+        {
+          "label": "Good Cap Rate (Mexico)",
+          "value": "5%–8%"
+        },
+        {
+          "label": "Good Cash-on-Cash",
+          "value": "8%–15%"
+        },
+        {
+          "label": "Positive Cash Flow Threshold",
+          "value": "> $0"
+        },
+        {
+          "label": "Strong Total ROI",
+          "value": "12%–20%"
+        }
+      ]
+    },
+    {
+      "heading": "Step 1: Enter Purchase and Renovation Costs",
+      "paragraphs": [
+        "Open the [ROI Calculator](https://proptrenz.com/calculators/roi) and start with your upfront investment.",
+        "Purchase Price: The agreed price for the property in Mexican pesos. This is straightforward—it's what you'll pay the seller.",
+        "Closing Costs: Enter as a percentage of the purchase price. In Mexico, buyer closing costs typically range from 5% to 8% depending on location and whether you need a fideicomiso. Use PropTrenz's [Closing Cost Calculator](https://proptrenz.com/calculators/closing-cost) if you need a detailed breakdown.",
+        "Upfront Improvements: Any renovation or furnishing costs before you can rent. This is critical for short-term rentals—you might need $200,000+ to furnish a property for Airbnb. For long-term unfurnished rentals, this might be minimal.",
+        "The calculator sums these to show your Total Cash Invested (for cash purchases) or adds them to your down payment (for financed purchases). This is your true investment basis for calculating returns."
+      ],
+      "bullets": [
+        "Purchase price: The negotiated price in MXN",
+        "Closing costs: 5%–8% of purchase price typically",
+        "Upfront improvements: Renovations and furnishing before renting",
+        "Don't forget: Closing costs significantly impact total investment"
+      ]
+    },
+    {
+      "heading": "Step 2: Configure Financing (Or Skip for Cash Purchase)",
+      "paragraphs": [
+        "The financing section lets you model different leverage scenarios. This is where the calculator becomes powerful for comparing strategies.",
+        "For a cash purchase, simply leave the down payment field empty or at 0%. The calculator assumes you're paying the full purchase price in cash, and your debt service will be $0.",
+        "For a financed purchase, enter your down payment percentage (typically 20-50% in Mexico for investment properties), the annual interest rate, and the loan term in years.",
+        "The calculator then computes your monthly and annual debt service (mortgage payments) and adjusts your cash-on-cash return accordingly. Leverage amplifies returns—both up and down.",
+        "Pro tip: Run the same property with different financing scenarios. You might find that 30% down gives you the best cash-on-cash return, while 50% down gives the best cash flow security. The right choice depends on your risk tolerance and goals."
+      ],
+      "dataPoints": [
+        {
+          "label": "Typical Down Payment",
+          "value": "20%–50%"
+        },
+        {
+          "label": "Mexico Mortgage Rates",
+          "value": "8%–12% annual"
+        },
+        {
+          "label": "Common Loan Terms",
+          "value": "15–20 years"
+        }
+      ]
+    },
+    {
+      "heading": "Step 3: Project Rental Income",
+      "paragraphs": [
+        "Now for the revenue side. Be realistic here—overly optimistic rent projections are the #1 reason investor returns disappoint.",
+        "Monthly Rent: Your expected gross monthly rental income. For long-term rentals, this is straightforward. For short-term/Airbnb, estimate your average monthly income after seasonal fluctuations. Use PropTrenz's [Rent Map](https://proptrenz.com/rent-map) to see actual rental prices in your target neighborhood.",
+        "Other Monthly Income: Additional revenue streams like parking fees, storage rental, or premium services. For most properties this is minimal, but it can add up for buildings with multiple income sources.",
+        "Occupancy Rate: The percentage of time the property will be rented. Default is 100%, but be realistic. Long-term rentals might achieve 95% (accounting for turnover). Short-term rentals in seasonal markets might average 70-80%. This single assumption dramatically affects your returns.",
+        "The calculator multiplies (Monthly Rent + Other Income) × 12 × Occupancy Rate to get your Annual Gross Income. This is the starting point for calculating NOI and cash flow."
+      ],
+      "bullets": [
+        "Research comparable rents using PropTrenz Rent Map",
+        "For Airbnb, use average monthly income across seasons",
+        "Be conservative on occupancy—assume 85-95% for long-term, 70-80% for short-term",
+        "Other income can include parking, storage, or services"
+      ]
+    },
+    {
+      "heading": "Step 4: Model Operating Expenses",
+      "paragraphs": [
+        "This is where most amateur investors underestimate costs. The calculator separates expenses into percentage-based and fixed annual costs.",
+        "Operating Expenses (%): A percentage of gross income for variable costs—maintenance, repairs, utilities you cover, cleaning between tenants, supplies, and general upkeep. For long-term rentals, 15-25% is typical. For short-term rentals with higher turnover and cleaning costs, budget 25-40%.",
+        "Property Management (%): If you're not self-managing, budget 6-10% of gross income for a management company. They handle tenant screening, rent collection, maintenance coordination, and emergencies. Even if you self-manage, consider adding 5% for your time.",
+        "Annual Property Taxes: The predial (property tax) paid to the municipality. In Mexico this is remarkably low—typically 0.1% to 0.5% of assessed value. Check with the seller or municipality for exact amounts.",
+        "Annual Insurance: Property insurance covering fire, theft, liability, and natural disasters. Costs vary by location and coverage, but budget $10,000-30,000 MXN annually for typical condos.",
+        "Other Annual Expenses: Fideicomiso fees (if foreign owner), HOA special assessments, accounting services, or any other recurring costs. Don't forget fideicomiso maintenance—typically $8,000-15,000 MXN per year."
+      ],
+      "dataPoints": [
+        {
+          "label": "Operating Expenses",
+          "value": "20%–35% of gross income"
+        },
+        {
+          "label": "Property Management",
+          "value": "6%–10% of gross income"
+        },
+        {
+          "label": "Property Taxes (Predial)",
+          "value": "0.1%–0.5% of value"
+        },
+        {
+          "label": "Annual Insurance",
+          "value": "$10,000–30,000 MXN"
+        }
+      ]
+    },
+    {
+      "heading": "Step 5: Add Appreciation Assumptions",
+      "paragraphs": [
+        "The final input is expected annual appreciation—the percentage you expect the property value to increase each year.",
+        "This is speculative, but important for total return analysis. Historical appreciation in Mexico varies dramatically by location. Prime areas in Mexico City have seen 5-8% annual appreciation. Beach markets have been more volatile—some areas seeing 10%+ during booms, others flat or declining.",
+        "The calculator uses this to compute Total ROI, which combines your annual cash flow return with appreciation gains. A property with 2% cash-on-cash but 8% appreciation might have 10% total ROI—not bad, but you're banking on appreciation rather than income.",
+        "Conservative recommendation: Use 3-5% for stable urban markets, 0-3% for speculative or volatile markets. If your investment only makes sense with aggressive appreciation assumptions, you're speculating, not investing.",
+        "Remember: Appreciation gains are unrealized until you sell. Cash flow is money in your pocket every year."
+      ]
+    },
+    {
+      "heading": "Reading the ROI Summary",
+      "paragraphs": [
+        "Once you've entered all inputs, the summary section shows everything you need to evaluate the investment.",
+        "Total Cash Invested: Your true investment basis—down payment (or full price for cash) plus closing costs plus renovations. This is what you're putting at risk.",
+        "Annual Gross Income: Total rental revenue adjusted for occupancy. If this seems low, check your occupancy rate assumption.",
+        "Net Operating Income (NOI): Gross income minus all operating expenses. This is the property's pure earning power before financing.",
+        "Annual Debt Service: Your mortgage payments if financing. $0 for cash purchases.",
+        "Annual Cash Flow: The money you actually keep—NOI minus debt service. Positive is good. Negative means you're subsidizing the property.",
+        "Cap Rate, Cash-on-Cash, and Total ROI: The professional metrics that let you compare this property to any other investment opportunity."
+      ]
+    },
+    {
+      "heading": "The Cash Flow Breakdown",
+      "paragraphs": [
+        "Below the summary metrics, the calculator shows a detailed breakdown of how your cash flow is computed. This is invaluable for identifying where your money goes.",
+        "You'll see: Gross Income → minus Operating Expenses → minus Management Fees → minus Fixed Costs → equals NOI → minus Debt Service → equals Cash Flow.",
+        "Use this to stress-test your assumptions. What if operating expenses are 30% instead of 20%? What if occupancy drops to 80%? Change the inputs and watch how cash flow responds.",
+        "This breakdown also helps you identify optimization opportunities. If management fees are eating your returns, maybe self-management makes sense. If fixed costs are high, shop for better insurance rates.",
+        "The goal is to understand your investment inside and out before you write a check."
+      ]
+    },
+    {
+      "heading": "Case Study: $4,500,000 MXN Condo in Roma Norte (Long-Term Rental)",
+      "paragraphs": [
+        "Let's walk through a realistic example. You're evaluating a 2-bedroom condo in Roma Norte, Mexico City, for $4,500,000 MXN. You'll rent it long-term unfurnished.",
+        "Inputs: Purchase price $4,500,000. Closing costs 6% ($270,000). Renovation/improvements $100,000 (minor updates). You're paying cash, so no financing. Monthly rent $25,000 (market rate for the area). Occupancy 95%. Operating expenses 20%. Management 8%. Property taxes $8,000/year. Insurance $12,000/year. Other expenses $15,000/year (accounting, misc). Appreciation 5%.",
+        "Results: Total cash invested = $4,870,000. Annual gross income = $285,000 ($25,000 × 12 × 0.95). Operating expenses = $57,000. Management = $22,800. Fixed costs = $35,000. NOI = $170,200. Debt service = $0. Annual cash flow = $170,200.",
+        "Key metrics: Cap Rate = 3.78% ($170,200 / $4,500,000). Cash-on-Cash = 3.49% ($170,200 / $4,870,000). Total ROI = 7.12% (cash flow + 3.63% appreciation on investment).",
+        "Verdict: This is a modest return typical of stable, low-risk Mexico City investments. You're not getting rich quick, but you have positive cash flow, likely appreciation, and a quality asset in a premium location. Compare this to other investment options before deciding."
+      ]
+    },
+    {
+      "heading": "Case Study: $3,000,000 MXN Vacation Rental in Tulum (Short-Term)",
+      "paragraphs": [
+        "Now let's look at a higher-risk, higher-potential scenario. A 1-bedroom condo in Tulum for $3,000,000 MXN, furnished for Airbnb.",
+        "Inputs: Purchase price $3,000,000. Closing costs 7% ($210,000) including fideicomiso. Furnishing/improvements $250,000 (full vacation rental setup). 30% down payment ($900,000). Interest rate 10%. Loan term 20 years. Average monthly rental income $40,000 (high season and low season averaged). Occupancy 70% (seasonal market). Operating expenses 35% (higher for STR). Management 10%. Property taxes $5,000/year. Insurance $15,000/year. Other $12,000/year (fideicomiso fee + extras). Appreciation 4%.",
+        "Results: Total cash invested = $1,360,000 (down payment + closing + furnishing). Loan amount = $2,100,000. Annual debt service = $243,600. Annual gross income = $336,000 ($40,000 × 12 × 0.70). Total operating expenses = $183,600. NOI = $152,400. Cash flow = -$91,200 (negative!).",
+        "Key metrics: Cap Rate = 5.08%. Cash-on-Cash = -6.71% (you're losing money annually). Total ROI = 2.10% (appreciation partially offsets losses).",
+        "Verdict: With these assumptions, the property loses money every year. You'd need to either pay cash (eliminating debt service), achieve higher occupancy (85%+), or get higher rents ($50,000/month average) to be cash flow positive. The calculator just saved you from a costly mistake—or showed you exactly what assumptions need to change."
+      ]
+    },
+    {
+      "heading": "Leverage: The Double-Edged Sword",
+      "paragraphs": [
+        "The Tulum example above illustrates a critical concept: leverage (financing) amplifies both gains AND losses.",
+        "With a cash purchase of the same property: Total cash invested = $3,460,000. No debt service. Annual cash flow = $152,400 (positive!). Cash-on-Cash = 4.40%. Total ROI = 7.87%.",
+        "With 30% down: Cash invested drops to $1,360,000. But debt service creates negative cash flow. You're earning appreciation on leverage but bleeding cash.",
+        "Which is better? It depends on your goals. Cash purchase gives stable positive cash flow but ties up more capital. Leveraged purchase frees capital for other investments but requires covering negative cash flow.",
+        "The calculator lets you model both scenarios instantly. Run the same property with 100% down, 50% down, and 30% down. See how cash flow and returns change. Make an informed decision based on your financial situation and risk tolerance.",
+        "Pro tip: If leveraged cash flow is negative, calculate your 'breakeven occupancy' or 'breakeven rent' by adjusting inputs until cash flow hits $0. That tells you the minimum performance needed to avoid losses."
+      ]
+    },
+    {
+      "heading": "Comparing Multiple Properties",
+      "paragraphs": [
+        "The real power of the calculator is comparing different investment opportunities. You might be choosing between:",
+        "A $5,000,000 condo in a prime location with 3% cap rate but strong appreciation potential, versus a $3,000,000 condo in an emerging area with 7% cap rate but uncertain appreciation.",
+        "Run both through the calculator. Download PDF reports for each. Compare cash flow, cap rate, cash-on-cash, and total ROI side by side.",
+        "Don't just look at one metric. A higher cap rate property might have negative cash flow if you're financing. A lower cap rate property might have better total ROI if appreciation is strong. The calculator gives you all the numbers to make an informed comparison.",
+        "For portfolio investors, run your existing properties too. Compare potential acquisitions against your current holdings. Are you improving your portfolio's overall returns, or adding lower-performing assets?"
+      ],
+      "bullets": [
+        "Download PDF reports to compare properties side by side",
+        "Don't rely on a single metric—analyze the full picture",
+        "Compare potential buys against your existing portfolio",
+        "Run sensitivity analysis: what if rent is 20% lower?"
+      ]
+    },
+    {
+      "heading": "Common Mistakes to Avoid",
+      "paragraphs": [
+        "Several errors lead to disappointingly wrong ROI calculations.",
+        "Overestimating occupancy: The biggest mistake. Listing sites show nightly rates, not actual booking rates. A $3,000/night property booked 10 nights/month generates $30,000—same as a $1,500/night property booked 20 nights. Research actual occupancy rates for your market.",
+        "Underestimating expenses: New investors often budget 10-15% for operating expenses. In reality, 25-40% is more realistic once you account for everything. The calculator's breakdown helps you sanity-check each line item.",
+        "Ignoring vacancy between tenants: Even long-term rentals have turnover. A tenant leaves, you spend 2 weeks cleaning, repairing, and finding a new tenant. That's ~4% vacancy right there. Build it into your occupancy rate.",
+        "Forgetting closing costs: A $3,000,000 property with 7% closing costs requires $3,210,000 upfront (plus furnishing). That $210,000 is part of your investment and affects cash-on-cash returns.",
+        "Projecting rents without research: Use PropTrenz's Rent Map to see actual rental prices in your target area. Don't assume you can charge 20% above market just because your unit is 'nicer.'"
+      ]
+    },
+    {
+      "heading": "Stress Testing Your Investment",
+      "paragraphs": [
+        "Smart investors don't just calculate expected returns—they stress-test for downside scenarios.",
+        "What if rent drops 15%? Markets change. Competition increases. A new development across the street offers lower rents. Reduce your monthly rent input by 15% and see if you're still cash flow positive.",
+        "What if occupancy drops to 60%? Economic downturns, pandemics, travel advisories—vacancy can spike unexpectedly. Model 60% occupancy. Can you survive?",
+        "What if expenses increase 25%? Inflation, unexpected repairs, management fee increases. Bump operating expenses from 25% to 35%. How does that change your returns?",
+        "What if interest rates rise? If you're considering an adjustable-rate mortgage, model your payments at 2% higher rates. Can you still afford the property?",
+        "A good investment should be profitable under reasonable stress scenarios, not just best-case assumptions. Use the calculator to test your investment's resilience before you buy."
+      ]
+    },
+    {
+      "heading": "Integrating with Other PropTrenz Tools",
+      "paragraphs": [
+        "The ROI Calculator is most powerful when used with PropTrenz's other tools.",
+        "Use the [Rent Map](https://proptrenz.com/rent-map) to research actual rental prices in your target neighborhood. Don't guess at rent—use real data.",
+        "Use the [Closing Cost Calculator](https://proptrenz.com/calculators/closing-cost) to get an accurate percentage for buyer closing costs. Plug that number directly into the ROI Calculator.",
+        "Use the [Ownership Cost Calculator](https://proptrenz.com/calculators/ownership-cost) to model ongoing expenses in detail—HOA fees, maintenance reserves, fideicomiso fees. Use those numbers for your 'other annual expenses' input.",
+        "If you're eventually selling, use the [Seller Cost Calculator](https://proptrenz.com/calculators/seller-cost) to understand your exit costs. Factor that into your long-term return calculations.",
+        "Together, these tools give you a complete picture of acquisition costs, ongoing operations, and eventual sale—the full investment lifecycle."
+      ]
+    },
+    {
+      "heading": "Your Investment Analysis Workflow",
+      "paragraphs": [
+        "Here's the process I recommend for evaluating any rental property investment in Mexico.",
+        "Step 1: Find a property of interest. Get the asking price and basic details.",
+        "Step 2: Research comparable rents using PropTrenz Rent Map. Be realistic about what your specific unit can command.",
+        "Step 3: Estimate closing costs using the Closing Cost Calculator. Get an accurate percentage.",
+        "Step 4: Run the ROI Calculator with conservative assumptions. Use 85% occupancy, 30% operating expenses, and real market rents.",
+        "Step 5: Stress-test by reducing rent 15%, dropping occupancy to 70%, and increasing expenses. Is the property still viable?",
+        "Step 6: Compare to other properties you're considering. Download PDF reports for each.",
+        "Step 7: If the numbers work, proceed with due diligence, inspections, and negotiations. If they don't, move on—there are always more properties.",
+        "This process ensures you buy based on data, not emotion. The calculator doesn't make the decision for you, but it gives you the information to make a smart one."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "What is a good cap rate for rental properties in Mexico?",
+      "answer": "Cap rates in Mexico typically range from 4% to 8% depending on location and property type. Prime urban locations like Roma Norte or Polanco often have lower cap rates (4-5%) but more stable appreciation. Beach markets and emerging areas may offer higher cap rates (6-8%) but with more risk. Compare the cap rate to alternative investments like bonds or REITs to assess whether the return justifies the risk and illiquidity of real estate."
+    },
+    {
+      "question": "What's the difference between cap rate and cash-on-cash return?",
+      "answer": "Cap rate measures the property's income-generating ability (NOI ÷ Purchase Price) without considering financing. Cash-on-cash return measures the return on your actual cash invested (Annual Cash Flow ÷ Total Cash Invested), accounting for leverage. A cash buyer's cap rate and cash-on-cash return are similar. A leveraged buyer might have a lower cap rate but higher cash-on-cash return (or vice versa) depending on financing terms and debt service costs."
+    },
+    {
+      "question": "How do I estimate occupancy rate for short-term rentals?",
+      "answer": "For short-term rentals, research actual booking data rather than nightly rates. Tools like AirDNA or market data from local property managers can provide average occupancy rates for your area. In seasonal markets like beach destinations, annual occupancy might average 65-75%. In year-round destinations like Mexico City, 80-90% might be achievable. Be conservative—it's better to be pleasantly surprised than disappointed."
+    },
+    {
+      "question": "What operating expenses should I budget for in Mexico?",
+      "answer": "For long-term rentals, budget 20-30% of gross income for operating expenses. For short-term/Airbnb rentals, budget 30-40% due to higher turnover, cleaning, and consumables. Key expenses include: property management (6-10%), maintenance/repairs (5-10%), cleaning (higher for STR), utilities you cover, HOA fees, property taxes (0.1-0.5% of value), insurance ($10,000-30,000/year), and fideicomiso fees for foreigners ($8,000-15,000/year)."
+    },
+    {
+      "question": "Should I pay cash or finance an investment property in Mexico?",
+      "answer": "Both strategies have merits. Cash purchases eliminate debt service, guarantee positive cash flow (assuming reasonable expenses), and simplify transactions. Financing (leverage) lets you control more property with less capital, potentially achieving higher cash-on-cash returns if the property performs well. However, leverage also amplifies losses—a leveraged property can have negative cash flow if occupancy or rents disappoint. Use the calculator to model both scenarios and choose based on your risk tolerance and capital availability."
+    },
+    {
+      "question": "Why is my cash flow negative even though the cap rate is positive?",
+      "answer": "This is common when financing costs exceed the property's income-generating capacity. A property with a 5% cap rate but 10% financing costs will have negative cash flow when leveraged. The debt service (mortgage payment) exceeds the net operating income. Options include: larger down payment (reducing debt service), finding better financing terms, or choosing properties with higher cap rates that can support debt service."
+    },
+    {
+      "question": "How much should I budget for property management in Mexico?",
+      "answer": "Property management fees in Mexico typically range from 6% to 10% of gross rental income for long-term rentals. Short-term rental management may cost 15-25% due to the additional work of guest communications, check-ins, cleaning coordination, and platform management. Self-managing saves these fees but requires time, local presence (or a trusted contact), and dealing with tenant issues directly."
+    },
+    {
+      "question": "What appreciation rate should I use for Mexico properties?",
+      "answer": "Appreciation varies significantly by market. Conservative estimates: 3-5% for established urban areas (CDMX, Guadalajara, Monterrey), 2-4% for stable beach markets, 0-5% for emerging or speculative areas. Be cautious with aggressive appreciation assumptions—5-8%+ annually is possible in boom periods but not sustainable long-term. If your investment only makes sense with high appreciation, you're speculating, not investing. Focus on cash flow first, appreciation as a bonus."
+    },
+    {
+      "question": "How do I compare this property to other investments?",
+      "answer": "Compare Total ROI (cash flow + appreciation) against other investment options. A property with 8% total ROI might seem attractive, but if you can get 7% from a diversified REIT with complete liquidity and no management hassle, the real estate premium is only 1%. Consider risk (real estate is illiquid and concentrated), time investment (management, even with a PM), and opportunity cost (what else could you do with that capital?). Real estate should offer a meaningful premium over passive alternatives to justify the work."
+    }
+  ]
+}

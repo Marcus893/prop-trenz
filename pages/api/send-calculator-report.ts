@@ -814,13 +814,17 @@ function generateSellerCostPDF(inputs: Record<string, string | number>, results:
     otherCosts: 'Other Costs'
   }
   
+  // Keys that should always be displayed even if value is 0
+  const alwaysShowKeys = ['capitalGainsTax']
+  
   // Track displayed costs to calculate total for display
   let displayedCostsTotal = 0
   
   Object.entries(results).forEach(([key, value]) => {
-    // Handle null values and ensure value is a positive number
+    // Handle null values and ensure value is a number
     const numValue = typeof value === 'number' ? value : 0
-    if (costLabels[key] && numValue > 0) {
+    // Show if it's a known cost label AND (value > 0 OR it's in alwaysShowKeys)
+    if (costLabels[key] && (numValue > 0 || alwaysShowKeys.includes(key))) {
       displayedCostsTotal += numValue
       doc.setTextColor(...lightGray)
       doc.text(costLabels[key], 25, yPos)

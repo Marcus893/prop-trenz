@@ -1,0 +1,337 @@
+{
+  "slug": "cómo-usar-la-calculadora-de-costos-de-venta-de-proptrenz",
+  "locale": "es",
+  "title": "Cómo Usar la Calculadora de Costos del Vendedor de PropTrenz para Maximizar tus Ganancias al Vender una Propiedad en México",
+  "metaTitle": "Calculadora de Costos de Venta en México: ISR, Comisiones y Estimador de Ganancias Netas",
+  "metaDescription": "Calcula cuánto realmente te quedará al vender una propiedad en México. Estima el ISR, comisiones de agentes, cancelación de fideicomiso y ganancias netas antes de anunciar.",
+  "excerpt": "Vender una propiedad en México implica costos ocultos que pueden reducir tus ganancias entre un 15-25%. Usa la Calculadora de Costos del Vendedor para estimar el ISR, comisiones y honorarios legales—y saber exactamente cuánto te llevarás.",
+  "heroKicker": "Guía de la Plataforma",
+  "status": "published",
+  "accessLevel": "public",
+  "tags": ["venta", "impuestos", "finanzas-personales", "guia-de-plataforma"],
+  "updatedAt": "2026-01-11T12:00:00.000Z",
+  "mainImageUrl": "/blogs/how-to-use-proptrenz-seller-cost-calculator.jpeg",
+  "mainImageAlt": "Calculadora de costos del vendedor de PropTrenz mostrando ISR y ganancias netas para bienes raíces en México",
+  "keywords": [
+    "isr venta inmuebles mexico",
+    "costos vender propiedad mexico",
+    "impuesto ganancia capital mexico",
+    "comision agente inmobiliario mexico",
+    "cancelacion fideicomiso",
+    "vender casa mexico impuestos",
+    "calculadora ganancias netas mexico",
+    "gastos venta inmueble mexico",
+    "isr bienes raices mexico"
+  ],
+  "sections": [
+    {
+      "heading": "La Ganancia que Desaparece en el Cierre",
+      "paragraphs": [
+        "He visto este escenario desarrollarse docenas de veces. Un vendedor anuncia su departamento frente al mar en $8,000,000 MXN, emocionado por la plusvalía desde que lo compró hace años en $5,000,000 MXN. En su mente, se está embolsando $3,000,000 MXN de ganancia.",
+        "Luego el notario hace los cálculos en el cierre. ISR: $1,050,000 MXN. Comisión del agente: $556,800 MXN. Cancelación de fideicomiso: $20,000 MXN. Honorarios del abogado: $34,800 MXN. La 'ganancia' del vendedor de $3,000,000 se reduce a aproximadamente $1,300,000—menos de la mitad de lo que esperaba.",
+        "Esto no es inusual. Los costos de venta en México típicamente consumen del 10% al 25% del precio de venta, con el ISR solo frecuentemente excediendo el 10% de tu ganancia. Si no planificas estos costos por adelantado, estás negociando a ciegas y podrías aceptar ofertas que apenas cubren tus gastos.",
+        "Exactamente por eso construí la Calculadora de Costos del Vendedor. Ingresa tu precio de venta, historial de compra y algunos detalles clave, y verás un desglose completo de cada costo—más la cantidad exacta que te llevarás. Sin cálculos, sin sorpresas y sin hojas de cálculo."
+      ],
+      "bullets": [
+        "El ISR puede alcanzar el 35% de tu ganancia para no residentes",
+        "Las comisiones de agentes típicamente van del 5-8% del precio de venta más 16% de IVA",
+        "Los residentes pueden calificar para exenciones de vivienda principal hasta ~$5,500,000 MXN",
+        "Los titulares de fideicomiso pagan cuotas de cancelación al vender",
+        "La calculadora muestra tus ganancias netas estimadas después de todos los costos"
+      ]
+    },
+    {
+      "heading": "Por Qué los Costos de Venta en México Son Tan Altos",
+      "paragraphs": [
+        "Antes de sumergirnos en la calculadora, entendamos por qué vender una propiedad en México es costoso—y qué puedes hacer legalmente para reducir estos costos.",
+        "El mayor golpe es el ISR (Impuesto Sobre la Renta), el impuesto sobre ganancias de capital de México en bienes raíces. A diferencia de muchos países que ofrecen tasas preferenciales para tenencias a largo plazo, México grava las ganancias de propiedades a tasas de impuesto sobre la renta—hasta 35% para ganancias altas. Para no residentes, es un 35% fijo sobre la ganancia neta sin exenciones.",
+        "Para residentes con RFC (identificación fiscal mexicana), hay una exención crucial: si estás vendiendo tu vivienda principal, puedes excluir hasta aproximadamente 700,000 UDIs (alrededor de $5,500,000 MXN) del impuesto sobre ganancias de capital. Esta sola disposición puede ahorrarte más de $1,000,000 MXN en impuestos—pero debes calificar.",
+        "Luego están las comisiones de agentes. En México, los vendedores típicamente pagan la comisión completa (los compradores raramente pagan a los agentes directamente). Las tasas estándar van del 5% al 8% del precio de venta, y se agrega 16% de IVA encima. En una venta de $5,000,000 MXN con comisión del 6%, estamos hablando de $348,000 MXN solo en honorarios de agente.",
+        "Finalmente, si eres un vendedor extranjero que tiene la propiedad a través de un fideicomiso, el banco fiduciario cobra una cuota de cancelación—típicamente $15,000 a $25,000 MXN—para liberar el título para la transferencia."
+      ],
+      "dataPoints": [
+        {
+          "label": "ISR (Residentes)",
+          "value": "10%–35% de la ganancia gravable"
+        },
+        {
+          "label": "ISR (No Residentes)",
+          "value": "35% fijo de la ganancia"
+        },
+        {
+          "label": "Comisión del Agente + IVA",
+          "value": "5.8%–9.3% del precio de venta"
+        },
+        {
+          "label": "Cancelación de Fideicomiso",
+          "value": "$15,000–25,000 MXN"
+        }
+      ]
+    },
+    {
+      "heading": "Paso 1: Selecciona tu Estatus de Residencia",
+      "paragraphs": [
+        "Abre la [Calculadora de Costos del Vendedor](https://proptrenz.com/calculators/seller-cost) y comienza indicando si eres residente fiscal mexicano o no residente.",
+        "Esto no se trata de ciudadanía—se trata de tu estatus fiscal con el SAT (Servicio de Administración Tributaria). Si tienes un RFC (Registro Federal de Contribuyentes) y CURP, y estás registrado como residente fiscal, selecciona 'Residente.' De lo contrario, selecciona 'No residente.'",
+        "Esta selección cambia dramáticamente tu cálculo de impuestos. Los residentes usan un sistema de tasas progresivas (10% a 35%) y pueden reclamar deducciones y exenciones. Los no residentes pagan un 35% fijo sobre la ganancia neta sin exenciones—punto.",
+        "Si no estás seguro de tu estatus, consulta a un contador fiscal mexicano antes de vender. Convertirte a residente antes de la venta (si calificas) podría ahorrarte cientos de miles de pesos."
+      ],
+      "bullets": [
+        "Residentes: Tienen RFC + CURP, usan tasas progresivas, pueden reclamar exenciones",
+        "No residentes: 35% fijo sobre la ganancia, sin exención de vivienda principal",
+        "El estatus de residencia es sobre registro fiscal, no ciudadanía o tipo de visa",
+        "Considera consultar a un asesor fiscal si tu estatus no está claro"
+      ]
+    },
+    {
+      "heading": "Paso 2: Ingresa tu Precio de Venta Esperado",
+      "paragraphs": [
+        "Ingresa el precio al que esperas vender en pesos mexicanos (MXN). Esta es la cantidad que aparecerá en la escritura al cierre.",
+        "La calculadora usa esto como base para costos basados en porcentaje como las comisiones del agente. También se usa para calcular qué porcentaje del precio de venta va a costos versus tu bolsillo.",
+        "Consejo profesional: Si aún estás decidiendo un precio de lista, ejecuta la calculadora en múltiples puntos de precio. Ver las ganancias netas a $7,000,000 vs $7,500,000 te ayuda a entender si el precio agresivo vale la pena—o si deberías poner un precio más alto para tener margen de negociación.",
+        "Recuerda: El notario calculará los impuestos basándose en el precio de venta oficial en la escritura. Subreportar el precio es ilegal y conlleva sanciones serias. Usa el precio de venta real esperado."
+      ]
+    },
+    {
+      "heading": "Paso 3: Ingresa tu Base de Costo y Deducciones",
+      "paragraphs": [
+        "Aquí es donde el registro cuidadoso da frutos. La calculadora pide tres montos clave que reducen tu ganancia gravable.",
+        "Precio de Compra Original: Lo que pagaste cuando adquiriste la propiedad. Esto debe coincidir con el precio en tu escritura original. Si no lo encuentras, tu notario o el Registro Público pueden proporcionarte una copia.",
+        "Mejoras de Capital (con facturas): Mejoras permanentes que hiciste a la propiedad—renovaciones, adiciones, reparaciones mayores, mejoras de infraestructura. CRÍTICO: Solo las mejoras con facturas oficiales (facturas mexicanas con RFC) son deducibles. ¿Esa renovación en efectivo que pagaste sin factura? No cuenta, legalmente.",
+        "Deducciones de Cierre Permitidas: Gastos de tu compra original que pueden deducirse—honorarios del notario, honorarios legales, ISAI que pagaste como comprador. Estos típicamente están disponibles en tus documentos de cierre cuando compraste.",
+        "Entre más puedas documentar, menor será tu ganancia gravable. Los vendedores que guardaron facturas de renovaciones frecuentemente ahorran 10-15% en su factura de impuestos comparado con aquellos que solo pueden probar el precio de compra original."
+      ],
+      "bullets": [
+        "Precio de compra original: De tu escritura cuando compraste",
+        "Mejoras de capital: Solo deducibles CON facturas (facturas oficiales)",
+        "Deducciones de cierre: Honorarios del notario, honorarios legales, ISAI de tu compra",
+        "Documentar más deducciones = menor ganancia gravable = menor impuesto"
+      ]
+    },
+    {
+      "heading": "Paso 4: Aplica la Exención de Vivienda Principal (Si Calificas)",
+      "paragraphs": [
+        "Para residentes, esta es potencialmente tu mayor ventaja fiscal. La ley mexicana te permite excluir hasta aproximadamente 700,000 UDIs (aproximadamente $5,500,000 MXN) de ganancias de capital al vender tu vivienda principal.",
+        "Para calificar, debes cumplir TODOS estos criterios: Tienes RFC y CURP. Has usado la propiedad como tu vivienda principal (no una inversión o renta). No has reclamado esta exención en los últimos 3 años.",
+        "Si calificas, marca la casilla 'Aplicar exención' e ingresa el monto de exención. La calculadora predetermina $5,500,000 MXN, pero puedes ajustarlo basándote en valores actuales de UDI o la guía de tu contador.",
+        "En una propiedad donde tu ganancia es $4,000,000 MXN, la exención elimina toda la ganancia—cero impuesto sobre ganancias de capital. En una ganancia de $7,000,000 MXN, solo $1,500,000 es gravable después de la exención. Esta sola casilla puede ahorrarte más de $1,000,000 MXN.",
+        "Nota: Los no residentes no pueden reclamar esta exención sin importar cómo usaron la propiedad. Si estás vendiendo tu casa de vacaciones en Cancún y no eres residente fiscal mexicano, la ganancia completa es gravable al 35%."
+      ],
+      "dataPoints": [
+        {
+          "label": "Exención de Vivienda Principal",
+          "value": "Hasta ~$5,500,000 MXN"
+        },
+        {
+          "label": "Período de Espera",
+          "value": "3 años entre reclamos"
+        },
+        {
+          "label": "Elegibilidad",
+          "value": "Solo residentes con RFC/CURP"
+        }
+      ]
+    },
+    {
+      "heading": "Entendiendo el Cálculo del ISR",
+      "paragraphs": [
+        "Una vez que hayas ingresado tu precio de venta, base de costo y exenciones, la calculadora computa tu ganancia gravable y estima el ISR a pagar.",
+        "Ganancia Gravable = Precio de Venta – Precio de Compra Original – Mejoras de Capital – Deducciones Permitidas – Exención de Vivienda Principal (si aplica). Solo las ganancias positivas se gravan—si estás vendiendo con pérdida, no hay impuesto sobre ganancias de capital.",
+        "Para residentes, el impuesto usa un sistema de tasas progresivas. Los primeros $250,000 MXN de ganancia se gravan a tu tasa especificada (predeterminada 35%). Los montos por encima de eso se gravan a la tasa máxima del 35%. Esta es una estimación simplificada—tu cálculo real de impuestos por el notario puede diferir basándose en ajustes por inflación y otros factores.",
+        "Para no residentes, es más simple pero más doloroso: 35% fijo sobre toda la ganancia, sin deducciones, sin exenciones.",
+        "La calculadora muestra tanto la ganancia gravable como el ISR estimado a pagar, para que sepas exactamente cuánto de tu ganancia va al SAT."
+      ]
+    },
+    {
+      "heading": "Paso 5: Configura la Comisión del Agente",
+      "paragraphs": [
+        "Las comisiones de agentes inmobiliarios en México son típicamente pagadas por el vendedor. La calculadora te permite estimar este costo basándote en la tasa de comisión.",
+        "Las tasas estándar van del 5% al 8%, siendo 6% lo más común para propiedades residenciales. Las propiedades de lujo y listados difíciles de vender pueden exigir tasas más altas; los servicios de FSBO asistido pueden cobrar menos.",
+        "Importante: La calculadora automáticamente agrega 16% de IVA encima de la comisión. Así que una comisión del 6% realmente te cuesta 6.96% del precio de venta. En una venta de $5,000,000 MXN, eso es $348,000 MXN—no $300,000.",
+        "Si estás vendiendo sin agente (FSBO), desmarca 'Incluir en cálculo' para remover este costo de tu estimación. Pero considera que las propiedades vendidas sin agentes frecuentemente toman más tiempo en venderse y pueden venderse por menos del valor de mercado.",
+        "Consejo profesional: Las comisiones son negociables. Si tienes una propiedad deseable en un mercado caliente, podrías negociar una tasa más baja—especialmente si el mismo agente te está ayudando a comprar tu próxima propiedad."
+      ],
+      "dataPoints": [
+        {
+          "label": "Tasa de Comisión Típica",
+          "value": "5%–8% del precio de venta"
+        },
+        {
+          "label": "IVA sobre Comisión",
+          "value": "16% (agregado encima)"
+        },
+        {
+          "label": "Tasa Efectiva (6% + IVA)",
+          "value": "6.96% del precio de venta"
+        }
+      ]
+    },
+    {
+      "heading": "Paso 6: Agrega Honorarios Legales y Profesionales",
+      "paragraphs": [
+        "Mientras el comprador típicamente paga al notario y la mayoría de los costos de cierre, los vendedores frecuentemente contratan sus propios profesionales—y estos costos suman.",
+        "Asesor Legal o de Cierre: Un abogado que revisa el contrato de venta, asesora en negociaciones, asegura que no estés cediendo más de lo que deberías, y supervisa la transacción desde tu perspectiva. Los honorarios típicamente van de $20,000 a $50,000 MXN, más 16% de IVA.",
+        "Marca 'Incluir en cálculo' si planeas contratar un abogado. Aunque no es legalmente requerido, el asesoramiento legal independiente es particularmente valioso si estás vendiendo a un desarrollador, lidiando con una situación de título complicada, o no estás familiarizado con la ley inmobiliaria mexicana.",
+        "La calculadora aplica el 16% de IVA a los honorarios legales automáticamente, mostrándote el verdadero costo de tu bolsillo."
+      ]
+    },
+    {
+      "heading": "Paso 7: Incluye la Cancelación del Fideicomiso (Si Aplica)",
+      "paragraphs": [
+        "Si eres un propietario extranjero que tiene la propiedad a través de un fideicomiso, pagarás una cuota de cancelación al vender.",
+        "El fideicomiso se estableció cuando compraste la propiedad—la ley mexicana requiere que los extranjeros en zonas restringidas (dentro de 50km de las costas o 100km de las fronteras) tengan la propiedad a través de un fideicomiso bancario. Cuando vendes, el banco fiduciario cancela el fideicomiso y libera el título para la transferencia al nuevo propietario.",
+        "Los bancos cobran una cuota administrativa por este servicio, típicamente de $15,000 a $25,000 MXN. Marca la casilla 'Incluir en cálculo' e ingresa la cuota cotizada por tu banco (o usa la estimación predeterminada).",
+        "Si eres ciudadano mexicano o un extranjero que compró en una zona no restringida (como Ciudad de México o Guadalajara), probablemente no tienes fideicomiso y puedes dejar esto desmarcado.",
+        "Nota: Esto es diferente del costo de establecimiento del fideicomiso del comprador. Tú pagas para cancelar el tuyo; ellos pagan para establecer el suyo."
+      ],
+      "bullets": [
+        "Aplica a extranjeros que tienen la propiedad a través de un fideicomiso bancario",
+        "Cuota de cancelación: $15,000–25,000 MXN típicamente",
+        "Pagada al banco fiduciario (Banamex, BBVA, Santander, etc.)",
+        "Ciudadanos mexicanos y compradores de zonas no restringidas: Usualmente no aplica"
+      ]
+    },
+    {
+      "heading": "Leyendo el Resumen: Lo que Realmente Te Quedarás",
+      "paragraphs": [
+        "La sección de resumen en la parte inferior muestra todo lo que necesitas para negociar y planificar.",
+        "ISR Estimado a Pagar: Tu responsabilidad de impuesto sobre ganancias de capital basada en el cálculo de ganancia gravable. Este es típicamente el costo individual más grande.",
+        "Comisión Estimada: El honorario de tu agente incluyendo IVA. Segundo costo más grande para la mayoría de los vendedores.",
+        "Otros Costos Estimados: Cancelación de fideicomiso y honorarios de abogado combinados.",
+        "Costos Totales Estimados: La suma de todos los gastos de venta. Esto es lo que desaparece de tu precio de venta.",
+        "Porcentaje del Precio de Venta: Muestra los costos totales como porcentaje. Si esto está por encima del 20%, verifica tus datos—podrías tener una situación donde vender no es financieramente ventajoso.",
+        "El número más importante no se muestra directamente pero es fácil de calcular: Precio de Venta menos Costos Totales es igual a tus Ganancias Netas—lo que realmente te llevas."
+      ],
+      "dataPoints": [
+        {
+          "label": "Costos totales típicos (Residentes, con exención)",
+          "value": "8%–12% del precio de venta"
+        },
+        {
+          "label": "Costos totales típicos (No residentes)",
+          "value": "15%–25% del precio de venta"
+        }
+      ]
+    },
+    {
+      "heading": "Descargando tu Reporte en PDF",
+      "paragraphs": [
+        "Una vez que hayas finalizado tu estimación, haz clic en 'Obtener Reporte PDF' para generar un resumen profesional.",
+        "El PDF incluye todos tus datos (precio de venta, base de costo, deducciones), cada partida de costo con montos calculados, y el resumen total. Está formateado para fácil compartir y referencia.",
+        "Casos de uso: Comparte con tu contador para planificar los pagos de impuestos. Envía a tu agente inmobiliario para discutir estrategia de precios. Envía por correo a tu cónyuge o copropietario para revisión. Referencia en el cierre para verificar los cálculos del notario. Adjunta a tus registros financieros de la transacción.",
+        "El reporte tiene fecha para que tengas un registro de tus supuestos al momento de la planificación."
+      ]
+    },
+    {
+      "heading": "Caso de Estudio: Casa de $7,000,000 MXN en Guadalajara (Residente Mexicano)",
+      "paragraphs": [
+        "Vamos a recorrer un escenario real. Eres ciudadano mexicano vendiendo tu vivienda principal en Guadalajara por $7,000,000 MXN. La compraste hace 8 años por $4,000,000 MXN y tienes $500,000 MXN en mejoras documentadas (con facturas).",
+        "Cálculo de ganancia de capital: $7,000,000 – $4,000,000 – $500,000 = $2,500,000 MXN de ganancia. Como esta es tu vivienda principal y no has reclamado la exención en 3 años, aplicas la exención completa: $2,500,000 – $5,500,000 = negativo, entonces la ganancia gravable es $0.",
+        "Impuesto sobre ganancias de capital: $0 (completamente exento). Comisión del agente al 6% + IVA: $487,200 MXN. Honorarios del abogado: $34,800 MXN.",
+        "Costos totales de venta: $522,000 MXN, o aproximadamente 7.5% del precio de venta.",
+        "Ganancias netas: $6,478,000 MXN. La exención de vivienda principal te ahorró aproximadamente $875,000 MXN en impuesto sobre ganancias de capital que habrías pagado de otra manera."
+      ]
+    },
+    {
+      "heading": "Caso de Estudio: Departamento de $10,000,000 MXN en Playa del Carmen (Ciudadano Estadounidense)",
+      "paragraphs": [
+        "Ahora considera un vendedor extranjero. Eres estadounidense que compró un departamento de vacaciones en Playa del Carmen hace 5 años por $6,000,000 MXN a través de un fideicomiso. Estás vendiendo por $10,000,000 MXN. Sin mejoras con facturas.",
+        "Ganancia de capital: $10,000,000 – $6,000,000 = $4,000,000 MXN. Como no residente, no aplican exenciones.",
+        "ISR al 35%: $1,400,000 MXN. Comisión del agente al 6% + IVA: $696,000 MXN. Cancelación de fideicomiso: $20,000 MXN. Honorarios del abogado: $34,800 MXN.",
+        "Costos totales de venta: $2,150,800 MXN, o aproximadamente 21.5% del precio de venta.",
+        "Ganancias netas: $7,849,200 MXN. Tu ganancia de $4,000,000 se ha reducido a $1,849,200 después de todos los costos. Eso es una reducción del 54% en la ganancia—por eso los vendedores no residentes a veces consideran establecer residencia antes de vender.",
+        "La calculadora revela esta realidad antes de que anuncies, ayudándote a establecer expectativas realistas y fijar el precio acorde."
+      ]
+    },
+    {
+      "heading": "Estrategias para Reducir tus Costos de Venta",
+      "paragraphs": [
+        "Armado con los resultados de la calculadora, aquí hay estrategias probadas para quedarte con más de tus ganancias de venta.",
+        "Documenta todo: Si hiciste mejoras, encuentra esas facturas. Cada $100,000 en mejoras documentadas reduce tu ganancia gravable en $100,000—potencialmente ahorrándote $35,000 en impuestos.",
+        "Verifica tu estatus de residencia: Si estás viviendo en México y vendiendo una vivienda principal, asegúrate de tener RFC y CURP antes de la venta. La exención vale más de $1,000,000 MXN para propiedades de alto valor.",
+        "Programa tus ventas: La exención de vivienda principal tiene un período de espera de 3 años. Si la reclamaste recientemente, considera esperar si las condiciones del mercado lo permiten.",
+        "Negocia comisiones: En un mercado de vendedores, los agentes pueden aceptar tasas más bajas. Pregunta. Una reducción del 1% en una venta de $10,000,000 ahorra $116,000 MXN.",
+        "Considera lo neto, no lo bruto: Al evaluar ofertas, pasa cada una por la calculadora. Una oferta más alta con más costos puede dejarte menos neto que una oferta ligeramente menor más limpia."
+      ],
+      "bullets": [
+        "Documenta mejoras con facturas para reducir la ganancia gravable",
+        "Establece residencia fiscal (RFC/CURP) antes de vender si calificas",
+        "Espera el período de 3 años si reclamaste la exención recientemente",
+        "Negocia comisiones de agentes—especialmente en mercados calientes",
+        "Compara ofertas basándote en ganancias netas, no en precio de venta"
+      ]
+    },
+    {
+      "heading": "Errores Comunes a Evitar",
+      "paragraphs": [
+        "Varios errores pueden llevar a estimaciones inexactas o sorpresas costosas en el cierre.",
+        "Olvidar el IVA en servicios: La calculadora maneja esto, pero muchos vendedores presupuestan '6% de comisión' y se sorprenden cuando es $348,000 en lugar de $300,000 en una venta de $5,000,000. El IVA aplica a servicios profesionales.",
+        "Reclamar exenciones para las que no calificas: La exención de vivienda principal requiere RFC, CURP, y uso real como vivienda principal. Si rentaste la propiedad o es una casa de vacaciones, no calificas—incluso si eres residente.",
+        "No ajustar para tu situación: Los valores predeterminados de la calculadora son estimaciones razonables, pero tu tasa real de ganancia de capital, tasa de comisión y honorarios legales pueden diferir. Actualiza los datos con tus números específicos para precisión.",
+        "Ignorar el timing: Las leyes fiscales cambian. Los valores de UDI fluctúan. Las normas de comisión varían con las condiciones del mercado. Ejecuta la calculadora cerca de cuando planeas vender, no meses antes.",
+        "Subestimar impuestos de no residentes: Ese 35% fijo es brutal. Si eres extranjero con ganancias significativas, explora seriamente la conversión de residencia con un abogado fiscal antes de anunciar."
+      ]
+    },
+    {
+      "heading": "Integrando con tu Estrategia General de Salida",
+      "paragraphs": [
+        "Los costos de venta no existen en aislamiento. La Calculadora de Costos del Vendedor es una pieza de tu kit de herramientas de planificación financiera.",
+        "Si estás vendiendo para reinvertir, compara tus ganancias netas contra los costos de adquisición de tu próxima propiedad. La [Calculadora de Costos de Cierre](https://proptrenz.com/calculators/closing-cost) de PropTrenz muestra lo que pagarás como comprador.",
+        "Si estás evaluando si vender o mantener, considera los costos continuos de propiedad. La [Calculadora de Costos de Propiedad](https://proptrenz.com/calculators/ownership-cost) factoriza cuotas de HOA, predial, mantenimiento y cuotas de fideicomiso—costos que eliminas al vender.",
+        "Si eres un inversionista comparando propiedades, la [Calculadora de ROI](https://proptrenz.com/calculators/roi) incorpora costos de venta en tu cálculo de retorno total, dándote el verdadero rendimiento de inversión.",
+        "Usa las calculadoras juntas para tomar decisiones basadas en datos sobre tu portafolio de bienes raíces en México."
+      ]
+    },
+    {
+      "heading": "Tu Lista de Verificación Antes de Vender",
+      "paragraphs": [
+        "Aquí está el flujo de trabajo que recomiendo para usar la Calculadora de Costos del Vendedor en tu proceso de venta.",
+        "Paso 1: Antes de decidir vender, ejecuta la calculadora con tu precio de venta estimado. Entiende tus ganancias netas y si vender tiene sentido financiero.",
+        "Paso 2: Reúne tu documentación—escritura original, facturas de mejoras, y documentos de cierre de tu compra. Entre más deducciones puedas documentar, menor será tu factura de impuestos.",
+        "Paso 3: Confirma tu estatus de residencia y elegibilidad de exención de vivienda principal con tu contador. No asumas—verifica.",
+        "Paso 4: Una vez que tengas una oferta aceptada, ejecuta la calculadora nuevamente con el precio exacto. Obtén cotizaciones de abogados si vas a contratar uno.",
+        "Paso 5: Descarga el reporte PDF y compártelo con tu notario. Pídeles que confirmen o corrijan el cálculo del ISR antes del cierre.",
+        "Paso 6: Asegúrate de entender las ganancias netas y tener un plan para los fondos (reinversión, repatriación, etc.).",
+        "Este proceso asegura que negocies desde una posición de conocimiento, establezcas expectativas realistas, y evites sorpresas cuando se calculen los números finales."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "¿Qué porcentaje de mi precio de venta irá a costos de venta?",
+      "answer": "Para residentes mexicanos vendiendo una vivienda principal con la exención, espera que 7-12% del precio de venta vaya a costos (principalmente comisión del agente). Para no residentes o residentes sin la exención, los costos típicamente van del 15-25% dependiendo del tamaño de tu ganancia de capital. Entre mayor sea tu margen de ganancia, mayor será el porcentaje que va a impuestos."
+    },
+    {
+      "question": "¿Cuál es la tasa del ISR al vender una propiedad en México?",
+      "answer": "Para no residentes, es un 35% fijo sobre la ganancia neta (precio de venta menos base de costo y mejoras documentadas). Para residentes, es una tasa progresiva que va del 10% al 35%, con la tasa máxima aplicando a ganancias por encima de $250,000 MXN. Los residentes también pueden reclamar la exención de vivienda principal para reducir o eliminar la ganancia gravable."
+    },
+    {
+      "question": "¿Puedo evitar el ISR si he tenido la propiedad por muchos años?",
+      "answer": "México no ofrece tasas reducidas para tenencias a largo plazo como algunos países. Sin embargo, el código fiscal mexicano sí permite ajustes por inflación a tu base de costo, lo que puede reducir la ganancia gravable en propiedades tenidas por muchos años. Tu notario calculará este ajuste al cierre. La calculadora proporciona una estimación, pero el impuesto real puede ser menor debido a estos ajustes."
+    },
+    {
+      "question": "¿Qué es la exención de vivienda principal y quién califica?",
+      "answer": "La exención de vivienda principal permite a los residentes fiscales mexicanos excluir hasta aproximadamente 700,000 UDIs (alrededor de $5,500,000 MXN) de ganancias de capital al vender su vivienda principal. Para calificar, debes tener RFC y CURP, la propiedad debe haber sido tu vivienda principal (no una renta o casa de vacaciones), y no puedes haber reclamado esta exención en los últimos 3 años."
+    },
+    {
+      "question": "¿Quién paga la comisión del agente inmobiliario en México?",
+      "answer": "En México, el vendedor típicamente paga la comisión completa del agente. Las tasas estándar van del 5-8% del precio de venta, siendo 6% lo más común. Además, se aplica 16% de IVA encima de la comisión. Así que una comisión del 6% realmente cuesta 6.96% del precio de venta."
+    },
+    {
+      "question": "¿Qué es la cuota de cancelación de fideicomiso?",
+      "answer": "Si eres propietario extranjero que compró la propiedad a través de un fideicomiso, tu banco fiduciario cobra una cuota para cancelar el fideicomiso cuando vendes. Esta cuota administrativa típicamente va de $15,000 a $25,000 MXN. Los ciudadanos mexicanos y extranjeros que compraron en zonas no restringidas típicamente no tienen fideicomiso y no pagan esta cuota."
+    },
+    {
+      "question": "¿Debería contratar un abogado al vender una propiedad en México?",
+      "answer": "Aunque no es legalmente requerido, contratar un abogado inmobiliario es recomendable—especialmente para transacciones de alto valor, situaciones de título complicadas, o si no estás familiarizado con la ley mexicana. Un abogado revisa el contrato de venta, asesora en negociaciones, y protege tus intereses. Los honorarios típicamente van de $20,000-50,000 MXN más IVA, lo cual es pequeño comparado con el valor de la transacción."
+    },
+    {
+      "question": "¿Cómo puedo reducir mi ISR al vender?",
+      "answer": "Varias estrategias pueden reducir tu impuesto: 1) Documenta todas las mejoras de capital con facturas (facturas oficiales), 2) Si eres residente vendiendo una vivienda principal, reclama la exención, 3) Incluye tus costos de compra originales (honorarios del notario, ISAI, honorarios legales) como deducciones, 4) Si eres un no residente de largo plazo, consulta a un abogado fiscal sobre establecer residencia antes de vender. El ajuste por inflación aplicado por el notario también ayuda para propiedades tenidas por muchos años."
+    },
+    {
+      "question": "¿Por qué mis costos de venta son más altos que lo que pagué como comprador?",
+      "answer": "Los vendedores enfrentan el ISR, que los compradores no pagan. Mientras los compradores pagan ISAI (impuesto de adquisición) y honorarios del notario, los vendedores pagan ISR (impuesto sobre la renta de ganancias) más comisiones de agente. Para propiedades que han apreciado significativamente, el ISR solo puede exceder todos los costos de cierre del comprador combinados—especialmente para no residentes pagando la tasa fija del 35%."
+    }
+  ]
+}

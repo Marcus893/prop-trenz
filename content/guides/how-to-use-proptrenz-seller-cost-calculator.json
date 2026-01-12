@@ -1,0 +1,338 @@
+{
+  "slug": "how-to-use-proptrenz-seller-cost-calculator",
+  "locale": "en",
+  "title": "How to Use the PropTrenz Seller Cost Calculator to Maximize Your Net Proceeds When Selling Property in Mexico",
+  "metaTitle": "Mexico Seller Cost Calculator: Capital Gains Tax, Agent Commissions & Net Proceeds Estimator",
+  "metaDescription": "Calculate what you'll actually keep when selling property in Mexico. Estimate capital gains tax (ISR), agent commissions, fideicomiso cancellation, and net proceeds before you list.",
+  "excerpt": "Selling property in Mexico involves hidden costs that can slash your profit by 15-25%. Use the Seller Cost Calculator to estimate capital gains tax, commissions, and legal fees—and know exactly what you'll walk away with.",
+  "heroKicker": "Platform Guide",
+  "status": "published",
+  "accessLevel": "public",
+  "tags": ["selling", "taxes", "personal-finance", "platform-guide"],
+  "updatedAt": "2026-01-11T12:00:00.000Z",
+  "mainImageUrl": "/blogs/how-to-use-proptrenz-seller-cost-calculator.jpeg",
+  "mainImageAlt": "PropTrenz seller cost calculator showing capital gains tax and net proceeds for Mexican real estate",
+  "keywords": [
+    "mexico capital gains tax",
+    "selling property mexico costs",
+    "isr real estate mexico",
+    "mexico property sale tax",
+    "real estate agent commission mexico",
+    "fideicomiso cancellation fee",
+    "selling house in mexico tax",
+    "net proceeds calculator mexico",
+    "capital gains tax calculator mexico",
+    "seller closing costs mexico"
+  ],
+  "sections": [
+    {
+      "heading": "The Profit That Disappears at Closing",
+      "paragraphs": [
+        "I've watched this scenario unfold dozens of times. A seller lists their beachfront condo for $8,000,000 MXN, thrilled about the appreciation since they bought it years ago for $5,000,000 MXN. In their mind, they're pocketing $3,000,000 MXN in profit.",
+        "Then the notary runs the numbers at closing. Capital gains tax: $1,050,000 MXN. Agent commission: $556,800 MXN. Fideicomiso cancellation: $20,000 MXN. Attorney fees: $34,800 MXN. The seller's 'profit' of $3,000,000 shrinks to about $1,300,000—less than half of what they expected.",
+        "This isn't unusual. Selling costs in Mexico typically eat 10% to 25% of the sale price, with capital gains tax alone often exceeding 10% of your profit. If you don't plan for these costs upfront, you're negotiating blind and may accept offers that barely cover your expenses.",
+        "That's exactly why I built the Seller Cost Calculator. Input your sale price, purchase history, and a few key details, and you'll see a complete breakdown of every cost—plus the exact amount you'll walk away with. No math, no surprises, and no spreadsheets."
+      ],
+      "bullets": [
+        "Capital gains tax (ISR) can reach 35% of your profit for non-residents",
+        "Agent commissions typically run 5-8% of sale price plus 16% IVA",
+        "Residents may qualify for primary residence exemptions up to ~$5,500,000 MXN",
+        "Fideicomiso holders pay cancellation fees when selling",
+        "The calculator shows your estimated net proceeds after all costs"
+      ]
+    },
+    {
+      "heading": "Why Selling Costs in Mexico Are So High",
+      "paragraphs": [
+        "Before diving into the calculator, let's understand why selling property in Mexico is expensive—and what you can legally do to reduce these costs.",
+        "The biggest hit is the ISR (Impuesto Sobre la Renta), Mexico's capital gains tax on real estate. Unlike many countries that offer preferential rates for long-term holdings, Mexico taxes property gains at income tax rates—up to 35% for high gains. For non-residents, it's a flat 35% on the net gain with no exemptions.",
+        "For residents with an RFC (Mexican tax ID), there's a crucial exemption: if you're selling your primary residence, you can exclude up to approximately 700,000 UDIs (around $5,500,000 MXN) from capital gains tax. This one provision can save you over $1,000,000 MXN in taxes—but you must qualify.",
+        "Then there are agent commissions. In Mexico, sellers typically pay the full commission (buyers rarely pay agents directly). Standard rates range from 5% to 8% of the sale price, and 16% IVA is added on top. On a $5,000,000 MXN sale with a 6% commission, you're looking at $348,000 MXN in agent fees alone.",
+        "Finally, if you're a foreign seller who holds property through a fideicomiso (bank trust), the trustee bank charges a cancellation fee—typically $15,000 to $25,000 MXN—to release the title for transfer."
+      ],
+      "dataPoints": [
+        {
+          "label": "Capital Gains Tax (Residents)",
+          "value": "10%–35% of taxable gain"
+        },
+        {
+          "label": "Capital Gains Tax (Non-Residents)",
+          "value": "Flat 35% of gain"
+        },
+        {
+          "label": "Agent Commission + IVA",
+          "value": "5.8%–9.3% of sale price"
+        },
+        {
+          "label": "Fideicomiso Cancellation",
+          "value": "$15,000–25,000 MXN"
+        }
+      ]
+    },
+    {
+      "heading": "Step 1: Select Your Residency Status",
+      "paragraphs": [
+        "Open the [Seller Cost Calculator](https://proptrenz.com/calculators/seller-cost) and start by indicating whether you're a Mexican tax resident or a non-resident.",
+        "This isn't about citizenship—it's about your fiscal status with SAT (Mexico's tax authority). If you have an RFC (Registro Federal de Contribuyentes) and CURP, and you're registered as a tax resident, select 'Resident.' Otherwise, select 'Non-resident.'",
+        "This selection dramatically changes your tax calculation. Residents use a progressive rate system (10% to 35%) and can claim deductions and exemptions. Non-residents pay a flat 35% on the net gain with no exemptions—period.",
+        "If you're unsure of your status, consult a Mexican tax accountant before selling. Converting to resident status before the sale (if you qualify) could save you hundreds of thousands of pesos."
+      ],
+      "bullets": [
+        "Residents: Have RFC + CURP, use progressive tax rates, can claim exemptions",
+        "Non-residents: Flat 35% tax on gain, no primary residence exemption",
+        "Residency status is about fiscal registration, not citizenship or visa type",
+        "Consider consulting a tax advisor if your status is unclear"
+      ]
+    },
+    {
+      "heading": "Step 2: Enter Your Expected Sale Price",
+      "paragraphs": [
+        "Enter the price you expect to sell for in Mexican pesos (MXN). This is the amount that will appear on the escritura (deed) at closing.",
+        "The calculator uses this as the base for percentage-based costs like agent commissions. It's also used to calculate what percentage of the sale price goes to costs versus your pocket.",
+        "Pro tip: If you're still deciding on a listing price, run the calculator at multiple price points. Seeing the net proceeds at $7,000,000 vs $7,500,000 helps you understand whether aggressive pricing is worth it—or if you should price higher to account for negotiation room.",
+        "Remember: The notary will calculate taxes based on the official sale price on the deed. Underreporting the price is illegal and carries serious penalties. Use the actual expected sale price."
+      ]
+    },
+    {
+      "heading": "Step 3: Enter Your Cost Basis and Deductions",
+      "paragraphs": [
+        "This is where careful record-keeping pays off. The calculator asks for three key amounts that reduce your taxable gain.",
+        "Original Purchase Price: What you paid when you acquired the property. This should match the price on your original escritura. If you can't find it, your notary or the Public Registry can provide a copy.",
+        "Capital Improvements (with facturas): Permanent improvements you made to the property—renovations, additions, major repairs, infrastructure upgrades. CRITICAL: Only improvements with official facturas (Mexican invoices with RFC) are deductible. That cash renovation you paid without a factura? It doesn't count, legally.",
+        "Allowable Closing Deductions: Expenses from your original purchase that can be deducted—notary fees, legal fees, ISAI tax you paid as the buyer. These are typically available from your closing documents when you bought.",
+        "The more you can document, the lower your taxable gain. Sellers who kept facturas for renovations often save 10-15% on their tax bill compared to those who can only prove the original purchase price."
+      ],
+      "bullets": [
+        "Original purchase price: From your escritura when you bought",
+        "Capital improvements: Only deductible WITH facturas (official invoices)",
+        "Closing deductions: Notary fees, legal fees, ISAI from your purchase",
+        "Documenting more deductions = lower taxable gain = lower tax"
+      ]
+    },
+    {
+      "heading": "Step 4: Apply the Primary Residence Exemption (If You Qualify)",
+      "paragraphs": [
+        "For residents, this is potentially your biggest tax break. Mexican law allows you to exclude up to approximately 700,000 UDIs (roughly $5,500,000 MXN) from capital gains when selling your primary residence.",
+        "To qualify, you must meet ALL of these criteria: You have an RFC and CURP. You've used the property as your primary residence (not an investment or rental). You haven't claimed this exemption in the past 3 years.",
+        "If you qualify, check the 'Apply exemption' box and enter the exemption amount. The calculator defaults to $5,500,000 MXN, but you can adjust it based on current UDI values or your accountant's guidance.",
+        "On a property where your gain is $4,000,000 MXN, the exemption wipes out the entire gain—zero capital gains tax. On a gain of $7,000,000 MXN, only $1,500,000 is taxable after the exemption. This single checkbox can save you over $1,000,000 MXN.",
+        "Note: Non-residents cannot claim this exemption regardless of how they used the property. If you're selling your vacation home in Cancún and you're not a Mexican tax resident, the full gain is taxable at 35%."
+      ],
+      "dataPoints": [
+        {
+          "label": "Primary Residence Exemption",
+          "value": "Up to ~$5,500,000 MXN"
+        },
+        {
+          "label": "Cooldown Period",
+          "value": "3 years between claims"
+        },
+        {
+          "label": "Eligibility",
+          "value": "Residents with RFC/CURP only"
+        }
+      ]
+    },
+    {
+      "heading": "Understanding the Capital Gains Tax Calculation",
+      "paragraphs": [
+        "Once you've entered your sale price, cost basis, and exemptions, the calculator computes your taxable gain and estimates the ISR (capital gains tax) due.",
+        "Taxable Gain = Sale Price – Original Purchase Price – Capital Improvements – Allowable Deductions – Primary Residence Exemption (if applicable). Only positive gains are taxed—if you're selling at a loss, there's no capital gains tax.",
+        "For residents, the tax uses a progressive rate system. The first $250,000 MXN of gain is taxed at your specified rate (default 35%). Amounts above that are taxed at the maximum 35% rate. This is a simplified estimate—your actual tax calculation by the notary may differ based on inflation adjustments and other factors.",
+        "For non-residents, it's simpler but more painful: flat 35% on the entire gain, no deductions, no exemptions.",
+        "The calculator shows both the taxable gain and the estimated ISR due, so you know exactly how much of your profit goes to SAT."
+      ]
+    },
+    {
+      "heading": "Step 5: Configure Agent Commission",
+      "paragraphs": [
+        "Real estate agent commissions in Mexico are typically paid by the seller. The calculator lets you estimate this cost based on the commission rate.",
+        "Standard rates range from 5% to 8%, with 6% being most common for residential properties. Luxury properties and difficult-to-sell listings may command higher rates; FSBO-assisted services may charge less.",
+        "Important: The calculator automatically adds 16% IVA (Mexico's value-added tax) on top of the commission. So a 6% commission actually costs you 6.96% of the sale price. On a $5,000,000 MXN sale, that's $348,000 MXN—not $300,000.",
+        "If you're selling without an agent (FSBO), uncheck 'Include in calculation' to remove this cost from your estimate. But consider that properties sold without agents often take longer to sell and may sell for less than market value.",
+        "Pro tip: Commissions are negotiable. If you have a desirable property in a hot market, you may be able to negotiate a lower rate—especially if the same agent is helping you buy your next property."
+      ],
+      "dataPoints": [
+        {
+          "label": "Typical Commission Rate",
+          "value": "5%–8% of sale price"
+        },
+        {
+          "label": "IVA on Commission",
+          "value": "16% (added on top)"
+        },
+        {
+          "label": "Effective Rate (6% + IVA)",
+          "value": "6.96% of sale price"
+        }
+      ]
+    },
+    {
+      "heading": "Step 6: Add Legal and Professional Fees",
+      "paragraphs": [
+        "While the buyer typically pays the notary and most closing costs, sellers often engage their own professionals—and these costs add up.",
+        "Legal or Closing Advisor: An attorney who reviews the sale contract, advises on negotiations, ensures you're not signing away more than you should, and oversees the transaction from your perspective. Fees typically range from $20,000 to $50,000 MXN, plus 16% IVA.",
+        "Check 'Include in calculation' if you plan to hire an attorney. While not legally required, independent legal advice is particularly valuable if you're selling to a developer, dealing with a complicated title situation, or unfamiliar with Mexican real estate law.",
+        "The calculator applies the 16% IVA to legal fees automatically, showing you the true out-of-pocket cost."
+      ]
+    },
+    {
+      "heading": "Step 7: Include Fideicomiso Cancellation (If Applicable)",
+      "paragraphs": [
+        "If you're a foreign owner who holds property through a fideicomiso (bank trust), you'll pay a cancellation fee when selling.",
+        "The fideicomiso was established when you bought the property—Mexican law requires foreigners in restricted zones (within 50km of coastlines or 100km of borders) to hold property through a bank trust. When you sell, the trustee bank cancels the trust and releases the title for transfer to the new owner.",
+        "Banks charge an administrative fee for this service, typically ranging from $15,000 to $25,000 MXN. Check the 'Include in calculation' box and enter your bank's quoted fee (or use the default estimate).",
+        "If you're a Mexican citizen or a foreigner who bought in a non-restricted zone (like Mexico City or Guadalajara), you likely don't have a fideicomiso and can leave this unchecked.",
+        "Note: This is different from the buyer's fideicomiso setup cost. You pay to cancel yours; they pay to establish theirs."
+      ],
+      "bullets": [
+        "Applies to foreigners who hold property through a bank trust",
+        "Cancellation fee: $15,000–25,000 MXN typically",
+        "Paid to the trustee bank (Banamex, BBVA, Santander, etc.)",
+        "Mexican citizens and non-restricted zone buyers: Usually not applicable"
+      ]
+    },
+    {
+      "heading": "Reading the Summary: What You'll Actually Keep",
+      "paragraphs": [
+        "The summary section at the bottom shows everything you need to negotiate and plan.",
+        "Estimated ISR Due: Your capital gains tax liability based on the taxable gain calculation. This is typically the largest single cost.",
+        "Estimated Commission: Your agent's fee including IVA. Second-largest cost for most sellers.",
+        "Estimated Other Costs: Fideicomiso cancellation and attorney fees combined.",
+        "Estimated Total Costs: The sum of all selling expenses. This is what disappears from your sale price.",
+        "Percent of Sale Price: Shows total costs as a percentage. If this is over 20%, double-check your inputs—you may have a situation where selling isn't financially advantageous.",
+        "The most important number isn't shown directly but is easy to calculate: Sale Price minus Total Costs equals your Net Proceeds—what you actually walk away with."
+      ],
+      "dataPoints": [
+        {
+          "label": "Typical total costs (Residents, with exemption)",
+          "value": "8%–12% of sale price"
+        },
+        {
+          "label": "Typical total costs (Non-residents)",
+          "value": "15%–25% of sale price"
+        }
+      ]
+    },
+    {
+      "heading": "Downloading Your PDF Report",
+      "paragraphs": [
+        "Once you've finalized your estimate, click 'Get PDF Report' to generate a professional summary.",
+        "The PDF includes all your inputs (sale price, cost basis, deductions), each cost item with calculated amounts, and the total summary. It's formatted for easy sharing and reference.",
+        "Use cases: Share with your accountant to plan for tax payments. Send to your real estate agent to discuss pricing strategy. Email to your spouse or co-owner for review. Reference at closing to verify the notary's calculations. Attach to your financial records for the transaction.",
+        "The report is date-stamped so you have a record of your assumptions at the time of planning."
+      ]
+    },
+    {
+      "heading": "Case Study: $7,000,000 MXN House in Guadalajara (Mexican Resident)",
+      "paragraphs": [
+        "Let's walk through a real scenario. You're a Mexican citizen selling your primary residence in Guadalajara for $7,000,000 MXN. You bought it 8 years ago for $4,000,000 MXN and have $500,000 MXN in documented improvements (with facturas).",
+        "Capital gain calculation: $7,000,000 – $4,000,000 – $500,000 = $2,500,000 MXN gain. Since this is your primary residence and you haven't claimed the exemption in 3 years, you apply the full exemption: $2,500,000 – $5,500,000 = negative, so taxable gain is $0.",
+        "Capital gains tax: $0 (fully exempted). Agent commission at 6% + IVA: $487,200 MXN. Attorney fees: $34,800 MXN.",
+        "Total selling costs: $522,000 MXN, or about 7.5% of the sale price.",
+        "Net proceeds: $6,478,000 MXN. The primary residence exemption saved you approximately $875,000 MXN in capital gains tax that you would have paid otherwise."
+      ]
+    },
+    {
+      "heading": "Case Study: $10,000,000 MXN Condo in Playa del Carmen (US Citizen)",
+      "paragraphs": [
+        "Now consider a foreign seller. You're an American who bought a vacation condo in Playa del Carmen 5 years ago for $6,000,000 MXN through a fideicomiso. You're selling for $10,000,000 MXN. No improvements with facturas.",
+        "Capital gain: $10,000,000 – $6,000,000 = $4,000,000 MXN. As a non-resident, no exemptions apply.",
+        "Capital gains tax at 35%: $1,400,000 MXN. Agent commission at 6% + IVA: $696,000 MXN. Fideicomiso cancellation: $20,000 MXN. Attorney fees: $34,800 MXN.",
+        "Total selling costs: $2,150,800 MXN, or about 21.5% of the sale price.",
+        "Net proceeds: $7,849,200 MXN. Your $4,000,000 profit has shrunk to $1,849,200 after all costs. That's a 54% reduction in profit—which is why non-resident sellers sometimes consider establishing residency before selling.",
+        "The calculator reveals this reality before you list, helping you set realistic expectations and price accordingly."
+      ]
+    },
+    {
+      "heading": "Strategies to Reduce Your Selling Costs",
+      "paragraphs": [
+        "Armed with the calculator results, here are proven strategies to keep more of your sale proceeds.",
+        "Document everything: If you made improvements, find those facturas. Every $100,000 in documented improvements reduces your taxable gain by $100,000—potentially saving $35,000 in taxes.",
+        "Verify your residency status: If you're living in Mexico and selling a primary residence, ensure you have an RFC and CURP before the sale. The exemption is worth over $1,000,000 MXN for high-value properties.",
+        "Time your sales: The primary residence exemption has a 3-year cooldown. If you've claimed it recently, consider waiting if market conditions allow.",
+        "Negotiate commissions: In a seller's market, agents may accept lower rates. Ask. A 1% reduction on a $10,000,000 sale saves $116,000 MXN.",
+        "Consider the net, not the gross: When evaluating offers, run each through the calculator. A higher offer with more costs may net you less than a slightly lower clean offer."
+      ],
+      "bullets": [
+        "Document improvements with facturas to reduce taxable gain",
+        "Establish tax residency (RFC/CURP) before selling if you qualify",
+        "Wait for the 3-year cooldown if you recently claimed the exemption",
+        "Negotiate agent commissions—especially in hot markets",
+        "Compare offers based on net proceeds, not sale price"
+      ]
+    },
+    {
+      "heading": "Common Mistakes to Avoid",
+      "paragraphs": [
+        "Several errors can lead to inaccurate estimates or costly surprises at closing.",
+        "Forgetting IVA on services: The calculator handles this, but many sellers budget '6% commission' and are shocked when it's $348,000 instead of $300,000 on a $5,000,000 sale. IVA applies to professional services.",
+        "Claiming exemptions you don't qualify for: The primary residence exemption requires an RFC, CURP, and actual primary residence use. If you rented out the property or it's a vacation home, you don't qualify—even if you're a resident.",
+        "Not adjusting for your situation: The calculator's defaults are reasonable estimates, but your actual capital gains rate, commission rate, and legal fees may differ. Update the inputs with your specific numbers for accuracy.",
+        "Ignoring timing: Tax laws change. UDI values fluctuate. Commission norms vary by market conditions. Run the calculator close to when you plan to sell, not months in advance.",
+        "Underestimating non-resident taxes: That flat 35% is brutal. If you're a foreigner with significant gains, seriously explore residency conversion with a tax attorney before listing."
+      ]
+    },
+    {
+      "heading": "Integrating with Your Overall Exit Strategy",
+      "paragraphs": [
+        "Selling costs don't exist in isolation. The Seller Cost Calculator is one piece of your financial planning toolkit.",
+        "If you're selling to reinvest, compare your net proceeds against acquisition costs for your next property. PropTrenz's [Closing Cost Calculator](https://proptrenz.com/calculators/closing-cost) shows what you'll pay as a buyer.",
+        "If you're evaluating whether to sell or hold, consider ongoing ownership costs. The [Ownership Cost Calculator](https://proptrenz.com/calculators/ownership-cost) factors in HOA fees, property taxes, maintenance, and fideicomiso fees—costs you eliminate by selling.",
+        "If you're an investor comparing properties, the [ROI Calculator](https://proptrenz.com/calculators/roi) incorporates selling costs into your total return calculation, giving you true investment performance.",
+        "Use the calculators together to make data-driven decisions about your Mexican real estate portfolio."
+      ]
+    },
+    {
+      "heading": "Your Pre-Sale Checklist",
+      "paragraphs": [
+        "Here's the workflow I recommend for using the Seller Cost Calculator in your sales process.",
+        "Step 1: Before deciding to sell, run the calculator with your estimated sale price. Understand your net proceeds and whether selling makes financial sense.",
+        "Step 2: Gather your documentation—original escritura, facturas for improvements, and closing documents from your purchase. The more deductions you can document, the lower your tax bill.",
+        "Step 3: Confirm your residency status and primary residence exemption eligibility with your accountant. Don't assume—verify.",
+        "Step 4: Once you have an accepted offer, run the calculator again with the exact price. Get quotes from attorneys if you're hiring one.",
+        "Step 5: Download the PDF report and share it with your notary. Ask them to confirm or correct the ISR calculation before closing.",
+        "Step 6: Ensure you understand the net proceeds and have a plan for the funds (reinvestment, repatriation, etc.).",
+        "This process ensures you negotiate from a position of knowledge, set realistic expectations, and avoid surprises when the final numbers are calculated."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "What percentage of my sale price will go to selling costs?",
+      "answer": "For Mexican residents selling a primary residence with the exemption, expect 7-12% of the sale price to go to costs (mostly agent commission). For non-residents or residents without the exemption, costs typically range from 15-25% depending on the size of your capital gain. The higher your profit margin, the higher the percentage that goes to taxes."
+    },
+    {
+      "question": "What is the capital gains tax rate when selling property in Mexico?",
+      "answer": "For non-residents, it's a flat 35% on the net gain (sale price minus cost basis and documented improvements). For residents, it's a progressive rate ranging from 10% to 35%, with the maximum rate applying to gains above $250,000 MXN. Residents can also claim the primary residence exemption to reduce or eliminate the taxable gain."
+    },
+    {
+      "question": "Can I avoid capital gains tax if I've owned the property for many years?",
+      "answer": "Mexico doesn't offer reduced rates for long-term holdings like some countries. However, the Mexican tax code does allow for inflation adjustments to your cost basis, which can reduce the taxable gain on properties held for many years. Your notary will calculate this adjustment at closing. The calculator provides an estimate, but actual tax may be lower due to these adjustments."
+    },
+    {
+      "question": "What is the primary residence exemption and who qualifies?",
+      "answer": "The primary residence exemption allows Mexican tax residents to exclude up to approximately 700,000 UDIs (about $5,500,000 MXN) from capital gains when selling their primary residence. To qualify, you must have an RFC and CURP, the property must have been your primary residence (not a rental or vacation home), and you cannot have claimed this exemption in the past 3 years."
+    },
+    {
+      "question": "Who pays the real estate agent commission in Mexico?",
+      "answer": "In Mexico, the seller typically pays the full agent commission. Standard rates range from 5-8% of the sale price, with 6% being most common. Additionally, 16% IVA (value-added tax) is applied on top of the commission. So a 6% commission actually costs 6.96% of the sale price."
+    },
+    {
+      "question": "What is the fideicomiso cancellation fee?",
+      "answer": "If you're a foreign owner who purchased property through a fideicomiso (bank trust), your trustee bank charges a fee to cancel the trust when you sell. This administrative fee typically ranges from $15,000 to $25,000 MXN. Mexican citizens and foreigners who purchased in non-restricted zones typically don't have a fideicomiso and don't pay this fee."
+    },
+    {
+      "question": "Should I hire a lawyer when selling property in Mexico?",
+      "answer": "While not legally required, hiring a real estate attorney is recommended—especially for high-value transactions, complicated title situations, or if you're unfamiliar with Mexican law. A lawyer reviews the sale contract, advises on negotiations, and protects your interests. Fees typically range from $20,000-50,000 MXN plus IVA, which is small compared to the transaction value."
+    },
+    {
+      "question": "How can I reduce my capital gains tax when selling?",
+      "answer": "Several strategies can reduce your tax: 1) Document all capital improvements with facturas (official invoices), 2) If you're a resident selling a primary residence, claim the exemption, 3) Include your original purchase costs (notary fees, ISAI, legal fees) as deductions, 4) If you're a long-term non-resident, consult a tax attorney about establishing residency before selling. The inflation adjustment applied by the notary also helps for properties held many years."
+    },
+    {
+      "question": "Why are my selling costs higher than what I paid as a buyer?",
+      "answer": "Sellers face capital gains tax, which buyers don't pay. While buyers pay ISAI (acquisition tax) and notary fees, sellers pay ISR (income tax on gains) plus agent commissions. For properties that have appreciated significantly, the capital gains tax alone can exceed all the buyer's closing costs combined—especially for non-residents paying the flat 35% rate."
+    }
+  ]
+}

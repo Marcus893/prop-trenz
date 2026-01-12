@@ -1,0 +1,258 @@
+{
+  "slug": "transaction-manager-guide",
+  "locale": "en",
+  "title": "How to Use PropTrenz Transaction Manager: Your Complete Property Purchase Companion",
+  "metaTitle": "PropTrenz Transaction Manager Guide | Track Your Property Purchase",
+  "metaDescription": "Master the PropTrenz Transaction Manager to track every step of buying property in Mexico. Checklists, cost tracking, notes, and stage-by-stage guidance included.",
+  "excerpt": "Stop juggling spreadsheets and sticky notes—track your entire property purchase journey in one place.",
+  "heroKicker": "Your Personal Property Purchase Command Center",
+  "status": "published",
+  "accessLevel": "public",
+  "tags": ["buying", "selling", "platform-guide"],
+  "updatedAt": "2026-01-12T00:00:00.000Z",
+  "mainImageUrl": "/blogs/transaction-manager-guide.jpeg",
+  "mainImageAlt": "PropTrenz Transaction Manager Dashboard",
+  "sections": [
+    {
+      "heading": "Why You Need a Transaction Manager When Buying Property in Mexico",
+      "paragraphs": [
+        "Buying property in Mexico isn't like buying a car. There are seven distinct stages, dozens of documents, multiple government offices, and costs that pop up when you least expect them. Most buyers I talk to feel overwhelmed by week two.",
+        "Here's the thing. The process isn't actually that complicated once you break it down. The problem is keeping track of everything. What did the notary say about the ISAI tax? Did I already get the water no-debt certificate? When is the bank appraisal scheduled?",
+        "That's exactly why we built the Transaction Manager. It's not a generic task list. It's a Mexico-specific, stage-by-stage system that tells you exactly what to do, when to do it, and how much it'll cost.",
+        "Think of it as having an experienced buyer's agent in your pocket—one who's closed hundreds of deals and knows every step by heart."
+      ],
+      "bullets": [
+        "Track purchases AND sales with dedicated checklists for each transaction type",
+        "Pre-built templates based on real Mexican property transactions—not generic advice",
+        "Automatic cost estimates that update when you enter your property price",
+        "Notes and timeline to record calls, meetings, and key decisions",
+        "Works in English, Spanish, and Chinese—switch languages anytime"
+      ]
+    },
+    {
+      "heading": "Getting Started: Creating Your First Transaction",
+      "paragraphs": [
+        "Starting a new transaction takes about 30 seconds. Head to your Transactions page and click \"New Transaction.\" You'll see a simple wizard that asks three questions.",
+        "First: are you buying or selling? This matters because the stages are different. Buyers go through Search → Analysis → Offer → Due Diligence → Financing → Closing → Post-Closing. Sellers have a streamlined flow: Listing → Offer → Gather Documents → Closing → Post-Closing.",
+        "Second: what type of property? House, apartment, land, commercial, or other. This helps customize some checklist items.",
+        "Third: property details. This is optional. If you already have a specific property, enter the address, neighborhood, city, and listing price. Don't have one yet? Skip it. You can add details later as your search narrows down.",
+        "Click \"Create Transaction\" and you're in. Your personalized dashboard loads with your first stage already set up."
+      ],
+      "bullets": [
+        "Free users can track one active transaction—perfect for first-time buyers",
+        "Paid subscribers can track unlimited transactions simultaneously",
+        "You can pause, resume, or delete transactions anytime",
+        "All your data is private and secured with row-level security in our database"
+      ]
+    },
+    {
+      "heading": "The 7 Stages of Buying Property in Mexico (And What Happens in Each)",
+      "paragraphs": [
+        "The Transaction Manager breaks down your purchase into seven logical stages. Each stage has its own checklist, documents, and costs. Let me walk you through what happens at each one.",
+        "Stage 1: Property Search. This is where you define what you want, set your budget, get pre-approved for a mortgage, research neighborhoods, and create a shortlist. Most people spend 2-4 weeks here.",
+        "Stage 2: Analysis. Found a property you like? Now you dig deeper. Compare market prices, calculate total costs (not just the listing price), visit the property, and check its history. This is your last chance to spot red flags before making an offer.",
+        "Stage 3: Offer & Negotiation. Time to make your move. Determine your offer price, prepare the offer letter, submit it, negotiate, sign the promesa de compraventa (preliminary agreement), and pay your earnest deposit. Typically 10-20% of the purchase price.",
+        "Stage 4: Due Diligence. Now you verify everything. Title search, lien check, property appraisal, structural inspection, permit verification, predial (property tax) status, utility debts, and HOA status. This is where the notary gets involved.",
+        "Stage 5: Financing. If you need a mortgage, this is where you compare options, gather documents, submit your application, complete the bank's appraisal, get approval, and sign the mortgage contract. Cash buyers can skip this stage entirely.",
+        "Stage 6: Closing. The finish line is in sight. Select your notary, review the escritura (deed), prepare funds, do a final walkthrough, sign everything, pay closing costs, and receive your keys.",
+        "Stage 7: Post-Closing. You own the property, but there's still work to do. Register it with the public registry, transfer utilities, update predial records, notify the HOA, get insurance, and change the locks. You'll also wait 2-6 months for the notary to deliver your registered deed."
+      ],
+      "bullets": [
+        "Click any stage in the progress bar to jump directly to it",
+        "Completed stages show a green checkmark—satisfying to see your progress",
+        "Each stage shows typical duration so you can plan your timeline",
+        "The mobile view shows a compact progress indicator that expands on tap"
+      ]
+    },
+    {
+      "heading": "Using the Stage Checklist: Never Forget a Critical Step",
+      "paragraphs": [
+        "Each stage has a pre-built checklist of tasks. These aren't random—they're based on real Mexican property transactions. Required items are marked with a star.",
+        "For example, in the Due Diligence stage, you'll see: Complete title search, Verify no liens, Get property appraisal, Structural inspection, Verify permits, Check predial payments, Check utility debts, and Check HOA status.",
+        "Click the circle next to any item to mark it complete. The overall progress bar updates instantly. There's something deeply satisfying about watching that percentage climb.",
+        "Need to add something custom? Click \"Add custom item\" at the bottom. Maybe your property has a special situation—solar panels to transfer, a garage with a separate title, or a pending permit. Add it to your checklist so you don't forget.",
+        "You can also reorder items. Just drag and drop them into the sequence that makes sense for your deal. Maybe you want to do the structural inspection before the title search. That's your call."
+      ],
+      "bullets": [
+        "Each item has a detailed description—click to expand and see what's involved",
+        "Mark items complete on your phone while you're at the notary's office",
+        "Custom items you add are saved permanently to your transaction",
+        "Drag the grip handle to reorder items based on your actual timeline",
+        "Required items are marked with a yellow star—prioritize these first"
+      ]
+    },
+    {
+      "heading": "Cost Tracking: Know Exactly What You'll Pay Before You Pay It",
+      "paragraphs": [
+        "This is where the Transaction Manager really shines. Buying property in Mexico involves a lot of costs beyond the purchase price. ISAI tax (3-5% depending on state), notary fees (around 1%), registration fees, appraisals, inspections, and more.",
+        "The Transaction Manager pre-populates estimated costs for each stage. Enter your property price, and the percentages calculate automatically. A $5,000,000 MXN property? Your ISAI tax is approximately $150,000 MXN. Notary fees around $50,000 MXN. It's all there.",
+        "As you go through the process, update the estimates with actual amounts. The notary quoted $65,000 instead of $50,000? Enter the real number. Now you're tracking actual vs. estimated, so you know exactly where your money went.",
+        "Mark costs as paid when you pay them. The system tracks paid date and payment method. At the end, you'll have a complete record of every peso spent—useful for taxes and for your own peace of mind."
+      ],
+      "bullets": [
+        "Costs are categorized by who you pay: notary, government, bank, agent, etc.",
+        "Add custom costs for anything not in the templates—moving expenses, furniture, renovations",
+        "See running totals: estimated total and actual total per stage",
+        "Percentage-based costs auto-recalculate when you update the property price",
+        "Delete costs that don't apply to your situation—buying with cash? Remove mortgage costs"
+      ]
+    },
+    {
+      "heading": "Key Numbers: Track Your Financials at a Glance",
+      "paragraphs": [
+        "At the top of your transaction dashboard, you'll see Key Numbers. This is where you track the big figures: listing price, your offer, accepted price, down payment, mortgage amount, interest rate, and term.",
+        "Here's a cool feature. Enter your listing price, offer price, and accepted price, and the system automatically calculates your negotiated discount. Got the seller to drop from $6,000,000 to $5,500,000? That's an 8.3% discount. Nice work.",
+        "For mortgage buyers, enter your loan amount, interest rate, and term, and you'll see your estimated monthly payment calculated instantly. No need to open a separate calculator.",
+        "All these numbers flow into the cost calculations. Your down payment, final payment, and mortgage origination fees all reference the prices you enter here."
+      ],
+      "bullets": [
+        "Click any number to edit it inline—no separate forms to fill out",
+        "Interest rate accepts both percentage (7%) and decimal (0.07) formats",
+        "Monthly payment uses standard amortization formula for accuracy",
+        "Price gap shows how much you negotiated off the listing price",
+        "All numbers are formatted in MXN with proper thousand separators"
+      ]
+    },
+    {
+      "heading": "Notes & Timeline: Your Transaction Journal",
+      "paragraphs": [
+        "Real estate transactions involve a lot of conversations. Calls with your agent, emails from the notary, meetings with the bank. Six months from now, you won't remember what was said. That's what Notes are for.",
+        "Add notes as you go. Had a call with the seller's agent about repairs? Log it. The notary sent an email about missing documents? Note it. Made a key decision about the financing? Record it.",
+        "Each note is tagged with a type: General, Call, Email, Meeting, or Decision. This makes it easy to filter and find what you're looking for later. The timeline shows everything in chronological order.",
+        "This becomes your paper trail. If there's ever a dispute about what was agreed, you have a record. And when you buy your next property, you can look back and remember what worked."
+      ],
+      "bullets": [
+        "Notes are tied to your current stage, so you can see what happened when",
+        "Timestamps are localized to your language—\"2 hours ago\" in English, \"hace 2 horas\" in Spanish",
+        "Decision notes are highlighted in yellow for easy scanning",
+        "Delete notes you no longer need—we won't judge",
+        "Notes sync across all your devices instantly"
+      ]
+    },
+    {
+      "heading": "Navigating Between Stages: Moving Forward (and Backward)",
+      "paragraphs": [
+        "The Transaction Manager doesn't force you to complete stages in order. Life isn't linear, and neither is real estate.",
+        "Want to jump ahead to see what's coming in the Closing stage? Click it in the progress bar. Need to go back and add a note to the Offer stage? No problem. You can navigate freely between all seven stages at any time.",
+        "The \"Next Stage\" button at the bottom advances you to the next logical step. Use it when you're ready to move on. The \"Previous\" button takes you back.",
+        "Your overall progress is calculated based on completed checklist items across ALL stages, not just the current one. So even if you jump around, your progress percentage stays accurate."
+      ],
+      "bullets": [
+        "Completed stages show a green checkmark in the progress bar",
+        "Current stage is highlighted with a blue ring",
+        "Mobile view uses a compact dot indicator that's easy to tap",
+        "Stage names are translated based on your language preference"
+      ]
+    },
+    {
+      "heading": "Skipping the Financing Stage (For Cash Buyers)",
+      "paragraphs": [
+        "Paying in cash? Lucky you. The Transaction Manager has a \"Skip Financing\" option that removes the entire Financing stage from your progress calculation.",
+        "Toggle it on, and the Financing checklist and costs are grayed out. They won't count toward your overall progress. Your 7-stage journey becomes 6 stages, and the math adjusts accordingly.",
+        "Changed your mind and decided to get a mortgage after all? Toggle it off, and everything comes back. No data is lost.",
+        "This keeps your progress bar honest. Nothing more frustrating than being \"stuck\" at 80% because of tasks that don't apply to you."
+      ],
+      "bullets": [
+        "Find the Skip Financing toggle in the Financing stage header",
+        "Skipped stages show a \"Skipped\" label instead of the checklist",
+        "Your progress percentage recalculates instantly when you toggle",
+        "Cost estimates for mortgage-related fees are still visible but marked skipped"
+      ]
+    },
+    {
+      "heading": "Tracking Property Sales: The Seller's Flow",
+      "paragraphs": [
+        "Selling property in Mexico? The Transaction Manager has you covered with a dedicated seller flow. When you create a transaction and select \"I'm selling,\" you get a different set of stages.",
+        "Stage 1: Listing. Prepare your property, hire a listing agent, create the listing, and schedule showings. This is about getting your property market-ready.",
+        "Stage 2: Offer. Receive offers, negotiate terms, accept an offer, and receive the earnest deposit. The checklist items are flipped—you're receiving, not paying.",
+        "Stage 3: Gather Required Documents. This is where sellers do the heavy lifting. Title deed, IDs, predial receipts, utility receipts, HOA certificates, and the freedom-of-liens certificate. The buyer's notary will ask for all of these.",
+        "Stage 4: Closing. Provide documents, receive final payment, sign the deed, pay your agent's commission, and pay capital gains tax (if applicable).",
+        "Stage 5: Post-Closing. Move your furniture, deliver the keys, transfer utilities out of your name, notify the HOA, and keep your records for taxes."
+      ],
+      "bullets": [
+        "Seller costs include agent commission (typically 3-6%) and capital gains tax",
+        "Capital gains tax in Mexico can be significant—up to 35% of the profit depending on circumstances",
+        "The \"Gather Documents\" stage has detailed descriptions for each required certificate",
+        "You can track multiple sales simultaneously with a paid subscription"
+      ]
+    },
+    {
+      "heading": "Free vs. Paid: What You Get",
+      "paragraphs": [
+        "The Transaction Manager is available on both free and paid plans. Here's the difference.",
+        "Free users can track one active transaction. That's enough for most first-time buyers. You get full access to all features: checklists, costs, notes, key numbers, and all seven stages.",
+        "Paid subscribers can track unlimited transactions. Buying an apartment while selling your house? Track both. Investing in multiple properties? Track them all. You also get priority support and early access to new features.",
+        "If you've completed your free transaction and want to start another, you'll see a prompt to upgrade. It's a one-time decision—once you're on a paid plan, you have unlimited transactions forever."
+      ],
+      "bullets": [
+        "Free tier is perfect for single property purchases or sales",
+        "Paid plans start at a low monthly cost—check the pricing page for current rates",
+        "Your data is never deleted, even if your subscription lapses",
+        "Upgrade anytime with one click from the Transactions page"
+      ]
+    },
+    {
+      "heading": "Tips From Power Users: Get the Most Out of Your Transaction Manager",
+      "paragraphs": [
+        "I've watched hundreds of users go through the Transaction Manager. Here's what the most organized buyers do.",
+        "First, they add the property address and price as soon as they have it. This makes all the cost estimates accurate from day one. Don't wait until closing to enter your numbers.",
+        "Second, they use notes religiously. Every call, every email, every meeting gets logged. When the notary asks \"did we discuss the predial receipt?\", they can check their notes and answer confidently.",
+        "Third, they check their transaction on mobile during viewings and appointments. Mark items complete while you're standing in the property. Upload documents from your phone's camera roll. The mobile experience is designed for this.",
+        "Fourth, they share progress with their partner or family. Even though we don't have formal sharing yet, many users take screenshots of their progress bar to keep everyone informed.",
+        "Finally, they don't stress about completing everything in order. Real estate is messy. Your bank might approve your mortgage before your inspection is done. That's fine. The Transaction Manager adapts to your reality."
+      ],
+      "bullets": [
+        "Bookmark your transaction page for quick access",
+        "Set a weekly reminder to review and update your progress",
+        "Use the Decision note type for major choices—you'll want to remember why you made them",
+        "Export your cost data at the end for tax records (screenshot the costs section)",
+        "After closing, your transaction stays in the system as a reference for future purchases"
+      ]
+    },
+    {
+      "heading": "Start Tracking Your Property Journey Today",
+      "paragraphs": [
+        "Whether you're buying your first apartment in Roma Norte or selling a family home in Polanco, the Transaction Manager is built to guide you through every step. {{data:neighborhood:Roma Norte:Cuauhtémoc:Ciudad de México:View Roma Norte prices}} or {{data:neighborhood:Polanco:Miguel Hidalgo:Ciudad de México:View Polanco prices}} to research property prices before you start.",
+        "No more scattered notes. No more forgotten tasks. No more surprise costs. Just a clear, stage-by-stage path from search to keys in hand.",
+        "Ready to get organized? Create your free account and start your first transaction. It takes 30 seconds, and you might just save yourself weeks of stress.",
+        "Click the button below to start tracking your property purchase or sale today."
+      ],
+      "bullets": [
+        "Works on desktop, tablet, and mobile—your dashboard goes where you go",
+        "Available in English, Spanish, and Chinese",
+        "All data is encrypted and stored securely in our database",
+        "Questions? Our support team is here to help"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Is the Transaction Manager free to use?",
+      "answer": "Yes! Free users can track one active transaction with full access to all features including checklists, costs, notes, and stage navigation. If you need to track multiple transactions simultaneously, you can upgrade to a paid plan for unlimited transactions."
+    },
+    {
+      "question": "Can I use the Transaction Manager for selling property?",
+      "answer": "Absolutely. When you create a new transaction, you can choose between 'buying' and 'selling.' Sellers get a dedicated flow with stages for Listing, Offer, Gathering Documents, Closing, and Post-Closing. The checklists and costs are tailored specifically for Mexican property sales."
+    },
+    {
+      "question": "What if I'm paying in cash and don't need a mortgage?",
+      "answer": "Use the 'Skip Financing' toggle in the Financing stage. This removes financing-related tasks from your checklist and recalculates your progress percentage. The stage is still visible but marked as skipped, keeping your progress bar accurate."
+    },
+    {
+      "question": "Can I access my transaction on my phone?",
+      "answer": "Yes, the Transaction Manager is fully responsive. You can view and update your transaction from any device. Mark checklist items complete, add notes, and track costs while you're at property viewings, notary appointments, or bank meetings."
+    },
+    {
+      "question": "How accurate are the cost estimates?",
+      "answer": "The cost estimates are based on typical Mexican property transactions. Percentage-based costs (like ISAI tax and notary fees) calculate automatically from your property price. Fixed costs are averages. Always confirm actual amounts with your notary and service providers, then update the estimates with real numbers as you go."
+    },
+    {
+      "question": "What happens to my data if I cancel my subscription?",
+      "answer": "Your transaction data is never deleted. If you cancel a paid subscription, you'll still be able to view your transactions, but you'll only be able to actively edit your first (oldest) transaction. Your data remains secure and accessible."
+    },
+    {
+      "question": "Can I track multiple properties at the same time?",
+      "answer": "Free users can track one active transaction. Paid subscribers can track unlimited transactions simultaneously—perfect for investors, people who are buying and selling at the same time, or anyone managing multiple properties."
+    }
+  ]
+}

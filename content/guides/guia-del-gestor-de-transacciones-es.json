@@ -1,0 +1,258 @@
+{
+  "slug": "guia-del-gestor-de-transacciones",
+  "locale": "es",
+  "title": "Cómo Usar el Gestor de Transacciones de PropTrenz: Tu Compañero para Comprar Propiedades",
+  "metaTitle": "Gestor de Transacciones PropTrenz | Rastrea Tu Compra de Propiedad",
+  "metaDescription": "Domina el Gestor de Transacciones de PropTrenz para seguir cada paso de comprar propiedad en México. Checklists, seguimiento de costos y guía paso a paso.",
+  "excerpt": "Deja de usar hojas de cálculo y notas adhesivas—organiza todo tu proceso de compra en un solo lugar.",
+  "heroKicker": "Tu Centro de Control Personal para Comprar Propiedades",
+  "status": "published",
+  "accessLevel": "public",
+  "tags": ["compra", "venta", "guia-de-plataforma"],
+  "updatedAt": "2026-01-12T00:00:00.000Z",
+  "mainImageUrl": "/blogs/transaction-manager-guide.jpeg",
+  "mainImageAlt": "Panel del Gestor de Transacciones PropTrenz",
+  "sections": [
+    {
+      "heading": "Por Qué Necesitas un Gestor de Transacciones al Comprar Propiedad en México",
+      "paragraphs": [
+        "Comprar una propiedad en México no es como comprar un carro. Hay siete etapas distintas, docenas de documentos, múltiples oficinas de gobierno, y costos que aparecen cuando menos te lo esperas. La mayoría de los compradores que conozco se sienten abrumados para la segunda semana.",
+        "El proceso no es tan complicado una vez que lo desglosas. El problema es llevar el control de todo. ¿Qué dijo el notario sobre el ISAI? ¿Ya conseguí el certificado de no adeudo de agua? ¿Cuándo es el avalúo del banco?",
+        "Por eso creamos el Gestor de Transacciones. No es una lista de tareas genérica. Es un sistema específico para México, etapa por etapa, que te dice exactamente qué hacer, cuándo hacerlo, y cuánto costará.",
+        "Piénsalo como tener un agente de compras experimentado en tu bolsillo—uno que ha cerrado cientos de operaciones y conoce cada paso de memoria."
+      ],
+      "bullets": [
+        "Rastrea compras Y ventas con checklists dedicados para cada tipo de transacción",
+        "Plantillas prediseñadas basadas en transacciones reales de propiedades mexicanas—no consejos genéricos",
+        "Estimaciones automáticas de costos que se actualizan cuando ingresas el precio de tu propiedad",
+        "Notas y línea de tiempo para registrar llamadas, reuniones y decisiones clave",
+        "Funciona en español, inglés y chino—cambia de idioma cuando quieras"
+      ]
+    },
+    {
+      "heading": "Primeros Pasos: Creando Tu Primera Transacción",
+      "paragraphs": [
+        "Iniciar una nueva transacción toma unos 30 segundos. Ve a tu página de Transacciones y haz clic en \"Nueva Transacción.\" Verás un asistente simple que hace tres preguntas.",
+        "Primero: ¿estás comprando o vendiendo? Esto importa porque las etapas son diferentes. Los compradores pasan por Búsqueda → Análisis → Oferta → Due Diligence → Financiamiento → Cierre → Post-Cierre. Los vendedores tienen un flujo más directo: Listado → Oferta → Recopilar Documentos → Cierre → Post-Cierre.",
+        "Segundo: ¿qué tipo de propiedad? Casa, departamento, terreno, comercial u otro. Esto ayuda a personalizar algunos elementos del checklist.",
+        "Tercero: detalles de la propiedad. Esto es opcional. Si ya tienes una propiedad específica, ingresa la dirección, colonia, ciudad y precio de lista. ¿Aún no tienes una? Sáltalo. Puedes agregar detalles después conforme avances.",
+        "Haz clic en \"Crear Transacción\" y listo. Tu panel personalizado se carga con tu primera etapa ya configurada."
+      ],
+      "bullets": [
+        "Los usuarios gratuitos pueden rastrear una transacción activa—perfecto para compradores primerizos",
+        "Los suscriptores de pago pueden rastrear transacciones ilimitadas simultáneamente",
+        "Puedes pausar, reanudar o eliminar transacciones en cualquier momento",
+        "Todos tus datos son privados y están asegurados con seguridad a nivel de fila en nuestra base de datos"
+      ]
+    },
+    {
+      "heading": "Las 7 Etapas de Comprar Propiedad en México (Y Qué Pasa en Cada Una)",
+      "paragraphs": [
+        "El Gestor de Transacciones divide tu compra en siete etapas lógicas. Cada etapa tiene su propio checklist, documentos y costos. Déjame explicarte qué sucede en cada una.",
+        "Etapa 1: Búsqueda de Propiedad. Aquí defines lo que quieres, estableces tu presupuesto, obtienes pre-aprobación para hipoteca, investigas colonias y creas una lista corta. La mayoría pasa 2-4 semanas aquí.",
+        "Etapa 2: Análisis. ¿Encontraste una propiedad que te gusta? Ahora profundizas. Compara precios de mercado, calcula costos totales (no solo el precio de lista), visita la propiedad y revisa su historial. Esta es tu última oportunidad de detectar señales de alerta antes de hacer una oferta.",
+        "Etapa 3: Oferta y Negociación. Es hora de actuar. Determina tu precio de oferta, prepara la carta de oferta, preséntala, negocia, firma el contrato de promesa de compraventa y paga tu depósito en garantía. Típicamente 10-20% del precio de compra.",
+        "Etapa 4: Due Diligence. Ahora verificas todo. Búsqueda de título, verificación de gravámenes, avalúo, inspección estructural, verificación de permisos, estado del predial, adeudos de servicios y estado de cuotas de mantenimiento. Aquí se involucra el notario.",
+        "Etapa 5: Financiamiento. Si necesitas hipoteca, aquí comparas opciones, reúnes documentos, presentas tu solicitud, completas el avalúo del banco, obtienes aprobación y firmas el contrato hipotecario. Los compradores de contado pueden saltar esta etapa.",
+        "Etapa 6: Cierre. La meta está cerca. Selecciona tu notario, revisa la escritura, prepara los fondos, haz un recorrido final, firma todo, paga los costos de cierre y recibe tus llaves.",
+        "Etapa 7: Post-Cierre. Ya eres dueño de la propiedad, pero aún hay trabajo. Regístrala en el Registro Público, transfiere servicios, actualiza el predial, notifica al condominio, contrata seguro y cambia las cerraduras. También esperarás 2-6 meses para que el notario entregue tu escritura registrada."
+      ],
+      "bullets": [
+        "Haz clic en cualquier etapa en la barra de progreso para ir directamente a ella",
+        "Las etapas completadas muestran una palomita verde—satisfactorio ver tu progreso",
+        "Cada etapa muestra la duración típica para que puedas planear tu cronograma",
+        "La vista móvil muestra un indicador compacto que se expande al tocar"
+      ]
+    },
+    {
+      "heading": "Usando el Checklist por Etapa: Nunca Olvides un Paso Crítico",
+      "paragraphs": [
+        "Cada etapa tiene un checklist prediseñado de tareas. Estas no son aleatorias—están basadas en transacciones reales de propiedades mexicanas. Los elementos requeridos están marcados con una estrella.",
+        "Por ejemplo, en la etapa de Due Diligence verás: Completar búsqueda de título, Verificar sin gravámenes, Obtener avalúo, Inspección estructural, Verificar permisos, Revisar pagos de predial, Revisar adeudos de servicios y Revisar estado de cuotas de mantenimiento.",
+        "Haz clic en el círculo junto a cualquier elemento para marcarlo como completado. La barra de progreso general se actualiza instantáneamente. Hay algo muy satisfactorio en ver ese porcentaje subir.",
+        "¿Necesitas agregar algo personalizado? Haz clic en \"Agregar elemento personalizado\" en la parte inferior. Tal vez tu propiedad tiene una situación especial—paneles solares para transferir, un garage con título separado, o un permiso pendiente. Agrégalo a tu checklist para no olvidarlo.",
+        "También puedes reordenar los elementos. Solo arrástralos y suéltalos en la secuencia que tenga sentido para tu operación. Quizás quieras hacer la inspección estructural antes de la búsqueda de título. Es tu decisión."
+      ],
+      "bullets": [
+        "Cada elemento tiene una descripción detallada—haz clic para expandir y ver qué implica",
+        "Marca elementos como completados desde tu teléfono mientras estás en la notaría",
+        "Los elementos personalizados que agregas se guardan permanentemente en tu transacción",
+        "Arrastra el asa para reordenar elementos según tu cronograma real",
+        "Los elementos requeridos están marcados con estrella amarilla—prioriza estos primero"
+      ]
+    },
+    {
+      "heading": "Seguimiento de Costos: Sabe Exactamente Cuánto Pagarás Antes de Pagar",
+      "paragraphs": [
+        "Aquí es donde el Gestor de Transacciones realmente brilla. Comprar propiedad en México involucra muchos costos más allá del precio de compra. Impuesto ISAI (3-5% dependiendo del estado), honorarios notariales (alrededor del 1%), derechos de registro, avalúos, inspecciones y más.",
+        "El Gestor de Transacciones pre-llena los costos estimados para cada etapa. Ingresa el precio de tu propiedad y los porcentajes se calculan automáticamente. ¿Una propiedad de $5,000,000 MXN? Tu ISAI es aproximadamente $150,000 MXN. Honorarios notariales cerca de $50,000 MXN. Todo está ahí.",
+        "Conforme avanzas en el proceso, actualiza las estimaciones con montos reales. ¿El notario cotizó $65,000 en lugar de $50,000? Ingresa el número real. Ahora estás rastreando real vs. estimado, así sabes exactamente a dónde fue tu dinero.",
+        "Marca los costos como pagados cuando los pagues. El sistema registra fecha de pago y método. Al final, tendrás un registro completo de cada peso gastado—útil para impuestos y para tu tranquilidad."
+      ],
+      "bullets": [
+        "Los costos están categorizados por a quién pagas: notario, gobierno, banco, agente, etc.",
+        "Agrega costos personalizados para lo que no esté en las plantillas—mudanza, muebles, renovaciones",
+        "Ve totales acumulados: total estimado y total real por etapa",
+        "Los costos basados en porcentaje se recalculan automáticamente cuando actualizas el precio",
+        "Elimina costos que no apliquen a tu situación—¿comprando de contado? Quita los costos de hipoteca"
+      ]
+    },
+    {
+      "heading": "Números Clave: Monitorea Tus Finanzas de un Vistazo",
+      "paragraphs": [
+        "En la parte superior del panel de tu transacción verás Números Clave. Aquí rastreas las cifras importantes: precio de lista, tu oferta, precio aceptado, enganche, monto de hipoteca, tasa de interés y plazo.",
+        "Una función genial: ingresa tu precio de lista, precio de oferta y precio aceptado, y el sistema calcula automáticamente tu descuento negociado. ¿Lograste que el vendedor bajara de $6,000,000 a $5,500,000? Eso es un 8.3% de descuento. Buen trabajo.",
+        "Para compradores con hipoteca, ingresa el monto del préstamo, tasa de interés y plazo, y verás tu pago mensual estimado calculado instantáneamente. No necesitas abrir una calculadora aparte.",
+        "Todos estos números fluyen hacia los cálculos de costos. Tu enganche, pago final y gastos de originación de hipoteca todos hacen referencia a los precios que ingresas aquí."
+      ],
+      "bullets": [
+        "Haz clic en cualquier número para editarlo en línea—sin formularios separados",
+        "La tasa de interés acepta tanto porcentaje (7%) como formato decimal (0.07)",
+        "El pago mensual usa la fórmula estándar de amortización para precisión",
+        "El diferencial de precio muestra cuánto negociaste del precio de lista",
+        "Todos los números están formateados en MXN con separadores de miles apropiados"
+      ]
+    },
+    {
+      "heading": "Notas y Línea de Tiempo: Tu Bitácora de la Transacción",
+      "paragraphs": [
+        "Las transacciones inmobiliarias involucran muchas conversaciones. Llamadas con tu agente, correos del notario, reuniones con el banco. Seis meses después, no recordarás qué se dijo. Para eso son las Notas.",
+        "Agrega notas conforme avanzas. ¿Tuviste una llamada con el agente del vendedor sobre reparaciones? Regístrala. ¿El notario envió un correo sobre documentos faltantes? Anótalo. ¿Tomaste una decisión clave sobre el financiamiento? Documéntala.",
+        "Cada nota está etiquetada con un tipo: General, Llamada, Correo, Reunión o Decisión. Esto facilita filtrar y encontrar lo que buscas después. La línea de tiempo muestra todo en orden cronológico.",
+        "Esto se convierte en tu rastro documental. Si alguna vez hay una disputa sobre lo que se acordó, tienes un registro. Y cuando compres tu próxima propiedad, puedes mirar atrás y recordar qué funcionó."
+      ],
+      "bullets": [
+        "Las notas están vinculadas a tu etapa actual, así puedes ver qué pasó cuándo",
+        "Las marcas de tiempo están localizadas a tu idioma—\"hace 2 horas\" en español",
+        "Las notas de Decisión están resaltadas en amarillo para fácil identificación",
+        "Elimina notas que ya no necesites—no juzgamos",
+        "Las notas se sincronizan en todos tus dispositivos instantáneamente"
+      ]
+    },
+    {
+      "heading": "Navegando Entre Etapas: Avanzando (y Retrocediendo)",
+      "paragraphs": [
+        "El Gestor de Transacciones no te obliga a completar las etapas en orden. La vida no es lineal, y los bienes raíces tampoco.",
+        "¿Quieres adelantarte para ver qué viene en la etapa de Cierre? Haz clic en ella en la barra de progreso. ¿Necesitas regresar y agregar una nota a la etapa de Oferta? Sin problema. Puedes navegar libremente entre las siete etapas en cualquier momento.",
+        "El botón \"Siguiente Etapa\" al final te avanza al siguiente paso lógico. Úsalo cuando estés listo para continuar. El botón \"Anterior\" te lleva de regreso.",
+        "Tu progreso general se calcula basándose en los elementos del checklist completados en TODAS las etapas, no solo en la actual. Así que aunque navegues de un lado a otro, tu porcentaje de progreso se mantiene preciso."
+      ],
+      "bullets": [
+        "Las etapas completadas muestran una palomita verde en la barra de progreso",
+        "La etapa actual está resaltada con un anillo azul",
+        "La vista móvil usa un indicador de puntos compacto fácil de tocar",
+        "Los nombres de las etapas se traducen según tu preferencia de idioma"
+      ]
+    },
+    {
+      "heading": "Saltando la Etapa de Financiamiento (Para Compradores de Contado)",
+      "paragraphs": [
+        "¿Pagando de contado? Qué suerte. El Gestor de Transacciones tiene una opción de \"Saltar Financiamiento\" que elimina toda la etapa de Financiamiento de tu cálculo de progreso.",
+        "Actívalo y el checklist y costos de Financiamiento se ponen en gris. No contarán hacia tu progreso general. Tu viaje de 7 etapas se convierte en 6 etapas, y las matemáticas se ajustan acordemente.",
+        "¿Cambiaste de opinión y decidiste obtener una hipoteca después de todo? Desactívalo y todo regresa. No se pierde ningún dato.",
+        "Esto mantiene tu barra de progreso honesta. Nada más frustrante que estar \"atorado\" en 80% por tareas que no aplican a ti."
+      ],
+      "bullets": [
+        "Encuentra el interruptor de Saltar Financiamiento en el encabezado de la etapa de Financiamiento",
+        "Las etapas saltadas muestran una etiqueta de \"Saltado\" en lugar del checklist",
+        "Tu porcentaje de progreso se recalcula instantáneamente cuando activas el interruptor",
+        "Las estimaciones de costos relacionados con hipoteca siguen visibles pero marcados como saltados"
+      ]
+    },
+    {
+      "heading": "Rastreando Ventas de Propiedades: El Flujo del Vendedor",
+      "paragraphs": [
+        "¿Vendiendo propiedad en México? El Gestor de Transacciones te cubre con un flujo dedicado para vendedores. Cuando creas una transacción y seleccionas \"Estoy vendiendo,\" obtienes un conjunto diferente de etapas.",
+        "Etapa 1: Listado. Prepara tu propiedad, contrata un agente de ventas, crea el anuncio y agenda visitas. Esto es para tener tu propiedad lista para el mercado.",
+        "Etapa 2: Oferta. Recibe ofertas, negocia términos, acepta una oferta y recibe el depósito en garantía. Los elementos del checklist están invertidos—tú recibes, no pagas.",
+        "Etapa 3: Recopilar Documentos Requeridos. Aquí es donde los vendedores hacen el trabajo pesado. Escritura, identificaciones, recibos de predial, recibos de servicios, certificados de condominio y certificado de libertad de gravamen. El notario del comprador pedirá todo esto.",
+        "Etapa 4: Cierre. Proporciona documentos, recibe el pago final, firma la escritura, paga la comisión de tu agente y paga el ISR por enajenación de inmuebles (si aplica).",
+        "Etapa 5: Post-Cierre. Mueve tus muebles, entrega las llaves, transfiere los servicios a tu nombre, notifica al condominio y guarda tus registros para impuestos."
+      ],
+      "bullets": [
+        "Los costos del vendedor incluyen comisión del agente (típicamente 3-6%) e ISR",
+        "El ISR en México puede ser significativo—hasta 35% de la ganancia dependiendo de las circunstancias",
+        "La etapa de \"Recopilar Documentos\" tiene descripciones detalladas para cada certificado requerido",
+        "Puedes rastrear múltiples ventas simultáneamente con una suscripción de pago"
+      ]
+    },
+    {
+      "heading": "Gratis vs. Pago: Qué Obtienes",
+      "paragraphs": [
+        "El Gestor de Transacciones está disponible en planes gratuitos y de pago. Aquí está la diferencia.",
+        "Los usuarios gratuitos pueden rastrear una transacción activa. Eso es suficiente para la mayoría de los compradores primerizos. Tienes acceso completo a todas las funciones: checklists, costos, notas, números clave y las siete etapas.",
+        "Los suscriptores de pago pueden rastrear transacciones ilimitadas. ¿Comprando un departamento mientras vendes tu casa? Rastrea ambos. ¿Invirtiendo en múltiples propiedades? Rastréalas todas. También obtienes soporte prioritario y acceso anticipado a nuevas funciones.",
+        "Si completaste tu transacción gratuita y quieres iniciar otra, verás un aviso para actualizar. Es una decisión de una sola vez—una vez que estás en un plan de pago, tienes transacciones ilimitadas para siempre."
+      ],
+      "bullets": [
+        "El nivel gratuito es perfecto para compras o ventas de una sola propiedad",
+        "Los planes de pago comienzan a un bajo costo mensual—revisa la página de precios para tarifas actuales",
+        "Tus datos nunca se eliminan, incluso si tu suscripción caduca",
+        "Actualiza en cualquier momento con un clic desde la página de Transacciones"
+      ]
+    },
+    {
+      "heading": "Consejos de Usuarios Expertos: Aprovecha al Máximo Tu Gestor de Transacciones",
+      "paragraphs": [
+        "He visto a cientos de usuarios pasar por el Gestor de Transacciones. Esto es lo que hacen los compradores más organizados.",
+        "Primero, agregan la dirección y precio de la propiedad tan pronto como los tienen. Esto hace que todas las estimaciones de costos sean precisas desde el día uno. No esperes hasta el cierre para ingresar tus números.",
+        "Segundo, usan las notas religiosamente. Cada llamada, cada correo, cada reunión se registra. Cuando el notario pregunte \"¿discutimos el recibo de predial?\", pueden revisar sus notas y responder con confianza.",
+        "Tercero, revisan su transacción en el móvil durante visitas y citas. Marca elementos como completados mientras estás parado en la propiedad. Sube documentos desde el carrete de tu teléfono. La experiencia móvil está diseñada para esto.",
+        "Cuarto, comparten el progreso con su pareja o familia. Aunque todavía no tenemos compartir formal, muchos usuarios toman capturas de pantalla de su barra de progreso para mantener a todos informados.",
+        "Finalmente, no se estresan por completar todo en orden. Los bienes raíces son desordenados. Tu banco puede aprobar tu hipoteca antes de que se haga la inspección. Está bien. El Gestor de Transacciones se adapta a tu realidad."
+      ],
+      "bullets": [
+        "Guarda en favoritos tu página de transacción para acceso rápido",
+        "Pon un recordatorio semanal para revisar y actualizar tu progreso",
+        "Usa el tipo de nota Decisión para elecciones importantes—querrás recordar por qué las tomaste",
+        "Exporta tus datos de costos al final para registros fiscales (captura de pantalla de la sección de costos)",
+        "Después del cierre, tu transacción permanece en el sistema como referencia para futuras compras"
+      ]
+    },
+    {
+      "heading": "Empieza a Rastrear Tu Viaje Inmobiliario Hoy",
+      "paragraphs": [
+        "Ya sea que estés comprando tu primer departamento en la Roma Norte o vendiendo una casa familiar en Polanco, el Gestor de Transacciones está diseñado para guiarte en cada paso. {{data:neighborhood:Roma Norte:Cuauhtémoc:Ciudad de México:Ver precios en Roma Norte}} o {{data:neighborhood:Polanco:Miguel Hidalgo:Ciudad de México:Ver precios en Polanco}} para investigar precios de propiedades antes de empezar.",
+        "Sin más notas dispersas. Sin más tareas olvidadas. Sin más costos sorpresa. Solo un camino claro, etapa por etapa, desde la búsqueda hasta las llaves en mano.",
+        "¿Listo para organizarte? Crea tu cuenta gratuita y comienza tu primera transacción. Toma 30 segundos, y podrías ahorrarte semanas de estrés.",
+        "Haz clic en el botón de abajo para empezar a rastrear tu compra o venta de propiedad hoy."
+      ],
+      "bullets": [
+        "Funciona en escritorio, tablet y móvil—tu panel va donde tú vas",
+        "Disponible en español, inglés y chino",
+        "Todos los datos están encriptados y almacenados de forma segura en nuestra base de datos",
+        "¿Preguntas? Nuestro equipo de soporte está aquí para ayudar"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "¿El Gestor de Transacciones es gratis?",
+      "answer": "¡Sí! Los usuarios gratuitos pueden rastrear una transacción activa con acceso completo a todas las funciones incluyendo checklists, costos, notas y navegación por etapas. Si necesitas rastrear múltiples transacciones simultáneamente, puedes actualizar a un plan de pago para transacciones ilimitadas."
+    },
+    {
+      "question": "¿Puedo usar el Gestor de Transacciones para vender propiedades?",
+      "answer": "Absolutamente. Cuando creas una nueva transacción, puedes elegir entre 'comprar' y 'vender.' Los vendedores obtienen un flujo dedicado con etapas para Listado, Oferta, Recopilación de Documentos, Cierre y Post-Cierre. Los checklists y costos están adaptados específicamente para ventas de propiedades mexicanas."
+    },
+    {
+      "question": "¿Qué pasa si pago de contado y no necesito hipoteca?",
+      "answer": "Usa el interruptor 'Saltar Financiamiento' en la etapa de Financiamiento. Esto elimina las tareas relacionadas con financiamiento de tu checklist y recalcula tu porcentaje de progreso. La etapa sigue visible pero marcada como saltada, manteniendo tu barra de progreso precisa."
+    },
+    {
+      "question": "¿Puedo acceder a mi transacción desde mi teléfono?",
+      "answer": "Sí, el Gestor de Transacciones es completamente responsivo. Puedes ver y actualizar tu transacción desde cualquier dispositivo. Marca elementos del checklist como completados, agrega notas y rastrea costos mientras estás en visitas de propiedades, citas con el notario o reuniones en el banco."
+    },
+    {
+      "question": "¿Qué tan precisas son las estimaciones de costos?",
+      "answer": "Las estimaciones de costos están basadas en transacciones típicas de propiedades mexicanas. Los costos basados en porcentaje (como el ISAI y honorarios notariales) se calculan automáticamente a partir del precio de tu propiedad. Los costos fijos son promedios. Siempre confirma los montos reales con tu notario y proveedores de servicios, luego actualiza las estimaciones con números reales conforme avances."
+    },
+    {
+      "question": "¿Qué pasa con mis datos si cancelo mi suscripción?",
+      "answer": "Tus datos de transacción nunca se eliminan. Si cancelas una suscripción de pago, aún podrás ver tus transacciones, pero solo podrás editar activamente tu primera (más antigua) transacción. Tus datos permanecen seguros y accesibles."
+    },
+    {
+      "question": "¿Puedo rastrear múltiples propiedades al mismo tiempo?",
+      "answer": "Los usuarios gratuitos pueden rastrear una transacción activa. Los suscriptores de pago pueden rastrear transacciones ilimitadas simultáneamente—perfecto para inversionistas, personas que están comprando y vendiendo al mismo tiempo, o cualquiera que maneje múltiples propiedades."
+    }
+  ]
+}
